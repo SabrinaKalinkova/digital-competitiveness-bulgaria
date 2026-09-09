@@ -8,25 +8,29 @@
 
   <meta
     name="description"
-    content="Изследователски проект Дигитална конкурентоспособност на социално-икономическата система на България."
+    content="Научноизследователски проект № 6/2024: Дигитална конкурентоспособност на социално-икономическата система на България."
   >
 
   <style>
     :root {
-      --navy: #0b2d4d;
-      --navy-dark: #071f36;
+      --navy: #102b4c;
+      --navy-deep: #081f38;
       --blue: #2457c5;
       --cyan: #28a9c7;
-      --turquoise: #01d1c1;
-      --light: #f5f8fb;
-      --light-blue: #eaf3fa;
-      --text: #263645;
-      --muted: #667788;
+      --turquoise: #01c9bc;
+
+      --text: #213247;
+      --muted: #64768a;
+
       --white: #ffffff;
-      --border: #dce8f1;
-      --shadow: 0 12px 35px rgba(10, 45, 77, 0.08);
+      --background: #f5f8fb;
+      --background-soft: #eef5f9;
+      --border: #dce7ef;
+
+      --shadow: 0 14px 40px rgba(16, 43, 76, 0.08);
       --radius: 18px;
-      --max-width: 1220px;
+
+      --max-width: 1260px;
     }
 
     * {
@@ -51,12 +55,18 @@
       text-decoration: none;
     }
 
-    .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
+    button {
+      font: inherit;
     }
 
-    /* HEADER */
+    .container {
+      width: min(92%, var(--max-width));
+      margin-inline: auto;
+    }
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
 
     header {
       background: rgba(255, 255, 255, 0.97);
@@ -64,28 +74,29 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      backdrop-filter: blur(12px);
     }
 
     .navbar {
-      min-height: 78px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 28px;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 13px;
-      min-width: 290px;
+      flex-shrink: 0;
     }
 
     .logo-mark {
       display: flex;
       align-items: flex-end;
       gap: 4px;
-      height: 40px;
+      height: 42px;
     }
 
     .logo-mark span {
@@ -100,17 +111,17 @@
     }
 
     .logo-mark span:nth-child(2) {
-      height: 22px;
+      height: 23px;
       background: #46bfd3;
     }
 
     .logo-mark span:nth-child(3) {
-      height: 30px;
+      height: 31px;
       background: #2499c2;
     }
 
     .logo-mark span:nth-child(4) {
-      height: 39px;
+      height: 41px;
       background: #1557a0;
     }
 
@@ -118,8 +129,9 @@
       display: block;
       color: var(--navy);
       font-size: 16px;
-      line-height: 1.05;
+      line-height: 1.02;
       text-transform: uppercase;
+      letter-spacing: -0.15px;
     }
 
     .brand-text small {
@@ -127,100 +139,166 @@
       margin-top: 5px;
       color: var(--muted);
       font-size: 10px;
+      white-space: nowrap;
     }
 
-    nav {
+    .desktop-nav {
       display: flex;
       align-items: center;
-      gap: 25px;
-      font-size: 14px;
-      font-weight: 600;
-      color: #34495e;
+      gap: 23px;
+      color: #34475a;
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    nav a {
-      padding: 29px 0 24px;
+    .desktop-nav a {
+      padding: 31px 0 25px;
       border-bottom: 3px solid transparent;
       transition: 0.2s ease;
     }
 
-    nav a:hover,
-    nav a.active {
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
       color: var(--blue);
       border-bottom-color: var(--turquoise);
     }
 
     .language {
       color: var(--blue);
-      font-weight: 700;
       font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
-    /* HERO */
+    .mobile-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 8px;
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      color: var(--navy);
+      font-size: 20px;
+    }
+
+    .mobile-menu {
+      display: none;
+      border-top: 1px solid var(--border);
+      background: white;
+      padding: 12px 4%;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      color: var(--navy);
+      font-weight: 700;
+      border-bottom: 1px solid #edf2f5;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
 
     .hero {
       position: relative;
       overflow: hidden;
       color: white;
+
       background:
-        radial-gradient(circle at 76% 35%, rgba(1,209,193,0.28), transparent 5%),
-        radial-gradient(circle at 82% 58%, rgba(40,169,199,0.23), transparent 4%),
-        linear-gradient(115deg, #071f36 0%, #0b375b 55%, #07577d 100%);
+        radial-gradient(
+          circle at 84% 33%,
+          rgba(1, 201, 188, 0.18),
+          transparent 22%
+        ),
+        linear-gradient(
+          115deg,
+          #081f38 0%,
+          #102f51 57%,
+          #135778 100%
+        );
     }
 
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
+
       background-image:
-        linear-gradient(rgba(80,205,225,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(80,205,225,0.06) 1px, transparent 1px);
-      background-size: 55px 55px;
-      mask-image: linear-gradient(to left, black, transparent 78%);
+        linear-gradient(
+          rgba(82, 215, 226, 0.055) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(82, 215, 226, 0.055) 1px,
+          transparent 1px
+        );
+
+      background-size: 62px 62px;
     }
 
     .hero-inner {
-      min-height: 540px;
+      min-height: 570px;
+
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 55px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 65px;
       align-items: center;
+
       position: relative;
       z-index: 1;
+
+      padding: 72px 0 102px;
     }
 
     .eyebrow {
-      color: #83ecf0;
-      font-size: 13px;
+      display: inline-block;
+
+      color: #8ce7ed;
+
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 2.2px;
-      font-weight: 700;
+
       margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(40px, 5vw, 67px);
-      line-height: 0.98;
-      letter-spacing: -2.5px;
-      margin-bottom: 22px;
-      max-width: 720px;
+      font-size: clamp(44px, 4.8vw, 67px);
+      line-height: 0.99;
+      letter-spacing: -2.2px;
+
+      max-width: 740px;
+
+      margin-bottom: 24px;
     }
 
     h1 span {
       display: block;
-      font-size: 0.64em;
+
+      font-size: 0.57em;
       font-weight: 400;
-      letter-spacing: -1px;
-      margin-top: 12px;
-      color: #dfeef7;
-      line-height: 1.12;
+      line-height: 1.14;
+
+      letter-spacing: -0.8px;
+
+      color: #d9e8f2;
+
+      margin-top: 14px;
     }
 
     .hero-text {
-      max-width: 650px;
-      color: #d9e8f1;
-      font-size: 18px;
-      margin-bottom: 30px;
+      max-width: 700px;
+
+      font-size: 17px;
+      line-height: 1.65;
+
+      color: #d6e5ee;
+
+      margin-bottom: 31px;
     }
 
     .buttons {
@@ -230,20 +308,31 @@
     }
 
     .btn {
+      min-height: 48px;
+
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 24px;
-      border-radius: 10px;
-      font-weight: 700;
-      transition: 0.2s ease;
+
+      padding: 0 23px;
+
+      border-radius: 9px;
       border: 1px solid transparent;
+
+      font-weight: 700;
+      font-size: 14px;
+
+      transition: 0.2s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(90deg, #24d4d2, #35bddd);
-      color: #062b42;
+      background: linear-gradient(
+        90deg,
+        #79d5dd,
+        #55bedb
+      );
+
+      color: #082b46;
     }
 
     .btn-primary:hover {
@@ -251,454 +340,838 @@
     }
 
     .btn-outline {
-      border-color: rgba(255,255,255,0.65);
       color: white;
+      border-color: rgba(255,255,255,0.55);
     }
 
     .btn-outline:hover {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.07);
     }
 
-    /* HERO VISUAL */
+    /* =========================================================
+       HERO RESEARCH ARCHITECTURE
+    ========================================================= */
 
-    .digital-map {
+    .hero-model {
       position: relative;
-      height: 350px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
-    .map-shape {
-      width: 90%;
-      max-width: 500px;
-      min-height: 245px;
-      border: 2px solid #5de6ec;
-      border-radius: 46% 54% 43% 57% / 54% 43% 57% 46%;
+      border: 1px solid rgba(139, 226, 235, 0.2);
+      border-radius: 22px;
+
+      padding: 28px;
+
       background:
-        radial-gradient(circle at 25% 30%, #79ffff 0 3px, transparent 4px),
-        radial-gradient(circle at 48% 21%, #79ffff 0 4px, transparent 5px),
-        radial-gradient(circle at 67% 42%, #79ffff 0 4px, transparent 5px),
-        radial-gradient(circle at 39% 61%, #79ffff 0 5px, transparent 6px),
-        radial-gradient(circle at 76% 67%, #79ffff 0 3px, transparent 4px),
-        linear-gradient(135deg, rgba(30,130,191,0.2), rgba(1,209,193,0.08));
+        linear-gradient(
+          150deg,
+          rgba(255,255,255,0.07),
+          rgba(255,255,255,0.025)
+        );
+
       box-shadow:
-        0 0 45px rgba(1,209,193,0.15),
-        inset 0 0 50px rgba(41,168,199,0.1);
-      position: relative;
+        inset 0 0 60px rgba(40,169,199,0.07);
     }
 
-    .map-shape::before,
-    .map-shape::after {
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: 70%;
-      top: 50%;
-      left: 15%;
-      background: linear-gradient(90deg, transparent, #52dce3, transparent);
-      transform: rotate(18deg);
-    }
+    .hero-model-title {
+      color: #8ce7ed;
 
-    .map-shape::after {
-      transform: rotate(-23deg);
-    }
+      font-size: 11px;
+      font-weight: 800;
 
-    .map-label {
-      position: absolute;
-      color: #9bedf1;
-      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.6px;
+
+      margin-bottom: 22px;
     }
 
-    .map-label.one {
-      top: 25px;
-      left: 15px;
+    .model-level {
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: center;
+
+      padding: 15px 14px;
+
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px;
+
+      background: rgba(255,255,255,0.035);
     }
 
-    .map-label.two {
-      right: 10px;
-      top: 80px;
+    .model-level + .model-level {
+      margin-top: 17px;
     }
 
-    .map-label.three {
-      right: 30px;
-      bottom: 38px;
+    .model-level + .model-level::before {
+      content: "↓";
+
+      position: absolute;
+      top: -18px;
+      left: 20px;
+
+      color: #65d9df;
+      font-size: 16px;
     }
 
-    /* STATISTICS */
+    .level-number {
+      width: 36px;
+      height: 36px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: rgba(72, 204, 218, 0.13);
+      border: 1px solid rgba(99, 226, 235, 0.5);
+
+      color: #8ff1f1;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .model-level strong {
+      display: block;
+
+      font-size: 14px;
+      margin-bottom: 2px;
+
+      color: white;
+    }
+
+    .model-level span {
+      display: block;
+
+      color: #bad2df;
+      font-size: 12px;
+    }
+
+    /* =========================================================
+       EMPIRICAL BASE
+    ========================================================= */
 
     .stats-wrap {
-      margin-top: -45px;
+      margin-top: -48px;
+
       position: relative;
-      z-index: 4;
+      z-index: 3;
+    }
+
+    .stats-label {
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 1.6px;
+
+      font-weight: 800;
+      color: var(--cyan);
+
+      margin: 0 0 10px 5px;
     }
 
     .stats {
-      background: white;
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+
+      background: white;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
       overflow: hidden;
+
+      box-shadow: var(--shadow);
     }
 
     .stat {
-      padding: 29px;
-      position: relative;
+      padding: 28px 31px;
     }
 
     .stat + .stat {
       border-left: 1px solid var(--border);
     }
 
-    .stat-icon {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
     .stat-value {
       color: var(--navy);
-      font-weight: 800;
-      font-size: 35px;
+
+      font-size: 38px;
       line-height: 1;
+
+      font-weight: 800;
+
       margin-bottom: 9px;
     }
 
     .stat-title {
       color: var(--blue);
+
+      font-size: 14px;
       font-weight: 700;
-      font-size: 15px;
+
+      margin-bottom: 5px;
     }
 
     .stat-note {
-      margin-top: 5px;
-      font-size: 12px;
       color: var(--muted);
+      font-size: 12px;
     }
 
-    /* SECTIONS */
+    /* =========================================================
+       GLOBAL SECTION STYLES
+    ========================================================= */
 
-    section {
-      padding: 78px 0;
+    section.standard-section {
+      padding: 82px 0;
     }
 
     .section-alt {
-      background: var(--light);
+      background: var(--background);
     }
 
     .section-label {
       color: var(--cyan);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.7px;
+
+      font-size: 11px;
       font-weight: 800;
-      margin-bottom: 9px;
+
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+
+      margin-bottom: 10px;
     }
 
     .section-title {
       color: var(--navy);
-      font-size: 34px;
+
+      font-size: clamp(29px, 3vw, 40px);
       line-height: 1.12;
-      margin-bottom: 16px;
+
+      letter-spacing: -0.8px;
+
+      margin-bottom: 15px;
     }
 
     .section-description {
-      max-width: 760px;
+      max-width: 820px;
+
       color: var(--muted);
-      margin-bottom: 35px;
+
+      font-size: 16px;
+      line-height: 1.7;
+
+      margin-bottom: 38px;
     }
 
-    /* RESEARCH AREAS */
+    /* =========================================================
+       WHAT THE PROJECT DOES
+    ========================================================= */
 
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: 0 6px 25px rgba(17,56,88,0.045);
-      transition: 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
-    }
-
-    .card-icon {
-      width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      border-radius: 13px;
-      background: #e7f8fb;
-      color: var(--blue);
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
-
-    .card h3 {
-      color: var(--navy);
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* REGIONS */
-
-    .regions-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 38px;
-      align-items: stretch;
-    }
-
-    .regional-intro {
-      background:
-        linear-gradient(145deg, #0c3151, #0a5275);
-      color: white;
-      border-radius: var(--radius);
-      padding: 38px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .regional-intro h3 {
-      font-size: 28px;
-      margin-bottom: 16px;
-    }
-
-    .regional-intro p {
-      color: #d4e5ee;
-    }
-
-    .regional-number {
-      font-size: 72px;
-      font-weight: 800;
-      color: #5de6ec;
-      margin-top: 35px;
-      line-height: 1;
-    }
-
-    .regional-small {
-      color: #c6e7ee;
-      margin-top: 10px;
-    }
-
-    .ranking {
-      background: white;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 32px;
-    }
-
-    .ranking h3 {
-      color: var(--navy);
-      margin-bottom: 25px;
-    }
-
-    .rank-row {
-      display: grid;
-      grid-template-columns: 155px 1fr 70px;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 18px;
-      font-size: 14px;
-    }
-
-    .rank-name {
-      font-weight: 700;
-      color: #34475a;
-    }
-
-    .bar {
-      height: 11px;
-      background: #e8f0f5;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .bar span {
-      display: block;
-      height: 100%;
-      background: linear-gradient(90deg, var(--blue), var(--turquoise));
-      border-radius: inherit;
-    }
-
-    .rank-value {
-      text-align: right;
-      color: var(--blue);
-      font-weight: 800;
-    }
-
-    /* RESULTS */
-
-    .results-grid {
+    .three-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
-    .result-card {
-      border-top: 4px solid var(--turquoise);
+    .action-card {
+      position: relative;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      background: white;
+
+      padding: 32px;
+
+      min-height: 240px;
+
+      box-shadow: 0 8px 25px rgba(16,43,76,0.04);
     }
 
-    .result-value {
-      font-size: 34px;
+    .action-number {
+      color: #9ccfdc;
+
+      font-size: 14px;
       font-weight: 800;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 34px;
+    }
+
+    .action-card h3 {
       color: var(--navy);
-      margin: 10px 0 8px;
+
+      font-size: 24px;
+
+      margin-bottom: 13px;
     }
 
-    .result-card h3 {
-      color: var(--blue);
-      font-size: 15px;
+    .action-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.65;
     }
 
-    /* PUBLICATIONS */
+    /* =========================================================
+       RESEARCH ARCHITECTURE
+    ========================================================= */
 
-    .publication-list {
+    .architecture {
       display: grid;
-      gap: 12px;
+      grid-template-columns: repeat(4, 1fr);
+
+      position: relative;
+
+      margin-top: 12px;
+    }
+
+    .architecture::before {
+      content: "";
+
+      position: absolute;
+
+      top: 41px;
+      left: 12%;
+      right: 12%;
+
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--cyan),
+          var(--turquoise)
+        );
+
+      opacity: 0.25;
+    }
+
+    .arch-item {
+      position: relative;
+      z-index: 2;
+
+      text-align: center;
+
+      padding: 0 18px;
+    }
+
+    .arch-circle {
+      width: 82px;
+      height: 82px;
+
+      margin: 0 auto 22px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: white;
+      border: 2px solid #bfdee8;
+
+      color: var(--blue);
+
+      font-size: 21px;
+      font-weight: 800;
+
+      box-shadow: 0 8px 25px rgba(16,43,76,0.06);
+    }
+
+    .arch-item:nth-child(4) .arch-circle {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+    }
+
+    .arch-item h3 {
+      color: var(--navy);
+
+      font-size: 17px;
+
+      margin-bottom: 9px;
+    }
+
+    .arch-item p {
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    /* =========================================================
+       DATA & METHODOLOGY STRIP
+    ========================================================= */
+
+    .method-box {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+
+      align-items: center;
+
+      gap: 40px;
+
+      padding: 40px;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #f2f8fb
+        );
+    }
+
+    .method-box h3 {
+      color: var(--navy);
+
+      font-size: 28px;
+
+      margin-bottom: 13px;
+    }
+
+    .method-box p {
+      color: var(--muted);
+
+      max-width: 670px;
+    }
+
+    .method-tags {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .method-tag {
+      padding: 18px 13px;
+
+      border-radius: 11px;
+
+      background: white;
+      border: 1px solid var(--border);
+
+      color: var(--navy);
+
+      text-align: center;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       AREAS / SECTORS
+    ========================================================= */
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+
+      gap: 16px;
+    }
+
+    .area-card {
+      position: relative;
+
+      min-height: 250px;
+
+      padding: 26px;
+
+      border-radius: 16px;
+      border: 1px solid var(--border);
+
+      background: white;
+
+      transition: 0.2s ease;
+    }
+
+    .area-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .area-code {
+      width: 43px;
+      height: 43px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 11px;
+
+      background: #e9f7fa;
+
+      color: var(--blue);
+
+      font-size: 11px;
+      font-weight: 800;
+
+      margin-bottom: 24px;
+    }
+
+    .area-card h3 {
+      color: var(--navy);
+
+      font-size: 18px;
+
+      margin-bottom: 12px;
+    }
+
+    .area-card p {
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       REGIONAL PREVIEW
+    ========================================================= */
+
+    .regional-preview {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+
+      gap: 0;
+
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      background: white;
+    }
+
+    .regional-copy {
+      padding: 45px;
+    }
+
+    .regional-copy h3 {
+      color: var(--navy);
+
+      font-size: 30px;
+
+      margin-bottom: 15px;
+    }
+
+    .regional-copy p {
+      color: var(--muted);
+
+      margin-bottom: 25px;
+    }
+
+    .regional-visual {
+      min-height: 340px;
+
+      position: relative;
+
+      background:
+        radial-gradient(
+          circle at 65% 45%,
+          rgba(1,201,188,0.14),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #102e4e,
+          #155b7e
+        );
+    }
+
+    .region-network {
+      position: absolute;
+      inset: 13% 11%;
+
+      border: 1px solid rgba(112,224,231,0.38);
+      border-radius: 42% 58% 46% 54% / 55% 42% 58% 45%;
+
+      transform: rotate(-4deg);
+    }
+
+    .region-network::before,
+    .region-network::after {
+      content: "";
+
+      position: absolute;
+
+      width: 72%;
+      height: 1px;
+
+      left: 14%;
+      top: 50%;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          #69e1e6,
+          transparent
+        );
+
+      opacity: 0.65;
+    }
+
+    .region-network::before {
+      transform: rotate(24deg);
+    }
+
+    .region-network::after {
+      transform: rotate(-18deg);
+    }
+
+    .region-dot {
+      position: absolute;
+
+      width: 9px;
+      height: 9px;
+
+      background: #81f0ed;
+
+      border-radius: 50%;
+
+      box-shadow: 0 0 13px rgba(129,240,237,0.8);
+    }
+
+    .d1 { top: 31%; left: 26%; }
+    .d2 { top: 48%; left: 43%; }
+    .d3 { top: 25%; left: 60%; }
+    .d4 { top: 59%; left: 65%; }
+    .d5 { top: 67%; left: 34%; }
+    .d6 { top: 42%; left: 78%; }
+
+    /* =========================================================
+       SELECTED FINDINGS
+    ========================================================= */
+
+    .findings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .finding-card {
+      padding: 30px;
+
+      border-top: 4px solid var(--turquoise);
+      border-radius: 14px;
+
+      background: white;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .finding-number {
+      color: #9acfd9;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      margin-bottom: 26px;
+    }
+
+    .finding-card h3 {
+      color: var(--navy);
+
+      font-size: 20px;
+      line-height: 1.25;
+
+      margin-bottom: 12px;
+    }
+
+    .finding-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* =========================================================
+       PUBLICATIONS
+    ========================================================= */
+
+    .publication-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 16px;
     }
 
     .publication {
-      display: grid;
-      grid-template-columns: 50px 1fr auto;
-      gap: 18px;
-      align-items: center;
-      background: white;
+      padding: 24px 26px;
+
       border: 1px solid var(--border);
-      border-radius: 13px;
-      padding: 18px 22px;
+      border-radius: 14px;
+
+      background: white;
     }
 
-    .pub-icon {
-      width: 42px;
-      height: 42px;
-      background: #edf6fb;
-      color: var(--blue);
-      display: grid;
-      place-items: center;
-      border-radius: 10px;
-      font-size: 20px;
+    .publication-area {
+      color: var(--cyan);
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+
+      margin-bottom: 13px;
     }
 
     .publication h3 {
       color: var(--navy);
-      font-size: 16px;
-      margin-bottom: 4px;
+
+      font-size: 17px;
+      line-height: 1.35;
+
+      margin-bottom: 10px;
     }
 
     .publication p {
       color: var(--muted);
+
       font-size: 13px;
     }
 
-    .pub-arrow {
-      font-size: 22px;
-      color: var(--cyan);
+    .section-bottom-link {
+      margin-top: 28px;
     }
 
-    /* CTA */
+    .simple-link {
+      color: var(--blue);
 
-    .cta {
-      padding: 55px 0;
-      background:
-        linear-gradient(110deg, rgba(7,31,54,0.96), rgba(7,83,115,0.93)),
-        linear-gradient(#17365d, #17365d);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .simple-link:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+    .final-cta {
+      padding: 51px 0;
+
       color: white;
+
+      background:
+        linear-gradient(
+          110deg,
+          #0b2845,
+          #145879
+        );
     }
 
-    .cta-inner {
+    .final-cta-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       gap: 30px;
     }
 
-    .cta h2 {
+    .final-cta h2 {
       font-size: 30px;
+      margin-bottom: 7px;
     }
 
-    .cta p {
-      color: #bcdbe6;
-      margin-top: 7px;
+    .final-cta p {
+      color: #c7dce7;
     }
 
-    /* FOOTER */
+    /* =========================================================
+       FOOTER
+    ========================================================= */
 
     footer {
-      background: #f7fafc;
+      background: #f8fafc;
+
       border-top: 1px solid var(--border);
-      padding: 32px 0 20px;
+
+      padding: 33px 0 20px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 40px;
+      grid-template-columns: 1.25fr 1fr;
+
+      gap: 35px;
+
       align-items: center;
     }
 
     .footer-project strong {
-      color: var(--navy);
       display: block;
-      margin-bottom: 5px;
+
+      color: var(--navy);
+
+      margin-bottom: 7px;
     }
 
     .footer-project p {
-      font-size: 13px;
       color: var(--muted);
+
+      font-size: 12px;
     }
 
     .footer-links {
       display: flex;
-      flex-wrap: wrap;
       justify-content: flex-end;
-      gap: 18px;
-      font-size: 13px;
-      color: #53677b;
+      flex-wrap: wrap;
+
+      gap: 17px;
+
+      color: #53677a;
+
+      font-size: 12px;
     }
 
     .copyright {
       margin-top: 25px;
-      border-top: 1px solid var(--border);
       padding-top: 18px;
+
+      border-top: 1px solid var(--border);
+
       text-align: center;
-      font-size: 12px;
-      color: #8795a3;
+
+      color: #8795a2;
+
+      font-size: 11px;
     }
 
-    /* RESPONSIVE */
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
 
-    @media (max-width: 1000px) {
-      nav {
+    @media (max-width: 1100px) {
+      .desktop-nav {
         display: none;
+      }
+
+      .mobile-toggle {
+        display: block;
       }
 
       .hero-inner {
         grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 85px 0 100px;
       }
 
-      .digital-map {
-        display: none;
+      .hero-model {
+        max-width: 650px;
       }
 
+      .areas-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
       .stats {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -715,22 +1188,36 @@
         border-top: 1px solid var(--border);
       }
 
-      .research-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .regions-grid {
+      .three-grid,
+      .findings-grid {
         grid-template-columns: 1fr;
       }
 
-      .results-grid {
+      .architecture {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+      }
+
+      .architecture::before {
+        display: none;
+      }
+
+      .method-box {
+        grid-template-columns: 1fr;
+      }
+
+      .regional-preview {
+        grid-template-columns: 1fr;
+      }
+
+      .publication-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 650px) {
-      .brand {
-        min-width: auto;
+    @media (max-width: 700px) {
+      .navbar {
+        min-height: 72px;
       }
 
       .brand-text small {
@@ -739,6 +1226,18 @@
 
       .language {
         display: none;
+      }
+
+      .hero-inner {
+        padding: 62px 0 95px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .hero-text {
+        font-size: 15px;
       }
 
       .stats {
@@ -754,24 +1253,23 @@
         border-top: 1px solid var(--border);
       }
 
-      .research-grid {
+      .architecture {
         grid-template-columns: 1fr;
       }
 
-      .rank-row {
-        grid-template-columns: 115px 1fr 62px;
-        gap: 9px;
+      .areas-grid {
+        grid-template-columns: 1fr;
       }
 
-      .publication {
-        grid-template-columns: 45px 1fr;
+      .method-tags {
+        grid-template-columns: 1fr;
       }
 
-      .pub-arrow {
-        display: none;
+      .regional-copy {
+        padding: 30px;
       }
 
-      .cta-inner {
+      .final-cta-inner {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -789,10 +1287,16 @@
 
 <body>
 
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
 <header>
+
   <div class="container navbar">
 
-    <a class="brand" href="index.html">
+    <a href="index.html" class="brand">
+
       <div class="logo-mark" aria-hidden="true">
         <span></span>
         <span></span>
@@ -801,529 +1305,1045 @@
       </div>
 
       <div class="brand-text">
-        <strong>Дигитална<br>конкурентоспособност</strong>
-        <small>на социално-икономическата система на България</small>
+        <strong>
+          Дигитална<br>
+          конкурентоспособност
+        </strong>
+
+        <small>
+          на социално-икономическата система на България
+        </small>
       </div>
+
     </a>
 
-    <nav>
+    <nav class="desktop-nav">
       <a class="active" href="#home">Начало</a>
       <a href="#project">За проекта</a>
-      <a href="#data">Данни и индекси</a>
+      <a href="#architecture">Методология</a>
+      <a href="#areas">Области</a>
       <a href="#regions">Региони</a>
-      <a href="#sectors">Сектори</a>
       <a href="#results">Резултати</a>
       <a href="#publications">Публикации</a>
     </nav>
 
-    <div class="language">BG &nbsp;|&nbsp; EN</div>
+    <div class="language">
+      BG &nbsp;|&nbsp; EN
+    </div>
+
+    <button
+      class="mobile-toggle"
+      id="mobileToggle"
+      aria-label="Отвори меню"
+    >
+      ☰
+    </button>
 
   </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Начало</a>
+    <a href="#project">За проекта</a>
+    <a href="#architecture">Методология</a>
+    <a href="#areas">Области</a>
+    <a href="#regions">Региони</a>
+    <a href="#results">Резултати</a>
+    <a href="#publications">Публикации</a>
+  </div>
+
 </header>
 
 
 <main>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container hero-inner">
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-      <div>
-        <div class="eyebrow">Данни · Анализ · Решения</div>
+<section class="hero" id="home">
 
-        <h1>
-          Дигитална конкурентоспособност
-          <span>на социално-икономическата система на България</span>
-        </h1>
+  <div class="container hero-inner">
 
-        <p class="hero-text">
-          Изследваме как цифровите технологии, човешкият капитал,
-          организационните способности и институционалната среда
-          се трансформират в икономически и обществени резултати.
-        </p>
+    <div>
 
-        <div class="buttons">
-          <a class="btn btn-primary" href="#results">
-            Разгледай резултатите →
-          </a>
-
-          <a class="btn btn-outline" href="#project">
-            За проекта
-          </a>
-        </div>
+      <div class="eyebrow">
+        Научноизследователски проект № 6/2024
       </div>
 
-      <div class="digital-map" aria-hidden="true">
-        <span class="map-label one">Хора · умения</span>
-        <span class="map-label two">Иновации · развитие</span>
-        <span class="map-label three">Технологии · свързаност</span>
-        <div class="map-shape"></div>
+      <h1>
+        Дигитална конкурентоспособност
+
+        <span>
+          на социално-икономическата система на България
+        </span>
+      </h1>
+
+      <p class="hero-text">
+        Проектът разработва и прилага многостепенна
+        методологическа рамка за оценка на дигиталната
+        конкурентоспособност на България – от националната
+        и институционалната среда, през ключови обществени
+        сектори и регионални различия, до организациите
+        и бизнеса.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-primary"
+          href="#results"
+        >
+          Разгледай резултатите →
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="#project"
+        >
+          За проекта
+        </a>
+
       </div>
 
     </div>
-  </section>
 
 
-  <!-- KEY DATA -->
-  <div class="stats-wrap">
-    <div class="container">
-      <div class="stats">
+    <div class="hero-model">
 
-        <div class="stat">
-          <div class="stat-icon">🎓</div>
-          <div class="stat-value">4 206</div>
-          <div class="stat-title">образователни институции</div>
-          <div class="stat-note">детски градини и училища</div>
-        </div>
+      <div class="hero-model-title">
+        Аналитична логика на проекта
+      </div>
 
-        <div class="stat">
-          <div class="stat-icon">✚</div>
-          <div class="stat-value">286</div>
-          <div class="stat-title">здравни организации</div>
-          <div class="stat-note">секторно емпирично изследване</div>
-        </div>
+      <div class="model-level">
 
-        <div class="stat">
-          <div class="stat-icon">▥</div>
-          <div class="stat-value">633</div>
-          <div class="stat-title">предприятия</div>
-          <div class="stat-note">микро, малки, средни и големи</div>
-        </div>
+        <div class="level-number">01</div>
 
-        <div class="stat">
-          <div class="stat-icon">⌖</div>
-          <div class="stat-value">6</div>
-          <div class="stat-title">района за планиране</div>
-          <div class="stat-note">регионален сравнителен анализ</div>
+        <div>
+          <strong>Национално равнище</strong>
+          <span>
+            политики, институции и стратегическа среда
+          </span>
         </div>
 
       </div>
+
+
+      <div class="model-level">
+
+        <div class="level-number">02</div>
+
+        <div>
+          <strong>Секторно равнище</strong>
+          <span>
+            образование, здравеопазване, бизнес,
+            публичен и граждански сектор
+          </span>
+        </div>
+
+      </div>
+
+
+      <div class="model-level">
+
+        <div class="level-number">03</div>
+
+        <div>
+          <strong>Регионално равнище</strong>
+          <span>
+            различия, готовност и териториални профили
+          </span>
+        </div>
+
+      </div>
+
+
+      <div class="model-level">
+
+        <div class="level-number">04</div>
+
+        <div>
+          <strong>Организационно равнище</strong>
+          <span>
+            данни, инвестиции, управление и иновации
+          </span>
+        </div>
+
+      </div>
+
     </div>
+
   </div>
 
+</section>
 
-  <!-- PROJECT -->
-  <section id="project">
-    <div class="container">
 
-      <div class="section-label">За проекта</div>
+<!-- =========================================================
+     EMPIRICAL BASE
+========================================================= -->
 
-      <h2 class="section-title">
-        От цифровите ресурси към конкурентни резултати
-      </h2>
+<div class="stats-wrap">
 
-      <p class="section-description">
-        Проектът изследва способността на българската социално-икономическа
-        система да трансформира цифровата инфраструктура, технологиите,
-        човешкия капитал и организационните способности в устойчиви
-        икономически и обществени резултати на национално, регионално
-        и секторно равнище.
-      </p>
+  <div class="container">
 
-      <div class="research-grid">
-
-        <article class="card">
-          <div class="card-icon">⚙</div>
-          <h3>Дигитална инфраструктура</h3>
-          <p>
-            Достъп, качество, свързаност и технологична обезпеченост.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">◎</div>
-          <h3>Човешки капитал</h3>
-          <p>
-            Дигитални умения, обучение, компетентности и адаптивност.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">↗</div>
-          <h3>Иновации и бизнес</h3>
-          <p>
-            Инвестиции, технологично използване, иновации и резултати.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">▤</div>
-          <h3>Публични политики</h3>
-          <p>
-            Електронно управление, институционална среда и стратегически решения.
-          </p>
-        </article>
-
-      </div>
+    <div class="stats-label">
+      Емпирична база на проекта
     </div>
-  </section>
 
+    <div class="stats">
 
-  <!-- DATA -->
-  <section class="section-alt" id="data">
-    <div class="container">
-
-      <div class="section-label">Данни и индекси</div>
-
-      <h2 class="section-title">
-        Собствена емпирична база и аналитични инструменти
-      </h2>
-
-      <p class="section-description">
-        Проектът комбинира секторни емпирични изследвания с официални
-        национални и международни статистически източници и собствени
-        индексни конструкции.
-      </p>
-
-      <div class="research-grid">
-
-        <article class="card">
-          <div class="card-icon">R</div>
-          <h3>RDRI</h3>
-          <p>
-            Regional Digital Readiness Index за сравнителна оценка
-            на регионалната дигитална готовност.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">H</div>
-          <h3>DRI-H</h3>
-          <p>
-            Digital Readiness Index for Healthcare, базиран на
-            пет аналитични измерения.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">EU</div>
-          <h3>Официални индикатори</h3>
-          <p>
-            Данни от национални и европейски статистически и
-            институционални източници.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">Σ</div>
-          <h3>Статистически анализ</h3>
-          <p>
-            Корелационни, регресионни, сравнителни и факторни анализи.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- REGIONS -->
-  <section id="regions">
-    <div class="container">
-
-      <div class="section-label">Регионален анализ</div>
-
-      <h2 class="section-title">
-        Дигиталната готовност не е равномерно разпределена
-      </h2>
-
-      <p class="section-description">
-        RDRI позволява сравнителна оценка на шестте района за планиране
-        и идентифициране на регионални различия в дигиталните предпоставки.
-      </p>
-
-      <div class="regions-grid">
-
-        <div class="regional-intro">
-          <h3>Regional Digital Readiness Index</h3>
-
-          <p>
-            Индексът обединява инфраструктурни, образователни,
-            компетентностни и ограничителни измерения.
-          </p>
-
-          <div class="regional-number">0.8791</div>
-          <div class="regional-small">
-            Най-висока установена стойност – Югозападен район
-          </div>
+      <div class="stat">
+        <div class="stat-value">4 206</div>
+        <div class="stat-title">
+          образователни институции
         </div>
+        <div class="stat-note">
+          детски градини и училища
+        </div>
+      </div>
 
-        <div class="ranking">
 
-          <h3>Класиране по RDRI</h3>
+      <div class="stat">
+        <div class="stat-value">286</div>
+        <div class="stat-title">
+          респонденти в здравеопазването
+        </div>
+        <div class="stat-note">
+          национално секторно изследване
+        </div>
+      </div>
 
-          <div class="rank-row">
-            <div class="rank-name">Югозападен</div>
-            <div class="bar"><span style="width:87.91%"></span></div>
-            <div class="rank-value">0.8791</div>
-          </div>
 
-          <div class="rank-row">
-            <div class="rank-name">Южен централен</div>
-            <div class="bar"><span style="width:86.31%"></span></div>
-            <div class="rank-value">0.8631</div>
-          </div>
+      <div class="stat">
+        <div class="stat-value">633</div>
+        <div class="stat-title">
+          предприятия
+        </div>
+        <div class="stat-note">
+          микро, малки, средни и големи
+        </div>
+      </div>
 
-          <div class="rank-row">
-            <div class="rank-name">Северен централен</div>
-            <div class="bar"><span style="width:85.94%"></span></div>
-            <div class="rank-value">0.8594</div>
-          </div>
 
-          <div class="rank-row">
-            <div class="rank-name">Северозападен</div>
-            <div class="bar"><span style="width:85.19%"></span></div>
-            <div class="rank-value">0.8519</div>
-          </div>
-
-          <div class="rank-row">
-            <div class="rank-name">Североизточен</div>
-            <div class="bar"><span style="width:84.41%"></span></div>
-            <div class="rank-value">0.8441</div>
-          </div>
-
-          <div class="rank-row">
-            <div class="rank-name">Югоизточен</div>
-            <div class="bar"><span style="width:79.21%"></span></div>
-            <div class="rank-value">0.7921</div>
-          </div>
-
+      <div class="stat">
+        <div class="stat-value">6</div>
+        <div class="stat-title">
+          района за планиране
+        </div>
+        <div class="stat-note">
+          регионален сравнителен анализ
         </div>
       </div>
 
     </div>
-  </section>
+
+  </div>
+
+</div>
 
 
-  <!-- SECTORS -->
-  <section class="section-alt" id="sectors">
-    <div class="container">
+<!-- =========================================================
+     WHAT THE PROJECT DOES
+========================================================= -->
 
-      <div class="section-label">Секторен поглед</div>
+<section
+  class="standard-section"
+  id="project"
+>
 
-      <h2 class="section-title">
-        Дигиталната трансформация през различни части на системата
-      </h2>
+  <div class="container">
 
-      <p class="section-description">
-        Проектът използва секторни изследвания, за да покаже как
-        сходни технологични ресурси могат да водят до различни резултати.
-      </p>
+    <div class="section-label">
+      За проекта
+    </div>
 
-      <div class="research-grid">
+    <h2 class="section-title">
+      Какво прави проектът?
+    </h2>
 
-        <article class="card">
-          <div class="card-icon">🎓</div>
-          <h3>Образование</h3>
-          <p>
-            Дигитализация, инфраструктура, STEM, компетентности
-            и регионални различия.
-          </p>
-        </article>
+    <p class="section-description">
+      Изследването развива концепцията за дигитална
+      конкурентоспособност, изгражда инструменти за нейното
+      измерване и ги прилага към различни равнища и области
+      на социално-икономическата система на България.
+    </p>
 
-        <article class="card">
-          <div class="card-icon">♡</div>
-          <h3>Здравеопазване</h3>
-          <p>
-            Технологии, обучение, инфраструктура,
-            ефективност и ограничения.
-          </p>
-        </article>
 
-        <article class="card">
-          <div class="card-icon">▥</div>
-          <h3>Бизнес</h3>
-          <p>
-            Цифрови инвестиции, организационни способности,
-            иновации и бизнес резултати.
-          </p>
-        </article>
+    <div class="three-grid">
 
-        <article class="card">
-          <div class="card-icon">⌂</div>
-          <h3>Публичен сектор</h3>
-          <p>
-            Електронно управление, институционална готовност
-            и публични услуги.
-          </p>
-        </article>
+      <article class="action-card">
+
+        <div class="action-number">
+          01 / КОНЦЕПТУАЛИЗИРА
+        </div>
+
+        <h3>
+          Концептуална рамка
+        </h3>
+
+        <p>
+          Изследва съдържанието, измеренията и проявленията
+          на дигиталната конкурентоспособност и връзката ѝ
+          с процесите на дигитализация.
+        </p>
+
+      </article>
+
+
+      <article class="action-card">
+
+        <div class="action-number">
+          02 / ИЗМЕРВА
+        </div>
+
+        <h3>
+          Методология за оценка
+        </h3>
+
+        <p>
+          Разработва и апробира многостепенна методология,
+          секторно специфични индикатори и авторски индекси
+          за дигитална готовност и трансформация.
+        </p>
+
+      </article>
+
+
+      <article class="action-card">
+
+        <div class="action-number">
+          03 / АНАЛИЗИРА
+        </div>
+
+        <h3>
+          Емпирично приложение
+        </h3>
+
+        <p>
+          Прилага методологията към националната среда,
+          ключови обществени сектори, регионални различия
+          и организационни практики.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ARCHITECTURE
+========================================================= -->
+
+<section
+  class="standard-section section-alt"
+  id="architecture"
+>
+
+  <div class="container">
+
+    <div class="section-label">
+      Архитектура на изследването
+    </div>
+
+    <h2 class="section-title">
+      От националната среда към организационните проявления
+    </h2>
+
+    <p class="section-description">
+      Методологическата рамка проследява дигиталната
+      конкурентоспособност „отгоре надолу“, като свързва
+      стратегическите условия с конкретните секторни,
+      регионални и организационни резултати.
+    </p>
+
+
+    <div class="architecture">
+
+      <div class="arch-item">
+
+        <div class="arch-circle">
+          01
+        </div>
+
+        <h3>
+          Национално
+        </h3>
+
+        <p>
+          Макроикономическа среда, институционално управление
+          и национални политики за цифрова трансформация.
+        </p>
+
+      </div>
+
+
+      <div class="arch-item">
+
+        <div class="arch-circle">
+          02
+        </div>
+
+        <h3>
+          Секторно
+        </h3>
+
+        <p>
+          Анализ на ключови обществени и икономически
+          системи и техните специфични модели на дигитализация.
+        </p>
+
+      </div>
+
+
+      <div class="arch-item">
+
+        <div class="arch-circle">
+          03
+        </div>
+
+        <h3>
+          Регионално
+        </h3>
+
+        <p>
+          Териториални различия, дигитална готовност
+          и неравномерно проявление на цифровата трансформация.
+        </p>
+
+      </div>
+
+
+      <div class="arch-item">
+
+        <div class="arch-circle">
+          04
+        </div>
+
+        <h3>
+          Организационно
+        </h3>
+
+        <p>
+          Данни, технологии, инвестиции, организационна
+          готовност, управление и иновационни резултати.
+        </p>
 
       </div>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
 
 
-  <!-- RESULTS -->
-  <section id="results">
-    <div class="container">
+<!-- =========================================================
+     DATA & METHODOLOGY
+========================================================= -->
 
-      <div class="section-label">Ключови резултати</div>
+<section
+  class="standard-section"
+  id="data"
+>
 
-      <h2 class="section-title">
-        Какво показват данните?
-      </h2>
+  <div class="container">
 
-      <div class="results-grid">
-
-        <article class="card result-card">
-          <h3>Регионална дигитална готовност</h3>
-          <div class="result-value">0.8791</div>
-          <p>
-            Най-високата установена стойност на RDRI е
-            в Югозападния район.
-          </p>
-        </article>
-
-        <article class="card result-card">
-          <h3>Здравеопазване</h3>
-          <div class="result-value">66.8%</div>
-          <p>
-            Петте компонента на DRI-H обясняват приблизително
-            66.8% от общата вариация.
-          </p>
-        </article>
-
-        <article class="card result-card">
-          <h3>Технологии и удовлетвореност</h3>
-          <div class="result-value">r = 0.510</div>
-          <p>
-            Установена е положителна зависимост между използването
-            на технологии и удовлетвореността в здравния сектор.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- PUBLICATIONS -->
-  <section class="section-alt" id="publications">
-    <div class="container">
-
-      <div class="section-label">Научни резултати</div>
-
-      <h2 class="section-title">
-        Публикации и разработки
-      </h2>
-
-      <div class="publication-list">
-
-        <article class="publication">
-          <div class="pub-icon">▤</div>
-
-          <div>
-            <h3>
-              From Chalkboards to Tablets: The Digitalization Process
-              in Bulgarian Educational System
-            </h3>
-            <p>
-              Изследване на дигитализацията в българското
-              предучилищно и училищно образование.
-            </p>
-          </div>
-
-          <div class="pub-arrow">→</div>
-        </article>
-
-        <article class="publication">
-          <div class="pub-icon">▤</div>
-
-          <div>
-            <h3>
-              Digital Competitiveness of the Healthcare System in Bulgaria
-            </h3>
-            <p>
-              Емпиричен анализ на технологиите, човешкия капитал,
-              инфраструктурата и ограниченията.
-            </p>
-          </div>
-
-          <div class="pub-arrow">→</div>
-        </article>
-
-        <article class="publication">
-          <div class="pub-icon">▤</div>
-
-          <div>
-            <h3>
-              Electronic Government as an Engine for Bulgaria's
-              Digital Competitiveness
-            </h3>
-            <p>
-              Анализ на електронното управление като фактор
-              за националната дигитална конкурентоспособност.
-            </p>
-          </div>
-
-          <div class="pub-arrow">→</div>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container cta-inner">
+    <div class="method-box">
 
       <div>
-        <h2>Знание. Хора. Технологии.</h2>
+
+        <div class="section-label">
+          Данни и методология
+        </div>
+
+        <h3>
+          Единна рамка, различни източници
+        </h3>
+
         <p>
-          Данните са основа за по-добри стратегически решения.
+          Проектът съчетава собствени емпирични изследвания,
+          международни системи за измерване и авторски
+          секторни индекси в обща аналитична рамка.
         </p>
+
+        <div style="margin-top: 22px;">
+          <a
+            href="#areas"
+            class="simple-link"
+          >
+            Разгледай областите на изследване →
+          </a>
+        </div>
+
       </div>
 
-      <a href="#data" class="btn btn-primary">
-        Разгледай данните →
+
+      <div class="method-tags">
+
+        <div class="method-tag">
+          Емпирични проучвания
+        </div>
+
+        <div class="method-tag">
+          Международни индикатори
+        </div>
+
+        <div class="method-tag">
+          Секторни индекси
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     AREAS
+========================================================= -->
+
+<section
+  class="standard-section section-alt"
+  id="areas"
+>
+
+  <div class="container">
+
+    <div class="section-label">
+      Основни области
+    </div>
+
+    <h2 class="section-title">
+      Къде се проявява дигиталната конкурентоспособност?
+    </h2>
+
+    <p class="section-description">
+      Секторният анализ проследява различните механизми,
+      чрез които цифровите технологии, човешкият капитал,
+      организационните способности и институционалната среда
+      влияят върху резултатите.
+    </p>
+
+
+    <div class="areas-grid">
+
+      <article class="area-card">
+
+        <div class="area-code">
+          EDU
+        </div>
+
+        <h3>
+          Образование
+        </h3>
+
+        <p>
+          Дигитална инфраструктура, компетентности,
+          STEM, институционални характеристики
+          и регионални различия.
+        </p>
+
+      </article>
+
+
+      <article class="area-card">
+
+        <div class="area-code">
+          HLT
+        </div>
+
+        <h3>
+          Здравеопазване
+        </h3>
+
+        <p>
+          Технологии, човешки капитал, инфраструктура,
+          ефективност, услуги и бариери пред дигитализацията.
+        </p>
+
+      </article>
+
+
+      <article class="area-card">
+
+        <div class="area-code">
+          BUS
+        </div>
+
+        <h3>
+          Бизнес и индустрия
+        </h3>
+
+        <p>
+          Данни, цифрови инвестиции, организационна промяна,
+          стратегическо управление и иновации.
+        </p>
+
+      </article>
+
+
+      <article class="area-card">
+
+        <div class="area-code">
+          GOV
+        </div>
+
+        <h3>
+          Публично управление
+        </h3>
+
+        <p>
+          Електронно управление, институционален капацитет,
+          стратегически документи и национални цифрови политики.
+        </p>
+
+      </article>
+
+
+      <article class="area-card">
+
+        <div class="area-code">
+          CIV
+        </div>
+
+        <h3>
+          Граждански сектор
+        </h3>
+
+        <p>
+          Дигитализация на НПО, доброволчество,
+          комуникация, участие и социална ангажираност.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     REGIONAL PREVIEW
+========================================================= -->
+
+<section
+  class="standard-section"
+  id="regions"
+>
+
+  <div class="container">
+
+    <div class="section-label">
+      Регионален поглед
+    </div>
+
+    <h2 class="section-title">
+      Териториалните различия са част от анализа
+    </h2>
+
+    <p class="section-description">
+      Проектът изследва как дигиталната готовност и
+      трансформацията се проявяват в различни териториални
+      условия, без да предполага еднакъв регионален модел
+      за всички сектори.
+    </p>
+
+
+    <div class="regional-preview">
+
+      <div class="regional-copy">
+
+        <h3>
+          Различни условия, различни проявления
+        </h3>
+
+        <p>
+          В отделните секторни изследвания регионалният фактор
+          има различна тежест. Затова териториалният анализ
+          се разглежда във връзка със спецификата на съответната
+          система, а не чрез един универсален регионален рейтинг.
+        </p>
+
+        <a
+          class="simple-link"
+          href="#results"
+        >
+          Към избраните резултати →
+        </a>
+
+      </div>
+
+
+      <div class="regional-visual">
+
+        <div class="region-network"></div>
+
+        <span class="region-dot d1"></span>
+        <span class="region-dot d2"></span>
+        <span class="region-dot d3"></span>
+        <span class="region-dot d4"></span>
+        <span class="region-dot d5"></span>
+        <span class="region-dot d6"></span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SELECTED FINDINGS
+========================================================= -->
+
+<section
+  class="standard-section section-alt"
+  id="results"
+>
+
+  <div class="container">
+
+    <div class="section-label">
+      Избрани резултати
+    </div>
+
+    <h2 class="section-title">
+      Какво показва изследването до момента?
+    </h2>
+
+    <p class="section-description">
+      Основните резултати очертават дигиталната
+      конкурентоспособност като комплексен процес,
+      който не може да бъде обяснен единствено
+      чрез наличието на технологии.
+    </p>
+
+
+    <div class="findings-grid">
+
+      <article class="finding-card">
+
+        <div class="finding-number">
+          01
+        </div>
+
+        <h3>
+          Дигиталната конкурентоспособност е многостепенна
+        </h3>
+
+        <p>
+          Националната стратегическа и институционална среда
+          създава условията, но конкретните резултати се формират
+          на секторно, регионално и организационно равнище.
+        </p>
+
+      </article>
+
+
+      <article class="finding-card">
+
+        <div class="finding-number">
+          02
+        </div>
+
+        <h3>
+          Технологиите сами по себе си не са достатъчни
+        </h3>
+
+        <p>
+          Човешкият капитал, организационната готовност,
+          управлението на данни и институционалният капацитет
+          определят доколко цифровите ресурси се превръщат
+          в реални резултати.
+        </p>
+
+      </article>
+
+
+      <article class="finding-card">
+
+        <div class="finding-number">
+          03
+        </div>
+
+        <h3>
+          Дигитализацията в България е неравномерна
+        </h3>
+
+        <p>
+          Наблюдават се съществени различия между сектори,
+          организации и, в определени случаи, между региони,
+          което изисква диференциран подход при анализа
+          и формулирането на политики.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section
+  class="standard-section"
+  id="publications"
+>
+
+  <div class="container">
+
+    <div class="section-label">
+      Избрани изследвания
+    </div>
+
+    <h2 class="section-title">
+      Научни публикации по проекта
+    </h2>
+
+    <p class="section-description">
+      Публикациите представят различни равнища и области
+      на дигиталната конкурентоспособност и изграждат
+      емпиричната и концептуалната основа на проекта.
+    </p>
+
+
+    <div class="publication-grid">
+
+      <article class="publication">
+
+        <div class="publication-area">
+          Публично управление
+        </div>
+
+        <h3>
+          Electronic Government as an Engine for Bulgaria's
+          Digital Competitiveness
+        </h3>
+
+        <p>
+          Sabrina Kalinkova · 2025
+        </p>
+
+      </article>
+
+
+      <article class="publication">
+
+        <div class="publication-area">
+          Образование
+        </div>
+
+        <h3>
+          Digital Education Gaps Across a System in Transition
+        </h3>
+
+        <p>
+          Sabrina Kalinkova · Violeta Toncheva-Zlatkova
+        </p>
+
+      </article>
+
+
+      <article class="publication">
+
+        <div class="publication-area">
+          Здравеопазване
+        </div>
+
+        <h3>
+          Digital Competitiveness of the Healthcare System
+          in Bulgaria
+        </h3>
+
+        <p>
+          Sabrina Kalinkova · Christo Ivanov
+        </p>
+
+      </article>
+
+
+      <article class="publication">
+
+        <div class="publication-area">
+          Бизнес
+        </div>
+
+        <h3>
+          From Investment to Innovation: The Impact of Targeted
+          Digital Spending on Business Performance
+        </h3>
+
+        <p>
+          Sabrina Kalinkova · 2026
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <div class="section-bottom-link">
+
+      <a
+        href="#home"
+        class="simple-link"
+      >
+        Всички публикации ще бъдат достъпни
+        в отделна секция →
       </a>
 
     </div>
-  </section>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="final-cta">
+
+  <div class="container final-cta-inner">
+
+    <div>
+
+      <h2>
+        Резултати от проекта
+      </h2>
+
+      <p>
+        Анализи, секторни изследвания, методология
+        и научни публикации.
+      </p>
+
+    </div>
+
+    <a
+      class="btn btn-primary"
+      href="#results"
+    >
+      Разгледай резултатите →
+    </a>
+
+  </div>
+
+</section>
 
 </main>
 
 
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
+
   <div class="container">
 
     <div class="footer-grid">
 
       <div class="footer-project">
+
         <strong>
           Университет за национално и световно стопанство
         </strong>
 
         <p>
-          Проект № 6/2024<br>
+          Научноизследователски проект № 6/2024<br>
           „Дигитална конкурентоспособност на
           социално-икономическата система на България“
         </p>
+
       </div>
 
+
       <div class="footer-links">
+
         <a href="#home">Начало</a>
         <a href="#project">За проекта</a>
-        <a href="#data">Данни</a>
-        <a href="#regions">Региони</a>
-        <a href="#sectors">Сектори</a>
+        <a href="#architecture">Методология</a>
+        <a href="#areas">Области</a>
         <a href="#results">Резултати</a>
+        <a href="#publications">Публикации</a>
+
       </div>
 
     </div>
 
+
     <div class="copyright">
-      © 2024–2026 Дигитална конкурентоспособност
-      на социално-икономическата система на България
+
+      © 2024–2026
+      Дигитална конкурентоспособност на
+      социално-икономическата система на България
+
     </div>
 
   </div>
+
 </footer>
+
+
+<script>
+
+  const mobileToggle =
+    document.getElementById("mobileToggle");
+
+  const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+  mobileToggle.addEventListener(
+    "click",
+    function () {
+
+      if (
+        mobileMenu.style.display === "block"
+      ) {
+        mobileMenu.style.display = "none";
+      } else {
+        mobileMenu.style.display = "block";
+      }
+
+    }
+  );
+
+
+  const mobileLinks =
+    mobileMenu.querySelectorAll("a");
+
+
+  mobileLinks.forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+          mobileMenu.style.display = "none";
+        }
+      );
+
+    }
+  );
+
+</script>
 
 </body>
 </html>
