@@ -1,0 +1,3558 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    За проекта | Дигитална конкурентоспособност на България
+  </title>
+
+  <meta
+    name="description"
+    content="За научноизследователски проект № 6/2024 „Дигитална конкурентоспособност на социално-икономическата система на България“."
+  >
+
+  <style>
+
+    :root {
+
+      --navy: #102b4c;
+      --navy-deep: #081f38;
+
+      --blue: #2457c5;
+      --cyan: #28a9c7;
+      --turquoise: #01c9bc;
+
+      --text: #213247;
+      --muted: #64768a;
+
+      --white: #ffffff;
+      --background: #f5f8fb;
+      --background-soft: #eef5f9;
+
+      --border: #dce7ef;
+
+      --shadow:
+        0 14px 40px rgba(16, 43, 76, 0.08);
+
+      --radius: 18px;
+
+      --max-width: 1260px;
+
+    }
+
+
+    * {
+
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--text);
+
+      background: var(--white);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+
+      color: inherit;
+      text-decoration: none;
+
+    }
+
+
+    button {
+
+      font: inherit;
+
+    }
+
+
+    .container {
+
+      width: min(
+        92%,
+        var(--max-width)
+      );
+
+      margin-inline: auto;
+
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+
+    header {
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.97
+        );
+
+      border-bottom:
+        1px solid var(--border);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      backdrop-filter:
+        blur(12px);
+
+    }
+
+
+    .navbar {
+
+      min-height: 82px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+      gap: 28px;
+
+    }
+
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .logo-mark {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      gap: 4px;
+
+      height: 42px;
+
+    }
+
+
+    .logo-mark span {
+
+      display: block;
+
+      width: 9px;
+
+      border-radius:
+        3px 3px 0 0;
+
+    }
+
+
+    .logo-mark span:nth-child(1) {
+
+      height: 15px;
+      background: #7fd9e6;
+
+    }
+
+
+    .logo-mark span:nth-child(2) {
+
+      height: 23px;
+      background: #46bfd3;
+
+    }
+
+
+    .logo-mark span:nth-child(3) {
+
+      height: 31px;
+      background: #2499c2;
+
+    }
+
+
+    .logo-mark span:nth-child(4) {
+
+      height: 41px;
+      background: #1557a0;
+
+    }
+
+
+    .brand-text strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 16px;
+
+      line-height: 1.02;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .brand-text small {
+
+      display: block;
+
+      margin-top: 5px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      white-space: nowrap;
+
+    }
+
+
+    .desktop-nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 23px;
+
+      color: #34475a;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+    }
+
+
+    .desktop-nav a {
+
+      padding:
+        31px 0 25px;
+
+      border-bottom:
+        3px solid transparent;
+
+      transition:
+        0.2s ease;
+
+    }
+
+
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+
+      color: var(--blue);
+
+      border-bottom-color:
+        var(--turquoise);
+
+    }
+
+
+    .language {
+
+      color: var(--blue);
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      white-space: nowrap;
+
+    }
+
+
+    .mobile-toggle {
+
+      display: none;
+
+      border:
+        1px solid var(--border);
+
+      background: white;
+
+      border-radius: 8px;
+
+      width: 42px;
+
+      height: 42px;
+
+      cursor: pointer;
+
+      color: var(--navy);
+
+      font-size: 20px;
+
+    }
+
+
+    .mobile-menu {
+
+      display: none;
+
+      border-top:
+        1px solid var(--border);
+
+      background: white;
+
+      padding:
+        12px 4%;
+
+    }
+
+
+    .mobile-menu a {
+
+      display: block;
+
+      padding:
+        12px 0;
+
+      color: var(--navy);
+
+      font-weight: 700;
+
+      border-bottom:
+        1px solid #edf2f5;
+
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+
+    .page-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      color: white;
+
+      background:
+
+        radial-gradient(
+          circle at 83% 42%,
+          rgba(1, 201, 188, 0.16),
+          transparent 24%
+        ),
+
+        linear-gradient(
+          115deg,
+          #081f38 0%,
+          #102f51 60%,
+          #145b7d 100%
+        );
+
+    }
+
+
+    .page-hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background-image:
+
+        linear-gradient(
+          rgba(82, 215, 226, 0.05) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(82, 215, 226, 0.05) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        62px 62px;
+
+    }
+
+
+    .page-hero-inner {
+
+      min-height: 420px;
+
+      position: relative;
+
+      z-index: 1;
+
+      display: grid;
+
+      grid-template-columns:
+        1.15fr 0.85fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+      padding:
+        72px 0;
+
+    }
+
+
+    .eyebrow {
+
+      color: #8ce7ed;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        1.9px;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    h1 {
+
+      font-size:
+        clamp(
+          42px,
+          5vw,
+          62px
+        );
+
+      line-height: 1;
+
+      letter-spacing:
+        -2px;
+
+      margin-bottom: 21px;
+
+    }
+
+
+    .hero-description {
+
+      max-width: 730px;
+
+      color: #d3e5ee;
+
+      font-size: 17px;
+
+      line-height: 1.68;
+
+    }
+
+
+    .hero-info {
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.14
+        );
+
+      border-radius:
+        18px;
+
+      padding: 28px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.045
+        );
+
+    }
+
+
+    .hero-info-row {
+
+      padding:
+        13px 0;
+
+      border-bottom:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.09
+        );
+
+    }
+
+
+    .hero-info-row:last-child {
+
+      border-bottom: none;
+
+    }
+
+
+    .hero-info-label {
+
+      display: block;
+
+      color: #81dfe7;
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        1.4px;
+
+      margin-bottom: 4px;
+
+    }
+
+
+    .hero-info-value {
+
+      color: white;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+    }
+
+
+    /* =========================================================
+       GENERAL SECTIONS
+    ========================================================= */
+
+
+    .standard-section {
+
+      padding:
+        82px 0;
+
+    }
+
+
+    .section-alt {
+
+      background:
+        var(--background);
+
+    }
+
+
+    .section-label {
+
+      color: var(--cyan);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        1.8px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .section-title {
+
+      color: var(--navy);
+
+      font-size:
+        clamp(
+          29px,
+          3.2vw,
+          41px
+        );
+
+      line-height: 1.12;
+
+      letter-spacing:
+        -0.9px;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    .section-description {
+
+      max-width: 850px;
+
+      color: var(--muted);
+
+      font-size: 16px;
+
+      line-height: 1.72;
+
+      margin-bottom: 38px;
+
+    }
+
+
+    /* =========================================================
+       CONTEXT
+    ========================================================= */
+
+
+    .context-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.15fr 0.85fr;
+
+      gap: 35px;
+
+      align-items: stretch;
+
+    }
+
+
+    .context-main {
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius);
+
+      padding: 35px;
+
+      background: white;
+
+    }
+
+
+    .context-main p {
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.75;
+
+    }
+
+
+    .context-main p + p {
+
+      margin-top: 17px;
+
+    }
+
+
+    .context-highlight {
+
+      border-radius:
+        var(--radius);
+
+      padding: 35px;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          #0f2e4f,
+          #145a7d
+        );
+
+    }
+
+
+    .context-highlight span {
+
+      display: block;
+
+      color: #7be3e8;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        1.5px;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    .context-highlight h3 {
+
+      font-size: 25px;
+
+      line-height: 1.27;
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .context-highlight p {
+
+      color: #cfe0e9;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================================================
+       MAIN OBJECTIVE
+    ========================================================= */
+
+
+    .objective-box {
+
+      position: relative;
+
+      overflow: hidden;
+
+      border:
+        1px solid #cfe1e9;
+
+      border-radius:
+        20px;
+
+      padding:
+        43px 46px;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #f1f8fb
+        );
+
+    }
+
+
+    .objective-box::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      top: 0;
+
+      bottom: 0;
+
+      width: 6px;
+
+      background:
+
+        linear-gradient(
+          var(--blue),
+          var(--turquoise)
+        );
+
+    }
+
+
+    .objective-box h3 {
+
+      color: var(--navy);
+
+      font-size: 27px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .objective-box p {
+
+      max-width: 980px;
+
+      color: #526a7e;
+
+      font-size: 17px;
+
+      line-height: 1.75;
+
+    }
+
+
+    /* =========================================================
+       TASKS
+    ========================================================= */
+
+
+    .tasks-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          5,
+          1fr
+        );
+
+      gap: 15px;
+
+    }
+
+
+    .task-card {
+
+      min-height: 225px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        16px;
+
+      padding: 25px;
+
+      background: white;
+
+    }
+
+
+    .task-number {
+
+      color: #9ccfdc;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .task-card h3 {
+
+      color: var(--navy);
+
+      font-size: 17px;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .task-card p {
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* =========================================================
+       RESEARCH ARCHITECTURE
+    ========================================================= */
+
+
+    .architecture {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          4,
+          1fr
+        );
+
+      position: relative;
+
+    }
+
+
+    .architecture::before {
+
+      content: "";
+
+      position: absolute;
+
+      top: 41px;
+
+      left: 12%;
+
+      right: 12%;
+
+      height: 2px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--cyan),
+          var(--turquoise)
+        );
+
+      opacity: 0.26;
+
+    }
+
+
+    .arch-item {
+
+      position: relative;
+
+      z-index: 2;
+
+      text-align: center;
+
+      padding:
+        0 17px;
+
+    }
+
+
+    .arch-circle {
+
+      width: 82px;
+
+      height: 82px;
+
+      margin:
+        0 auto 21px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: white;
+
+      border:
+        2px solid #bfdee8;
+
+      color: var(--blue);
+
+      font-size: 20px;
+
+      font-weight: 800;
+
+      box-shadow:
+        0 8px 25px
+        rgba(
+          16,
+          43,
+          76,
+          0.06
+        );
+
+    }
+
+
+    .arch-item:nth-child(4)
+    .arch-circle {
+
+      background:
+        var(--navy);
+
+      border-color:
+        var(--navy);
+
+      color: white;
+
+    }
+
+
+    .arch-item h3 {
+
+      color: var(--navy);
+
+      font-size: 17px;
+
+      margin-bottom: 9px;
+
+    }
+
+
+    .arch-item p {
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.55;
+
+    }
+
+
+    /* =========================================================
+       STAGES
+    ========================================================= */
+
+
+    .timeline {
+
+      max-width: 1050px;
+
+      margin-inline: auto;
+
+      position: relative;
+
+    }
+
+
+    .timeline::before {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      bottom: 0;
+
+      left: 39px;
+
+      width: 2px;
+
+      background:
+        #d7e9ef;
+
+    }
+
+
+    .timeline-item {
+
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns:
+        80px 1fr;
+
+      gap: 25px;
+
+      padding-bottom: 32px;
+
+    }
+
+
+    .timeline-item:last-child {
+
+      padding-bottom: 0;
+
+    }
+
+
+    .timeline-marker {
+
+      width: 80px;
+
+      display: flex;
+
+      justify-content: center;
+
+      position: relative;
+
+      z-index: 2;
+
+    }
+
+
+    .timeline-dot {
+
+      width: 48px;
+
+      height: 48px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: white;
+
+      border:
+        2px solid #9fd5df;
+
+      color: var(--blue);
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+    }
+
+
+    .timeline-item.current
+    .timeline-dot {
+
+      background:
+        var(--navy);
+
+      border-color:
+        var(--navy);
+
+      color: white;
+
+    }
+
+
+    .timeline-content {
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        16px;
+
+      padding:
+        28px 30px;
+
+      background: white;
+
+    }
+
+
+    .timeline-status {
+
+      display:
+        inline-block;
+
+      padding:
+        4px 10px;
+
+      border-radius:
+        20px;
+
+      background:
+        #e9f7f8;
+
+      color: #147a83;
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        1px;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .timeline-item.current
+    .timeline-status {
+
+      background:
+        #e8eefb;
+
+      color: var(--blue);
+
+    }
+
+
+    .timeline-content h3 {
+
+      color: var(--navy);
+
+      font-size: 22px;
+
+      margin-bottom: 11px;
+
+    }
+
+
+    .timeline-content p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .timeline-points {
+
+      margin-top: 17px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          1fr
+        );
+
+      gap: 8px 25px;
+
+    }
+
+
+    .timeline-point {
+
+      color: #4f687a;
+
+      font-size: 13px;
+
+      position: relative;
+
+      padding-left: 15px;
+
+    }
+
+
+    .timeline-point::before {
+
+      content: "";
+
+      width: 5px;
+
+      height: 5px;
+
+      border-radius: 50%;
+
+      background:
+        var(--turquoise);
+
+      position: absolute;
+
+      left: 0;
+
+      top: 8px;
+
+    }
+
+
+    /* =========================================================
+       METHODS
+    ========================================================= */
+
+
+    .methods-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap: 18px;
+
+    }
+
+
+    .method-card {
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        15px;
+
+      padding: 27px;
+
+      background: white;
+
+    }
+
+
+    .method-code {
+
+      color: var(--cyan);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1px;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    .method-card h3 {
+
+      color: var(--navy);
+
+      font-size: 18px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .method-card p {
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* =========================================================
+       HYPOTHESES
+    ========================================================= */
+
+
+    .hypotheses {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          1fr
+        );
+
+      gap: 16px;
+
+    }
+
+
+    .hypothesis {
+
+      display: grid;
+
+      grid-template-columns:
+        47px 1fr;
+
+      gap: 17px;
+
+      align-items: start;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        14px;
+
+      padding: 23px;
+
+      background: white;
+
+    }
+
+
+    .hypothesis-code {
+
+      width: 44px;
+
+      height: 44px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 11px;
+
+      background:
+        #e9f6fa;
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+    }
+
+
+    .hypothesis p {
+
+      color: #526a7e;
+
+      font-size: 14px;
+
+      line-height: 1.65;
+
+    }
+
+
+    /* =========================================================
+       CONTRIBUTIONS
+    ========================================================= */
+
+
+    .contribution-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 22px;
+
+    }
+
+
+    .contribution-card {
+
+      border-radius:
+        var(--radius);
+
+      padding: 32px;
+
+      border:
+        1px solid var(--border);
+
+      background: white;
+
+    }
+
+
+    .contribution-card.primary {
+
+      background:
+
+        linear-gradient(
+          145deg,
+          #0f2d4d,
+          #145879
+        );
+
+      color: white;
+
+      border-color:
+        transparent;
+
+    }
+
+
+    .contribution-card h3 {
+
+      color: var(--navy);
+
+      font-size: 23px;
+
+      margin-bottom: 16px;
+
+    }
+
+
+    .contribution-card.primary h3 {
+
+      color: white;
+
+    }
+
+
+    .contribution-card p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .contribution-card.primary p {
+
+      color: #d1e2ea;
+
+    }
+
+
+    .contribution-list {
+
+      margin-top: 18px;
+
+      display: grid;
+
+      gap: 10px;
+
+    }
+
+
+    .contribution-list div {
+
+      position: relative;
+
+      padding-left: 17px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+    }
+
+
+    .contribution-card.primary
+    .contribution-list div {
+
+      color: #d6e5ec;
+
+    }
+
+
+    .contribution-list div::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 6px;
+
+      height: 6px;
+
+      border-radius: 50%;
+
+      left: 0;
+
+      top: 7px;
+
+      background:
+        var(--turquoise);
+
+    }
+
+
+    /* =========================================================
+       IMPACT
+    ========================================================= */
+
+
+    .impact-strip {
+
+      display: grid;
+
+      grid-template-columns:
+        130px 1fr;
+
+      gap: 30px;
+
+      align-items: center;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius);
+
+      padding:
+        32px;
+
+      background:
+        #f8fbfc;
+
+    }
+
+
+    .sdg-box {
+
+      width: 110px;
+
+      height: 110px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 15px;
+
+      background:
+        var(--navy);
+
+      color: white;
+
+      text-align: center;
+
+    }
+
+
+    .sdg-box strong {
+
+      display: block;
+
+      font-size: 37px;
+
+      line-height: 1;
+
+    }
+
+
+    .sdg-box span {
+
+      display: block;
+
+      font-size: 9px;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        1px;
+
+      margin-top: 5px;
+
+      color: #a9dce4;
+
+    }
+
+
+    .impact-copy h3 {
+
+      color: var(--navy);
+
+      font-size: 23px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .impact-copy p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+
+    .final-cta {
+
+      padding:
+        51px 0;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          110deg,
+          #0b2845,
+          #145879
+        );
+
+    }
+
+
+    .final-cta-inner {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      gap: 30px;
+
+    }
+
+
+    .final-cta h2 {
+
+      font-size: 29px;
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .final-cta p {
+
+      color: #c7dce7;
+
+    }
+
+
+    .btn {
+
+      min-height: 48px;
+
+      display:
+        inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding:
+        0 23px;
+
+      border-radius: 9px;
+
+      border:
+        1px solid transparent;
+
+      font-weight: 700;
+
+      font-size: 14px;
+
+    }
+
+
+    .btn-primary {
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #79d5dd,
+          #55bedb
+        );
+
+      color: #082b46;
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+
+    footer {
+
+      background: #f8fafc;
+
+      border-top:
+        1px solid var(--border);
+
+      padding:
+        33px 0 20px;
+
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.25fr 1fr;
+
+      gap: 35px;
+
+      align-items: center;
+
+    }
+
+
+    .footer-project strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .footer-project p {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+    }
+
+
+    .footer-links {
+
+      display: flex;
+
+      justify-content:
+        flex-end;
+
+      flex-wrap: wrap;
+
+      gap: 17px;
+
+      color: #53677a;
+
+      font-size: 12px;
+
+    }
+
+
+    .copyright {
+
+      margin-top: 25px;
+
+      padding-top: 18px;
+
+      border-top:
+        1px solid var(--border);
+
+      text-align: center;
+
+      color: #8795a2;
+
+      font-size: 11px;
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+
+    @media (max-width: 1100px) {
+
+      .desktop-nav {
+
+        display: none;
+
+      }
+
+      .mobile-toggle {
+
+        display: block;
+
+      }
+
+      .page-hero-inner {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .hero-info {
+
+        max-width: 650px;
+
+      }
+
+      .tasks-grid {
+
+        grid-template-columns:
+          repeat(
+            3,
+            1fr
+          );
+
+      }
+
+    }
+
+
+    @media (max-width: 900px) {
+
+      .context-grid,
+      .contribution-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .architecture {
+
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
+
+        gap: 38px;
+
+      }
+
+      .architecture::before {
+
+        display: none;
+
+      }
+
+      .methods-grid {
+
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
+
+      }
+
+      .hypotheses {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .tasks-grid {
+
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
+
+      }
+
+      .timeline-points {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .brand-text small {
+
+        display: none;
+
+      }
+
+      .language {
+
+        display: none;
+
+      }
+
+      .page-hero-inner {
+
+        padding:
+          57px 0;
+
+      }
+
+      h1 {
+
+        font-size: 43px;
+
+      }
+
+      .tasks-grid,
+      .methods-grid,
+      .architecture {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .objective-box {
+
+        padding:
+          32px 27px;
+
+      }
+
+      .timeline {
+
+        margin-left: -15px;
+
+      }
+
+      .timeline-content {
+
+        padding:
+          23px;
+
+      }
+
+      .impact-strip {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .final-cta-inner {
+
+        flex-direction:
+          column;
+
+        align-items:
+          flex-start;
+
+      }
+
+      .footer-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .footer-links {
+
+        justify-content:
+          flex-start;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+
+<header>
+
+  <div class="container navbar">
+
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+
+      <div
+        class="logo-mark"
+        aria-hidden="true"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+      <div class="brand-text">
+
+        <strong>
+          Дигитална<br>
+          конкурентоспособност
+        </strong>
+
+        <small>
+          на социално-икономическата система на България
+        </small>
+
+      </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">
+        Начало
+      </a>
+
+      <a
+        class="active"
+        href="about.html"
+      >
+        За проекта
+      </a>
+
+      <a href="data-indices.html">
+        Данни и индекси
+      </a>
+
+      <a href="regions.html">
+        Региони
+      </a>
+
+      <a href="areas.html">
+        Области
+      </a>
+
+      <a href="results.html">
+        Резултати
+      </a>
+
+      <a href="publications.html">
+        Публикации
+      </a>
+
+    </nav>
+
+
+    <div class="language">
+
+      BG &nbsp;|&nbsp; EN
+
+    </div>
+
+
+    <button
+      class="mobile-toggle"
+      id="mobileToggle"
+      aria-label="Отвори меню"
+    >
+      ☰
+    </button>
+
+  </div>
+
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <a href="index.html">
+      Начало
+    </a>
+
+    <a href="about.html">
+      За проекта
+    </a>
+
+    <a href="data-indices.html">
+      Данни и индекси
+    </a>
+
+    <a href="regions.html">
+      Региони
+    </a>
+
+    <a href="areas.html">
+      Области
+    </a>
+
+    <a href="results.html">
+      Резултати
+    </a>
+
+    <a href="publications.html">
+      Публикации
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+
+<section class="page-hero">
+
+  <div class="container page-hero-inner">
+
+
+    <div>
+
+      <div class="eyebrow">
+
+        Научноизследователски проект № 6/2024
+
+      </div>
+
+
+      <h1>
+
+        За проекта
+
+      </h1>
+
+
+      <p class="hero-description">
+
+        „Дигитална конкурентоспособност на
+        социално-икономическата система на България“
+        изследва как процесите на дигитализация се проявяват
+        на различни равнища на социално-икономическата система
+        и как могат да бъдат измерени чрез единна,
+        логически последователна методологическа рамка.
+
+      </p>
+
+    </div>
+
+
+    <aside class="hero-info">
+
+
+      <div class="hero-info-row">
+
+        <span class="hero-info-label">
+          Проект
+        </span>
+
+        <div class="hero-info-value">
+          № 6/2024
+        </div>
+
+      </div>
+
+
+      <div class="hero-info-row">
+
+        <span class="hero-info-label">
+          Институция
+        </span>
+
+        <div class="hero-info-value">
+          Университет за национално и световно стопанство
+        </div>
+
+      </div>
+
+
+      <div class="hero-info-row">
+
+        <span class="hero-info-label">
+          Аналитична рамка
+        </span>
+
+        <div class="hero-info-value">
+          Национално → Регионално → Секторно → Организационно
+        </div>
+
+      </div>
+
+
+      <div class="hero-info-row">
+
+        <span class="hero-info-label">
+          Статус
+        </span>
+
+        <div class="hero-info-value">
+          Предстоящ финален етап
+        </div>
+
+      </div>
+
+
+    </aside>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTEXT
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Изследователски контекст
+    </div>
+
+
+    <h2 class="section-title">
+
+      Защо дигитална конкурентоспособност?
+
+    </h2>
+
+
+    <div class="context-grid">
+
+
+      <div class="context-main">
+
+        <p>
+
+          Дигитализацията променя начина, по който функционират
+          икономиката, обществото, публичните институции
+          и организациите. Наличието на цифрови технологии
+          обаче само по себе си не показва доколко една
+          социално-икономическа система успява да използва
+          техния потенциал.
+
+        </p>
+
+
+        <p>
+
+          Проектът разглежда дигиталната конкурентоспособност
+          като възможност за комплексна оценка на резултатите,
+          които се формират вследствие на процесите
+          на дигитализация в България. Анализът обхваща
+          обществени, институционални, регионални,
+          секторни и организационни проявления.
+
+        </p>
+
+      </div>
+
+
+      <div class="context-highlight">
+
+        <span>
+          Изследователски проблем
+        </span>
+
+
+        <h3>
+
+          От степен на дигитализация към оценка
+          на дигиталната конкурентоспособност
+
+        </h3>
+
+
+        <p>
+
+          Централният въпрос е доколко цифровата трансформация
+          създава реални предпоставки за по-ефективно
+          функциониране на социално-икономическата система
+          и нейните отделни елементи.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     OBJECTIVE
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Основна цел
+    </div>
+
+
+    <div class="objective-box">
+
+      <h3>
+
+        Комплексна оценка на дигиталната конкурентоспособност
+
+      </h3>
+
+
+      <p>
+
+        Основната цел на научното изследване е да изгради,
+        адаптира и приложи широкообхватна методология
+        за оценка на дигиталната конкурентоспособност
+        в различните аспекти на нейното проявление
+        и въз основа на тази методология да бъде осъществена
+        оценка на равнището на дигитална конкурентоспособност
+        на социално-икономическата система на България.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TASKS
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Основни задачи
+    </div>
+
+
+    <h2 class="section-title">
+
+      Пет взаимосвързани направления
+
+    </h2>
+
+
+    <p class="section-description">
+
+      Изследователските задачи проследяват дигитализацията
+      в ключови части на социално-икономическата система
+      и подготвят основата за формиране на обобщена оценка.
+
+    </p>
+
+
+    <div class="tasks-grid">
+
+
+      <article class="task-card">
+
+        <div class="task-number">
+          01
+        </div>
+
+        <h3>
+          Образование
+        </h3>
+
+        <p>
+
+          Изследване на степента на дигитализация
+          на обществото през анализа на сферата
+          на образованието.
+
+        </p>
+
+      </article>
+
+
+      <article class="task-card">
+
+        <div class="task-number">
+          02
+        </div>
+
+        <h3>
+          Здравеопазване
+        </h3>
+
+        <p>
+
+          Изследване на степента на дигитализация
+          на обществото през анализа на сферата
+          на здравеопазването.
+
+        </p>
+
+      </article>
+
+
+      <article class="task-card">
+
+        <div class="task-number">
+          03
+        </div>
+
+        <h3>
+          Публичен сектор
+        </h3>
+
+        <p>
+
+          Изследване на степента на дигитализация
+          на публичния сектор и институционалната
+          среда.
+
+        </p>
+
+      </article>
+
+
+      <article class="task-card">
+
+        <div class="task-number">
+          04
+        </div>
+
+        <h3>
+          Бизнес
+        </h3>
+
+        <p>
+
+          Изследване на степента на дигитализация
+          на бизнеса и организационните проявления
+          на цифровата трансформация.
+
+        </p>
+
+      </article>
+
+
+      <article class="task-card">
+
+        <div class="task-number">
+          05
+        </div>
+
+        <h3>
+          Обща оценка
+        </h3>
+
+        <p>
+
+          Формиране на обща оценка за равнището
+          на дигитална конкурентоспособност
+          на социално-икономическата система
+          на България.
+
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ARCHITECTURE
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Методологическа архитектура
+    </div>
+
+
+    <h2 class="section-title">
+
+      От националната система към организационните проявления
+
+    </h2>
+
+
+    <p class="section-description">
+
+      Методологическата рамка проследява дигиталната
+      конкурентоспособност „отгоре-надолу“, като свързва
+      стратегическите условия с конкретните регионални,
+      секторни и организационни резултати.
+
+    </p>
+
+
+    <div class="architecture">
+
+
+      <div class="arch-item">
+
+        <div class="arch-circle">
+          01
+        </div>
+
+        <h3>
+          Национално
+        </h3>
+
+        <p>
+
+          Национална стратегическа и институционална среда,
+          политики и общи условия за цифрова трансформация.
+
+        </p>
+
+      </div>
+
+
+      <div class="arch-item">
+
+        <div class="arch-circle">
+          02
+        </div>
+
+        <h3>
+          Регионално
+        </h3>
+
+        <p>
+
+          Териториални различия, регионална готовност
+          и специфики в проявлението на дигитализацията.
+
+        </p>
+
+      </div>
+
+
+      <div class="arch-item">
+
+        <div class="arch-circle">
+          03
+        </div>
+
+        <h3>
+          Секторно
+        </h3>
+
+        <p>
+
+          Образование, здравеопазване, бизнес,
+          публично управление и граждански сектор.
+
+        </p>
+
+      </div>
+
+
+      <div class="arch-item">
+
+        <div class="arch-circle">
+          04
+        </div>
+
+        <h3>
+          Организационно
+        </h3>
+
+        <p>
+
+          Данни, инвестиции, технологии,
+          организационна готовност, управление
+          и иновации.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     STAGES
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Развитие на проекта
+    </div>
+
+
+    <h2 class="section-title">
+
+      От концепцията към интегрираната оценка
+
+    </h2>
+
+
+    <p class="section-description">
+
+      Проектът се развива последователно — от теоретичното
+      изясняване на дигиталната конкурентоспособност,
+      през изграждането и апробирането на методологията,
+      към интеграция на резултатите във финалния етап.
+
+    </p>
+
+
+    <div class="timeline">
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-marker">
+
+          <div class="timeline-dot">
+            01
+          </div>
+
+        </div>
+
+
+        <div class="timeline-content">
+
+          <div class="timeline-status">
+            Завършен
+          </div>
+
+          <h3>
+            Етап 1 · Концептуална и изследователска основа
+          </h3>
+
+          <p>
+
+            Първият етап поставя теоретичната основа
+            на проекта и насочва анализа към ключови сфери
+            на обществения и икономическия живот.
+
+          </p>
+
+
+          <div class="timeline-points">
+
+            <div class="timeline-point">
+              Теоретичен анализ на дигиталната конкурентоспособност
+            </div>
+
+            <div class="timeline-point">
+              Образование и здравеопазване
+            </div>
+
+            <div class="timeline-point">
+              Публичен сектор и бизнес
+            </div>
+
+            <div class="timeline-point">
+              Подготовка на общата методологическа рамка
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-marker">
+
+          <div class="timeline-dot">
+            02
+          </div>
+
+        </div>
+
+
+        <div class="timeline-content">
+
+          <div class="timeline-status">
+            Завършен
+          </div>
+
+          <h3>
+            Етап 2 · Методологично надграждане и секторни анализи
+          </h3>
+
+          <p>
+
+            Вторият етап развива единна многостепенна
+            методологическа рамка и задълбочава секторния,
+            регионалния и организационния анализ.
+
+          </p>
+
+
+          <div class="timeline-points">
+
+            <div class="timeline-point">
+              Единна методологическа рамка
+            </div>
+
+            <div class="timeline-point">
+              Секторни индекси за дигитална готовност
+            </div>
+
+            <div class="timeline-point">
+              Регионални и секторни различия
+            </div>
+
+            <div class="timeline-point">
+              Организационни, социални и технологични фактори
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item current">
+
+        <div class="timeline-marker">
+
+          <div class="timeline-dot">
+            03
+          </div>
+
+        </div>
+
+
+        <div class="timeline-content">
+
+          <div class="timeline-status">
+            Предстои
+          </div>
+
+          <h3>
+            Финален етап · Интеграция и обобщена оценка
+          </h3>
+
+          <p>
+
+            Финалният етап е насочен към интегриране
+            на секторните и многостепенните резултати,
+            обобщаване на аналитичните изводи
+            и формализиране на крайните резултати
+            от научното изследване.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     METHODS
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Изследователски инструментариум
+    </div>
+
+
+    <h2 class="section-title">
+
+      Комбинация от данни, индекси и аналитични методи
+
+    </h2>
+
+
+    <p class="section-description">
+
+      Първоначално заложените международни показатели
+      са надградени със собствени емпирични изследвания,
+      секторно специфични индикатори и количествени
+      и качествени методи.
+
+    </p>
+
+
+    <div class="methods-grid">
+
+
+      <article class="method-card">
+
+        <div class="method-code">
+          01 / INTERNATIONAL
+        </div>
+
+        <h3>
+          Международни рамки
+        </h3>
+
+        <p>
+
+          DESI, Digital Competitiveness Ranking,
+          Digital Capacity Index, Digital Acceleration Index,
+          Digital Maturity, EGDI и Digital Intensity Index.
+
+        </p>
+
+      </article>
+
+
+      <article class="method-card">
+
+        <div class="method-code">
+          02 / EMPIRICAL
+        </div>
+
+        <h3>
+          Анкетни изследвания
+        </h3>
+
+        <p>
+
+          Структурирани проучвания сред образователни,
+          здравни, бизнес и други организации,
+          включени в секторните направления на проекта.
+
+        </p>
+
+      </article>
+
+
+      <article class="method-card">
+
+        <div class="method-code">
+          03 / INDEX
+        </div>
+
+        <h3>
+          Индексни методи
+        </h3>
+
+        <p>
+
+          Разработване на секторно специфични индекси,
+          нормализация, стандартизация и сравнителна
+          оценка на отделни измерения.
+
+        </p>
+
+      </article>
+
+
+      <article class="method-card">
+
+        <div class="method-code">
+          04 / QUANTITATIVE
+        </div>
+
+        <h3>
+          Количествени методи
+        </h3>
+
+        <p>
+
+          Описателна статистика, корелационен анализ,
+          параметрични и непараметрични тестове
+          и регресионни модели.
+
+        </p>
+
+      </article>
+
+
+      <article class="method-card">
+
+        <div class="method-code">
+          05 / VALIDATION
+        </div>
+
+        <h3>
+          Факторен анализ
+        </h3>
+
+        <p>
+
+          PCA и факторна валидация на отделни
+          индексни конструкции и подиндекси,
+          когато структурата на данните го изисква.
+
+        </p>
+
+      </article>
+
+
+      <article class="method-card">
+
+        <div class="method-code">
+          06 / QUALITATIVE
+        </div>
+
+        <h3>
+          Качествен анализ
+        </h3>
+
+        <p>
+
+          Анализ на стратегически и нормативни документи,
+          експертни оценки, секторни казуси
+          и сравнителен преглед на международни практики.
+
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HYPOTHESES
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Работни хипотези
+    </div>
+
+
+    <h2 class="section-title">
+
+      Изходни предположения на изследването
+
+    </h2>
+
+
+    <div class="hypotheses">
+
+
+      <div class="hypothesis">
+
+        <div class="hypothesis-code">
+          H1
+        </div>
+
+        <p>
+
+          В България липсва достатъчно широко
+          разпространено разбиране за същността
+          и проявлението на дигиталната конкурентоспособност.
+
+        </p>
+
+      </div>
+
+
+      <div class="hypothesis">
+
+        <div class="hypothesis-code">
+          H2
+        </div>
+
+        <p>
+
+          Отделните сфери на обществения, социалния
+          и икономическия живот достигат различни
+          равнища на дигитална конкурентоспособност.
+
+        </p>
+
+      </div>
+
+
+      <div class="hypothesis">
+
+        <div class="hypothesis-code">
+          H3
+        </div>
+
+        <p>
+
+          Необходима е методология, която да обхваща
+          и оценява различните аспекти на проявление
+          на дигиталната конкурентоспособност.
+
+        </p>
+
+      </div>
+
+
+      <div class="hypothesis">
+
+        <div class="hypothesis-code">
+          H4
+        </div>
+
+        <p>
+
+          По равнище на дигитализация и дигитална
+          конкурентоспособност България изостава
+          спрямо средните равнища за Европейския съюз.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTRIBUTIONS
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Научна значимост
+    </div>
+
+
+    <h2 class="section-title">
+
+      От измерването към управленската приложимост
+
+    </h2>
+
+
+    <div class="contribution-grid">
+
+
+      <div class="contribution-card primary">
+
+        <h3>
+          Научни постижения
+        </h3>
+
+        <p>
+
+          Проектът развива интегриран подход
+          към дигиталната конкурентоспособност
+          като многостепенно явление.
+
+        </p>
+
+
+        <div class="contribution-list">
+
+          <div>
+            Многостепенна методологическа рамка
+          </div>
+
+          <div>
+            Национален, регионален, секторен
+            и организационен анализ
+          </div>
+
+          <div>
+            Авторски секторни индексни конструкции
+          </div>
+
+          <div>
+            Анализ на институционални,
+            човешки и организационни фактори
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="contribution-card">
+
+        <h3>
+          Научно-приложна стойност
+        </h3>
+
+        <p>
+
+          Резултатите могат да подпомогнат формулирането
+          на национални, регионални, секторни
+          и организационни решения, свързани
+          с цифровата трансформация.
+
+        </p>
+
+
+        <div class="contribution-list">
+
+          <div>
+            Идентифициране на силни страни и дефицити
+          </div>
+
+          <div>
+            Проследяване на регионални и секторни различия
+          </div>
+
+          <div>
+            Подкрепа за стратегически и управленски решения
+          </div>
+
+          <div>
+            Основа за мониторинг на дигиталната готовност
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SDG
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="impact-strip">
+
+
+      <div class="sdg-box">
+
+        <div>
+
+          <strong>
+            8
+          </strong>
+
+          <span>
+            SDG
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="impact-copy">
+
+        <div class="section-label">
+          Потенциално въздействие
+        </div>
+
+        <h3>
+
+          Цел 8 · Достоен труд и икономически растеж
+
+        </h3>
+
+        <p>
+
+          Проектът е свързан с разбирането на условията,
+          при които дигиталната трансформация може
+          да подпомогне конкурентоспособността,
+          икономическото развитие и адаптацията
+          на човешкия капитал към променящата се
+          технологична среда.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+
+<section class="final-cta">
+
+  <div class="container final-cta-inner">
+
+
+    <div>
+
+      <h2>
+        Данни и индекси
+      </h2>
+
+      <p>
+
+        Следващата стъпка е методологията
+        да бъде разгледана чрез конкретните
+        данни и измерители на проекта.
+
+      </p>
+
+    </div>
+
+
+    <a
+      class="btn btn-primary"
+      href="data-indices.html"
+    >
+      Към данни и индекси →
+    </a>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+
+<footer>
+
+  <div class="container">
+
+
+    <div class="footer-grid">
+
+
+      <div class="footer-project">
+
+        <strong>
+
+          Университет за национално и световно стопанство
+
+        </strong>
+
+        <p>
+
+          Научноизследователски проект № 6/2024
+          <br>
+
+          „Дигитална конкурентоспособност на
+          социално-икономическата система на България“
+
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Начало
+        </a>
+
+        <a href="about.html">
+          За проекта
+        </a>
+
+        <a href="data-indices.html">
+          Данни и индекси
+        </a>
+
+        <a href="regions.html">
+          Региони
+        </a>
+
+        <a href="areas.html">
+          Области
+        </a>
+
+        <a href="results.html">
+          Резултати
+        </a>
+
+        <a href="publications.html">
+          Публикации
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2024–2026
+      Дигитална конкурентоспособност на
+      социално-икономическата система на България
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  const mobileToggle =
+    document.getElementById(
+      "mobileToggle"
+    );
+
+  const mobileMenu =
+    document.getElementById(
+      "mobileMenu"
+    );
+
+
+  mobileToggle.addEventListener(
+    "click",
+    function () {
+
+      if (
+        mobileMenu.style.display
+        ===
+        "block"
+      ) {
+
+        mobileMenu.style.display =
+          "none";
+
+      }
+
+      else {
+
+        mobileMenu.style.display =
+          "block";
+
+      }
+
+    }
+  );
+
+
+  const mobileLinks =
+    mobileMenu.querySelectorAll(
+      "a"
+    );
+
+
+  mobileLinks.forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function() {
+
+          mobileMenu.style.display =
+            "none";
+
+        }
+      );
+
+    }
+  );
+
+</script>
+
+
+</body>
+
+</html>
