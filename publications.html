@@ -1,0 +1,3559 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Публикации | Дигитална конкурентоспособност на България
+  </title>
+
+  <meta
+    name="description"
+    content="Научни публикации в рамките на проект № 6/2024 „Дигитална конкурентоспособност на социално-икономическата система на България“."
+  >
+
+  <style>
+
+    :root {
+
+      --navy: #102b4c;
+      --navy-deep: #081f38;
+
+      --blue: #2457c5;
+      --cyan: #28a9c7;
+      --turquoise: #01c9bc;
+
+      --text: #213247;
+      --muted: #64768a;
+
+      --white: #ffffff;
+      --background: #f5f8fb;
+      --background-soft: #eef5f9;
+
+      --border: #dce7ef;
+
+      --shadow:
+        0 14px 40px rgba(16, 43, 76, 0.08);
+
+      --radius: 18px;
+
+      --max-width: 1260px;
+
+    }
+
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--text);
+
+      background: var(--white);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    button,
+    input,
+    select {
+
+      font: inherit;
+
+    }
+
+
+    .container {
+
+      width: min(
+        92%,
+        var(--max-width)
+      );
+
+      margin-inline: auto;
+
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+
+    header {
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.97
+        );
+
+      border-bottom:
+        1px solid var(--border);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      backdrop-filter:
+        blur(12px);
+
+    }
+
+
+    .navbar {
+
+      min-height: 82px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+      gap: 28px;
+
+    }
+
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .logo-mark {
+
+      display: flex;
+
+      align-items:
+        flex-end;
+
+      gap: 4px;
+
+      height: 42px;
+
+    }
+
+
+    .logo-mark span {
+
+      display: block;
+
+      width: 9px;
+
+      border-radius:
+        3px 3px 0 0;
+
+    }
+
+
+    .logo-mark span:nth-child(1) {
+
+      height: 15px;
+
+      background: #7fd9e6;
+
+    }
+
+
+    .logo-mark span:nth-child(2) {
+
+      height: 23px;
+
+      background: #46bfd3;
+
+    }
+
+
+    .logo-mark span:nth-child(3) {
+
+      height: 31px;
+
+      background: #2499c2;
+
+    }
+
+
+    .logo-mark span:nth-child(4) {
+
+      height: 41px;
+
+      background: #1557a0;
+
+    }
+
+
+    .brand-text strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 16px;
+
+      line-height: 1.02;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .brand-text small {
+
+      display: block;
+
+      margin-top: 5px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      white-space: nowrap;
+
+    }
+
+
+    .desktop-nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 23px;
+
+      color: #34475a;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+    }
+
+
+    .desktop-nav a {
+
+      padding:
+        31px 0 25px;
+
+      border-bottom:
+        3px solid transparent;
+
+      transition:
+        0.2s ease;
+
+    }
+
+
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+
+      color: var(--blue);
+
+      border-bottom-color:
+        var(--turquoise);
+
+    }
+
+
+    .language {
+
+      color: var(--blue);
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      white-space: nowrap;
+
+    }
+
+
+    .mobile-toggle {
+
+      display: none;
+
+      border:
+        1px solid var(--border);
+
+      background: white;
+
+      border-radius: 8px;
+
+      width: 42px;
+
+      height: 42px;
+
+      cursor: pointer;
+
+      color: var(--navy);
+
+      font-size: 20px;
+
+    }
+
+
+    .mobile-menu {
+
+      display: none;
+
+      border-top:
+        1px solid var(--border);
+
+      background: white;
+
+      padding:
+        12px 4%;
+
+    }
+
+
+    .mobile-menu a {
+
+      display: block;
+
+      padding:
+        12px 0;
+
+      color: var(--navy);
+
+      font-weight: 700;
+
+      border-bottom:
+        1px solid #edf2f5;
+
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+
+    .page-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      color: white;
+
+      background:
+
+        radial-gradient(
+          circle at 82% 38%,
+          rgba(1, 201, 188, 0.18),
+          transparent 25%
+        ),
+
+        linear-gradient(
+          115deg,
+          #081f38 0%,
+          #102f51 60%,
+          #145b7d 100%
+        );
+
+    }
+
+
+    .page-hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background-image:
+
+        linear-gradient(
+          rgba(82, 215, 226, 0.05) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(82, 215, 226, 0.05) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        62px 62px;
+
+    }
+
+
+    .page-hero-inner {
+
+      min-height: 430px;
+
+      position: relative;
+
+      z-index: 1;
+
+      display: grid;
+
+      grid-template-columns:
+        1.15fr 0.85fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+      padding:
+        72px 0;
+
+    }
+
+
+    .eyebrow {
+
+      color: #8ce7ed;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        1.9px;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    h1 {
+
+      font-size:
+        clamp(
+          46px,
+          5vw,
+          66px
+        );
+
+      line-height: 1;
+
+      letter-spacing:
+        -2px;
+
+      margin-bottom: 21px;
+
+    }
+
+
+    .hero-description {
+
+      max-width: 730px;
+
+      color: #d3e5ee;
+
+      font-size: 17px;
+
+      line-height: 1.68;
+
+    }
+
+
+    /* =========================================================
+       HERO STATS
+    ========================================================= */
+
+
+    .publication-summary {
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.15
+        );
+
+      border-radius: 20px;
+
+      padding: 27px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.045
+        );
+
+    }
+
+
+    .publication-summary-label {
+
+      color: #8ce7ed;
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        1.5px;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    .summary-total {
+
+      padding-bottom: 18px;
+
+      border-bottom:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.1
+        );
+
+    }
+
+
+    .summary-total strong {
+
+      display: block;
+
+      font-size: 49px;
+
+      line-height: 1;
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .summary-total span {
+
+      color: #cfe1e9;
+
+      font-size: 13px;
+
+    }
+
+
+    .year-stats {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap: 9px;
+
+      margin-top: 18px;
+
+    }
+
+
+    .year-stat {
+
+      padding: 13px;
+
+      border-radius: 10px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.05
+        );
+
+      text-align: center;
+
+    }
+
+
+    .year-stat strong {
+
+      display: block;
+
+      color: white;
+
+      font-size: 21px;
+
+      line-height: 1;
+
+      margin-bottom: 5px;
+
+    }
+
+
+    .year-stat span {
+
+      color: #a9cedb;
+
+      font-size: 10px;
+
+    }
+
+
+    /* =========================================================
+       GENERAL
+    ========================================================= */
+
+
+    .standard-section {
+
+      padding:
+        82px 0;
+
+    }
+
+
+    .section-alt {
+
+      background:
+        var(--background);
+
+    }
+
+
+    .section-label {
+
+      color: var(--cyan);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        1.8px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .section-title {
+
+      color: var(--navy);
+
+      font-size:
+        clamp(
+          29px,
+          3.2vw,
+          41px
+        );
+
+      line-height: 1.12;
+
+      letter-spacing:
+        -0.9px;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    .section-description {
+
+      max-width: 900px;
+
+      color: var(--muted);
+
+      font-size: 16px;
+
+      line-height: 1.72;
+
+      margin-bottom: 38px;
+
+    }
+
+
+    /* =========================================================
+       FEATURED
+    ========================================================= */
+
+
+    .featured-publication {
+
+      display: grid;
+
+      grid-template-columns:
+        0.36fr 1.64fr;
+
+      gap: 0;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        20px;
+
+      overflow: hidden;
+
+      background: white;
+
+      box-shadow:
+        var(--shadow);
+
+    }
+
+
+    .featured-visual {
+
+      min-height: 330px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 35px;
+
+      color: white;
+
+      background:
+
+        radial-gradient(
+          circle at 25% 20%,
+          rgba(1, 201, 188, 0.28),
+          transparent 28%
+        ),
+
+        linear-gradient(
+          145deg,
+          #102b4c,
+          #155b7d
+        );
+
+    }
+
+
+    .publication-symbol {
+
+      width: 165px;
+
+      height: 220px;
+
+      position: relative;
+
+      border-radius:
+        4px 13px 13px 4px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          #eef8fb,
+          #ffffff
+        );
+
+      box-shadow:
+        0 18px 38px
+        rgba(
+          0,
+          0,
+          0,
+          0.22
+        );
+
+      padding:
+        24px 18px;
+
+      color: var(--navy);
+
+    }
+
+
+    .publication-symbol::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      top: 0;
+
+      bottom: 0;
+
+      width: 8px;
+
+      background:
+        var(--blue);
+
+    }
+
+
+    .symbol-code {
+
+      color: var(--cyan);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1px;
+
+      margin-bottom: 24px;
+
+    }
+
+
+    .publication-symbol strong {
+
+      display: block;
+
+      font-size: 15px;
+
+      line-height: 1.25;
+
+    }
+
+
+    .symbol-lines {
+
+      position: absolute;
+
+      left: 18px;
+
+      right: 18px;
+
+      bottom: 25px;
+
+      display: flex;
+
+      align-items:
+        flex-end;
+
+      gap: 5px;
+
+      height: 60px;
+
+    }
+
+
+    .symbol-lines span {
+
+      display: block;
+
+      flex: 1;
+
+      background:
+
+        linear-gradient(
+          var(--cyan),
+          var(--blue)
+        );
+
+      border-radius:
+        3px 3px 0 0;
+
+    }
+
+
+    .symbol-lines span:nth-child(1) {
+      height: 22%;
+    }
+
+    .symbol-lines span:nth-child(2) {
+      height: 42%;
+    }
+
+    .symbol-lines span:nth-child(3) {
+      height: 67%;
+    }
+
+    .symbol-lines span:nth-child(4) {
+      height: 100%;
+    }
+
+
+    .featured-content {
+
+      padding:
+        38px 42px;
+
+    }
+
+
+    .featured-label {
+
+      color: var(--cyan);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        1.4px;
+
+      margin-bottom: 13px;
+
+    }
+
+
+    .featured-content h3 {
+
+      color: var(--navy);
+
+      font-size:
+        clamp(
+          23px,
+          2.5vw,
+          31px
+        );
+
+      line-height: 1.25;
+
+      margin-bottom: 13px;
+
+    }
+
+
+    .featured-author {
+
+      color: var(--blue);
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .featured-meta {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .featured-content p {
+
+      max-width: 790px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .tag-row {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 20px;
+
+    }
+
+
+    .tag {
+
+      display:
+        inline-flex;
+
+      align-items: center;
+
+      min-height: 27px;
+
+      padding:
+        0 10px;
+
+      border-radius:
+        20px;
+
+      background:
+        #eef5fb;
+
+      color: #42637d;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+    }
+
+
+    .tag.published {
+
+      background:
+        #e7f8f5;
+
+      color:
+        #148076;
+
+    }
+
+
+    .publication-link {
+
+      display:
+        inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-top: 22px;
+
+      color: var(--blue);
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+    }
+
+
+    .publication-link:hover {
+
+      text-decoration:
+        underline;
+
+    }
+
+
+    /* =========================================================
+       FILTERS
+    ========================================================= */
+
+
+    .filters {
+
+      display: grid;
+
+      grid-template-columns:
+        1.3fr 0.85fr 0.85fr;
+
+      gap: 12px;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .filter-control {
+
+      min-width: 0;
+
+    }
+
+
+    .filter-control label {
+
+      display: block;
+
+      color: #8295a4;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        1px;
+
+      margin-bottom: 6px;
+
+    }
+
+
+    .filter-control input,
+    .filter-control select {
+
+      width: 100%;
+
+      min-height: 46px;
+
+      border:
+        1px solid #cfdee6;
+
+      border-radius: 10px;
+
+      background: white;
+
+      padding:
+        0 13px;
+
+      color: var(--navy);
+
+      font-size: 12px;
+
+      outline: none;
+
+    }
+
+
+    .filter-control input:focus,
+    .filter-control select:focus {
+
+      border-color:
+        var(--cyan);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(
+          40,
+          169,
+          199,
+          0.10
+        );
+
+    }
+
+
+    .filter-status {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      gap: 20px;
+
+      margin-bottom: 20px;
+
+    }
+
+
+    .result-count {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+    }
+
+
+    .result-count strong {
+
+      color: var(--navy);
+
+    }
+
+
+    .reset-button {
+
+      border: none;
+
+      background: transparent;
+
+      color: var(--blue);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+    }
+
+
+    .reset-button:hover {
+
+      text-decoration:
+        underline;
+
+    }
+
+
+    /* =========================================================
+       PUBLICATION GRID
+    ========================================================= */
+
+
+    .publication-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap: 17px;
+
+    }
+
+
+    .publication-card {
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-height: 390px;
+
+      padding: 27px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        16px;
+
+      background: white;
+
+      transition:
+        0.2s ease;
+
+    }
+
+
+    .publication-card:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        var(--shadow);
+
+    }
+
+
+    .pub-card-top {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        flex-start;
+
+      gap: 12px;
+
+      margin-bottom: 23px;
+
+    }
+
+
+    .pub-year {
+
+      width: 48px;
+
+      height: 48px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 11px;
+
+      background:
+        #ebf6f9;
+
+      color: var(--blue);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+    }
+
+
+    .pub-status {
+
+      padding:
+        5px 9px;
+
+      border-radius:
+        20px;
+
+      background:
+        #e8f8f5;
+
+      color:
+        #148076;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        0.6px;
+
+    }
+
+
+    .pub-theme {
+
+      color: var(--cyan);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        1.1px;
+
+      margin-bottom: 11px;
+
+    }
+
+
+    .publication-card h3 {
+
+      color: var(--navy);
+
+      font-size: 17px;
+
+      line-height: 1.35;
+
+      margin-bottom: 13px;
+
+    }
+
+
+    .pub-authors {
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .pub-venue {
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.55;
+
+      margin-bottom: 14px;
+
+    }
+
+
+    .pub-doi {
+
+      color: #7d909f;
+
+      font-size: 10px;
+
+      line-height: 1.45;
+
+      word-break:
+        break-word;
+
+    }
+
+
+    .pub-bottom {
+
+      margin-top: auto;
+
+      padding-top: 19px;
+
+      border-top:
+        1px solid var(--border);
+
+    }
+
+
+    .pub-type {
+
+      display:
+        inline-flex;
+
+      align-items: center;
+
+      min-height: 25px;
+
+      padding:
+        0 9px;
+
+      margin-bottom: 13px;
+
+      border-radius:
+        20px;
+
+      background:
+        #f1f5f8;
+
+      color: #617688;
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+    }
+
+
+    .card-link {
+
+      display:
+        inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+    }
+
+
+    .card-link:hover {
+
+      text-decoration:
+        underline;
+
+    }
+
+
+    .no-results {
+
+      display: none;
+
+      padding:
+        55px 25px;
+
+      border:
+        1px dashed #c9d9e2;
+
+      border-radius:
+        var(--radius);
+
+      text-align: center;
+
+      color: var(--muted);
+
+      background: white;
+
+    }
+
+
+    /* =========================================================
+       THEMATIC SUMMARY
+    ========================================================= */
+
+
+    .theme-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          5,
+          1fr
+        );
+
+      gap: 14px;
+
+    }
+
+
+    .theme-card {
+
+      padding: 24px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: white;
+
+      min-height: 175px;
+
+    }
+
+
+    .theme-code {
+
+      color: var(--cyan);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      margin-bottom: 20px;
+
+    }
+
+
+    .theme-card h3 {
+
+      color: var(--navy);
+
+      font-size: 16px;
+
+      line-height: 1.3;
+
+      margin-bottom: 9px;
+
+    }
+
+
+    .theme-card p {
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.55;
+
+    }
+
+
+    /* =========================================================
+       NOTE
+    ========================================================= */
+
+
+    .note-box {
+
+      display: grid;
+
+      grid-template-columns:
+        55px 1fr;
+
+      gap: 20px;
+
+      border:
+        1px solid #cfe2e9;
+
+      border-radius:
+        var(--radius);
+
+      padding: 30px;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #f8fcfd,
+          #edf7f9
+        );
+
+    }
+
+
+    .note-icon {
+
+      width: 50px;
+
+      height: 50px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 12px;
+
+      background:
+        var(--navy);
+
+      color: white;
+
+      font-weight: 800;
+
+    }
+
+
+    .note-box h3 {
+
+      color: var(--navy);
+
+      font-size: 20px;
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .note-box p {
+
+      color: #566e7e;
+
+      font-size: 13px;
+
+      line-height: 1.65;
+
+    }
+
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+
+    .final-cta {
+
+      padding:
+        51px 0;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          110deg,
+          #0b2845,
+          #145879
+        );
+
+    }
+
+
+    .final-cta-inner {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      gap: 30px;
+
+    }
+
+
+    .final-cta h2 {
+
+      font-size: 29px;
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .final-cta p {
+
+      color: #c7dce7;
+
+    }
+
+
+    .btn {
+
+      min-height: 48px;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        0 23px;
+
+      border-radius: 9px;
+
+      border:
+        1px solid transparent;
+
+      font-weight: 700;
+
+      font-size: 14px;
+
+    }
+
+
+    .btn-primary {
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #79d5dd,
+          #55bedb
+        );
+
+      color: #082b46;
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+
+    footer {
+
+      background: #f8fafc;
+
+      border-top:
+        1px solid var(--border);
+
+      padding:
+        33px 0 20px;
+
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.25fr 1fr;
+
+      gap: 35px;
+
+      align-items: center;
+
+    }
+
+
+    .footer-project strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .footer-project p {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+    }
+
+
+    .footer-links {
+
+      display: flex;
+
+      justify-content:
+        flex-end;
+
+      flex-wrap: wrap;
+
+      gap: 17px;
+
+      color: #53677a;
+
+      font-size: 12px;
+
+    }
+
+
+    .copyright {
+
+      margin-top: 25px;
+
+      padding-top: 18px;
+
+      border-top:
+        1px solid var(--border);
+
+      text-align: center;
+
+      color: #8795a2;
+
+      font-size: 11px;
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+
+    @media (max-width: 1100px) {
+
+      .desktop-nav {
+
+        display: none;
+
+      }
+
+
+      .mobile-toggle {
+
+        display: block;
+
+      }
+
+
+      .page-hero-inner {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .publication-summary {
+
+        max-width: 650px;
+
+      }
+
+
+      .publication-grid {
+
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
+
+      }
+
+
+      .theme-grid {
+
+        grid-template-columns:
+          repeat(
+            3,
+            1fr
+          );
+
+      }
+
+    }
+
+
+    @media (max-width: 900px) {
+
+      .featured-publication {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .featured-visual {
+
+        min-height: 280px;
+
+      }
+
+
+      .filters {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+
+      .filters
+      .filter-control:first-child {
+
+        grid-column:
+          1 / -1;
+
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .brand-text small {
+
+        display: none;
+
+      }
+
+
+      .language {
+
+        display: none;
+
+      }
+
+
+      .page-hero-inner {
+
+        padding:
+          57px 0;
+
+      }
+
+
+      h1 {
+
+        font-size: 43px;
+
+      }
+
+
+      .year-stats {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .publication-grid,
+      .theme-grid,
+      .filters {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .filters
+      .filter-control:first-child {
+
+        grid-column:
+          auto;
+
+      }
+
+
+      .featured-content {
+
+        padding:
+          28px;
+
+      }
+
+
+      .note-box {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .final-cta-inner {
+
+        flex-direction:
+          column;
+
+        align-items:
+          flex-start;
+
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .footer-links {
+
+        justify-content:
+          flex-start;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+
+<header>
+
+  <div class="container navbar">
+
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+
+      <div
+        class="logo-mark"
+        aria-hidden="true"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
+
+      <div class="brand-text">
+
+        <strong>
+          Дигитална<br>
+          конкурентоспособност
+        </strong>
+
+        <small>
+          на социално-икономическата система на България
+        </small>
+
+      </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">
+        Начало
+      </a>
+
+      <a href="about.html">
+        За проекта
+      </a>
+
+      <a href="data-indices.html">
+        Данни и индекси
+      </a>
+
+      <a href="regions.html">
+        Региони
+      </a>
+
+      <a href="areas.html">
+        Области
+      </a>
+
+      <a href="results.html">
+        Резултати
+      </a>
+
+      <a
+        class="active"
+        href="publications.html"
+      >
+        Публикации
+      </a>
+
+    </nav>
+
+
+    <div class="language">
+      BG &nbsp;|&nbsp; EN
+    </div>
+
+
+    <button
+      class="mobile-toggle"
+      id="mobileToggle"
+      aria-label="Отвори меню"
+    >
+      ☰
+    </button>
+
+  </div>
+
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <a href="index.html">
+      Начало
+    </a>
+
+    <a href="about.html">
+      За проекта
+    </a>
+
+    <a href="data-indices.html">
+      Данни и индекси
+    </a>
+
+    <a href="regions.html">
+      Региони
+    </a>
+
+    <a href="areas.html">
+      Области
+    </a>
+
+    <a href="results.html">
+      Резултати
+    </a>
+
+    <a href="publications.html">
+      Публикации
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+
+<section class="page-hero">
+
+  <div class="container page-hero-inner">
+
+
+    <div>
+
+      <div class="eyebrow">
+        Научен принос
+      </div>
+
+
+      <h1>
+        Публикации
+      </h1>
+
+
+      <p class="hero-description">
+
+        Научните публикации представят концептуалните,
+        методологическите и емпиричните резултати,
+        разработени в различните направления
+        на проекта „Дигитална конкурентоспособност
+        на социално-икономическата система на България“.
+
+      </p>
+
+    </div>
+
+
+    <aside class="publication-summary">
+
+      <div class="publication-summary-label">
+        Публикувани разработки
+      </div>
+
+
+      <div class="summary-total">
+
+        <strong>
+          12
+        </strong>
+
+        <span>
+          научни публикации
+        </span>
+
+      </div>
+
+
+      <div class="year-stats">
+
+        <div class="year-stat">
+
+          <strong>
+            3
+          </strong>
+
+          <span>
+            2024
+          </span>
+
+        </div>
+
+
+        <div class="year-stat">
+
+          <strong>
+            8
+          </strong>
+
+          <span>
+            2025
+          </span>
+
+        </div>
+
+
+        <div class="year-stat">
+
+          <strong>
+            1
+          </strong>
+
+          <span>
+            2026
+          </span>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURED PUBLICATION
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Концептуална основа
+    </div>
+
+
+    <h2 class="section-title">
+      Начална публикация на проекта
+    </h2>
+
+
+    <div class="featured-publication">
+
+
+      <div class="featured-visual">
+
+        <div class="publication-symbol">
+
+          <div class="symbol-code">
+            DIGITAL COMPETITIVENESS
+          </div>
+
+          <strong>
+            ECONOMIC<br>
+            SYSTEMS
+          </strong>
+
+          <div class="symbol-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="featured-content">
+
+        <div class="featured-label">
+          2024 · Conference paper
+        </div>
+
+
+        <h3>
+
+          Unraveling the Layers of Digital Competitiveness
+          in the Economic Systems
+
+        </h3>
+
+
+        <div class="featured-author">
+          Sabrina Kalinkova
+        </div>
+
+
+        <div class="featured-meta">
+
+          8th FEB International Scientific Conference ·
+          University of Maribor Press
+
+        </div>
+
+
+        <p>
+
+          Публикацията поставя концептуалната основа
+          за разглеждането на дигиталната конкурентоспособност
+          като комплексна характеристика на икономическите
+          системи и създава отправна точка за последващите
+          секторни и многостепенни анализи в проекта.
+
+        </p>
+
+
+        <div class="tag-row">
+
+          <span class="tag published">
+            Published
+          </span>
+
+          <span class="tag">
+            Digital competitiveness
+          </span>
+
+          <span class="tag">
+            Economic systems
+          </span>
+
+          <span class="tag">
+            Conceptual framework
+          </span>
+
+        </div>
+
+
+        <a
+          class="publication-link"
+          href="https://doi.org/10.18690/um.epf.5.2024.35"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          DOI: 10.18690/um.epf.5.2024.35 →
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ALL PUBLICATIONS
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Научни резултати
+    </div>
+
+
+    <h2 class="section-title">
+      Всички публикувани разработки
+    </h2>
+
+
+    <p class="section-description">
+
+      Използвай търсенето и филтрите,
+      за да разгледаш публикациите по година,
+      тематично направление, автор или ключова дума.
+
+    </p>
+
+
+    <div class="filters">
+
+
+      <div class="filter-control">
+
+        <label for="searchInput">
+          Търсене
+        </label>
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Заглавие, автор, ключова дума..."
+        >
+
+      </div>
+
+
+      <div class="filter-control">
+
+        <label for="yearFilter">
+          Година
+        </label>
+
+        <select id="yearFilter">
+
+          <option value="all">
+            Всички години
+          </option>
+
+          <option value="2024">
+            2024
+          </option>
+
+          <option value="2025">
+            2025
+          </option>
+
+          <option value="2026">
+            2026
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="filter-control">
+
+        <label for="themeFilter">
+          Направление
+        </label>
+
+        <select id="themeFilter">
+
+          <option value="all">
+            Всички направления
+          </option>
+
+          <option value="concept">
+            Конкурентоспособност
+          </option>
+
+          <option value="government">
+            Публично управление
+          </option>
+
+          <option value="health">
+            Здравеопазване
+          </option>
+
+          <option value="business">
+            Бизнес и индустрия
+          </option>
+
+          <option value="civil">
+            Граждански сектор
+          </option>
+
+          <option value="strategy">
+            Стратегическо управление
+          </option>
+
+          <option value="human">
+            Човешки капитал
+          </option>
+
+        </select>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="filter-status">
+
+      <div class="result-count">
+
+        Показани:
+        <strong id="resultCount">
+          12
+        </strong>
+        публикации
+
+      </div>
+
+
+      <button
+        class="reset-button"
+        id="resetFilters"
+        type="button"
+      >
+        Изчисти филтрите
+      </button>
+
+    </div>
+
+
+    <div
+      class="publication-grid"
+      id="publicationGrid"
+    >
+    </div>
+
+
+    <div
+      class="no-results"
+      id="noResults"
+    >
+
+      Няма публикации,
+      отговарящи на избраните критерии.
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     THEMATIC DIRECTIONS
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Тематичен обхват
+    </div>
+
+
+    <h2 class="section-title">
+      От националната конкурентоспособност към организационната промяна
+    </h2>
+
+
+    <p class="section-description">
+
+      Публикационните резултати развиват различни
+      аспекти на общия изследователски проблем
+      и свързват националното, секторното
+      и организационното равнище.
+
+    </p>
+
+
+    <div class="theme-grid">
+
+
+      <div class="theme-card">
+
+        <div class="theme-code">
+          01
+        </div>
+
+        <h3>
+          Дигитална конкурентоспособност
+        </h3>
+
+        <p>
+          Концептуални и сравнителни изследвания
+          на националната цифрова трансформация.
+        </p>
+
+      </div>
+
+
+      <div class="theme-card">
+
+        <div class="theme-code">
+          02
+        </div>
+
+        <h3>
+          Публично управление
+        </h3>
+
+        <p>
+          Електронно управление,
+          стратегическо планиране
+          и институционална адаптивност.
+        </p>
+
+      </div>
+
+
+      <div class="theme-card">
+
+        <div class="theme-code">
+          03
+        </div>
+
+        <h3>
+          Здравеопазване
+        </h3>
+
+        <p>
+          Дигитална готовност,
+          финансова устойчивост
+          и секторна конкурентоспособност.
+        </p>
+
+      </div>
+
+
+      <div class="theme-card">
+
+        <div class="theme-code">
+          04
+        </div>
+
+        <h3>
+          Бизнес и индустрия
+        </h3>
+
+        <p>
+          Данни, цифрови инвестиции,
+          дигитални двойници
+          и стратегически решения.
+        </p>
+
+      </div>
+
+
+      <div class="theme-card">
+
+        <div class="theme-code">
+          05
+        </div>
+
+        <h3>
+          Граждански сектор
+        </h3>
+
+        <p>
+          Дигитализация на НПО,
+          доброволчество
+          и цифрови инструменти.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     NOTE
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="note-box">
+
+      <div class="note-icon">
+        i
+      </div>
+
+
+      <div>
+
+        <h3>
+          За списъка с публикации
+        </h3>
+
+        <p>
+
+          На тази страница са включени само разработки,
+          които към момента са публикувани.
+          При наличие на DOI или официален електронен
+          източник заглавието може да бъде отворено
+          чрез бутона към съответната публикация.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+
+<section class="final-cta">
+
+  <div class="container final-cta-inner">
+
+
+    <div>
+
+      <h2>
+        От публикациите към резултатите
+      </h2>
+
+      <p>
+
+        Виж обобщените научни резултати
+        и междусекторните изводи от проекта.
+
+      </p>
+
+    </div>
+
+
+    <a
+      class="btn btn-primary"
+      href="results.html"
+    >
+      Към резултатите →
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+
+<footer>
+
+  <div class="container">
+
+
+    <div class="footer-grid">
+
+
+      <div class="footer-project">
+
+        <strong>
+          Университет за национално и световно стопанство
+        </strong>
+
+        <p>
+
+          Научноизследователски проект № 6/2024
+          <br>
+
+          „Дигитална конкурентоспособност
+          на социално-икономическата система на България“
+
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Начало
+        </a>
+
+        <a href="about.html">
+          За проекта
+        </a>
+
+        <a href="data-indices.html">
+          Данни и индекси
+        </a>
+
+        <a href="regions.html">
+          Региони
+        </a>
+
+        <a href="areas.html">
+          Области
+        </a>
+
+        <a href="results.html">
+          Резултати
+        </a>
+
+        <a href="publications.html">
+          Публикации
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+      Дигитална конкурентоспособност
+      на социално-икономическата система на България
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+<script>
+
+(function(){
+
+
+  /* =========================================================
+     MOBILE MENU
+  ========================================================= */
+
+
+  const mobileToggle =
+    document.getElementById(
+      "mobileToggle"
+    );
+
+
+  const mobileMenu =
+    document.getElementById(
+      "mobileMenu"
+    );
+
+
+  mobileToggle.addEventListener(
+    "click",
+    function(){
+
+      mobileMenu.style.display =
+        mobileMenu.style.display === "block"
+        ? "none"
+        : "block";
+
+    }
+  );
+
+
+  mobileMenu
+    .querySelectorAll("a")
+    .forEach(
+      function(link){
+
+        link.addEventListener(
+          "click",
+          function(){
+
+            mobileMenu.style.display =
+              "none";
+
+          }
+        );
+
+      }
+    );
+
+
+  /* =========================================================
+     PUBLICATION DATA
+  ========================================================= */
+
+
+  const publications = [
+
+
+    {
+      year: 2024,
+
+      theme: "concept",
+
+      themeLabel:
+        "Дигитална конкурентоспособност",
+
+      title:
+        "Unraveling the Layers of Digital Competitiveness in the Economic Systems",
+
+      authors:
+        "Sabrina Kalinkova",
+
+      venue:
+        "8th FEB International Scientific Conference · University of Maribor Press",
+
+      type:
+        "Conference paper",
+
+      doi:
+        "10.18690/um.epf.5.2024.35",
+
+      url:
+        "https://doi.org/10.18690/um.epf.5.2024.35"
+    },
+
+
+    {
+      year: 2024,
+
+      theme: "concept",
+
+      themeLabel:
+        "Национална конкурентоспособност",
+
+      title:
+        "The Position of Bulgaria in the EU Competitive Landscape",
+
+      authors:
+        "Sabrina Kalinkova",
+
+      venue:
+        "Management and Education · Vol. 20(2), 2024",
+
+      type:
+        "Journal article",
+
+      doi:
+        "",
+
+      url:
+        "https://www.conference-burgas.com/maevolumes/vol20_2024/b2_v20.pdf"
+    },
+
+
+    {
+      year: 2024,
+
+      theme: "civil",
+
+      themeLabel:
+        "Граждански сектор",
+
+      title:
+        "Development of Digital Tools for Volunteer Assessment",
+
+      authors:
+        "Violeta Toncheva-Zlatkova",
+
+      venue:
+        "Management and Education · Vol. 20(4), 2024",
+
+      type:
+        "Journal article",
+
+      doi:
+        "",
+
+      url:
+        "https://www.conference-burgas.com/maevolumes/vol20_2024/b4_v20.pdf"
+    },
+
+
+    {
+      year: 2025,
+
+      theme: "government",
+
+      themeLabel:
+        "Публично управление",
+
+      title:
+        "Electronic Government as an Engine for Bulgaria's Digital Competitiveness",
+
+      authors:
+        "Sabrina Kalinkova",
+
+      venue:
+        "33rd NISPAcee Annual Conference · Bratislava",
+
+      type:
+        "Conference paper",
+
+      doi:
+        "",
+
+      url:
+        "https://www.nispa.org/files/conferences/2025/e-proceedings/system_files/papers/Sabrina_Kalinkova_Article_2025.pdf"
+    },
+
+
+    {
+      year: 2025,
+
+      theme: "civil",
+
+      themeLabel:
+        "Граждански сектор",
+
+      title:
+        "Impact of Digitalisation on the Performance of NGOs: Findings from Bulgaria",
+
+      authors:
+        "Violeta Toncheva-Zlatkova",
+
+      venue:
+        "33rd NISPAcee Annual Conference · Bratislava",
+
+      type:
+        "Conference paper",
+
+      doi:
+        "",
+
+      url:
+        "https://www.nispa.org/files/conferences/2025/e-proceedings/system_files/papers/NISPACEE_VZLATKOVA_artical_2025.pdf"
+    },
+
+
+    {
+      year: 2025,
+
+      theme: "business",
+
+      themeLabel:
+        "Бизнес и индустрия",
+
+      title:
+        "Digital Twins as a Tool for Strategic Planning and Sustainability in Industry",
+
+      authors:
+        "Sabrina Kalinkova",
+
+      venue:
+        "National Scientific Forum on Industrial and Business Leadership · UNWE",
+
+      type:
+        "Conference paper",
+
+      doi:
+        "",
+
+      url:
+        "https://www.ceeol.com/search/chapter-detail?id=1385757"
+    },
+
+
+    {
+      year: 2025,
+
+      theme: "health",
+
+      themeLabel:
+        "Здравеопазване",
+
+      title:
+        "Financial Sustainability in Bulgaria's Healthcare: Challenges and Strategic Imperatives",
+
+      authors:
+        "Christo Ivanov",
+
+      venue:
+        "10th International Scientific-Business Conference LIMEN 2024 · Conference Proceedings",
+
+      type:
+        "Conference paper",
+
+      doi:
+        "10.31410/LIMEN.2024.457",
+
+      url:
+        "https://doi.org/10.31410/LIMEN.2024.457"
+    },
+
+
+    {
+      year: 2025,
+
+      theme: "strategy",
+
+      themeLabel:
+        "Стратегическо управление",
+
+      title:
+        "From Anticipation to Adaptation: The Missing Feedforward Logic in Bulgaria's Economic Governance",
+
+      authors:
+        "Sabrina Kalinkova",
+
+      venue:
+        "Istoriya-History · Vol. 33, No. 6s, 2025",
+
+      type:
+        "Journal article",
+
+      doi:
+        "10.53656/his2025-6s-7-fro",
+
+      url:
+        "https://doi.org/10.53656/his2025-6s-7-fro"
+    },
+
+
+    {
+      year: 2025,
+
+      theme: "health",
+
+      themeLabel:
+        "Здравеопазване",
+
+      title:
+        "Digital Competitiveness of the Healthcare System in Bulgaria",
+
+      authors:
+        "Sabrina Kalinkova · Christo Ivanov",
+
+      venue:
+        "ERAZ 2025 · Conference Proceedings",
+
+      type:
+        "Conference paper",
+
+      doi:
+        "10.31410/ERAZ.2025.229",
+
+      url:
+        "https://doi.org/10.31410/ERAZ.2025.229"
+    },
+
+
+    {
+      year: 2025,
+
+      theme: "business",
+
+      themeLabel:
+        "Бизнес и стратегическо управление",
+
+      title:
+        "From Data to Decisions: Rethinking Strategic Planning in the Digital Age",
+
+      authors:
+        "Sabrina Kalinkova",
+
+      venue:
+        "ERAZ 2025 · Conference Proceedings",
+
+      type:
+        "Conference paper",
+
+      doi:
+        "10.31410/ERAZ.2025.417",
+
+      url:
+        "https://doi.org/10.31410/ERAZ.2025.417"
+    },
+
+
+    {
+      year: 2025,
+
+      theme: "human",
+
+      themeLabel:
+        "Човешки капитал",
+
+      title:
+        "Дигитална грамотност и дигитална конкурентоспособност в България: пресечни точки",
+
+      authors:
+        "Ivan Valchanov",
+
+      venue:
+        "Икономически и социални алтернативи · Том 31, брой 4, 2025",
+
+      type:
+        "Journal article",
+
+      doi:
+        "10.37075/ISA.2025.4.08",
+
+      url:
+        "https://doi.org/10.37075/ISA.2025.4.08"
+    },
+
+
+    {
+      year: 2026,
+
+      theme: "concept",
+
+      themeLabel:
+        "AI и дигитална конкурентоспособност",
+
+      title:
+        "Digital Lag or Sustainable Leap? Strategic Paths for Emerging Economies in the AI Age",
+
+      authors:
+        "Sabrina Kalinkova",
+
+      venue:
+        "Sustainable Governance in the Age of Artificial Intelligence · University of Maribor Press",
+
+      type:
+        "Book chapter",
+
+      doi:
+        "10.18690/um.epf.7.2026.55",
+
+      url:
+        "https://doi.org/10.18690/um.epf.7.2026.55"
+    }
+
+
+  ];
+
+
+  /* =========================================================
+     RENDER
+  ========================================================= */
+
+
+  const publicationGrid =
+    document.getElementById(
+      "publicationGrid"
+    );
+
+
+  const searchInput =
+    document.getElementById(
+      "searchInput"
+    );
+
+
+  const yearFilter =
+    document.getElementById(
+      "yearFilter"
+    );
+
+
+  const themeFilter =
+    document.getElementById(
+      "themeFilter"
+    );
+
+
+  const resultCount =
+    document.getElementById(
+      "resultCount"
+    );
+
+
+  const noResults =
+    document.getElementById(
+      "noResults"
+    );
+
+
+  const resetFilters =
+    document.getElementById(
+      "resetFilters"
+    );
+
+
+  function publicationCard(pub){
+
+    const doiBlock =
+      pub.doi
+      ?
+      `
+        <div class="pub-doi">
+          DOI: ${pub.doi}
+        </div>
+      `
+      :
+      "";
+
+
+    return `
+
+      <article class="publication-card">
+
+
+        <div class="pub-card-top">
+
+          <div class="pub-year">
+            ${pub.year}
+          </div>
+
+          <div class="pub-status">
+            Published
+          </div>
+
+        </div>
+
+
+        <div class="pub-theme">
+          ${pub.themeLabel}
+        </div>
+
+
+        <h3>
+          ${pub.title}
+        </h3>
+
+
+        <div class="pub-authors">
+          ${pub.authors}
+        </div>
+
+
+        <div class="pub-venue">
+          ${pub.venue}
+        </div>
+
+
+        ${doiBlock}
+
+
+        <div class="pub-bottom">
+
+          <div class="pub-type">
+            ${pub.type}
+          </div>
+
+          <br>
+
+          <a
+            class="card-link"
+            href="${pub.url}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Прочети публикацията →
+          </a>
+
+        </div>
+
+
+      </article>
+
+    `;
+
+  }
+
+
+  function renderPublications(){
+
+    const search =
+      searchInput.value
+        .trim()
+        .toLowerCase();
+
+
+    const selectedYear =
+      yearFilter.value;
+
+
+    const selectedTheme =
+      themeFilter.value;
+
+
+    const filtered =
+      publications.filter(
+        function(pub){
+
+
+          const searchableText =
+            (
+              pub.title +
+              " " +
+              pub.authors +
+              " " +
+              pub.venue +
+              " " +
+              pub.themeLabel +
+              " " +
+              pub.doi
+            )
+            .toLowerCase();
+
+
+          const matchesSearch =
+            !search ||
+            searchableText.includes(
+              search
+            );
+
+
+          const matchesYear =
+            selectedYear === "all" ||
+            String(pub.year) === selectedYear;
+
+
+          const matchesTheme =
+            selectedTheme === "all" ||
+            pub.theme === selectedTheme;
+
+
+          return (
+            matchesSearch &&
+            matchesYear &&
+            matchesTheme
+          );
+
+        }
+      );
+
+
+    publicationGrid.innerHTML =
+      filtered
+        .map(publicationCard)
+        .join("");
+
+
+    resultCount.textContent =
+      filtered.length;
+
+
+    noResults.style.display =
+      filtered.length === 0
+      ? "block"
+      : "none";
+
+  }
+
+
+  searchInput.addEventListener(
+    "input",
+    renderPublications
+  );
+
+
+  yearFilter.addEventListener(
+    "change",
+    renderPublications
+  );
+
+
+  themeFilter.addEventListener(
+    "change",
+    renderPublications
+  );
+
+
+  resetFilters.addEventListener(
+    "click",
+    function(){
+
+      searchInput.value = "";
+
+      yearFilter.value =
+        "all";
+
+      themeFilter.value =
+        "all";
+
+      renderPublications();
+
+    }
+  );
+
+
+  renderPublications();
+
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
