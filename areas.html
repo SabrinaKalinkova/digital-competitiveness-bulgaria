@@ -967,7 +967,7 @@
         ${values.map(function(d){
           const width = max === 0 ? 0 : (d.value / max) * 100;
           return `
-            <div class="comparison-row" title="${d.code} — ${d.name}">
+            <div class="comparison-row" title="${d.code} - ${d.name}">
               <div class="comparison-code">${d.code}</div>
               <div class="comparison-name">${d.name}</div>
               <div class="comparison-track">
@@ -1145,7 +1145,7 @@
     dataset.sectors.forEach(function(s){
       const option = document.createElement("option");
       option.value = s.code;
-      option.textContent = `${s.code} — ${s.name}`;
+      option.textContent = `${s.code} - ${s.name}`;
       sectorSelect.appendChild(option);
     });
 
