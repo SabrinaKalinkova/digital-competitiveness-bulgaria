@@ -526,7 +526,7 @@
 
       color: #e3edf2;
 
-      font-size: 19px;
+      font-size: 18px;
 
       line-height: 1.65;
 
@@ -746,8 +746,11 @@
 
 
     .logic-list {
+
       display: grid;
+
       gap: 17px;
+
     }
 
 
@@ -765,7 +768,7 @@
       align-items: center;
 
       padding:
-        21px 21px;
+        21px;
 
       border:
         1px solid
@@ -1004,7 +1007,7 @@
 
 
     /* =========================================================
-       THREE CORE CARDS
+       RESEARCH FRAMEWORK
     ========================================================= */
 
 
@@ -1075,28 +1078,93 @@
 
 
     /* =========================================================
-       METHODOLOGY LINK
+       METHODOLOGY CTA
     ========================================================= */
 
 
-    .methodology-link-wrap {
-      margin-top: 28px;
+    .methodology-cta {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      gap: 30px;
+
+      margin-top: 26px;
+
+      padding:
+        22px 25px;
+
+      border:
+        1px solid #d4e8ec;
+
+      border-radius: 14px;
+
+      background:
+
+        linear-gradient(
+          100deg,
+          #f5fbfc,
+          #f9fcfd
+        );
+
     }
 
 
-    .methodology-link {
+    .methodology-cta-text strong {
+
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: var(--navy);
+
+      font-size: 14px;
+
+    }
+
+
+    .methodology-cta-text span {
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+    }
+
+
+    .methodology-button {
 
       display: inline-flex;
 
       align-items: center;
 
+      justify-content: center;
+
       gap: 8px;
+
+      min-height: 42px;
+
+      padding:
+        0 17px;
+
+      border:
+        1px solid #bedfe5;
+
+      border-radius: 8px;
+
+      background: white;
 
       color: var(--blue);
 
-      font-size: 13px;
+      font-size: 11px;
 
       font-weight: 800;
+
+      white-space: nowrap;
 
       transition:
         0.2s ease;
@@ -1104,112 +1172,12 @@
     }
 
 
-    .methodology-link span {
-      transition:
-        transform 0.2s ease;
-    }
+    .methodology-button:hover {
 
+      border-color: var(--cyan);
 
-    .methodology-link:hover {
-      color: var(--navy);
-    }
-
-
-    .methodology-link:hover span {
       transform:
-        translateX(4px);
-    }
-
-
-    /* =========================================================
-       ARCHITECTURE
-    ========================================================= */
-
-
-    .architecture {
-
-      display: grid;
-
-      grid-template-columns:
-        0.9fr 1.1fr;
-
-      gap: 65px;
-
-      align-items: center;
-
-    }
-
-
-    .architecture-chain {
-      display: grid;
-      gap: 10px;
-    }
-
-
-    .architecture-item {
-
-      display: grid;
-
-      grid-template-columns:
-        57px 1fr;
-
-      gap: 18px;
-
-      align-items: center;
-
-      padding:
-        18px 20px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 13px;
-
-      background: white;
-
-    }
-
-
-    .architecture-number {
-
-      width: 42px;
-      height: 42px;
-
-      display: grid;
-
-      place-items: center;
-
-      border-radius: 50%;
-
-      background: #eaf6f8;
-
-      color: var(--blue);
-
-      font-size: 11px;
-
-      font-weight: 800;
-
-    }
-
-
-    .architecture-item strong {
-
-      display: block;
-
-      color: var(--navy);
-
-      font-size: 14px;
-
-      margin-bottom: 3px;
-
-    }
-
-
-    .architecture-item span {
-
-      color: var(--muted);
-
-      font-size: 11px;
+        translateY(-1px);
 
     }
 
@@ -1329,8 +1297,7 @@
       padding:
         70px 0 90px;
 
-      background:
-        #ffffff;
+      background: #ffffff;
 
     }
 
@@ -1813,6 +1780,25 @@
     }
 
 
+    .section-footer-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      margin-top: 27px;
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+    }
+
+
     /* =========================================================
        PUBLICATIONS
     ========================================================= */
@@ -1899,27 +1885,8 @@
     }
 
 
-    .section-footer-link {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 7px;
-
-      margin-top: 27px;
-
-      color: var(--blue);
-
-      font-size: 12px;
-
-      font-weight: 800;
-
-    }
-
-
     /* =========================================================
-       CTA
+       FINAL CTA
     ========================================================= */
 
 
@@ -2123,7 +2090,6 @@
       }
 
 
-      .architecture,
       .regional-card {
         grid-template-columns:
           1fr;
@@ -2144,6 +2110,16 @@
       .publication-preview {
         grid-template-columns:
           1fr;
+      }
+
+
+      .methodology-cta {
+
+        flex-direction: column;
+
+        align-items:
+          flex-start;
+
       }
 
 
@@ -2736,7 +2712,8 @@
         <p>
 
           Разработват и прилагат се секторни индекси,
-          системи от показатели, емпирични изследвания
+          системи от показатели,
+          емпирични изследвания
           и сравнителни аналитични инструменти.
 
         </p>
@@ -2757,7 +2734,8 @@
         <p>
 
           Изследват се инфраструктура,
-          човешки капитал, организационна готовност,
+          човешки капитал,
+          организационна готовност,
           институционална среда,
           стратегическо управление и иновации.
 
@@ -2769,151 +2747,35 @@
     </div>
 
 
-    <div class="methodology-link-wrap">
+    <div class="methodology-cta">
+
+
+      <div class="methodology-cta-text">
+
+        <strong>
+          Как е изграден изследователският дизайн?
+        </strong>
+
+        <span>
+          Виж многостепенната рамка,
+          източниците на данни,
+          аналитичните методи
+          и принципите за интерпретация.
+        </span>
+
+      </div>
+
 
       <a
-        class="methodology-link"
+        class="methodology-button"
         href="methodology.html"
       >
-        Разгледай методологията
-        <span>→</span>
+        Методология и изследователски дизайн →
       </a>
 
-    </div>
-
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     ARCHITECTURE
-========================================================= -->
-
-
-<section class="standard-section section-alt">
-
-  <div class="container architecture">
-
-
-    <div>
-
-      <div class="section-label">
-        Многостепенен анализ
-      </div>
-
-
-      <h2 class="section-title">
-        От националната система към организационните проявления
-      </h2>
-
-
-      <p class="section-description">
-
-        Методологическата рамка проследява
-        дигиталната конкурентоспособност „отгоре-надолу“,
-        като свързва стратегическите условия
-        с конкретните регионални, секторни
-        и организационни резултати.
-
-      </p>
 
     </div>
 
-
-    <div class="architecture-chain">
-
-
-      <div class="architecture-item">
-
-        <div class="architecture-number">
-          01
-        </div>
-
-        <div>
-
-          <strong>
-            Национално
-          </strong>
-
-          <span>
-            политики, институции
-            и стратегическа среда
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <div class="architecture-item">
-
-        <div class="architecture-number">
-          02
-        </div>
-
-        <div>
-
-          <strong>
-            Регионално
-          </strong>
-
-          <span>
-            различия, готовност
-            и териториални профили
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <div class="architecture-item">
-
-        <div class="architecture-number">
-          03
-        </div>
-
-        <div>
-
-          <strong>
-            Секторно
-          </strong>
-
-          <span>
-            образование, здравеопазване,
-            бизнес, публичен и граждански сектор
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <div class="architecture-item">
-
-        <div class="architecture-number">
-          04
-        </div>
-
-        <div>
-
-          <strong>
-            Организационно
-          </strong>
-
-          <span>
-            технологии, хора, процеси,
-            управление и иновации
-          </span>
-
-        </div>
-
-      </div>
-
-
-    </div>
 
   </div>
 
@@ -2925,7 +2787,7 @@
 ========================================================= -->
 
 
-<section class="standard-section">
+<section class="standard-section section-alt">
 
   <div class="container">
 
@@ -3023,7 +2885,8 @@
 
         <p>
           Цифрови инвестиции,
-          данни, иновации
+          данни,
+          иновации
           и организационна промяна.
         </p>
 
@@ -3076,7 +2939,8 @@
         <p>
           Дигитализация на НПО,
           доброволчество,
-          умения и организационен капацитет.
+          умения
+          и организационен капацитет.
         </p>
 
         <div class="area-link">
@@ -3150,8 +3014,9 @@
         </span>
 
         <small>
-          Схематично представяне на териториалното
-          измерение на анализа
+          Схематично представяне
+          на териториалното измерение
+          на анализа
         </small>
 
       </div>
@@ -3501,7 +3366,8 @@
 
       <div class="map-note">
 
-        Картата е схематична и служи за визуализиране
+        Картата е схематична
+        и служи за визуализиране
         на териториалната структура на анализа.
         Цветовете не представят класация
         или стойност на общ регионален индекс.
@@ -3772,7 +3638,7 @@
 
 
 <!-- =========================================================
-     CTA
+     DATA CTA
 ========================================================= -->
 
 
@@ -3784,16 +3650,16 @@
     <div>
 
       <h2>
-        Данни, индекси и методология
+        Данни и индекси
       </h2>
 
       <p>
 
         Разгледайте емпиричните бази,
-        разработените индекси
-        и аналитичните инструменти,
-        използвани в отделните направления
-        на проекта.
+        секторните измерители
+        и показателите,
+        използвани в различните
+        изследователски направления на проекта.
 
       </p>
 
