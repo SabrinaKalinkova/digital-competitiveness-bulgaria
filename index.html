@@ -71,7 +71,6 @@
         sans-serif;
 
       color: var(--text);
-
       background: var(--white);
 
       line-height: 1.6;
@@ -111,15 +110,11 @@
 
       position: sticky;
       top: 0;
+
       z-index: 1000;
 
       background:
-        rgba(
-          255,
-          255,
-          255,
-          0.97
-        );
+        rgba(255, 255, 255, 0.97);
 
       border-bottom:
         1px solid var(--border);
@@ -238,6 +233,11 @@
     }
 
 
+    /* =========================================================
+       DESKTOP NAV
+    ========================================================= */
+
+
     .desktop-nav {
 
       display: flex;
@@ -255,29 +255,151 @@
     }
 
 
-    .desktop-nav a {
+    .desktop-nav > a,
+    .nav-dropdown > button {
+
+      min-height: 82px;
+
+      display: flex;
+
+      align-items: center;
 
       padding:
-        31px 0 25px;
+        3px 0 0;
+
+      border: none;
 
       border-bottom:
         3px solid transparent;
 
-      transition:
-        0.2s ease;
+      background: transparent;
+
+      color: inherit;
+
+      font-size: inherit;
+
+      font-weight: inherit;
 
       white-space: nowrap;
+
+      cursor: pointer;
 
     }
 
 
-    .desktop-nav a:hover,
-    .desktop-nav a.active {
+    .desktop-nav > a:hover,
+    .desktop-nav > a.active,
+    .nav-dropdown:hover > button {
 
       color: var(--blue);
 
       border-bottom-color:
         var(--turquoise);
+
+    }
+
+
+    .nav-dropdown {
+
+      position: relative;
+
+    }
+
+
+    .nav-dropdown > button {
+
+      gap: 6px;
+
+    }
+
+
+    .dropdown-arrow {
+
+      font-size: 9px;
+
+      transition:
+        transform 0.2s ease;
+
+    }
+
+
+    .nav-dropdown:hover
+    .dropdown-arrow {
+
+      transform:
+        rotate(180deg);
+
+    }
+
+
+    .dropdown-menu {
+
+      position: absolute;
+
+      top: 72px;
+      left: 50%;
+
+      min-width: 190px;
+
+      padding: 8px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+
+      background: white;
+
+      box-shadow:
+        0 16px 35px rgba(16, 43, 76, 0.12);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transform:
+        translate(-50%, 8px);
+
+      transition:
+        0.2s ease;
+
+    }
+
+
+    .nav-dropdown:hover
+    .dropdown-menu {
+
+      opacity: 1;
+
+      visibility: visible;
+
+      transform:
+        translate(-50%, 0);
+
+    }
+
+
+    .dropdown-menu a {
+
+      display: block;
+
+      padding:
+        11px 12px;
+
+      border-radius: 8px;
+
+      color: #40556a;
+
+      font-size: 12px;
+
+    }
+
+
+    .dropdown-menu a:hover {
+
+      background: #f2f7fa;
+
+      color: var(--blue);
 
     }
 
@@ -346,6 +468,35 @@
       color: var(--navy);
 
       font-weight: 700;
+
+    }
+
+
+    .mobile-group-label {
+
+      padding:
+        14px 0 5px;
+
+      color: #96a5b1;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+    }
+
+
+    .mobile-sub {
+
+      padding-left: 14px !important;
+
+      color: #536b7c !important;
+
+      font-weight: 600 !important;
 
     }
 
@@ -454,8 +605,7 @@
 
       text-transform: uppercase;
 
-      letter-spacing:
-        2px;
+      letter-spacing: 2px;
 
     }
 
@@ -552,23 +702,12 @@
         9px 13px;
 
       border:
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.13
-        );
+        1px solid rgba(255, 255, 255, 0.13);
 
       border-radius: 8px;
 
       background:
-        rgba(
-          255,
-          255,
-          255,
-          0.045
-        );
+        rgba(255, 255, 255, 0.045);
 
       color: #cce1e8;
 
@@ -627,7 +766,6 @@
       color: #082d49;
 
       background:
-
         linear-gradient(
           90deg,
           #9ad8e0,
@@ -646,23 +784,12 @@
     .btn-outline {
 
       border:
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.38
-        );
+        1px solid rgba(255, 255, 255, 0.38);
 
       color: white;
 
       background:
-        rgba(
-          255,
-          255,
-          255,
-          0.02
-        );
+        rgba(255, 255, 255, 0.02);
 
     }
 
@@ -670,40 +797,26 @@
     .btn-outline:hover {
 
       background:
-        rgba(
-          255,
-          255,
-          255,
-          0.07
-        );
+        rgba(255, 255, 255, 0.07);
 
     }
 
 
     /* =========================================================
-       ANALYTICAL LOGIC
+       HERO ANALYTICAL LOGIC
     ========================================================= */
 
 
     .logic-panel {
 
-      position: relative;
-
       padding: 37px;
 
       border:
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.14
-        );
+        1px solid rgba(255, 255, 255, 0.14);
 
       border-radius: 24px;
 
       background:
-
         linear-gradient(
           145deg,
           rgba(255,255,255,0.07),
@@ -767,27 +880,15 @@
 
       align-items: center;
 
-      padding:
-        21px;
+      padding: 21px;
 
       border:
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.10
-        );
+        1px solid rgba(255, 255, 255, 0.10);
 
       border-radius: 14px;
 
       background:
-        rgba(
-          255,
-          255,
-          255,
-          0.04
-        );
+        rgba(255, 255, 255, 0.04);
 
     }
 
@@ -799,7 +900,6 @@
       position: absolute;
 
       left: 27px;
-
       bottom: -24px;
 
       color: #74dce3;
@@ -821,23 +921,12 @@
       place-items: center;
 
       border:
-        1px solid
-        rgba(
-          113,
-          220,
-          229,
-          0.55
-        );
+        1px solid rgba(113, 220, 229, 0.55);
 
       border-radius: 50%;
 
       background:
-        rgba(
-          46,
-          170,
-          195,
-          0.10
-        );
+        rgba(46, 170, 195, 0.10);
 
       color: #93ebef;
 
@@ -938,19 +1027,23 @@
 
 
     /* =========================================================
-       GENERAL SECTIONS
+       GENERAL
     ========================================================= */
 
 
     .standard-section {
+
       padding:
         84px 0;
+
     }
 
 
     .section-alt {
+
       background:
         var(--background);
+
     }
 
 
@@ -995,7 +1088,7 @@
 
     .section-description {
 
-      max-width: 870px;
+      max-width: 880px;
 
       color: var(--muted);
 
@@ -1006,188 +1099,148 @@
     }
 
 
-    /* =========================================================
-       RESEARCH FRAMEWORK
-    ========================================================= */
-
-
-    .core-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 17px;
-
-      margin-top: 38px;
-
-    }
-
-
-    .core-card {
-
-      min-height: 250px;
-
-      padding: 30px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius);
-
-      background: white;
-
-    }
-
-
-    .core-number {
-
-      margin-bottom: 33px;
-
-      color: #95cad4;
-
-      font-size: 11px;
-
-      font-weight: 800;
-
-    }
-
-
-    .core-card h3 {
-
-      margin-bottom: 12px;
-
-      color: var(--navy);
-
-      font-size: 20px;
-
-    }
-
-
-    .core-card p {
-
-      color: var(--muted);
-
-      font-size: 13px;
-
-      line-height: 1.65;
-
-    }
-
-
-    /* =========================================================
-       METHODOLOGY CTA
-    ========================================================= */
-
-
-    .methodology-cta {
-
-      display: flex;
-
-      justify-content:
-        space-between;
-
-      align-items: center;
-
-      gap: 30px;
-
-      margin-top: 26px;
-
-      padding:
-        22px 25px;
-
-      border:
-        1px solid #d4e8ec;
-
-      border-radius: 14px;
-
-      background:
-
-        linear-gradient(
-          100deg,
-          #f5fbfc,
-          #f9fcfd
-        );
-
-    }
-
-
-    .methodology-cta-text strong {
-
-      display: block;
-
-      margin-bottom: 4px;
-
-      color: var(--navy);
-
-      font-size: 14px;
-
-    }
-
-
-    .methodology-cta-text span {
-
-      color: var(--muted);
-
-      font-size: 11px;
-
-    }
-
-
-    .methodology-button {
+    .section-link {
 
       display: inline-flex;
 
       align-items: center;
 
-      justify-content: center;
+      gap: 7px;
 
-      gap: 8px;
-
-      min-height: 42px;
-
-      padding:
-        0 17px;
-
-      border:
-        1px solid #bedfe5;
-
-      border-radius: 8px;
-
-      background: white;
+      margin-top: 27px;
 
       color: var(--blue);
 
-      font-size: 11px;
+      font-size: 12px;
 
       font-weight: 800;
-
-      white-space: nowrap;
-
-      transition:
-        0.2s ease;
-
-    }
-
-
-    .methodology-button:hover {
-
-      border-color: var(--cyan);
-
-      transform:
-        translateY(-1px);
 
     }
 
 
     /* =========================================================
-       AREAS
+       CONCEPTUAL FRAMEWORK
     ========================================================= */
 
 
-    .areas-grid {
+    .concept-flow {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 9px;
+
+      margin-top: 39px;
+
+    }
+
+
+    .concept-step {
+
+      position: relative;
+
+      min-height: 150px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      padding: 22px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 13px;
+
+      background: white;
+
+    }
+
+
+    .concept-step:not(:last-child)::after {
+
+      content: "→";
+
+      position: absolute;
+
+      right: -17px;
+      top: 50%;
+
+      z-index: 3;
+
+      width: 24px;
+      height: 24px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--background);
+
+      color: var(--cyan);
+
+      font-weight: 800;
+
+      transform:
+        translateY(-50%);
+
+    }
+
+
+    .concept-code {
+
+      margin-bottom: 16px;
+
+      color: var(--cyan);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        0.9px;
+
+    }
+
+
+    .concept-step h3 {
+
+      margin-bottom: 7px;
+
+      color: var(--navy);
+
+      font-size: 14px;
+
+      line-height: 1.3;
+
+    }
+
+
+    .concept-step p {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.5;
+
+    }
+
+
+    /* =========================================================
+       RESEARCH DIRECTIONS
+    ========================================================= */
+
+
+    .directions-grid {
 
       display: grid;
 
@@ -1196,14 +1249,14 @@
 
       gap: 13px;
 
-      margin-top: 36px;
+      margin-top: 37px;
 
     }
 
 
-    .area-card {
+    .direction-card {
 
-      min-height: 202px;
+      min-height: 215px;
 
       display: flex;
 
@@ -1224,7 +1277,7 @@
     }
 
 
-    .area-card:hover {
+    .direction-card:hover {
 
       transform:
         translateY(-3px);
@@ -1235,7 +1288,9 @@
     }
 
 
-    .area-code {
+    .direction-code {
+
+      margin-bottom: 23px;
 
       color: var(--cyan);
 
@@ -1243,12 +1298,12 @@
 
       font-weight: 800;
 
-      margin-bottom: 22px;
-
     }
 
 
-    .area-card h3 {
+    .direction-card h3 {
+
+      margin-bottom: 9px;
 
       color: var(--navy);
 
@@ -1256,12 +1311,10 @@
 
       line-height: 1.3;
 
-      margin-bottom: 9px;
-
     }
 
 
-    .area-card p {
+    .direction-card p {
 
       color: var(--muted);
 
@@ -1272,169 +1325,216 @@
     }
 
 
-    .area-link {
-
-      margin-top: auto;
-
-      padding-top: 17px;
-
-      color: var(--blue);
-
-      font-size: 10px;
-
-      font-weight: 800;
-
-    }
-
-
     /* =========================================================
-       REGIONAL BLOCK
+       HOW WE STUDY
     ========================================================= */
 
 
-    .regional-section {
-
-      padding:
-        70px 0 90px;
-
-      background: #ffffff;
-
-    }
-
-
-    .regional-card {
-
-      overflow: hidden;
+    .how-grid {
 
       display: grid;
 
       grid-template-columns:
-        0.95fr 1.05fr;
+        repeat(2, 1fr);
 
-      min-height: 510px;
+      gap: 18px;
+
+      margin-top: 38px;
+
+    }
+
+
+    .how-card {
+
+      position: relative;
+
+      overflow: hidden;
+
+      min-height: 280px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      padding: 31px;
 
       border:
         1px solid var(--border);
 
       border-radius:
-        22px;
+        var(--radius);
 
       background: white;
 
     }
 
 
-    .regional-copy {
+    .how-card::before {
 
-      display: flex;
+      content: "";
 
-      flex-direction: column;
+      position: absolute;
 
-      justify-content: center;
+      left: 0;
+      top: 0;
+      bottom: 0;
 
-      padding:
-        57px;
+      width: 4px;
+
+      background:
+        linear-gradient(
+          var(--blue),
+          var(--turquoise)
+        );
 
     }
 
 
-    .regional-copy h2 {
-
-      max-width: 560px;
+    .how-label {
 
       margin-bottom: 24px;
 
-      color: var(--navy);
+      color: var(--cyan);
 
-      font-size:
-        clamp(
-          32px,
-          3.3vw,
-          45px
-        );
+      font-size: 9px;
 
-      line-height: 1.18;
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        1.2px;
 
     }
 
 
-    .regional-copy p {
+    .how-card h3 {
 
-      max-width: 580px;
+      margin-bottom: 11px;
+
+      color: var(--navy);
+
+      font-size: 21px;
+
+    }
+
+
+    .how-card p {
 
       color: var(--muted);
 
-      font-size: 15px;
+      font-size: 12px;
 
-      line-height: 1.75;
+      line-height: 1.65;
 
     }
 
 
-    .regional-link {
+    .how-tags {
 
-      display: inline-flex;
+      display: flex;
 
-      align-items: center;
+      flex-wrap: wrap;
 
-      gap: 8px;
+      gap: 6px;
 
-      width: fit-content;
+      margin-top: 22px;
 
-      margin-top: 34px;
+    }
+
+
+    .how-tag {
+
+      padding:
+        5px 8px;
+
+      border:
+        1px solid #d7e7ec;
+
+      border-radius: 20px;
+
+      background: #f5fafb;
+
+      color: #527184;
+
+      font-size: 8px;
+
+      font-weight: 700;
+
+    }
+
+
+    .how-link {
+
+      margin-top: auto;
+
+      padding-top: 24px;
 
       color: var(--blue);
 
-      font-size: 13px;
+      font-size: 11px;
 
       font-weight: 800;
 
     }
 
 
-    .regional-link:hover {
-      text-decoration: underline;
-    }
-
-
     /* =========================================================
-       MAP
+       ANALYSES
     ========================================================= */
 
 
-    .regional-map-panel {
+    .analysis-grid {
 
-      position: relative;
+      display: grid;
 
-      display: flex;
+      grid-template-columns:
+        repeat(2, 1fr);
 
-      flex-direction: column;
+      gap: 19px;
 
-      justify-content: center;
+      margin-top: 38px;
+
+    }
+
+
+    .analysis-card {
 
       overflow: hidden;
 
-      padding:
-        38px 42px;
+      border:
+        1px solid var(--border);
+
+      border-radius: 19px;
+
+      background: white;
+
+    }
+
+
+    .analysis-visual {
+
+      min-height: 290px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 28px;
+
+      color: white;
 
       background:
-
-        radial-gradient(
-          circle at 60% 30%,
-          rgba(66, 180, 203, 0.15),
-          transparent 34%
-        ),
-
         linear-gradient(
           145deg,
-          #1c385a,
-          #315776
+          #193858,
+          #2f5878
         );
 
     }
 
 
-    .regional-map-panel::before {
+    .analysis-visual::before {
 
       content: "";
 
@@ -1456,34 +1556,18 @@
         );
 
       background-size:
-        54px 54px;
+        46px 46px;
 
     }
 
 
-    .map-panel-header {
+    .analysis-visual-label {
 
       position: relative;
 
       z-index: 2;
 
-      display: flex;
-
-      justify-content:
-        space-between;
-
-      align-items: flex-start;
-
-      gap: 20px;
-
-      margin-bottom: 12px;
-
-    }
-
-
-    .map-panel-header span {
-
-      color: #8ee7eb;
+      color: #84e4e8;
 
       font-size: 9px;
 
@@ -1492,27 +1576,93 @@
       text-transform: uppercase;
 
       letter-spacing:
-        1.4px;
+        1.2px;
 
     }
 
 
-    .map-panel-header small {
+    .analysis-content {
 
-      max-width: 250px;
-
-      color: #a9cad5;
-
-      font-size: 9px;
-
-      line-height: 1.4;
-
-      text-align: right;
+      padding: 29px;
 
     }
 
 
-    .bulgaria-map {
+    .analysis-content h3 {
+
+      margin-bottom: 10px;
+
+      color: var(--navy);
+
+      font-size: 23px;
+
+    }
+
+
+    .analysis-content p {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.65;
+
+    }
+
+
+    .analysis-meta {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 19px;
+
+    }
+
+
+    .analysis-meta span {
+
+      padding:
+        5px 8px;
+
+      border:
+        1px solid #dde8ed;
+
+      border-radius: 20px;
+
+      color: #607788;
+
+      font-size: 8px;
+
+      font-weight: 700;
+
+    }
+
+
+    .analysis-link {
+
+      display: inline-flex;
+
+      margin-top: 23px;
+
+      color: var(--blue);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+    }
+
+
+    /* =========================================================
+       MINI BULGARIA MAP
+    ========================================================= */
+
+
+    .mini-map {
 
       position: relative;
 
@@ -1520,82 +1670,41 @@
 
       width: 100%;
 
-      height: auto;
-
-      overflow: visible;
+      margin-top: 15px;
 
     }
 
 
-    .map-outline {
+    .mini-map-outline {
 
-      fill: none;
+      fill:
+        rgba(53, 156, 179, 0.18);
 
       stroke:
-        rgba(
-          163,
-          229,
-          235,
-          0.72
-        );
+        rgba(158, 227, 233, 0.8);
 
       stroke-width: 2;
 
     }
 
 
-    .map-region {
+    .mini-region-line {
 
-      fill:
-        rgba(
-          67,
-          155,
-          183,
-          0.20
-        );
+      fill: none;
 
       stroke:
-        rgba(
-          146,
-          220,
-          228,
-          0.60
-        );
+        rgba(155, 224, 231, 0.38);
 
-      stroke-width: 1.6;
-
-      cursor: pointer;
-
-      transition:
-        0.2s ease;
+      stroke-width: 1.5;
 
     }
 
 
-    .map-region:hover,
-    .map-region.active {
+    .mini-map text {
 
-      fill:
-        rgba(
-          70,
-          198,
-          206,
-          0.39
-        );
+      fill: #d9eef2;
 
-      stroke:
-        #94edf0;
-
-    }
-
-
-    .map-label {
-
-      pointer-events: none;
-
-      fill: #e7f4f6;
-
-      font-size: 17px;
+      font-size: 13px;
 
       font-weight: 800;
 
@@ -1604,90 +1713,99 @@
     }
 
 
-    .map-sublabel {
-
-      pointer-events: none;
-
-      fill: #a9d6de;
-
-      font-size: 9px;
-
-      text-anchor: middle;
-
-    }
+    /* =========================================================
+       A21 VISUAL
+    ========================================================= */
 
 
-    .map-legend {
+    .sector-visual-inner {
 
       position: relative;
 
       z-index: 2;
+
+      margin-top: 26px;
+
+    }
+
+
+    .sector-big {
+
+      display: flex;
+
+      align-items: baseline;
+
+      gap: 9px;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    .sector-big strong {
+
+      font-size: 58px;
+
+      line-height: 1;
+
+    }
+
+
+    .sector-big span {
+
+      color: #b9d8e1;
+
+      font-size: 13px;
+
+    }
+
+
+    .sector-grid-mini {
 
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(7, 1fr);
 
-      gap: 7px;
-
-      margin-top: 5px;
+      gap: 6px;
 
     }
 
 
-    .legend-item {
+    .sector-cell {
 
-      padding:
-        8px 9px;
+      height: 28px;
+
+      display: grid;
+
+      place-items: center;
 
       border:
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.09
-        );
+        1px solid rgba(255,255,255,0.12);
 
-      border-radius: 8px;
+      border-radius: 5px;
 
       background:
-        rgba(
-          255,
-          255,
-          255,
-          0.035
-        );
+        rgba(255,255,255,0.045);
 
-      color: #bed7df;
-
-      font-size: 9px;
-
-    }
-
-
-    .legend-item strong {
-
-      color: #84e3e7;
-
-      margin-right: 4px;
-
-    }
-
-
-    .map-note {
-
-      position: relative;
-
-      z-index: 2;
-
-      margin-top: 13px;
-
-      color: #8fb5c2;
+      color: #c8e1e7;
 
       font-size: 8px;
 
-      line-height: 1.5;
+      font-weight: 800;
+
+    }
+
+
+    .sector-cell.highlight {
+
+      border-color:
+        rgba(120, 229, 231, 0.55);
+
+      background:
+        rgba(56, 187, 198, 0.18);
+
+      color: #96edf0;
 
     }
 
@@ -1733,7 +1851,6 @@
         #c6e3e6;
 
       background:
-
         linear-gradient(
           145deg,
           #f5fbfc,
@@ -1780,25 +1897,6 @@
     }
 
 
-    .section-footer-link {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 7px;
-
-      margin-top: 27px;
-
-      color: var(--blue);
-
-      font-size: 12px;
-
-      font-weight: 800;
-
-    }
-
-
     /* =========================================================
        PUBLICATIONS
     ========================================================= */
@@ -1806,14 +1904,14 @@
 
     .publication-preview {
 
-      margin-top: 38px;
-
       display: grid;
 
       grid-template-columns:
         repeat(2, 1fr);
 
       gap: 13px;
+
+      margin-top: 38px;
 
     }
 
@@ -1865,13 +1963,13 @@
 
     .publication-row h3 {
 
+      margin-bottom: 5px;
+
       color: var(--navy);
 
       font-size: 13px;
 
       line-height: 1.4;
-
-      margin-bottom: 5px;
 
     }
 
@@ -1898,7 +1996,6 @@
       color: white;
 
       background:
-
         linear-gradient(
           110deg,
           #0b2845,
@@ -1924,9 +2021,9 @@
 
     .final-cta h2 {
 
-      font-size: 29px;
-
       margin-bottom: 7px;
+
+      font-size: 29px;
 
     }
 
@@ -1953,7 +2050,8 @@
       border-top:
         1px solid var(--border);
 
-      background: #f8fafc;
+      background:
+        #f8fafc;
 
     }
 
@@ -2056,7 +2154,18 @@
       }
 
 
-      .areas-grid {
+      .concept-flow {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+
+      .concept-step::after {
+        display: none;
+      }
+
+
+      .directions-grid {
         grid-template-columns:
           repeat(3, 1fr);
       }
@@ -2083,25 +2192,16 @@
       }
 
 
-      .core-grid,
+      .concept-flow,
+      .how-grid,
+      .analysis-grid,
       .result-grid {
         grid-template-columns:
           1fr;
       }
 
 
-      .regional-card {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .regional-map-panel {
-        min-height: 520px;
-      }
-
-
-      .areas-grid {
+      .directions-grid {
         grid-template-columns:
           repeat(2, 1fr);
       }
@@ -2110,16 +2210,6 @@
       .publication-preview {
         grid-template-columns:
           1fr;
-      }
-
-
-      .methodology-cta {
-
-        flex-direction: column;
-
-        align-items:
-          flex-start;
-
       }
 
 
@@ -2198,8 +2288,7 @@
 
 
       .stats-grid,
-      .areas-grid,
-      .map-legend {
+      .directions-grid {
         grid-template-columns:
           1fr;
       }
@@ -2220,19 +2309,14 @@
       }
 
 
-      .regional-copy,
-      .regional-map-panel {
-        padding: 30px;
+      .analysis-visual {
+        min-height: 235px;
       }
 
 
-      .map-panel-header {
-        flex-direction: column;
-      }
-
-
-      .map-panel-header small {
-        text-align: left;
+      .sector-grid-mini {
+        grid-template-columns:
+          repeat(4, 1fr);
       }
 
 
@@ -2303,29 +2387,49 @@
         Начало
       </a>
 
+
       <a href="about.html">
         За проекта
       </a>
+
 
       <a href="methodology.html">
         Методология
       </a>
 
+
       <a href="data-indices.html">
         Данни и индекси
       </a>
 
-      <a href="regions.html">
-        Региони
-      </a>
 
-      <a href="areas.html">
-        Области
-      </a>
+      <div class="nav-dropdown">
+
+        <button type="button">
+          Анализи
+          <span class="dropdown-arrow">▼</span>
+        </button>
+
+
+        <div class="dropdown-menu">
+
+          <a href="regions.html">
+            Регионален анализ
+          </a>
+
+          <a href="areas.html">
+            Секторен анализ
+          </a>
+
+        </div>
+
+      </div>
+
 
       <a href="results.html">
         Резултати
       </a>
+
 
       <a href="publications.html">
         Публикации
@@ -2355,14 +2459,47 @@
     id="mobileMenu"
   >
 
-    <a href="index.html">Начало</a>
-    <a href="about.html">За проекта</a>
-    <a href="methodology.html">Методология</a>
-    <a href="data-indices.html">Данни и индекси</a>
-    <a href="regions.html">Региони</a>
-    <a href="areas.html">Области</a>
-    <a href="results.html">Резултати</a>
-    <a href="publications.html">Публикации</a>
+    <a href="index.html">
+      Начало
+    </a>
+
+    <a href="about.html">
+      За проекта
+    </a>
+
+    <a href="methodology.html">
+      Методология
+    </a>
+
+    <a href="data-indices.html">
+      Данни и индекси
+    </a>
+
+    <div class="mobile-group-label">
+      Анализи
+    </div>
+
+    <a
+      class="mobile-sub"
+      href="regions.html"
+    >
+      Регионален анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="areas.html"
+    >
+      Секторен анализ
+    </a>
+
+    <a href="results.html">
+      Резултати
+    </a>
+
+    <a href="publications.html">
+      Публикации
+    </a>
 
   </div>
 
@@ -2382,7 +2519,7 @@
   <div class="container hero-inner">
 
 
-    <div class="hero-copy">
+    <div>
 
 
       <div class="institution-line">
@@ -2413,13 +2550,15 @@
 
       <p class="hero-description">
 
-        Проектът, <strong>финансиран от Университета
-        за национално и световно стопанство</strong>,
-        разработва и прилага многостепенна методологическа
-        рамка за оценка на дигиталната конкурентоспособност
-        на България – от националната и институционалната
-        среда, през регионалните различия и ключовите
-        обществени сектори, до организациите и бизнеса.
+        Проектът,
+        <strong>
+          финансиран от Университета
+          за национално и световно стопанство
+        </strong>,
+        изследва способността на социално-икономическата
+        система да преобразува цифровите ресурси,
+        човешкия капитал и организационния капацитет
+        в устойчиви икономически и обществени резултати.
 
       </p>
 
@@ -2461,7 +2600,7 @@
 
 
       <div class="logic-overline">
-        Аналитична логика на проекта
+        Аналитична архитектура
       </div>
 
 
@@ -2508,8 +2647,8 @@
             </h3>
 
             <p>
-              различия, готовност
-              и териториални профили
+              териториални различия
+              и регионални профили
             </p>
 
           </div>
@@ -2530,8 +2669,8 @@
             </h3>
 
             <p>
-              образование, здравеопазване,
-              бизнес, публичен и граждански сектор
+              секторни системи
+              и икономически дейности
             </p>
 
           </div>
@@ -2552,8 +2691,8 @@
             </h3>
 
             <p>
-              данни, инвестиции,
-              управление и иновации
+              технологии, хора,
+              процеси и резултати
             </p>
 
           </div>
@@ -2572,7 +2711,7 @@
 
 
 <!-- =========================================================
-     EMPIRICAL BASE
+     PROJECT IN NUMBERS
 ========================================================= -->
 
 
@@ -2602,8 +2741,8 @@
       </strong>
 
       <span>
-        респонденти в сферата
-        на здравеопазването
+        респонденти
+        в сферата на здравеопазването
       </span>
 
     </div>
@@ -2643,7 +2782,7 @@
 
 
 <!-- =========================================================
-     RESEARCH FRAMEWORK
+     WHAT WE STUDY
 ========================================================= -->
 
 
@@ -2653,7 +2792,7 @@
 
 
     <div class="section-label">
-      Изследователска рамка
+      Какво изследваме
     </div>
 
 
@@ -2664,118 +2803,116 @@
 
     <p class="section-description">
 
-      Проектът разглежда дигиталната конкурентоспособност
-      като способност на социално-икономическата система
-      да преобразува цифровата инфраструктура,
-      технологиите, човешкия капитал
-      и организационния капацитет
-      в измерими икономически и обществени резултати.
+      Дигиталната конкурентоспособност
+      се разглежда като системна способност,
+      а не като наличие на отделни технологии.
+      Анализът проследява последователността
+      от наличните цифрови ресурси
+      до реалните социално-икономически резултати.
 
     </p>
 
 
-    <div class="core-grid">
+    <div class="concept-flow">
 
 
-      <article class="core-card">
+      <div class="concept-step">
 
-        <div class="core-number">
-          01 / КОНЦЕПТУАЛИЗИРА
+        <div class="concept-code">
+          01
         </div>
 
         <h3>
-          Какво означава дигитална конкурентоспособност?
+          Цифрови ресурси
         </h3>
 
         <p>
-
-          Разграничават се цифровата готовност,
-          процесът на дигитализация
-          и способността технологиите
-          да създават устойчив конкурентен резултат.
-
+          инфраструктура,
+          технологии,
+          свързаност и данни
         </p>
-
-      </article>
-
-
-      <article class="core-card">
-
-        <div class="core-number">
-          02 / ИЗМЕРВА
-        </div>
-
-        <h3>
-          Как могат да бъдат оценени различните измерения?
-        </h3>
-
-        <p>
-
-          Разработват и прилагат се секторни индекси,
-          системи от показатели,
-          емпирични изследвания
-          и сравнителни аналитични инструменти.
-
-        </p>
-
-      </article>
-
-
-      <article class="core-card">
-
-        <div class="core-number">
-          03 / АНАЛИЗИРА
-        </div>
-
-        <h3>
-          Кои фактори превръщат технологията в резултат?
-        </h3>
-
-        <p>
-
-          Изследват се инфраструктура,
-          човешки капитал,
-          организационна готовност,
-          институционална среда,
-          стратегическо управление и иновации.
-
-        </p>
-
-      </article>
-
-
-    </div>
-
-
-    <div class="methodology-cta">
-
-
-      <div class="methodology-cta-text">
-
-        <strong>
-          Как е изграден изследователският дизайн?
-        </strong>
-
-        <span>
-          Виж многостепенната рамка,
-          източниците на данни,
-          аналитичните методи
-          и принципите за интерпретация.
-        </span>
 
       </div>
 
 
-      <a
-        class="methodology-button"
-        href="methodology.html"
-      >
-        Методология и изследователски дизайн →
-      </a>
+      <div class="concept-step">
+
+        <div class="concept-code">
+          02
+        </div>
+
+        <h3>
+          Дигитални способности
+        </h3>
+
+        <p>
+          умения,
+          организационна готовност
+          и институционален капацитет
+        </p>
+
+      </div>
+
+
+      <div class="concept-step">
+
+        <div class="concept-code">
+          03
+        </div>
+
+        <h3>
+          Ефективно използване
+        </h3>
+
+        <p>
+          интегриране на технологиите
+          в процеси, управление
+          и стратегически решения
+        </p>
+
+      </div>
+
+
+      <div class="concept-step">
+
+        <div class="concept-code">
+          04
+        </div>
+
+        <h3>
+          Резултати
+        </h3>
+
+        <p>
+          ефективност,
+          качество,
+          иновации
+          и адаптивност
+        </p>
+
+      </div>
+
+
+      <div class="concept-step">
+
+        <div class="concept-code">
+          05
+        </div>
+
+        <h3>
+          Дигитална конкурентоспособност
+        </h3>
+
+        <p>
+          устойчива способност
+          за създаване
+          на икономическа и обществена стойност
+        </p>
+
+      </div>
 
 
     </div>
-
 
   </div>
 
@@ -2783,7 +2920,7 @@
 
 
 <!-- =========================================================
-     AREAS
+     RESEARCH DIRECTIONS
 ========================================================= -->
 
 
@@ -2793,35 +2930,32 @@
 
 
     <div class="section-label">
-      Изследователски области
+      Изследователски направления
     </div>
 
 
     <h2 class="section-title">
-      Пет направления на приложение
+      Пет системи в рамките на проекта
     </h2>
 
 
     <p class="section-description">
 
-      Общата рамка се прилага към различни части
-      на социално-икономическата система,
-      като във всяка област се отчита
-      нейната специфична организационна,
-      институционална и технологична среда.
+      Общата концептуална рамка
+      се прилага към пет различни части
+      на социално-икономическата система.
+      Всяко направление използва
+      специфични данни и измерители.
 
     </p>
 
 
-    <div class="areas-grid">
+    <div class="directions-grid">
 
 
-      <a
-        class="area-card"
-        href="areas.html#education"
-      >
+      <article class="direction-card">
 
-        <div class="area-code">
+        <div class="direction-code">
           EDU
         </div>
 
@@ -2833,22 +2967,15 @@
           Инфраструктура,
           дигитално участие,
           компетентности
-          и ограничения.
+          и регионална готовност.
         </p>
 
-        <div class="area-link">
-          Разгледай →
-        </div>
-
-      </a>
+      </article>
 
 
-      <a
-        class="area-card"
-        href="areas.html#health"
-      >
+      <article class="direction-card">
 
-        <div class="area-code">
+        <div class="direction-code">
           HLT
         </div>
 
@@ -2857,25 +2984,18 @@
         </h3>
 
         <p>
-          Технологии,
+          Технологична готовност,
           човешки капитал,
           ефективност
-          и организационна готовност.
+          и организационни различия.
         </p>
 
-        <div class="area-link">
-          Разгледай →
-        </div>
-
-      </a>
+      </article>
 
 
-      <a
-        class="area-card"
-        href="areas.html#business"
-      >
+      <article class="direction-card">
 
-        <div class="area-code">
+        <div class="direction-code">
           BUS
         </div>
 
@@ -2885,24 +3005,16 @@
 
         <p>
           Цифрови инвестиции,
-          данни,
-          иновации
-          и организационна промяна.
+          организационна промяна,
+          иновации и бизнес резултати.
         </p>
 
-        <div class="area-link">
-          Разгледай →
-        </div>
-
-      </a>
+      </article>
 
 
-      <a
-        class="area-card"
-        href="areas.html#government"
-      >
+      <article class="direction-card">
 
-        <div class="area-code">
+        <div class="direction-code">
           GOV
         </div>
 
@@ -2916,19 +3028,12 @@
           и институционална адаптивност.
         </p>
 
-        <div class="area-link">
-          Разгледай →
-        </div>
-
-      </a>
+      </article>
 
 
-      <a
-        class="area-card"
-        href="areas.html#civil"
-      >
+      <article class="direction-card">
 
-        <div class="area-code">
+        <div class="direction-code">
           CIV
         </div>
 
@@ -2943,11 +3048,7 @@
           и организационен капацитет.
         </p>
 
-        <div class="area-link">
-          Разгледай →
-        </div>
-
-      </a>
+      </article>
 
 
     </div>
@@ -2958,425 +3059,475 @@
 
 
 <!-- =========================================================
-     REGIONAL ANALYSIS
+     HOW WE STUDY
 ========================================================= -->
 
 
-<section class="regional-section">
+<section class="standard-section">
 
-  <div class="container regional-card">
-
-
-    <div class="regional-copy">
+  <div class="container">
 
 
-      <div class="section-label">
-        Териториално измерение
-      </div>
-
-
-      <h2>
-        Различни условия,
-        различни проявления
-      </h2>
-
-
-      <p>
-
-        В отделните секторни изследвания
-        регионалният фактор има различна тежест.
-        Затова териториалният анализ се разглежда
-        във връзка със спецификата
-        на съответната система,
-        а не чрез един универсален
-        регионален рейтинг.
-
-      </p>
-
-
-      <a
-        class="regional-link"
-        href="regions.html"
-      >
-        Разгледай регионалния анализ →
-      </a>
-
+    <div class="section-label">
+      Как изследваме
     </div>
 
 
-    <div class="regional-map-panel">
+    <h2 class="section-title">
+      Методология и измервателна инфраструктура
+    </h2>
 
 
-      <div class="map-panel-header">
+    <p class="section-description">
 
-        <span>
-          6 района за планиране
-        </span>
+      Изследователският дизайн
+      и конкретните данни са представени отделно,
+      за да се разграничат аналитичната процедура
+      от използваните измерители и емпирични бази.
 
-        <small>
-          Схематично представяне
-          на териториалното измерение
-          на анализа
-        </small>
-
-      </div>
+    </p>
 
 
-      <svg
-        class="bulgaria-map"
-        viewBox="0 0 820 400"
-        role="img"
-        aria-label="Схематична карта на България с шестте района за планиране"
-      >
+    <div class="how-grid">
 
-        <defs>
 
-          <clipPath id="bgClip">
+      <article class="how-card">
+
+        <div class="how-label">
+          Методология
+        </div>
+
+
+        <h3>
+          Как е организирано изследването?
+        </h3>
+
+
+        <p>
+
+          Многостепенен изследователски дизайн,
+          съчетаващ количествени и качествени методи,
+          секторно адаптирани аналитични процедури
+          и ясни правила за интерпретация.
+
+        </p>
+
+
+        <div class="how-tags">
+
+          <span class="how-tag">
+            анкети
+          </span>
+
+          <span class="how-tag">
+            регресионен анализ
+          </span>
+
+          <span class="how-tag">
+            корелации
+          </span>
+
+          <span class="how-tag">
+            тестове за различия
+          </span>
+
+          <span class="how-tag">
+            факторен анализ
+          </span>
+
+        </div>
+
+
+        <a
+          class="how-link"
+          href="methodology.html"
+        >
+          Методология и изследователски дизайн →
+        </a>
+
+      </article>
+
+
+      <article class="how-card">
+
+        <div class="how-label">
+          Данни и индекси
+        </div>
+
+
+        <h3>
+          С какво измерваме?
+        </h3>
+
+
+        <p>
+
+          Първични емпирични масиви,
+          официални статистически данни,
+          секторни системи от показатели
+          и композитни измерители
+          за различните направления на проекта.
+
+        </p>
+
+
+        <div class="how-tags">
+
+          <span class="how-tag">
+            RDRI
+          </span>
+
+          <span class="how-tag">
+            DRI-H
+          </span>
+
+          <span class="how-tag">
+            BDM-DII
+          </span>
+
+          <span class="how-tag">
+            ODCR
+          </span>
+
+          <span class="how-tag">
+            DVEI
+          </span>
+
+        </div>
+
+
+        <a
+          class="how-link"
+          href="data-indices.html"
+        >
+          Данни и индекси →
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ANALYSES
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Аналитични измерения
+    </div>
+
+
+    <h2 class="section-title">
+      Териториален и секторен поглед
+    </h2>
+
+
+    <p class="section-description">
+
+      Проектът разглежда цифровата трансформация
+      през две допълващи се перспективи:
+      териториалните различия
+      и структурата на икономическите дейности.
+      Те не представляват един общ рейтинг,
+      а различни аналитични разрези.
+
+    </p>
+
+
+    <div class="analysis-grid">
+
+
+      <!-- REGIONS -->
+
+      <article class="analysis-card">
+
+
+        <div class="analysis-visual">
+
+          <div class="analysis-visual-label">
+            Регионален анализ
+          </div>
+
+
+          <svg
+            class="mini-map"
+            viewBox="0 0 760 280"
+            role="img"
+            aria-label="Схематична карта на България"
+          >
 
             <path
+              class="mini-map-outline"
               d="
-                M75,118
-                L118,91
-                L171,88
-                L212,69
-                L272,74
-                L321,64
-                L373,78
-                L426,73
-                L477,86
-                L529,82
-                L574,101
-                L622,112
-                L661,134
-                L706,151
-                L742,177
-                L756,203
-                L747,229
-                L718,245
-                L677,248
-                L649,270
-                L600,275
-                L565,293
-                L516,286
-                L468,302
-                L416,293
-                L362,303
-                L315,291
-                L270,295
-                L226,276
-                L180,269
-                L147,246
-                L112,239
-                L91,214
-                L68,197
-                L73,171
-                L59,145
+                M62,99
+                L104,78
+                L152,74
+                L195,59
+                L244,64
+                L294,55
+                L343,68
+                L392,63
+                L438,75
+                L487,72
+                L529,88
+                L571,98
+                L611,116
+                L653,133
+                L687,154
+                L700,177
+                L691,198
+                L663,210
+                L625,212
+                L599,231
+                L554,234
+                L522,249
+                L477,244
+                L432,258
+                L384,250
+                L334,258
+                L291,248
+                L250,251
+                L210,235
+                L168,229
+                L137,210
+                L105,204
+                L84,184
+                L63,171
+                L67,148
+                L53,125
                 Z
               "
             />
 
-          </clipPath>
 
-        </defs>
+            <path
+              class="mini-region-line"
+              d="M238,65 L254,155 L211,198"
+            />
 
+            <path
+              class="mini-region-line"
+              d="M438,75 L458,155 L407,200"
+            />
 
-        <g clip-path="url(#bgClip)">
+            <path
+              class="mini-region-line"
+              d="M68,174 L694,177"
+            />
 
+            <path
+              class="mini-region-line"
+              d="M250,173 L330,255"
+            />
 
-          <path
-            class="map-region"
-            data-region="nw"
-            d="
-              M45,55
-              L260,55
-              L282,170
-              L230,213
-              L80,215
-              L45,180
-              Z
-            "
-          />
-
-
-          <path
-            class="map-region"
-            data-region="nc"
-            d="
-              M250,45
-              L475,45
-              L505,165
-              L420,215
-              L280,175
-              Z
-            "
-          />
+            <path
+              class="mini-region-line"
+              d="M455,177 L533,244"
+            />
 
 
-          <path
-            class="map-region"
-            data-region="ne"
-            d="
-              M465,45
-              L805,55
-              L805,205
-              L690,220
-              L585,185
-              L500,166
-              Z
-            "
-          />
+            <text x="150" y="132">
+              СЗР
+            </text>
 
+            <text x="349" y="123">
+              СЦР
+            </text>
 
-          <path
-            class="map-region"
-            data-region="sw"
-            d="
-              M45,202
-              L235,200
-              L355,300
-              L325,390
-              L45,390
-              Z
-            "
-          />
+            <text x="564" y="138">
+              СИР
+            </text>
 
+            <text x="192" y="207">
+              ЮЗР
+            </text>
 
-          <path
-            class="map-region"
-            data-region="sc"
-            d="
-              M225,198
-              L425,205
-              L595,285
-              L570,390
-              L330,390
-              L350,298
-              Z
-            "
-          />
+            <text x="390" y="223">
+              ЮЦР
+            </text>
 
+            <text x="588" y="205">
+              ЮИР
+            </text>
 
-          <path
-            class="map-region"
-            data-region="se"
-            d="
-              M420,198
-              L805,195
-              L805,390
-              L565,390
-              L590,286
-              Z
-            "
-          />
+          </svg>
 
-
-        </g>
-
-
-        <path
-          class="map-outline"
-          d="
-            M75,118
-            L118,91
-            L171,88
-            L212,69
-            L272,74
-            L321,64
-            L373,78
-            L426,73
-            L477,86
-            L529,82
-            L574,101
-            L622,112
-            L661,134
-            L706,151
-            L742,177
-            L756,203
-            L747,229
-            L718,245
-            L677,248
-            L649,270
-            L600,275
-            L565,293
-            L516,286
-            L468,302
-            L416,293
-            L362,303
-            L315,291
-            L270,295
-            L226,276
-            L180,269
-            L147,246
-            L112,239
-            L91,214
-            L68,197
-            L73,171
-            L59,145
-            Z
-          "
-        />
-
-
-        <text
-          class="map-label"
-          x="177"
-          y="145"
-        >
-          СЗР
-        </text>
-
-        <text
-          class="map-sublabel"
-          x="177"
-          y="161"
-        >
-          Северозападен
-        </text>
-
-
-        <text
-          class="map-label"
-          x="378"
-          y="131"
-        >
-          СЦР
-        </text>
-
-        <text
-          class="map-sublabel"
-          x="378"
-          y="147"
-        >
-          Северен централен
-        </text>
-
-
-        <text
-          class="map-label"
-          x="613"
-          y="154"
-        >
-          СИР
-        </text>
-
-        <text
-          class="map-sublabel"
-          x="613"
-          y="170"
-        >
-          Североизточен
-        </text>
-
-
-        <text
-          class="map-label"
-          x="225"
-          y="250"
-        >
-          ЮЗР
-        </text>
-
-        <text
-          class="map-sublabel"
-          x="225"
-          y="266"
-        >
-          Югозападен
-        </text>
-
-
-        <text
-          class="map-label"
-          x="431"
-          y="263"
-        >
-          ЮЦР
-        </text>
-
-        <text
-          class="map-sublabel"
-          x="431"
-          y="279"
-        >
-          Южен централен
-        </text>
-
-
-        <text
-          class="map-label"
-          x="633"
-          y="244"
-        >
-          ЮИР
-        </text>
-
-        <text
-          class="map-sublabel"
-          x="633"
-          y="260"
-        >
-          Югоизточен
-        </text>
-
-
-      </svg>
-
-
-      <div class="map-legend">
-
-
-        <div class="legend-item">
-          <strong>СЗР</strong>
-          Северозападен
         </div>
 
 
-        <div class="legend-item">
-          <strong>СЦР</strong>
-          Северен централен
+        <div class="analysis-content">
+
+          <h3>
+            Региони
+          </h3>
+
+
+          <p>
+
+            Териториалният анализ проследява
+            регионалните различия в конкретните
+            секторни изследвания.
+            RDRI например измерва
+            регионалната дигитална готовност
+            в образователната система,
+            а не общата конкурентоспособност
+            на районите.
+
+          </p>
+
+
+          <div class="analysis-meta">
+
+            <span>
+              6 района
+            </span>
+
+            <span>
+              образование
+            </span>
+
+            <span>
+              здравеопазване
+            </span>
+
+          </div>
+
+
+          <a
+            class="analysis-link"
+            href="regions.html"
+          >
+            Разгледай регионалния анализ →
+          </a>
+
         </div>
 
 
-        <div class="legend-item">
-          <strong>СИР</strong>
-          Североизточен
+      </article>
+
+
+      <!-- SECTORS -->
+
+      <article class="analysis-card">
+
+
+        <div class="analysis-visual">
+
+          <div class="analysis-visual-label">
+            Секторен анализ
+          </div>
+
+
+          <div class="sector-visual-inner">
+
+
+            <div class="sector-big">
+
+              <strong>
+                A*21
+              </strong>
+
+              <span>
+                икономически дейности
+              </span>
+
+            </div>
+
+
+            <div class="sector-grid-mini">
+
+              <div class="sector-cell">A</div>
+              <div class="sector-cell">B</div>
+              <div class="sector-cell">C</div>
+              <div class="sector-cell">D</div>
+              <div class="sector-cell">E</div>
+              <div class="sector-cell">F</div>
+              <div class="sector-cell">G</div>
+
+              <div class="sector-cell">H</div>
+              <div class="sector-cell">I</div>
+              <div class="sector-cell highlight">J</div>
+              <div class="sector-cell">K</div>
+              <div class="sector-cell">L</div>
+              <div class="sector-cell highlight">M</div>
+              <div class="sector-cell">N</div>
+
+              <div class="sector-cell">O</div>
+              <div class="sector-cell">P</div>
+              <div class="sector-cell">Q</div>
+              <div class="sector-cell">R</div>
+              <div class="sector-cell">S</div>
+              <div class="sector-cell">T</div>
+              <div class="sector-cell">U</div>
+
+            </div>
+
+          </div>
+
         </div>
 
 
-        <div class="legend-item">
-          <strong>ЮЗР</strong>
-          Югозападен
+        <div class="analysis-content">
+
+          <h3>
+            Сектори
+          </h3>
+
+
+          <p>
+
+            Секторният анализ използва
+            официални показатели за 21 икономически
+            дейности по A*21 и проследява
+            технологични, инвестиционни,
+            трудови и организационни характеристики
+            за периода 2020–2025.
+
+          </p>
+
+
+          <div class="analysis-meta">
+
+            <span>
+              21 сектора
+            </span>
+
+            <span>
+              29 показателя
+            </span>
+
+            <span>
+              2020–2025
+            </span>
+
+          </div>
+
+
+          <a
+            class="analysis-link"
+            href="areas.html"
+          >
+            Разгледай секторния анализ →
+          </a>
+
         </div>
 
 
-        <div class="legend-item">
-          <strong>ЮЦР</strong>
-          Южен централен
-        </div>
-
-
-        <div class="legend-item">
-          <strong>ЮИР</strong>
-          Югоизточен
-        </div>
-
-
-      </div>
-
-
-      <div class="map-note">
-
-        Картата е схематична
-        и служи за визуализиране
-        на териториалната структура на анализа.
-        Цветовете не представят класация
-        или стойност на общ регионален индекс.
-
-      </div>
+      </article>
 
 
     </div>
-
 
   </div>
 
@@ -3388,7 +3539,7 @@
 ========================================================= -->
 
 
-<section class="standard-section section-alt">
+<section class="standard-section">
 
   <div class="container">
 
@@ -3405,13 +3556,12 @@
 
     <p class="section-description">
 
-      Отделните направления разкриват
-      различни проявления на общ проблем:
+      Различните направления водят
+      до общ системен извод:
       цифровите ресурси създават потенциал,
       но конкурентният резултат зависи
-      от способността те да бъдат интегрирани
-      в организационни, институционални
-      и стратегически процеси.
+      от способността те да бъдат преобразувани
+      в организационни и институционални способности.
 
     </p>
 
@@ -3426,16 +3576,16 @@
         </div>
 
         <h3>
-          Технологичното наличие не е достатъчно
+          Дигитализацията не е равнозначна на конкурентоспособност
         </h3>
 
         <p>
 
-          Дигитализацията се превръща
-          в конкурентоспособност,
-          когато технологиите са подкрепени
-          от умения, организация,
-          управление и стратегическа интеграция.
+          Наличието и внедряването
+          на технологии създават предпоставки,
+          но не гарантират автоматично
+          по-добри икономически
+          или организационни резултати.
 
         </p>
 
@@ -3449,15 +3599,16 @@
         </div>
 
         <h3>
-          Различията са контекстуални
+          Човешкият капитал е системен фактор
         </h3>
 
         <p>
 
-          Регионалните и секторните различия
-          не следват един универсален модел.
-          Тяхното значение зависи
-          от спецификата на конкретната система.
+          Уменията, обучението
+          и способността за работа
+          с цифрови инструменти
+          се проявяват като ключово условие
+          в различните изследвани системи.
 
         </p>
 
@@ -3471,16 +3622,16 @@
         </div>
 
         <h3>
-          Човешкият и организационният капацитет са критични
+          Организационният и институционалният капацитет са критични
         </h3>
 
         <p>
 
-          Уменията, обучението,
-          организационната готовност
-          и институционалната координация
-          се проявяват като системни условия
-          за ефективна цифрова трансформация.
+          Стратегическата интеграция,
+          координацията и организационната готовност
+          определят дали технологичната инвестиция
+          ще бъде превърната
+          в измерим резултат.
 
         </p>
 
@@ -3491,7 +3642,7 @@
 
 
     <a
-      class="section-footer-link"
+      class="section-link"
       href="results.html"
     >
       Разгледай всички резултати →
@@ -3508,7 +3659,7 @@
 ========================================================= -->
 
 
-<section class="standard-section">
+<section class="standard-section section-alt">
 
   <div class="container">
 
@@ -3525,11 +3676,12 @@
 
     <p class="section-description">
 
-      Резултатите от проекта са представени
-      в научни статии, доклади и глави,
-      обхващащи концептуални,
-      секторни и стратегически аспекти
-      на дигиталната конкурентоспособност.
+      Концептуалните,
+      методологическите
+      и емпиричните резултати
+      са представени в научни статии,
+      доклади и глави,
+      свързани с отделните направления на проекта.
 
     </p>
 
@@ -3625,7 +3777,7 @@
 
 
     <a
-      class="section-footer-link"
+      class="section-link"
       href="publications.html"
     >
       Всички публикации →
@@ -3638,7 +3790,7 @@
 
 
 <!-- =========================================================
-     DATA CTA
+     FINAL CTA
 ========================================================= -->
 
 
@@ -3650,16 +3802,17 @@
     <div>
 
       <h2>
-        Данни и индекси
+        От данните към резултатите
       </h2>
 
       <p>
 
         Разгледайте емпиричните бази,
-        секторните измерители
-        и показателите,
-        използвани в различните
-        изследователски направления на проекта.
+        секторните индекси
+        и аналитичните резултати,
+        чрез които проектът проследява
+        цифровата трансформация
+        на социално-икономическата система.
 
       </p>
 
@@ -3670,7 +3823,7 @@
       class="btn btn-primary"
       href="data-indices.html"
     >
-      Към данните и индексите →
+      Данни и индекси →
     </a>
 
 
@@ -3737,7 +3890,7 @@
         </a>
 
         <a href="areas.html">
-          Области
+          Сектори
         </a>
 
         <a href="results.html">
@@ -3770,11 +3923,6 @@
 <script>
 
 (function(){
-
-
-  /* =========================================================
-     MOBILE MENU
-  ========================================================= */
 
 
   const mobileToggle =
@@ -3819,58 +3967,6 @@
 
       }
     );
-
-
-  /* =========================================================
-     MAP INTERACTION
-  ========================================================= */
-
-
-  const regions =
-    document.querySelectorAll(
-      ".map-region"
-    );
-
-
-  regions.forEach(
-    function(region){
-
-      region.addEventListener(
-        "mouseenter",
-        function(){
-
-          regions.forEach(
-            function(item){
-
-              item.classList.remove(
-                "active"
-              );
-
-            }
-          );
-
-
-          region.classList.add(
-            "active"
-          );
-
-        }
-      );
-
-
-      region.addEventListener(
-        "mouseleave",
-        function(){
-
-          region.classList.remove(
-            "active"
-          );
-
-        }
-      );
-
-    }
-  );
 
 
 })();
