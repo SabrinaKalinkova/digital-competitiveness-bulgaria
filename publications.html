@@ -488,8 +488,43 @@
     }
 
 
+    .index-summary {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 18px;
+    }
+
+
+    .summary-index-badge {
+      display: inline-flex;
+      align-items: center;
+
+      min-height: 25px;
+
+      padding:
+        0 9px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+      border-radius: 20px;
+
+      background:
+        rgba(255, 255, 255, 0.06);
+
+      color: #d8edf2;
+
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+
     /* =========================================================
-       SECTIONS
+       GENERAL
     ========================================================= */
 
 
@@ -554,7 +589,7 @@
       display: grid;
 
       grid-template-columns:
-        1.35fr 0.8fr 0.85fr;
+        1.35fr 0.75fr 0.85fr 0.8fr;
 
       gap: 12px;
 
@@ -676,7 +711,7 @@
 
       flex-direction: column;
 
-      min-height: 355px;
+      min-height: 390px;
 
       padding: 27px;
 
@@ -713,7 +748,7 @@
 
       gap: 12px;
 
-      margin-bottom: 23px;
+      margin-bottom: 18px;
     }
 
 
@@ -739,6 +774,16 @@
     }
 
 
+    .status-area {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+      gap: 5px;
+    }
+
+
     .pub-status {
       padding:
         5px 9px;
@@ -749,12 +794,67 @@
 
       color: #148076;
 
-      font-size: 9px;
+      font-size: 8px;
       font-weight: 800;
 
       text-transform: uppercase;
 
       letter-spacing: 0.6px;
+    }
+
+
+    /* =========================================================
+       INDEX BADGES
+    ========================================================= */
+
+
+    .index-badge {
+      display: inline-flex;
+      align-items: center;
+
+      min-height: 23px;
+
+      padding:
+        0 8px;
+
+      border-radius: 20px;
+
+      font-size: 8px;
+      font-weight: 800;
+
+      letter-spacing: 0.5px;
+
+      text-transform: uppercase;
+    }
+
+
+    .index-badge.scopus {
+      border:
+        1px solid #d1def2;
+
+      background: #eef4fb;
+
+      color: #2457c5;
+    }
+
+
+    .index-badge.wos {
+      border:
+        1px solid #cce8e2;
+
+      background: #edf9f6;
+
+      color: #147d75;
+    }
+
+
+    .index-badge.quartile {
+      border:
+        1px solid #e2dce9;
+
+      background: #f7f3f9;
+
+      color: #67577b;
     }
 
 
@@ -791,7 +891,18 @@
 
       line-height: 1.5;
 
-      margin-bottom: 10px;
+      margin-bottom: 9px;
+    }
+
+
+    .pub-venue {
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.55;
+
+      margin-bottom: 9px;
     }
 
 
@@ -804,6 +915,38 @@
         break-word;
 
       margin-top: 5px;
+    }
+
+
+    .index-info {
+      margin-top: 13px;
+
+      padding-top: 11px;
+
+      border-top:
+        1px solid #edf2f5;
+    }
+
+
+    .index-info-label {
+      color: #93a3af;
+
+      font-size: 8px;
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.8px;
+
+      margin-bottom: 6px;
+    }
+
+
+    .index-info-badges {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 5px;
     }
 
 
@@ -1041,6 +1184,7 @@
 
     .forthcoming-card:hover {
       border-color: #bcdde3;
+
       background: white;
     }
 
@@ -1312,23 +1456,16 @@
           repeat(3, 1fr);
       }
 
+
+      .filters {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
     }
 
 
     @media (max-width: 900px) {
-
-      .filters {
-        grid-template-columns:
-          1fr 1fr;
-      }
-
-
-      .filters
-      .filter-control:first-child {
-        grid-column:
-          1 / -1;
-      }
-
 
       .forthcoming-header {
         grid-template-columns:
@@ -1381,12 +1518,6 @@
       }
 
 
-      .filters
-      .filter-control:first-child {
-        grid-column: auto;
-      }
-
-
       .forthcoming-card {
         grid-template-columns:
           48px 1fr;
@@ -1394,8 +1525,7 @@
 
 
       .forthcoming-status {
-        grid-column:
-          2;
+        grid-column: 2;
 
         width:
           fit-content;
@@ -1588,7 +1718,7 @@
       <div class="summary-total">
 
         <strong id="publishedTotal">
-          12
+          13
         </strong>
 
         <span>
@@ -1632,7 +1762,7 @@
         <div class="year-item">
 
           <strong id="count2026">
-            1
+            2
           </strong>
 
           <span>
@@ -1640,6 +1770,19 @@
           </span>
 
         </div>
+
+      </div>
+
+
+      <div class="index-summary">
+
+        <span class="summary-index-badge">
+          2 Scopus
+        </span>
+
+        <span class="summary-index-badge">
+          1 Web of Science
+        </span>
 
       </div>
 
@@ -1744,6 +1887,10 @@
             Конкурентоспособност
           </option>
 
+          <option value="macro">
+            Макроикономика
+          </option>
+
           <option value="government">
             Публично управление
           </option>
@@ -1773,6 +1920,31 @@
       </div>
 
 
+      <div class="filter-control">
+
+        <label for="indexFilter">
+          Индексиране
+        </label>
+
+        <select id="indexFilter">
+
+          <option value="all">
+            Всички публикации
+          </option>
+
+          <option value="scopus">
+            Scopus
+          </option>
+
+          <option value="wos">
+            Web of Science
+          </option>
+
+        </select>
+
+      </div>
+
+
     </div>
 
 
@@ -1782,7 +1954,7 @@
 
         Показани:
         <strong id="resultCount">
-          12
+          13
         </strong>
         публикации
 
@@ -2020,10 +2192,9 @@
 
       Предстоящите публикации са представени
       отделно от вече публикуваните разработки
-      и не са включени в основния брояч
-      на публикационните резултати.
-      Библиографските данни ще бъдат допълвани
-      след официалното им публикуване.
+      и не са включени в основния брояч.
+      Информация за DOI, издание и индексиране
+      ще бъде добавяна след официалното им публикуване.
 
     </div>
 
@@ -2108,33 +2279,13 @@
 
       <div class="footer-links">
 
-        <a href="index.html">
-          Начало
-        </a>
-
-        <a href="about.html">
-          За проекта
-        </a>
-
-        <a href="data-indices.html">
-          Данни и индекси
-        </a>
-
-        <a href="regions.html">
-          Региони
-        </a>
-
-        <a href="areas.html">
-          Области
-        </a>
-
-        <a href="results.html">
-          Резултати
-        </a>
-
-        <a href="publications.html">
-          Публикации
-        </a>
+        <a href="index.html">Начало</a>
+        <a href="about.html">За проекта</a>
+        <a href="data-indices.html">Данни и индекси</a>
+        <a href="regions.html">Региони</a>
+        <a href="areas.html">Области</a>
+        <a href="results.html">Резултати</a>
+        <a href="publications.html">Публикации</a>
 
       </div>
 
@@ -2212,11 +2363,18 @@
       authors:
         "Sabrina Kalinkova",
 
+      venue:
+        "8th FEB International Scientific Conference",
+
       doi:
         "10.18690/um.epf.5.2024.35",
 
       url:
-        "https://doi.org/10.18690/um.epf.5.2024.35"
+        "https://doi.org/10.18690/um.epf.5.2024.35",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2234,9 +2392,15 @@
       authors:
         "Sabrina Kalinkova",
 
-      doi: "",
+      venue:
+        "Management and Education, 20(2), 2024",
 
-      url: ""
+      doi: "",
+      url: "",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2254,9 +2418,15 @@
       authors:
         "Violeta Toncheva-Zlatkova",
 
-      doi: "",
+      venue:
+        "Management and Education, 20(4), 2024",
 
-      url: ""
+      doi: "",
+      url: "",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2274,9 +2444,15 @@
       authors:
         "Sabrina Kalinkova",
 
-      doi: "",
+      venue:
+        "",
 
-      url: ""
+      doi: "",
+      url: "",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2294,9 +2470,15 @@
       authors:
         "Violeta Toncheva-Zlatkova",
 
-      doi: "",
+      venue:
+        "",
 
-      url: ""
+      doi: "",
+      url: "",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2314,9 +2496,15 @@
       authors:
         "Sabrina Kalinkova",
 
-      doi: "",
+      venue:
+        "",
 
-      url: ""
+      doi: "",
+      url: "",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2334,11 +2522,18 @@
       authors:
         "Christo Ivanov",
 
+      venue:
+        "LIMEN 2024 Conference Proceedings",
+
       doi:
         "10.31410/LIMEN.2024.457",
 
       url:
-        "https://doi.org/10.31410/LIMEN.2024.457"
+        "https://doi.org/10.31410/LIMEN.2024.457",
+
+      scopus: true,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2356,11 +2551,18 @@
       authors:
         "Sabrina Kalinkova",
 
+      venue:
+        "Istoriya-History, Vol. 33, No. 6s, 2025",
+
       doi:
         "10.53656/his2025-6s-7-fro",
 
       url:
-        "https://doi.org/10.53656/his2025-6s-7-fro"
+        "https://doi.org/10.53656/his2025-6s-7-fro",
+
+      scopus: false,
+      wos: true,
+      quartile: "Q3"
     },
 
 
@@ -2378,11 +2580,18 @@
       authors:
         "Sabrina Kalinkova; Christo Ivanov",
 
+      venue:
+        "ERAZ 2025 Conference Proceedings",
+
       doi:
         "10.31410/ERAZ.2025.229",
 
       url:
-        "https://doi.org/10.31410/ERAZ.2025.229"
+        "https://doi.org/10.31410/ERAZ.2025.229",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2400,11 +2609,18 @@
       authors:
         "Sabrina Kalinkova",
 
+      venue:
+        "ERAZ 2025 Conference Proceedings",
+
       doi:
         "10.31410/ERAZ.2025.417",
 
       url:
-        "https://doi.org/10.31410/ERAZ.2025.417"
+        "https://doi.org/10.31410/ERAZ.2025.417",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2422,11 +2638,18 @@
       authors:
         "Ivan Valchanov",
 
+      venue:
+        "Икономически и социални алтернативи, 31(4), 2025",
+
       doi:
         "10.37075/ISA.2025.4.08",
 
       url:
-        "https://doi.org/10.37075/ISA.2025.4.08"
+        "https://doi.org/10.37075/ISA.2025.4.08",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
     },
 
 
@@ -2444,9 +2667,44 @@
       authors:
         "Sabrina Kalinkova",
 
-      doi: "",
+      venue:
+        "",
 
-      url: ""
+      doi: "",
+      url: "",
+
+      scopus: false,
+      wos: false,
+      quartile: ""
+    },
+
+
+    {
+      year: 2026,
+
+      theme: "macro",
+
+      themeLabel:
+        "Макроикономика и европейска интеграция",
+
+      title:
+        "From Currency Board Arrangement to Euro Area: Structural Risks and Opportunities",
+
+      authors:
+        "Sabrina Kalinkova",
+
+      venue:
+        "Economic Studies, 35(3), 66–89",
+
+      doi:
+        "10.56497/esj260304",
+
+      url:
+        "https://doi.org/10.56497/esj260304",
+
+      scopus: true,
+      wos: false,
+      quartile: "Q4"
     }
 
 
@@ -2598,6 +2856,12 @@
     );
 
 
+  const indexFilter =
+    document.getElementById(
+      "indexFilter"
+    );
+
+
   const resultCount =
     document.getElementById(
       "resultCount"
@@ -2658,6 +2922,55 @@
 
 
   /* =========================================================
+     INDEX BADGES
+  ========================================================= */
+
+
+  function indexBadges(pub){
+
+
+    let badges = "";
+
+
+    if(pub.scopus){
+
+      badges += `
+        <span class="index-badge scopus">
+          Scopus
+        </span>
+      `;
+
+    }
+
+
+    if(pub.wos){
+
+      badges += `
+        <span class="index-badge wos">
+          Web of Science
+        </span>
+      `;
+
+    }
+
+
+    if(pub.quartile){
+
+      badges += `
+        <span class="index-badge quartile">
+          ${pub.quartile}
+        </span>
+      `;
+
+    }
+
+
+    return badges;
+
+  }
+
+
+  /* =========================================================
      PUBLISHED CARD
   ========================================================= */
 
@@ -2670,6 +2983,38 @@
       ? `
         <div class="pub-doi">
           DOI: ${pub.doi}
+        </div>
+      `
+      : "";
+
+
+    const venueBlock =
+      pub.venue
+      ? `
+        <div class="pub-venue">
+          ${pub.venue}
+        </div>
+      `
+      : "";
+
+
+    const badges =
+      indexBadges(pub);
+
+
+    const indexBlock =
+      badges
+      ? `
+        <div class="index-info">
+
+          <div class="index-info-label">
+            Индексиране
+          </div>
+
+          <div class="index-info-badges">
+            ${badges}
+          </div>
+
         </div>
       `
       : "";
@@ -2705,8 +3050,13 @@
             ${pub.year}
           </div>
 
-          <div class="pub-status">
-            Published
+
+          <div class="status-area">
+
+            <span class="pub-status">
+              Published
+            </span>
+
           </div>
 
         </div>
@@ -2727,7 +3077,11 @@
         </div>
 
 
+        ${venueBlock}
+
         ${doiBlock}
+
+        ${indexBlock}
 
 
         <div class="pub-bottom">
@@ -2766,6 +3120,10 @@
       themeFilter.value;
 
 
+    const selectedIndex =
+      indexFilter.value;
+
+
     const filtered =
       publications.filter(
         function(pub){
@@ -2778,6 +3136,8 @@
               pub.authors +
               " " +
               pub.themeLabel +
+              " " +
+              pub.venue +
               " " +
               pub.doi
             )
@@ -2801,10 +3161,34 @@
             selectedTheme;
 
 
+          let matchesIndex = true;
+
+
+          if(
+            selectedIndex === "scopus"
+          ){
+
+            matchesIndex =
+              pub.scopus === true;
+
+          }
+
+
+          if(
+            selectedIndex === "wos"
+          ){
+
+            matchesIndex =
+              pub.wos === true;
+
+          }
+
+
           return (
             matchesSearch &&
             matchesYear &&
-            matchesTheme
+            matchesTheme &&
+            matchesIndex
           );
 
         }
@@ -2912,6 +3296,12 @@
   );
 
 
+  indexFilter.addEventListener(
+    "change",
+    renderPublications
+  );
+
+
   resetFilters.addEventListener(
     "click",
     function(){
@@ -2922,6 +3312,9 @@
         "all";
 
       themeFilter.value =
+        "all";
+
+      indexFilter.value =
         "all";
 
       renderPublications();
