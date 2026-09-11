@@ -24,6 +24,7 @@
     :root {
       --navy: #102b4c;
       --navy-dark: #081f38;
+
       --blue: #2457c5;
       --cyan: #28a9c7;
       --turquoise: #01c9bc;
@@ -65,6 +66,7 @@
 
       color: var(--text);
       background: var(--white);
+
       line-height: 1.6;
     }
 
@@ -94,14 +96,17 @@
 
 
     header {
-      background: rgba(255, 255, 255, 0.97);
-      border-bottom: 1px solid var(--border);
-
       position: sticky;
       top: 0;
       z-index: 1000;
 
-      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.97);
+
+      border-bottom:
+        1px solid var(--border);
+
+      backdrop-filter:
+        blur(12px);
     }
 
 
@@ -119,6 +124,7 @@
     .brand {
       display: flex;
       align-items: center;
+
       gap: 13px;
 
       flex-shrink: 0;
@@ -128,6 +134,7 @@
     .logo-mark {
       display: flex;
       align-items: flex-end;
+
       gap: 4px;
 
       height: 42px;
@@ -136,9 +143,11 @@
 
     .logo-mark span {
       display: block;
+
       width: 9px;
 
-      border-radius: 3px 3px 0 0;
+      border-radius:
+        3px 3px 0 0;
     }
 
 
@@ -205,12 +214,14 @@
 
 
     .desktop-nav a {
-      padding: 31px 0 25px;
+      padding:
+        31px 0 25px;
 
       border-bottom:
         3px solid transparent;
 
-      transition: 0.2s ease;
+      transition:
+        0.2s ease;
     }
 
 
@@ -239,7 +250,9 @@
       width: 42px;
       height: 42px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
+
       border-radius: 8px;
 
       background: white;
@@ -394,13 +407,13 @@
 
 
     .publication-summary {
+      padding: 28px;
+
       border:
         1px solid
         rgba(255, 255, 255, 0.15);
 
       border-radius: 20px;
-
-      padding: 28px;
 
       background:
         rgba(255, 255, 255, 0.045);
@@ -408,6 +421,8 @@
 
 
     .summary-label {
+      margin-bottom: 17px;
+
       color: #8ce7ed;
 
       font-size: 10px;
@@ -416,8 +431,6 @@
       text-transform: uppercase;
 
       letter-spacing: 1.5px;
-
-      margin-bottom: 17px;
     }
 
 
@@ -461,14 +474,15 @@
 
 
     .year-item {
-      text-align: center;
-
-      padding: 12px 8px;
+      padding:
+        12px 8px;
 
       border-radius: 9px;
 
       background:
         rgba(255, 255, 255, 0.05);
+
+      text-align: center;
     }
 
 
@@ -535,7 +549,8 @@
 
 
     .section-alt {
-      background: var(--background);
+      background:
+        var(--background);
     }
 
 
@@ -600,6 +615,8 @@
     .filter-control label {
       display: block;
 
+      margin-bottom: 6px;
+
       color: #8295a4;
 
       font-size: 9px;
@@ -608,8 +625,6 @@
       text-transform: uppercase;
 
       letter-spacing: 1px;
-
-      margin-bottom: 6px;
     }
 
 
@@ -618,15 +633,15 @@
       width: 100%;
       min-height: 46px;
 
+      padding:
+        0 13px;
+
       border:
         1px solid #cfdee6;
 
       border-radius: 10px;
 
       background: white;
-
-      padding:
-        0 13px;
 
       color: var(--navy);
 
@@ -638,7 +653,8 @@
 
     .filter-control input:focus,
     .filter-control select:focus {
-      border-color: var(--cyan);
+      border-color:
+        var(--cyan);
 
       box-shadow:
         0 0 0 3px
@@ -687,12 +703,13 @@
 
 
     .reset-button:hover {
-      text-decoration: underline;
+      text-decoration:
+        underline;
     }
 
 
     /* =========================================================
-       PUBLICATION CARDS
+       PUBLICATION GRID
     ========================================================= */
 
 
@@ -702,35 +719,40 @@
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 17px;
+      gap: 18px;
     }
 
 
     .publication-card {
-      display: flex;
+      position: relative;
 
+      display: flex;
       flex-direction: column;
 
-      min-height: 390px;
+      min-height: 525px;
 
       padding: 27px;
 
       border:
         1px solid var(--border);
 
-      border-radius: 16px;
+      border-radius: 17px;
 
       background: white;
 
       transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
     }
 
 
     .publication-card:hover {
       transform:
         translateY(-3px);
+
+      border-color:
+        #cadde6;
 
       box-shadow:
         var(--shadow);
@@ -748,16 +770,15 @@
 
       gap: 12px;
 
-      margin-bottom: 18px;
+      margin-bottom: 19px;
     }
 
 
     .pub-year {
-      min-width: 49px;
-      height: 49px;
+      min-width: 50px;
+      height: 50px;
 
       display: grid;
-
       place-items: center;
 
       padding:
@@ -765,22 +786,13 @@
 
       border-radius: 11px;
 
-      background: #ebf6f9;
+      background:
+        #ebf6f9;
 
       color: var(--blue);
 
       font-size: 11px;
       font-weight: 800;
-    }
-
-
-    .status-area {
-      display: flex;
-      flex-wrap: wrap;
-
-      justify-content: flex-end;
-
-      gap: 5px;
     }
 
 
@@ -790,7 +802,8 @@
 
       border-radius: 20px;
 
-      background: #e8f8f5;
+      background:
+        #e8f8f5;
 
       color: #148076;
 
@@ -803,9 +816,163 @@
     }
 
 
+    .pub-theme {
+      margin-bottom: 11px;
+
+      color: var(--cyan);
+
+      font-size: 9px;
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.1px;
+    }
+
+
+    .publication-card h3 {
+      color: var(--navy);
+
+      font-size: 17px;
+
+      line-height: 1.38;
+
+      margin-bottom: 13px;
+    }
+
+
+    .pub-authors {
+      margin-bottom: 8px;
+
+      color: var(--blue);
+
+      font-size: 12px;
+      font-weight: 700;
+
+      line-height: 1.5;
+    }
+
+
+    .pub-venue {
+      margin-bottom: 8px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.5;
+    }
+
+
+    .pub-doi {
+      margin-top: 3px;
+
+      color: #7d909f;
+
+      font-size: 10px;
+
+      line-height: 1.45;
+
+      word-break:
+        break-word;
+    }
+
+
     /* =========================================================
-       INDEX BADGES
+       SHORT SUMMARY
     ========================================================= */
+
+
+    .pub-summary {
+      margin-top: 18px;
+
+      padding:
+        17px 18px;
+
+      border:
+        1px solid #e1edf1;
+
+      border-radius: 11px;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #f8fbfc,
+          #f2f8fa
+        );
+    }
+
+
+    .pub-summary-label {
+      display: flex;
+      align-items: center;
+
+      gap: 7px;
+
+      margin-bottom: 7px;
+
+      color: #4b8798;
+
+      font-size: 8px;
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
+
+
+    .pub-summary-label::before {
+      content: "";
+
+      width: 17px;
+      height: 2px;
+
+      background:
+        var(--turquoise);
+    }
+
+
+    .pub-summary p {
+      color: #536b7c;
+
+      font-size: 11.5px;
+
+      line-height: 1.65;
+    }
+
+
+    /* =========================================================
+       INDEXING
+    ========================================================= */
+
+
+    .index-info {
+      margin-top: 14px;
+    }
+
+
+    .index-info-label {
+      margin-bottom: 6px;
+
+      color: #93a3af;
+
+      font-size: 8px;
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.8px;
+    }
+
+
+    .index-info-badges {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 5px;
+    }
 
 
     .index-badge {
@@ -858,102 +1025,20 @@
     }
 
 
-    .pub-theme {
-      color: var(--cyan);
-
-      font-size: 9px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.1px;
-
-      margin-bottom: 11px;
-    }
-
-
-    .publication-card h3 {
-      color: var(--navy);
-
-      font-size: 17px;
-
-      line-height: 1.35;
-
-      margin-bottom: 14px;
-    }
-
-
-    .pub-authors {
-      color: var(--blue);
-
-      font-size: 12px;
-      font-weight: 700;
-
-      line-height: 1.5;
-
-      margin-bottom: 9px;
-    }
-
-
-    .pub-venue {
-      color: var(--muted);
-
-      font-size: 11px;
-
-      line-height: 1.55;
-
-      margin-bottom: 9px;
-    }
-
-
-    .pub-doi {
-      color: #7d909f;
-
-      font-size: 10px;
-
-      word-break:
-        break-word;
-
-      margin-top: 5px;
-    }
-
-
-    .index-info {
-      margin-top: 13px;
-
-      padding-top: 11px;
-
-      border-top:
-        1px solid #edf2f5;
-    }
-
-
-    .index-info-label {
-      color: #93a3af;
-
-      font-size: 8px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.8px;
-
-      margin-bottom: 6px;
-    }
-
-
-    .index-info-badges {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 5px;
-    }
+    /* =========================================================
+       PUBLICATION BOTTOM
+    ========================================================= */
 
 
     .pub-bottom {
       margin-top: auto;
 
       padding-top: 18px;
+    }
+
+
+    .pub-bottom-inner {
+      padding-top: 15px;
 
       border-top:
         1px solid var(--border);
@@ -961,10 +1046,10 @@
 
 
     .card-link {
-      display:
-        inline-flex;
-
+      display: inline-flex;
       align-items: center;
+
+      gap: 6px;
 
       color: var(--blue);
 
@@ -974,7 +1059,8 @@
 
 
     .card-link:hover {
-      text-decoration: underline;
+      text-decoration:
+        underline;
     }
 
 
@@ -994,18 +1080,19 @@
       border:
         1px dashed #c9d9e2;
 
-      border-radius: var(--radius);
+      border-radius:
+        var(--radius);
+
+      background: white;
 
       text-align: center;
 
       color: var(--muted);
-
-      background: white;
     }
 
 
     /* =========================================================
-       THEMATIC SUMMARY
+       THEMATIC RANGE
     ========================================================= */
 
 
@@ -1020,6 +1107,8 @@
 
 
     .theme-card {
+      min-height: 170px;
+
       padding: 24px;
 
       border:
@@ -1028,29 +1117,27 @@
       border-radius: 14px;
 
       background: white;
-
-      min-height: 170px;
     }
 
 
     .theme-number {
+      margin-bottom: 20px;
+
       color: var(--cyan);
 
       font-size: 10px;
       font-weight: 800;
-
-      margin-bottom: 20px;
     }
 
 
     .theme-card h3 {
+      margin-bottom: 9px;
+
       color: var(--navy);
 
       font-size: 16px;
 
       line-height: 1.3;
-
-      margin-bottom: 9px;
     }
 
 
@@ -1076,15 +1163,16 @@
       padding:
         82px 0;
 
+      border-top:
+        1px solid var(--border);
+
       background:
+
         linear-gradient(
           180deg,
           #f8fbfc,
           #f2f7f9
         );
-
-      border-top:
-        1px solid var(--border);
     }
 
 
@@ -1166,7 +1254,8 @@
 
       align-items: start;
 
-      padding: 21px 22px;
+      padding:
+        21px 22px;
 
       border:
         1px solid #dce7eb;
@@ -1183,7 +1272,8 @@
 
 
     .forthcoming-card:hover {
-      border-color: #bcdde3;
+      border-color:
+        #bcdde3;
 
       background: white;
     }
@@ -1194,7 +1284,6 @@
       height: 42px;
 
       display: grid;
-
       place-items: center;
 
       border-radius: 8px;
@@ -1209,13 +1298,13 @@
 
 
     .forthcoming-content h3 {
+      margin-bottom: 7px;
+
       color: #294258;
 
       font-size: 14px;
 
       line-height: 1.42;
-
-      margin-bottom: 7px;
     }
 
 
@@ -1237,7 +1326,8 @@
 
       border-radius: 20px;
 
-      background: #f0f8f8;
+      background:
+        #f0f8f8;
 
       color: #4d878a;
 
@@ -1282,6 +1372,7 @@
       color: white;
 
       background:
+
         linear-gradient(
           110deg,
           #0b2845,
@@ -1303,9 +1394,9 @@
 
 
     .final-cta h2 {
-      font-size: 29px;
-
       margin-bottom: 7px;
+
+      font-size: 29px;
     }
 
 
@@ -1317,8 +1408,7 @@
     .btn {
       min-height: 48px;
 
-      display:
-        inline-flex;
+      display: inline-flex;
 
       align-items: center;
       justify-content: center;
@@ -1329,6 +1419,7 @@
       border-radius: 9px;
 
       background:
+
         linear-gradient(
           90deg,
           #79d5dd,
@@ -1348,13 +1439,13 @@
 
 
     footer {
-      background: #f8fafc;
+      padding:
+        33px 0 20px;
 
       border-top:
         1px solid var(--border);
 
-      padding:
-        33px 0 20px;
+      background: #f8fafc;
     }
 
 
@@ -1373,9 +1464,9 @@
     .footer-project strong {
       display: block;
 
-      color: var(--navy);
-
       margin-bottom: 7px;
+
+      color: var(--navy);
     }
 
 
@@ -1527,16 +1618,14 @@
       .forthcoming-status {
         grid-column: 2;
 
-        width:
-          fit-content;
+        width: fit-content;
       }
 
 
       .final-cta-inner {
         flex-direction: column;
 
-        align-items:
-          flex-start;
+        align-items: flex-start;
       }
 
 
@@ -1944,7 +2033,6 @@
 
       </div>
 
-
     </div>
 
 
@@ -1988,7 +2076,6 @@
       отговарящи на избраните критерии.
 
     </div>
-
 
   </div>
 
@@ -2122,7 +2209,6 @@
 
       </div>
 
-
     </div>
 
   </div>
@@ -2177,7 +2263,6 @@
 
       </div>
 
-
     </div>
 
 
@@ -2197,7 +2282,6 @@
       ще бъде добавяна след официалното им публикуване.
 
     </div>
-
 
   </div>
 
@@ -2235,7 +2319,6 @@
     >
       Към резултатите →
     </a>
-
 
   </div>
 
@@ -2289,7 +2372,6 @@
 
       </div>
 
-
     </div>
 
 
@@ -2299,7 +2381,6 @@
       на социално-икономическата система на България
 
     </div>
-
 
   </div>
 
@@ -2364,13 +2445,16 @@
         "Sabrina Kalinkova",
 
       venue:
-        "8th FEB International Scientific Conference",
+        "8th FEB International Scientific Conference · University of Maribor Press",
 
       doi:
         "10.18690/um.epf.5.2024.35",
 
       url:
         "https://doi.org/10.18690/um.epf.5.2024.35",
+
+      summary:
+        "Публикацията поставя концептуалната основа за разглеждането на дигиталната конкурентоспособност като комплексна характеристика на икономическите системи и създава отправна точка за последващите секторни и многостепенни анализи в проекта.",
 
       scopus: false,
       wos: false,
@@ -2396,7 +2480,11 @@
         "Management and Education, 20(2), 2024",
 
       doi: "",
+
       url: "",
+
+      summary:
+        "Изследването позиционира България в европейската конкурентна среда и разглежда факторите, които определят способността на страната да използва цифровата трансформация като източник на по-висока конкурентоспособност.",
 
       scopus: false,
       wos: false,
@@ -2422,7 +2510,11 @@
         "Management and Education, 20(4), 2024",
 
       doi: "",
+
       url: "",
+
+      summary:
+        "Публикацията разглежда възможностите за използване на цифрови инструменти при оценяването на доброволци и поставя основа за по-систематично измерване на компетентности, ангажираност и принос в организациите от гражданския сектор.",
 
       scopus: false,
       wos: false,
@@ -2448,7 +2540,11 @@
         "",
 
       doi: "",
+
       url: "",
+
+      summary:
+        "Изследването разглежда електронното управление като елемент на националната дигитална конкурентоспособност. Анализът откроява постигнатия институционален напредък, както и продължаващите ограничения, свързани с координацията, цифровите умения, свързаността и интеграцията на технологии.",
 
       scopus: false,
       wos: false,
@@ -2474,7 +2570,11 @@
         "",
 
       doi: "",
+
       url: "",
+
+      summary:
+        "Публикацията анализира как цифровите технологии влияят върху работата на българските неправителствени организации. Особено внимание е отделено на цифровите умения, организационните ползи и ограниченията, както и на ролята на дигиталните доброволци за развитието на организационния капацитет.",
 
       scopus: false,
       wos: false,
@@ -2500,7 +2600,11 @@
         "",
 
       doi: "",
+
       url: "",
+
+      summary:
+        "Публикацията разглежда дигиталните двойници като инструмент за стратегическо планиране в индустриална среда. Акцентът е върху потенциала им за моделиране, сценарийно изследване и подкрепа на решения, свързани с ефективността, адаптивността и устойчивото развитие.",
 
       scopus: false,
       wos: false,
@@ -2531,6 +2635,9 @@
       url:
         "https://doi.org/10.31410/LIMEN.2024.457",
 
+      summary:
+        "Изследването разглежда финансовата устойчивост на българската здравна система и ключовите структурни ограничения пред нейното развитие. Акцентът е върху връзката между ресурсната обезпеченост, управленските решения и възможностите за устойчиво секторно развитие.",
+
       scopus: true,
       wos: false,
       quartile: ""
@@ -2559,6 +2666,9 @@
 
       url:
         "https://doi.org/10.53656/his2025-6s-7-fro",
+
+      summary:
+        "Публикацията анализира способността на националната стратегическа система да предвижда бъдещи промени и рискове. Резултатите показват преобладаване на реактивни и отчетни механизми и аргументират необходимостта от по-силна feedforward логика в икономическото управление.",
 
       scopus: false,
       wos: true,
@@ -2589,6 +2699,9 @@
       url:
         "https://doi.org/10.31410/ERAZ.2025.229",
 
+      summary:
+        "Изследването оценява дигиталната конкурентоспособност на здравната система чрез взаимодействието между технологична инфраструктура, човешки капитал, организационна готовност и ефекта на цифровите решения върху качеството и ефективността на услугите.",
+
       scopus: false,
       wos: false,
       quartile: ""
@@ -2617,6 +2730,9 @@
 
       url:
         "https://doi.org/10.31410/ERAZ.2025.417",
+
+      summary:
+        "Публикацията разглежда промяната на стратегическото планиране в среда на нарастваща достъпност на данни и цифрови технологии. Акцентът е върху преминаването от статични планови решения към по-адаптивни, аналитично подкрепени и информационно свързани управленски процеси.",
 
       scopus: false,
       wos: false,
@@ -2647,6 +2763,9 @@
       url:
         "https://doi.org/10.37075/ISA.2025.4.08",
 
+      summary:
+        "Изследването разглежда дигиталната грамотност като компонент на човешкия капитал и като предпоставка за по-висока дигитална конкурентоспособност. Анализът свързва индивидуалните цифрови способности с по-широките процеси на икономическа и обществена трансформация.",
+
       scopus: false,
       wos: false,
       quartile: ""
@@ -2668,10 +2787,15 @@
         "Sabrina Kalinkova",
 
       venue:
-        "",
+        "University of Maribor Press",
 
       doi: "",
-      url: "",
+
+      url:
+        "https://press.um.si/index.php/ump/en/catalog/book/1126/chapter/1340",
+
+      summary:
+        "Публикацията разглежда изкуствения интелект като фактор, който може както да ускори технологичното наваксване, така и да задълбочи цифровите различия в развиващите се икономики. Акцентът е върху стратегическия избор между краткосрочно технологично усвояване и изграждане на устойчиви цифрови способности.",
 
       scopus: false,
       wos: false,
@@ -2702,11 +2826,13 @@
       url:
         "https://doi.org/10.56497/esj260304",
 
+      summary:
+        "Изследването анализира структурните рискове и възможности при прехода на България от режим на валутен борд към участие в еврозоната. Акцентът е върху макроикономическата устойчивост, структурните зависимости и способността на икономиката да се адаптира към новата институционална рамка.",
+
       scopus: true,
       wos: false,
       quartile: "Q4"
     }
-
 
   ];
 
@@ -2816,7 +2942,6 @@
       authors:
         "Violeta Toncheva-Zlatkova"
     }
-
 
   ];
 
@@ -2928,16 +3053,17 @@
 
   function indexBadges(pub){
 
-
     let badges = "";
 
 
     if(pub.scopus){
 
       badges += `
+
         <span class="index-badge scopus">
           Scopus
         </span>
+
       `;
 
     }
@@ -2946,9 +3072,11 @@
     if(pub.wos){
 
       badges += `
+
         <span class="index-badge wos">
           Web of Science
         </span>
+
       `;
 
     }
@@ -2957,9 +3085,11 @@
     if(pub.quartile){
 
       badges += `
+
         <span class="index-badge quartile">
           ${pub.quartile}
         </span>
+
       `;
 
     }
@@ -2978,22 +3108,26 @@
   function publicationCard(pub){
 
 
-    const doiBlock =
-      pub.doi
+    const venueBlock =
+      pub.venue
       ? `
-        <div class="pub-doi">
-          DOI: ${pub.doi}
+
+        <div class="pub-venue">
+          ${pub.venue}
         </div>
+
       `
       : "";
 
 
-    const venueBlock =
-      pub.venue
+    const doiBlock =
+      pub.doi
       ? `
-        <div class="pub-venue">
-          ${pub.venue}
+
+        <div class="pub-doi">
+          DOI: ${pub.doi}
         </div>
+
       `
       : "";
 
@@ -3005,6 +3139,7 @@
     const indexBlock =
       badges
       ? `
+
         <div class="index-info">
 
           <div class="index-info-label">
@@ -3016,6 +3151,7 @@
           </div>
 
         </div>
+
       `
       : "";
 
@@ -3023,6 +3159,7 @@
     const linkBlock =
       pub.url
       ? `
+
         <a
           class="card-link"
           href="${pub.url}"
@@ -3031,11 +3168,14 @@
         >
           Прочети публикацията →
         </a>
+
       `
       : `
+
         <span class="no-public-link">
           Публичен линк ще бъде добавен
         </span>
+
       `;
 
 
@@ -3051,12 +3191,8 @@
           </div>
 
 
-          <div class="status-area">
-
-            <span class="pub-status">
-              Published
-            </span>
-
+          <div class="pub-status">
+            Published
           </div>
 
         </div>
@@ -3081,12 +3217,28 @@
 
         ${doiBlock}
 
+
+        <div class="pub-summary">
+
+          <div class="pub-summary-label">
+            Накратко
+          </div>
+
+          <p>
+            ${pub.summary}
+          </p>
+
+        </div>
+
+
         ${indexBlock}
 
 
         <div class="pub-bottom">
 
-          ${linkBlock}
+          <div class="pub-bottom-inner">
+            ${linkBlock}
+          </div>
 
         </div>
 
@@ -3139,7 +3291,9 @@
               " " +
               pub.venue +
               " " +
-              pub.doi
+              pub.doi +
+              " " +
+              pub.summary
             )
             .toLowerCase();
 
@@ -3263,7 +3417,6 @@
 
 
   function renderForthcoming(){
-
 
     forthcomingGrid.innerHTML =
       forthcomingPublications
