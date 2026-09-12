@@ -3,2288 +3,1862 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-  <title>
-    Данни и индекси | Дигитална конкурентоспособност на България
-  </title>
+<title>
+  Данни и индекси | Дигитална конкурентоспособност на България
+</title>
 
-  <meta
-    name="description"
-    content="Данни, индекси и измерители в научноизследователски проект № 6/2024 „Дигитална конкурентоспособност на социално-икономическата система на България“."
-  >
+<meta
+  name="description"
+  content="Данни, индекси и измерители в научноизследователски проект № 6/2024 „Дигитална конкурентоспособност на социално-икономическата система на България“."
+>
 
+<style>
 
-  <style>
+:root {
+  --navy: #102b4c;
+  --navy-dark: #081f38;
+  --navy-mid: #173d63;
 
-    :root {
+  --blue: #2457c5;
+  --cyan: #28a9c7;
+  --turquoise: #01c9bc;
 
-      --navy: #102b4c;
-      --navy-dark: #081f38;
-      --navy-mid: #173d63;
+  --text: #213247;
+  --muted: #64768a;
 
-      --blue: #2457c5;
-      --cyan: #28a9c7;
-      --turquoise: #01c9bc;
+  --white: #ffffff;
+  --background: #f5f8fb;
+  --background-soft: #eef5f9;
 
-      --text: #213247;
-      --muted: #64768a;
+  --border: #dce7ef;
 
-      --white: #ffffff;
-      --background: #f5f8fb;
-      --background-soft: #eef5f9;
+  --success-bg: #eaf7f3;
+  --success-text: #278269;
 
-      --border: #dce7ef;
+  --structured-bg: #edf3fb;
+  --structured-text: #406ba8;
 
-      --success-bg: #eaf7f3;
-      --success-text: #278269;
+  --shadow: 0 14px 40px rgba(16, 43, 76, 0.08);
 
-      --structured-bg: #edf3fb;
-      --structured-text: #406ba8;
+  --radius: 18px;
+  --max-width: 1260px;
+}
 
-      --shadow:
-        0 14px 40px rgba(16, 43, 76, 0.08);
 
-      --radius: 18px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-      --max-width: 1260px;
 
-    }
+html {
+  scroll-behavior: smooth;
+}
 
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
 
 
-    html {
-      scroll-behavior: smooth;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 
-    body {
+button {
+  font: inherit;
+}
 
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
 
-      color: var(--text);
+.container {
+  width: min(92%, var(--max-width));
+  margin-inline: auto;
+}
 
-      background: var(--white);
 
-      line-height: 1.6;
+/* =========================================================
+   HEADER
+========================================================= */
 
-    }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+  background: rgba(255,255,255,0.97);
+  border-bottom: 1px solid var(--border);
 
+  backdrop-filter: blur(12px);
+}
 
-    button {
-      font: inherit;
-    }
 
+.navbar {
+  min-height: 82px;
 
-    .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-      width: min(
-        92%,
-        var(--max-width)
-      );
+  gap: 24px;
+}
 
-      margin-inline: auto;
 
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
 
+  flex-shrink: 0;
+}
 
-    /* =========================================================
-       HEADER
-    ========================================================= */
 
+.logo-mark {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
 
-    header {
+  height: 42px;
+}
 
-      position: sticky;
-      top: 0;
 
-      z-index: 1000;
+.logo-mark span {
+  display: block;
+  width: 9px;
 
-      background:
-        rgba(255, 255, 255, 0.97);
+  border-radius: 3px 3px 0 0;
+}
 
-      border-bottom:
-        1px solid var(--border);
 
-      backdrop-filter:
-        blur(12px);
+.logo-mark span:nth-child(1) {
+  height: 15px;
+  background: #7fd9e6;
+}
 
-    }
 
+.logo-mark span:nth-child(2) {
+  height: 23px;
+  background: #46bfd3;
+}
 
-    .navbar {
 
-      min-height: 82px;
+.logo-mark span:nth-child(3) {
+  height: 31px;
+  background: #2499c2;
+}
 
-      display: flex;
 
-      align-items: center;
+.logo-mark span:nth-child(4) {
+  height: 41px;
+  background: #1557a0;
+}
 
-      justify-content:
-        space-between;
 
-      gap: 24px;
+.brand-text strong {
+  display: block;
 
-    }
+  color: var(--navy);
 
+  font-size: 16px;
+  line-height: 1.02;
 
-    .brand {
+  text-transform: uppercase;
+}
 
-      display: flex;
 
-      align-items: center;
+.brand-text small {
+  display: block;
 
-      gap: 13px;
+  margin-top: 5px;
 
-      flex-shrink: 0;
+  color: var(--muted);
 
-    }
+  font-size: 10px;
 
+  white-space: nowrap;
+}
 
-    .logo-mark {
 
-      display: flex;
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
 
-      align-items: flex-end;
 
-      gap: 4px;
+.desktop-nav {
+  display: flex;
+  align-items: center;
 
-      height: 42px;
+  gap: 18px;
 
-    }
+  color: #34475a;
 
+  font-size: 12px;
+  font-weight: 700;
+}
 
-    .logo-mark span {
 
-      display: block;
+.desktop-nav > a,
+.nav-dropdown > button {
+  min-height: 82px;
 
-      width: 9px;
+  display: flex;
+  align-items: center;
 
-      border-radius:
-        3px 3px 0 0;
+  padding: 3px 0 0;
 
-    }
+  border: none;
+  border-bottom: 3px solid transparent;
 
+  background: transparent;
 
-    .logo-mark span:nth-child(1) {
-      height: 15px;
-      background: #7fd9e6;
-    }
+  color: inherit;
 
+  font-size: inherit;
+  font-weight: inherit;
 
-    .logo-mark span:nth-child(2) {
-      height: 23px;
-      background: #46bfd3;
-    }
+  white-space: nowrap;
 
+  cursor: pointer;
 
-    .logo-mark span:nth-child(3) {
-      height: 31px;
-      background: #2499c2;
-    }
+  transition: 0.2s ease;
+}
 
 
-    .logo-mark span:nth-child(4) {
-      height: 41px;
-      background: #1557a0;
-    }
+.desktop-nav > a:hover,
+.desktop-nav > a.active,
+.nav-dropdown:hover > button,
+.nav-dropdown.active > button {
+  color: var(--blue);
 
+  border-bottom-color: var(--turquoise);
+}
 
-    .brand-text strong {
 
-      display: block;
+/* =========================================================
+   DROPDOWN
+========================================================= */
 
-      color: var(--navy);
 
-      font-size: 16px;
+.nav-dropdown {
+  position: relative;
+}
 
-      line-height: 1.02;
 
-      text-transform: uppercase;
+.nav-dropdown > button {
+  gap: 6px;
+}
 
-    }
 
+.dropdown-arrow {
+  font-size: 9px;
 
-    .brand-text small {
+  transition: transform 0.2s ease;
+}
 
-      display: block;
 
-      margin-top: 5px;
+.nav-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
 
-      color: var(--muted);
 
-      font-size: 10px;
+.dropdown-menu {
+  position: absolute;
 
-      white-space: nowrap;
+  top: 72px;
+  left: 50%;
 
-    }
+  min-width: 210px;
 
+  padding: 8px;
 
-    /* =========================================================
-       DESKTOP NAVIGATION
-    ========================================================= */
+  border: 1px solid var(--border);
+  border-radius: 12px;
 
+  background: white;
 
-    .desktop-nav {
+  box-shadow:
+    0 16px 35px rgba(16, 43, 76, 0.12);
 
-      display: flex;
+  opacity: 0;
+  visibility: hidden;
 
-      align-items: center;
+  transform: translate(-50%, 8px);
 
-      gap: 18px;
+  transition: 0.2s ease;
 
-      color: #34475a;
+  z-index: 1100;
+}
 
-      font-size: 12px;
 
-      font-weight: 700;
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
 
-    }
+  transform: translate(-50%, 0);
+}
 
 
-    .desktop-nav > a,
-    .nav-dropdown > button {
+.dropdown-menu a {
+  display: block;
 
-      min-height: 82px;
+  padding: 11px 12px;
 
-      display: flex;
+  border-radius: 8px;
 
-      align-items: center;
+  color: #40556a;
 
-      padding:
-        3px 0 0;
+  font-size: 12px;
 
-      border: none;
+  transition: 0.2s ease;
+}
 
-      border-bottom:
-        3px solid transparent;
 
-      background: transparent;
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
+  background: #f2f7fa;
 
-      color: inherit;
+  color: var(--blue);
+}
 
-      font-size: inherit;
 
-      font-weight: inherit;
+.language {
+  color: var(--blue);
 
-      white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
 
-      cursor: pointer;
+  white-space: nowrap;
+}
 
-    }
 
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
 
-    .desktop-nav > a:hover,
-    .desktop-nav > a.active,
-    .nav-dropdown:hover > button {
 
-      color: var(--blue);
+.mobile-toggle {
+  display: none;
 
-      border-bottom-color:
-        var(--turquoise);
+  width: 42px;
+  height: 42px;
 
-    }
+  border: 1px solid var(--border);
+  border-radius: 8px;
 
+  background: white;
 
-    .nav-dropdown {
+  color: var(--navy);
 
-      position: relative;
+  cursor: pointer;
 
-    }
+  font-size: 20px;
+}
 
 
-    .nav-dropdown > button {
+.mobile-menu {
+  display: none;
 
-      gap: 6px;
+  padding: 12px 4%;
 
-    }
+  border-top: 1px solid var(--border);
 
+  background: white;
+}
 
-    .dropdown-arrow {
 
-      font-size: 9px;
+.mobile-menu a {
+  display: block;
 
-      transition:
-        transform 0.2s ease;
+  padding: 12px 0;
 
-    }
+  border-bottom: 1px solid #edf2f5;
 
+  color: var(--navy);
 
-    .nav-dropdown:hover
-    .dropdown-arrow {
+  font-weight: 700;
+}
 
-      transform:
-        rotate(180deg);
 
-    }
+.mobile-group-label {
+  padding: 17px 0 6px;
 
+  color: #96a5b1;
 
-    .dropdown-menu {
+  font-size: 9px;
+  font-weight: 800;
 
-      position: absolute;
+  text-transform: uppercase;
 
-      top: 72px;
-      left: 50%;
+  letter-spacing: 1px;
+}
 
-      min-width: 190px;
 
-      padding: 8px;
+.mobile-sub {
+  padding-left: 14px !important;
 
-      border:
-        1px solid var(--border);
+  color: #536b7c !important;
 
-      border-radius: 12px;
+  font-weight: 600 !important;
+}
 
-      background: white;
 
-      box-shadow:
-        0 16px 35px rgba(16, 43, 76, 0.12);
+/* =========================================================
+   HERO
+========================================================= */
 
-      opacity: 0;
 
-      visibility: hidden;
+.page-hero {
+  position: relative;
 
-      transform:
-        translate(-50%, 8px);
+  overflow: hidden;
 
-      transition:
-        0.2s ease;
+  color: white;
 
-    }
+  background:
+    radial-gradient(
+      circle at 83% 36%,
+      rgba(1, 201, 188, 0.18),
+      transparent 29%
+    ),
+    linear-gradient(
+      115deg,
+      #081f38 0%,
+      #102f51 61%,
+      #145b7d 100%
+    );
+}
 
 
-    .nav-dropdown:hover
-    .dropdown-menu {
+.page-hero::before {
+  content: "";
 
-      opacity: 1;
+  position: absolute;
 
-      visibility: visible;
+  inset: 0;
 
-      transform:
-        translate(-50%, 0);
+  background-image:
+    linear-gradient(
+      rgba(82, 215, 226, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(82, 215, 226, 0.05) 1px,
+      transparent 1px
+    );
 
-    }
+  background-size: 62px 62px;
+}
 
 
-    .dropdown-menu a {
+.page-hero-inner {
+  position: relative;
 
-      display: block;
+  z-index: 1;
 
-      padding:
-        11px 12px;
+  min-height: 470px;
 
-      border-radius: 8px;
+  display: grid;
 
-      color: #40556a;
+  grid-template-columns:
+    1.08fr 0.92fr;
 
-      font-size: 12px;
+  gap: 70px;
 
-    }
+  align-items: center;
 
+  padding: 76px 0;
+}
 
-    .dropdown-menu a:hover {
 
-      background: #f2f7fa;
+.eyebrow {
+  margin-bottom: 17px;
 
-      color: var(--blue);
+  color: #8ce7ed;
 
-    }
+  font-size: 11px;
+  font-weight: 800;
 
+  text-transform: uppercase;
 
-    .language {
+  letter-spacing: 1.9px;
+}
 
-      color: var(--blue);
 
-      font-size: 12px;
+h1 {
+  margin-bottom: 23px;
 
-      font-weight: 700;
+  font-size:
+    clamp(
+      44px,
+      5vw,
+      65px
+    );
 
-      white-space: nowrap;
+  line-height: 1;
 
-    }
+  letter-spacing: -2px;
+}
 
 
-    .mobile-toggle {
+.hero-description {
+  max-width: 760px;
 
-      display: none;
+  color: #d3e5ee;
 
-      width: 42px;
-      height: 42px;
+  font-size: 17px;
 
-      border:
-        1px solid var(--border);
+  line-height: 1.7;
+}
 
-      border-radius: 8px;
 
-      background: white;
+/* =========================================================
+   HERO DATA CARD
+========================================================= */
 
-      color: var(--navy);
 
-      cursor: pointer;
+.data-card {
+  padding: 30px;
 
-      font-size: 20px;
+  border:
+    1px solid rgba(255,255,255,0.15);
 
-    }
+  border-radius: 20px;
 
+  background:
+    rgba(255,255,255,0.045);
+}
 
-    .mobile-menu {
 
-      display: none;
+.data-card-label {
+  margin-bottom: 18px;
 
-      padding:
-        12px 4%;
+  color: #8ce7ed;
 
-      border-top:
-        1px solid var(--border);
+  font-size: 9px;
+  font-weight: 800;
 
-      background: white;
+  text-transform: uppercase;
 
-    }
+  letter-spacing: 1.4px;
+}
 
 
-    .mobile-menu a {
+.data-card-grid {
+  display: grid;
 
-      display: block;
+  grid-template-columns:
+    repeat(2,1fr);
 
-      padding:
-        12px 0;
+  gap: 10px;
+}
 
-      border-bottom:
-        1px solid #edf2f5;
 
-      color: var(--navy);
+.data-stat {
+  min-height: 105px;
 
-      font-weight: 700;
+  padding: 17px;
 
-    }
+  border:
+    1px solid rgba(255,255,255,0.09);
 
+  border-radius: 11px;
 
-    .mobile-group-label {
+  background:
+    rgba(255,255,255,0.035);
+}
 
-      padding:
-        14px 0 5px;
 
-      color: #96a5b1;
+.data-stat strong {
+  display: block;
 
-      font-size: 9px;
+  margin-bottom: 7px;
 
-      font-weight: 800;
+  color: white;
 
-      text-transform: uppercase;
+  font-size: 27px;
 
-      letter-spacing: 1px;
+  line-height: 1;
+}
 
-    }
 
+.data-stat span {
+  display: block;
 
-    .mobile-sub {
+  color: #bbd5dd;
 
-      padding-left: 14px !important;
+  font-size: 9px;
 
-      color: #536b7c !important;
+  line-height: 1.45;
+}
 
-      font-weight: 600 !important;
 
-    }
+/* =========================================================
+   GENERAL
+========================================================= */
 
 
-    /* =========================================================
-       HERO
-    ========================================================= */
+.standard-section {
+  padding: 84px 0;
+}
 
 
-    .page-hero {
+.section-alt {
+  background: var(--background);
+}
 
-      position: relative;
 
-      overflow: hidden;
+.section-label {
+  margin-bottom: 10px;
 
-      color: white;
+  color: var(--cyan);
 
-      background:
+  font-size: 10px;
+  font-weight: 800;
 
-        radial-gradient(
-          circle at 83% 36%,
-          rgba(1, 201, 188, 0.18),
-          transparent 29%
-        ),
+  text-transform: uppercase;
 
-        linear-gradient(
-          115deg,
-          #081f38 0%,
-          #102f51 61%,
-          #145b7d 100%
-        );
+  letter-spacing: 1.8px;
+}
 
-    }
 
+.section-title {
+  margin-bottom: 16px;
 
-    .page-hero::before {
+  color: var(--navy);
 
-      content: "";
+  font-size:
+    clamp(
+      30px,
+      3.3vw,
+      43px
+    );
 
-      position: absolute;
+  line-height: 1.13;
 
-      inset: 0;
+  letter-spacing: -1px;
+}
 
-      background-image:
 
-        linear-gradient(
-          rgba(82, 215, 226, 0.05) 1px,
-          transparent 1px
-        ),
+.section-description {
+  max-width: 900px;
 
-        linear-gradient(
-          90deg,
-          rgba(82, 215, 226, 0.05) 1px,
-          transparent 1px
-        );
+  color: var(--muted);
 
-      background-size:
-        62px 62px;
+  font-size: 15px;
 
-    }
+  line-height: 1.75;
+}
 
 
-    .page-hero-inner {
+.section-link {
+  display: inline-flex;
+  align-items: center;
 
-      position: relative;
+  gap: 7px;
 
-      z-index: 1;
+  margin-top: 27px;
 
-      min-height: 470px;
+  color: var(--blue);
 
-      display: grid;
+  font-size: 12px;
+  font-weight: 800;
+}
 
-      grid-template-columns:
-        1.08fr 0.92fr;
 
-      gap: 70px;
+/* =========================================================
+   MEASUREMENT LOGIC
+========================================================= */
 
-      align-items: center;
 
-      padding:
-        76px 0;
+.measurement-flow {
+  display: grid;
 
-    }
+  grid-template-columns:
+    repeat(5,1fr);
 
+  gap: 9px;
 
-    .eyebrow {
+  margin-top: 39px;
+}
 
-      margin-bottom: 17px;
 
-      color: #8ce7ed;
+.measurement-step {
+  position: relative;
 
-      font-size: 11px;
+  min-height: 145px;
 
-      font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-      text-transform: uppercase;
+  padding: 22px;
 
-      letter-spacing:
-        1.9px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
 
-    }
+  background: white;
+}
 
 
-    h1 {
+.measurement-step:not(:last-child)::after {
+  content: "→";
 
-      margin-bottom: 23px;
+  position: absolute;
 
-      font-size:
-        clamp(
-          44px,
-          5vw,
-          65px
-        );
+  top: 50%;
+  right: -17px;
 
-      line-height: 1;
+  z-index: 3;
 
-      letter-spacing:
-        -2px;
+  width: 24px;
+  height: 24px;
 
-    }
+  display: grid;
+  place-items: center;
 
+  border-radius: 50%;
 
-    .hero-description {
+  background: white;
 
-      max-width: 760px;
+  color: var(--cyan);
 
-      color: #d3e5ee;
+  font-weight: 800;
 
-      font-size: 17px;
+  transform: translateY(-50%);
+}
 
-      line-height: 1.7;
 
-    }
+.measurement-code {
+  margin-bottom: 15px;
 
+  color: var(--cyan);
 
-    /* =========================================================
-       HERO DATA CARD
-    ========================================================= */
+  font-size: 9px;
+  font-weight: 800;
+}
 
 
-    .data-card {
+.measurement-step h3 {
+  margin-bottom: 6px;
 
-      padding: 30px;
+  color: var(--navy);
 
-      border:
-        1px solid rgba(255, 255, 255, 0.15);
+  font-size: 14px;
+}
 
-      border-radius: 20px;
 
-      background:
-        rgba(255, 255, 255, 0.045);
+.measurement-step p {
+  color: var(--muted);
 
-    }
+  font-size: 10px;
 
+  line-height: 1.5;
+}
 
-    .data-card-label {
 
-      margin-bottom: 18px;
+/* =========================================================
+   DATA SOURCES
+========================================================= */
 
-      color: #8ce7ed;
 
-      font-size: 9px;
+.source-grid {
+  display: grid;
 
-      font-weight: 800;
+  grid-template-columns:
+    repeat(2,1fr);
 
-      text-transform: uppercase;
+  gap: 18px;
 
-      letter-spacing:
-        1.4px;
+  margin-top: 38px;
+}
 
-    }
 
+.source-card {
+  padding: 31px;
 
-    .data-card-grid {
+  border: 1px solid var(--border);
+  border-radius: 17px;
 
-      display: grid;
+  background: white;
+}
 
-      grid-template-columns:
-        repeat(2, 1fr);
 
-      gap: 10px;
+.source-type {
+  display: inline-flex;
+  align-items: center;
 
-    }
+  min-height: 26px;
 
+  padding: 0 10px;
 
-    .data-stat {
+  margin-bottom: 22px;
 
-      min-height: 105px;
+  border-radius: 20px;
 
-      padding: 17px;
+  background: #edf7f9;
 
-      border:
-        1px solid rgba(255,255,255,0.09);
+  color: #37778b;
 
-      border-radius: 11px;
+  font-size: 9px;
+  font-weight: 800;
 
-      background:
-        rgba(255,255,255,0.035);
+  text-transform: uppercase;
 
-    }
+  letter-spacing: 0.7px;
+}
 
 
-    .data-stat strong {
+.source-card h3 {
+  margin-bottom: 10px;
 
-      display: block;
+  color: var(--navy);
 
-      margin-bottom: 7px;
+  font-size: 22px;
+}
 
-      color: white;
 
-      font-size: 27px;
+.source-card > p {
+  color: var(--muted);
 
-      line-height: 1;
+  font-size: 12px;
 
-    }
+  line-height: 1.65;
+}
 
 
-    .data-stat span {
+.source-list {
+  display: grid;
 
-      display: block;
+  gap: 9px;
 
-      color: #bbd5dd;
+  margin-top: 23px;
+}
 
-      font-size: 9px;
 
-      line-height: 1.45;
+.source-item {
+  display: grid;
 
-    }
+  grid-template-columns:
+    14px 1fr;
 
+  gap: 9px;
 
-    /* =========================================================
-       GENERAL
-    ========================================================= */
+  color: #536b7c;
 
+  font-size: 11px;
 
-    .standard-section {
+  line-height: 1.5;
+}
 
-      padding:
-        84px 0;
 
-    }
+.source-item::before {
+  content: "";
 
+  width: 6px;
+  height: 6px;
 
-    .section-alt {
+  margin-top: 6px;
 
-      background:
-        var(--background);
+  border-radius: 50%;
 
-    }
+  background: var(--turquoise);
+}
 
 
-    .section-label {
+/* =========================================================
+   EMPIRICAL BASES
+========================================================= */
 
-      margin-bottom: 10px;
 
-      color: var(--cyan);
+.bases-grid {
+  display: grid;
 
-      font-size: 10px;
+  grid-template-columns:
+    repeat(3,1fr);
 
-      font-weight: 800;
+  gap: 15px;
 
-      text-transform: uppercase;
+  margin-top: 39px;
+}
 
-      letter-spacing:
-        1.8px;
 
-    }
+.base-card {
+  min-height: 265px;
 
+  padding: 28px;
 
-    .section-title {
+  border: 1px solid var(--border);
+  border-radius: 16px;
 
-      margin-bottom: 16px;
+  background: white;
+}
 
-      color: var(--navy);
 
-      font-size:
-        clamp(
-          30px,
-          3.3vw,
-          43px
-        );
+.base-code {
+  margin-bottom: 25px;
 
-      line-height: 1.13;
+  color: var(--cyan);
 
-      letter-spacing:
-        -1px;
+  font-size: 9px;
+  font-weight: 800;
 
-    }
+  text-transform: uppercase;
 
+  letter-spacing: 1px;
+}
 
-    .section-description {
 
-      max-width: 900px;
+.base-number {
+  margin-bottom: 8px;
 
-      color: var(--muted);
+  color: var(--navy);
 
-      font-size: 15px;
+  font-size: 32px;
+  font-weight: 800;
 
-      line-height: 1.75;
+  line-height: 1;
+}
 
-    }
 
+.base-card h3 {
+  margin-bottom: 9px;
 
-    .section-link {
+  color: var(--navy);
 
-      display: inline-flex;
+  font-size: 17px;
+}
 
-      align-items: center;
 
-      gap: 7px;
+.base-card p {
+  color: var(--muted);
 
-      margin-top: 27px;
+  font-size: 11px;
 
-      color: var(--blue);
+  line-height: 1.6;
+}
 
-      font-size: 12px;
 
-      font-weight: 800;
+.base-meta {
+  display: flex;
 
-    }
+  flex-wrap: wrap;
 
+  gap: 6px;
 
-    /* =========================================================
-       MEASUREMENT LOGIC
-    ========================================================= */
+  margin-top: 20px;
+}
 
 
-    .measurement-flow {
+.base-meta span {
+  padding: 5px 8px;
 
-      display: grid;
+  border: 1px solid #dde8ec;
+  border-radius: 20px;
 
-      grid-template-columns:
-        repeat(5, 1fr);
+  color: #607788;
 
-      gap: 9px;
+  font-size: 8px;
+  font-weight: 700;
+}
 
-      margin-top: 39px;
 
-    }
+/* =========================================================
+   INDEX CARDS
+========================================================= */
 
 
-    .measurement-step {
+.indices-grid {
+  display: grid;
 
-      position: relative;
+  grid-template-columns:
+    repeat(3,1fr);
 
-      min-height: 145px;
+  gap: 15px;
 
-      display: flex;
+  margin-top: 39px;
+}
 
-      flex-direction: column;
 
-      justify-content: center;
+.index-card {
+  min-height: 330px;
 
-      padding: 22px;
+  display: flex;
+  flex-direction: column;
 
-      border:
-        1px solid var(--border);
+  padding: 28px;
 
-      border-radius: 13px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
 
-      background: white;
+  background: white;
+}
 
-    }
 
+.index-top {
+  display: flex;
 
-    .measurement-step:not(:last-child)::after {
+  align-items: flex-start;
 
-      content: "→";
+  justify-content: space-between;
 
-      position: absolute;
+  gap: 12px;
 
-      top: 50%;
-      right: -17px;
+  margin-bottom: 25px;
+}
 
-      z-index: 3;
 
-      width: 24px;
-      height: 24px;
+.index-acronym {
+  color: var(--blue);
 
-      display: grid;
+  font-size: 24px;
+  font-weight: 800;
 
-      place-items: center;
+  line-height: 1;
+}
 
-      border-radius: 50%;
 
-      background: white;
+.status {
+  display: inline-flex;
+  align-items: center;
 
-      color: var(--cyan);
+  min-height: 23px;
 
-      font-weight: 800;
+  padding: 0 8px;
 
-      transform:
-        translateY(-50%);
+  border-radius: 20px;
 
-    }
+  font-size: 7px;
+  font-weight: 800;
 
+  text-transform: uppercase;
 
-    .measurement-code {
+  letter-spacing: 0.6px;
 
-      margin-bottom: 15px;
+  white-space: nowrap;
+}
 
-      color: var(--cyan);
 
-      font-size: 9px;
+.status.applied {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
 
-      font-weight: 800;
 
-    }
+.status.structured {
+  background: var(--structured-bg);
+  color: var(--structured-text);
+}
 
 
-    .measurement-step h3 {
+.index-card h3 {
+  margin-bottom: 10px;
 
-      margin-bottom: 6px;
+  color: var(--navy);
 
-      color: var(--navy);
+  font-size: 18px;
 
-      font-size: 14px;
+  line-height: 1.3;
+}
 
-    }
 
+.index-sector {
+  margin-bottom: 15px;
 
-    .measurement-step p {
+  color: var(--cyan);
 
-      color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
 
-      font-size: 10px;
+  text-transform: uppercase;
 
-      line-height: 1.5;
+  letter-spacing: 0.8px;
+}
 
-    }
 
+.index-card p {
+  color: var(--muted);
 
-    /* =========================================================
-       DATA SOURCES
-    ========================================================= */
+  font-size: 11px;
 
+  line-height: 1.6;
+}
 
-    .source-grid {
 
-      display: grid;
+.index-components {
+  display: flex;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+  flex-wrap: wrap;
 
-      gap: 18px;
+  gap: 6px;
 
-      margin-top: 38px;
+  margin-top: 19px;
+}
 
-    }
 
+.index-components span {
+  padding: 5px 7px;
 
-    .source-card {
+  border: 1px solid #dbe7eb;
+  border-radius: 7px;
 
-      padding: 31px;
+  background: #f8fbfc;
 
-      border:
-        1px solid var(--border);
+  color: #5a7181;
 
-      border-radius: 17px;
+  font-size: 8px;
+  font-weight: 700;
+}
 
-      background: white;
 
-    }
+/* =========================================================
+   DETAILED INDEX BLOCKS
+========================================================= */
 
 
-    .source-type {
+.detail-grid {
+  display: grid;
 
-      display: inline-flex;
+  grid-template-columns:
+    repeat(2,1fr);
 
-      align-items: center;
+  gap: 18px;
 
-      min-height: 26px;
+  margin-top: 39px;
+}
 
-      padding:
-        0 10px;
 
-      margin-bottom: 22px;
+.detail-card {
+  overflow: hidden;
 
-      border-radius: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
 
-      background:
-        #edf7f9;
+  background: white;
+}
 
-      color: #37778b;
 
-      font-size: 9px;
+.detail-head {
+  padding: 27px 30px;
 
-      font-weight: 800;
+  color: white;
 
-      text-transform: uppercase;
+  background:
+    linear-gradient(
+      120deg,
+      #153656,
+      #1c6382
+    );
+}
 
-      letter-spacing:
-        0.7px;
 
-    }
+.detail-head span {
+  display: block;
 
+  margin-bottom: 7px;
 
-    .source-card h3 {
+  color: #8ae3e8;
 
-      margin-bottom: 10px;
+  font-size: 8px;
+  font-weight: 800;
 
-      color: var(--navy);
+  text-transform: uppercase;
 
-      font-size: 22px;
+  letter-spacing: 1px;
+}
 
-    }
 
+.detail-head h3 {
+  font-size: 25px;
+}
 
-    .source-card > p {
 
-      color: var(--muted);
+.detail-body {
+  padding: 30px;
+}
 
-      font-size: 12px;
 
-      line-height: 1.65;
+.detail-body > p {
+  margin-bottom: 22px;
 
-    }
+  color: var(--muted);
 
+  font-size: 12px;
 
-    .source-list {
+  line-height: 1.65;
+}
 
-      display: grid;
 
-      gap: 9px;
+.dimension-list {
+  display: grid;
 
-      margin-top: 23px;
+  gap: 8px;
+}
 
-    }
 
+.dimension {
+  display: grid;
 
-    .source-item {
+  grid-template-columns:
+    70px 1fr;
 
-      display: grid;
+  gap: 13px;
 
-      grid-template-columns:
-        14px 1fr;
+  align-items: center;
 
-      gap: 9px;
+  padding: 11px 13px;
 
-      color: #536b7c;
+  border: 1px solid #e0e9ed;
+  border-radius: 9px;
 
-      font-size: 11px;
+  background: #fafcfd;
+}
 
-      line-height: 1.5;
 
-    }
+.dimension strong {
+  color: var(--blue);
 
+  font-size: 10px;
+}
 
-    .source-item::before {
 
-      content: "";
+.dimension span {
+  color: #566f80;
 
-      width: 6px;
-      height: 6px;
+  font-size: 10px;
+}
 
-      margin-top: 6px;
 
-      border-radius: 50%;
+.formula {
+  margin-top: 19px;
 
-      background: var(--turquoise);
+  padding: 15px 17px;
 
-    }
+  border-left:
+    3px solid var(--turquoise);
 
+  background: #f3f9fa;
 
-    /* =========================================================
-       EMPIRICAL BASES
-    ========================================================= */
+  color: #506b7c;
 
+  font-size: 11px;
 
-    .bases-grid {
+  line-height: 1.6;
+}
 
-      display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+/* =========================================================
+   A21 DATA
+========================================================= */
 
-      gap: 15px;
 
-      margin-top: 39px;
+.a21-layout {
+  display: grid;
 
-    }
+  grid-template-columns:
+    0.83fr 1.17fr;
 
+  gap: 55px;
 
-    .base-card {
+  align-items: center;
+}
 
-      min-height: 265px;
 
-      padding: 28px;
+.a21-visual {
+  position: relative;
 
-      border:
-        1px solid var(--border);
+  overflow: hidden;
 
-      border-radius: 16px;
+  padding: 32px;
 
-      background: white;
+  border-radius: 20px;
 
-    }
+  color: white;
 
+  background:
+    linear-gradient(
+      145deg,
+      #173554,
+      #2c5776
+    );
+}
 
-    .base-code {
 
-      margin-bottom: 25px;
+.a21-visual::before {
+  content: "";
 
-      color: var(--cyan);
+  position: absolute;
 
-      font-size: 9px;
+  inset: 0;
 
-      font-weight: 800;
+  background-image:
+    linear-gradient(
+      rgba(135,212,225,0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(135,212,225,0.035) 1px,
+      transparent 1px
+    );
 
-      text-transform: uppercase;
+  background-size: 46px 46px;
+}
 
-      letter-spacing:
-        1px;
 
-    }
+.a21-inner {
+  position: relative;
 
+  z-index: 2;
+}
 
-    .base-number {
 
-      margin-bottom: 8px;
+.a21-label {
+  margin-bottom: 21px;
 
-      color: var(--navy);
+  color: #87e6ea;
 
-      font-size: 32px;
+  font-size: 9px;
+  font-weight: 800;
 
-      font-weight: 800;
+  text-transform: uppercase;
 
-      line-height: 1;
+  letter-spacing: 1.2px;
+}
 
-    }
 
+.a21-number {
+  display: flex;
 
-    .base-card h3 {
+  align-items: baseline;
 
-      margin-bottom: 9px;
+  gap: 10px;
 
-      color: var(--navy);
+  margin-bottom: 22px;
+}
 
-      font-size: 17px;
 
-    }
+.a21-number strong {
+  font-size: 68px;
 
+  line-height: 1;
+}
 
-    .base-card p {
 
-      color: var(--muted);
+.a21-number span {
+  color: #b9d6df;
 
-      font-size: 11px;
+  font-size: 13px;
+}
 
-      line-height: 1.6;
 
-    }
+.sector-grid {
+  display: grid;
 
+  grid-template-columns:
+    repeat(7,1fr);
 
-    .base-meta {
+  gap: 6px;
+}
 
-      display: flex;
 
-      flex-wrap: wrap;
+.sector-box {
+  height: 31px;
 
-      gap: 6px;
+  display: grid;
 
-      margin-top: 20px;
+  place-items: center;
 
-    }
+  border:
+    1px solid rgba(255,255,255,0.12);
 
+  border-radius: 5px;
 
-    .base-meta span {
+  background:
+    rgba(255,255,255,0.045);
 
-      padding:
-        5px 8px;
+  color: #c8e1e7;
 
-      border:
-        1px solid #dde8ec;
+  font-size: 9px;
+  font-weight: 800;
+}
 
-      border-radius: 20px;
 
-      color: #607788;
+.sector-box.focus {
+  border-color:
+    rgba(120,229,231,0.55);
 
-      font-size: 8px;
+  background:
+    rgba(56,187,198,0.18);
 
-      font-weight: 700;
+  color: #96edf0;
+}
 
-    }
 
+.a21-facts {
+  display: grid;
 
-    /* =========================================================
-       INDEX CARDS
-    ========================================================= */
+  grid-template-columns:
+    repeat(3,1fr);
 
+  gap: 10px;
 
-    .indices-grid {
+  margin-top: 28px;
+}
 
-      display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+.a21-fact {
+  padding: 15px;
 
-      gap: 15px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
 
-      margin-top: 39px;
+  background: white;
+}
 
-    }
 
+.a21-fact strong {
+  display: block;
 
-    .index-card {
+  margin-bottom: 5px;
 
-      min-height: 330px;
+  color: var(--navy);
 
-      display: flex;
+  font-size: 20px;
+}
 
-      flex-direction: column;
 
-      padding: 28px;
+.a21-fact span {
+  color: var(--muted);
 
-      border:
-        1px solid var(--border);
+  font-size: 9px;
 
-      border-radius: 16px;
+  line-height: 1.4;
+}
 
-      background: white;
 
-    }
+/* =========================================================
+   BENCHMARKS
+========================================================= */
 
 
-    .index-top {
+.benchmark-grid {
+  display: grid;
 
-      display: flex;
+  grid-template-columns:
+    repeat(4,1fr);
 
-      align-items: flex-start;
+  gap: 13px;
 
-      justify-content:
-        space-between;
+  margin-top: 38px;
+}
 
-      gap: 12px;
 
-      margin-bottom: 25px;
+.benchmark-card {
+  min-height: 180px;
 
-    }
+  padding: 24px;
 
+  border: 1px solid var(--border);
+  border-radius: 14px;
 
-    .index-acronym {
+  background: white;
+}
 
-      color: var(--blue);
 
-      font-size: 24px;
+.benchmark-code {
+  margin-bottom: 20px;
 
-      font-weight: 800;
+  color: var(--blue);
 
-      line-height: 1;
+  font-size: 17px;
+  font-weight: 800;
+}
 
-    }
 
+.benchmark-card h3 {
+  margin-bottom: 8px;
 
-    .status {
+  color: var(--navy);
 
-      display: inline-flex;
+  font-size: 14px;
+}
 
-      align-items: center;
 
-      min-height: 23px;
+.benchmark-card p {
+  color: var(--muted);
 
-      padding:
-        0 8px;
+  font-size: 10px;
 
-      border-radius: 20px;
+  line-height: 1.55;
+}
 
-      font-size: 7px;
 
-      font-weight: 800;
+/* =========================================================
+   INTERPRETATION
+========================================================= */
 
-      text-transform: uppercase;
 
-      letter-spacing:
-        0.6px;
+.interpretation-grid {
+  display: grid;
 
-      white-space: nowrap;
+  grid-template-columns:
+    0.9fr 1.1fr;
 
-    }
+  gap: 30px;
 
+  margin-top: 38px;
+}
 
-    .status.applied {
 
-      background:
-        var(--success-bg);
+.interpretation-main {
+  padding: 32px;
 
-      color:
-        var(--success-text);
+  border: 1px solid #cce3e7;
+  border-radius: 18px;
 
-    }
+  background:
+    linear-gradient(
+      145deg,
+      #f4fbfc,
+      #ffffff
+    );
+}
 
 
-    .status.structured {
+.interpretation-main h3 {
+  margin-bottom: 13px;
 
-      background:
-        var(--structured-bg);
+  color: var(--navy);
 
-      color:
-        var(--structured-text);
+  font-size: 22px;
+}
 
-    }
 
+.interpretation-main p {
+  color: #536c7d;
 
-    .index-card h3 {
+  font-size: 12px;
 
-      margin-bottom: 10px;
+  line-height: 1.7;
+}
 
-      color: var(--navy);
 
-      font-size: 18px;
+.rules-list {
+  display: grid;
 
-      line-height: 1.3;
+  gap: 10px;
+}
 
-    }
 
+.rule {
+  padding: 19px 21px;
 
-    .index-sector {
+  border: 1px solid var(--border);
+  border-radius: 12px;
 
-      margin-bottom: 15px;
+  background: white;
+}
 
-      color: var(--cyan);
 
-      font-size: 9px;
+.rule strong {
+  display: block;
 
-      font-weight: 800;
+  margin-bottom: 5px;
 
-      text-transform: uppercase;
+  color: var(--navy);
 
-      letter-spacing:
-        0.8px;
+  font-size: 12px;
+}
 
-    }
 
+.rule p {
+  color: var(--muted);
 
-    .index-card p {
+  font-size: 10px;
 
-      color: var(--muted);
+  line-height: 1.55;
+}
 
-      font-size: 11px;
 
-      line-height: 1.6;
+/* =========================================================
+   CONNECTIONS
+========================================================= */
 
-    }
 
+.connections-grid {
+  display: grid;
 
-    .index-components {
+  grid-template-columns:
+    repeat(3,1fr);
 
-      display: flex;
+  gap: 14px;
 
-      flex-wrap: wrap;
+  margin-top: 38px;
+}
 
-      gap: 6px;
 
-      margin-top: 19px;
+.connection-card {
+  min-height: 190px;
 
-    }
+  display: flex;
 
+  flex-direction: column;
 
-    .index-components span {
+  padding: 27px;
 
-      padding:
-        5px 7px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
 
-      border:
-        1px solid #dbe7eb;
+  background: white;
 
-      border-radius: 7px;
+  transition: 0.2s ease;
+}
 
-      background: #f8fbfc;
 
-      color: #5a7181;
+.connection-card:hover {
+  transform: translateY(-3px);
 
-      font-size: 8px;
+  box-shadow: var(--shadow);
+}
 
-      font-weight: 700;
 
-    }
+.connection-card > span {
+  margin-bottom: 18px;
 
+  color: var(--cyan);
 
-    /* =========================================================
-       DETAILED INDEX BLOCKS
-    ========================================================= */
+  font-size: 9px;
+  font-weight: 800;
 
+  text-transform: uppercase;
 
-    .detail-grid {
+  letter-spacing: 1px;
+}
 
-      display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+.connection-card h3 {
+  margin-bottom: 8px;
 
-      gap: 18px;
+  color: var(--navy);
 
-      margin-top: 39px;
+  font-size: 18px;
+}
 
-    }
 
+.connection-card p {
+  color: var(--muted);
 
-    .detail-card {
+  font-size: 10px;
 
-      overflow: hidden;
+  line-height: 1.55;
+}
 
-      border:
-        1px solid var(--border);
 
-      border-radius: 18px;
+.connection-link {
+  margin-top: auto;
 
-      background: white;
+  padding-top: 18px;
 
-    }
+  color: var(--blue);
 
+  font-size: 10px;
+  font-weight: 800;
+}
 
-    .detail-head {
 
-      padding: 27px 30px;
+/* =========================================================
+   FOOTER
+========================================================= */
 
-      color: white;
 
-      background:
-        linear-gradient(
-          120deg,
-          #153656,
-          #1c6382
-        );
+footer {
+  padding: 33px 0 20px;
 
-    }
+  border-top: 1px solid var(--border);
 
+  background: #f8fafc;
+}
 
-    .detail-head span {
 
-      display: block;
+.footer-grid {
+  display: grid;
 
-      margin-bottom: 7px;
+  grid-template-columns:
+    1.25fr 1fr;
 
-      color: #8ae3e8;
+  gap: 35px;
 
-      font-size: 8px;
+  align-items: center;
+}
 
-      font-weight: 800;
 
-      text-transform: uppercase;
+.footer-project strong {
+  display: block;
 
-      letter-spacing:
-        1px;
+  margin-bottom: 7px;
 
-    }
+  color: var(--navy);
+}
 
 
-    .detail-head h3 {
+.footer-project p {
+  color: var(--muted);
 
-      font-size: 25px;
+  font-size: 12px;
+}
 
-    }
 
+.footer-links {
+  display: flex;
 
-    .detail-body {
+  justify-content: flex-end;
 
-      padding: 30px;
+  flex-wrap: wrap;
 
-    }
+  gap: 17px;
 
+  color: #53677a;
 
-    .detail-body > p {
+  font-size: 12px;
+}
 
-      margin-bottom: 22px;
 
-      color: var(--muted);
+.copyright {
+  margin-top: 25px;
 
-      font-size: 12px;
+  padding-top: 18px;
 
-      line-height: 1.65;
+  border-top: 1px solid var(--border);
 
-    }
+  text-align: center;
 
+  color: #8795a2;
 
-    .dimension-list {
+  font-size: 11px;
+}
 
-      display: grid;
 
-      gap: 8px;
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-    }
 
+@media (max-width: 1200px) {
 
-    .dimension {
+  .desktop-nav {
+    display: none;
+  }
 
-      display: grid;
+  .mobile-toggle {
+    display: block;
+  }
 
-      grid-template-columns:
-        70px 1fr;
+  .page-hero-inner {
+    grid-template-columns: 1fr;
+  }
 
-      gap: 13px;
+  .data-card {
+    max-width: 700px;
+  }
 
-      align-items: center;
+  .measurement-flow {
+    grid-template-columns:
+      repeat(3,1fr);
+  }
 
-      padding:
-        11px 13px;
+  .measurement-step::after {
+    display: none;
+  }
 
-      border:
-        1px solid #e0e9ed;
+  .indices-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
 
-      border-radius: 9px;
+  .benchmark-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
 
-      background: #fafcfd;
+}
 
-    }
 
+@media (max-width: 900px) {
 
-    .dimension strong {
+  .source-grid,
+  .detail-grid,
+  .a21-layout,
+  .interpretation-grid {
+    grid-template-columns: 1fr;
+  }
 
-      color: var(--blue);
+  .bases-grid,
+  .connections-grid {
+    grid-template-columns: 1fr;
+  }
 
-      font-size: 10px;
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 
-    }
+  .footer-links {
+    justify-content: flex-start;
+  }
 
+}
 
-    .dimension span {
 
-      color: #566f80;
+@media (max-width: 650px) {
 
-      font-size: 10px;
+  .brand-text small {
+    display: none;
+  }
 
-    }
+  .language {
+    display: none;
+  }
 
+  .page-hero-inner {
+    padding: 58px 0;
+  }
 
-    .formula {
+  h1 {
+    font-size: 42px;
+  }
 
-      margin-top: 19px;
+  .data-card-grid,
+  .measurement-flow,
+  .indices-grid,
+  .benchmark-grid {
+    grid-template-columns: 1fr;
+  }
 
-      padding:
-        15px 17px;
+  .sector-grid {
+    grid-template-columns:
+      repeat(4,1fr);
+  }
 
-      border-left:
-        3px solid var(--turquoise);
+  .a21-facts {
+    grid-template-columns: 1fr;
+  }
 
-      background: #f3f9fa;
+}
 
-      color: #506b7c;
-
-      font-size: 11px;
-
-      line-height: 1.6;
-
-    }
-
-
-    /* =========================================================
-       A21 DATA
-    ========================================================= */
-
-
-    .a21-layout {
-
-      display: grid;
-
-      grid-template-columns:
-        0.83fr 1.17fr;
-
-      gap: 55px;
-
-      align-items: center;
-
-    }
-
-
-    .a21-visual {
-
-      position: relative;
-
-      overflow: hidden;
-
-      padding: 32px;
-
-      border-radius: 20px;
-
-      color: white;
-
-      background:
-        linear-gradient(
-          145deg,
-          #173554,
-          #2c5776
-        );
-
-    }
-
-
-    .a21-visual::before {
-
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
-      background-image:
-
-        linear-gradient(
-          rgba(135, 212, 225, 0.035) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          90deg,
-          rgba(135, 212, 225, 0.035) 1px,
-          transparent 1px
-        );
-
-      background-size:
-        46px 46px;
-
-    }
-
-
-    .a21-inner {
-
-      position: relative;
-
-      z-index: 2;
-
-    }
-
-
-    .a21-label {
-
-      margin-bottom: 21px;
-
-      color: #87e6ea;
-
-      font-size: 9px;
-
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing:
-        1.2px;
-
-    }
-
-
-    .a21-number {
-
-      display: flex;
-
-      align-items: baseline;
-
-      gap: 10px;
-
-      margin-bottom: 22px;
-
-    }
-
-
-    .a21-number strong {
-
-      font-size: 68px;
-
-      line-height: 1;
-
-    }
-
-
-    .a21-number span {
-
-      color: #b9d6df;
-
-      font-size: 13px;
-
-    }
-
-
-    .sector-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(7, 1fr);
-
-      gap: 6px;
-
-    }
-
-
-    .sector-box {
-
-      height: 31px;
-
-      display: grid;
-
-      place-items: center;
-
-      border:
-        1px solid rgba(255,255,255,0.12);
-
-      border-radius: 5px;
-
-      background:
-        rgba(255,255,255,0.045);
-
-      color: #c8e1e7;
-
-      font-size: 9px;
-
-      font-weight: 800;
-
-    }
-
-
-    .sector-box.focus {
-
-      border-color:
-        rgba(120, 229, 231, 0.55);
-
-      background:
-        rgba(56, 187, 198, 0.18);
-
-      color: #96edf0;
-
-    }
-
-
-    .a21-facts {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 10px;
-
-      margin-top: 28px;
-
-    }
-
-
-    .a21-fact {
-
-      padding: 15px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 11px;
-
-      background: white;
-
-    }
-
-
-    .a21-fact strong {
-
-      display: block;
-
-      margin-bottom: 5px;
-
-      color: var(--navy);
-
-      font-size: 20px;
-
-    }
-
-
-    .a21-fact span {
-
-      color: var(--muted);
-
-      font-size: 9px;
-
-      line-height: 1.4;
-
-    }
-
-
-    /* =========================================================
-       BENCHMARKS
-    ========================================================= */
-
-
-    .benchmark-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 13px;
-
-      margin-top: 38px;
-
-    }
-
-
-    .benchmark-card {
-
-      min-height: 180px;
-
-      padding: 24px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 14px;
-
-      background: white;
-
-    }
-
-
-    .benchmark-code {
-
-      margin-bottom: 20px;
-
-      color: var(--blue);
-
-      font-size: 17px;
-
-      font-weight: 800;
-
-    }
-
-
-    .benchmark-card h3 {
-
-      margin-bottom: 8px;
-
-      color: var(--navy);
-
-      font-size: 14px;
-
-    }
-
-
-    .benchmark-card p {
-
-      color: var(--muted);
-
-      font-size: 10px;
-
-      line-height: 1.55;
-
-    }
-
-
-    /* =========================================================
-       INTERPRETATION RULES
-    ========================================================= */
-
-
-    .interpretation-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        0.9fr 1.1fr;
-
-      gap: 30px;
-
-      margin-top: 38px;
-
-    }
-
-
-    .interpretation-main {
-
-      padding: 32px;
-
-      border:
-        1px solid #cce3e7;
-
-      border-radius: 18px;
-
-      background:
-        linear-gradient(
-          145deg,
-          #f4fbfc,
-          #ffffff
-        );
-
-    }
-
-
-    .interpretation-main h3 {
-
-      margin-bottom: 13px;
-
-      color: var(--navy);
-
-      font-size: 22px;
-
-    }
-
-
-    .interpretation-main p {
-
-      color: #536c7d;
-
-      font-size: 12px;
-
-      line-height: 1.7;
-
-    }
-
-
-    .rules-list {
-
-      display: grid;
-
-      gap: 10px;
-
-    }
-
-
-    .rule {
-
-      padding:
-        19px 21px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 12px;
-
-      background: white;
-
-    }
-
-
-    .rule strong {
-
-      display: block;
-
-      margin-bottom: 5px;
-
-      color: var(--navy);
-
-      font-size: 12px;
-
-    }
-
-
-    .rule p {
-
-      color: var(--muted);
-
-      font-size: 10px;
-
-      line-height: 1.55;
-
-    }
-
-
-    /* =========================================================
-       CONNECTIONS
-    ========================================================= */
-
-
-    .connections-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 14px;
-
-      margin-top: 38px;
-
-    }
-
-
-    .connection-card {
-
-      min-height: 190px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      padding: 27px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 15px;
-
-      background: white;
-
-      transition:
-        0.2s ease;
-
-    }
-
-
-    .connection-card:hover {
-
-      transform:
-        translateY(-3px);
-
-      box-shadow:
-        var(--shadow);
-
-    }
-
-
-    .connection-card > span {
-
-      margin-bottom: 18px;
-
-      color: var(--cyan);
-
-      font-size: 9px;
-
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing:
-        1px;
-
-    }
-
-
-    .connection-card h3 {
-
-      margin-bottom: 8px;
-
-      color: var(--navy);
-
-      font-size: 18px;
-
-    }
-
-
-    .connection-card p {
-
-      color: var(--muted);
-
-      font-size: 10px;
-
-      line-height: 1.55;
-
-    }
-
-
-    .connection-link {
-
-      margin-top: auto;
-
-      padding-top: 18px;
-
-      color: var(--blue);
-
-      font-size: 10px;
-
-      font-weight: 800;
-
-    }
-
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-
-    footer {
-
-      padding:
-        33px 0 20px;
-
-      border-top:
-        1px solid var(--border);
-
-      background:
-        #f8fafc;
-
-    }
-
-
-    .footer-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        1.25fr 1fr;
-
-      gap: 35px;
-
-      align-items: center;
-
-    }
-
-
-    .footer-project strong {
-
-      display: block;
-
-      margin-bottom: 7px;
-
-      color: var(--navy);
-
-    }
-
-
-    .footer-project p {
-
-      color: var(--muted);
-
-      font-size: 12px;
-
-    }
-
-
-    .footer-links {
-
-      display: flex;
-
-      justify-content:
-        flex-end;
-
-      flex-wrap: wrap;
-
-      gap: 17px;
-
-      color: #53677a;
-
-      font-size: 12px;
-
-    }
-
-
-    .copyright {
-
-      margin-top: 25px;
-
-      padding-top: 18px;
-
-      border-top:
-        1px solid var(--border);
-
-      text-align: center;
-
-      color: #8795a2;
-
-      font-size: 11px;
-
-    }
-
-
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
-
-
-    @media (max-width: 1200px) {
-
-      .desktop-nav {
-        display: none;
-      }
-
-
-      .mobile-toggle {
-        display: block;
-      }
-
-
-      .page-hero-inner {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .data-card {
-        max-width: 700px;
-      }
-
-
-      .measurement-flow {
-        grid-template-columns:
-          repeat(3, 1fr);
-      }
-
-
-      .measurement-step::after {
-        display: none;
-      }
-
-
-      .indices-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-
-      .benchmark-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-    }
-
-
-    @media (max-width: 900px) {
-
-      .source-grid,
-      .detail-grid,
-      .a21-layout,
-      .interpretation-grid {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .bases-grid,
-      .connections-grid {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .footer-grid {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .footer-links {
-        justify-content:
-          flex-start;
-      }
-
-    }
-
-
-    @media (max-width: 650px) {
-
-      .brand-text small {
-        display: none;
-      }
-
-
-      .language {
-        display: none;
-      }
-
-
-      .page-hero-inner {
-        padding:
-          58px 0;
-      }
-
-
-      h1 {
-        font-size: 42px;
-      }
-
-
-      .data-card-grid,
-      .measurement-flow,
-      .indices-grid,
-      .benchmark-grid {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .sector-grid {
-        grid-template-columns:
-          repeat(4, 1fr);
-      }
-
-
-      .a21-facts {
-        grid-template-columns:
-          1fr;
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
@@ -2292,15 +1866,9 @@
 <body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
-
 <header>
 
   <div class="container navbar">
-
 
     <a
       href="index.html"
@@ -2313,7 +1881,6 @@
         <span></span>
         <span></span>
       </div>
-
 
       <div class="brand-text">
 
@@ -2357,7 +1924,7 @@
 
         <button type="button">
 
-          Анализи
+          Аналитични разрези
 
           <span class="dropdown-arrow">
             ▼
@@ -2369,11 +1936,11 @@
         <div class="dropdown-menu">
 
           <a href="regions.html">
-            Регионален анализ
+            Региони
           </a>
 
           <a href="areas.html">
-            Секторен анализ
+            Сектори
           </a>
 
         </div>
@@ -2429,23 +1996,27 @@
       Данни и индекси
     </a>
 
+
     <div class="mobile-group-label">
-      Анализи
+      Аналитични разрези
     </div>
+
 
     <a
       class="mobile-sub"
       href="regions.html"
     >
-      Регионален анализ
+      Региони
     </a>
+
 
     <a
       class="mobile-sub"
       href="areas.html"
     >
-      Секторен анализ
+      Сектори
     </a>
+
 
     <a href="results.html">
       Резултати
@@ -2463,15 +2034,11 @@
 <main>
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
-
+<!-- HERO -->
 
 <section class="page-hero">
 
   <div class="container page-hero-inner">
-
 
     <div>
 
@@ -2479,11 +2046,9 @@
         Измервателна инфраструктура · Проект № 6/2024
       </div>
 
-
       <h1>
         Данни и индекси
       </h1>
-
 
       <p class="hero-description">
 
@@ -2502,14 +2067,11 @@
 
     <aside class="data-card">
 
-
       <div class="data-card-label">
         Емпиричен обхват
       </div>
 
-
       <div class="data-card-grid">
-
 
         <div class="data-stat">
 
@@ -2531,8 +2093,7 @@
           </strong>
 
           <span>
-            респонденти
-            в здравеопазването
+            респонденти в здравеопазването
           </span>
 
         </div>
@@ -2545,8 +2106,7 @@
           </strong>
 
           <span>
-            предприятия
-            в бизнес изследването
+            предприятия в бизнес изследването
           </span>
 
         </div>
@@ -2559,12 +2119,10 @@
           </strong>
 
           <span>
-            секторни индексни
-            и измервателни рамки
+            секторни индексни и измервателни рамки
           </span>
 
         </div>
-
 
       </div>
 
@@ -2575,30 +2133,24 @@
 </section>
 
 
-<!-- =========================================================
-     MEASUREMENT LOGIC
-========================================================= -->
-
+<!-- MEASUREMENT LOGIC -->
 
 <section class="standard-section">
 
   <div class="container">
 
-
     <div class="section-label">
       Логика на измерване
     </div>
-
 
     <h2 class="section-title">
       От наблюдението към аналитичния измерител
     </h2>
 
-
     <p class="section-description">
 
-      Данните в проекта се организират
-      така, че отделните наблюдавани показатели
+      Данните в проекта се организират така,
+      че отделните наблюдавани показатели
       да могат да бъдат свързани
       с по-широките измерения
       на дигиталната готовност,
@@ -2609,7 +2161,6 @@
 
 
     <div class="measurement-flow">
-
 
       <div class="measurement-step">
 
@@ -2622,8 +2173,7 @@
         </h3>
 
         <p>
-          анкети,
-          официална статистика
+          анкети, официална статистика
           и институционални данни
         </p>
 
@@ -2642,8 +2192,7 @@
 
         <p>
           наблюдаема характеристика
-          на технология,
-          ресурс или резултат
+          на технология, ресурс или резултат
         </p>
 
       </div>
@@ -2660,10 +2209,8 @@
         </h3>
 
         <p>
-          инфраструктура,
-          умения,
-          използване
-          или капацитет
+          инфраструктура, умения,
+          използване или капацитет
         </p>
 
       </div>
@@ -2680,8 +2227,7 @@
         </h3>
 
         <p>
-          агрегирана
-          или структурирана
+          агрегирана или структурирана
           секторна оценка
         </p>
 
@@ -2699,13 +2245,11 @@
         </h3>
 
         <p>
-          различия,
-          зависимости
+          различия, зависимости
           и стратегически изводи
         </p>
 
       </div>
-
 
     </div>
 
@@ -2714,25 +2258,19 @@
 </section>
 
 
-<!-- =========================================================
-     DATA SOURCES
-========================================================= -->
-
+<!-- DATA SOURCES -->
 
 <section class="standard-section section-alt">
 
   <div class="container">
 
-
     <div class="section-label">
       Източници на данни
     </div>
 
-
     <h2 class="section-title">
       Първични и вторични източници
     </h2>
-
 
     <p class="section-description">
 
@@ -2748,18 +2286,15 @@
 
     <div class="source-grid">
 
-
       <article class="source-card">
 
         <div class="source-type">
           Първични данни
         </div>
 
-
         <h3>
           Собствени емпирични изследвания
         </h3>
-
 
         <p>
 
@@ -2803,11 +2338,9 @@
           Вторични данни
         </div>
 
-
         <h3>
           Официални и сравнителни данни
         </h3>
-
 
         <p>
 
@@ -2843,7 +2376,6 @@
 
       </article>
 
-
     </div>
 
   </div>
@@ -2851,25 +2383,19 @@
 </section>
 
 
-<!-- =========================================================
-     EMPIRICAL BASES
-========================================================= -->
-
+<!-- EMPIRICAL BASES -->
 
 <section class="standard-section">
 
   <div class="container">
 
-
     <div class="section-label">
       Емпирични бази
     </div>
 
-
     <h2 class="section-title">
       Основни масиви от данни
     </h2>
-
 
     <p class="section-description">
 
@@ -2886,7 +2412,6 @@
 
 
     <div class="bases-grid">
-
 
       <article class="base-card">
 
@@ -3026,7 +2551,6 @@
 
       </article>
 
-
     </div>
 
   </div>
@@ -3034,25 +2558,19 @@
 </section>
 
 
-<!-- =========================================================
-     SECTOR INDICES
-========================================================= -->
-
+<!-- SECTOR INDICES -->
 
 <section class="standard-section section-alt">
 
   <div class="container">
 
-
     <div class="section-label">
       Секторни измерители
     </div>
 
-
     <h2 class="section-title">
       Пет адаптирани измервателни рамки
     </h2>
-
 
     <p class="section-description">
 
@@ -3061,15 +2579,14 @@
       се операционализира различно
       в отделните изследователски направления.
       Поради това проектът не използва
-      един универсален индекс за всички системи.
+      един универсален индекс
+      за всички системи.
 
     </p>
 
 
     <div class="indices-grid">
 
-
-      <!-- RDRI -->
 
       <article class="index-card">
 
@@ -3085,16 +2602,13 @@
 
         </div>
 
-
         <div class="index-sector">
           Образование
         </div>
 
-
         <h3>
           Regional Digital Readiness Index
         </h3>
-
 
         <p>
 
@@ -3109,20 +2623,15 @@
 
         </p>
 
-
         <div class="index-components">
-
           <span>DII</span>
           <span>DEI</span>
           <span>DCI</span>
           <span>DOI</span>
-
         </div>
 
       </article>
 
-
-      <!-- DRI-H -->
 
       <article class="index-card">
 
@@ -3138,16 +2647,13 @@
 
         </div>
 
-
         <div class="index-sector">
           Здравеопазване
         </div>
 
-
         <h3>
           Digital Readiness Index – Healthcare
         </h3>
-
 
         <p>
 
@@ -3162,20 +2668,15 @@
 
         </p>
 
-
         <div class="index-components">
-
           <span>технологии</span>
           <span>умения</span>
           <span>организация</span>
           <span>ефекти</span>
-
         </div>
 
       </article>
 
-
-      <!-- BDM -->
 
       <article class="index-card">
 
@@ -3191,16 +2692,13 @@
 
         </div>
 
-
         <div class="index-sector">
           Бизнес
         </div>
 
-
         <h3>
           Business Digital Maturity / Intensity
         </h3>
-
 
         <p>
 
@@ -3214,20 +2712,15 @@
 
         </p>
 
-
         <div class="index-components">
-
           <span>технологии</span>
           <span>инвестиции</span>
           <span>интеграция</span>
           <span>зрялост</span>
-
         </div>
 
       </article>
 
-
-      <!-- ODCR -->
 
       <article class="index-card">
 
@@ -3243,16 +2736,13 @@
 
         </div>
 
-
         <div class="index-sector">
           Традиционни индустрии
         </div>
 
-
         <h3>
           Organizational Digital Change Readiness
         </h3>
-
 
         <p>
 
@@ -3266,20 +2756,15 @@
 
         </p>
 
-
         <div class="index-components">
-
           <span>промяна</span>
           <span>хора</span>
           <span>процеси</span>
           <span>управление</span>
-
         </div>
 
       </article>
 
-
-      <!-- DVEI -->
 
       <article class="index-card">
 
@@ -3295,16 +2780,13 @@
 
         </div>
 
-
         <div class="index-sector">
           Граждански сектор
         </div>
 
-
         <h3>
           Digital Volunteering / NGO Evaluation Framework
         </h3>
-
 
         <p>
 
@@ -3319,20 +2801,15 @@
 
         </p>
 
-
         <div class="index-components">
-
           <span>НПО</span>
           <span>доброволчество</span>
           <span>умения</span>
           <span>цифрови инструменти</span>
-
         </div>
 
       </article>
 
-
-      <!-- MULTILEVEL -->
 
       <article class="index-card">
 
@@ -3348,16 +2825,13 @@
 
         </div>
 
-
         <div class="index-sector">
           Проектно равнище
         </div>
 
-
         <h3>
           Multilevel Digital Competitiveness Framework
         </h3>
-
 
         <p>
 
@@ -3366,22 +2840,19 @@
           чрез една аналитична логика:
           ресурси → способности →
           ефективно използване →
-          резултати → дигитална конкурентоспособност.
+          резултати →
+          дигитална конкурентоспособност.
 
         </p>
 
-
         <div class="index-components">
-
           <span>national</span>
           <span>regional</span>
           <span>sectoral</span>
           <span>organizational</span>
-
         </div>
 
       </article>
-
 
     </div>
 
@@ -3390,25 +2861,19 @@
 </section>
 
 
-<!-- =========================================================
-     RDRI AND DRI-H
-========================================================= -->
-
+<!-- RDRI AND DRI-H -->
 
 <section class="standard-section">
 
   <div class="container">
 
-
     <div class="section-label">
       Приложени индекси
     </div>
 
-
     <h2 class="section-title">
       RDRI и DRI-H
     </h2>
-
 
     <p class="section-description">
 
@@ -3424,8 +2889,6 @@
 
     <div class="detail-grid">
 
-
-      <!-- RDRI DETAIL -->
 
       <article class="detail-card">
 
@@ -3455,7 +2918,6 @@
 
 
           <div class="dimension-list">
-
 
             <div class="dimension">
 
@@ -3508,7 +2970,6 @@
 
             </div>
 
-
           </div>
 
 
@@ -3531,8 +2992,6 @@
 
       </article>
 
-
-      <!-- DRI-H DETAIL -->
 
       <article class="detail-card">
 
@@ -3564,7 +3023,6 @@
 
 
           <div class="dimension-list">
-
 
             <div class="dimension">
 
@@ -3617,7 +3075,6 @@
 
             </div>
 
-
           </div>
 
 
@@ -3640,7 +3097,6 @@
 
       </article>
 
-
     </div>
 
   </div>
@@ -3648,28 +3104,21 @@
 </section>
 
 
-<!-- =========================================================
-     A21 SECTOR DATA
-========================================================= -->
-
+<!-- A21 -->
 
 <section class="standard-section section-alt">
 
   <div class="container a21-layout">
 
-
     <div>
-
 
       <div class="section-label">
         Официални секторни данни
       </div>
 
-
       <h2 class="section-title">
         21 икономически сектора · 2020–2025
       </h2>
-
 
       <p class="section-description">
 
@@ -3684,7 +3133,6 @@
 
 
       <div class="a21-facts">
-
 
         <div class="a21-fact">
 
@@ -3724,7 +3172,6 @@
 
         </div>
 
-
       </div>
 
 
@@ -3735,20 +3182,16 @@
         Отвори секторния анализ →
       </a>
 
-
     </div>
 
 
     <div class="a21-visual">
 
-
       <div class="a21-inner">
-
 
         <div class="a21-label">
           A*21 sector explorer
         </div>
-
 
         <div class="a21-number">
 
@@ -3791,36 +3234,28 @@
 
         </div>
 
-
       </div>
 
     </div>
-
 
   </div>
 
 </section>
 
 
-<!-- =========================================================
-     INTERNATIONAL BENCHMARKS
-========================================================= -->
-
+<!-- INTERNATIONAL BENCHMARKS -->
 
 <section class="standard-section">
 
   <div class="container">
 
-
     <div class="section-label">
       Референтни рамки
     </div>
 
-
     <h2 class="section-title">
       Международен контекст
     </h2>
-
 
     <p class="section-description">
 
@@ -3990,7 +3425,6 @@
 
       </article>
 
-
     </div>
 
   </div>
@@ -3998,25 +3432,19 @@
 </section>
 
 
-<!-- =========================================================
-     INTERPRETATION
-========================================================= -->
-
+<!-- INTERPRETATION -->
 
 <section class="standard-section section-alt">
 
   <div class="container">
 
-
     <div class="section-label">
       Правила за интерпретация
     </div>
 
-
     <h2 class="section-title">
       Какво показват индексите – и какво не показват
     </h2>
-
 
     <p class="section-description">
 
@@ -4031,7 +3459,6 @@
 
 
     <div class="interpretation-grid">
-
 
       <div class="interpretation-main">
 
@@ -4061,7 +3488,6 @@
 
 
       <div class="rules-list">
-
 
         <div class="rule">
 
@@ -4135,7 +3561,6 @@
 
         </div>
 
-
       </div>
 
     </div>
@@ -4145,25 +3570,19 @@
 </section>
 
 
-<!-- =========================================================
-     CONNECTIONS
-========================================================= -->
-
+<!-- CONNECTIONS -->
 
 <section class="standard-section">
 
   <div class="container">
 
-
     <div class="section-label">
       Продължи анализа
     </div>
 
-
     <h2 class="section-title">
       От измерването към анализа
     </h2>
-
 
     <p class="section-description">
 
@@ -4259,9 +3678,7 @@
 
       </a>
 
-
     </div>
-
 
   </div>
 
@@ -4271,18 +3688,11 @@
 </main>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-
 <footer>
 
   <div class="container">
 
-
     <div class="footer-grid">
-
 
       <div class="footer-project">
 
@@ -4339,7 +3749,6 @@
 
       </div>
 
-
     </div>
 
 
@@ -4350,7 +3759,6 @@
 
     </div>
 
-
   </div>
 
 </footer>
@@ -4360,12 +3768,10 @@
 
 (function(){
 
-
   const mobileToggle =
     document.getElementById(
       "mobileToggle"
     );
-
 
   const mobileMenu =
     document.getElementById(
@@ -4373,37 +3779,43 @@
     );
 
 
-  mobileToggle.addEventListener(
-    "click",
-    function(){
+  if (
+    mobileToggle &&
+    mobileMenu
+  ) {
 
-      mobileMenu.style.display =
-        mobileMenu.style.display === "block"
-        ? "none"
-        : "block";
+    mobileToggle.addEventListener(
+      "click",
+      function(){
 
-    }
-  );
-
-
-  mobileMenu
-    .querySelectorAll("a")
-    .forEach(
-      function(link){
-
-        link.addEventListener(
-          "click",
-          function(){
-
-            mobileMenu.style.display =
-              "none";
-
-          }
-        );
+        mobileMenu.style.display =
+          mobileMenu.style.display === "block"
+          ? "none"
+          : "block";
 
       }
     );
 
+
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach(
+        function(link){
+
+          link.addEventListener(
+            "click",
+            function(){
+
+              mobileMenu.style.display =
+                "none";
+
+            }
+          );
+
+        }
+      );
+
+  }
 
 })();
 
@@ -4411,5 +3823,4 @@
 
 
 </body>
-
 </html>
