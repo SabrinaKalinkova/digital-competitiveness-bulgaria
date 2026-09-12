@@ -36,6 +36,7 @@
 
   --white:#ffffff;
   --background:#f5f8fb;
+  --background-soft:#eef5f9;
 
   --border:#dce7ef;
 
@@ -905,7 +906,7 @@ h1 {
 
 
 /* =========================================================
-   COVERAGE NOTE
+   INFO BOX
 ========================================================= */
 
 
@@ -1142,7 +1143,7 @@ h1 {
   display:grid;
 
   grid-template-columns:
-    repeat(3,1fr);
+    repeat(4,1fr);
 
   gap:13px;
 
@@ -1190,9 +1191,9 @@ h1 {
 
   color:var(--navy);
 
-  font-size:25px;
+  font-size:23px;
 
-  line-height:1.1;
+  line-height:1.15;
 
 }
 
@@ -1216,7 +1217,7 @@ h1 {
 
   color:#7a8b98;
 
-  font-size:18px;
+  font-size:17px;
 
 }
 
@@ -1575,6 +1576,464 @@ h1 {
 
 
 /* =========================================================
+   YEAR COMPARISON MODULE
+========================================================= */
+
+
+.year-compare-shell {
+
+  margin-top:38px;
+
+  overflow:hidden;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:22px;
+
+  background:white;
+
+  box-shadow:
+    var(--shadow);
+
+}
+
+
+.year-compare-toolbar {
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:15px;
+
+  padding:25px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  background:#f8fbfc;
+
+}
+
+
+.year-compare-main {
+
+  padding:28px;
+
+}
+
+
+.compare-heading {
+
+  margin-bottom:24px;
+
+}
+
+
+.compare-heading span {
+
+  display:block;
+
+  margin-bottom:5px;
+
+  color:var(--cyan);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+}
+
+
+.compare-heading h3 {
+
+  color:var(--navy);
+
+  font-size:24px;
+
+  line-height:1.3;
+
+}
+
+
+.compare-heading p {
+
+  margin-top:6px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+}
+
+
+.compare-kpis {
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:12px;
+
+  margin-bottom:25px;
+
+}
+
+
+.compare-kpi {
+
+  padding:19px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:13px;
+
+  background:#fbfdfe;
+
+}
+
+
+.compare-kpi-label {
+
+  margin-bottom:8px;
+
+  color:#8597a5;
+
+  font-size:9px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+}
+
+
+.compare-kpi strong {
+
+  display:block;
+
+  color:var(--navy);
+
+  font-size:21px;
+
+  line-height:1.2;
+
+}
+
+
+.compare-kpi strong.positive {
+
+  color:#167f77;
+
+}
+
+
+.compare-kpi strong.negative {
+
+  color:#a15151;
+
+}
+
+
+.compare-kpi strong.na {
+
+  color:#8797a3;
+
+  font-size:15px;
+
+}
+
+
+.compare-kpi small {
+
+  display:block;
+
+  margin-top:6px;
+
+  color:var(--muted);
+
+  font-size:9px;
+
+  line-height:1.4;
+
+}
+
+
+/* =========================================================
+   VISUAL YEAR COMPARISON
+========================================================= */
+
+
+.year-bars {
+
+  padding:22px;
+
+  margin-bottom:27px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:15px;
+
+  background:white;
+
+}
+
+
+.year-bars-title {
+
+  margin-bottom:18px;
+
+}
+
+
+.year-bars-title strong {
+
+  display:block;
+
+  color:var(--navy);
+
+  font-size:15px;
+
+}
+
+
+.year-bars-title span {
+
+  color:var(--muted);
+
+  font-size:10px;
+
+}
+
+
+.year-bar-row {
+
+  display:grid;
+
+  grid-template-columns:
+    62px 1fr 150px;
+
+  gap:13px;
+
+  align-items:center;
+
+  margin-top:13px;
+
+}
+
+
+.year-bar-year {
+
+  color:var(--navy);
+
+  font-size:12px;
+
+  font-weight:800;
+
+}
+
+
+.year-bar-track {
+
+  height:12px;
+
+  overflow:hidden;
+
+  border-radius:20px;
+
+  background:#e8eff3;
+
+}
+
+
+.year-bar-fill {
+
+  height:100%;
+
+  min-width:0;
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      var(--turquoise)
+    );
+
+}
+
+
+.year-bar-value {
+
+  color:var(--blue);
+
+  font-size:11px;
+
+  font-weight:800;
+
+  text-align:right;
+
+}
+
+
+/* =========================================================
+   COMPARISON TABLE
+========================================================= */
+
+
+.compare-table-wrap {
+
+  overflow-x:auto;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:15px;
+
+}
+
+
+.compare-table {
+
+  width:100%;
+
+  min-width:900px;
+
+  border-collapse:collapse;
+
+}
+
+
+.compare-table thead {
+
+  background:#f4f8fa;
+
+}
+
+
+.compare-table th {
+
+  padding:13px 14px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  color:#617789;
+
+  font-size:9px;
+
+  font-weight:800;
+
+  text-align:right;
+
+  text-transform:uppercase;
+
+  letter-spacing:.7px;
+
+}
+
+
+.compare-table th:first-child {
+
+  text-align:left;
+
+}
+
+
+.compare-table td {
+
+  padding:13px 14px;
+
+  border-bottom:
+    1px solid #edf2f5;
+
+  color:#536b7c;
+
+  font-size:10px;
+
+  text-align:right;
+
+  vertical-align:middle;
+
+}
+
+
+.compare-table td:first-child {
+
+  max-width:320px;
+
+  color:var(--navy);
+
+  font-weight:700;
+
+  text-align:left;
+
+}
+
+
+.compare-table tr:last-child td {
+
+  border-bottom:none;
+
+}
+
+
+.compare-table tr:hover td {
+
+  background:#fbfdfe;
+
+}
+
+
+.delta-positive {
+
+  color:#167f77 !important;
+
+  font-weight:800;
+
+}
+
+
+.delta-negative {
+
+  color:#a15151 !important;
+
+  font-weight:800;
+
+}
+
+
+.delta-neutral {
+
+  color:#617789 !important;
+
+  font-weight:700;
+
+}
+
+
+.na-cell {
+
+  color:#a0adb7 !important;
+
+  font-style:italic;
+
+}
+
+
+/* =========================================================
    INTERPRETATION
 ========================================================= */
 
@@ -1899,6 +2358,12 @@ footer {
       repeat(3,1fr);
   }
 
+  .kpi-grid,
+  .compare-kpis {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
 }
 
 
@@ -1920,13 +2385,19 @@ footer {
     grid-column:1/-1;
   }
 
-  .kpi-grid {
-    grid-template-columns:1fr;
-  }
-
   .metric-cards {
     grid-template-columns:
       repeat(2,1fr);
+  }
+
+  .year-bar-row {
+    grid-template-columns:
+      50px 1fr;
+  }
+
+  .year-bar-value {
+    grid-column:2;
+    text-align:left;
   }
 
   .footer-grid {
@@ -1958,7 +2429,10 @@ footer {
 
   .hero-stats,
   .explorer-toolbar,
-  .metric-cards {
+  .metric-cards,
+  .kpi-grid,
+  .compare-kpis,
+  .year-compare-toolbar {
     grid-template-columns:1fr;
   }
 
@@ -2211,7 +2685,8 @@ footer {
         на 21 икономически дейности
         в България по A*21 / NACE Rev. 2.
         Данните позволяват
-        наблюдение на секторната динамика
+        наблюдение на секторната динамика,
+        сравнение между години
         и сравнителен анализ
         за периода 2020–2025 г.
 
@@ -2471,9 +2946,8 @@ footer {
 
       Избери икономическа дейност,
       показател и година.
-      Модулът показва
-      текущата стойност,
-      промяната във времето,
+      Модулът показва текущата стойност,
+      абсолютната и относителната промяна,
       динамиката за периода,
       сравнението с останалите сектори
       и пълния наличен профил
@@ -2529,7 +3003,6 @@ footer {
 
       <div class="explorer-main">
 
-
         <div id="explorerContent">
 
           <div
@@ -2542,7 +3015,6 @@ footer {
           </div>
 
         </div>
-
 
       </div>
 
@@ -2586,11 +3058,130 @@ footer {
 
 
 <!-- =========================================================
+     YEAR COMPARISON
+========================================================= -->
+
+
+<section
+  class="standard-section"
+  id="yearComparison"
+>
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Динамичен анализ
+    </div>
+
+
+    <h2 class="section-title">
+      Сравнение между години
+    </h2>
+
+
+    <p class="section-description">
+
+      Избери две години,
+      за да сравниш избрания сектор
+      и избрания показател.
+      Под визуалното сравнение
+      се показва и пълна таблица
+      за всички налични показатели,
+      включваща абсолютна
+      и относителна промяна.
+
+    </p>
+
+
+    <div class="year-compare-shell">
+
+
+      <div class="year-compare-toolbar">
+
+
+        <div class="control">
+
+          <label for="baseYearSelect">
+            Базова година
+          </label>
+
+          <select id="baseYearSelect">
+          </select>
+
+        </div>
+
+
+        <div class="control">
+
+          <label for="compareYearSelect">
+            Сравнителна година
+          </label>
+
+          <select id="compareYearSelect">
+          </select>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="year-compare-main">
+
+        <div id="yearCompareContent">
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="coverage-box">
+
+      <div class="coverage-icon">
+        %
+      </div>
+
+      <div>
+
+        <h4>
+          Как се изчислява промяната?
+        </h4>
+
+        <p>
+
+          За стойностни показатели
+          се показват абсолютна
+          и процентна промяна.
+          При показатели,
+          измерени в проценти,
+          абсолютната промяна
+          се представя в процентни пункта,
+          а относителната промяна –
+          в проценти спрямо базовата година.
+          Когато базовата стойност е 0,
+          относителната промяна
+          е математически неприложима.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
      INTERPRETATION
 ========================================================= -->
 
 
-<section class="standard-section">
+<section class="standard-section section-alt">
 
   <div class="container">
 
@@ -2674,6 +3265,27 @@ footer {
         <div class="rule">
 
           <strong>
+            Разграничавай пр.п. от %
+          </strong>
+
+          <p>
+
+            При показатели,
+            които вече са проценти,
+            абсолютната разлика
+            се представя
+            в процентни пункта,
+            а относителната промяна
+            в проценти.
+
+          </p>
+
+        </div>
+
+
+        <div class="rule">
+
+          <strong>
             Следи наличността на данните
           </strong>
 
@@ -2702,27 +3314,6 @@ footer {
             че съответната технология
             или икономическа активност
             отсъства.
-
-          </p>
-
-        </div>
-
-
-        <div class="rule">
-
-          <strong>
-            Отчитай секторния контекст
-          </strong>
-
-          <p>
-
-            Еднакво равнище
-            на цифров показател
-            може да има различно значение
-            в информационните услуги,
-            строителството,
-            търговията
-            или хотелиерството.
 
           </p>
 
@@ -2931,7 +3522,7 @@ if(
 
 
 /* =========================================================
-   A*21 EXPLORER
+   ELEMENTS
 ========================================================= */
 
 
@@ -2953,9 +3544,27 @@ const yearSelect =
   );
 
 
+const baseYearSelect =
+  document.getElementById(
+    "baseYearSelect"
+  );
+
+
+const compareYearSelect =
+  document.getElementById(
+    "compareYearSelect"
+  );
+
+
 const explorerContent =
   document.getElementById(
     "explorerContent"
+  );
+
+
+const yearCompareContent =
+  document.getElementById(
+    "yearCompareContent"
   );
 
 
@@ -3119,34 +3728,6 @@ function decimalsForUnit(unit){
   }
 
 
-  if(
-    unit === "млн. евро"
-  ){
-    return 2;
-  }
-
-
-  if(
-    unit === "хил. лица"
-  ){
-    return 2;
-  }
-
-
-  if(
-    unit === "евро на час"
-  ){
-    return 2;
-  }
-
-
-  if(
-    isPercentageUnit(unit)
-  ){
-    return 2;
-  }
-
-
   return 2;
 
 }
@@ -3167,6 +3748,29 @@ function fmtNumber(
         decimalsForUnit(unit)
     }
   ).format(value);
+
+}
+
+
+function fmtPercent(value){
+
+  if(
+    !safeNumber(value)
+  ){
+    return "Няма данни";
+  }
+
+
+  return (
+    `${value >= 0 ? "+" : ""}` +
+    `${new Intl.NumberFormat(
+      "bg-BG",
+      {
+        minimumFractionDigits:2,
+        maximumFractionDigits:2
+      }
+    ).format(value)}%`
+  );
 
 }
 
@@ -3241,6 +3845,108 @@ function fmtCompact(
 }
 
 
+function signedAbsoluteChange(
+  base,
+  compare,
+  unit
+){
+
+  if(
+    !safeNumber(base) ||
+    !safeNumber(compare)
+  ){
+
+    return "Няма данни";
+
+  }
+
+
+  const diff =
+    compare - base;
+
+
+  const unitText =
+    deltaUnit(unit);
+
+
+  return (
+    `${diff >= 0 ? "+" : ""}` +
+    `${fmtNumber(diff,unit)}` +
+    `${unitText ? " " + unitText : ""}`
+  );
+
+}
+
+
+function relativeChange(
+  base,
+  compare
+){
+
+  if(
+    !safeNumber(base) ||
+    !safeNumber(compare)
+  ){
+
+    return null;
+
+  }
+
+
+  if(
+    base === 0
+  ){
+
+    return "not-applicable";
+
+  }
+
+
+  return (
+    (
+      compare -
+      base
+    ) /
+    base
+  ) * 100;
+
+}
+
+
+function changeClass(
+  base,
+  compare
+){
+
+  if(
+    !safeNumber(base) ||
+    !safeNumber(compare)
+  ){
+
+    return "na";
+
+  }
+
+
+  const diff =
+    compare - base;
+
+
+  if(diff > 0){
+    return "positive";
+  }
+
+
+  if(diff < 0){
+    return "negative";
+  }
+
+
+  return "";
+
+}
+
+
 /* =========================================================
    DATA ACCESS
 ========================================================= */
@@ -3281,6 +3987,29 @@ function getRecord(
 }
 
 
+function getValue(
+  section,
+  year,
+  code
+){
+
+  const record =
+    getRecord(
+      section,
+      year
+    );
+
+
+  if(!record){
+    return null;
+  }
+
+
+  return record.values[code];
+
+}
+
+
 function availableSeries(
   section,
   code
@@ -3289,21 +4018,16 @@ function availableSeries(
   return dataset.period.map(
     function(year){
 
-      const record =
-        getRecord(
-          section,
-          year
-        );
-
-
       return {
 
         year:year,
 
         value:
-          record
-          ? record.values[code]
-          : null
+          getValue(
+            section,
+            year,
+            code
+          )
 
       };
 
@@ -3314,11 +4038,11 @@ function availableSeries(
 
 
 /* =========================================================
-   CHANGE
+   FULL-PERIOD CHANGE
 ========================================================= */
 
 
-function changeText(
+function fullPeriodChange(
   series,
   unit
 ){
@@ -3341,11 +4065,17 @@ function changeText(
 
     return {
 
-      value:
+      absolute:
+        "Недостатъчни данни",
+
+      relative:
         "Недостатъчни данни",
 
       note:
-        "Не са налични поне две сравними наблюдения."
+        "Не са налични поне две сравними наблюдения.",
+
+      className:
+        "na"
 
     };
 
@@ -3362,28 +4092,35 @@ function changeText(
     ];
 
 
-  const diff =
-    last.value -
-    first.value;
-
-
-  const u =
-    deltaUnit(unit);
-
-
-  const valueText =
-    `${diff >= 0 ? "+" : ""}` +
-    `${fmtNumber(diff,unit)}` +
-    `${u ? " " + u : ""}`;
+  const rel =
+    relativeChange(
+      first.value,
+      last.value
+    );
 
 
   return {
 
-    value:
-      valueText,
+    absolute:
+      signedAbsoluteChange(
+        first.value,
+        last.value,
+        unit
+      ),
+
+    relative:
+      rel === "not-applicable"
+      ? "Неприложимо"
+      : fmtPercent(rel),
 
     note:
-      `${first.year} → ${last.year}`
+      `${first.year} → ${last.year}`,
+
+    className:
+      changeClass(
+        first.value,
+        last.value
+      )
 
   };
 
@@ -3723,13 +4460,6 @@ function comparisonHtml(
       .map(
         function(sector){
 
-          const record =
-            getRecord(
-              sector.code,
-              year
-            );
-
-
           return {
 
             code:
@@ -3739,9 +4469,11 @@ function comparisonHtml(
               sector.name,
 
             value:
-              record
-              ? record.values[code]
-              : null
+              getValue(
+                sector.code,
+                year,
+                code
+              )
 
           };
 
@@ -4002,7 +4734,7 @@ function metricsHtml(record){
 
 
 /* =========================================================
-   RENDER EXPLORER
+   RENDER MAIN EXPLORER
 ========================================================= */
 
 
@@ -4064,8 +4796,8 @@ function renderExplorer(){
     );
 
 
-  const delta =
-    changeText(
+  const change =
+    fullPeriodChange(
       series,
       indicator.unit
     );
@@ -4075,19 +4807,11 @@ function renderExplorer(){
     dataset.period.filter(
       function(y){
 
-        const r =
-          getRecord(
+        return safeNumber(
+          getValue(
             section,
-            y
-          );
-
-
-        return (
-          r &&
-          safeNumber(
-            r.values[
-              indicator.code
-            ]
+            y,
+            indicator.code
           )
         );
 
@@ -4160,22 +4884,44 @@ function renderExplorer(){
       <div class="kpi">
 
         <span>
-          Промяна във времето
+          Абсолютна промяна
         </span>
 
         <strong
           class="${
-            delta.value ===
-            "Недостатъчни данни"
+            change.className === "na"
             ? "missing"
             : ""
           }"
         >
-          ${delta.value}
+          ${change.absolute}
         </strong>
 
         <small>
-          ${delta.note}
+          ${change.note}
+        </small>
+
+      </div>
+
+
+      <div class="kpi">
+
+        <span>
+          Относителна промяна
+        </span>
+
+        <strong
+          class="${
+            change.className === "na"
+            ? "missing"
+            : ""
+          }"
+        >
+          ${change.relative}
+        </strong>
+
+        <small>
+          ${change.note}
         </small>
 
       </div>
@@ -4300,6 +5046,652 @@ function renderExplorer(){
 
 
     </div>
+
+  `;
+
+
+  renderYearComparison();
+
+}
+
+
+/* =========================================================
+   YEAR BARS
+========================================================= */
+
+
+function yearBarsHtml(
+  baseYear,
+  compareYear,
+  baseValue,
+  compareValue,
+  indicator
+){
+
+  if(
+    !safeNumber(baseValue) &&
+    !safeNumber(compareValue)
+  ){
+
+    return `
+
+      <div class="empty-chart">
+
+        Няма публикувани стойности
+        за избраните години.
+
+      </div>
+
+    `;
+
+  }
+
+
+  const numericValues =
+    [
+      baseValue,
+      compareValue
+    ]
+    .filter(
+      function(v){
+        return safeNumber(v);
+      }
+    );
+
+
+  const max =
+    numericValues.length
+    ? Math.max(...numericValues)
+    : 0;
+
+
+  function width(v){
+
+    if(
+      !safeNumber(v) ||
+      max === 0
+    ){
+      return 0;
+    }
+
+
+    return (
+      v /
+      max
+    ) * 100;
+
+  }
+
+
+  return `
+
+    <div class="year-bars">
+
+      <div class="year-bars-title">
+
+        <strong>
+          Визуално сравнение
+        </strong>
+
+        <span>
+          ${indicator.label}
+          · ${displayUnit(indicator.unit)}
+        </span>
+
+      </div>
+
+
+      <div class="year-bar-row">
+
+        <div class="year-bar-year">
+          ${baseYear}
+        </div>
+
+        <div class="year-bar-track">
+
+          <div
+            class="year-bar-fill"
+            style="
+              width:${width(baseValue)}%;
+            "
+          >
+          </div>
+
+        </div>
+
+        <div class="year-bar-value">
+
+          ${
+            safeNumber(baseValue)
+            ? fmt(
+                baseValue,
+                indicator.unit
+              )
+            : "Няма данни"
+          }
+
+        </div>
+
+      </div>
+
+
+      <div class="year-bar-row">
+
+        <div class="year-bar-year">
+          ${compareYear}
+        </div>
+
+        <div class="year-bar-track">
+
+          <div
+            class="year-bar-fill"
+            style="
+              width:${width(compareValue)}%;
+            "
+          >
+          </div>
+
+        </div>
+
+        <div class="year-bar-value">
+
+          ${
+            safeNumber(compareValue)
+            ? fmt(
+                compareValue,
+                indicator.unit
+              )
+            : "Няма данни"
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   COMPARISON TABLE
+========================================================= */
+
+
+function allIndicatorsComparisonTable(
+  section,
+  baseYear,
+  compareYear
+){
+
+  const rows =
+    dataset.indicators
+      .map(
+        function(indicator){
+
+          const base =
+            getValue(
+              section,
+              baseYear,
+              indicator.code
+            );
+
+
+          const compare =
+            getValue(
+              section,
+              compareYear,
+              indicator.code
+            );
+
+
+          const absolute =
+            (
+              safeNumber(base) &&
+              safeNumber(compare)
+            )
+            ? signedAbsoluteChange(
+                base,
+                compare,
+                indicator.unit
+              )
+            : "Няма данни";
+
+
+          const relative =
+            relativeChange(
+              base,
+              compare
+            );
+
+
+          let relativeText;
+
+
+          if(
+            relative === null
+          ){
+
+            relativeText =
+              "Няма данни";
+
+          }
+          else if(
+            relative ===
+            "not-applicable"
+          ){
+
+            relativeText =
+              "Неприложимо";
+
+          }
+          else{
+
+            relativeText =
+              fmtPercent(relative);
+
+          }
+
+
+          const className =
+            (
+              !safeNumber(base) ||
+              !safeNumber(compare)
+            )
+            ? "na-cell"
+            : (
+                compare > base
+                ? "delta-positive"
+                : (
+                    compare < base
+                    ? "delta-negative"
+                    : "delta-neutral"
+                  )
+              );
+
+
+          return `
+
+            <tr>
+
+              <td>
+                ${indicator.label}
+              </td>
+
+              <td>
+                ${
+                  safeNumber(base)
+                  ? fmt(
+                      base,
+                      indicator.unit
+                    )
+                  : `<span class="na-cell">Няма данни</span>`
+                }
+              </td>
+
+              <td>
+                ${
+                  safeNumber(compare)
+                  ? fmt(
+                      compare,
+                      indicator.unit
+                    )
+                  : `<span class="na-cell">Няма данни</span>`
+                }
+              </td>
+
+              <td class="${className}">
+                ${absolute}
+              </td>
+
+              <td class="${className}">
+                ${relativeText}
+              </td>
+
+            </tr>
+
+          `;
+
+        }
+      )
+      .join("");
+
+
+  return `
+
+    <div class="compare-table-wrap">
+
+      <table class="compare-table">
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Показател
+            </th>
+
+            <th>
+              ${baseYear}
+            </th>
+
+            <th>
+              ${compareYear}
+            </th>
+
+            <th>
+              Абсолютна промяна
+            </th>
+
+            <th>
+              Относителна промяна
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+          ${rows}
+        </tbody>
+
+      </table>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   RENDER YEAR COMPARISON
+========================================================= */
+
+
+function renderYearComparison(){
+
+  if(
+    !dataset
+  ){
+    return;
+  }
+
+
+  const section =
+    sectorSelect.value;
+
+
+  const indicator =
+    getIndicator();
+
+
+  const baseYear =
+    Number(
+      baseYearSelect.value
+    );
+
+
+  const compareYear =
+    Number(
+      compareYearSelect.value
+    );
+
+
+  const sector =
+    dataset.sectors.find(
+      function(item){
+
+        return (
+          item.code ===
+          section
+        );
+
+      }
+    );
+
+
+  const baseValue =
+    getValue(
+      section,
+      baseYear,
+      indicator.code
+    );
+
+
+  const compareValue =
+    getValue(
+      section,
+      compareYear,
+      indicator.code
+    );
+
+
+  const absolute =
+    (
+      safeNumber(baseValue) &&
+      safeNumber(compareValue)
+    )
+    ? signedAbsoluteChange(
+        baseValue,
+        compareValue,
+        indicator.unit
+      )
+    : "Няма данни";
+
+
+  const relative =
+    relativeChange(
+      baseValue,
+      compareValue
+    );
+
+
+  let relativeText;
+
+
+  if(
+    relative === null
+  ){
+
+    relativeText =
+      "Няма данни";
+
+  }
+  else if(
+    relative ===
+    "not-applicable"
+  ){
+
+    relativeText =
+      "Неприложимо";
+
+  }
+  else{
+
+    relativeText =
+      fmtPercent(relative);
+
+  }
+
+
+  const className =
+    changeClass(
+      baseValue,
+      compareValue
+    );
+
+
+  yearCompareContent.innerHTML = `
+
+
+    <div class="compare-heading">
+
+      <span>
+        ${section} · ${baseYear} → ${compareYear}
+      </span>
+
+      <h3>
+        ${sector.name}
+      </h3>
+
+      <p>
+        ${indicator.label}
+      </p>
+
+    </div>
+
+
+    <div class="compare-kpis">
+
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          ${baseYear}
+        </div>
+
+        <strong
+          class="${
+            safeNumber(baseValue)
+            ? ""
+            : "na"
+          }"
+        >
+
+          ${
+            safeNumber(baseValue)
+            ? fmt(
+                baseValue,
+                indicator.unit
+              )
+            : "Няма данни"
+          }
+
+        </strong>
+
+        <small>
+          Базова стойност
+        </small>
+
+      </div>
+
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          ${compareYear}
+        </div>
+
+        <strong
+          class="${
+            safeNumber(compareValue)
+            ? ""
+            : "na"
+          }"
+        >
+
+          ${
+            safeNumber(compareValue)
+            ? fmt(
+                compareValue,
+                indicator.unit
+              )
+            : "Няма данни"
+          }
+
+        </strong>
+
+        <small>
+          Сравнителна стойност
+        </small>
+
+      </div>
+
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          Абсолютна промяна
+        </div>
+
+        <strong
+          class="${className}"
+        >
+          ${absolute}
+        </strong>
+
+        <small>
+
+          ${
+            isPercentageUnit(
+              indicator.unit
+            )
+            ? "разлика в процентни пункта"
+            : "разлика в мерната единица"
+          }
+
+        </small>
+
+      </div>
+
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          Относителна промяна
+        </div>
+
+        <strong
+          class="${className}"
+        >
+          ${relativeText}
+        </strong>
+
+        <small>
+          спрямо базовата година
+        </small>
+
+      </div>
+
+
+    </div>
+
+
+    ${
+      yearBarsHtml(
+        baseYear,
+        compareYear,
+        baseValue,
+        compareValue,
+        indicator
+      )
+    }
+
+
+    <div class="metric-panel-head">
+
+      <h4>
+        Сравнение на всички 29 показателя
+      </h4>
+
+      <span>
+        ${baseYear} → ${compareYear}
+      </span>
+
+    </div>
+
+
+    ${
+      allIndicatorsComparisonTable(
+        section,
+        baseYear,
+        compareYear
+      )
+    }
 
   `;
 
@@ -4446,9 +5838,54 @@ function populateControls(){
     );
 
 
+  dataset.period
+    .forEach(
+      function(year){
+
+        const baseOption =
+          document.createElement(
+            "option"
+          );
+
+
+        baseOption.value =
+          year;
+
+
+        baseOption.textContent =
+          year;
+
+
+        baseYearSelect.appendChild(
+          baseOption
+        );
+
+
+        const compareOption =
+          document.createElement(
+            "option"
+          );
+
+
+        compareOption.value =
+          year;
+
+
+        compareOption.textContent =
+          year;
+
+
+        compareYearSelect.appendChild(
+          compareOption
+        );
+
+      }
+    );
+
+
   /* =======================================================
      DEFAULT VIEW
-     Започва от сектор A
+     Sector A
   ======================================================= */
 
 
@@ -4461,24 +5898,72 @@ function populateControls(){
 
 
   yearSelect.value =
-    "2024";
+    dataset.period.includes(2024)
+    ? "2024"
+    : String(
+        dataset.period[
+          dataset.period.length - 1
+        ]
+      );
+
+
+  baseYearSelect.value =
+    dataset.period.includes(2020)
+    ? "2020"
+    : String(
+        dataset.period[0]
+      );
+
+
+  compareYearSelect.value =
+    dataset.period.includes(2024)
+    ? "2024"
+    : String(
+        dataset.period[
+          dataset.period.length - 1
+        ]
+      );
 
 
   sectorSelect.addEventListener(
     "change",
-    renderExplorer
+    function(){
+
+      renderExplorer();
+
+    }
   );
 
 
   indicatorSelect.addEventListener(
     "change",
-    renderExplorer
+    function(){
+
+      renderExplorer();
+
+    }
   );
 
 
   yearSelect.addEventListener(
     "change",
-    renderExplorer
+    function(){
+
+      renderExplorer();
+
+    }
+  );
+
+
+  baseYearSelect.addEventListener(
+    "change",
+    renderYearComparison
+  );
+
+
+  compareYearSelect.addEventListener(
+    "change",
+    renderYearComparison
   );
 
 
@@ -4546,6 +6031,20 @@ fetch(
           <strong>
             sectors.html
           </strong>.
+
+        </div>
+
+      `;
+
+
+      yearCompareContent.innerHTML = `
+
+        <div class="load-error">
+
+          Сравнението между години
+          не може да бъде заредено,
+          защото липсва
+          файлът с данните.
 
         </div>
 
