@@ -3,1646 +3,1188 @@
 
 <head>
 
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    Публикации | Дигитална конкурентоспособност на България
-  </title>
-
-  <meta
-    name="description"
-    content="Научни публикации по проект № 6/2024 „Дигитална конкурентоспособност на социално-икономическата система на България“."
-  >
-
-  <style>
-
-    :root {
-      --navy: #102b4c;
-      --navy-dark: #081f38;
-
-      --blue: #2457c5;
-      --cyan: #28a9c7;
-      --turquoise: #01c9bc;
-
-      --text: #213247;
-      --muted: #64768a;
-
-      --white: #ffffff;
-      --background: #f5f8fb;
-      --soft: #edf5f8;
-
-      --border: #dce7ef;
-
-      --shadow:
-        0 14px 40px rgba(16, 43, 76, 0.08);
-
-      --radius: 18px;
-      --max-width: 1260px;
-    }
-
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-
-    body {
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      color: var(--text);
-      background: var(--white);
-
-      line-height: 1.6;
-    }
-
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-
-    button,
-    input,
-    select {
-      font: inherit;
-    }
-
-
-    .container {
-      width: min(92%, var(--max-width));
-      margin-inline: auto;
-    }
-
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
-
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      background: rgba(255, 255, 255, 0.97);
-
-      border-bottom:
-        1px solid var(--border);
-
-      backdrop-filter:
-        blur(12px);
-    }
-
-
-    .navbar {
-      min-height: 82px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 28px;
-    }
-
-
-    .brand {
-      display: flex;
-      align-items: center;
-
-      gap: 13px;
-
-      flex-shrink: 0;
-    }
-
-
-    .logo-mark {
-      display: flex;
-      align-items: flex-end;
-
-      gap: 4px;
-
-      height: 42px;
-    }
-
-
-    .logo-mark span {
-      display: block;
-
-      width: 9px;
-
-      border-radius:
-        3px 3px 0 0;
-    }
-
-
-    .logo-mark span:nth-child(1) {
-      height: 15px;
-      background: #7fd9e6;
-    }
-
-
-    .logo-mark span:nth-child(2) {
-      height: 23px;
-      background: #46bfd3;
-    }
-
-
-    .logo-mark span:nth-child(3) {
-      height: 31px;
-      background: #2499c2;
-    }
-
-
-    .logo-mark span:nth-child(4) {
-      height: 41px;
-      background: #1557a0;
-    }
-
-
-    .brand-text strong {
-      display: block;
-
-      color: var(--navy);
-
-      font-size: 16px;
-      line-height: 1.02;
-
-      text-transform: uppercase;
-    }
-
-
-    .brand-text small {
-      display: block;
-
-      margin-top: 5px;
-
-      color: var(--muted);
-
-      font-size: 10px;
-
-      white-space: nowrap;
-    }
-
-
-    .desktop-nav {
-      display: flex;
-      align-items: center;
-
-      gap: 23px;
-
-      color: #34475a;
-
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-
-    .desktop-nav a {
-      padding:
-        31px 0 25px;
-
-      border-bottom:
-        3px solid transparent;
-
-      transition:
-        0.2s ease;
-    }
-
-
-    .desktop-nav a:hover,
-    .desktop-nav a.active {
-      color: var(--blue);
-
-      border-bottom-color:
-        var(--turquoise);
-    }
-
-
-    .language {
-      color: var(--blue);
-
-      font-size: 13px;
-      font-weight: 700;
-
-      white-space: nowrap;
-    }
-
-
-    .mobile-toggle {
-      display: none;
-
-      width: 42px;
-      height: 42px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 8px;
-
-      background: white;
-      color: var(--navy);
-
-      cursor: pointer;
-
-      font-size: 20px;
-    }
-
-
-    .mobile-menu {
-      display: none;
-
-      border-top:
-        1px solid var(--border);
-
-      background: white;
-
-      padding:
-        12px 4%;
-    }
-
-
-    .mobile-menu a {
-      display: block;
-
-      padding:
-        12px 0;
-
-      border-bottom:
-        1px solid #edf2f5;
-
-      color: var(--navy);
-
-      font-weight: 700;
-    }
-
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
-
-    .page-hero {
-      position: relative;
-      overflow: hidden;
-
-      color: white;
-
-      background:
-
-        radial-gradient(
-          circle at 82% 38%,
-          rgba(1, 201, 188, 0.18),
-          transparent 25%
-        ),
-
-        linear-gradient(
-          115deg,
-          #081f38 0%,
-          #102f51 60%,
-          #145b7d 100%
-        );
-    }
-
-
-    .page-hero::before {
-      content: "";
-
-      position: absolute;
-      inset: 0;
-
-      background-image:
-
-        linear-gradient(
-          rgba(82, 215, 226, 0.05) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          90deg,
-          rgba(82, 215, 226, 0.05) 1px,
-          transparent 1px
-        );
-
-      background-size:
-        62px 62px;
-    }
-
-
-    .page-hero-inner {
-      min-height: 420px;
-
-      position: relative;
-      z-index: 1;
-
-      display: grid;
-
-      grid-template-columns:
-        1.15fr 0.85fr;
-
-      gap: 70px;
-
-      align-items: center;
-
-      padding:
-        72px 0;
-    }
-
-
-    .eyebrow {
-      color: #8ce7ed;
-
-      font-size: 12px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.9px;
-
-      margin-bottom: 17px;
-    }
-
-
-    h1 {
-      font-size:
-        clamp(46px, 5vw, 66px);
-
-      line-height: 1;
-
-      letter-spacing: -2px;
-
-      margin-bottom: 21px;
-    }
-
-
-    .hero-description {
-      max-width: 740px;
-
-      color: #d3e5ee;
-
-      font-size: 17px;
-
-      line-height: 1.68;
-    }
-
-
-    /* =========================================================
-       HERO SUMMARY
-    ========================================================= */
-
-
-    .publication-summary {
-      padding: 28px;
-
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.15);
-
-      border-radius: 20px;
-
-      background:
-        rgba(255, 255, 255, 0.045);
-    }
-
-
-    .summary-label {
-      margin-bottom: 17px;
-
-      color: #8ce7ed;
-
-      font-size: 10px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.5px;
-    }
-
-
-    .summary-total strong {
-      display: block;
-
-      font-size: 53px;
-
-      line-height: 1;
-
-      margin-bottom: 6px;
-    }
-
-
-    .summary-total span {
-      color: #d1e4eb;
-
-      font-size: 13px;
-    }
-
-
-    .summary-divider {
-      height: 1px;
-
-      margin:
-        20px 0;
-
-      background:
-        rgba(255, 255, 255, 0.1);
-    }
-
-
-    .year-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 8px;
-    }
-
-
-    .year-item {
-      padding:
-        12px 8px;
-
-      border-radius: 9px;
-
-      background:
-        rgba(255, 255, 255, 0.05);
-
-      text-align: center;
-    }
-
-
-    .year-item strong {
-      display: block;
-
-      font-size: 20px;
-
-      margin-bottom: 3px;
-    }
-
-
-    .year-item span {
-      color: #acd0da;
-
-      font-size: 10px;
-    }
-
-
-    .index-summary {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 7px;
-
-      margin-top: 18px;
-    }
-
-
-    .summary-index-badge {
-      display: inline-flex;
-      align-items: center;
-
-      min-height: 25px;
-
-      padding:
-        0 9px;
-
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.15);
-
-      border-radius: 20px;
-
-      background:
-        rgba(255, 255, 255, 0.06);
-
-      color: #d8edf2;
-
-      font-size: 9px;
-      font-weight: 800;
-    }
-
-
-    /* =========================================================
-       GENERAL
-    ========================================================= */
-
-
-    .standard-section {
-      padding:
-        82px 0;
-    }
-
-
-    .section-alt {
-      background:
-        var(--background);
-    }
-
-
-    .section-label {
-      color: var(--cyan);
-
-      font-size: 11px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.8px;
-
-      margin-bottom: 10px;
-    }
-
-
-    .section-title {
-      color: var(--navy);
-
-      font-size:
-        clamp(29px, 3.2vw, 41px);
-
-      line-height: 1.12;
-
-      letter-spacing: -0.9px;
-
-      margin-bottom: 17px;
-    }
-
-
-    .section-description {
-      max-width: 900px;
-
-      color: var(--muted);
-
-      font-size: 16px;
-
-      line-height: 1.72;
-
-      margin-bottom: 38px;
-    }
-
-
-    /* =========================================================
-       FILTERS
-    ========================================================= */
-
-
-    .filters {
-      display: grid;
-
-      grid-template-columns:
-        1.35fr 0.75fr 0.85fr 0.8fr;
-
-      gap: 12px;
-
-      margin-bottom: 18px;
-    }
-
-
-    .filter-control label {
-      display: block;
-
-      margin-bottom: 6px;
-
-      color: #8295a4;
-
-      font-size: 9px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-    }
-
-
-    .filter-control input,
-    .filter-control select {
-      width: 100%;
-      min-height: 46px;
-
-      padding:
-        0 13px;
-
-      border:
-        1px solid #cfdee6;
-
-      border-radius: 10px;
-
-      background: white;
-
-      color: var(--navy);
-
-      font-size: 12px;
-
-      outline: none;
-    }
-
-
-    .filter-control input:focus,
-    .filter-control select:focus {
-      border-color:
-        var(--cyan);
-
-      box-shadow:
-        0 0 0 3px
-        rgba(40, 169, 199, 0.1);
-    }
-
-
-    .filter-status {
-      display: flex;
-
-      justify-content:
-        space-between;
-
-      align-items: center;
-
-      gap: 20px;
-
-      margin-bottom: 21px;
-    }
-
-
-    .result-count {
-      color: var(--muted);
-
-      font-size: 12px;
-    }
-
-
-    .result-count strong {
-      color: var(--navy);
-    }
-
-
-    .reset-button {
-      border: none;
-
-      background: transparent;
-
-      color: var(--blue);
-
-      font-size: 11px;
-      font-weight: 700;
-
-      cursor: pointer;
-    }
-
-
-    .reset-button:hover {
-      text-decoration:
-        underline;
-    }
-
-
-    /* =========================================================
-       PUBLICATION GRID
-    ========================================================= */
-
-
-    .publication-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 18px;
-    }
-
-
-    .publication-card {
-      position: relative;
-
-      display: flex;
-      flex-direction: column;
-
-      min-height: 525px;
-
-      padding: 27px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 17px;
-
-      background: white;
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
-    }
-
-
-    .publication-card:hover {
-      transform:
-        translateY(-3px);
-
-      border-color:
-        #cadde6;
-
-      box-shadow:
-        var(--shadow);
-    }
-
-
-    .pub-card-top {
-      display: flex;
-
-      justify-content:
-        space-between;
-
-      align-items:
-        flex-start;
-
-      gap: 12px;
-
-      margin-bottom: 19px;
-    }
-
-
-    .pub-year {
-      min-width: 50px;
-      height: 50px;
-
-      display: grid;
-      place-items: center;
-
-      padding:
-        0 7px;
-
-      border-radius: 11px;
-
-      background:
-        #ebf6f9;
-
-      color: var(--blue);
-
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-
-    .pub-status {
-      padding:
-        5px 9px;
-
-      border-radius: 20px;
-
-      background:
-        #e8f8f5;
-
-      color: #148076;
-
-      font-size: 8px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.6px;
-    }
-
-
-    .pub-theme {
-      margin-bottom: 11px;
-
-      color: var(--cyan);
-
-      font-size: 9px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.1px;
-    }
-
-
-    .publication-card h3 {
-      color: var(--navy);
-
-      font-size: 17px;
-
-      line-height: 1.38;
-
-      margin-bottom: 13px;
-    }
-
-
-    .pub-authors {
-      margin-bottom: 8px;
-
-      color: var(--blue);
-
-      font-size: 12px;
-      font-weight: 700;
-
-      line-height: 1.5;
-    }
-
-
-    .pub-venue {
-      margin-bottom: 8px;
-
-      color: var(--muted);
-
-      font-size: 11px;
-
-      line-height: 1.5;
-    }
-
-
-    .pub-doi {
-      margin-top: 3px;
-
-      color: #7d909f;
-
-      font-size: 10px;
-
-      line-height: 1.45;
-
-      word-break:
-        break-word;
-    }
-
-
-    /* =========================================================
-       SHORT SUMMARY
-    ========================================================= */
-
-
-    .pub-summary {
-      margin-top: 18px;
-
-      padding:
-        17px 18px;
-
-      border:
-        1px solid #e1edf1;
-
-      border-radius: 11px;
-
-      background:
-
-        linear-gradient(
-          135deg,
-          #f8fbfc,
-          #f2f8fa
-        );
-    }
-
-
-    .pub-summary-label {
-      display: flex;
-      align-items: center;
-
-      gap: 7px;
-
-      margin-bottom: 7px;
-
-      color: #4b8798;
-
-      font-size: 8px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-    }
-
-
-    .pub-summary-label::before {
-      content: "";
-
-      width: 17px;
-      height: 2px;
-
-      background:
-        var(--turquoise);
-    }
-
-
-    .pub-summary p {
-      color: #536b7c;
-
-      font-size: 11.5px;
-
-      line-height: 1.65;
-    }
-
-
-    /* =========================================================
-       INDEXING
-    ========================================================= */
-
-
-    .index-info {
-      margin-top: 14px;
-    }
-
-
-    .index-info-label {
-      margin-bottom: 6px;
-
-      color: #93a3af;
-
-      font-size: 8px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 0.8px;
-    }
-
-
-    .index-info-badges {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 5px;
-    }
-
-
-    .index-badge {
-      display: inline-flex;
-      align-items: center;
-
-      min-height: 23px;
-
-      padding:
-        0 8px;
-
-      border-radius: 20px;
-
-      font-size: 8px;
-      font-weight: 800;
-
-      letter-spacing: 0.5px;
-
-      text-transform: uppercase;
-    }
-
-
-    .index-badge.scopus {
-      border:
-        1px solid #d1def2;
-
-      background: #eef4fb;
-
-      color: #2457c5;
-    }
-
-
-    .index-badge.wos {
-      border:
-        1px solid #cce8e2;
-
-      background: #edf9f6;
-
-      color: #147d75;
-    }
-
-
-    .index-badge.quartile {
-      border:
-        1px solid #e2dce9;
-
-      background: #f7f3f9;
-
-      color: #67577b;
-    }
-
-
-    /* =========================================================
-       PUBLICATION BOTTOM
-    ========================================================= */
-
-
-    .pub-bottom {
-      margin-top: auto;
-
-      padding-top: 18px;
-    }
-
-
-    .pub-bottom-inner {
-      padding-top: 15px;
-
-      border-top:
-        1px solid var(--border);
-    }
-
-
-    .card-link {
-      display: inline-flex;
-      align-items: center;
-
-      gap: 6px;
-
-      color: var(--blue);
-
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-
-    .card-link:hover {
-      text-decoration:
-        underline;
-    }
-
-
-    .no-public-link {
-      color: #95a4b0;
-
-      font-size: 10px;
-    }
-
-
-    .no-results {
-      display: none;
-
-      padding:
-        55px 25px;
-
-      border:
-        1px dashed #c9d9e2;
-
-      border-radius:
-        var(--radius);
-
-      background: white;
-
-      text-align: center;
-
-      color: var(--muted);
-    }
-
-
-    /* =========================================================
-       THEMATIC RANGE
-    ========================================================= */
-
-
-    .theme-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(5, 1fr);
-
-      gap: 14px;
-    }
-
-
-    .theme-card {
-      min-height: 170px;
-
-      padding: 24px;
-
-      border:
-        1px solid var(--border);
-
-      border-radius: 14px;
-
-      background: white;
-    }
-
-
-    .theme-number {
-      margin-bottom: 20px;
-
-      color: var(--cyan);
-
-      font-size: 10px;
-      font-weight: 800;
-    }
-
-
-    .theme-card h3 {
-      margin-bottom: 9px;
-
-      color: var(--navy);
-
-      font-size: 16px;
-
-      line-height: 1.3;
-    }
-
-
-    .theme-card p {
-      color: var(--muted);
-
-      font-size: 11px;
-
-      line-height: 1.55;
-    }
-
-
-    /* =========================================================
-       FORTHCOMING
-    ========================================================= */
-
-
-    .forthcoming-section {
-      position: relative;
-
-      overflow: hidden;
-
-      padding:
-        82px 0;
-
-      border-top:
-        1px solid var(--border);
-
-      background:
-
-        linear-gradient(
-          180deg,
-          #f8fbfc,
-          #f2f7f9
-        );
-    }
-
-
-    .forthcoming-header {
-      display: grid;
-
-      grid-template-columns:
-        1fr auto;
-
-      gap: 30px;
-
-      align-items: end;
-
-      margin-bottom: 30px;
-    }
-
-
-    .forthcoming-header
-    .section-description {
-      margin-bottom: 0;
-    }
-
-
-    .forthcoming-count {
-      min-width: 145px;
-
-      padding:
-        18px 22px;
-
-      border:
-        1px solid #d9e7ec;
-
-      border-radius: 14px;
-
-      background:
-        rgba(255, 255, 255, 0.75);
-
-      text-align: center;
-    }
-
-
-    .forthcoming-count strong {
-      display: block;
-
-      color: var(--navy);
-
-      font-size: 28px;
-
-      line-height: 1;
-
-      margin-bottom: 5px;
-    }
-
-
-    .forthcoming-count span {
-      color: var(--muted);
-
-      font-size: 10px;
-    }
-
-
-    .forthcoming-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
-      gap: 12px;
-    }
-
-
-    .forthcoming-card {
-      display: grid;
-
-      grid-template-columns:
-        57px 1fr auto;
-
-      gap: 17px;
-
-      align-items: start;
-
-      padding:
-        21px 22px;
-
-      border:
-        1px solid #dce7eb;
-
-      border-radius: 14px;
-
-      background:
-        rgba(255, 255, 255, 0.82);
-
-      transition:
-        border-color 0.2s ease,
-        background 0.2s ease;
-    }
-
-
-    .forthcoming-card:hover {
-      border-color:
-        #bcdde3;
-
-      background: white;
-    }
-
-
-    .forthcoming-year {
-      width: 54px;
-      height: 42px;
-
-      display: grid;
-      place-items: center;
-
-      border-radius: 8px;
-
-      background: #eef4f6;
-
-      color: #728798;
-
-      font-size: 10px;
-      font-weight: 800;
-    }
-
-
-    .forthcoming-content h3 {
-      margin-bottom: 7px;
-
-      color: #294258;
-
-      font-size: 14px;
-
-      line-height: 1.42;
-    }
-
-
-    .forthcoming-authors {
-      color: #718595;
-
-      font-size: 11px;
-
-      line-height: 1.5;
-    }
-
-
-    .forthcoming-status {
-      padding:
-        5px 9px;
-
-      border:
-        1px solid #cfe3e6;
-
-      border-radius: 20px;
-
-      background:
-        #f0f8f8;
-
-      color: #4d878a;
-
-      font-size: 8px;
-      font-weight: 800;
-
-      letter-spacing: 0.7px;
-
-      white-space: nowrap;
-    }
-
-
-    .forthcoming-note {
-      margin-top: 20px;
-
-      padding:
-        17px 20px;
-
-      border-left:
-        3px solid #9ed4db;
-
-      background:
-        rgba(255, 255, 255, 0.55);
-
-      color: #738794;
-
-      font-size: 11px;
-
-      line-height: 1.6;
-    }
-
-
-    /* =========================================================
-       CTA
-    ========================================================= */
-
-
-    .final-cta {
-      padding:
-        51px 0;
-
-      color: white;
-
-      background:
-
-        linear-gradient(
-          110deg,
-          #0b2845,
-          #145879
-        );
-    }
-
-
-    .final-cta-inner {
-      display: flex;
-
-      justify-content:
-        space-between;
-
-      align-items: center;
-
-      gap: 30px;
-    }
-
-
-    .final-cta h2 {
-      margin-bottom: 7px;
-
-      font-size: 29px;
-    }
-
-
-    .final-cta p {
-      color: #c7dce7;
-    }
-
-
-    .btn {
-      min-height: 48px;
-
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      padding:
-        0 23px;
-
-      border-radius: 9px;
-
-      background:
-
-        linear-gradient(
-          90deg,
-          #79d5dd,
-          #55bedb
-        );
-
-      color: #082b46;
-
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-
-    footer {
-      padding:
-        33px 0 20px;
-
-      border-top:
-        1px solid var(--border);
-
-      background: #f8fafc;
-    }
-
-
-    .footer-grid {
-      display: grid;
-
-      grid-template-columns:
-        1.25fr 1fr;
-
-      gap: 35px;
-
-      align-items: center;
-    }
-
-
-    .footer-project strong {
-      display: block;
-
-      margin-bottom: 7px;
-
-      color: var(--navy);
-    }
-
-
-    .footer-project p {
-      color: var(--muted);
-
-      font-size: 12px;
-    }
-
-
-    .footer-links {
-      display: flex;
-
-      justify-content:
-        flex-end;
-
-      flex-wrap: wrap;
-
-      gap: 17px;
-
-      color: #53677a;
-
-      font-size: 12px;
-    }
-
-
-    .copyright {
-      margin-top: 25px;
-
-      padding-top: 18px;
-
-      border-top:
-        1px solid var(--border);
-
-      text-align: center;
-
-      color: #8795a2;
-
-      font-size: 11px;
-    }
-
-
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
-
-
-    @media (max-width: 1100px) {
-
-      .desktop-nav {
-        display: none;
-      }
-
-
-      .mobile-toggle {
-        display: block;
-      }
-
-
-      .page-hero-inner {
-        grid-template-columns: 1fr;
-      }
-
-
-      .publication-summary {
-        max-width: 650px;
-      }
-
-
-      .publication-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-
-      .theme-grid {
-        grid-template-columns:
-          repeat(3, 1fr);
-      }
-
-
-      .filters {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-    }
-
-
-    @media (max-width: 900px) {
-
-      .forthcoming-header {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .forthcoming-count {
-        width: 145px;
-      }
-
-
-      .forthcoming-grid {
-        grid-template-columns:
-          1fr;
-      }
-
-    }
-
-
-    @media (max-width: 700px) {
-
-      .brand-text small {
-        display: none;
-      }
-
-
-      .language {
-        display: none;
-      }
-
-
-      .page-hero-inner {
-        padding:
-          57px 0;
-      }
-
-
-      h1 {
-        font-size: 43px;
-      }
-
-
-      .year-grid,
-      .publication-grid,
-      .theme-grid,
-      .filters {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .forthcoming-card {
-        grid-template-columns:
-          48px 1fr;
-      }
-
-
-      .forthcoming-status {
-        grid-column: 2;
-
-        width: fit-content;
-      }
-
-
-      .final-cta-inner {
-        flex-direction: column;
-
-        align-items: flex-start;
-      }
-
-
-      .footer-grid {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .footer-links {
-        justify-content:
-          flex-start;
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+  Публикации | Дигитална конкурентоспособност на България
+</title>
+
+<meta
+  name="description"
+  content="Научни публикации по проект № 6/2024 „Дигитална конкурентоспособност на социално-икономическата система на България“."
+>
+
+<style>
+
+:root {
+  --navy:#102b4c;
+  --navy-dark:#081f38;
+  --blue:#2457c5;
+  --cyan:#28a9c7;
+  --turquoise:#01c9bc;
+  --text:#213247;
+  --muted:#64768a;
+  --white:#ffffff;
+  --background:#f5f8fb;
+  --soft:#edf5f8;
+  --border:#dce7ef;
+  --shadow:0 14px 40px rgba(16,43,76,.08);
+  --radius:18px;
+  --max-width:1260px;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:var(--white);
+  line-height:1.6;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+select {
+  font:inherit;
+}
+
+.container {
+  width:min(92%,var(--max-width));
+  margin-inline:auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(12px);
+}
+
+.navbar {
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  flex-shrink:0;
+}
+
+.logo-mark {
+  display:flex;
+  align-items:flex-end;
+  gap:4px;
+  height:42px;
+}
+
+.logo-mark span {
+  display:block;
+  width:9px;
+  border-radius:3px 3px 0 0;
+}
+
+.logo-mark span:nth-child(1) {
+  height:15px;
+  background:#7fd9e6;
+}
+
+.logo-mark span:nth-child(2) {
+  height:23px;
+  background:#46bfd3;
+}
+
+.logo-mark span:nth-child(3) {
+  height:31px;
+  background:#2499c2;
+}
+
+.logo-mark span:nth-child(4) {
+  height:41px;
+  background:#1557a0;
+}
+
+.brand-text strong {
+  display:block;
+  color:var(--navy);
+  font-size:16px;
+  line-height:1.02;
+  text-transform:uppercase;
+}
+
+.brand-text small {
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:10px;
+  white-space:nowrap;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.desktop-nav {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  color:#34475a;
+  font-size:12px;
+  font-weight:700;
+}
+
+.desktop-nav > a,
+.nav-dropdown > button {
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  padding:3px 0 0;
+  border:none;
+  border-bottom:3px solid transparent;
+  background:transparent;
+  color:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+  white-space:nowrap;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.desktop-nav > a:hover,
+.desktop-nav > a.active,
+.nav-dropdown:hover > button,
+.nav-dropdown.active > button {
+  color:var(--blue);
+  border-bottom-color:var(--turquoise);
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.nav-dropdown {
+  position:relative;
+}
+
+.nav-dropdown > button {
+  gap:6px;
+}
+
+.dropdown-arrow {
+  font-size:9px;
+  transition:transform .2s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+  transform:rotate(180deg);
+}
+
+.dropdown-menu {
+  position:absolute;
+  top:72px;
+  left:50%;
+  z-index:1100;
+
+  min-width:210px;
+  padding:8px;
+
+  border:1px solid var(--border);
+  border-radius:12px;
+
+  background:white;
+
+  box-shadow:
+    0 16px 35px rgba(16,43,76,.12);
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translate(-50%,8px);
+
+  transition:.2s ease;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  opacity:1;
+  visibility:visible;
+  transform:translate(-50%,0);
+}
+
+.dropdown-menu a {
+  display:block;
+  padding:11px 12px;
+  border-radius:8px;
+  color:#40556a;
+  font-size:12px;
+  transition:.2s ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
+  background:#f2f7fa;
+  color:var(--blue);
+}
+
+.language {
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-toggle {
+  display:none;
+  width:42px;
+  height:42px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:white;
+  color:var(--navy);
+  cursor:pointer;
+  font-size:20px;
+}
+
+.mobile-menu {
+  display:none;
+  padding:12px 4%;
+  border-top:1px solid var(--border);
+  background:white;
+}
+
+.mobile-menu a {
+  display:block;
+  padding:12px 0;
+  border-bottom:1px solid #edf2f5;
+  color:var(--navy);
+  font-weight:700;
+}
+
+.mobile-group-label {
+  padding:17px 0 6px;
+  color:#96a5b1;
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.mobile-sub {
+  padding-left:14px !important;
+  color:#536b7c !important;
+  font-weight:600 !important;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero {
+  position:relative;
+  overflow:hidden;
+  color:white;
+
+  background:
+    radial-gradient(
+      circle at 82% 38%,
+      rgba(1,201,188,.18),
+      transparent 25%
+    ),
+    linear-gradient(
+      115deg,
+      #081f38 0%,
+      #102f51 60%,
+      #145b7d 100%
+    );
+}
+
+.page-hero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:
+    linear-gradient(
+      rgba(82,215,226,.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(82,215,226,.05) 1px,
+      transparent 1px
+    );
+
+  background-size:62px 62px;
+}
+
+.page-hero-inner {
+  position:relative;
+  z-index:1;
+
+  min-height:420px;
+
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:70px;
+  align-items:center;
+
+  padding:72px 0;
+}
+
+.eyebrow {
+  margin-bottom:17px;
+  color:#8ce7ed;
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.9px;
+}
+
+h1 {
+  margin-bottom:21px;
+  font-size:clamp(44px,5vw,66px);
+  line-height:1;
+  letter-spacing:-2px;
+}
+
+.hero-description {
+  max-width:740px;
+  color:#d3e5ee;
+  font-size:17px;
+  line-height:1.68;
+}
+
+
+/* =========================================================
+   HERO SUMMARY
+========================================================= */
+
+.publication-summary {
+  padding:28px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;
+  background:rgba(255,255,255,.045);
+}
+
+.summary-label {
+  margin-bottom:17px;
+  color:#8ce7ed;
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.summary-total strong {
+  display:block;
+  margin-bottom:6px;
+  font-size:53px;
+  line-height:1;
+}
+
+.summary-total span {
+  color:#d1e4eb;
+  font-size:13px;
+}
+
+.summary-divider {
+  height:1px;
+  margin:20px 0;
+  background:rgba(255,255,255,.1);
+}
+
+.year-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+
+.year-item {
+  padding:12px 8px;
+  border-radius:9px;
+  background:rgba(255,255,255,.05);
+  text-align:center;
+}
+
+.year-item strong {
+  display:block;
+  margin-bottom:3px;
+  font-size:20px;
+}
+
+.year-item span {
+  color:#acd0da;
+  font-size:10px;
+}
+
+.index-summary {
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:18px;
+}
+
+.summary-index-badge {
+  display:inline-flex;
+  align-items:center;
+  min-height:25px;
+  padding:0 9px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;
+  background:rgba(255,255,255,.06);
+  color:#d8edf2;
+  font-size:9px;
+  font-weight:800;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.standard-section {
+  padding:82px 0;
+}
+
+.section-alt {
+  background:var(--background);
+}
+
+.section-label {
+  margin-bottom:10px;
+  color:var(--cyan);
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.8px;
+}
+
+.section-title {
+  margin-bottom:17px;
+  color:var(--navy);
+  font-size:clamp(29px,3.2vw,41px);
+  line-height:1.12;
+  letter-spacing:-.9px;
+}
+
+.section-description {
+  max-width:900px;
+  margin-bottom:38px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.72;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filters {
+  display:grid;
+  grid-template-columns:1.35fr .75fr .85fr .8fr;
+  gap:12px;
+  margin-bottom:18px;
+}
+
+.filter-control label {
+  display:block;
+  margin-bottom:6px;
+  color:#8295a4;
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.filter-control input,
+.filter-control select {
+  width:100%;
+  min-height:46px;
+  padding:0 13px;
+  border:1px solid #cfdee6;
+  border-radius:10px;
+  background:white;
+  color:var(--navy);
+  font-size:12px;
+  outline:none;
+}
+
+.filter-control input:focus,
+.filter-control select:focus {
+  border-color:var(--cyan);
+  box-shadow:0 0 0 3px rgba(40,169,199,.1);
+}
+
+.filter-status {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  margin-bottom:21px;
+}
+
+.result-count {
+  color:var(--muted);
+  font-size:12px;
+}
+
+.result-count strong {
+  color:var(--navy);
+}
+
+.reset-button {
+  border:none;
+  background:transparent;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.reset-button:hover {
+  text-decoration:underline;
+}
+
+
+/* =========================================================
+   PUBLICATION GRID
+========================================================= */
+
+.publication-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.publication-card {
+  position:relative;
+
+  display:flex;
+  flex-direction:column;
+
+  min-height:525px;
+
+  padding:27px;
+
+  border:1px solid var(--border);
+  border-radius:17px;
+
+  background:white;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.publication-card:hover {
+  transform:translateY(-3px);
+  border-color:#cadde6;
+  box-shadow:var(--shadow);
+}
+
+.pub-card-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:19px;
+}
+
+.pub-year {
+  min-width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  padding:0 7px;
+  border-radius:11px;
+  background:#ebf6f9;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:800;
+}
+
+.pub-status {
+  padding:5px 9px;
+  border-radius:20px;
+  background:#e8f8f5;
+  color:#148076;
+  font-size:8px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+}
+
+.pub-theme {
+  margin-bottom:11px;
+  color:var(--cyan);
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.1px;
+}
+
+.publication-card h3 {
+  margin-bottom:13px;
+  color:var(--navy);
+  font-size:17px;
+  line-height:1.38;
+}
+
+.pub-authors {
+  margin-bottom:8px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  line-height:1.5;
+}
+
+.pub-venue {
+  margin-bottom:8px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.5;
+}
+
+.pub-doi {
+  margin-top:3px;
+  color:#7d909f;
+  font-size:10px;
+  line-height:1.45;
+  word-break:break-word;
+}
+
+
+/* =========================================================
+   SHORT SUMMARY
+========================================================= */
+
+.pub-summary {
+  margin-top:18px;
+  padding:17px 18px;
+  border:1px solid #e1edf1;
+  border-radius:11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8fbfc,
+      #f2f8fa
+    );
+}
+
+.pub-summary-label {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin-bottom:7px;
+  color:#4b8798;
+  font-size:8px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.pub-summary-label::before {
+  content:"";
+  width:17px;
+  height:2px;
+  background:var(--turquoise);
+}
+
+.pub-summary p {
+  color:#536b7c;
+  font-size:11.5px;
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   INDEXING
+========================================================= */
+
+.index-info {
+  margin-top:14px;
+}
+
+.index-info-label {
+  margin-bottom:6px;
+  color:#93a3af;
+  font-size:8px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
+
+.index-info-badges {
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+}
+
+.index-badge {
+  display:inline-flex;
+  align-items:center;
+  min-height:23px;
+  padding:0 8px;
+  border-radius:20px;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+
+.index-badge.scopus {
+  border:1px solid #d1def2;
+  background:#eef4fb;
+  color:#2457c5;
+}
+
+.index-badge.wos {
+  border:1px solid #cce8e2;
+  background:#edf9f6;
+  color:#147d75;
+}
+
+.index-badge.quartile {
+  border:1px solid #e2dce9;
+  background:#f7f3f9;
+  color:#67577b;
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.pub-bottom {
+  margin-top:auto;
+  padding-top:18px;
+}
+
+.pub-bottom-inner {
+  padding-top:15px;
+  border-top:1px solid var(--border);
+}
+
+.card-link {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:800;
+}
+
+.card-link:hover {
+  text-decoration:underline;
+}
+
+.no-public-link {
+  color:#95a4b0;
+  font-size:10px;
+}
+
+.no-results {
+  display:none;
+  padding:55px 25px;
+  border:1px dashed #c9d9e2;
+  border-radius:var(--radius);
+  background:white;
+  text-align:center;
+  color:var(--muted);
+}
+
+
+/* =========================================================
+   THEMATIC RANGE
+========================================================= */
+
+.theme-grid {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+
+.theme-card {
+  min-height:170px;
+  padding:24px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:white;
+}
+
+.theme-number {
+  margin-bottom:20px;
+  color:var(--cyan);
+  font-size:10px;
+  font-weight:800;
+}
+
+.theme-card h3 {
+  margin-bottom:9px;
+  color:var(--navy);
+  font-size:16px;
+  line-height:1.3;
+}
+
+.theme-card p {
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.55;
+}
+
+
+/* =========================================================
+   FORTHCOMING
+========================================================= */
+
+.forthcoming-section {
+  position:relative;
+  overflow:hidden;
+  padding:82px 0;
+  border-top:1px solid var(--border);
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8fbfc,
+      #f2f7f9
+    );
+}
+
+.forthcoming-header {
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:30px;
+  align-items:end;
+  margin-bottom:30px;
+}
+
+.forthcoming-header .section-description {
+  margin-bottom:0;
+}
+
+.forthcoming-count {
+  min-width:145px;
+  padding:18px 22px;
+  border:1px solid #d9e7ec;
+  border-radius:14px;
+  background:rgba(255,255,255,.75);
+  text-align:center;
+}
+
+.forthcoming-count strong {
+  display:block;
+  margin-bottom:5px;
+  color:var(--navy);
+  font-size:28px;
+  line-height:1;
+}
+
+.forthcoming-count span {
+  color:var(--muted);
+  font-size:10px;
+}
+
+.forthcoming-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.forthcoming-card {
+  display:grid;
+  grid-template-columns:57px 1fr auto;
+  gap:17px;
+  align-items:start;
+  padding:21px 22px;
+  border:1px solid #dce7eb;
+  border-radius:14px;
+  background:rgba(255,255,255,.82);
+
+  transition:
+    border-color .2s ease,
+    background .2s ease;
+}
+
+.forthcoming-card:hover {
+  border-color:#bcdde3;
+  background:white;
+}
+
+.forthcoming-year {
+  width:54px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  background:#eef4f6;
+  color:#728798;
+  font-size:10px;
+  font-weight:800;
+}
+
+.forthcoming-content h3 {
+  margin-bottom:7px;
+  color:#294258;
+  font-size:14px;
+  line-height:1.42;
+}
+
+.forthcoming-authors {
+  color:#718595;
+  font-size:11px;
+  line-height:1.5;
+}
+
+.forthcoming-status {
+  padding:5px 9px;
+  border:1px solid #cfe3e6;
+  border-radius:20px;
+  background:#f0f8f8;
+  color:#4d878a;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.7px;
+  white-space:nowrap;
+}
+
+.forthcoming-note {
+  margin-top:20px;
+  padding:17px 20px;
+  border-left:3px solid #9ed4db;
+  background:rgba(255,255,255,.55);
+  color:#738794;
+  font-size:11px;
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.final-cta {
+  padding:51px 0;
+  color:white;
+  background:linear-gradient(110deg,#0b2845,#145879);
+}
+
+.final-cta-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.final-cta h2 {
+  margin-bottom:7px;
+  font-size:29px;
+}
+
+.final-cta p {
+  max-width:720px;
+  color:#c7dce7;
+}
+
+.btn {
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 23px;
+  border-radius:9px;
+  background:linear-gradient(90deg,#79d5dd,#55bedb);
+  color:#082b46;
+  font-size:14px;
+  font-weight:700;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  padding:33px 0 20px;
+  border-top:1px solid var(--border);
+  background:#f8fafc;
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:1.25fr 1fr;
+  gap:35px;
+  align-items:center;
+}
+
+.footer-project strong {
+  display:block;
+  margin-bottom:7px;
+  color:var(--navy);
+}
+
+.footer-project p {
+  color:var(--muted);
+  font-size:12px;
+}
+
+.footer-links {
+  display:flex;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+  gap:17px;
+  color:#53677a;
+  font-size:12px;
+}
+
+.copyright {
+  margin-top:25px;
+  padding-top:18px;
+  border-top:1px solid var(--border);
+  text-align:center;
+  color:#8795a2;
+  font-size:11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1200px) {
+
+  .desktop-nav {
+    display:none;
+  }
+
+  .mobile-toggle {
+    display:block;
+  }
+
+  .page-hero-inner {
+    grid-template-columns:1fr;
+  }
+
+  .publication-summary {
+    max-width:650px;
+  }
+
+  .publication-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .theme-grid {
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .filters {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media (max-width:900px) {
+
+  .forthcoming-header {
+    grid-template-columns:1fr;
+  }
+
+  .forthcoming-count {
+    width:145px;
+  }
+
+  .forthcoming-grid {
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns:1fr;
+  }
+
+  .footer-links {
+    justify-content:flex-start;
+  }
+
+}
+
+@media (max-width:700px) {
+
+  .brand-text small,
+  .language {
+    display:none;
+  }
+
+  .page-hero-inner {
+    padding:57px 0;
+  }
+
+  h1 {
+    font-size:43px;
+  }
+
+  .year-grid,
+  .publication-grid,
+  .theme-grid,
+  .filters {
+    grid-template-columns:1fr;
+  }
+
+  .forthcoming-card {
+    grid-template-columns:48px 1fr;
+  }
+
+  .forthcoming-status {
+    grid-column:2;
+    width:fit-content;
+  }
+
+  .final-cta-inner {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+}
+
+</style>
 
 </head>
 
@@ -1654,7 +1196,6 @@
      HEADER
 ========================================================= -->
 
-
 <header>
 
   <div class="container navbar">
@@ -1664,7 +1205,10 @@
       class="brand"
     >
 
-      <div class="logo-mark">
+      <div
+        class="logo-mark"
+        aria-hidden="true"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -1698,17 +1242,42 @@
         За проекта
       </a>
 
+      <a href="methodology.html">
+        Методология
+      </a>
+
       <a href="data-indices.html">
         Данни и индекси
       </a>
 
-      <a href="regions.html">
-        Региони
-      </a>
 
-      <a href="areas.html">
-        Области
-      </a>
+      <div class="nav-dropdown">
+
+        <button type="button">
+
+          Анализи
+
+          <span class="dropdown-arrow">
+            ▼
+          </span>
+
+        </button>
+
+
+        <div class="dropdown-menu">
+
+          <a href="regions.html">
+            Региони
+          </a>
+
+          <a href="areas.html">
+            Сектори
+          </a>
+
+        </div>
+
+      </div>
+
 
       <a href="results.html">
         Резултати
@@ -1745,13 +1314,50 @@
     id="mobileMenu"
   >
 
-    <a href="index.html">Начало</a>
-    <a href="about.html">За проекта</a>
-    <a href="data-indices.html">Данни и индекси</a>
-    <a href="regions.html">Региони</a>
-    <a href="areas.html">Области</a>
-    <a href="results.html">Резултати</a>
-    <a href="publications.html">Публикации</a>
+    <a href="index.html">
+      Начало
+    </a>
+
+    <a href="about.html">
+      За проекта
+    </a>
+
+    <a href="methodology.html">
+      Методология
+    </a>
+
+    <a href="data-indices.html">
+      Данни и индекси
+    </a>
+
+
+    <div class="mobile-group-label">
+      Аналитични разрези
+    </div>
+
+
+    <a
+      class="mobile-sub"
+      href="regions.html"
+    >
+      Региони
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="areas.html"
+    >
+      Сектори
+    </a>
+
+
+    <a href="results.html">
+      Резултати
+    </a>
+
+    <a href="publications.html">
+      Публикации
+    </a>
 
   </div>
 
@@ -1765,7 +1371,6 @@
      HERO
 ========================================================= -->
 
-
 <section class="page-hero">
 
   <div class="container page-hero-inner">
@@ -1777,16 +1382,15 @@
         Научни резултати
       </div>
 
-
       <h1>
         Публикации
       </h1>
 
-
       <p class="hero-description">
 
-        Научните публикации представят концептуалните,
-        методологическите и емпиричните резултати,
+        Научните публикации представят
+        концептуалните, методологическите
+        и емпиричните резултати,
         разработени в различните направления
         на проект № 6/2024
         „Дигитална конкурентоспособност
@@ -1866,11 +1470,11 @@
       <div class="index-summary">
 
         <span class="summary-index-badge">
-          2 Scopus
+          <span id="scopusTotal">2</span>&nbsp;Scopus
         </span>
 
         <span class="summary-index-badge">
-          1 Web of Science
+          <span id="wosTotal">1</span>&nbsp;Web of Science
         </span>
 
       </div>
@@ -1886,28 +1490,25 @@
      PUBLISHED
 ========================================================= -->
 
-
 <section class="standard-section section-alt">
 
   <div class="container">
-
 
     <div class="section-label">
       Published
     </div>
 
-
     <h2 class="section-title">
       Публикувани разработки
     </h2>
-
 
     <p class="section-description">
 
       Публикациите проследяват различни измерения
       на дигиталната конкурентоспособност –
       от националната и институционалната среда
-      до секторните и организационните проявления
+      до регионалните, секторните
+      и организационните проявления
       на цифровата трансформация.
 
     </p>
@@ -1943,16 +1544,16 @@
             Всички години
           </option>
 
-          <option value="2024">
-            2024
+          <option value="2026">
+            2026
           </option>
 
           <option value="2025">
             2025
           </option>
 
-          <option value="2026">
-            2026
+          <option value="2024">
+            2024
           </option>
 
         </select>
@@ -1963,7 +1564,7 @@
       <div class="filter-control">
 
         <label for="themeFilter">
-          Направление
+          Тематично направление
         </label>
 
         <select id="themeFilter">
@@ -2086,28 +1687,25 @@
      THEMATIC RANGE
 ========================================================= -->
 
-
 <section class="standard-section">
 
   <div class="container">
-
 
     <div class="section-label">
       Тематичен обхват
     </div>
 
-
     <h2 class="section-title">
       Публикационни направления
     </h2>
 
-
     <p class="section-description">
 
-      Научните резултати развиват взаимосвързани
-      аспекти на дигиталната конкурентоспособност
-      на национално, регионално, секторно
-      и организационно равнище.
+      Научните резултати развиват
+      взаимосвързани аспекти
+      на дигиталната конкурентоспособност
+      на национално, регионално,
+      секторно и организационно равнище.
 
     </p>
 
@@ -2147,7 +1745,8 @@
         <p>
           Електронно управление,
           стратегическо планиране,
-          институционален капацитет и адаптивност.
+          институционален капацитет
+          и адаптивност.
         </p>
 
       </div>
@@ -2165,8 +1764,8 @@
 
         <p>
           Дигитална готовност,
-          устойчивост и секторна
-          конкурентоспособност.
+          устойчивост
+          и секторна конкурентоспособност.
         </p>
 
       </div>
@@ -2184,7 +1783,8 @@
 
         <p>
           Цифрови инвестиции,
-          данни, организационна промяна
+          данни,
+          организационна промяна
           и стратегическо управление.
         </p>
 
@@ -2204,7 +1804,8 @@
         <p>
           Дигитализация на НПО,
           доброволчество,
-          човешки капитал и цифрови инструменти.
+          човешки капитал
+          и цифрови инструменти.
         </p>
 
       </div>
@@ -2220,14 +1821,11 @@
      FORTHCOMING
 ========================================================= -->
 
-
 <section class="forthcoming-section">
 
   <div class="container">
 
-
     <div class="forthcoming-header">
-
 
       <div>
 
@@ -2235,11 +1833,9 @@
           Forthcoming
         </div>
 
-
         <h2 class="section-title">
           Предстоящи публикации
         </h2>
-
 
         <p class="section-description">
 
@@ -2292,11 +1888,9 @@
      CTA
 ========================================================= -->
 
-
 <section class="final-cta">
 
   <div class="container final-cta-inner">
-
 
     <div>
 
@@ -2305,9 +1899,11 @@
       </h2>
 
       <p>
+
         Виж основните емпирични,
-        междусекторни и стратегически изводи
+        синтезирани и стратегически изводи
         от проекта.
+
       </p>
 
     </div>
@@ -2332,14 +1928,11 @@
      FOOTER
 ========================================================= -->
 
-
 <footer>
 
   <div class="container">
 
-
     <div class="footer-grid">
-
 
       <div class="footer-project">
 
@@ -2362,13 +1955,37 @@
 
       <div class="footer-links">
 
-        <a href="index.html">Начало</a>
-        <a href="about.html">За проекта</a>
-        <a href="data-indices.html">Данни и индекси</a>
-        <a href="regions.html">Региони</a>
-        <a href="areas.html">Области</a>
-        <a href="results.html">Резултати</a>
-        <a href="publications.html">Публикации</a>
+        <a href="index.html">
+          Начало
+        </a>
+
+        <a href="about.html">
+          За проекта
+        </a>
+
+        <a href="methodology.html">
+          Методология
+        </a>
+
+        <a href="data-indices.html">
+          Данни и индекси
+        </a>
+
+        <a href="regions.html">
+          Региони
+        </a>
+
+        <a href="areas.html">
+          Сектори
+        </a>
+
+        <a href="results.html">
+          Резултати
+        </a>
+
+        <a href="publications.html">
+          Публикации
+        </a>
 
       </div>
 
@@ -2377,7 +1994,7 @@
 
     <div class="copyright">
 
-      Дигитална конкурентоспособност
+      © 2026 · Дигитална конкурентоспособност
       на социално-икономическата система на България
 
     </div>
@@ -2392,22 +2009,18 @@
 (function(){
 
 
-  /* =========================================================
-     MOBILE MENU
-  ========================================================= */
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const mobileToggle =
+  document.getElementById("mobileToggle");
+
+const mobileMenu =
+  document.getElementById("mobileMenu");
 
 
-  const mobileToggle =
-    document.getElementById(
-      "mobileToggle"
-    );
-
-
-  const mobileMenu =
-    document.getElementById(
-      "mobileMenu"
-    );
-
+if (mobileToggle && mobileMenu) {
 
   mobileToggle.addEventListener(
     "click",
@@ -2422,864 +2035,796 @@
   );
 
 
-  /* =========================================================
-     PUBLISHED PUBLICATIONS
-  ========================================================= */
-
-
-  const publications = [
-
-
-    {
-      year: 2024,
-
-      theme: "concept",
-
-      themeLabel:
-        "Дигитална конкурентоспособност",
-
-      title:
-        "Unraveling the Layers of Digital Competitiveness in the Economic Systems",
-
-      authors:
-        "Sabrina Kalinkova",
-
-      venue:
-        "8th FEB International Scientific Conference · University of Maribor Press",
-
-      doi:
-        "10.18690/um.epf.5.2024.35",
-
-      url:
-        "https://doi.org/10.18690/um.epf.5.2024.35",
-
-      summary:
-        "Публикацията поставя концептуалната основа за разглеждането на дигиталната конкурентоспособност като комплексна характеристика на икономическите системи и създава отправна точка за последващите секторни и многостепенни анализи в проекта.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2024,
-
-      theme: "concept",
-
-      themeLabel:
-        "Национална конкурентоспособност",
-
-      title:
-        "The Position of Bulgaria in the EU Competitive Landscape",
-
-      authors:
-        "Sabrina Kalinkova",
-
-      venue:
-        "Management and Education, 20(2), 2024",
-
-      doi: "",
-
-      url: "",
-
-      summary:
-        "Изследването позиционира България в европейската конкурентна среда и разглежда факторите, които определят способността на страната да използва цифровата трансформация като източник на по-висока конкурентоспособност.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2024,
-
-      theme: "civil",
-
-      themeLabel:
-        "Граждански сектор",
-
-      title:
-        "Development of Digital Tools for Volunteer Assessment",
-
-      authors:
-        "Violeta Toncheva-Zlatkova",
-
-      venue:
-        "Management and Education, 20(4), 2024",
-
-      doi: "",
-
-      url: "",
-
-      summary:
-        "Публикацията разглежда възможностите за използване на цифрови инструменти при оценяването на доброволци и поставя основа за по-систематично измерване на компетентности, ангажираност и принос в организациите от гражданския сектор.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2025,
-
-      theme: "government",
-
-      themeLabel:
-        "Публично управление",
-
-      title:
-        "Electronic Government as an Engine for Bulgaria's Digital Competitiveness",
-
-      authors:
-        "Sabrina Kalinkova",
-
-      venue:
-        "",
-
-      doi: "",
-
-      url: "",
-
-      summary:
-        "Изследването разглежда електронното управление като елемент на националната дигитална конкурентоспособност. Анализът откроява постигнатия институционален напредък, както и продължаващите ограничения, свързани с координацията, цифровите умения, свързаността и интеграцията на технологии.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2025,
-
-      theme: "civil",
-
-      themeLabel:
-        "Граждански сектор",
-
-      title:
-        "Impact of Digitalisation on the Performance of NGOs: Findings from Bulgaria",
-
-      authors:
-        "Violeta Toncheva-Zlatkova",
-
-      venue:
-        "",
-
-      doi: "",
-
-      url: "",
-
-      summary:
-        "Публикацията анализира как цифровите технологии влияят върху работата на българските неправителствени организации. Особено внимание е отделено на цифровите умения, организационните ползи и ограниченията, както и на ролята на дигиталните доброволци за развитието на организационния капацитет.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2025,
-
-      theme: "business",
-
-      themeLabel:
-        "Бизнес и индустрия",
-
-      title:
-        "Digital Twins as a Tool for Strategic Planning and Sustainability in Industry",
-
-      authors:
-        "Sabrina Kalinkova",
-
-      venue:
-        "",
-
-      doi: "",
-
-      url: "",
-
-      summary:
-        "Публикацията разглежда дигиталните двойници като инструмент за стратегическо планиране в индустриална среда. Акцентът е върху потенциала им за моделиране, сценарийно изследване и подкрепа на решения, свързани с ефективността, адаптивността и устойчивото развитие.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2025,
-
-      theme: "health",
-
-      themeLabel:
-        "Здравеопазване",
-
-      title:
-        "Financial Sustainability in Bulgaria's Healthcare: Challenges and Strategic Imperatives",
-
-      authors:
-        "Christo Ivanov",
-
-      venue:
-        "LIMEN 2024 Conference Proceedings",
-
-      doi:
-        "10.31410/LIMEN.2024.457",
-
-      url:
-        "https://doi.org/10.31410/LIMEN.2024.457",
-
-      summary:
-        "Изследването разглежда финансовата устойчивост на българската здравна система и ключовите структурни ограничения пред нейното развитие. Акцентът е върху връзката между ресурсната обезпеченост, управленските решения и възможностите за устойчиво секторно развитие.",
-
-      scopus: true,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2025,
-
-      theme: "strategy",
-
-      themeLabel:
-        "Стратегическо управление",
-
-      title:
-        "From Anticipation to Adaptation: The Missing Feedforward Logic in Bulgaria's Economic Governance",
-
-      authors:
-        "Sabrina Kalinkova",
-
-      venue:
-        "Istoriya-History, Vol. 33, No. 6s, 2025",
-
-      doi:
-        "10.53656/his2025-6s-7-fro",
-
-      url:
-        "https://doi.org/10.53656/his2025-6s-7-fro",
-
-      summary:
-        "Публикацията анализира способността на националната стратегическа система да предвижда бъдещи промени и рискове. Резултатите показват преобладаване на реактивни и отчетни механизми и аргументират необходимостта от по-силна feedforward логика в икономическото управление.",
-
-      scopus: false,
-      wos: true,
-      quartile: "Q3"
-    },
-
-
-    {
-      year: 2025,
-
-      theme: "health",
-
-      themeLabel:
-        "Здравеопазване",
-
-      title:
-        "Digital Competitiveness of the Healthcare System in Bulgaria",
-
-      authors:
-        "Sabrina Kalinkova; Christo Ivanov",
-
-      venue:
-        "ERAZ 2025 Conference Proceedings",
-
-      doi:
-        "10.31410/ERAZ.2025.229",
-
-      url:
-        "https://doi.org/10.31410/ERAZ.2025.229",
-
-      summary:
-        "Изследването оценява дигиталната конкурентоспособност на здравната система чрез взаимодействието между технологична инфраструктура, човешки капитал, организационна готовност и ефекта на цифровите решения върху качеството и ефективността на услугите.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2025,
-
-      theme: "strategy",
-
-      themeLabel:
-        "Стратегическо управление",
-
-      title:
-        "From Data to Decisions: Rethinking Strategic Planning in the Digital Age",
-
-      authors:
-        "Sabrina Kalinkova",
-
-      venue:
-        "ERAZ 2025 Conference Proceedings",
-
-      doi:
-        "10.31410/ERAZ.2025.417",
-
-      url:
-        "https://doi.org/10.31410/ERAZ.2025.417",
-
-      summary:
-        "Публикацията разглежда промяната на стратегическото планиране в среда на нарастваща достъпност на данни и цифрови технологии. Акцентът е върху преминаването от статични планови решения към по-адаптивни, аналитично подкрепени и информационно свързани управленски процеси.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2025,
-
-      theme: "human",
-
-      themeLabel:
-        "Човешки капитал",
-
-      title:
-        "Дигитална грамотност и дигитална конкурентоспособност в България: пресечни точки",
-
-      authors:
-        "Ivan Valchanov",
-
-      venue:
-        "Икономически и социални алтернативи, 31(4), 2025",
-
-      doi:
-        "10.37075/ISA.2025.4.08",
-
-      url:
-        "https://doi.org/10.37075/ISA.2025.4.08",
-
-      summary:
-        "Изследването разглежда дигиталната грамотност като компонент на човешкия капитал и като предпоставка за по-висока дигитална конкурентоспособност. Анализът свързва индивидуалните цифрови способности с по-широките процеси на икономическа и обществена трансформация.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2026,
-
-      theme: "concept",
-
-      themeLabel:
-        "AI и дигитална конкурентоспособност",
-
-      title:
-        "Digital Lag or Sustainable Leap? Strategic Paths for Emerging Economies in the AI Age",
-
-      authors:
-        "Sabrina Kalinkova",
-
-      venue:
-        "University of Maribor Press",
-
-      doi: "",
-
-      url:
-        "https://press.um.si/index.php/ump/en/catalog/book/1126/chapter/1340",
-
-      summary:
-        "Публикацията разглежда изкуствения интелект като фактор, който може както да ускори технологичното наваксване, така и да задълбочи цифровите различия в развиващите се икономики. Акцентът е върху стратегическия избор между краткосрочно технологично усвояване и изграждане на устойчиви цифрови способности.",
-
-      scopus: false,
-      wos: false,
-      quartile: ""
-    },
-
-
-    {
-      year: 2026,
-
-      theme: "macro",
-
-      themeLabel:
-        "Макроикономика и европейска интеграция",
-
-      title:
-        "From Currency Board Arrangement to Euro Area: Structural Risks and Opportunities",
-
-      authors:
-        "Sabrina Kalinkova",
-
-      venue:
-        "Economic Studies, 35(3), 66–89",
-
-      doi:
-        "10.56497/esj260304",
-
-      url:
-        "https://doi.org/10.56497/esj260304",
-
-      summary:
-        "Изследването анализира структурните рискове и възможности при прехода на България от режим на валутен борд към участие в еврозоната. Акцентът е върху макроикономическата устойчивост, структурните зависимости и способността на икономиката да се адаптира към новата институционална рамка.",
-
-      scopus: true,
-      wos: false,
-      quartile: "Q4"
-    }
-
-  ];
-
-
-  /* =========================================================
-     FORTHCOMING PUBLICATIONS
-  ========================================================= */
-
-
-  const forthcomingPublications = [
-
-
-    {
-      year: "",
-
-      title:
-        "Digital Education Gaps Across a System in Transition",
-
-      authors:
-        "Sabrina Kalinkova; Violeta Toncheva-Zlatkova"
-    },
-
-
-    {
-      year: "2026",
-
-      title:
-        "Between Differences and Similarities: Regional Profile of Digitalization in Bulgarian Healthcare",
-
-      authors:
-        "Christo Ivanov"
-    },
-
-
-    {
-      year: "2026",
-
-      title:
-        "From Chalkboards to Tablets: The Digitalization Process in Bulgarian Educational System",
-
-      authors:
-        "Violeta Toncheva-Zlatkova; Sabrina Kalinkova"
-    },
-
-
-    {
-      year: "2026",
-
-      title:
-        "From Investment to Innovation: The Impact of Targeted Digital Spending on Business Performance",
-
-      authors:
-        "Sabrina Kalinkova"
-    },
-
-
-    {
-      year: "2026",
-
-      title:
-        "Volunteering in the Digital Era: Building Human Capital and Competitiveness",
-
-      authors:
-        "Violeta Toncheva-Zlatkova"
-    },
-
-
-    {
-      year: "2025",
-
-      title:
-        "Managing Organizational Change in the Context of Digital Modernization: The Bulgarian Experience in Traditional Industries",
-
-      authors:
-        "Sabrina Kalinkova"
-    },
-
-
-    {
-      year: "2026",
-
-      title:
-        "Towards a New Approach of Assessing Volunteers: The Digital Platform VOLUMETRIC",
-
-      authors:
-        "Violeta Toncheva-Zlatkova"
-    },
-
-
-    {
-      year: "2026",
-
-      title:
-        "Digital Competitiveness as a Systemic Capability: Cross-Sectoral Lessons from Bulgaria’s Digital Transformation",
-
-      authors:
-        "Sabrina Kalinkova"
-    },
-
-
-    {
-      year: "",
-
-      title:
-        "Artificial Intelligence as a Catalyst for Social Entrepreneurship and Volunteering Engagement",
-
-      authors:
-        "Violeta Toncheva-Zlatkova"
-    }
-
-  ];
-
-
-  /* =========================================================
-     ELEMENTS
-  ========================================================= */
-
-
-  const publicationGrid =
-    document.getElementById(
-      "publicationGrid"
+  mobileMenu
+    .querySelectorAll("a")
+    .forEach(
+      function(link){
+
+        link.addEventListener(
+          "click",
+          function(){
+            mobileMenu.style.display = "none";
+          }
+        );
+
+      }
     );
 
-
-  const forthcomingGrid =
-    document.getElementById(
-      "forthcomingGrid"
-    );
+}
 
 
-  const searchInput =
-    document.getElementById(
-      "searchInput"
-    );
+/* =========================================================
+   PUBLISHED PUBLICATIONS
+========================================================= */
+
+const publications = [
 
 
-  const yearFilter =
-    document.getElementById(
-      "yearFilter"
-    );
+  {
+    year: 2024,
+
+    theme: "concept",
+
+    themeLabel:
+      "Дигитална конкурентоспособност",
+
+    title:
+      "Unraveling the Layers of Digital Competitiveness in the Economic Systems",
+
+    authors:
+      "Sabrina Kalinkova",
+
+    venue:
+      "8th FEB International Scientific Conference · University of Maribor Press",
+
+    doi:
+      "10.18690/um.epf.5.2024.35",
+
+    url:
+      "https://doi.org/10.18690/um.epf.5.2024.35",
+
+    summary:
+      "Публикацията поставя концептуалната основа за разглеждането на дигиталната конкурентоспособност като комплексна характеристика на икономическите системи и създава отправна точка за последващите секторни и многостепенни анализи в проекта.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  const themeFilter =
-    document.getElementById(
-      "themeFilter"
-    );
+  {
+    year: 2024,
+
+    theme: "concept",
+
+    themeLabel:
+      "Национална конкурентоспособност",
+
+    title:
+      "The Position of Bulgaria in the EU Competitive Landscape",
+
+    authors:
+      "Sabrina Kalinkova",
+
+    venue:
+      "Management and Education, 20(2), 2024",
+
+    doi: "",
+
+    url: "",
+
+    summary:
+      "Изследването позиционира България в европейската конкурентна среда и разглежда факторите, които определят способността на страната да използва цифровата трансформация като източник на по-висока конкурентоспособност.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  const indexFilter =
-    document.getElementById(
-      "indexFilter"
-    );
+  {
+    year: 2024,
+
+    theme: "civil",
+
+    themeLabel:
+      "Граждански сектор",
+
+    title:
+      "Development of Digital Tools for Volunteer Assessment",
+
+    authors:
+      "Violeta Toncheva-Zlatkova",
+
+    venue:
+      "Management and Education, 20(4), 2024",
+
+    doi: "",
+
+    url: "",
+
+    summary:
+      "Публикацията разглежда възможностите за използване на цифрови инструменти при оценяването на доброволци и поставя основа за по-систематично измерване на компетентности, ангажираност и принос в организациите от гражданския сектор.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  const resultCount =
-    document.getElementById(
-      "resultCount"
-    );
+  {
+    year: 2025,
+
+    theme: "government",
+
+    themeLabel:
+      "Публично управление",
+
+    title:
+      "Electronic Government as an Engine for Bulgaria's Digital Competitiveness",
+
+    authors:
+      "Sabrina Kalinkova",
+
+    venue: "",
+
+    doi: "",
+
+    url: "",
+
+    summary:
+      "Изследването разглежда електронното управление като елемент на националната дигитална конкурентоспособност. Анализът откроява постигнатия институционален напредък, както и продължаващите ограничения, свързани с координацията, цифровите умения, свързаността и интеграцията на технологии.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  const noResults =
-    document.getElementById(
-      "noResults"
-    );
+  {
+    year: 2025,
+
+    theme: "civil",
+
+    themeLabel:
+      "Граждански сектор",
+
+    title:
+      "Impact of Digitalisation on the Performance of NGOs: Findings from Bulgaria",
+
+    authors:
+      "Violeta Toncheva-Zlatkova",
+
+    venue: "",
+
+    doi: "",
+
+    url: "",
+
+    summary:
+      "Публикацията анализира как цифровите технологии влияят върху работата на българските неправителствени организации. Особено внимание е отделено на цифровите умения, организационните ползи и ограниченията, както и на ролята на дигиталните доброволци за развитието на организационния капацитет.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  const resetFilters =
-    document.getElementById(
-      "resetFilters"
-    );
+  {
+    year: 2025,
+
+    theme: "business",
+
+    themeLabel:
+      "Бизнес и индустрия",
+
+    title:
+      "Digital Twins as a Tool for Strategic Planning and Sustainability in Industry",
+
+    authors:
+      "Sabrina Kalinkova",
+
+    venue: "",
+
+    doi: "",
+
+    url: "",
+
+    summary:
+      "Публикацията разглежда дигиталните двойници като инструмент за стратегическо планиране в индустриална среда. Акцентът е върху потенциала им за моделиране, сценарийно изследване и подкрепа на решения, свързани с ефективността, адаптивността и устойчивото развитие.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  /* =========================================================
-     COUNTERS
-  ========================================================= */
+  {
+    year: 2025,
+
+    theme: "health",
+
+    themeLabel:
+      "Здравеопазване",
+
+    title:
+      "Financial Sustainability in Bulgaria's Healthcare: Challenges and Strategic Imperatives",
+
+    authors:
+      "Christo Ivanov",
+
+    venue:
+      "LIMEN 2024 Conference Proceedings",
+
+    doi:
+      "10.31410/LIMEN.2024.457",
+
+    url:
+      "https://doi.org/10.31410/LIMEN.2024.457",
+
+    summary:
+      "Изследването разглежда финансовата устойчивост на българската здравна система и ключовите структурни ограничения пред нейното развитие. Акцентът е върху връзката между ресурсната обезпеченост, управленските решения и възможностите за устойчиво секторно развитие.",
+
+    scopus: true,
+    wos: false,
+    quartile: ""
+  },
 
 
-  document.getElementById(
-    "publishedTotal"
-  ).textContent =
-    publications.length;
+  {
+    year: 2025,
+
+    theme: "strategy",
+
+    themeLabel:
+      "Стратегическо управление",
+
+    title:
+      "From Anticipation to Adaptation: The Missing Feedforward Logic in Bulgaria's Economic Governance",
+
+    authors:
+      "Sabrina Kalinkova",
+
+    venue:
+      "Istoriya-History, Vol. 33, No. 6s, 2025",
+
+    doi:
+      "10.53656/his2025-6s-7-fro",
+
+    url:
+      "https://doi.org/10.53656/his2025-6s-7-fro",
+
+    summary:
+      "Публикацията анализира способността на националната стратегическа система да предвижда бъдещи промени и рискове. Резултатите показват преобладаване на реактивни и отчетни механизми и аргументират необходимостта от по-силна feedforward логика в икономическото управление.",
+
+    scopus: false,
+    wos: true,
+    quartile: "Q3"
+  },
 
 
-  document.getElementById(
-    "forthcomingTotal"
-  ).textContent =
-    forthcomingPublications.length;
+  {
+    year: 2025,
+
+    theme: "health",
+
+    themeLabel:
+      "Здравеопазване",
+
+    title:
+      "Digital Competitiveness of the Healthcare System in Bulgaria",
+
+    authors:
+      "Sabrina Kalinkova; Christo Ivanov",
+
+    venue:
+      "ERAZ 2025 Conference Proceedings",
+
+    doi:
+      "10.31410/ERAZ.2025.229",
+
+    url:
+      "https://doi.org/10.31410/ERAZ.2025.229",
+
+    summary:
+      "Изследването оценява дигиталната конкурентоспособност на здравната система чрез взаимодействието между технологична инфраструктура, човешки капитал, организационна готовност и ефекта на цифровите решения върху качеството и ефективността на услугите.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  document.getElementById(
-    "count2024"
-  ).textContent =
-    publications.filter(
-      p => p.year === 2024
-    ).length;
+  {
+    year: 2025,
+
+    theme: "strategy",
+
+    themeLabel:
+      "Стратегическо управление",
+
+    title:
+      "From Data to Decisions: Rethinking Strategic Planning in the Digital Age",
+
+    authors:
+      "Sabrina Kalinkova",
+
+    venue:
+      "ERAZ 2025 Conference Proceedings",
+
+    doi:
+      "10.31410/ERAZ.2025.417",
+
+    url:
+      "https://doi.org/10.31410/ERAZ.2025.417",
+
+    summary:
+      "Публикацията разглежда промяната на стратегическото планиране в среда на нарастваща достъпност на данни и цифрови технологии. Акцентът е върху преминаването от статични планови решения към по-адаптивни, аналитично подкрепени и информационно свързани управленски процеси.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  document.getElementById(
-    "count2025"
-  ).textContent =
-    publications.filter(
-      p => p.year === 2025
-    ).length;
+  {
+    year: 2025,
+
+    theme: "human",
+
+    themeLabel:
+      "Човешки капитал",
+
+    title:
+      "Дигитална грамотност и дигитална конкурентоспособност в България: пресечни точки",
+
+    authors:
+      "Ivan Valchanov",
+
+    venue:
+      "Икономически и социални алтернативи, 31(4), 2025",
+
+    doi:
+      "10.37075/ISA.2025.4.08",
+
+    url:
+      "https://doi.org/10.37075/ISA.2025.4.08",
+
+    summary:
+      "Изследването разглежда дигиталната грамотност като компонент на човешкия капитал и като предпоставка за по-висока дигитална конкурентоспособност. Анализът свързва индивидуалните цифрови способности с по-широките процеси на икономическа и обществена трансформация.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  document.getElementById(
-    "count2026"
-  ).textContent =
-    publications.filter(
-      p => p.year === 2026
-    ).length;
+  {
+    year: 2026,
+
+    theme: "concept",
+
+    themeLabel:
+      "AI и дигитална конкурентоспособност",
+
+    title:
+      "Digital Lag or Sustainable Leap? Strategic Paths for Emerging Economies in the AI Age",
+
+    authors:
+      "Sabrina Kalinkova",
+
+    venue:
+      "University of Maribor Press",
+
+    doi: "",
+
+    url:
+      "https://press.um.si/index.php/ump/en/catalog/book/1126/chapter/1340",
+
+    summary:
+      "Публикацията разглежда изкуствения интелект като фактор, който може както да ускори технологичното наваксване, така и да задълбочи цифровите различия в развиващите се икономики. Акцентът е върху стратегическия избор между краткосрочно технологично усвояване и изграждане на устойчиви цифрови способности.",
+
+    scopus: false,
+    wos: false,
+    quartile: ""
+  },
 
 
-  /* =========================================================
-     INDEX BADGES
-  ========================================================= */
+  {
+    year: 2026,
 
+    theme: "macro",
 
-  function indexBadges(pub){
+    themeLabel:
+      "Макроикономика и европейска интеграция",
 
-    let badges = "";
+    title:
+      "From Currency Board Arrangement to Euro Area: Structural Risks and Opportunities",
 
+    authors:
+      "Sabrina Kalinkova",
 
-    if(pub.scopus){
+    venue:
+      "Economic Studies, 35(3), 66–89",
 
-      badges += `
+    doi:
+      "10.56497/esj260304",
 
-        <span class="index-badge scopus">
-          Scopus
-        </span>
+    url:
+      "https://doi.org/10.56497/esj260304",
 
-      `;
+    summary:
+      "Изследването анализира структурните рискове и възможности при прехода на България от режим на валутен борд към участие в еврозоната. Акцентът е върху макроикономическата устойчивост, структурните зависимости и способността на икономиката да се адаптира към новата институционална рамка.",
 
-    }
-
-
-    if(pub.wos){
-
-      badges += `
-
-        <span class="index-badge wos">
-          Web of Science
-        </span>
-
-      `;
-
-    }
-
-
-    if(pub.quartile){
-
-      badges += `
-
-        <span class="index-badge quartile">
-          ${pub.quartile}
-        </span>
-
-      `;
-
-    }
-
-
-    return badges;
-
+    scopus: true,
+    wos: false,
+    quartile: "Q4"
   }
 
-
-  /* =========================================================
-     PUBLISHED CARD
-  ========================================================= */
+];
 
 
-  function publicationCard(pub){
+/* =========================================================
+   FORTHCOMING PUBLICATIONS
+========================================================= */
+
+const forthcomingPublications = [
 
 
-    const venueBlock =
-      pub.venue
-      ? `
-
-        <div class="pub-venue">
-          ${pub.venue}
-        </div>
-
-      `
-      : "";
+  {
+    year: "",
+    title:
+      "Digital Education Gaps Across a System in Transition",
+    authors:
+      "Sabrina Kalinkova; Violeta Toncheva-Zlatkova"
+  },
 
 
-    const doiBlock =
-      pub.doi
-      ? `
-
-        <div class="pub-doi">
-          DOI: ${pub.doi}
-        </div>
-
-      `
-      : "";
+  {
+    year: "2026",
+    title:
+      "Between Differences and Similarities: Regional Profile of Digitalization in Bulgarian Healthcare",
+    authors:
+      "Christo Ivanov"
+  },
 
 
-    const badges =
-      indexBadges(pub);
+  {
+    year: "2026",
+    title:
+      "From Chalkboards to Tablets: The Digitalization Process in Bulgarian Educational System",
+    authors:
+      "Violeta Toncheva-Zlatkova; Sabrina Kalinkova"
+  },
 
 
-    const indexBlock =
-      badges
-      ? `
-
-        <div class="index-info">
-
-          <div class="index-info-label">
-            Индексиране
-          </div>
-
-          <div class="index-info-badges">
-            ${badges}
-          </div>
-
-        </div>
-
-      `
-      : "";
+  {
+    year: "2026",
+    title:
+      "From Investment to Innovation: The Impact of Targeted Digital Spending on Business Performance",
+    authors:
+      "Sabrina Kalinkova"
+  },
 
 
-    const linkBlock =
-      pub.url
-      ? `
-
-        <a
-          class="card-link"
-          href="${pub.url}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Прочети публикацията →
-        </a>
-
-      `
-      : `
-
-        <span class="no-public-link">
-          Публичен линк ще бъде добавен
-        </span>
-
-      `;
+  {
+    year: "2026",
+    title:
+      "Volunteering in the Digital Era: Building Human Capital and Competitiveness",
+    authors:
+      "Violeta Toncheva-Zlatkova"
+  },
 
 
-    return `
-
-      <article class="publication-card">
-
-
-        <div class="pub-card-top">
-
-          <div class="pub-year">
-            ${pub.year}
-          </div>
+  {
+    year: "2025",
+    title:
+      "Managing Organizational Change in the Context of Digital Modernization: The Bulgarian Experience in Traditional Industries",
+    authors:
+      "Sabrina Kalinkova"
+  },
 
 
-          <div class="pub-status">
-            Published
-          </div>
-
-        </div>
-
-
-        <div class="pub-theme">
-          ${pub.themeLabel}
-        </div>
+  {
+    year: "2026",
+    title:
+      "Towards a New Approach of Assessing Volunteers: The Digital Platform VOLUMETRIC",
+    authors:
+      "Violeta Toncheva-Zlatkova"
+  },
 
 
-        <h3>
-          ${pub.title}
-        </h3>
+  {
+    year: "2026",
+    title:
+      "Digital Competitiveness as a Systemic Capability: Cross-Sectoral Lessons from Bulgaria’s Digital Transformation",
+    authors:
+      "Sabrina Kalinkova"
+  },
 
 
-        <div class="pub-authors">
-          ${pub.authors}
-        </div>
+  {
+    year: "",
+    title:
+      "Artificial Intelligence as a Catalyst for Social Entrepreneurship and Volunteering Engagement",
+    authors:
+      "Violeta Toncheva-Zlatkova"
+  }
+
+];
 
 
-        ${venueBlock}
+/* =========================================================
+   ELEMENTS
+========================================================= */
 
-        ${doiBlock}
+const publicationGrid =
+  document.getElementById("publicationGrid");
+
+const forthcomingGrid =
+  document.getElementById("forthcomingGrid");
+
+const searchInput =
+  document.getElementById("searchInput");
+
+const yearFilter =
+  document.getElementById("yearFilter");
+
+const themeFilter =
+  document.getElementById("themeFilter");
+
+const indexFilter =
+  document.getElementById("indexFilter");
+
+const resultCount =
+  document.getElementById("resultCount");
+
+const noResults =
+  document.getElementById("noResults");
+
+const resetFilters =
+  document.getElementById("resetFilters");
 
 
-        <div class="pub-summary">
+/* =========================================================
+   COUNTERS
+========================================================= */
 
-          <div class="pub-summary-label">
-            Накратко
-          </div>
+document.getElementById("publishedTotal").textContent =
+  publications.length;
 
-          <p>
-            ${pub.summary}
-          </p>
+document.getElementById("forthcomingTotal").textContent =
+  forthcomingPublications.length;
 
-        </div>
+document.getElementById("count2024").textContent =
+  publications.filter(
+    p => p.year === 2024
+  ).length;
+
+document.getElementById("count2025").textContent =
+  publications.filter(
+    p => p.year === 2025
+  ).length;
+
+document.getElementById("count2026").textContent =
+  publications.filter(
+    p => p.year === 2026
+  ).length;
+
+document.getElementById("scopusTotal").textContent =
+  publications.filter(
+    p => p.scopus === true
+  ).length;
+
+document.getElementById("wosTotal").textContent =
+  publications.filter(
+    p => p.wos === true
+  ).length;
 
 
-        ${indexBlock}
+/* =========================================================
+   INDEX BADGES
+========================================================= */
 
+function indexBadges(pub){
 
-        <div class="pub-bottom">
+  let badges = "";
 
-          <div class="pub-bottom-inner">
-            ${linkBlock}
-          </div>
+  if(pub.scopus){
 
-        </div>
-
-
-      </article>
-
+    badges += `
+      <span class="index-badge scopus">
+        Scopus
+      </span>
     `;
 
   }
 
+  if(pub.wos){
 
-  /* =========================================================
-     FILTER PUBLISHED
-  ========================================================= */
+    badges += `
+      <span class="index-badge wos">
+        Web of Science
+      </span>
+    `;
 
+  }
 
-  function renderPublications(){
+  if(pub.quartile){
 
+    badges += `
+      <span class="index-badge quartile">
+        ${pub.quartile}
+      </span>
+    `;
 
-    const search =
-      searchInput.value
-        .trim()
-        .toLowerCase();
+  }
 
+  return badges;
 
-    const selectedYear =
-      yearFilter.value;
-
-
-    const selectedTheme =
-      themeFilter.value;
-
-
-    const selectedIndex =
-      indexFilter.value;
+}
 
 
-    const filtered =
-      publications.filter(
+/* =========================================================
+   PUBLICATION CARD
+========================================================= */
+
+function publicationCard(pub){
+
+  const venueBlock =
+    pub.venue
+    ? `
+      <div class="pub-venue">
+        ${pub.venue}
+      </div>
+    `
+    : "";
+
+
+  const doiBlock =
+    pub.doi
+    ? `
+      <div class="pub-doi">
+        DOI: ${pub.doi}
+      </div>
+    `
+    : "";
+
+
+  const badges =
+    indexBadges(pub);
+
+
+  const indexBlock =
+    badges
+    ? `
+      <div class="index-info">
+
+        <div class="index-info-label">
+          Индексиране
+        </div>
+
+        <div class="index-info-badges">
+          ${badges}
+        </div>
+
+      </div>
+    `
+    : "";
+
+
+  const linkBlock =
+    pub.url
+    ? `
+      <a
+        class="card-link"
+        href="${pub.url}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Прочети публикацията →
+      </a>
+    `
+    : `
+      <span class="no-public-link">
+        Публичен линк ще бъде добавен
+      </span>
+    `;
+
+
+  return `
+
+    <article class="publication-card">
+
+      <div class="pub-card-top">
+
+        <div class="pub-year">
+          ${pub.year}
+        </div>
+
+        <div class="pub-status">
+          Published
+        </div>
+
+      </div>
+
+
+      <div class="pub-theme">
+        ${pub.themeLabel}
+      </div>
+
+
+      <h3>
+        ${pub.title}
+      </h3>
+
+
+      <div class="pub-authors">
+        ${pub.authors}
+      </div>
+
+
+      ${venueBlock}
+
+      ${doiBlock}
+
+
+      <div class="pub-summary">
+
+        <div class="pub-summary-label">
+          Накратко
+        </div>
+
+        <p>
+          ${pub.summary}
+        </p>
+
+      </div>
+
+
+      ${indexBlock}
+
+
+      <div class="pub-bottom">
+
+        <div class="pub-bottom-inner">
+          ${linkBlock}
+        </div>
+
+      </div>
+
+    </article>
+
+  `;
+
+}
+
+
+/* =========================================================
+   FILTER PUBLISHED
+========================================================= */
+
+function renderPublications(){
+
+  const search =
+    searchInput.value
+      .trim()
+      .toLowerCase();
+
+  const selectedYear =
+    yearFilter.value;
+
+  const selectedTheme =
+    themeFilter.value;
+
+  const selectedIndex =
+    indexFilter.value;
+
+
+  const filtered =
+    publications
+      .filter(
         function(pub){
-
 
           const text =
             (
@@ -3305,14 +2850,12 @@
 
           const matchesYear =
             selectedYear === "all" ||
-            String(pub.year) ===
-            selectedYear;
+            String(pub.year) === selectedYear;
 
 
           const matchesTheme =
             selectedTheme === "all" ||
-            pub.theme ===
-            selectedTheme;
+            pub.theme === selectedTheme;
 
 
           let matchesIndex = true;
@@ -3346,144 +2889,148 @@
           );
 
         }
+      )
+      .sort(
+        function(a,b){
+
+          if(b.year !== a.year){
+            return b.year - a.year;
+          }
+
+          return a.title.localeCompare(
+            b.title,
+            "en"
+          );
+
+        }
       );
 
 
-    publicationGrid.innerHTML =
-      filtered
-        .map(publicationCard)
-        .join("");
+  publicationGrid.innerHTML =
+    filtered
+      .map(publicationCard)
+      .join("");
 
 
-    resultCount.textContent =
-      filtered.length;
+  resultCount.textContent =
+    filtered.length;
 
 
-    noResults.style.display =
-      filtered.length === 0
-      ? "block"
-      : "none";
+  noResults.style.display =
+    filtered.length === 0
+    ? "block"
+    : "none";
 
-  }
-
-
-  /* =========================================================
-     FORTHCOMING CARDS
-  ========================================================= */
+}
 
 
-  function forthcomingCard(pub){
+/* =========================================================
+   FORTHCOMING
+========================================================= */
+
+function forthcomingCard(pub){
+
+  const year =
+    pub.year
+    ? pub.year
+    : "—";
 
 
-    const year =
-      pub.year
-      ? pub.year
-      : "—";
+  return `
+
+    <article class="forthcoming-card">
+
+      <div class="forthcoming-year">
+        ${year}
+      </div>
 
 
-    return `
+      <div class="forthcoming-content">
 
-      <article class="forthcoming-card">
+        <h3>
+          ${pub.title}
+        </h3>
 
-
-        <div class="forthcoming-year">
-          ${year}
+        <div class="forthcoming-authors">
+          ${pub.authors}
         </div>
 
-
-        <div class="forthcoming-content">
-
-          <h3>
-            ${pub.title}
-          </h3>
-
-          <div class="forthcoming-authors">
-            ${pub.authors}
-          </div>
-
-        </div>
+      </div>
 
 
-        <div class="forthcoming-status">
-          FORTHCOMING
-        </div>
+      <div class="forthcoming-status">
+        FORTHCOMING
+      </div>
+
+    </article>
+
+  `;
+
+}
 
 
-      </article>
+function renderForthcoming(){
 
-    `;
+  forthcomingGrid.innerHTML =
+    forthcomingPublications
+      .map(forthcomingCard)
+      .join("");
+
+}
+
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+searchInput.addEventListener(
+  "input",
+  renderPublications
+);
+
+yearFilter.addEventListener(
+  "change",
+  renderPublications
+);
+
+themeFilter.addEventListener(
+  "change",
+  renderPublications
+);
+
+indexFilter.addEventListener(
+  "change",
+  renderPublications
+);
+
+
+resetFilters.addEventListener(
+  "click",
+  function(){
+
+    searchInput.value = "";
+
+    yearFilter.value =
+      "all";
+
+    themeFilter.value =
+      "all";
+
+    indexFilter.value =
+      "all";
+
+    renderPublications();
 
   }
+);
 
 
-  function renderForthcoming(){
+/* =========================================================
+   INITIAL RENDER
+========================================================= */
 
-    forthcomingGrid.innerHTML =
-      forthcomingPublications
-        .map(forthcomingCard)
-        .join("");
-
-  }
-
-
-  /* =========================================================
-     EVENTS
-  ========================================================= */
-
-
-  searchInput.addEventListener(
-    "input",
-    renderPublications
-  );
-
-
-  yearFilter.addEventListener(
-    "change",
-    renderPublications
-  );
-
-
-  themeFilter.addEventListener(
-    "change",
-    renderPublications
-  );
-
-
-  indexFilter.addEventListener(
-    "change",
-    renderPublications
-  );
-
-
-  resetFilters.addEventListener(
-    "click",
-    function(){
-
-      searchInput.value = "";
-
-      yearFilter.value =
-        "all";
-
-      themeFilter.value =
-        "all";
-
-      indexFilter.value =
-        "all";
-
-      renderPublications();
-
-    }
-  );
-
-
-  /* =========================================================
-     INITIAL RENDER
-  ========================================================= */
-
-
-  renderPublications();
-
-  renderForthcoming();
+renderPublications();
+renderForthcoming();
 
 
 })();
@@ -3492,5 +3039,4 @@
 
 
 </body>
-
 </html>
