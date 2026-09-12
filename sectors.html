@@ -1535,8 +1535,7 @@ h1 {
 }
 
 
-.metric-card
-.metric-name {
+.metric-card .metric-name {
 
   min-height:28px;
 
@@ -1549,8 +1548,7 @@ h1 {
 }
 
 
-.metric-card
-.metric-value {
+.metric-card .metric-value {
 
   margin-top:8px;
 
@@ -1565,8 +1563,7 @@ h1 {
 }
 
 
-.metric-card
-.metric-value.na {
+.metric-card .metric-value.na {
 
   color:#9aa8b2;
 
@@ -2086,7 +2083,7 @@ footer {
           </a>
 
           <a
-            href="areas.html"
+            href="sectors.html"
             class="active"
           >
             Секторен анализ
@@ -2161,7 +2158,7 @@ footer {
 
     <a
       class="mobile-sub active"
-      href="areas.html"
+      href="sectors.html"
     >
       Секторен анализ
     </a>
@@ -2841,7 +2838,7 @@ footer {
           Регионален анализ
         </a>
 
-        <a href="areas.html">
+        <a href="sectors.html">
           Секторен анализ
         </a>
 
@@ -4449,18 +4446,22 @@ function populateControls(){
     );
 
 
-  /* Default view */
+  /* =======================================================
+     DEFAULT VIEW
+     Започва от сектор A
+  ======================================================= */
+
 
   sectorSelect.value =
-    "J";
+    "A";
 
 
   indicatorSelect.value =
-    "ai_pct";
+    "gva_current_meur";
 
 
   yearSelect.value =
-    "2025";
+    "2024";
 
 
   sectorSelect.addEventListener(
@@ -4543,7 +4544,7 @@ fetch(
           в същата папка като
 
           <strong>
-            areas.html
+            sectors.html
           </strong>.
 
         </div>
