@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A*21 Historical Data Builder | Bulgaria 2010–2019</title>
+<style>
+:root{
+  --navy:#102b4c;--blue:#2457c5;--cyan:#28a9c7;--turq:#01c9bc;
+  --bg:#f5f8fb;--border:#dce7ef;--text:#213247;--muted:#64768a;
+  --ok:#167f77;--warn:#987020;--err:#a15151;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+.hero{background:linear-gradient(115deg,#081f38,#102f51 65%,#145b7d);color:#fff;padding:54px 0}
+.wrap{width:min(92%,1080px);margin:auto}
+.eyebrow{font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#8ce7ed}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.05;margin:10px 0 14px}
+.hero p{max-width:820px;color:#d3e5ee}
+main{padding:38px 0 70px}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:24px;margin-bottom:18px;box-shadow:0 12px 30px rgba(16,43,76,.06)}
+.card h2{margin:0 0 8px;color:var(--navy);font-size:21px}
+.card p{margin:6px 0;color:var(--muted);font-size:13px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:9px;padding:12px 17px;font-weight:800;cursor:pointer}
+.primary{background:linear-gradient(90deg,var(--blue),var(--cyan));color:#fff}
+.secondary{background:#edf5f8;color:var(--navy);border:1px solid var(--border)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.progress{height:10px;background:#e8eff3;border-radius:99px;overflow:hidden;margin-top:18px}
+.progress > div{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--turq));transition:width .2s}
+.status{margin-top:10px;font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.kpi{border:1px solid var(--border);border-radius:12px;padding:15px;background:#fbfdfe}
+.kpi span{display:block;font-size:8px;font-weight:800;text-transform:uppercase;color:#8799a7}
+.kpi strong{display:block;margin-top:5px;color:var(--navy);font-size:19px}
+.log{max-height:390px;overflow:auto;background:#0c2238;color:#d6e7ef;border-radius:12px;padding:14px;font-family:Consolas,monospace;font-size:11px;white-space:pre-wrap}
+.ok{color:#75e0d2}.warn{color:#f5cb6d}.err{color:#ff9d9d}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:12px;margin-top:14px}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th,td{padding:9px 10px;border-bottom:1px solid #edf2f5;font-size:10px;text-align:right}
+th{background:#f4f8fa;color:#617789;text-transform:uppercase;font-size:8px}
+th:first-child,td:first-child{text-align:left}
+.note{border-left:4px solid var(--turq);background:#f1f9fa;padding:14px 16px;border-radius:0 10px 10px 0;margin-top:16px;font-size:11px;color:#536b7c}
+code{background:#eef4f7;padding:2px 5px;border-radius:4px;color:#17365d}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.actions{flex-direction:column}button{width:100%}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Проект № 6/2024 · УНСС · помощен генератор</div>
+    <h1>A*21 Historical Data Builder</h1>
+    <p>
+      Генерира <strong>a21-historical-data.json</strong> за България за 2010–2019 г.
+      директно от официалния Eurostat Statistics API, без ръчно въвеждане и без интерполация.
+    </p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="card">
+    <h2>1. Изтегляне и структуриране</h2>
+    <p>
+      Ще бъдат изтеглени макроикономическото ядро и исторически съпоставимите цифрови показатели.
+      AI, IoT, BI, ≥100 Mbps, текущият data analytics и ≥3 security measures не се backcast-ват.
+      DII V1 не се слива с текущия DII.
+    </p>
+    <div class="actions">
+      <button class="primary" id="buildBtn">Изтегли данните от Eurostat</button>
+      <button class="secondary" id="downloadBtn" disabled>Свали a21-historical-data.json</button>
+      <button class="secondary" id="combinedBtn" disabled>Свали обединен 2010–2025 JSON</button>
+    </div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <div class="status" id="statusText">Готово за стартиране.</div>
+  </section>
+
+  <section class="card">
+    <h2>2. Контрол на резултата</h2>
+    <div class="grid">
+      <div class="kpi"><span>Период</span><strong id="kpiPeriod">—</strong></div>
+      <div class="kpi"><span>Секторно-годишни записи</span><strong id="kpiRecords">—</strong></div>
+      <div class="kpi"><span>Числови стойности</span><strong id="kpiValues">—</strong></div>
+    </div>
+    <div id="summaryTable"></div>
+    <div class="note">
+      Липсваща стойност остава <code>null</code>. Eurostat quality/status flags се запазват.
+      Производителността на труда се изчислява като реална БДС × 1000 / отработени часове.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>3. Дневник</h2>
+    <div class="log" id="log">Очаква стартиране…</div>
+  </section>
+</main>
+
+<script>
+(() => {
+"use strict";
+
+const YEARS = Array.from({length:10},(_,i)=>2010+i);
+const SECTOR_CODES = "ABCDEFGHIJKLMNOPQRSTU".split("");
+
+const FALLBACK_SECTORS = {
+ A:"Селско, горско и рибно стопанство",
+ B:"Добивна промишленост",
+ C:"Преработваща промишленост",
+ D:"Производство и разпределение на електрическа и топлинна енергия и газ",
+ E:"Доставяне на води; канализационни услуги, отпадъци и възстановяване",
+ F:"Строителство",
+ G:"Търговия; ремонт на автомобили и мотоциклети",
+ H:"Транспорт, складиране и пощи",
+ I:"Хотелиерство и ресторантьорство",
+ J:"Създаване и разпространение на информация и творчески продукти; далекосъобщения",
+ K:"Финансови и застрахователни дейности",
+ L:"Операции с недвижими имоти",
+ M:"Професионални дейности и научни изследвания",
+ N:"Административни и спомагателни дейности",
+ O:"Държавно управление",
+ P:"Образование",
+ Q:"Хуманно здравеопазване и социална работа",
+ R:"Култура, спорт и развлечения",
+ S:"Други дейности",
+ T:"Дейности на домакинства като работодатели",
+ U:"Дейности на екстериториални организации"
+};
+
+const FIELD_META = {
+  gva_current_meur: {
+    label:"Брутна добавена стойност по текущи цени",
+    dataset:"nama_10_a64", unit:"млн. евро",
+    source_codes:["B1G"], eurostat_units:["CP_MEUR"]
+  },
+  gva_real2020_meur: {
+    label:"Брутна добавена стойност, цени от 2020 г.",
+    dataset:"nama_10_a64", unit:"млн. евро",
+    source_codes:["B1G"], eurostat_units:["CLV20_MEUR"]
+  },
+  employment_ths: {
+    label:"Заети лица (вътрешна концепция)",
+    dataset:"nama_10_a64_e", unit:"хил. лица",
+    source_codes:["EMP_DC"], eurostat_units:["THS_PER"]
+  },
+  hours_ths: {
+    label:"Отработени часове от заети лица",
+    dataset:"nama_10_a64_e", unit:"хил. часа",
+    source_codes:["EMP_DC"], eurostat_units:["THS_HW"]
+  },
+  labour_productivity_eur_hour: {
+    label:"Производителност на труда",
+    dataset:"derived", unit:"евро на час",
+    source_codes:["gva_real2020_meur","hours_ths"], eurostat_units:[]
+  },
+  gfcf_total_meur: {
+    label:"Бруто образуване на основен капитал — общо активи",
+    dataset:"nama_10_a64_p5", unit:"млн. евро",
+    source_codes:["P51G"], eurostat_units:["CP_MEUR"], asset10:["N11G"]
+  },
+  ict_specialists_pct_employment: {
+    label:"ИКТ специалисти като дял от заетостта",
+    dataset:"isoc_sks_itspn2", unit:"% от заетите лица",
+    source_codes:[], eurostat_units:["PC_EMP"]
+  },
+  ict_specialists_ths: {
+    label:"Заети ИКТ специалисти",
+    dataset:"isoc_sks_itspn2", unit:"хил. лица",
+    source_codes:[], eurostat_units:["THS_PER"]
+  },
+  internet_employees_pct: {
+    label:"Заети лица, използващи компютри с достъп до интернет",
+    dataset:"isoc_ci_cm_pn2", unit:"% от заетите лица",
+    source_codes:["P_IUSE"], eurostat_units:["PC_EMP","PC_PER"]
+  },
+  website_pct: {
+    label:"Предприятия с уебсайт",
+    dataset:"isoc_ciwebn2", unit:"% от предприятията",
+    source_codes:["E_WEB"], eurostat_units:["PC_ENT"]
+  },
+  social_media_pct: {
+    label:"Предприятия, използващи социални медии",
+    dataset:"isoc_cismtn2", unit:"% от предприятията",
+    source_codes:["E_SM1_ANY"], eurostat_units:["PC_ENT"]
+  },
+  paid_cloud_pct: {
+    label:"Предприятия, използващи платени облачни услуги",
+    dataset:"isoc_cicce_usen2", unit:"% от предприятията",
+    source_codes:["E_CC"], eurostat_units:["PC_ENT"]
+  },
+  erp_pct: {
+    label:"Предприятия, използващи ERP",
+    dataset:"isoc_eb_iipn2", unit:"% от предприятията",
+    source_codes:["E_ERP1","E_ERP"], eurostat_units:["PC_ENT"]
+  },
+  crm_pct: {
+    label:"Предприятия, използващи CRM",
+    dataset:"isoc_eb_iipn2", unit:"% от предприятията",
+    source_codes:["E_CRM","E_CRM1"], eurostat_units:["PC_ENT"]
+  },
+  ecommerce_pct: {
+    label:"Предприятия с електронни продажби",
+    dataset:"isoc_ec_eseln2", unit:"% от предприятията",
+    source_codes:["E_AESELL"], eurostat_units:["PC_ENT"]
+  },
+  ict_training_pct: {
+    label:"Предприятия, осигурили ИКТ обучение",
+    dataset:"isoc_ske_ittn2", unit:"% от предприятията",
+    source_codes:["E_ITT2"], eurostat_units:["PC_ENT"]
+  },
+  employs_ict_specialists_pct: {
+    label:"Предприятия, наемащи ИКТ специалисти",
+    dataset:"isoc_ske_itspen2", unit:"% от предприятията",
+    source_codes:["E_ITSP2"], eurostat_units:["PC_ENT"]
+  }
+};
+
+const AVAILABILITY_LABEL = {
+  gva_current_meur:"БДС A*21",
+  gva_real2020_meur:"БДС A*21",
+  employment_ths:"Заетост A*21",
+  hours_ths:"Отработени часове A*21",
+  labour_productivity_eur_hour:"БДС A*21",
+  gfcf_total_meur:"Общо инвестиции",
+  ict_specialists_pct_employment:"ИКТ специалисти",
+  ict_specialists_ths:"ИКТ специалисти",
+  internet_employees_pct:"Интернет при заетите",
+  website_pct:"Уебсайт",
+  social_media_pct:"Социални медии",
+  paid_cloud_pct:"Платен облак",
+  erp_pct:"ERP",
+  crm_pct:"CRM",
+  ecommerce_pct:"Е-продажби",
+  ict_training_pct:"ИКТ обучение",
+  employs_ict_specialists_pct:"Наема ИКТ специалисти"
+};
+
+const FALLBACK_AVAILABILITY = {
+  "БДС A*21":YEARS,
+  "Заетост A*21":YEARS,
+  "Отработени часове A*21":YEARS,
+  "Общо инвестиции":YEARS,
+  "ИКТ специалисти":[2015,2016,2017,2018,2019],
+  "Интернет при заетите":YEARS,
+  "Уебсайт":YEARS,
+  "Социални медии":[2014,2015,2016,2017,2019],
+  "Платен облак":[2014,2015,2016,2017,2018],
+  "ERP":[2010,2012,2013,2014,2015,2017,2019],
+  "CRM":[2010,2014,2015,2017,2019],
+  "Е-продажби":YEARS,
+  "ИКТ обучение":[2012,2014,2015,2016,2017,2018,2019],
+  "Наема ИКТ специалисти":[2012,2014,2015,2016,2017,2018,2019]
+};
+
+const TASKS = [
+  {name:"БДС — текущи цени", dataset:"nama_10_a64",
+   params:{freq:"A",unit:"CP_MEUR",na_item:"B1G"},
+   fields:["gva_current_meur"]},
+  {name:"БДС — реални цени 2020", dataset:"nama_10_a64",
+   params:{freq:"A",unit:"CLV20_MEUR",na_item:"B1G"},
+   fields:["gva_real2020_meur"]},
+  {name:"Заетост", dataset:"nama_10_a64_e",
+   params:{freq:"A",unit:"THS_PER",na_item:"EMP_DC"},
+   fields:["employment_ths"]},
+  {name:"Отработени часове", dataset:"nama_10_a64_e",
+   params:{freq:"A",unit:"THS_HW",na_item:"EMP_DC"},
+   fields:["hours_ths"]},
+  {name:"Общо инвестиции", dataset:"nama_10_a64_p5",
+   params:{freq:"A",unit:"CP_MEUR",na_item:"P51G",asset10:"N11G"},
+   fields:["gfcf_total_meur"]},
+  {name:"ИКТ специалисти", dataset:"isoc_sks_itspn2",
+   params:{freq:"A"}, fields:["ict_specialists_pct_employment","ict_specialists_ths"]},
+  {name:"Интернет при заетите", dataset:"isoc_ci_cm_pn2",
+   params:{freq:"A",indic_is:"P_IUSE"}, fields:["internet_employees_pct"]},
+  {name:"Уебсайт", dataset:"isoc_ciwebn2",
+   params:{freq:"A",indic_is:"E_WEB"}, fields:["website_pct"]},
+  {name:"Социални медии", dataset:"isoc_cismtn2",
+   params:{freq:"A",indic_is:"E_SM1_ANY"}, fields:["social_media_pct"]},
+  {name:"Платен облак", dataset:"isoc_cicce_usen2",
+   params:{freq:"A",indic_is:"E_CC"}, fields:["paid_cloud_pct"]},
+  {name:"ERP / CRM", dataset:"isoc_eb_iipn2",
+   params:{freq:"A"}, fields:["erp_pct","crm_pct"]},
+  {name:"Електронни продажби", dataset:"isoc_ec_eseln2",
+   params:{freq:"A",indic_is:"E_AESELL"}, fields:["ecommerce_pct"]},
+  {name:"ИКТ обучение", dataset:"isoc_ske_ittn2",
+   params:{freq:"A",indic_is:"E_ITT2"}, fields:["ict_training_pct"]},
+  {name:"Предприятия с ИКТ специалисти", dataset:"isoc_ske_itspen2",
+   params:{freq:"A",indic_is:"E_ITSP2"}, fields:["employs_ict_specialists_pct"]}
+];
+
+const $ = id => document.getElementById(id);
+const logEl = $("log");
+const buildBtn = $("buildBtn");
+const downloadBtn = $("downloadBtn");
+const combinedBtn = $("combinedBtn");
+let output = null;
+let currentData = null;
+let availability = null;
+
+function log(msg, cls=""){
+  const line=document.createElement("div");
+  if(cls) line.className=cls;
+  line.textContent=msg;
+  logEl.appendChild(line);
+  logEl.scrollTop=logEl.scrollHeight;
+}
+function progress(done,total,label){
+  $("progressBar").style.width = `${Math.round(done/total*100)}%`;
+  $("statusText").textContent = label;
+}
+function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+
+function orderedCodes(dim){
+  const idx=dim?.category?.index;
+  if(Array.isArray(idx)) return idx.slice();
+  if(idx && typeof idx==="object"){
+    return Object.entries(idx).sort((a,b)=>Number(a[1])-Number(b[1])).map(([k])=>k);
+  }
+  return [];
+}
+function cellAt(container,index){
+  if(container==null) return null;
+  if(Array.isArray(container)) return container[index] ?? null;
+  if(typeof container==="object") return container[String(index)] ?? null;
+  return null;
+}
+function jsonstatRows(ds){
+  if(!ds || !Array.isArray(ds.id) || !Array.isArray(ds.size)) return [];
+  const ids=ds.id;
+  const sizes=ds.size;
+  const codes=ids.map(id=>orderedCodes(ds.dimension?.[id]));
+  const values=ds.value ?? {};
+  const entries=Array.isArray(values)
+    ? values.map((v,i)=>[i,v]).filter(([,v])=>v!==null && v!==undefined)
+    : Object.entries(values).filter(([,v])=>v!==null && v!==undefined);
+
+  return entries.map(([rawIndex,value])=>{
+    let index=Number(rawIndex);
+    let rem=index;
+    const pos=new Array(ids.length);
+    for(let d=ids.length-1; d>=0; d--){
+      pos[d]=rem % sizes[d];
+      rem=Math.floor(rem/sizes[d]);
+    }
+    const row={value:Number(value), status:cellAt(ds.status,index)};
+    ids.forEach((id,d)=>row[id]=codes[d][pos[d]]);
+    return row;
+  });
+}
+
+function makeUrl(dataset,params={}){
+  const base=`https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/${dataset}`;
+  const q=new URLSearchParams();
+  q.set("lang","EN");
+  q.set("geo","BG");
+  YEARS.forEach(y=>q.append("time",String(y)));
+  Object.entries(params).forEach(([k,v])=>{
+    if(Array.isArray(v)) v.forEach(x=>q.append(k,String(x)));
+    else if(v!==null && v!==undefined && v!=="") q.set(k,String(v));
+  });
+  return `${base}?${q.toString()}`;
+}
+
+async function fetchDataset(task){
+  const url=makeUrl(task.dataset,task.params);
+  log(`→ ${task.name}: ${task.dataset}`);
+  const res=await fetch(url,{headers:{"Accept":"application/json"}});
+  if(!res.ok) throw new Error(`${task.dataset}: HTTP ${res.status}`);
+  const data=await res.json();
+  const rows=jsonstatRows(data);
+  log(`  ${rows.length} публикувани наблюдения в отговора`, "ok");
+  return {data,rows,url};
+}
+
+function availabilityAllowed(field,year){
+  const label=AVAILABILITY_LABEL[field];
+  if(!label) return true;
+  if(availability?.years){
+    const yr=availability.years.find(x=>Number(x.year)===Number(year));
+    const s=yr?.availability?.[label];
+    return ["Да","Да*","V1*"].includes(s);
+  }
+  return (FALLBACK_AVAILABILITY[label]||[]).includes(Number(year));
+}
+
+function chooseRow(rows,field,section,year){
+  const meta=FIELD_META[field];
+  let candidates=rows.filter(r=>
+    String(r.time)===String(year) &&
+    r.nace_r2===section &&
+    (!r.geo || r.geo==="BG")
+  );
+
+  if(meta.source_codes?.length && candidates.some(r=>r.indic_is)){
+    candidates=candidates.filter(r=>meta.source_codes.includes(r.indic_is));
+  }
+  if(meta.eurostat_units?.length && candidates.some(r=>r.unit)){
+    candidates=candidates.filter(r=>meta.eurostat_units.includes(r.unit));
+  }
+  if(meta.asset10?.length && candidates.some(r=>r.asset10)){
+    candidates=candidates.filter(r=>meta.asset10.includes(r.asset10));
+  }
+
+  // Avoid accidental duplicated breakdowns. Prefer the exact code and standard total 10+ enterprise scope.
+  const preferredSize = ["GE10","TOTAL","10_GE","10+","ALL"];
+  candidates.sort((a,b)=>{
+    const ia=meta.source_codes?.indexOf(a.indic_is) ?? -1;
+    const ib=meta.source_codes?.indexOf(b.indic_is) ?? -1;
+    const ua=meta.eurostat_units?.indexOf(a.unit) ?? -1;
+    const ub=meta.eurostat_units?.indexOf(b.unit) ?? -1;
+    const sa=preferredSize.indexOf(a.sizeclas);
+    const sb=preferredSize.indexOf(b.sizeclas);
+    return (ia<0?99:ia)-(ib<0?99:ib) ||
+           (ua<0?99:ua)-(ub<0?99:ub) ||
+           (sa<0?99:sa)-(sb<0?99:sb);
+  });
+  return candidates[0] || null;
+}
+
+function emptyRecords(sectors){
+  const fields=Object.keys(FIELD_META);
+  return SECTOR_CODES.flatMap(section=>YEARS.map(year=>({
+    section,
+    year,
+    values:Object.fromEntries(fields.map(f=>[f,null])),
+    flags:Object.fromEntries(fields.map(f=>[f,null]))
+  })));
+}
+function getRec(records,section,year){
+  return records.find(r=>r.section===section && r.year===year);
+}
+
+function roundValue(v,field){
+  if(!Number.isFinite(v)) return null;
+  if(field==="hours_ths") return Math.round(v);
+  return Math.round(v*10000)/10000;
+}
+
+function applyRows(records,rows,field){
+  let count=0;
+  for(const section of SECTOR_CODES){
+    for(const year of YEARS){
+      if(!availabilityAllowed(field,year)) continue;
+      const row=chooseRow(rows,field,section,year);
+      if(row && Number.isFinite(row.value)){
+        const rec=getRec(records,section,year);
+        rec.values[field]=roundValue(row.value,field);
+        rec.flags[field]=row.status ?? "";
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+function deriveProductivity(records){
+  let count=0;
+  for(const rec of records){
+    if(!availabilityAllowed("labour_productivity_eur_hour",rec.year)) continue;
+    const gva=rec.values.gva_real2020_meur;
+    const hours=rec.values.hours_ths;
+    if(Number.isFinite(gva) && Number.isFinite(hours) && hours!==0){
+      rec.values.labour_productivity_eur_hour=Math.round((gva*1000/hours)*10000)/10000;
+      rec.flags.labour_productivity_eur_hour="derived";
+      count++;
+    }
+  }
+  return count;
+}
+
+function countField(records,field){
+  return records.reduce((n,r)=>n+(Number.isFinite(r.values[field])?1:0),0);
+}
+function totalNumeric(records){
+  return records.reduce((n,r)=>n+Object.values(r.values).filter(Number.isFinite).length,0);
+}
+
+async function loadLocalContext(){
+  try{
+    const r=await fetch("historical-availability.json");
+    if(r.ok){availability=await r.json(); log("✓ historical-availability.json е зареден.", "ok");}
+    else throw new Error("not found");
+  }catch(e){
+    availability=null;
+    log("! historical-availability.json не е достъпен; използвам вградената матрица за наличност.", "warn");
+  }
+  try{
+    const r=await fetch("a21-sector-data.json");
+    if(r.ok){currentData=await r.json(); log("✓ a21-sector-data.json е зареден за секторни имена и бъдещо обединяване.", "ok");}
+    else throw new Error("not found");
+  }catch(e){
+    currentData=null;
+    log("! a21-sector-data.json не е достъпен; историческият JSON пак може да бъде генериран.", "warn");
+  }
+}
+
+function sectorList(){
+  if(currentData?.sectors?.length) return currentData.sectors;
+  return SECTOR_CODES.map(code=>({code,name:FALLBACK_SECTORS[code]}));
+}
+
+function renderSummary(records){
+  $("kpiPeriod").textContent="2010–2019";
+  $("kpiRecords").textContent=records.length;
+  $("kpiValues").textContent=totalNumeric(records);
+
+  const rows=Object.entries(FIELD_META).map(([code,m])=>`
+    <tr>
+      <td>${m.label}</td>
+      <td>${m.dataset}</td>
+      <td>${countField(records,code)}</td>
+    </tr>`).join("");
+
+  $("summaryTable").innerHTML=`
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Показател</th><th>Източник</th><th>Налични секторно-годишни стойности</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
+
+function downloadJson(obj,filename){
+  const blob=new Blob([JSON.stringify(obj,null,2)],{type:"application/json;charset=utf-8"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
+function buildCombined(){
+  if(!output || !currentData) return null;
+  const histKeys=new Set(output.records.map(r=>`${r.section}|${r.year}`));
+  const currentRecords=(currentData.records||[]).filter(r=>!histKeys.has(`${r.section}|${r.year}`));
+  return {
+    ...currentData,
+    generated_at:new Date().toISOString(),
+    period:Array.from(new Set([...(output.period||[]),...(currentData.period||[])])).sort((a,b)=>a-b),
+    records:[...output.records,...currentRecords].sort((a,b)=>a.section.localeCompare(b.section)||a.year-b.year),
+    historical_source:{
+      type:"Eurostat Statistics API",
+      generated_by:"build-a21-historical-data.html",
+      note:"2010–2019 historical observations; no interpolation/backcast."
+    }
+  };
+}
+
+async function build(){
+  buildBtn.disabled=true;downloadBtn.disabled=true;combinedBtn.disabled=true;
+  logEl.textContent="";
+  progress(0,TASKS.length+2,"Зареждане на локалните метаданни…");
+  await loadLocalContext();
+
+  const records=emptyRecords(sectorList());
+  const sourceInfo={};
+  const fieldCounts={};
+  let completed=1;
+
+  for(const task of TASKS){
+    try{
+      const result=await fetchDataset(task);
+      sourceInfo[task.dataset]={
+        url:result.url,
+        updated:result.data.updated || null,
+        label:result.data.label || null
+      };
+      for(const field of task.fields){
+        const n=applyRows(records,result.rows,field);
+        fieldCounts[field]=n;
+        log(`  ✓ ${FIELD_META[field].label}: ${n} стойности`, n ? "ok":"warn");
+      }
+    }catch(err){
+      log(`  ✗ ${task.name}: ${err.message}`, "err");
+      task.fields.forEach(f=>fieldCounts[f]=0);
+    }
+    completed++;
+    progress(completed,TASKS.length+2,`Обработено: ${task.name}`);
+    await sleep(220);
+  }
+
+  const prodN=deriveProductivity(records);
+  fieldCounts.labour_productivity_eur_hour=prodN;
+  log(`✓ Производителност на труда: ${prodN} производни стойности`, "ok");
+
+  output={
+    title:"Bulgaria A*21 historical sector data, 2010–2019",
+    generated_at:new Date().toISOString(),
+    geography:"BG",
+    classification:"NACE Rev. 2 / A*21 sections A–U",
+    period:YEARS,
+    sectors:sectorList(),
+    methodology:{
+      source:"Eurostat Statistics API",
+      missing_values:"null = липсваща, непубликувана, извън обхвата или несъпоставима стойност; не се заменя с 0.",
+      interpolation:"Не се извършва интерполация или backcast.",
+      dii:"DII V1 за 2015–2019 не е включен под кода dii_basic_pct, за да не се създава фиктивна непрекъсната серия.",
+      labour_productivity:"gva_real2020_meur * 1000 / hours_ths",
+      direct_ict_scope:"Историческите ICT enterprise показатели са налични само за публикуваните NACE секции и години."
+    },
+    fields:FIELD_META,
+    source_datasets:sourceInfo,
+    records
+  };
+
+  renderSummary(records);
+  progress(TASKS.length+2,TASKS.length+2,"Готово. Провери контролната таблица и свали JSON файла.");
+  downloadBtn.disabled=false;
+  combinedBtn.disabled=!currentData;
+
+  const zeroFields=Object.entries(fieldCounts).filter(([,n])=>!n).map(([f])=>f);
+  if(zeroFields.length){
+    log(`! Без извлечени стойности: ${zeroFields.join(", ")}. Провери дневника и Eurostat структурата.`, "warn");
+  }else{
+    log("✓ Всички заявени групи върнаха поне една стойност.", "ok");
+  }
+  log("Готово.", "ok");
+  buildBtn.disabled=false;
+}
+
+buildBtn.addEventListener("click",build);
+downloadBtn.addEventListener("click",()=>output && downloadJson(output,"a21-historical-data.json"));
+combinedBtn.addEventListener("click",()=>{
+  const merged=buildCombined();
+  if(merged) downloadJson(merged,"a21-sector-data-2010-2025.json");
+});
+})();
+</script>
+</body>
+</html>
