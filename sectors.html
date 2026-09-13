@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="bg">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
   Секторен анализ | Дигитална конкурентоспособност на България
@@ -16,15 +10,14 @@
 
 <meta
   name="description"
-  content="Интерактивен секторен анализ на българската икономика по A*21 / NACE Rev. 2 с показатели, динамика, сравнения, статистически зависимости и историческа рамка по проект № 6/2024 на УНСС."
+  content="Интерактивен секторен анализ на българската икономика по A*21 / NACE Rev. 2 за периода 2010–2025 г. по проект № 6/2024 на УНСС."
 >
 
 <style>
 
-:root {
+:root{
   --navy:#102b4c;
   --navy-deep:#081f38;
-  --navy-mid:#173d63;
 
   --blue:#2457c5;
   --cyan:#28a9c7;
@@ -33,54 +26,66 @@
   --text:#213247;
   --muted:#64768a;
 
-  --white:#ffffff;
+  --white:#fff;
   --background:#f5f8fb;
-
   --border:#dce7ef;
 
   --positive:#167f77;
   --negative:#a15151;
+  --warning:#987020;
 
-  --shadow:0 14px 40px rgba(16,43,76,.08);
+  --shadow:
+    0 14px 40px
+    rgba(16,43,76,.08);
 
   --max-width:1260px;
 }
 
 
-* {
+*{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
 
 
-html {
+html{
   scroll-behavior:smooth;
 }
 
 
-body {
-  font-family:Arial,Helvetica,sans-serif;
+body{
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   color:var(--text);
+
   background:var(--white);
+
   line-height:1.6;
 }
 
 
-a {
+a{
   color:inherit;
   text-decoration:none;
 }
 
 
 button,
-select {
+select{
   font:inherit;
 }
 
 
-.container {
-  width:min(92%,var(--max-width));
+.container{
+  width:min(
+    92%,
+    var(--max-width)
+  );
+
   margin-inline:auto;
 }
 
@@ -89,32 +94,41 @@ select {
    HEADER
 ========================================================= */
 
-header {
+
+header{
   position:sticky;
   top:0;
+
   z-index:1000;
 
-  background:rgba(255,255,255,.97);
+  background:
+    rgba(255,255,255,.97);
 
-  border-bottom:1px solid var(--border);
+  border-bottom:
+    1px solid var(--border);
 
-  backdrop-filter:blur(12px);
+  backdrop-filter:
+    blur(12px);
 }
 
 
-.navbar {
+.navbar{
   min-height:82px;
 
   display:flex;
+
   align-items:center;
-  justify-content:space-between;
+
+  justify-content:
+    space-between;
 
   gap:24px;
 }
 
 
-.brand {
+.brand{
   display:flex;
+
   align-items:center;
 
   gap:13px;
@@ -123,8 +137,9 @@ header {
 }
 
 
-.logo-mark {
+.logo-mark{
   display:flex;
+
   align-items:flex-end;
 
   gap:4px;
@@ -133,40 +148,41 @@ header {
 }
 
 
-.logo-mark span {
+.logo-mark span{
   display:block;
 
   width:9px;
 
-  border-radius:3px 3px 0 0;
+  border-radius:
+    3px 3px 0 0;
 }
 
 
-.logo-mark span:nth-child(1) {
+.logo-mark span:nth-child(1){
   height:15px;
   background:#7fd9e6;
 }
 
 
-.logo-mark span:nth-child(2) {
+.logo-mark span:nth-child(2){
   height:23px;
   background:#46bfd3;
 }
 
 
-.logo-mark span:nth-child(3) {
+.logo-mark span:nth-child(3){
   height:31px;
   background:#2499c2;
 }
 
 
-.logo-mark span:nth-child(4) {
+.logo-mark span:nth-child(4){
   height:41px;
   background:#1557a0;
 }
 
 
-.brand-text strong {
+.brand-text strong{
   display:block;
 
   color:var(--navy);
@@ -179,7 +195,7 @@ header {
 }
 
 
-.brand-text small {
+.brand-text small{
   display:block;
 
   margin-top:5px;
@@ -193,11 +209,13 @@ header {
 
 
 /* =========================================================
-   DESKTOP NAV
+   NAVIGATION
 ========================================================= */
 
-.desktop-nav {
+
+.desktop-nav{
   display:flex;
+
   align-items:center;
 
   gap:18px;
@@ -211,17 +229,20 @@ header {
 
 
 .desktop-nav > a,
-.nav-dropdown > button {
+.nav-dropdown > button{
   min-height:82px;
 
   display:flex;
+
   align-items:center;
 
-  padding:3px 0 0;
+  padding:
+    3px 0 0;
 
   border:none;
 
-  border-bottom:3px solid transparent;
+  border-bottom:
+    3px solid transparent;
 
   background:transparent;
 
@@ -235,7 +256,7 @@ header {
 
   cursor:pointer;
 
-  transition:.2s ease;
+  transition:.2s;
 }
 
 
@@ -243,40 +264,42 @@ header {
 .desktop-nav > a.active,
 .nav-dropdown:hover > button,
 .nav-dropdown:focus-within > button,
-.nav-dropdown.active > button {
+.nav-dropdown.active > button{
   color:var(--blue);
-  border-bottom-color:var(--turquoise);
+
+  border-bottom-color:
+    var(--turquoise);
 }
 
 
-/* =========================================================
-   DROPDOWN
-========================================================= */
-
-.nav-dropdown {
+.nav-dropdown{
   position:relative;
 }
 
 
-.nav-dropdown > button {
+.nav-dropdown > button{
   gap:6px;
 }
 
 
-.dropdown-arrow {
+.dropdown-arrow{
   font-size:9px;
 
-  transition:transform .2s ease;
+  transition:
+    transform .2s;
 }
 
 
-.nav-dropdown:hover .dropdown-arrow,
-.nav-dropdown:focus-within .dropdown-arrow {
-  transform:rotate(180deg);
+.nav-dropdown:hover
+.dropdown-arrow,
+.nav-dropdown:focus-within
+.dropdown-arrow{
+  transform:
+    rotate(180deg);
 }
 
 
-.dropdown-menu {
+.dropdown-menu{
   position:absolute;
 
   top:72px;
@@ -288,38 +311,46 @@ header {
 
   padding:8px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:12px;
 
-  background:white;
+  background:#fff;
 
-  box-shadow:0 16px 35px rgba(16,43,76,.12);
+  box-shadow:
+    0 16px 35px
+    rgba(16,43,76,.12);
 
   opacity:0;
 
   visibility:hidden;
 
-  transform:translate(-50%,8px);
+  transform:
+    translate(-50%,8px);
 
-  transition:.2s ease;
+  transition:.2s;
 }
 
 
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu {
+.nav-dropdown:hover
+.dropdown-menu,
+.nav-dropdown:focus-within
+.dropdown-menu{
   opacity:1;
 
   visibility:visible;
 
-  transform:translate(-50%,0);
+  transform:
+    translate(-50%,0);
 }
 
 
-.dropdown-menu a {
+.dropdown-menu a{
   display:block;
 
-  padding:11px 12px;
+  padding:
+    11px 12px;
 
   border-radius:8px;
 
@@ -330,14 +361,14 @@ header {
 
 
 .dropdown-menu a:hover,
-.dropdown-menu a.active {
+.dropdown-menu a.active{
   background:#f2f7fa;
 
   color:var(--blue);
 }
 
 
-.language {
+.language{
   color:var(--blue);
 
   font-size:12px;
@@ -352,17 +383,19 @@ header {
    MOBILE
 ========================================================= */
 
-.mobile-toggle {
+
+.mobile-toggle{
   display:none;
 
   width:42px;
   height:42px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:8px;
 
-  background:white;
+  background:#fff;
 
   color:var(--navy);
 
@@ -372,23 +405,27 @@ header {
 }
 
 
-.mobile-menu {
+.mobile-menu{
   display:none;
 
-  padding:12px 4%;
+  padding:
+    12px 4%;
 
-  border-top:1px solid var(--border);
+  border-top:
+    1px solid var(--border);
 
-  background:white;
+  background:#fff;
 }
 
 
-.mobile-menu a {
+.mobile-menu a{
   display:block;
 
-  padding:12px 0;
+  padding:
+    12px 0;
 
-  border-bottom:1px solid #edf2f5;
+  border-bottom:
+    1px solid #edf2f5;
 
   color:var(--navy);
 
@@ -396,8 +433,9 @@ header {
 }
 
 
-.mobile-group-label {
-  padding:17px 0 6px;
+.mobile-group-label{
+  padding:
+    17px 0 6px;
 
   color:#96a5b1;
 
@@ -411,19 +449,24 @@ header {
 }
 
 
-.mobile-sub {
-  padding-left:14px !important;
+.mobile-sub{
+  padding-left:
+    14px !important;
 
-  color:#536b7c !important;
+  color:
+    #536b7c !important;
 
-  font-weight:600 !important;
+  font-weight:
+    600 !important;
 }
 
 
-.mobile-sub.active {
-  color:var(--blue) !important;
+.mobile-sub.active{
+  color:
+    var(--blue) !important;
 
-  font-weight:800 !important;
+  font-weight:
+    800 !important;
 }
 
 
@@ -431,19 +474,22 @@ header {
    HERO
 ========================================================= */
 
-.page-hero {
+
+.page-hero{
   position:relative;
 
   overflow:hidden;
 
-  color:white;
+  color:#fff;
 
   background:
+
     radial-gradient(
       circle at 82% 34%,
       rgba(1,201,188,.17),
       transparent 25%
     ),
+
     linear-gradient(
       115deg,
       #081f38 0%,
@@ -453,7 +499,7 @@ header {
 }
 
 
-.page-hero::before {
+.page-hero:before{
   content:"";
 
   position:absolute;
@@ -461,21 +507,24 @@ header {
   inset:0;
 
   background-image:
+
     linear-gradient(
       rgba(82,215,226,.05) 1px,
       transparent 1px
     ),
+
     linear-gradient(
       90deg,
       rgba(82,215,226,.05) 1px,
       transparent 1px
     );
 
-  background-size:62px 62px;
+  background-size:
+    62px 62px;
 }
 
 
-.page-hero-inner {
+.page-hero-inner{
   min-height:440px;
 
   position:relative;
@@ -484,17 +533,19 @@ header {
 
   display:grid;
 
-  grid-template-columns:1.08fr .92fr;
+  grid-template-columns:
+    1.08fr .92fr;
 
   gap:70px;
 
   align-items:center;
 
-  padding:72px 0;
+  padding:
+    72px 0;
 }
 
 
-.eyebrow {
+.eyebrow{
   margin-bottom:17px;
 
   color:#8ce7ed;
@@ -509,10 +560,15 @@ header {
 }
 
 
-h1 {
+h1{
   margin-bottom:21px;
 
-  font-size:clamp(44px,5vw,65px);
+  font-size:
+    clamp(
+      44px,
+      5vw,
+      65px
+    );
 
   line-height:1;
 
@@ -520,7 +576,7 @@ h1 {
 }
 
 
-.hero-description {
+.hero-description{
   max-width:740px;
 
   color:#d3e5ee;
@@ -531,18 +587,21 @@ h1 {
 }
 
 
-.hero-box {
+.hero-box{
   padding:29px;
 
-  border:1px solid rgba(255,255,255,.15);
+  border:
+    1px solid
+    rgba(255,255,255,.15);
 
   border-radius:20px;
 
-  background:rgba(255,255,255,.045);
+  background:
+    rgba(255,255,255,.045);
 }
 
 
-.hero-box-label {
+.hero-box-label{
   margin-bottom:18px;
 
   color:#8ce7ed;
@@ -557,34 +616,38 @@ h1 {
 }
 
 
-.hero-stats {
+.hero-stats{
   display:grid;
 
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:
+    repeat(2,1fr);
 
   gap:10px;
 }
 
 
-.hero-stat {
+.hero-stat{
   min-height:108px;
 
   padding:17px;
 
-  border:1px solid rgba(255,255,255,.09);
+  border:
+    1px solid
+    rgba(255,255,255,.09);
 
   border-radius:11px;
 
-  background:rgba(255,255,255,.035);
+  background:
+    rgba(255,255,255,.035);
 }
 
 
-.hero-stat strong {
+.hero-stat strong{
   display:block;
 
   margin-bottom:7px;
 
-  color:white;
+  color:#fff;
 
   font-size:27px;
 
@@ -592,7 +655,7 @@ h1 {
 }
 
 
-.hero-stat span {
+.hero-stat span{
   display:block;
 
   color:#bbd5dd;
@@ -607,17 +670,20 @@ h1 {
    GENERAL
 ========================================================= */
 
-.standard-section {
-  padding:82px 0;
+
+.standard-section{
+  padding:
+    82px 0;
 }
 
 
-.section-alt {
-  background:var(--background);
+.section-alt{
+  background:
+    var(--background);
 }
 
 
-.section-label {
+.section-label{
   margin-bottom:10px;
 
   color:var(--cyan);
@@ -632,12 +698,17 @@ h1 {
 }
 
 
-.section-title {
+.section-title{
   margin-bottom:17px;
 
   color:var(--navy);
 
-  font-size:clamp(29px,3.2vw,41px);
+  font-size:
+    clamp(
+      29px,
+      3.2vw,
+      41px
+    );
 
   line-height:1.12;
 
@@ -645,8 +716,8 @@ h1 {
 }
 
 
-.section-description {
-  max-width:920px;
+.section-description{
+  max-width:930px;
 
   color:var(--muted);
 
@@ -656,14 +727,11 @@ h1 {
 }
 
 
-/* =========================================================
-   FRAME
-========================================================= */
-
-.frame-grid {
+.frame-grid{
   display:grid;
 
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:
+    repeat(3,1fr);
 
   gap:15px;
 
@@ -671,20 +739,21 @@ h1 {
 }
 
 
-.frame-card {
+.frame-card{
   min-height:220px;
 
   padding:27px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:15px;
 
-  background:white;
+  background:#fff;
 }
 
 
-.frame-number {
+.frame-number{
   margin-bottom:26px;
 
   color:#9acbd5;
@@ -695,7 +764,7 @@ h1 {
 }
 
 
-.frame-card h3 {
+.frame-card h3{
   margin-bottom:9px;
 
   color:var(--navy);
@@ -704,7 +773,7 @@ h1 {
 }
 
 
-.frame-card p {
+.frame-card p{
   color:var(--muted);
 
   font-size:11px;
@@ -713,22 +782,20 @@ h1 {
 }
 
 
-/* =========================================================
-   INFO BOX
-========================================================= */
-
-.coverage-box {
+.coverage-box{
   margin-top:25px;
 
   display:grid;
 
-  grid-template-columns:55px 1fr;
+  grid-template-columns:
+    55px 1fr;
 
   gap:20px;
 
   padding:25px;
 
-  border:1px solid #cde2e8;
+  border:
+    1px solid #cde2e8;
 
   border-radius:16px;
 
@@ -741,7 +808,7 @@ h1 {
 }
 
 
-.coverage-icon {
+.coverage-icon{
   width:50px;
   height:50px;
 
@@ -753,7 +820,7 @@ h1 {
 
   background:var(--navy);
 
-  color:white;
+  color:#fff;
 
   font-weight:800;
 
@@ -761,7 +828,7 @@ h1 {
 }
 
 
-.coverage-box h4 {
+.coverage-box h4{
   margin-bottom:7px;
 
   color:var(--navy);
@@ -770,7 +837,7 @@ h1 {
 }
 
 
-.coverage-box p {
+.coverage-box p{
   color:#566f7f;
 
   font-size:12px;
@@ -780,50 +847,56 @@ h1 {
 
 
 /* =========================================================
-   SHELLS
+   ANALYTICAL SHELLS
 ========================================================= */
+
 
 .explorer-shell,
 .year-compare-shell,
-.dependency-shell {
+.dependency-shell{
   margin-top:38px;
 
   overflow:hidden;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:22px;
 
-  background:white;
+  background:#fff;
 
-  box-shadow:var(--shadow);
+  box-shadow:
+    var(--shadow);
 }
 
 
 .explorer-toolbar,
 .year-compare-toolbar,
-.dependency-toolbar {
+.dependency-toolbar{
   padding:27px;
 
-  border-bottom:1px solid var(--border);
+  border-bottom:
+    1px solid var(--border);
 
   background:#f8fbfc;
 }
 
 
-.explorer-toolbar {
+.explorer-toolbar{
   display:grid;
 
-  grid-template-columns:1.35fr 1.25fr .6fr;
+  grid-template-columns:
+    1.35fr 1.25fr .6fr;
 
   gap:14px;
 }
 
 
-.year-compare-toolbar {
+.year-compare-toolbar{
   display:grid;
 
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap:15px;
 }
@@ -831,12 +904,12 @@ h1 {
 
 .explorer-main,
 .year-compare-main,
-.dependency-main {
+.dependency-main{
   padding:28px;
 }
 
 
-.control label {
+.control label{
   display:block;
 
   margin-bottom:7px;
@@ -853,18 +926,20 @@ h1 {
 }
 
 
-.control select {
+.control select{
   width:100%;
 
   min-height:45px;
 
-  padding:0 12px;
+  padding:
+    0 12px;
 
-  border:1px solid #cfdfe7;
+  border:
+    1px solid #cfdfe7;
 
   border-radius:9px;
 
-  background:white;
+  background:#fff;
 
   color:var(--navy);
 
@@ -874,12 +949,12 @@ h1 {
 }
 
 
-.control select:focus {
+.control select:focus{
   border-color:var(--cyan);
 
   box-shadow:
     0 0 0 3px
-    rgba(40,169,199,.10);
+    rgba(40,169,199,.1);
 }
 
 
@@ -887,29 +962,33 @@ h1 {
    PASSPORT
 ========================================================= */
 
-.indicator-passport {
-  border-bottom:1px solid var(--border);
 
-  background:white;
+.indicator-passport{
+  border-bottom:
+    1px solid var(--border);
+
+  background:#fff;
 }
 
 
-.passport-toggle {
+.passport-toggle{
   width:100%;
 
   display:flex;
 
   align-items:center;
 
-  justify-content:space-between;
+  justify-content:
+    space-between;
 
   gap:20px;
 
-  padding:18px 27px;
+  padding:
+    18px 27px;
 
   border:0;
 
-  background:white;
+  background:#fff;
 
   cursor:pointer;
 
@@ -917,7 +996,7 @@ h1 {
 }
 
 
-.passport-toggle-left {
+.passport-toggle-left{
   display:flex;
 
   align-items:center;
@@ -926,7 +1005,7 @@ h1 {
 }
 
 
-.passport-icon {
+.passport-icon{
   width:34px;
   height:34px;
 
@@ -948,7 +1027,7 @@ h1 {
 }
 
 
-.passport-toggle strong {
+.passport-toggle strong{
   display:block;
 
   color:var(--navy);
@@ -957,7 +1036,7 @@ h1 {
 }
 
 
-.passport-toggle small {
+.passport-toggle small{
   display:block;
 
   margin-top:2px;
@@ -968,36 +1047,41 @@ h1 {
 }
 
 
-.passport-arrow {
+.passport-arrow{
   color:var(--blue);
 
   font-size:12px;
 
-  transition:.2s ease;
+  transition:.2s;
 }
 
 
-.indicator-passport.open .passport-arrow {
-  transform:rotate(180deg);
+.indicator-passport.open
+.passport-arrow{
+  transform:
+    rotate(180deg);
 }
 
 
-.passport-body {
+.passport-body{
   display:none;
 
-  padding:0 27px 25px;
+  padding:
+    0 27px 25px;
 }
 
 
-.indicator-passport.open .passport-body {
+.indicator-passport.open
+.passport-body{
   display:block;
 }
 
 
-.passport-grid {
+.passport-grid{
   display:grid;
 
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:
+    repeat(4,1fr);
 
   gap:10px;
 
@@ -1005,10 +1089,11 @@ h1 {
 }
 
 
-.passport-item {
+.passport-item{
   padding:14px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:11px;
 
@@ -1016,7 +1101,7 @@ h1 {
 }
 
 
-.passport-item span {
+.passport-item span{
   display:block;
 
   margin-bottom:5px;
@@ -1033,7 +1118,7 @@ h1 {
 }
 
 
-.passport-item strong {
+.passport-item strong{
   display:block;
 
   color:var(--navy);
@@ -1044,7 +1129,7 @@ h1 {
 }
 
 
-.passport-note {
+.passport-note{
   padding:16px;
 
   border-radius:11px;
@@ -1053,7 +1138,7 @@ h1 {
 }
 
 
-.passport-note strong {
+.passport-note strong{
   display:block;
 
   margin-bottom:5px;
@@ -1064,7 +1149,7 @@ h1 {
 }
 
 
-.passport-note p {
+.passport-note p{
   color:#5e7384;
 
   font-size:10px;
@@ -1073,7 +1158,7 @@ h1 {
 }
 
 
-.source-button {
+.source-button{
   display:inline-flex;
 
   align-items:center;
@@ -1082,13 +1167,15 @@ h1 {
 
   margin-top:12px;
 
-  padding:9px 13px;
+  padding:
+    9px 13px;
 
-  border:1px solid #c9dde5;
+  border:
+    1px solid #c9dde5;
 
   border-radius:8px;
 
-  background:white;
+  background:#fff;
 
   color:var(--blue);
 
@@ -1099,15 +1186,16 @@ h1 {
 
 
 /* =========================================================
-   SELECTION + KPI
+   MAIN DATA
 ========================================================= */
 
-.selection-title {
+
+.selection-title{
   margin-bottom:23px;
 }
 
 
-.selection-section {
+.selection-section{
   margin-bottom:6px;
 
   color:var(--cyan);
@@ -1122,7 +1210,7 @@ h1 {
 }
 
 
-.selection-title h3 {
+.selection-title h3{
   color:var(--navy);
 
   font-size:25px;
@@ -1131,7 +1219,7 @@ h1 {
 }
 
 
-.selection-title p {
+.selection-title p{
   margin-top:5px;
 
   color:var(--muted);
@@ -1140,10 +1228,35 @@ h1 {
 }
 
 
-.kpi-grid {
+.phase-badge{
+  display:inline-flex;
+
+  margin-top:9px;
+
+  padding:
+    5px 9px;
+
+  border-radius:999px;
+
+  background:#edf8fa;
+
+  color:#257d91;
+
+  font-size:8px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:.7px;
+}
+
+
+.kpi-grid{
   display:grid;
 
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:
+    repeat(4,1fr);
 
   gap:13px;
 
@@ -1151,18 +1264,19 @@ h1 {
 }
 
 
-.kpi {
+.kpi{
   padding:20px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:14px;
 
-  background:white;
+  background:#fff;
 }
 
 
-.kpi span {
+.kpi span{
   display:block;
 
   margin-bottom:7px;
@@ -1179,7 +1293,7 @@ h1 {
 }
 
 
-.kpi strong {
+.kpi strong{
   display:block;
 
   color:var(--navy);
@@ -1190,7 +1304,7 @@ h1 {
 }
 
 
-.kpi small {
+.kpi small{
   display:block;
 
   margin-top:6px;
@@ -1203,38 +1317,36 @@ h1 {
 }
 
 
-/* =========================================================
-   CHARTS
-========================================================= */
-
-.visual-grid {
+.visual-grid{
   display:grid;
 
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap:18px;
 }
 
 
-.chart-card {
+.chart-card{
   min-width:0;
 
   padding:20px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:15px;
 
-  background:white;
+  background:#fff;
 }
 
 
-.chart-head {
+.chart-head{
   margin-bottom:13px;
 }
 
 
-.chart-head strong {
+.chart-head strong{
   display:block;
 
   color:var(--navy);
@@ -1243,7 +1355,7 @@ h1 {
 }
 
 
-.chart-head span {
+.chart-head span{
   display:block;
 
   margin-top:3px;
@@ -1254,25 +1366,25 @@ h1 {
 }
 
 
-.svg-wrap {
+.svg-wrap{
   width:100%;
 
-  min-height:280px;
+  min-height:290px;
 
   overflow:hidden;
 }
 
 
-.svg-wrap svg {
+.svg-wrap svg{
   display:block;
 
   width:100%;
 
-  height:280px;
+  height:290px;
 }
 
 
-.empty-chart {
+.empty-chart{
   min-height:255px;
 
   display:grid;
@@ -1297,12 +1409,13 @@ h1 {
    SECTOR COMPARISON
 ========================================================= */
 
-.comparison-list {
+
+.comparison-list{
   display:grid;
 
   gap:10px;
 
-  max-height:420px;
+  max-height:430px;
 
   overflow:auto;
 
@@ -1310,10 +1423,11 @@ h1 {
 }
 
 
-.comparison-row {
+.comparison-row{
   display:grid;
 
-  grid-template-columns:28px 155px 1fr 95px;
+  grid-template-columns:
+    28px 155px 1fr 95px;
 
   gap:10px;
 
@@ -1321,7 +1435,7 @@ h1 {
 }
 
 
-.comparison-code {
+.comparison-code{
   color:#9aabb7;
 
   font-size:10px;
@@ -1330,7 +1444,7 @@ h1 {
 }
 
 
-.comparison-name {
+.comparison-name{
   overflow:hidden;
 
   color:var(--navy);
@@ -1345,7 +1459,7 @@ h1 {
 }
 
 
-.comparison-track {
+.comparison-track{
   height:8px;
 
   overflow:hidden;
@@ -1356,7 +1470,7 @@ h1 {
 }
 
 
-.comparison-bar {
+.comparison-bar{
   height:100%;
 
   border-radius:10px;
@@ -1370,7 +1484,7 @@ h1 {
 }
 
 
-.comparison-value {
+.comparison-value{
   color:var(--blue);
 
   font-size:10px;
@@ -1382,22 +1496,25 @@ h1 {
 
 
 /* =========================================================
-   METRIC PROFILE
+   PROFILE
 ========================================================= */
 
-.metric-panel {
+
+.metric-panel{
   margin-top:20px;
 
   padding-top:25px;
 
-  border-top:1px solid var(--border);
+  border-top:
+    1px solid var(--border);
 }
 
 
-.metric-panel-head {
+.metric-panel-head{
   display:flex;
 
-  justify-content:space-between;
+  justify-content:
+    space-between;
 
   align-items:end;
 
@@ -1407,28 +1524,28 @@ h1 {
 }
 
 
-.metric-panel-head h4 {
+.metric-panel-head h4{
   color:var(--navy);
 
   font-size:18px;
 }
 
 
-.metric-panel-head span {
+.metric-panel-head span{
   color:var(--muted);
 
   font-size:10px;
 }
 
 
-.metric-groups {
+.metric-groups{
   display:grid;
 
   gap:18px;
 }
 
 
-.metric-group h5 {
+.metric-group h5{
   margin-bottom:10px;
 
   color:var(--cyan);
@@ -1441,21 +1558,23 @@ h1 {
 }
 
 
-.metric-cards {
+.metric-cards{
   display:grid;
 
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:
+    repeat(4,1fr);
 
   gap:10px;
 }
 
 
-.metric-card {
+.metric-card{
   min-width:0;
 
   padding:14px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:11px;
 
@@ -1463,7 +1582,8 @@ h1 {
 }
 
 
-.metric-card .metric-name {
+.metric-card
+.metric-name{
   min-height:28px;
 
   color:#596f80;
@@ -1474,7 +1594,8 @@ h1 {
 }
 
 
-.metric-card .metric-value {
+.metric-card
+.metric-value{
   margin-top:8px;
 
   color:var(--navy);
@@ -1487,7 +1608,8 @@ h1 {
 }
 
 
-.metric-card .metric-value.na {
+.metric-card
+.metric-value.na{
   color:#9aa8b2;
 
   font-size:13px;
@@ -1498,12 +1620,13 @@ h1 {
    YEAR COMPARISON
 ========================================================= */
 
-.compare-heading {
+
+.compare-heading{
   margin-bottom:24px;
 }
 
 
-.compare-heading span {
+.compare-heading span{
   display:block;
 
   margin-bottom:5px;
@@ -1518,14 +1641,14 @@ h1 {
 }
 
 
-.compare-heading h3 {
+.compare-heading h3{
   color:var(--navy);
 
   font-size:24px;
 }
 
 
-.compare-heading p {
+.compare-heading p{
   margin-top:6px;
 
   color:var(--muted);
@@ -1534,10 +1657,11 @@ h1 {
 }
 
 
-.compare-kpis {
+.compare-kpis{
   display:grid;
 
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:
+    repeat(4,1fr);
 
   gap:12px;
 
@@ -1545,10 +1669,11 @@ h1 {
 }
 
 
-.compare-kpi {
+.compare-kpi{
   padding:19px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:13px;
 
@@ -1556,7 +1681,7 @@ h1 {
 }
 
 
-.compare-kpi-label {
+.compare-kpi-label{
   margin-bottom:8px;
 
   color:#8597a5;
@@ -1569,7 +1694,7 @@ h1 {
 }
 
 
-.compare-kpi strong {
+.compare-kpi strong{
   display:block;
 
   color:var(--navy);
@@ -1578,37 +1703,147 @@ h1 {
 }
 
 
+.compare-kpi
+strong.positive{
+  color:var(--positive);
+}
+
+
+.compare-kpi
+strong.negative{
+  color:var(--negative);
+}
+
+
+.year-bars{
+  padding:22px;
+
+  margin-bottom:27px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:15px;
+
+  background:#fff;
+}
+
+
+.year-bars-title{
+  margin-bottom:18px;
+}
+
+
+.year-bars-title strong{
+  display:block;
+
+  color:var(--navy);
+
+  font-size:15px;
+}
+
+
+.year-bars-title span{
+  color:var(--muted);
+
+  font-size:10px;
+}
+
+
+.year-bar-row{
+  display:grid;
+
+  grid-template-columns:
+    62px 1fr 150px;
+
+  gap:13px;
+
+  align-items:center;
+
+  margin-top:13px;
+}
+
+
+.year-bar-year{
+  color:var(--navy);
+
+  font-size:12px;
+
+  font-weight:800;
+}
+
+
+.year-bar-track{
+  height:12px;
+
+  overflow:hidden;
+
+  border-radius:20px;
+
+  background:#e8eff3;
+}
+
+
+.year-bar-fill{
+  height:100%;
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      var(--turquoise)
+    );
+}
+
+
+.year-bar-value{
+  color:var(--blue);
+
+  font-size:11px;
+
+  font-weight:800;
+
+  text-align:right;
+}
+
+
 /* =========================================================
    TABLE
 ========================================================= */
 
-.compare-table-wrap {
+
+.compare-table-wrap{
   overflow-x:auto;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:15px;
 }
 
 
-.compare-table {
+.compare-table{
   width:100%;
 
-  min-width:900px;
+  min-width:920px;
 
   border-collapse:collapse;
 }
 
 
-.compare-table thead {
+.compare-table thead{
   background:#f4f8fa;
 }
 
 
-.compare-table th {
-  padding:13px 14px;
+.compare-table th{
+  padding:
+    13px 14px;
 
-  border-bottom:1px solid var(--border);
+  border-bottom:
+    1px solid var(--border);
 
   color:#617789;
 
@@ -1622,15 +1857,18 @@ h1 {
 }
 
 
-.compare-table th:first-child {
+.compare-table
+th:first-child{
   text-align:left;
 }
 
 
-.compare-table td {
-  padding:13px 14px;
+.compare-table td{
+  padding:
+    13px 14px;
 
-  border-bottom:1px solid #edf2f5;
+  border-bottom:
+    1px solid #edf2f5;
 
   color:#536b7c;
 
@@ -1640,7 +1878,8 @@ h1 {
 }
 
 
-.compare-table td:first-child {
+.compare-table
+td:first-child{
   color:var(--navy);
 
   font-weight:700;
@@ -1649,51 +1888,79 @@ h1 {
 }
 
 
+.delta-positive{
+  color:
+    var(--positive) !important;
+
+  font-weight:800;
+}
+
+
+.delta-negative{
+  color:
+    var(--negative) !important;
+
+  font-weight:800;
+}
+
+
+.na-cell{
+  color:
+    #a0adb7 !important;
+
+  font-style:italic;
+}
+
+
 /* =========================================================
    DEPENDENCY
 ========================================================= */
 
-.dependency-toolbar {
+
+.dependency-toolbar{
   display:grid;
 
   gap:17px;
 }
 
 
-.dependency-main-controls {
+.dependency-main-controls{
   display:grid;
 
-  grid-template-columns:.75fr 1.25fr 1.25fr;
+  grid-template-columns:
+    .75fr 1.25fr 1.25fr;
 
   gap:14px;
 }
 
 
-.dependency-mode-controls {
+.dependency-mode-controls{
   display:grid;
 
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:
+    repeat(3,1fr);
 
   gap:14px;
 }
 
 
-.dependency-mode-controls.two {
-  grid-template-columns:repeat(2,1fr);
+.dependency-mode-controls.two{
+  grid-template-columns:
+    repeat(2,1fr);
 }
 
 
-.hidden {
+.hidden{
   display:none !important;
 }
 
 
-.dependency-intro {
+.dependency-intro{
   margin-bottom:25px;
 }
 
 
-.dependency-intro span {
+.dependency-intro span{
   display:block;
 
   margin-bottom:6px;
@@ -1708,14 +1975,14 @@ h1 {
 }
 
 
-.dependency-intro h3 {
+.dependency-intro h3{
   color:var(--navy);
 
   font-size:24px;
 }
 
 
-.dependency-intro p {
+.dependency-intro p{
   margin-top:7px;
 
   color:var(--muted);
@@ -1724,10 +1991,11 @@ h1 {
 }
 
 
-.stat-grid {
+.stat-grid{
   display:grid;
 
-  grid-template-columns:repeat(5,1fr);
+  grid-template-columns:
+    repeat(5,1fr);
 
   gap:11px;
 
@@ -1735,12 +2003,13 @@ h1 {
 }
 
 
-.stat-card {
+.stat-card{
   min-height:118px;
 
   padding:17px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:13px;
 
@@ -1748,7 +2017,7 @@ h1 {
 }
 
 
-.stat-card span {
+.stat-card span{
   display:block;
 
   margin-bottom:8px;
@@ -1763,7 +2032,7 @@ h1 {
 }
 
 
-.stat-card strong {
+.stat-card strong{
   display:block;
 
   color:var(--navy);
@@ -1772,7 +2041,7 @@ h1 {
 }
 
 
-.stat-card small {
+.stat-card small{
   display:block;
 
   margin-top:6px;
@@ -1783,10 +2052,11 @@ h1 {
 }
 
 
-.regression-summary {
+.regression-summary{
   display:grid;
 
-  grid-template-columns:.9fr 1.1fr;
+  grid-template-columns:
+    .9fr 1.1fr;
 
   gap:15px;
 
@@ -1795,19 +2065,20 @@ h1 {
 
 
 .equation-box,
-.interpretation-box {
+.interpretation-box{
   padding:21px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:14px;
 
-  background:white;
+  background:#fff;
 }
 
 
 .equation-box span,
-.interpretation-box span {
+.interpretation-box span{
   display:block;
 
   margin-bottom:8px;
@@ -1822,14 +2093,14 @@ h1 {
 }
 
 
-.equation-box strong {
+.equation-box strong{
   color:var(--navy);
 
   font-size:17px;
 }
 
 
-.interpretation-box p {
+.interpretation-box p{
   color:#536b7c;
 
   font-size:11px;
@@ -1838,29 +2109,31 @@ h1 {
 }
 
 
-.dependency-visual-grid {
+.dependency-visual-grid{
   display:grid;
 
-  grid-template-columns:1.25fr .75fr;
+  grid-template-columns:
+    1.25fr .75fr;
 
   gap:18px;
 }
 
 
 .scatter-card,
-.observation-card {
+.observation-card{
   padding:20px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:15px;
 
-  background:white;
+  background:#fff;
 }
 
 
 .scatter-card h4,
-.observation-card h4 {
+.observation-card h4{
   color:var(--navy);
 
   font-size:16px;
@@ -1868,7 +2141,7 @@ h1 {
 
 
 .scatter-card > p,
-.observation-card > p {
+.observation-card > p{
   margin-bottom:15px;
 
   color:var(--muted);
@@ -1877,14 +2150,14 @@ h1 {
 }
 
 
-.observation-scroll {
+.observation-scroll{
   max-height:340px;
 
   overflow:auto;
 }
 
 
-.observation-table {
+.observation-table{
   width:100%;
 
   border-collapse:collapse;
@@ -1892,10 +2165,12 @@ h1 {
 
 
 .observation-table th,
-.observation-table td {
-  padding:9px 7px;
+.observation-table td{
+  padding:
+    9px 7px;
 
-  border-bottom:1px solid #edf2f5;
+  border-bottom:
+    1px solid #edf2f5;
 
   font-size:9px;
 
@@ -1903,26 +2178,31 @@ h1 {
 }
 
 
-.observation-table th:first-child,
-.observation-table td:first-child {
+.observation-table
+th:first-child,
+.observation-table
+td:first-child{
   text-align:left;
 }
 
 
-.causality-note {
+.causality-note{
   margin-top:20px;
 
-  padding:20px 22px;
+  padding:
+    20px 22px;
 
-  border-left:4px solid var(--turquoise);
+  border-left:
+    4px solid var(--turquoise);
 
-  border-radius:0 12px 12px 0;
+  border-radius:
+    0 12px 12px 0;
 
   background:#f3f9fa;
 }
 
 
-.causality-note strong {
+.causality-note strong{
   display:block;
 
   margin-bottom:6px;
@@ -1933,7 +2213,7 @@ h1 {
 }
 
 
-.causality-note p {
+.causality-note p{
   color:#566f7f;
 
   font-size:10px;
@@ -1941,28 +2221,32 @@ h1 {
 
 
 /* =========================================================
-   HISTORICAL AVAILABILITY
+   HISTORY
 ========================================================= */
 
-.history-shell {
+
+.history-shell{
   margin-top:38px;
 
   padding:28px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:20px;
 
-  background:white;
+  background:#fff;
 
-  box-shadow:var(--shadow);
+  box-shadow:
+    var(--shadow);
 }
 
 
-.history-summary {
+.history-summary{
   display:grid;
 
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:
+    repeat(3,1fr);
 
   gap:12px;
 
@@ -1970,10 +2254,11 @@ h1 {
 }
 
 
-.history-summary-card {
+.history-summary-card{
   padding:18px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:12px;
 
@@ -1981,7 +2266,7 @@ h1 {
 }
 
 
-.history-summary-card span {
+.history-summary-card span{
   display:block;
 
   color:#8799a7;
@@ -1994,7 +2279,7 @@ h1 {
 }
 
 
-.history-summary-card strong {
+.history-summary-card strong{
   display:block;
 
   margin-top:6px;
@@ -2005,16 +2290,17 @@ h1 {
 }
 
 
-.history-table-wrap {
+.history-table-wrap{
   overflow-x:auto;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:14px;
 }
 
 
-.history-table {
+.history-table{
   width:100%;
 
   min-width:1050px;
@@ -2023,10 +2309,12 @@ h1 {
 }
 
 
-.history-table th {
-  padding:11px 9px;
+.history-table th{
+  padding:
+    11px 9px;
 
-  border-bottom:1px solid var(--border);
+  border-bottom:
+    1px solid var(--border);
 
   background:#f4f8fa;
 
@@ -2040,7 +2328,8 @@ h1 {
 }
 
 
-.history-table th:first-child {
+.history-table
+th:first-child{
   min-width:240px;
 
   position:sticky;
@@ -2055,12 +2344,14 @@ h1 {
 }
 
 
-.history-table td {
-  padding:10px 9px;
+.history-table td{
+  padding:
+    10px 9px;
 
-  border-bottom:1px solid #edf2f5;
+  border-bottom:
+    1px solid #edf2f5;
 
-  background:white;
+  background:#fff;
 
   font-size:9px;
 
@@ -2068,14 +2359,15 @@ h1 {
 }
 
 
-.history-table td:first-child {
+.history-table
+td:first-child{
   position:sticky;
 
   left:0;
 
   z-index:1;
 
-  background:white;
+  background:#fff;
 
   color:var(--navy);
 
@@ -2085,14 +2377,15 @@ h1 {
 }
 
 
-.history-status {
+.history-status{
   display:inline-flex;
 
   min-width:32px;
 
   justify-content:center;
 
-  padding:4px 6px;
+  padding:
+    4px 6px;
 
   border-radius:6px;
 
@@ -2102,33 +2395,33 @@ h1 {
 }
 
 
-.status-yes {
+.status-yes{
   background:#e9f7f4;
 
   color:#177b70;
 }
 
 
-.status-limited {
+.status-limited{
   background:#fff4db;
 
   color:#987020;
 }
 
 
-.status-version {
+.status-version{
   background:#eaf0fb;
 
   color:#345ea8;
 }
 
 
-.status-none {
+.status-none{
   color:#a4b0b8;
 }
 
 
-.legend-row {
+.legend-row{
   display:flex;
 
   flex-wrap:wrap;
@@ -2143,7 +2436,7 @@ h1 {
 }
 
 
-.legend-item {
+.legend-item{
   display:flex;
 
   align-items:center;
@@ -2152,14 +2445,11 @@ h1 {
 }
 
 
-/* =========================================================
-   SOURCE CARDS
-========================================================= */
-
-.source-grid {
+.source-grid{
   display:grid;
 
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:
+    repeat(2,1fr);
 
   gap:16px;
 
@@ -2167,33 +2457,32 @@ h1 {
 }
 
 
-.history-source-card {
+.history-source-card{
   display:block;
 
   position:relative;
 
   padding:26px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:16px;
 
   background:#fbfdfe;
 
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    border-color .2s ease;
+  transition:.2s;
 }
 
 
-.history-source-card.has-link {
+.history-source-card.has-link{
   cursor:pointer;
 }
 
 
-.history-source-card.has-link:hover {
-  transform:translateY(-2px);
+.history-source-card.has-link:hover{
+  transform:
+    translateY(-2px);
 
   border-color:#b9d9e4;
 
@@ -2203,7 +2492,8 @@ h1 {
 }
 
 
-.history-source-card .source-group {
+.history-source-card
+.source-group{
   color:#55a5ca;
 
   font-size:10px;
@@ -2216,8 +2506,9 @@ h1 {
 }
 
 
-.history-source-card h4 {
-  margin:8px 0 5px;
+.history-source-card h4{
+  margin:
+    8px 0 5px;
 
   color:var(--navy);
 
@@ -2225,7 +2516,7 @@ h1 {
 }
 
 
-.source-period {
+.source-period{
   margin-top:10px;
 
   color:#536b7c;
@@ -2234,7 +2525,7 @@ h1 {
 }
 
 
-.source-note {
+.source-note{
   margin-top:8px;
 
   color:#617789;
@@ -2245,60 +2536,7 @@ h1 {
 }
 
 
-.source-years {
-  display:flex;
-
-  flex-wrap:wrap;
-
-  gap:6px;
-
-  margin-top:16px;
-}
-
-
-.source-year {
-  min-width:46px;
-
-  padding:6px 7px;
-
-  border-radius:7px;
-
-  background:#edf2f5;
-
-  color:#8b99a4;
-
-  font-size:8px;
-
-  font-weight:800;
-
-  line-height:1.4;
-
-  text-align:center;
-}
-
-
-.source-year.available {
-  background:#e8f7f4;
-
-  color:#177b70;
-}
-
-
-.source-year.limited {
-  background:#fff4db;
-
-  color:#987020;
-}
-
-
-.source-year.version {
-  background:#eaf0fb;
-
-  color:#345ea8;
-}
-
-
-.source-link {
+.source-link{
   display:inline-flex;
 
   align-items:center;
@@ -2315,7 +2553,7 @@ h1 {
 }
 
 
-.source-link:hover {
+.source-link:hover{
   text-decoration:underline;
 }
 
@@ -2324,10 +2562,12 @@ h1 {
    INTERPRETATION
 ========================================================= */
 
-.interpretation-grid {
+
+.interpretation-grid{
   display:grid;
 
-  grid-template-columns:.9fr 1.1fr;
+  grid-template-columns:
+    .9fr 1.1fr;
 
   gap:25px;
 
@@ -2335,10 +2575,11 @@ h1 {
 }
 
 
-.interpretation-main {
+.interpretation-main{
   padding:31px;
 
-  border:1px solid #cce3e7;
+  border:
+    1px solid #cce3e7;
 
   border-radius:17px;
 
@@ -2346,12 +2587,12 @@ h1 {
     linear-gradient(
       145deg,
       #f4fbfc,
-      #ffffff
+      #fff
     );
 }
 
 
-.interpretation-main h3 {
+.interpretation-main h3{
   margin-bottom:12px;
 
   color:var(--navy);
@@ -2360,7 +2601,7 @@ h1 {
 }
 
 
-.interpretation-main p {
+.interpretation-main p{
   color:#536c7d;
 
   font-size:12px;
@@ -2369,25 +2610,27 @@ h1 {
 }
 
 
-.rule-list {
+.rule-list{
   display:grid;
 
   gap:10px;
 }
 
 
-.rule {
-  padding:18px 20px;
+.rule{
+  padding:
+    18px 20px;
 
-  border:1px solid var(--border);
+  border:
+    1px solid var(--border);
 
   border-radius:12px;
 
-  background:white;
+  background:#fff;
 }
 
 
-.rule strong {
+.rule strong{
   display:block;
 
   margin-bottom:5px;
@@ -2398,7 +2641,7 @@ h1 {
 }
 
 
-.rule p {
+.rule p{
   color:var(--muted);
 
   font-size:10px;
@@ -2406,13 +2649,15 @@ h1 {
 
 
 /* =========================================================
-   CTA + FOOTER
+   CTA
 ========================================================= */
 
-.final-cta {
-  padding:51px 0;
 
-  color:white;
+.final-cta{
+  padding:
+    51px 0;
+
+  color:#fff;
 
   background:
     linear-gradient(
@@ -2423,10 +2668,11 @@ h1 {
 }
 
 
-.final-cta-inner {
+.final-cta-inner{
   display:flex;
 
-  justify-content:space-between;
+  justify-content:
+    space-between;
 
   align-items:center;
 
@@ -2434,21 +2680,21 @@ h1 {
 }
 
 
-.final-cta h2 {
+.final-cta h2{
   margin-bottom:7px;
 
   font-size:29px;
 }
 
 
-.final-cta p {
+.final-cta p{
   max-width:720px;
 
   color:#c7dce7;
 }
 
 
-.btn {
+.btn{
   min-height:48px;
 
   display:inline-flex;
@@ -2457,7 +2703,8 @@ h1 {
 
   justify-content:center;
 
-  padding:0 23px;
+  padding:
+    0 23px;
 
   border-radius:9px;
 
@@ -2476,19 +2723,27 @@ h1 {
 }
 
 
-footer {
-  padding:33px 0 20px;
+/* =========================================================
+   FOOTER
+========================================================= */
 
-  border-top:1px solid var(--border);
+
+footer{
+  padding:
+    33px 0 20px;
+
+  border-top:
+    1px solid var(--border);
 
   background:#f8fafc;
 }
 
 
-.footer-grid {
+.footer-grid{
   display:grid;
 
-  grid-template-columns:1.25fr 1fr;
+  grid-template-columns:
+    1.25fr 1fr;
 
   gap:35px;
 
@@ -2496,7 +2751,7 @@ footer {
 }
 
 
-.footer-project strong {
+.footer-project strong{
   display:block;
 
   margin-bottom:7px;
@@ -2505,14 +2760,14 @@ footer {
 }
 
 
-.footer-project p {
+.footer-project p{
   color:var(--muted);
 
   font-size:12px;
 }
 
 
-.footer-links {
+.footer-links{
   display:flex;
 
   justify-content:flex-end;
@@ -2527,12 +2782,13 @@ footer {
 }
 
 
-.copyright {
+.copyright{
   margin-top:25px;
 
   padding-top:18px;
 
-  border-top:1px solid var(--border);
+  border-top:
+    1px solid var(--border);
 
   text-align:center;
 
@@ -2542,10 +2798,11 @@ footer {
 }
 
 
-.load-error {
+.load-error{
   padding:18px;
 
-  border:1px solid #efd5d5;
+  border:
+    1px solid #efd5d5;
 
   border-radius:12px;
 
@@ -2561,92 +2818,111 @@ footer {
    RESPONSIVE
 ========================================================= */
 
-@media(max-width:1200px) {
 
-  .desktop-nav {
+@media(max-width:1200px){
+
+  .desktop-nav{
     display:none;
   }
 
-  .mobile-toggle {
+  .mobile-toggle{
     display:block;
   }
 
-  .page-hero-inner {
+  .page-hero-inner{
     grid-template-columns:1fr;
   }
 
-  .passport-grid {
-    grid-template-columns:repeat(2,1fr);
+  .passport-grid{
+    grid-template-columns:
+      repeat(2,1fr);
   }
 
-  .metric-cards {
-    grid-template-columns:repeat(3,1fr);
+  .metric-cards{
+    grid-template-columns:
+      repeat(3,1fr);
   }
 
   .kpi-grid,
-  .compare-kpis {
-    grid-template-columns:repeat(2,1fr);
+  .compare-kpis{
+    grid-template-columns:
+      repeat(2,1fr);
   }
 
-  .stat-grid {
-    grid-template-columns:repeat(3,1fr);
+  .stat-grid{
+    grid-template-columns:
+      repeat(3,1fr);
   }
 
 }
 
 
-@media(max-width:900px) {
+@media(max-width:900px){
 
   .frame-grid,
   .visual-grid,
   .interpretation-grid,
   .dependency-visual-grid,
   .regression-summary,
-  .source-grid {
+  .source-grid{
     grid-template-columns:1fr;
   }
 
-  .explorer-toolbar {
-    grid-template-columns:1fr 1fr;
+  .explorer-toolbar{
+    grid-template-columns:
+      1fr 1fr;
   }
 
-  .explorer-toolbar .control:last-child {
+  .explorer-toolbar
+  .control:last-child{
     grid-column:1/-1;
   }
 
-  .metric-cards {
-    grid-template-columns:repeat(2,1fr);
+  .metric-cards{
+    grid-template-columns:
+      repeat(2,1fr);
   }
 
   .dependency-main-controls,
   .dependency-mode-controls,
-  .dependency-mode-controls.two {
+  .dependency-mode-controls.two{
     grid-template-columns:1fr;
   }
 
-  .history-summary {
+  .history-summary{
     grid-template-columns:1fr;
   }
 
-  .footer-grid {
+  .footer-grid{
     grid-template-columns:1fr;
   }
 
-  .footer-links {
+  .footer-links{
     justify-content:flex-start;
+  }
+
+  .year-bar-row{
+    grid-template-columns:
+      52px 1fr;
+  }
+
+  .year-bar-value{
+    grid-column:2;
+
+    text-align:left;
   }
 
 }
 
 
-@media(max-width:700px) {
+@media(max-width:700px){
 
   .brand-text small,
-  .language {
+  .language{
     display:none;
   }
 
-  h1 {
+  h1{
     font-size:43px;
   }
 
@@ -2657,24 +2933,25 @@ footer {
   .kpi-grid,
   .compare-kpis,
   .year-compare-toolbar,
-  .stat-grid {
+  .stat-grid{
     grid-template-columns:1fr;
   }
 
-  .explorer-toolbar .control:last-child {
+  .explorer-toolbar
+  .control:last-child{
     grid-column:auto;
   }
 
-  .coverage-box {
+  .coverage-box{
     grid-template-columns:1fr;
   }
 
-  .comparison-row {
+  .comparison-row{
     grid-template-columns:
       25px 95px 1fr 85px;
   }
 
-  .final-cta-inner {
+  .final-cta-inner{
     flex-direction:column;
 
     align-items:flex-start;
@@ -2683,21 +2960,15 @@ footer {
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
 <header>
 
   <div class="container navbar">
-
 
     <a
       href="index.html"
@@ -2710,7 +2981,6 @@ footer {
         <span></span>
         <span></span>
       </div>
-
 
       <div class="brand-text">
 
@@ -2864,10 +3134,10 @@ footer {
      HERO
 ========================================================= -->
 
+
 <section class="page-hero">
 
   <div class="container page-hero-inner">
-
 
     <div>
 
@@ -2887,12 +3157,12 @@ footer {
         трудовите и цифровите характеристики
         на 21 икономически дейности
         в България по A*21 / NACE Rev. 2.
-        Числовият панел обхваща
-        периода 2020–2025 г.,
-        а историческата рамка
-        показва наличността
-        на официални серии
-        преди 2020 г.
+        Обединеният панел обхваща
+        2010–2025 г.,
+        като наличността е специфична
+        за всеки показател
+        и липсващите години
+        не се интерполират.
 
       </p>
 
@@ -2904,7 +3174,6 @@ footer {
       <div class="hero-box-label">
         Обхват на секторната база
       </div>
-
 
       <div class="hero-stats">
 
@@ -2928,7 +3197,7 @@ footer {
           </strong>
 
           <span>
-            секторни показателя
+            показателя в текущата рамка
           </span>
 
         </div>
@@ -2937,11 +3206,11 @@ footer {
         <div class="hero-stat">
 
           <strong>
-            2020–2025
+            2010–2025
           </strong>
 
           <span>
-            числов секторен панел
+            обединен времеви хоризонт
           </span>
 
         </div>
@@ -2950,11 +3219,11 @@ footer {
         <div class="hero-stat">
 
           <strong>
-            2010–2019
+            3
           </strong>
 
           <span>
-            историческа информационна рамка
+            режима за анализ на зависимости
           </span>
 
         </div>
@@ -2972,6 +3241,7 @@ footer {
      FRAME
 ========================================================= -->
 
+
 <section class="standard-section">
 
   <div class="container">
@@ -2980,29 +3250,29 @@ footer {
       Аналитична рамка
     </div>
 
-
     <h2 class="section-title">
       Какво измерва секторният анализ?
     </h2>
 
-
     <p class="section-description">
 
       Секторният разрез съчетава
-      икономически показатели,
-      цифрова интензивност
-      и човешки капитал.
-      Анализът позволява
-      проследяване на динамика,
-      сравнение между години,
-      сравнение между сектори
-      и проверка на статистически зависимости.
+      икономическата база,
+      цифровата интензивност
+      и човешкия капитал.
+      По-дългият времеви хоризонт
+      позволява да се разграничат
+      структурните тенденции
+      от по-новите цифрови индикатори,
+      без да се създава
+      фиктивна непрекъснатост там,
+      където официалната статистика
+      не я поддържа.
 
     </p>
 
 
     <div class="frame-grid">
-
 
       <article class="frame-card">
 
@@ -3015,13 +3285,10 @@ footer {
         </h3>
 
         <p>
-
-          Брутна добавена стойност,
-          заетост,
+          БДС, заетост,
           отработени часове,
           производителност
           и инвестиции.
-
         </p>
 
       </article>
@@ -3038,7 +3305,6 @@ footer {
         </h3>
 
         <p>
-
           Интернет,
           cloud,
           ERP,
@@ -3048,7 +3314,6 @@ footer {
           AI,
           електронна търговия
           и анализ на данни.
-
         </p>
 
       </article>
@@ -3065,16 +3330,12 @@ footer {
         </h3>
 
         <p>
-
           ИКТ специалисти,
           техният дял в заетостта
-          и инвестициите
-          в ИКТ обучение.
-
+          и ИКТ обучение.
         </p>
 
       </article>
-
 
     </div>
 
@@ -3088,20 +3349,20 @@ footer {
       <div>
 
         <h4>
-          Секторен профил, а не единна класация
+          2010–2025 не означава 16 наблюдения за всеки показател
         </h4>
 
         <p>
 
-          Показателите имат
-          различни мерни единици,
-          секторно покритие
-          и периодичност.
-          Затова анализът
-          сравнява конкретни показатели,
-          вместо да конструира
-          механичен общ рейтинг
-          на 21-те сектора.
+          За икономическото ядро
+          има по-дълги серии.
+          Част от цифровите показатели
+          започват по-късно
+          или се наблюдават модулно.
+          Сайтът показва
+          само реално наличните
+          официални стойности;
+          липсите остават NA/null.
 
         </p>
 
@@ -3115,8 +3376,9 @@ footer {
 
 
 <!-- =========================================================
-     SECTOR EXPLORER
+     EXPLORER
 ========================================================= -->
+
 
 <section
   class="standard-section section-alt"
@@ -3129,20 +3391,20 @@ footer {
       A*21 Sector Explorer
     </div>
 
-
     <h2 class="section-title">
       Интерактивен секторен профил
     </h2>
-
 
     <p class="section-description">
 
       Избери икономическа дейност,
       показател и година.
-      Под селекторите
-      можеш да разгънеш
-      методологичния паспорт
-      на избрания показател.
+      Графиката използва
+      целия наличен период
+      за избрания сектор и показател,
+      а паспортът дава
+      методологичния контекст
+      и официалния източник.
 
     </p>
 
@@ -3192,8 +3454,6 @@ footer {
       </div>
 
 
-      <!-- PASSPORT -->
-
       <div
         class="indicator-passport"
         id="indicatorPassport"
@@ -3235,9 +3495,7 @@ footer {
         <div class="passport-body">
 
           <div id="passportContent">
-
             Зареждане на методологията…
-
           </div>
 
         </div>
@@ -3248,9 +3506,7 @@ footer {
       <div class="explorer-main">
 
         <div id="explorerContent">
-
           Зареждане на данните…
-
         </div>
 
       </div>
@@ -3267,6 +3523,7 @@ footer {
      YEAR COMPARISON
 ========================================================= -->
 
+
 <section
   class="standard-section"
   id="yearComparison"
@@ -3278,29 +3535,29 @@ footer {
       Динамичен анализ
     </div>
 
-
     <h2 class="section-title">
       Сравнение между години
     </h2>
 
-
     <p class="section-description">
 
-      Сравни стойността
-      на избрания показател
-      между две години.
-      Показват се абсолютната промяна,
-      относителното изменение
-      и таблица за всички 29 показателя.
+      Сравни две произволни години
+      от 2010–2025 г.
+      за избрания сектор.
+      При процентните показатели
+      абсолютната разлика
+      се представя
+      в процентни пункта,
+      а относителното изменение –
+      в проценти
+      спрямо базовата година.
 
     </p>
 
 
     <div class="year-compare-shell">
 
-
       <div class="year-compare-toolbar">
-
 
         <div class="control">
 
@@ -3325,7 +3582,6 @@ footer {
 
         </div>
 
-
       </div>
 
 
@@ -3336,7 +3592,6 @@ footer {
 
       </div>
 
-
     </div>
 
   </div>
@@ -3345,8 +3600,9 @@ footer {
 
 
 <!-- =========================================================
-     DEPENDENCY
+     DEPENDENCIES
 ========================================================= -->
+
 
 <section
   class="standard-section section-alt"
@@ -3359,19 +3615,20 @@ footer {
       Статистически зависимости
     </div>
 
-
     <h2 class="section-title">
       Анализ на връзката между показатели
     </h2>
-
 
     <p class="section-description">
 
       Избери независима променлива X,
       зависима променлива Y
       и аналитичен режим.
-      Секторите се използват
-      като отделни наблюдения.
+      В режимите „нива“ и „лаг“
+      наблюденията са секторите.
+      При „изменения“
+      се използва относителната промяна
+      между две избрани години.
 
     </p>
 
@@ -3383,7 +3640,6 @@ footer {
 
 
         <div class="dependency-main-controls">
-
 
           <div class="control">
 
@@ -3432,7 +3688,6 @@ footer {
             </select>
 
           </div>
-
 
         </div>
 
@@ -3520,6 +3775,10 @@ footer {
                 +2 години
               </option>
 
+              <option value="3">
+                +3 години
+              </option>
+
             </select>
 
           </div>
@@ -3549,16 +3808,20 @@ footer {
 
       <p>
 
-        Корелацията и простата линейна регресия
-        показват статистическа асоциация
-        между избраните показатели.
-        Самата зависимост
-        не доказва причинно-следствена връзка.
+        Корелацията
+        и простата линейна регресия
+        показват статистическа асоциация.
+        Те не доказват
+        причинно-следствено влияние
+        и трябва да се интерпретират
+        с оглед на размера на извадката,
+        секторната хетерогенност,
+        методологичните разриви
+        и възможните пропуснати фактори.
 
       </p>
 
     </div>
-
 
   </div>
 
@@ -3566,8 +3829,9 @@ footer {
 
 
 <!-- =========================================================
-     HISTORY
+     HISTORICAL FRAMEWORK
 ========================================================= -->
+
 
 <section
   class="standard-section"
@@ -3576,27 +3840,24 @@ footer {
 
   <div class="container">
 
-
     <div class="section-label">
       Информационна инфраструктура
     </div>
 
-
     <h2 class="section-title">
-      Историческа наличност на официалните серии
+      Историческа наличност и официални източници
     </h2>
-
 
     <p class="section-description">
 
+      Тази секция остава
+      като методологичен контрол
+      върху числовия панел.
       Матрицата показва
-      за кои показатели
-      съществува официална
-      или методологично проследима серия
-      през периода преди 2020 г.
-      Тя показва наличност на източник,
-      а не числови стойности
-      в текущия секторен панел.
+      кога дадена историческа серия
+      е официално налична,
+      ограничена
+      или методологично различна.
 
     </p>
 
@@ -3604,9 +3865,7 @@ footer {
     <div class="history-shell">
 
       <div id="historyContent">
-
         Зареждане на историческата рамка…
-
       </div>
 
     </div>
@@ -3621,25 +3880,26 @@ footer {
       <div>
 
         <h4>
-          Историческа наличност ≠ непрекъсната съпоставима серия
+          Методологичните разриви се запазват
         </h4>
 
         <p>
 
-          Някои цифрови показатели
-          се въвеждат по-късно,
-          наблюдават се само в определени години
-          или променят дефиницията си.
-          Затова липсващите периоди
-          не се заместват
-          с изкуствени proxy стойности.
+          DII V1
+          не се пришива
+          към текущия DII
+          като една непрекъсната серия.
+          Показатели без съпоставима
+          историческа дефиниция
+          не се backcast-ват
+          и не се заменят
+          с proxy стойности.
 
         </p>
 
       </div>
 
     </div>
-
 
   </div>
 
@@ -3650,6 +3910,7 @@ footer {
      INTERPRETATION
 ========================================================= -->
 
+
 <section class="standard-section section-alt">
 
   <div class="container">
@@ -3658,7 +3919,6 @@ footer {
       Интерпретация
     </div>
 
-
     <h2 class="section-title">
       Как трябва да се четат секторните данни?
     </h2>
@@ -3666,11 +3926,10 @@ footer {
 
     <div class="interpretation-grid">
 
-
       <div class="interpretation-main">
 
         <h3>
-          Ниво, динамика, зависимост и наличност
+          Ниво, динамика, зависимост и съпоставимост
         </h3>
 
         <p>
@@ -3682,10 +3941,10 @@ footer {
           показва динамиката.
           Анализът на зависимости
           проверява статистическите взаимовръзки,
-          а историческата матрица
-          показва докъде назад
-          може методологично да бъде проследен
-          даден показател.
+          а историческата рамка
+          показва дали наблюденията
+          принадлежат към съпоставима
+          официална серия.
 
         </p>
 
@@ -3693,7 +3952,6 @@ footer {
 
 
       <div class="rule-list">
-
 
         <div class="rule">
 
@@ -3728,14 +3986,16 @@ footer {
         <div class="rule">
 
           <strong>
-            Съпоставимостта е условие
+            Съпоставимостта предхожда изчислението
           </strong>
 
           <p>
-            Историческите наблюдения
-            се използват само когато
-            дефиницията и секторното покритие
-            позволяват сравнение.
+            Дълъг период
+            не оправдава
+            механично свързване
+            на показатели
+            с различни версии
+            или обхват.
           </p>
 
         </div>
@@ -3750,26 +4010,20 @@ footer {
           <p>
             Корелационните
             и регресионните резултати
-            трябва да се интерпретират
-            като статистически зависимости.
+            са статистически зависимости,
+            не автоматични причинни ефекти.
           </p>
 
         </div>
-
 
       </div>
 
     </div>
 
-
   </div>
 
 </section>
 
-
-<!-- =========================================================
-     CTA
-========================================================= -->
 
 <section class="final-cta">
 
@@ -3801,7 +4055,6 @@ footer {
       Към резултатите →
     </a>
 
-
   </div>
 
 </section>
@@ -3810,17 +4063,11 @@ footer {
 </main>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
 <footer>
 
   <div class="container">
 
-
     <div class="footer-grid">
-
 
       <div class="footer-project">
 
@@ -3877,7 +4124,6 @@ footer {
 
       </div>
 
-
     </div>
 
 
@@ -3888,7 +4134,6 @@ footer {
 
     </div>
 
-
   </div>
 
 </footer>
@@ -3898,103 +4143,109 @@ footer {
 
 (function(){
 
+"use strict";
 
-/* =========================================================
-   DOM
-========================================================= */
+
+const $ =
+  id =>
+    document.getElementById(id);
+
 
 const mobileToggle =
-  document.getElementById("mobileToggle");
+  $("mobileToggle");
 
 const mobileMenu =
-  document.getElementById("mobileMenu");
+  $("mobileMenu");
 
 
 const sectorSelect =
-  document.getElementById("sectorSelect");
+  $("sectorSelect");
 
 const indicatorSelect =
-  document.getElementById("indicatorSelect");
+  $("indicatorSelect");
 
 const yearSelect =
-  document.getElementById("yearSelect");
+  $("yearSelect");
 
 const explorerContent =
-  document.getElementById("explorerContent");
+  $("explorerContent");
 
 
 const baseYearSelect =
-  document.getElementById("baseYearSelect");
+  $("baseYearSelect");
 
 const compareYearSelect =
-  document.getElementById("compareYearSelect");
+  $("compareYearSelect");
 
 const yearCompareContent =
-  document.getElementById("yearCompareContent");
+  $("yearCompareContent");
 
 
 const indicatorPassport =
-  document.getElementById("indicatorPassport");
+  $("indicatorPassport");
 
 const passportToggle =
-  document.getElementById("passportToggle");
+  $("passportToggle");
 
 const passportContent =
-  document.getElementById("passportContent");
+  $("passportContent");
 
 const passportShortLabel =
-  document.getElementById("passportShortLabel");
+  $("passportShortLabel");
 
 
 const dependencyMode =
-  document.getElementById("dependencyMode");
+  $("dependencyMode");
 
 const xIndicatorSelect =
-  document.getElementById("xIndicatorSelect");
+  $("xIndicatorSelect");
 
 const yIndicatorSelect =
-  document.getElementById("yIndicatorSelect");
+  $("yIndicatorSelect");
 
 const dependencyYear =
-  document.getElementById("dependencyYear");
+  $("dependencyYear");
 
 const changeBaseYear =
-  document.getElementById("changeBaseYear");
+  $("changeBaseYear");
 
 const changeCompareYear =
-  document.getElementById("changeCompareYear");
+  $("changeCompareYear");
 
 const lagXYear =
-  document.getElementById("lagXYear");
+  $("lagXYear");
 
 const lagLength =
-  document.getElementById("lagLength");
+  $("lagLength");
 
 const levelsControls =
-  document.getElementById("levelsControls");
+  $("levelsControls");
 
 const changesControls =
-  document.getElementById("changesControls");
+  $("changesControls");
 
 const lagControls =
-  document.getElementById("lagControls");
+  $("lagControls");
 
 const dependencyContent =
-  document.getElementById("dependencyContent");
+  $("dependencyContent");
 
 
 const historyContent =
-  document.getElementById("historyContent");
+  $("historyContent");
 
 
 let dataset = null;
+
 let metadata = null;
-let historical = null;
+
+let historicalAvailability = null;
 
 
 /* =========================================================
    MOBILE
 ========================================================= */
+
 
 if(
   mobileToggle &&
@@ -4003,7 +4254,7 @@ if(
 
   mobileToggle.addEventListener(
     "click",
-    function(){
+    () => {
 
       mobileMenu.style.display =
         mobileMenu.style.display === "block"
@@ -4017,18 +4268,16 @@ if(
 
 
 /* =========================================================
-   PASSPORT TOGGLE
+   PASSPORT
 ========================================================= */
+
 
 passportToggle.addEventListener(
   "click",
-  function(){
-
+  () =>
     indicatorPassport
       .classList
-      .toggle("open");
-
-  }
+      .toggle("open")
 );
 
 
@@ -4036,11 +4285,12 @@ passportToggle.addEventListener(
    HELPERS
 ========================================================= */
 
-function safeNumber(value){
+
+function safeNumber(v){
 
   return (
-    typeof value === "number" &&
-    Number.isFinite(value)
+    typeof v === "number" &&
+    Number.isFinite(v)
   );
 
 }
@@ -4050,7 +4300,9 @@ function isPercentageUnit(unit){
 
   return (
     typeof unit === "string" &&
-    unit.trim().startsWith("%")
+    unit
+      .trim()
+      .startsWith("%")
   );
 
 }
@@ -4132,28 +4384,22 @@ function compactUnit(unit){
 
 function deltaUnit(unit){
 
-  if(
+  return (
     isPercentageUnit(unit)
-  ){
-    return "пр.п.";
-  }
-
-
-  return displayUnit(unit);
+    ? "пр.п."
+    : displayUnit(unit)
+  );
 
 }
 
 
 function decimalsForUnit(unit){
 
-  if(
+  return (
     unit === "хил. часа"
-  ){
-    return 0;
-  }
-
-
-  return 2;
+    ? 0
+    : 2
+  );
 
 }
 
@@ -4254,8 +4500,11 @@ function fmtStat(
   return new Intl.NumberFormat(
     "bg-BG",
     {
-      minimumFractionDigits:digits,
-      maximumFractionDigits:digits
+      minimumFractionDigits:
+        digits,
+
+      maximumFractionDigits:
+        digits
     }
   ).format(value);
 
@@ -4304,7 +4553,7 @@ function signedAbsoluteChange(
   }
 
 
-  const diff =
+  const d =
     compare -
     base;
 
@@ -4315,12 +4564,12 @@ function signedAbsoluteChange(
 
   return (
     (
-      diff >= 0
+      d >= 0
       ? "+"
       : ""
     ) +
     fmtNumber(
-      diff,
+      d,
       unit
     ) +
     (
@@ -4347,7 +4596,9 @@ function relativeChange(
 
 
   if(base === 0){
+
     return "not-applicable";
+
   }
 
 
@@ -4363,15 +4614,42 @@ function relativeChange(
 }
 
 
+function changeClass(
+  base,
+  compare
+){
+
+  if(
+    !safeNumber(base) ||
+    !safeNumber(compare)
+  ){
+    return "";
+  }
+
+
+  return (
+    compare > base
+    ? "positive"
+    : (
+        compare < base
+        ? "negative"
+        : ""
+      )
+  );
+
+}
+
+
 /* =========================================================
    DATA ACCESS
 ========================================================= */
 
+
 function getIndicatorByCode(code){
 
   return dataset.indicators.find(
-    item =>
-      item.code === code
+    i =>
+      i.code === code
   );
 
 }
@@ -4392,9 +4670,10 @@ function getRecord(
 ){
 
   return dataset.records.find(
-    record =>
-      record.section === section &&
-      record.year === Number(year)
+    r =>
+      r.section === section &&
+      Number(r.year) ===
+      Number(year)
   );
 
 }
@@ -4406,7 +4685,7 @@ function getValue(
   code
 ){
 
-  const record =
+  const r =
     getRecord(
       section,
       year
@@ -4414,11 +4693,41 @@ function getValue(
 
 
   return (
-    record &&
-    record.values
+    r &&
+    r.values
   )
-  ? record.values[code]
+  ? r.values[code]
   : null;
+
+}
+
+
+function seriesFor(
+  section,
+  code
+){
+
+  return dataset.period.map(
+    year => ({
+      year,
+      value:
+        getValue(
+          section,
+          year,
+          code
+        )
+    })
+  );
+
+}
+
+
+function getSector(code){
+
+  return dataset.sectors.find(
+    s =>
+      s.code === code
+  );
 
 }
 
@@ -4427,61 +4736,124 @@ function getValue(
    PASSPORT
 ========================================================= */
 
+
 function renderPassport(){
 
-  if(
-    !metadata ||
-    !Array.isArray(
-      metadata.indicators
-    )
-  ){
+  const indicator =
+    getIndicator();
 
-    passportContent.innerHTML = `
 
-      <div class="load-error">
-        Методологичният паспорт
-        не може да бъде зареден.
-      </div>
-
-    `;
-
+  if(!indicator){
     return;
-
   }
 
 
   const item =
-    metadata.indicators.find(
+    metadata?.indicators?.find(
       x =>
         x.code ===
-        indicatorSelect.value
+        indicator.code
     );
+
+
+  passportShortLabel.textContent =
+    indicator.label;
+
+
+  const selectedSeries =
+    seriesFor(
+      sectorSelect.value,
+      indicator.code
+    )
+    .filter(
+      x =>
+        safeNumber(
+          x.value
+        )
+    );
+
+
+  const first =
+    selectedSeries.length
+    ? selectedSeries[0].year
+    : "—";
+
+
+  const last =
+    selectedSeries.length
+    ? selectedSeries[
+        selectedSeries.length - 1
+      ].year
+    : "—";
 
 
   if(!item){
 
     passportContent.innerHTML = `
 
-      <div class="load-error">
-        Няма методологична информация
-        за избрания показател.
+      <div class="passport-grid">
+
+        <div class="passport-item">
+
+          <span>
+            Мерна единица
+          </span>
+
+          <strong>
+            ${displayUnit(indicator.unit)}
+          </strong>
+
+        </div>
+
+        <div class="passport-item">
+
+          <span>
+            Наличност за избрания сектор
+          </span>
+
+          <strong>
+            ${
+              first
+            }${
+              first !== "—"
+              ? "–" + last
+              : ""
+            }
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="passport-note">
+
+        <strong>
+          Методологична информация
+        </strong>
+
+        <p>
+
+          За този показател
+          няма отделен запис
+          в a21-metadata.json.
+
+        </p>
+
       </div>
 
     `;
+
 
     return;
 
   }
 
 
-  passportShortLabel.textContent =
-    item.label ||
-    "Методология, покритие и официален източник";
-
-
   passportContent.innerHTML = `
 
     <div class="passport-grid">
+
 
       <div class="passport-item">
 
@@ -4490,7 +4862,11 @@ function renderPassport(){
         </span>
 
         <strong>
-          ${item.dimension || "—"}
+          ${
+            item.dimension ||
+            indicator.dimension ||
+            "—"
+          }
         </strong>
 
       </div>
@@ -4503,7 +4879,13 @@ function renderPassport(){
         </span>
 
         <strong>
-          ${item.unit || "—"}
+          ${
+            item.unit ||
+            displayUnit(
+              indicator.unit
+            ) ||
+            "—"
+          }
         </strong>
 
       </div>
@@ -4516,7 +4898,10 @@ function renderPassport(){
         </span>
 
         <strong>
-          ${item.dataset || "—"}
+          ${
+            item.dataset ||
+            "—"
+          }
         </strong>
 
       </div>
@@ -4525,14 +4910,21 @@ function renderPassport(){
       <div class="passport-item">
 
         <span>
-          Покритие
+          Наличност за избрания сектор
         </span>
 
         <strong>
-          ${item.coverage || "—"}
+          ${
+            first
+          }${
+            first !== "—"
+            ? "–" + last
+            : ""
+          }
         </strong>
 
       </div>
+
 
     </div>
 
@@ -4540,16 +4932,25 @@ function renderPassport(){
     <div class="passport-note">
 
       <strong>
-        Методологична бележка
+        Покритие и методологична бележка
       </strong>
 
       <p>
+
+        ${
+          item.coverage
+          ? item.coverage + ". "
+          : ""
+        }
+
         ${
           item.method_note ||
           item.note ||
-          "Няма допълнителна методологична бележка."
+          "Няма допълнителна бележка."
         }
+
       </p>
+
 
       ${
         item.url
@@ -4576,326 +4977,9 @@ function renderPassport(){
 
 
 /* =========================================================
-   EXPLORER
+   TREND
 ========================================================= */
 
-function renderExplorer(){
-
-  if(!dataset){
-    return;
-  }
-
-
-  const section =
-    sectorSelect.value;
-
-
-  const year =
-    Number(
-      yearSelect.value
-    );
-
-
-  const indicator =
-    getIndicator();
-
-
-  const sector =
-    dataset.sectors.find(
-      s =>
-        s.code === section
-    );
-
-
-  const current =
-    getValue(
-      section,
-      year,
-      indicator.code
-    );
-
-
-  const series =
-    dataset.period.map(
-      yearItem => ({
-        year:yearItem,
-        value:
-          getValue(
-            section,
-            yearItem,
-            indicator.code
-          )
-      })
-    );
-
-
-  const valid =
-    series.filter(
-      item =>
-        safeNumber(
-          item.value
-        )
-    );
-
-
-  let absoluteText =
-    "Недостатъчни данни";
-
-
-  let relativeText =
-    "Недостатъчни данни";
-
-
-  let periodText =
-    "—";
-
-
-  if(
-    valid.length >= 2
-  ){
-
-    const first =
-      valid[0];
-
-
-    const last =
-      valid[
-        valid.length - 1
-      ];
-
-
-    absoluteText =
-      signedAbsoluteChange(
-        first.value,
-        last.value,
-        indicator.unit
-      );
-
-
-    const rel =
-      relativeChange(
-        first.value,
-        last.value
-      );
-
-
-    relativeText =
-      rel ===
-      "not-applicable"
-      ? "Неприложимо"
-      : fmtPercent(rel);
-
-
-    periodText =
-      `${first.year} → ${last.year}`;
-
-  }
-
-
-  explorerContent.innerHTML = `
-
-    <div class="selection-title">
-
-      <div class="selection-section">
-        ${section} · ${year}
-      </div>
-
-      <h3>
-        ${sector.name}
-      </h3>
-
-      <p>
-        ${indicator.label}
-      </p>
-
-    </div>
-
-
-    <div class="kpi-grid">
-
-
-      <div class="kpi">
-
-        <span>
-          Стойност
-        </span>
-
-        <strong>
-          ${fmt(current,indicator.unit)}
-        </strong>
-
-        <small>
-          ${year}
-        </small>
-
-      </div>
-
-
-      <div class="kpi">
-
-        <span>
-          Абсолютна промяна
-        </span>
-
-        <strong>
-          ${absoluteText}
-        </strong>
-
-        <small>
-          ${periodText}
-        </small>
-
-      </div>
-
-
-      <div class="kpi">
-
-        <span>
-          Относителна промяна
-        </span>
-
-        <strong>
-          ${relativeText}
-        </strong>
-
-        <small>
-          ${periodText}
-        </small>
-
-      </div>
-
-
-      <div class="kpi">
-
-        <span>
-          Налични години
-        </span>
-
-        <strong>
-          ${valid.length}/${dataset.period.length}
-        </strong>
-
-        <small>
-
-          ${
-            valid.length
-            ? valid
-                .map(
-                  item =>
-                    item.year
-                )
-                .join(", ")
-            : "Няма данни"
-          }
-
-        </small>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="visual-grid">
-
-
-      <div class="chart-card">
-
-        <div class="chart-head">
-
-          <strong>
-            Динамика във времето
-          </strong>
-
-          <span>
-            ${indicator.label}
-          </span>
-
-        </div>
-
-        ${
-          trendSvg(
-            series,
-            indicator
-          )
-        }
-
-      </div>
-
-
-      <div class="chart-card">
-
-        <div class="chart-head">
-
-          <strong>
-            Сравнение между секторите · ${year}
-          </strong>
-
-          <span>
-            Показват се само наличните стойности
-          </span>
-
-        </div>
-
-        ${
-          comparisonHtml(
-            indicator.code,
-            year,
-            indicator
-          )
-        }
-
-      </div>
-
-
-    </div>
-
-
-    <div class="metric-panel">
-
-
-      <div class="metric-panel-head">
-
-        <h4>
-          Пълен секторен профил · ${year}
-        </h4>
-
-        <span>
-          ${dataset.indicators.length} показателя
-        </span>
-
-      </div>
-
-
-      <div class="metric-groups">
-
-        ${
-          metricsHtml(
-            getRecord(
-              section,
-              year
-            )
-          )
-        }
-
-      </div>
-
-
-    </div>
-
-  `;
-
-
-  renderPassport();
-
-  renderYearComparison();
-
-}
-
-
-/* =========================================================
-   TREND SVG
-========================================================= */
 
 function trendSvg(
   series,
@@ -4929,16 +5013,32 @@ function trendSvg(
   }
 
 
-  const W = 560;
-  const H = 280;
+  const W = 640;
+  const H = 290;
 
-  const L = 52;
-  const R = 20;
-  const T = 22;
+  const L = 58;
+  const R = 22;
+  const T = 20;
   const B = 42;
 
 
-  const values =
+  const years =
+    dataset.period;
+
+
+  const minYear =
+    Math.min(
+      ...years
+    );
+
+
+  const maxYear =
+    Math.max(
+      ...years
+    );
+
+
+  const vals =
     valid.map(
       x =>
         x.value
@@ -4947,17 +5047,19 @@ function trendSvg(
 
   let min =
     Math.min(
-      ...values
+      ...vals
     );
 
 
   let max =
     Math.max(
-      ...values
+      ...vals
     );
 
 
-  if(min === max){
+  if(
+    min === max
+  ){
 
     min -= 1;
     max += 1;
@@ -4970,79 +5072,146 @@ function trendSvg(
       max -
       min
     ) *
-    .10;
+    .1;
 
 
   min -= pad;
   max += pad;
 
 
-  const firstYear =
-    Math.min(
-      ...dataset.period
-    );
-
-
-  const lastYear =
-    Math.max(
-      ...dataset.period
-    );
-
-
-  function x(year){
-
-    const span =
-      lastYear -
-      firstYear ||
-      1;
-
-
-    return (
+  const xs =
+    year =>
       L +
       (
-        year -
-        firstYear
-      ) /
-      span *
+        (
+          year -
+          minYear
+        ) /
+        (
+          maxYear -
+          minYear ||
+          1
+        )
+      ) *
       (
         W -
         L -
         R
-      )
-    );
-
-  }
+      );
 
 
-  function y(value){
-
-    return (
+  const ys =
+    value =>
       T +
       (
-        max -
-        value
-      ) /
-      (
-        max -
-        min
+        (
+          max -
+          value
+        ) /
+        (
+          max -
+          min
+        )
       ) *
       (
         H -
         T -
         B
+      );
+
+
+  const validMap =
+    new Map(
+      valid.map(
+        v => [
+          v.year,
+          v.value
+        ]
       )
+    );
+
+
+  /*
+    Важното тук:
+    линията се прекъсва при липсваща година.
+    Не свързваме изкуствено 2014 с 2017.
+  */
+
+  const segments = [];
+
+  let current = [];
+
+
+  for(
+    const year
+    of years
+  ){
+
+    if(
+      validMap.has(year)
+    ){
+
+      current.push({
+        year,
+        value:
+          validMap.get(year)
+      });
+
+    }
+    else if(
+      current.length
+    ){
+
+      segments.push(
+        current
+      );
+
+      current = [];
+
+    }
+
+  }
+
+
+  if(
+    current.length
+  ){
+
+    segments.push(
+      current
     );
 
   }
 
 
-  const polyline =
-    valid
-      .map(
-        p =>
-          `${x(p.year)},${y(p.value)}`
+  const paths =
+    segments
+      .filter(
+        segment =>
+          segment.length >= 2
       )
-      .join(" ");
+      .map(
+        segment => `
+
+          <polyline
+            points="${
+              segment
+                .map(
+                  p =>
+                    `${xs(p.year)},${ys(p.value)}`
+                )
+                .join(" ")
+            }"
+            fill="none"
+            stroke="#28a9c7"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+
+        `
+      )
+      .join("");
 
 
   const dots =
@@ -5051,11 +5220,11 @@ function trendSvg(
         p => `
 
           <circle
-            cx="${x(p.year)}"
-            cy="${y(p.value)}"
-            r="5"
+            cx="${xs(p.year)}"
+            cy="${ys(p.value)}"
+            r="4.6"
             fill="#2457c5"
-            stroke="white"
+            stroke="#fff"
             stroke-width="2"
           >
 
@@ -5070,16 +5239,26 @@ function trendSvg(
       .join("");
 
 
+  const labelYears =
+    years.filter(
+      (year,index) =>
+        years.length <= 10 ||
+        index % 2 === 0 ||
+        index ===
+        years.length - 1
+    );
+
+
   const labels =
-    dataset.period
+    labelYears
       .map(
         year => `
 
           <text
-            x="${x(year)}"
-            y="${H-13}"
+            x="${xs(year)}"
+            y="${H-12}"
             text-anchor="middle"
-            font-size="9"
+            font-size="8"
             fill="#8295a3"
           >
             ${year}
@@ -5090,28 +5269,87 @@ function trendSvg(
       .join("");
 
 
+  const grid =
+    [0,1,2,3]
+      .map(
+        i => {
+
+          const yy =
+            T +
+            i *
+            (
+              H -
+              T -
+              B
+            ) /
+            3;
+
+
+          const value =
+            max -
+            i *
+            (
+              max -
+              min
+            ) /
+            3;
+
+
+          return `
+
+            <line
+              x1="${L}"
+              y1="${yy}"
+              x2="${W-R}"
+              y2="${yy}"
+              stroke="#edf2f5"
+            />
+
+            <text
+              x="${L-8}"
+              y="${yy+3}"
+              text-anchor="end"
+              font-size="8"
+              fill="#8798a5"
+            >
+              ${
+                new Intl.NumberFormat(
+                  "bg-BG",
+                  {
+                    maximumFractionDigits:1
+                  }
+                ).format(value)
+              }
+            </text>
+
+          `;
+
+        }
+      )
+      .join("");
+
+
   return `
 
     <div class="svg-wrap">
 
-      <svg viewBox="0 0 ${W} ${H}">
+      <svg
+        viewBox="0 0 ${W} ${H}"
+        role="img"
+        aria-label="Динамика на показателя"
+      >
+
+        ${grid}
 
         <line
           x1="${L}"
           y1="${H-B}"
           x2="${W-R}"
           y2="${H-B}"
-          stroke="#d5e0e6"
+          stroke="#ccd9e1"
         />
 
-        <polyline
-          points="${polyline}"
-          fill="none"
-          stroke="#28a9c7"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+        ${paths}
 
         ${dots}
 
@@ -5129,6 +5367,7 @@ function trendSvg(
 /* =========================================================
    SECTOR COMPARISON
 ========================================================= */
+
 
 function comparisonHtml(
   code,
@@ -5173,7 +5412,8 @@ function comparisonHtml(
 
       <div class="empty-chart">
 
-        Няма налични стойности
+        Няма налични
+        секторни стойности
         за избраната година.
 
       </div>
@@ -5187,8 +5427,11 @@ function comparisonHtml(
     Math.max(
       ...values.map(
         x =>
-          x.value
-      )
+          Math.abs(
+            x.value
+          )
+      ),
+      0
     );
 
 
@@ -5222,7 +5465,9 @@ function comparisonHtml(
                       max === 0
                       ? 0
                       : (
-                          item.value /
+                          Math.abs(
+                            item.value
+                          ) /
                           max *
                           100
                         )
@@ -5258,8 +5503,9 @@ function comparisonHtml(
 
 
 /* =========================================================
-   METRIC PROFILE
+   FULL PROFILE
 ========================================================= */
+
 
 function metricsHtml(record){
 
@@ -5291,7 +5537,9 @@ function metricsHtml(record){
           "Други показатели";
 
 
-        if(!groups[group]){
+        if(
+          !groups[group]
+        ){
 
           groups[group] = [];
 
@@ -5300,11 +5548,10 @@ function metricsHtml(record){
 
         groups[group].push({
 
-          indicator:
-            indicator,
+          indicator,
 
           value:
-            record.values[
+            record.values?.[
               indicator.code
             ]
 
@@ -5334,9 +5581,7 @@ function metricsHtml(record){
                     <div class="metric-card">
 
                       <div class="metric-name">
-
                         ${item.indicator.label}
-
                       </div>
 
                       <div
@@ -5384,10 +5629,11 @@ function metricsHtml(record){
 
 
 /* =========================================================
-   YEAR COMPARISON
+   EXPLORER RENDER
 ========================================================= */
 
-function renderYearComparison(){
+
+function renderExplorer(){
 
   if(!dataset){
     return;
@@ -5398,155 +5644,446 @@ function renderYearComparison(){
     sectorSelect.value;
 
 
+  const year =
+    Number(
+      yearSelect.value
+    );
+
+
   const indicator =
     getIndicator();
 
 
-  const baseYear =
-    Number(
-      baseYearSelect.value
-    );
-
-
-  const compareYear =
-    Number(
-      compareYearSelect.value
-    );
-
-
-  const base =
-    getValue(
-      section,
-      baseYear,
-      indicator.code
-    );
-
-
-  const compare =
-    getValue(
-      section,
-      compareYear,
-      indicator.code
-    );
-
-
-  const absolute =
-    signedAbsoluteChange(
-      base,
-      compare,
-      indicator.unit
-    );
-
-
-  const relative =
-    relativeChange(
-      base,
-      compare
-    );
-
-
   const sector =
-    dataset.sectors.find(
-      s =>
-        s.code === section
+    getSector(section);
+
+
+  const current =
+    getValue(
+      section,
+      year,
+      indicator.code
     );
 
 
-  yearCompareContent.innerHTML = `
+  const series =
+    seriesFor(
+      section,
+      indicator.code
+    );
 
-    <div class="compare-heading">
 
-      <span>
-        ${baseYear} → ${compareYear}
-      </span>
+  const valid =
+    series.filter(
+      x =>
+        safeNumber(
+          x.value
+        )
+    );
+
+
+  let absoluteText =
+    "Недостатъчни данни";
+
+
+  let relativeText =
+    "Недостатъчни данни";
+
+
+  let periodText =
+    "—";
+
+
+  if(
+    valid.length >= 2
+  ){
+
+    const first =
+      valid[0];
+
+
+    const last =
+      valid[
+        valid.length - 1
+      ];
+
+
+    const rel =
+      relativeChange(
+        first.value,
+        last.value
+      );
+
+
+    absoluteText =
+      signedAbsoluteChange(
+        first.value,
+        last.value,
+        indicator.unit
+      );
+
+
+    relativeText =
+      rel ===
+      "not-applicable"
+      ? "Неприложимо"
+      : fmtPercent(rel);
+
+
+    periodText =
+      `${first.year} → ${last.year}`;
+
+  }
+
+
+  const phase =
+    year < 2020
+    ? "Историческа серия 2010–2019"
+    : "Текущ панел 2020–2025";
+
+
+  explorerContent.innerHTML = `
+
+    <div class="selection-title">
+
+      <div class="selection-section">
+        ${section} · ${year}
+      </div>
 
       <h3>
-        ${indicator.label}
+        ${sector.name}
       </h3>
 
       <p>
-        ${sector.name}
+        ${indicator.label}
       </p>
+
+      <span class="phase-badge">
+        ${phase}
+      </span>
 
     </div>
 
 
-    <div class="compare-kpis">
+    <div class="kpi-grid">
 
 
-      <div class="compare-kpi">
+      <div class="kpi">
 
-        <div class="compare-kpi-label">
+        <span>
+          Стойност
+        </span>
+
+        <strong>
+          ${fmt(current,indicator.unit)}
+        </strong>
+
+        <small>
+          ${year}
+        </small>
+
+      </div>
+
+
+      <div class="kpi">
+
+        <span>
+          Промяна за наличния период
+        </span>
+
+        <strong>
+          ${absoluteText}
+        </strong>
+
+        <small>
+          ${periodText}
+        </small>
+
+      </div>
+
+
+      <div class="kpi">
+
+        <span>
+          Относителна промяна
+        </span>
+
+        <strong>
+          ${relativeText}
+        </strong>
+
+        <small>
+          ${periodText}
+        </small>
+
+      </div>
+
+
+      <div class="kpi">
+
+        <span>
+          Налични години
+        </span>
+
+        <strong>
+          ${valid.length}/${dataset.period.length}
+        </strong>
+
+        <small>
+
+          ${
+            valid.length
+            ? valid
+                .map(
+                  x =>
+                    x.year
+                )
+                .join(", ")
+            : "Няма данни"
+          }
+
+        </small>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="visual-grid">
+
+
+      <div class="chart-card">
+
+        <div class="chart-head">
+
+          <strong>
+            Динамика
+            ${dataset.period[0]}
+            –
+            ${
+              dataset.period[
+                dataset.period.length - 1
+              ]
+            }
+          </strong>
+
+          <span>
+            ${indicator.label}
+            · празнините не се интерполират
+          </span>
+
+        </div>
+
+        ${
+          trendSvg(
+            series,
+            indicator
+          )
+        }
+
+      </div>
+
+
+      <div class="chart-card">
+
+        <div class="chart-head">
+
+          <strong>
+            Сравнение между секторите · ${year}
+          </strong>
+
+          <span>
+            Само сектори
+            с публикувана стойност
+          </span>
+
+        </div>
+
+        ${
+          comparisonHtml(
+            indicator.code,
+            year,
+            indicator
+          )
+        }
+
+      </div>
+
+
+    </div>
+
+
+    <div class="metric-panel">
+
+      <div class="metric-panel-head">
+
+        <h4>
+          Пълен секторен профил · ${year}
+        </h4>
+
+        <span>
+          ${dataset.indicators.length}
+          показателя · NA остава NA
+        </span>
+
+      </div>
+
+
+      <div class="metric-groups">
+
+        ${
+          metricsHtml(
+            getRecord(
+              section,
+              year
+            )
+          )
+        }
+
+      </div>
+
+    </div>
+
+  `;
+
+
+  renderPassport();
+
+  renderYearComparison();
+
+}
+
+
+/* =========================================================
+   YEAR BARS
+========================================================= */
+
+
+function yearBarsHtml(
+  baseYear,
+  compareYear,
+  base,
+  compare,
+  indicator
+){
+
+  const values =
+    [
+      base,
+      compare
+    ]
+    .filter(
+      safeNumber
+    );
+
+
+  if(
+    !values.length
+  ){
+
+    return `
+
+      <div class="empty-chart">
+
+        Няма публикувани стойности
+        за избраните години.
+
+      </div>
+
+    `;
+
+  }
+
+
+  const max =
+    Math.max(
+      ...values.map(
+        Math.abs
+      ),
+      0
+    );
+
+
+  const width =
+    value =>
+      !safeNumber(value) ||
+      max === 0
+      ? 0
+      : (
+          Math.abs(value) /
+          max *
+          100
+        );
+
+
+  return `
+
+    <div class="year-bars">
+
+      <div class="year-bars-title">
+
+        <strong>
+          Визуално сравнение
+        </strong>
+
+        <span>
+          ${indicator.label}
+        </span>
+
+      </div>
+
+
+      <div class="year-bar-row">
+
+        <div class="year-bar-year">
           ${baseYear}
         </div>
 
-        <strong>
+        <div class="year-bar-track">
+
+          <div
+            class="year-bar-fill"
+            style="
+              width:${width(base)}%;
+            "
+          >
+          </div>
+
+        </div>
+
+        <div class="year-bar-value">
           ${fmt(base,indicator.unit)}
-        </strong>
+        </div>
 
       </div>
 
 
-      <div class="compare-kpi">
+      <div class="year-bar-row">
 
-        <div class="compare-kpi-label">
+        <div class="year-bar-year">
           ${compareYear}
         </div>
 
-        <strong>
+        <div class="year-bar-track">
+
+          <div
+            class="year-bar-fill"
+            style="
+              width:${width(compare)}%;
+            "
+          >
+          </div>
+
+        </div>
+
+        <div class="year-bar-value">
           ${fmt(compare,indicator.unit)}
-        </strong>
-
-      </div>
-
-
-      <div class="compare-kpi">
-
-        <div class="compare-kpi-label">
-          Абсолютна промяна
         </div>
 
-        <strong>
-          ${absolute}
-        </strong>
-
       </div>
-
-
-      <div class="compare-kpi">
-
-        <div class="compare-kpi-label">
-          Относителна промяна
-        </div>
-
-        <strong>
-
-          ${
-            relative === null
-            ? "Няма данни"
-            : (
-                relative ===
-                "not-applicable"
-                ? "Неприложимо"
-                : fmtPercent(relative)
-              )
-          }
-
-        </strong>
-
-      </div>
-
 
     </div>
-
-
-    ${
-      allIndicatorsComparisonTable(
-        section,
-        baseYear,
-        compareYear
-      )
-    }
 
   `;
 
@@ -5554,8 +6091,9 @@ function renderYearComparison(){
 
 
 /* =========================================================
-   ALL INDICATORS TABLE
+   ALL INDICATORS YEAR COMPARISON
 ========================================================= */
+
 
 function allIndicatorsComparisonTable(
   section,
@@ -5605,7 +6143,7 @@ function allIndicatorsComparisonTable(
               .map(
                 indicator => {
 
-                  const base =
+                  const a =
                     getValue(
                       section,
                       baseYear,
@@ -5613,7 +6151,7 @@ function allIndicatorsComparisonTable(
                     );
 
 
-                  const compare =
+                  const b =
                     getValue(
                       section,
                       compareYear,
@@ -5623,9 +6161,24 @@ function allIndicatorsComparisonTable(
 
                   const rel =
                     relativeChange(
-                      base,
-                      compare
+                      a,
+                      b
                     );
+
+
+                  const cssClass =
+                    safeNumber(a) &&
+                    safeNumber(b)
+                    ? (
+                        b > a
+                        ? "delta-positive"
+                        : (
+                            b < a
+                            ? "delta-negative"
+                            : ""
+                          )
+                      )
+                    : "na-cell";
 
 
                   return `
@@ -5637,26 +6190,26 @@ function allIndicatorsComparisonTable(
                       </td>
 
                       <td>
-                        ${fmt(base,indicator.unit)}
+                        ${fmt(a,indicator.unit)}
                       </td>
 
                       <td>
-                        ${fmt(compare,indicator.unit)}
+                        ${fmt(b,indicator.unit)}
                       </td>
 
-                      <td>
+                      <td class="${cssClass}">
 
                         ${
                           signedAbsoluteChange(
-                            base,
-                            compare,
+                            a,
+                            b,
                             indicator.unit
                           )
                         }
 
                       </td>
 
-                      <td>
+                      <td class="${cssClass}">
 
                         ${
                           rel === null
@@ -5692,18 +6245,220 @@ function allIndicatorsComparisonTable(
 
 
 /* =========================================================
+   YEAR COMPARISON RENDER
+========================================================= */
+
+
+function renderYearComparison(){
+
+  if(!dataset){
+    return;
+  }
+
+
+  const section =
+    sectorSelect.value;
+
+
+  const indicator =
+    getIndicator();
+
+
+  const baseYear =
+    Number(
+      baseYearSelect.value
+    );
+
+
+  const compareYear =
+    Number(
+      compareYearSelect.value
+    );
+
+
+  const base =
+    getValue(
+      section,
+      baseYear,
+      indicator.code
+    );
+
+
+  const compare =
+    getValue(
+      section,
+      compareYear,
+      indicator.code
+    );
+
+
+  const rel =
+    relativeChange(
+      base,
+      compare
+    );
+
+
+  const cssClass =
+    changeClass(
+      base,
+      compare
+    );
+
+
+  const sector =
+    getSector(section);
+
+
+  yearCompareContent.innerHTML = `
+
+    <div class="compare-heading">
+
+      <span>
+        ${baseYear} → ${compareYear}
+      </span>
+
+      <h3>
+        ${indicator.label}
+      </h3>
+
+      <p>
+        ${section} · ${sector.name}
+      </p>
+
+    </div>
+
+
+    <div class="compare-kpis">
+
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          ${baseYear}
+        </div>
+
+        <strong>
+          ${fmt(base,indicator.unit)}
+        </strong>
+
+      </div>
+
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          ${compareYear}
+        </div>
+
+        <strong>
+          ${fmt(compare,indicator.unit)}
+        </strong>
+
+      </div>
+
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          Абсолютна промяна
+        </div>
+
+        <strong class="${cssClass}">
+
+          ${
+            signedAbsoluteChange(
+              base,
+              compare,
+              indicator.unit
+            )
+          }
+
+        </strong>
+
+      </div>
+
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          Относителна промяна
+        </div>
+
+        <strong class="${cssClass}">
+
+          ${
+            rel === null
+            ? "Няма данни"
+            : (
+                rel ===
+                "not-applicable"
+                ? "Неприложимо"
+                : fmtPercent(rel)
+              )
+          }
+
+        </strong>
+
+      </div>
+
+
+    </div>
+
+
+    ${
+      yearBarsHtml(
+        baseYear,
+        compareYear,
+        base,
+        compare,
+        indicator
+      )
+    }
+
+
+    <div class="metric-panel-head">
+
+      <h4>
+        Сравнение на всички
+        ${dataset.indicators.length}
+        показателя
+      </h4>
+
+      <span>
+        ${baseYear} → ${compareYear}
+      </span>
+
+    </div>
+
+
+    ${
+      allIndicatorsComparisonTable(
+        section,
+        baseYear,
+        compareYear
+      )
+    }
+
+  `;
+
+}
+
+
+/* =========================================================
    STATISTICS
 ========================================================= */
 
-function mean(values){
+
+function mean(array){
 
   return (
-    values.reduce(
-      (sum,value) =>
-        sum + value,
+    array.reduce(
+      (a,b) =>
+        a + b,
       0
     ) /
-    values.length
+    array.length
   );
 
 }
@@ -5715,7 +6470,9 @@ function regressionStats(points){
     points.length;
 
 
-  if(n < 3){
+  if(
+    n < 3
+  ){
     return null;
   }
 
@@ -5839,9 +6596,9 @@ function regressionStats(points){
   return {
     n,
     r,
-    r2,
     slope,
     intercept,
+    r2,
     p
   };
 
@@ -5849,8 +6606,9 @@ function regressionStats(points){
 
 
 /* =========================================================
-   T DISTRIBUTION
+   STUDENT T DISTRIBUTION
 ========================================================= */
+
 
 function logGamma(z){
 
@@ -5866,7 +6624,9 @@ function logGamma(z){
   ];
 
 
-  if(z < .5){
+  if(
+    z < .5
+  ){
 
     return (
       Math.log(Math.PI) -
@@ -6142,12 +6902,16 @@ function regularizedBeta(
   b
 ){
 
-  if(x <= 0){
+  if(
+    x <= 0
+  ){
     return 0;
   }
 
 
-  if(x >= 1){
+  if(
+    x >= 1
+  ){
     return 1;
   }
 
@@ -6170,7 +6934,7 @@ function regularizedBeta(
     );
 
 
-  if(
+  return (
     x <
     (
       a +
@@ -6181,31 +6945,26 @@ function regularizedBeta(
       b +
       2
     )
-  ){
-
-    return (
-      bt *
-      betaCF(
-        a,
-        b,
-        x
-      ) /
-      a
-    );
-
-  }
-
-
-  return (
-    1 -
-    bt *
-    betaCF(
-      b,
-      a,
-      1 -
-      x
-    ) /
-    b
+    ? (
+        bt *
+        betaCF(
+          a,
+          b,
+          x
+        ) /
+        a
+      )
+    : (
+        1 -
+        bt *
+        betaCF(
+          b,
+          a,
+          1 -
+          x
+        ) /
+        b
+      )
   );
 
 }
@@ -6223,7 +6982,9 @@ function twoTailedTPValue(
   }
 
 
-  if(df <= 0){
+  if(
+    df <= 0
+  ){
     return NaN;
   }
 
@@ -6255,7 +7016,9 @@ function formatPValue(p){
   }
 
 
-  if(p < .001){
+  if(
+    p < .001
+  ){
     return "< 0,001";
   }
 
@@ -6271,9 +7034,37 @@ function formatPValue(p){
 }
 
 
+function correlationStrength(r){
+
+  const a =
+    Math.abs(r);
+
+
+  return (
+    a < .2
+    ? "много слаба"
+    : (
+        a < .4
+        ? "слаба"
+        : (
+            a < .6
+            ? "умерена"
+            : (
+                a < .8
+                ? "силна"
+                : "много силна"
+              )
+          )
+      )
+  );
+
+}
+
+
 /* =========================================================
-   DEPENDENCY POINTS
+   DEPENDENCY OBSERVATIONS
 ========================================================= */
+
 
 function dependencyPoints(){
 
@@ -6354,21 +7145,20 @@ function dependencyPoints(){
     mode === "changes"
   ){
 
-    const baseYear =
+    const base =
       Number(
         changeBaseYear.value
       );
 
 
-    const compareYear =
+    const compare =
       Number(
         changeCompareYear.value
       );
 
 
     if(
-      baseYear ===
-      compareYear
+      base === compare
     ){
       return [];
     }
@@ -6381,7 +7171,7 @@ function dependencyPoints(){
           const xa =
             getValue(
               sector.code,
-              baseYear,
+              base,
               xCode
             );
 
@@ -6389,7 +7179,7 @@ function dependencyPoints(){
           const xb =
             getValue(
               sector.code,
-              compareYear,
+              compare,
               xCode
             );
 
@@ -6397,7 +7187,7 @@ function dependencyPoints(){
           const ya =
             getValue(
               sector.code,
-              baseYear,
+              base,
               yCode
             );
 
@@ -6405,7 +7195,7 @@ function dependencyPoints(){
           const yb =
             getValue(
               sector.code,
-              compareYear,
+              compare,
               yCode
             );
 
@@ -6534,436 +7324,9 @@ function dependencyPoints(){
 
 
 /* =========================================================
-   DEPENDENCY RENDER
-========================================================= */
-
-function renderDependency(){
-
-  if(!dataset){
-    return;
-  }
-
-
-  const mode =
-    dependencyMode.value;
-
-
-  levelsControls
-    .classList
-    .toggle(
-      "hidden",
-      mode !== "levels"
-    );
-
-
-  changesControls
-    .classList
-    .toggle(
-      "hidden",
-      mode !== "changes"
-    );
-
-
-  lagControls
-    .classList
-    .toggle(
-      "hidden",
-      mode !== "lag"
-    );
-
-
-  if(
-    xIndicatorSelect.value ===
-    yIndicatorSelect.value
-  ){
-
-    dependencyContent.innerHTML = `
-
-      <div class="coverage-box">
-
-        <div class="coverage-icon">
-          !
-        </div>
-
-        <div>
-
-          <h4>
-            Избери две различни променливи
-          </h4>
-
-          <p>
-            X и Y не трябва
-            да бъдат един и същ показател.
-          </p>
-
-        </div>
-
-      </div>
-
-    `;
-
-    return;
-
-  }
-
-
-  const points =
-    dependencyPoints();
-
-
-  const stats =
-    regressionStats(
-      points
-    );
-
-
-  if(
-    points.length < 5 ||
-    !stats
-  ){
-
-    dependencyContent.innerHTML = `
-
-      <div class="coverage-box">
-
-        <div class="coverage-icon">
-          n
-        </div>
-
-        <div>
-
-          <h4>
-            Недостатъчно съвместни наблюдения
-          </h4>
-
-          <p>
-
-            Налични са
-            ${points.length}
-            валидни секторни двойки.
-            Анализът се показва
-            при минимум пет наблюдения
-            и наличие на вариация
-            в двете променливи.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    `;
-
-    return;
-
-  }
-
-
-  const xIndicator =
-    getIndicatorByCode(
-      xIndicatorSelect.value
-    );
-
-
-  const yIndicator =
-    getIndicatorByCode(
-      yIndicatorSelect.value
-    );
-
-
-  const significance =
-    stats.p < .05
-    ? "Да"
-    : "Не";
-
-
-  dependencyContent.innerHTML = `
-
-    <div class="dependency-intro">
-
-      <span>
-        Статистически модел
-      </span>
-
-      <h3>
-        ${xIndicator.label}
-        →
-        ${yIndicator.label}
-      </h3>
-
-      <p>
-        Всяко наблюдение
-        представлява един икономически сектор.
-      </p>
-
-    </div>
-
-
-    <div class="stat-grid">
-
-
-      <div class="stat-card">
-
-        <span>
-          Наблюдения
-        </span>
-
-        <strong>
-          n = ${stats.n}
-        </strong>
-
-        <small>
-          валидни секторни двойки
-        </small>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <span>
-          Pearson r
-        </span>
-
-        <strong>
-          ${fmtStat(stats.r)}
-        </strong>
-
-        <small>
-          посока и сила
-        </small>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <span>
-          R²
-        </span>
-
-        <strong>
-          ${fmtStat(stats.r2)}
-        </strong>
-
-        <small>
-          ${
-            fmtStat(
-              stats.r2 *
-              100,
-              1
-            )
-          }% обяснена вариация
-        </small>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <span>
-          Коефициент b
-        </span>
-
-        <strong>
-          ${fmtStat(stats.slope)}
-        </strong>
-
-        <small>
-          промяна в Y при +1 X
-        </small>
-
-      </div>
-
-
-      <div class="stat-card">
-
-        <span>
-          p-value
-        </span>
-
-        <strong>
-          ${formatPValue(stats.p)}
-        </strong>
-
-        <small>
-          Значима при α=0,05: ${significance}
-        </small>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="regression-summary">
-
-
-      <div class="equation-box">
-
-        <span>
-          Регресионно уравнение
-        </span>
-
-        <strong>
-
-          Y =
-          ${fmtStat(stats.intercept)}
-          ${
-            stats.slope >= 0
-            ? "+"
-            : "−"
-          }
-          ${fmtStat(Math.abs(stats.slope))}
-          × X
-
-        </strong>
-
-      </div>
-
-
-      <div class="interpretation-box">
-
-        <span>
-          Интерпретация
-        </span>
-
-        <p>
-
-          Наблюдаваната линейна връзка е
-          ${
-            stats.r >= 0
-            ? "положителна"
-            : "отрицателна"
-          }.
-          R² показва
-          каква част от секторната вариация
-          на зависимата променлива
-          е статистически свързана
-          с X в простия линеен модел.
-
-        </p>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="dependency-visual-grid">
-
-
-      <div class="scatter-card">
-
-        <h4>
-          Scatter plot и регресионна линия
-        </h4>
-
-        <p>
-          Всеки маркер представлява
-          един икономически сектор.
-        </p>
-
-        ${
-          scatterSvg(
-            points,
-            stats
-          )
-        }
-
-      </div>
-
-
-      <div class="observation-card">
-
-        <h4>
-          Секторни наблюдения
-        </h4>
-
-        <p>
-          Стойностите,
-          използвани в анализа.
-        </p>
-
-        <div class="observation-scroll">
-
-          <table class="observation-table">
-
-            <thead>
-
-              <tr>
-
-                <th>
-                  Сектор
-                </th>
-
-                <th>
-                  X
-                </th>
-
-                <th>
-                  Y
-                </th>
-
-              </tr>
-
-            </thead>
-
-
-            <tbody>
-
-              ${
-                points
-                  .slice()
-                  .sort(
-                    (a,b) =>
-                      a.code.localeCompare(
-                        b.code
-                      )
-                  )
-                  .map(
-                    p => `
-
-                      <tr>
-
-                        <td title="${p.name}">
-                          ${p.code}
-                        </td>
-
-                        <td>
-                          ${fmtStat(p.x,2)}
-                        </td>
-
-                        <td>
-                          ${fmtStat(p.y,2)}
-                        </td>
-
-                      </tr>
-
-                    `
-                  )
-                  .join("")
-              }
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  `;
-
-}
-
-
-/* =========================================================
    SCATTER
 ========================================================= */
+
 
 function scatterSvg(
   points,
@@ -6971,12 +7334,12 @@ function scatterSvg(
 ){
 
   const W = 650;
-  const H = 340;
+  const H = 350;
 
-  const L = 55;
+  const L = 60;
   const R = 25;
   const T = 25;
-  const B = 45;
+  const B = 48;
 
 
   let xmin =
@@ -7088,11 +7451,107 @@ function scatterSvg(
     xmax;
 
 
+  const grid =
+    [0,1,2,3,4]
+      .map(
+        i => {
+
+          const gx =
+            L +
+            i *
+            (
+              W -
+              L -
+              R
+            ) /
+            4;
+
+
+          const gy =
+            T +
+            i *
+            (
+              H -
+              T -
+              B
+            ) /
+            4;
+
+
+          const xv =
+            xmin +
+            i *
+            (
+              xmax -
+              xmin
+            ) /
+            4;
+
+
+          const yv =
+            ymax -
+            i *
+            (
+              ymax -
+              ymin
+            ) /
+            4;
+
+
+          return `
+
+            <line
+              x1="${gx}"
+              y1="${T}"
+              x2="${gx}"
+              y2="${H-B}"
+              stroke="#edf2f5"
+            />
+
+            <line
+              x1="${L}"
+              y1="${gy}"
+              x2="${W-R}"
+              y2="${gy}"
+              stroke="#edf2f5"
+            />
+
+            <text
+              x="${gx}"
+              y="${H-B+18}"
+              text-anchor="middle"
+              font-size="8"
+              fill="#8798a5"
+            >
+              ${fmtStat(xv,1)}
+            </text>
+
+            <text
+              x="${L-8}"
+              y="${gy+3}"
+              text-anchor="end"
+              font-size="8"
+              fill="#8798a5"
+            >
+              ${fmtStat(yv,1)}
+            </text>
+
+          `;
+
+        }
+      )
+      .join("");
+
+
   return `
 
     <div class="svg-wrap">
 
-      <svg viewBox="0 0 ${W} ${H}">
+      <svg
+        viewBox="0 0 ${W} ${H}"
+      >
+
+        ${grid}
 
 
         <line
@@ -7133,7 +7592,7 @@ function scatterSvg(
                 cy="${ys(p.y)}"
                 r="5"
                 fill="#2457c5"
-                stroke="white"
+                stroke="#fff"
                 stroke-width="2"
               >
 
@@ -7170,8 +7629,506 @@ function scatterSvg(
 
 
 /* =========================================================
-   HISTORY HELPERS
+   DEPENDENCY RENDER
 ========================================================= */
+
+
+function renderDependency(){
+
+  if(!dataset){
+    return;
+  }
+
+
+  const mode =
+    dependencyMode.value;
+
+
+  levelsControls
+    .classList
+    .toggle(
+      "hidden",
+      mode !== "levels"
+    );
+
+
+  changesControls
+    .classList
+    .toggle(
+      "hidden",
+      mode !== "changes"
+    );
+
+
+  lagControls
+    .classList
+    .toggle(
+      "hidden",
+      mode !== "lag"
+    );
+
+
+  if(
+    xIndicatorSelect.value ===
+    yIndicatorSelect.value
+  ){
+
+    dependencyContent.innerHTML = `
+
+      <div class="coverage-box">
+
+        <div class="coverage-icon">
+          !
+        </div>
+
+        <div>
+
+          <h4>
+            Избери две различни променливи
+          </h4>
+
+          <p>
+
+            X и Y
+            не трябва да бъдат
+            един и същ показател.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  if(
+    mode === "changes" &&
+    changeBaseYear.value ===
+    changeCompareYear.value
+  ){
+
+    dependencyContent.innerHTML = `
+
+      <div class="coverage-box">
+
+        <div class="coverage-icon">
+          !
+        </div>
+
+        <div>
+
+          <h4>
+            Избери две различни години
+          </h4>
+
+          <p>
+
+            Изменението
+            между една и съща година
+            е нулево
+            и анализът няма смисъл.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  const points =
+    dependencyPoints();
+
+
+  const stats =
+    regressionStats(
+      points
+    );
+
+
+  if(
+    points.length < 5 ||
+    !stats
+  ){
+
+    dependencyContent.innerHTML = `
+
+      <div class="coverage-box">
+
+        <div class="coverage-icon">
+          n
+        </div>
+
+        <div>
+
+          <h4>
+            Недостатъчно съвместни наблюдения
+          </h4>
+
+          <p>
+
+            Налични са
+            ${points.length}
+            валидни секторни двойки.
+            Резултатът се показва
+            при минимум пет наблюдения
+            и достатъчна вариация
+            в X и Y.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  const xIndicator =
+    getIndicatorByCode(
+      xIndicatorSelect.value
+    );
+
+
+  const yIndicator =
+    getIndicatorByCode(
+      yIndicatorSelect.value
+    );
+
+
+  const strength =
+    correlationStrength(
+      stats.r
+    );
+
+
+  const direction =
+    stats.r >= 0
+    ? "положителна"
+    : "отрицателна";
+
+
+  const significance =
+    stats.p < .05
+    ? "статистически значима при α = 0,05"
+    : "статистически незначима при α = 0,05";
+
+
+  dependencyContent.innerHTML = `
+
+    <div class="dependency-intro">
+
+      <span>
+        Статистически модел
+      </span>
+
+      <h3>
+        ${xIndicator.label}
+        →
+        ${yIndicator.label}
+      </h3>
+
+      <p>
+
+        ${
+          strength
+            .charAt(0)
+            .toUpperCase() +
+          strength.slice(1)
+        }
+        ${direction}
+        линейна зависимост;
+        ${significance}.
+
+      </p>
+
+    </div>
+
+
+    <div class="stat-grid">
+
+
+      <div class="stat-card">
+
+        <span>
+          Наблюдения
+        </span>
+
+        <strong>
+          n = ${stats.n}
+        </strong>
+
+        <small>
+          валидни секторни двойки
+        </small>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <span>
+          Pearson r
+        </span>
+
+        <strong>
+          ${fmtStat(stats.r)}
+        </strong>
+
+        <small>
+          ${strength} ${direction}
+        </small>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <span>
+          R²
+        </span>
+
+        <strong>
+          ${fmtStat(stats.r2)}
+        </strong>
+
+        <small>
+
+          ${
+            fmtStat(
+              stats.r2 *
+              100,
+              1
+            )
+          }%
+          обяснена вариация
+
+        </small>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <span>
+          Коефициент b
+        </span>
+
+        <strong>
+          ${fmtStat(stats.slope)}
+        </strong>
+
+        <small>
+          промяна в Y при +1 X
+        </small>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <span>
+          p-value
+        </span>
+
+        <strong>
+          ${formatPValue(stats.p)}
+        </strong>
+
+        <small>
+          ${
+            stats.p < .05
+            ? "значима"
+            : "незначима"
+          }
+        </small>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="regression-summary">
+
+
+      <div class="equation-box">
+
+        <span>
+          Регресионно уравнение
+        </span>
+
+        <strong>
+
+          Y =
+          ${fmtStat(stats.intercept)}
+          ${
+            stats.slope >= 0
+            ? "+"
+            : "−"
+          }
+          ${fmtStat(Math.abs(stats.slope))}
+          × X
+
+        </strong>
+
+      </div>
+
+
+      <div class="interpretation-box">
+
+        <span>
+          Интерпретация
+        </span>
+
+        <p>
+
+          R² показва
+          дела на вариацията на Y,
+          свързан статистически
+          с X
+          в простия линеен модел.
+          Това не е оценка
+          на причинен ефект.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="dependency-visual-grid">
+
+
+      <div class="scatter-card">
+
+        <h4>
+          Scatter plot и регресионна линия
+        </h4>
+
+        <p>
+          Всеки маркер
+          представлява икономически сектор.
+        </p>
+
+        ${
+          scatterSvg(
+            points,
+            stats
+          )
+        }
+
+      </div>
+
+
+      <div class="observation-card">
+
+        <h4>
+          Секторни наблюдения
+        </h4>
+
+        <p>
+          Стойностите,
+          използвани в модела.
+        </p>
+
+        <div class="observation-scroll">
+
+          <table class="observation-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Сектор
+                </th>
+
+                <th>
+                  X
+                </th>
+
+                <th>
+                  Y
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              ${
+                points
+                  .slice()
+                  .sort(
+                    (a,b) =>
+                      a.code
+                        .localeCompare(
+                          b.code
+                        )
+                  )
+                  .map(
+                    p => `
+
+                      <tr>
+
+                        <td title="${p.name}">
+                          ${p.code}
+                        </td>
+
+                        <td>
+                          ${fmtStat(p.x,2)}
+                        </td>
+
+                        <td>
+                          ${fmtStat(p.y,2)}
+                        </td>
+
+                      </tr>
+
+                    `
+                  )
+                  .join("")
+              }
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   HISTORICAL AVAILABILITY
+========================================================= */
+
 
 function normalizeStatus(value){
 
@@ -7184,22 +8141,23 @@ function normalizeStatus(value){
   }
 
 
-  const clean =
+  const status =
     String(value)
       .trim();
 
 
-  if(
-    clean === "-" ||
-    clean === "–" ||
-    clean === "—" ||
-    clean.toLowerCase() === "не"
-  ){
-    return "—";
-  }
-
-
-  return clean;
+  return (
+    [
+      "-",
+      "–",
+      "—",
+      "не"
+    ].includes(
+      status.toLowerCase()
+    )
+    ? "—"
+    : status
+  );
 
 }
 
@@ -7210,398 +8168,39 @@ function historyStatusClass(value){
     normalizeStatus(value);
 
 
-  if(
+  return (
     status === "Да"
-  ){
-    return "status-yes";
-  }
-
-
-  if(
-    status === "Да*"
-  ){
-    return "status-limited";
-  }
-
-
-  if(
-    status === "V1*"
-  ){
-    return "status-version";
-  }
-
-
-  return "status-none";
-
-}
-
-
-function sourceYearClass(status){
-
-  status =
-    normalizeStatus(status);
-
-
-  if(status === "Да"){
-    return "available";
-  }
-
-
-  if(status === "Да*"){
-    return "limited";
-  }
-
-
-  if(status === "V1*"){
-    return "version";
-  }
-
-
-  return "";
-
-}
-
-
-/* =========================================================
-   FIND SOURCE / MATRIX MATCH
-========================================================= */
-
-function getMatchingHistoricalIndicators(
-  source
-){
-
-  if(
-    !historical ||
-    !Array.isArray(
-      historical.years
-    ) ||
-    !historical.years.length
-  ){
-    return [];
-  }
-
-
-  const names =
-    Object.keys(
-      historical.years[0]
-        .availability ||
-      {}
-    );
-
-
-  const group =
-    String(
-      source.indicator_group ||
-      ""
-    )
-      .toLowerCase()
-      .replaceAll("≥","")
-      .replaceAll("–","-");
-
-
-  function containsAny(
-    text,
-    words
-  ){
-
-    return words.some(
-      word =>
-        text.includes(word)
-    );
-
-  }
-
-
-  return names.filter(
-    function(name){
-
-      const n =
-        name
-          .toLowerCase()
-          .replaceAll("≥","")
-          .replaceAll("–","-");
-
-
-      if(
-        containsAny(
-          group,
-          [
-            "бдс",
-            "добавена стойност"
-          ]
-        )
-      ){
-        return containsAny(
-          n,
-          [
-            "бдс",
-            "добавена стойност"
-          ]
-        );
-      }
-
-
-      if(
-        containsAny(
-          group,
-          [
-            "заетост",
-            "часове",
-            "производителност"
-          ]
-        )
-      ){
-        return containsAny(
-          n,
-          [
-            "зает",
-            "час",
-            "производител"
-          ]
-        );
-      }
-
-
-      if(
-        group.includes(
-          "инвести"
-        )
-      ){
-        return n.includes(
-          "инвести"
-        );
-      }
-
-
-      if(
-        group.includes(
-          "икт специалист"
-        )
-      ){
-        return n.includes(
-          "икт специалист"
-        );
-      }
-
-
-      if(
-        group.includes("dii") ||
-        group.includes(
-          "digital intensity"
-        )
-      ){
-        return (
-          n.includes("dii") ||
-          n.includes(
-            "digital intensity"
+    ? "status-yes"
+    : (
+        status === "Да*"
+        ? "status-limited"
+        : (
+            status === "V1*"
+            ? "status-version"
+            : "status-none"
           )
-        );
-      }
-
-
-      if(
-        containsAny(
-          group,
-          [
-            "интернет",
-            "уебсайт",
-            "е-продажби",
-            "e-продажби"
-          ]
-        )
-      ){
-        return containsAny(
-          n,
-          [
-            "интернет",
-            "уеб",
-            "продаж",
-            "e-sales",
-            "e-commerce"
-          ]
-        );
-      }
-
-
-      if(
-        group.includes(
-          "социал"
-        )
-      ){
-        return n.includes(
-          "социал"
-        );
-      }
-
-
-      if(
-        group.includes(
-          "облак"
-        ) ||
-        group.includes(
-          "cloud"
-        )
-      ){
-        return (
-          n.includes("облак") ||
-          n.includes("cloud")
-        );
-      }
-
-
-      if(
-        group.includes("erp") ||
-        group.includes("crm")
-      ){
-        return (
-          n.includes("erp") ||
-          n.includes("crm")
-        );
-      }
-
-
-      if(
-        containsAny(
-          group,
-          [
-            "100 mbps",
-            "iot",
-            "ai",
-            "bi",
-            "analytics",
-            "security",
-            "сигурност"
-          ]
-        )
-      ){
-
-        return containsAny(
-          n,
-          [
-            "100",
-            "iot",
-            "ai",
-            "bi",
-            "analytics",
-            "анализ",
-            "security",
-            "сигурност"
-          ]
-        );
-
-      }
-
-
-      return false;
-
-    }
+      )
   );
 
 }
 
-
-/* =========================================================
-   SOURCE YEAR STATUSES
-========================================================= */
-
-function getSourceYearStatuses(
-  source
-){
-
-  const matches =
-    getMatchingHistoricalIndicators(
-      source
-    );
-
-
-  return historical.years.map(
-    function(yearRecord){
-
-      const year =
-        yearRecord.year;
-
-
-      const availability =
-        yearRecord.availability ||
-        {};
-
-
-      const statuses =
-        matches.map(
-          name =>
-            normalizeStatus(
-              availability[name]
-            )
-        );
-
-
-      let status =
-        "—";
-
-
-      if(
-        statuses.includes("Да")
-      ){
-
-        status =
-          "Да";
-
-      }
-      else if(
-        statuses.includes("Да*")
-      ){
-
-        status =
-          "Да*";
-
-      }
-      else if(
-        statuses.includes("V1*")
-      ){
-
-        status =
-          "V1*";
-
-      }
-
-
-      /*
-       Ако няма намерено съответствие
-       между source card и матрицата,
-       не измисляме наличност.
-      */
-
-      return {
-        year,
-        status
-      };
-
-    }
-  );
-
-}
-
-
-/* =========================================================
-   HISTORY
-========================================================= */
 
 function renderHistory(){
 
+  const historical =
+    historicalAvailability;
+
+
   if(
-    !historical ||
-    !Array.isArray(
-      historical.years
-    ) ||
-    !historical.years.length
+    !historical?.years?.length
   ){
 
     historyContent.innerHTML = `
 
       <div class="load-error">
 
-        Историческата рамка
-        не може да бъде заредена.
+        historical-availability.json
+        не може да бъде зареден.
 
       </div>
 
@@ -7614,46 +8213,41 @@ function renderHistory(){
 
   const years =
     historical.years.map(
-      item =>
-        item.year
+      x =>
+        Number(x.year)
     );
-
-
-  const availabilityFirst =
-    historical.years[0]
-      .availability ||
-    {};
 
 
   const indicatorNames =
     Object.keys(
-      availabilityFirst
+      historical.years[0]
+        .availability ||
+      {}
     );
 
 
   let availableCount = 0;
 
 
-  historical.years.forEach(
-    yearRecord => {
+  historical.years
+    .forEach(
+      yearRecord => {
 
-      Object.values(
-        yearRecord.availability ||
-        {}
-      )
+        Object.values(
+          yearRecord.availability ||
+          {}
+        )
         .forEach(
-          rawValue => {
-
-            const value =
-              normalizeStatus(
-                rawValue
-              );
-
+          value => {
 
             if(
-              value === "Да" ||
-              value === "Да*" ||
-              value === "V1*"
+              [
+                "Да",
+                "Да*",
+                "V1*"
+              ].includes(
+                normalizeStatus(value)
+              )
             ){
 
               availableCount++;
@@ -7663,8 +8257,8 @@ function renderHistory(){
           }
         );
 
-    }
-  );
+      }
+    );
 
 
   const total =
@@ -7691,7 +8285,8 @@ function renderHistory(){
                     const value =
                       normalizeStatus(
                         (
-                          yearRecord.availability ||
+                          yearRecord
+                            .availability ||
                           {}
                         )[indicator]
                       );
@@ -7728,159 +8323,95 @@ function renderHistory(){
 
 
   const sourceCards =
-    Array.isArray(
-      historical.sources
+    (
+      historical.sources ||
+      []
     )
-    ? historical.sources
-        .map(
-          function(source){
+    .map(
+      source => `
 
-            const statuses =
-              getSourceYearStatuses(
-                source
-              );
-
-
-            const yearsHtml =
-              statuses
-                .map(
-                  function(item){
-
-                    const status =
-                      normalizeStatus(
-                        item.status
-                      );
-
-
-                    const symbol =
-                      status === "Да"
-                      ? "●"
-                      : (
-                          status === "Да*"
-                          ? "●*"
-                          : (
-                              status === "V1*"
-                              ? "V1*"
-                              : "—"
-                            )
-                        );
-
-
-                    return `
-
-                      <span
-                        class="
-                          source-year
-                          ${sourceYearClass(status)}
-                        "
-                        title="${item.year}: ${status}"
-                      >
-                        ${item.year}
-                        <br>
-                        ${symbol}
-                      </span>
-
-                    `;
-
-                  }
-                )
-                .join("");
-
-
-            return `
-
-              <article
-                class="
-                  history-source-card
-                  ${
-                    source.url
-                    ? "has-link"
-                    : ""
-                  }
-                "
-                ${
-                  source.url
-                  ? `data-url="${source.url}"`
-                  : ""
-                }
-              >
-
-                <div class="source-group">
-
-                  ${
-                    source.indicator_group ||
-                    "Официален източник"
-                  }
-
-                </div>
-
-
-                <h4>
-
-                  ${
-                    source.source ||
-                    "Eurostat"
-                  }
-
-                </h4>
-
-
-                <div class="source-period">
-
-                  <strong>
-                    Период:
-                  </strong>
-
-                  ${
-                    source.period_before_2020 ||
-                    "—"
-                  }
-
-                </div>
-
-
-                <div class="source-years">
-
-                  ${yearsHtml}
-
-                </div>
-
-
-                <div class="source-note">
-
-                  ${
-                    source.method_note ||
-                    "Няма допълнителна методологична бележка."
-                  }
-
-                </div>
-
-
-                ${
-                  source.url
-                  ? `
-
-                    <a
-                      class="source-link"
-                      href="${source.url}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Отвори данните в Eurostat ↗
-                    </a>
-
-                  `
-                  : ""
-                }
-
-              </article>
-
-            `;
-
+        <article
+          class="
+            history-source-card
+            ${
+              source.url
+              ? "has-link"
+              : ""
+            }
+          "
+          ${
+            source.url
+            ? `data-url="${source.url}"`
+            : ""
           }
-        )
-        .join("")
-    : "";
+        >
+
+          <div class="source-group">
+
+            ${
+              source.indicator_group ||
+              "Официален източник"
+            }
+
+          </div>
+
+
+          <h4>
+
+            ${
+              source.source ||
+              "Eurostat"
+            }
+
+          </h4>
+
+
+          <div class="source-period">
+
+            <strong>
+              Исторически период:
+            </strong>
+
+            ${
+              source.period_before_2020 ||
+              "—"
+            }
+
+          </div>
+
+
+          <div class="source-note">
+
+            ${
+              source.method_note ||
+              "Няма допълнителна методологична бележка."
+            }
+
+          </div>
+
+
+          ${
+            source.url
+            ? `
+
+              <a
+                class="source-link"
+                href="${source.url}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Отвори официалния източник ↗
+              </a>
+
+            `
+            : ""
+          }
+
+        </article>
+
+      `
+    )
+    .join("");
 
 
   historyContent.innerHTML = `
@@ -7895,7 +8426,15 @@ function renderHistory(){
         </span>
 
         <strong>
-          ${Math.min(...years)}–${Math.max(...years)}
+          ${
+            Math.min(
+              ...years
+            )
+          }–${
+            Math.max(
+              ...years
+            )
+          }
         </strong>
 
       </div>
@@ -7972,7 +8511,6 @@ function renderHistory(){
 
     <div class="legend-row">
 
-
       <div class="legend-item">
 
         <span class="history-status status-yes">
@@ -8001,7 +8539,7 @@ function renderHistory(){
           V1*
         </span>
 
-        ранна версия на показателя
+        ранна версия
 
       </div>
 
@@ -8016,7 +8554,6 @@ function renderHistory(){
 
       </div>
 
-
     </div>
 
 
@@ -8026,7 +8563,7 @@ function renderHistory(){
 
         <div
           class="metric-panel-head"
-          style="margin-top:34px;"
+          style="margin-top:34px"
         >
 
           <h4>
@@ -8034,17 +8571,14 @@ function renderHistory(){
           </h4>
 
           <span>
-            Кликни върху картата
-            или върху линка
+            Eurostat и свързана методология
           </span>
 
         </div>
 
 
         <div class="source-grid">
-
           ${sourceCards}
-
         </div>
 
       `
@@ -8054,23 +8588,16 @@ function renderHistory(){
   `;
 
 
-/* Whole card opens source */
-
   historyContent
     .querySelectorAll(
       ".history-source-card.has-link"
     )
     .forEach(
-      function(card){
+      card => {
 
         card.addEventListener(
           "click",
-          function(event){
-
-            /*
-             Ако е кликнат самият линк,
-             той се обработва нормално.
-            */
+          event => {
 
             if(
               event.target.closest(
@@ -8105,8 +8632,9 @@ function renderHistory(){
 
 
 /* =========================================================
-   POPULATE INDICATORS
+   CONTROL POPULATION
 ========================================================= */
+
 
 function addIndicatorOptions(
   select
@@ -8124,7 +8652,9 @@ function addIndicatorOptions(
           "Други показатели";
 
 
-        if(!groups[group]){
+        if(
+          !groups[group]
+        ){
 
           groups[group] = [];
 
@@ -8189,10 +8719,6 @@ function addIndicatorOptions(
 }
 
 
-/* =========================================================
-   POPULATE YEARS
-========================================================= */
-
 function addYears(
   select,
   reverse = false
@@ -8234,14 +8760,58 @@ function addYears(
 }
 
 
+function nearestAvailableYear(
+  code,
+  preferred
+){
+
+  const years =
+    dataset.period.filter(
+      year =>
+        dataset.sectors.some(
+          sector =>
+            safeNumber(
+              getValue(
+                sector.code,
+                year,
+                code
+              )
+            )
+        )
+    );
+
+
+  if(
+    years.includes(
+      preferred
+    )
+  ){
+    return preferred;
+  }
+
+
+  return (
+    years.length
+    ? years[
+        years.length -
+        1
+      ]
+    : dataset.period[
+        dataset.period.length -
+        1
+      ]
+  );
+
+}
+
+
 /* =========================================================
-   POPULATE CONTROLS
+   POPULATE
 ========================================================= */
+
 
 function populateControls(){
 
-
-  /* SECTORS */
 
   dataset.sectors
     .forEach(
@@ -8269,24 +8839,15 @@ function populateControls(){
     );
 
 
-  /* INDICATORS */
-
-  addIndicatorOptions(
-    indicatorSelect
-  );
-
-
-  addIndicatorOptions(
-    xIndicatorSelect
-  );
-
-
-  addIndicatorOptions(
+  [
+    indicatorSelect,
+    xIndicatorSelect,
     yIndicatorSelect
+  ]
+  .forEach(
+    addIndicatorOptions
   );
 
-
-  /* YEARS */
 
   addYears(
     yearSelect,
@@ -8326,8 +8887,9 @@ function populateControls(){
 
 
   /* =======================================================
-     DEFAULTS
+     DEFAULT SECTOR
   ======================================================= */
+
 
   sectorSelect.value =
     "A";
@@ -8344,39 +8906,53 @@ function populateControls(){
 
 
   yearSelect.value =
-    dataset.period.includes(
-      2024
-    )
-    ? "2024"
-    : String(
-        dataset.period[
+    String(
+      dataset.period.includes(
+        2024
+      )
+      ? 2024
+      : dataset.period[
           dataset.period.length -
           1
         ]
-      );
+    );
+
+
+  /*
+    Сравнението по подразбиране
+    вече използва 2010 → 2024,
+    за да покаже новия исторически хоризонт.
+  */
 
 
   baseYearSelect.value =
-    dataset.period.includes(
-      2020
-    )
-    ? "2020"
-    : String(
-        dataset.period[0]
-      );
+    String(
+      dataset.period.includes(
+        2010
+      )
+      ? 2010
+      : dataset.period[0]
+    );
 
 
   compareYearSelect.value =
-    dataset.period.includes(
-      2024
-    )
-    ? "2024"
-    : String(
-        dataset.period[
+    String(
+      dataset.period.includes(
+        2024
+      )
+      ? 2024
+      : dataset.period[
           dataset.period.length -
           1
         ]
-      );
+    );
+
+
+  /*
+    За dependency analysis
+    запазваме цифров индикатор
+    през по-нова година.
+  */
 
 
   xIndicatorSelect.value =
@@ -8386,7 +8962,14 @@ function populateControls(){
         "dii_basic_pct"
     )
     ? "dii_basic_pct"
-    : dataset.indicators[0].code;
+    : (
+        dataset.indicators.find(
+          item =>
+            item.code ===
+            "paid_cloud_pct"
+        )?.code ||
+        dataset.indicators[0].code
+      );
 
 
   yIndicatorSelect.value =
@@ -8397,56 +8980,51 @@ function populateControls(){
     )
     ? "labour_productivity_eur_hour"
     : (
-        dataset.indicators[1]
-        ? dataset.indicators[1].code
-        : dataset.indicators[0].code
+        dataset.indicators[1]?.code ||
+        dataset.indicators[0].code
       );
 
 
   dependencyYear.value =
-    dataset.period.includes(
-      2024
-    )
-    ? "2024"
-    : String(
-        dataset.period[
-          dataset.period.length -
-          1
-        ]
-      );
+    String(
+      nearestAvailableYear(
+        xIndicatorSelect.value,
+        2024
+      )
+    );
 
 
   changeBaseYear.value =
-    dataset.period.includes(
-      2020
-    )
-    ? "2020"
-    : String(
-        dataset.period[0]
-      );
+    String(
+      dataset.period.includes(
+        2020
+      )
+      ? 2020
+      : dataset.period[0]
+    );
 
 
   changeCompareYear.value =
-    dataset.period.includes(
-      2024
-    )
-    ? "2024"
-    : String(
-        dataset.period[
+    String(
+      dataset.period.includes(
+        2024
+      )
+      ? 2024
+      : dataset.period[
           dataset.period.length -
           1
         ]
-      );
+    );
 
 
   lagXYear.value =
-    dataset.period.includes(
-      2022
-    )
-    ? "2022"
-    : String(
-        dataset.period[0]
-      );
+    String(
+      dataset.period.includes(
+        2022
+      )
+      ? 2022
+      : dataset.period[0]
+    );
 
 
   lagLength.value =
@@ -8456,6 +9034,7 @@ function populateControls(){
   /* =======================================================
      EVENTS
   ======================================================= */
+
 
   sectorSelect.addEventListener(
     "change",
@@ -8497,16 +9076,16 @@ function populateControls(){
     lagXYear,
     lagLength
   ]
-    .forEach(
-      element => {
+  .forEach(
+    element => {
 
-        element.addEventListener(
-          "change",
-          renderDependency
-        );
+      element.addEventListener(
+        "change",
+        renderDependency
+      );
 
-      }
-    );
+    }
+  );
 
 
   renderExplorer();
@@ -8519,67 +9098,315 @@ function populateControls(){
 
 
 /* =========================================================
-   LOAD JSON
+   DATASET NORMALISATION
 ========================================================= */
 
-function fetchJson(path){
 
-  return fetch(path)
-    .then(
-      response => {
+function normalizeDataset(data){
 
-        if(!response.ok){
-
-          throw new Error(
-            `${path} не е намерен`
-          );
-
-        }
-
-
-        return response.json();
-
-      }
+  const period =
+    (
+      data.period ||
+      []
+    )
+    .map(Number)
+    .filter(
+      Number.isFinite
+    )
+    .sort(
+      (a,b) =>
+        a -
+        b
     );
+
+
+  const records =
+    (
+      data.records ||
+      []
+    )
+    .map(
+      record => ({
+        ...record,
+        year:
+          Number(
+            record.year
+          )
+      })
+    )
+    .sort(
+      (a,b) =>
+        a.section
+          .localeCompare(
+            b.section
+          ) ||
+        a.year -
+        b.year
+    );
+
+
+  return {
+    ...data,
+    period,
+    records
+  };
 
 }
 
 
+/* =========================================================
+   MERGE 2010–2019 + 2020–2025
+========================================================= */
+
+
+function mergeHistoricalAndCurrent(
+  historical,
+  current
+){
+
+  const recordsMap =
+    new Map();
+
+
+  (
+    historical.records ||
+    []
+  )
+  .forEach(
+    record => {
+
+      recordsMap.set(
+
+        `${record.section}|${Number(record.year)}`,
+
+        {
+          ...record,
+          year:
+            Number(
+              record.year
+            )
+        }
+
+      );
+
+    }
+  );
+
+
+  /*
+    Current data are applied second.
+    If a year should ever overlap,
+    the current validated panel wins.
+  */
+
+
+  (
+    current.records ||
+    []
+  )
+  .forEach(
+    record => {
+
+      recordsMap.set(
+
+        `${record.section}|${Number(record.year)}`,
+
+        {
+          ...record,
+          year:
+            Number(
+              record.year
+            )
+        }
+
+      );
+
+    }
+  );
+
+
+  return normalizeDataset({
+
+    ...current,
+
+    period:
+      Array.from(
+        new Set(
+          [
+            ...(
+              historical.period ||
+              []
+            ),
+            ...(
+              current.period ||
+              []
+            )
+          ]
+          .map(Number)
+        )
+      )
+      .sort(
+        (a,b) =>
+          a -
+          b
+      ),
+
+    records:
+      Array.from(
+        recordsMap.values()
+      ),
+
+    historical_source:
+      historical.methodology ||
+      historical.historical_source ||
+      null
+
+  });
+
+}
+
+
+/* =========================================================
+   JSON FETCH
+========================================================= */
+
+
+async function fetchJson(
+  path,
+  required = true
+){
+
+  const response =
+    await fetch(path);
+
+
+  if(
+    !response.ok
+  ){
+
+    if(required){
+
+      throw new Error(
+        `${path}: HTTP ${response.status}`
+      );
+
+    }
+
+
+    return null;
+
+  }
+
+
+  return response.json();
+
+}
+
+
+/* =========================================================
+   MAIN DATA LOADER
+========================================================= */
+
+
+async function loadMainDataset(){
+
+
+  /*
+    OPTION 1
+    Ако готовият combined файл е качен,
+    използваме директно него.
+  */
+
+
+  const combined =
+    await fetchJson(
+      "a21-sector-data-2010-2025.json",
+      false
+    );
+
+
+  if(combined){
+
+    return normalizeDataset(
+      combined
+    );
+
+  }
+
+
+  /*
+    OPTION 2
+    Ако combined файлът липсва,
+    sectors.html сам слива:
+
+    a21-historical-data.json
+    +
+    a21-sector-data.json
+  */
+
+
+  const [
+    historical,
+    current
+  ] =
+    await Promise.all([
+
+      fetchJson(
+        "a21-historical-data.json",
+        false
+      ),
+
+      fetchJson(
+        "a21-sector-data.json",
+        true
+      )
+
+    ]);
+
+
+  if(historical){
+
+    return mergeHistoricalAndCurrent(
+      historical,
+      current
+    );
+
+  }
+
+
+  /*
+    OPTION 3
+    Ако historical липсва,
+    сайтът продължава да работи
+    със стария 2020–2025 файл.
+  */
+
+
+  return normalizeDataset(
+    current
+  );
+
+}
+
+
+/* =========================================================
+   LOAD EVERYTHING
+========================================================= */
+
+
 Promise.all([
 
+  loadMainDataset(),
+
   fetchJson(
-    "a21-sector-data.json"
+    "a21-metadata.json",
+    false
   ),
 
   fetchJson(
-    "a21-metadata.json"
+    "historical-availability.json",
+    false
   )
-    .catch(
-      error => {
-
-        console.warn(
-          error
-        );
-
-        return null;
-
-      }
-    ),
-
-  fetchJson(
-    "historical-availability.json"
-  )
-    .catch(
-      error => {
-
-        console.warn(
-          error
-        );
-
-        return null;
-
-      }
-    )
 
 ])
 
@@ -8594,7 +9421,7 @@ Promise.all([
       results[1];
 
 
-    historical =
+    historicalAvailability =
       results[2];
 
 
@@ -8610,11 +9437,17 @@ Promise.all([
 
       <div class="load-error">
 
-        Основният файл
+        Основният секторен JSON
+        не може да бъде зареден.
+
+        Увери се, че поне
+
         <strong>
           a21-sector-data.json
         </strong>
-        не може да бъде зареден.
+
+        е в основната папка
+        на сайта.
 
       </div>
 
@@ -8657,7 +9490,5 @@ Promise.all([
 
 </script>
 
-
 </body>
-
 </html>
