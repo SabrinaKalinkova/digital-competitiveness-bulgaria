@@ -1,0 +1,306 @@
+{
+  "title": "A*21 metadata and official sources",
+  "general": {
+    "classification": "A*21 по NACE Rev. 2 / КИД-2008: секции A–U.",
+    "approach": "Показателите са групирани като технологична осигуреност, дигитални компетентности, организационна интеграция, стратегическо използване и контекст/резултат.",
+    "composite_index": "Не е изчислен. Различното секторно покритие, честота и дефиниции не дават надеждна основа за общо класиране на 21 сектора.",
+    "missing_values": "NA се запазва като липса, извън обхвата или непубликувана оценка. NA не се замества с 0.",
+    "direct_ict_data": "Годишно изследване на предприятия с 10 и повече заети в NACE C–J, L–N и S95.1. Група S95.1 не представя цялата секция S. Част от модулите са двугодишни или по-редки.",
+    "dii_note": "Индексът съдържа 12 бинарни компонента. Версиите и компонентите се изменят по години, затова тенденцията 2020–2025 се тълкува предпазливо.",
+    "investment_data": "Подробните секторни стойности за България са налични до 2023 г.; ИКТ оборудването е публикувано за 2021–2023 г. в използваното извличане.",
+    "negative_investments": "Запазени са. Те могат да възникнат при нетни продажби/изваждане от употреба на активи и не са грешка или нула.",
+    "extraction_date": "2026-09-09"
+  },
+  "indicators": [
+    {
+      "code": "gva_current_meur",
+      "label": "Брутна добавена стойност по текущи цени",
+      "dimension": "Контекст/резултат",
+      "unit": "млн. евро",
+      "coverage": "A*21; наличността се различава по показател и година",
+      "dataset": "nama_10_a64",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64/default/table?lang=en",
+      "method_note": "Официална стойност; липсите са запазени като NA."
+    },
+    {
+      "code": "gva_real2020_meur",
+      "label": "Брутна добавена стойност, цени от 2020 г.",
+      "dimension": "Контекст/резултат",
+      "unit": "млн. евро",
+      "coverage": "A*21; наличността се различава по показател и година",
+      "dataset": "nama_10_a64",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64/default/table?lang=en",
+      "method_note": "Официална стойност; липсите са запазени като NA."
+    },
+    {
+      "code": "employment_ths",
+      "label": "Заети лица (вътрешна концепция)",
+      "dimension": "Контекст/резултат",
+      "unit": "хил. лица",
+      "coverage": "A*21; наличността се различава по показател и година",
+      "dataset": "nama_10_a64_e",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table?lang=en",
+      "method_note": "Официална стойност; липсите са запазени като NA."
+    },
+    {
+      "code": "hours_ths",
+      "label": "Отработени часове от заети лица (вътрешна концепция)",
+      "dimension": "Контекст/резултат",
+      "unit": "хил. часа",
+      "coverage": "A*21; наличността се различава по показател и година",
+      "dataset": "nama_10_a64_e",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table?lang=en",
+      "method_note": "Официална стойност; липсите са запазени като NA."
+    },
+    {
+      "code": "gfcf_total_meur",
+      "label": "Бруто образуване на основен капитал — общо активи",
+      "dimension": "Инвестиционен контекст",
+      "unit": "млн. евро",
+      "coverage": "A*21; наличността се различава по показател и година",
+      "dataset": "nama_10_a64_p5",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_p5/default/table?lang=en",
+      "method_note": "Официална стойност; липсите са запазени като NA."
+    },
+    {
+      "code": "gfcf_ict_equipment_meur",
+      "label": "Бруто образуване на основен капитал — ИКТ оборудване",
+      "dimension": "Технологична осигуреност",
+      "unit": "млн. евро",
+      "coverage": "A*21; наличността се различава по показател и година",
+      "dataset": "nama_10_a64_p5",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_p5/default/table?lang=en",
+      "method_note": "Официална стойност; липсите са запазени като NA."
+    },
+    {
+      "code": "gfcf_ip_products_meur",
+      "label": "Бруто образуване на основен капитал — продукти на интелектуалната собственост",
+      "dimension": "Технологична осигуреност (широк прокси)",
+      "unit": "млн. евро",
+      "coverage": "A*21; наличността се различава по показател и година",
+      "dataset": "nama_10_a64_p5",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_p5/default/table?lang=en",
+      "method_note": "Официална стойност; липсите са запазени като NA."
+    },
+    {
+      "code": "labour_productivity_eur_hour",
+      "label": "Производителност на труда (БДС по цени от 2020 г. на отработен час)",
+      "dimension": "Контекст/резултат",
+      "unit": "евро на час",
+      "coverage": "A*21, 2020–2024 при налични компоненти; за 2025 г. няма публикувани секторни компоненти в използваното извличане",
+      "dataset": "Производен от nama_10_a64 и nama_10_a64_e",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64/default/table?lang=en",
+      "method_note": "Формула в работната книга: БДС (млн. евро) × 1000 / отработени часове (хил.)."
+    },
+    {
+      "code": "ict_equipment_to_gva_pct",
+      "label": "Инвестиции в ИКТ оборудване / БДС",
+      "dimension": "Технологична осигуреност",
+      "unit": "%",
+      "coverage": "A*21; за България детайлът за ИКТ оборудване е наличен основно за 2021–2023",
+      "dataset": "Производен от nama_10_a64_p5 и nama_10_a64",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_p5/default/table?lang=en",
+      "method_note": "Формула в работната книга; отрицателни инвестиционни стойности са запазени."
+    },
+    {
+      "code": "ict_equipment_share_gfcf_pct",
+      "label": "Дял на ИКТ оборудването в общите инвестиции",
+      "dimension": "Технологична осигуреност",
+      "unit": "%",
+      "coverage": "A*21; при налични компоненти",
+      "dataset": "Производен от nama_10_a64_p5",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_p5/default/table?lang=en",
+      "method_note": "Формула в работната книга; стойности извън 0–100% са възможни при отрицателни потоци/продажби на активи."
+    },
+    {
+      "code": "ip_products_to_gva_pct",
+      "label": "Инвестиции в продукти на интелектуалната собственост / БДС",
+      "dimension": "Технологична осигуреност (широк прокси)",
+      "unit": "%",
+      "coverage": "A*21; 2020–2023 при налични компоненти",
+      "dataset": "Производен от nama_10_a64_p5 и nama_10_a64",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_p5/default/table?lang=en",
+      "method_note": "По-широк показател от софтуер и бази данни; не се тълкува като чисто цифрова инвестиция."
+    },
+    {
+      "code": "dii_basic_pct",
+      "label": "Предприятия с поне базово равнище на цифров интензитет (DII)",
+      "dimension": "Организационна интеграция",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_e_diin2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_e_diin2/default/table?lang=en",
+      "method_note": "Съставът на 12-те компонента на DII се изменя по години; ограничена времева съпоставимост. За 2020 г. е изчислено като 100 минус дела с много нисък DII (версия 2)."
+    },
+    {
+      "code": "internet_employees_pct",
+      "label": "Заети лица, използващи компютри с достъп до интернет",
+      "dimension": "Технологична осигуреност",
+      "unit": "% от заетите лица",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_ci_cm_pn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_cm_pn2/default/table?lang=en",
+      "method_note": "Дял от заетите лица в предприятията с 10 и повече заети."
+    },
+    {
+      "code": "fast_fixed_100_pct",
+      "label": "Предприятия с най-бърза фиксирана интернет връзка поне 100 Mbps",
+      "dimension": "Технологична осигуреност",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_ci_it_en2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_it_en2/default/table?lang=en",
+      "method_note": "Предприятия с 10 и повече заети."
+    },
+    {
+      "code": "website_pct",
+      "label": "Предприятия с уебсайт",
+      "dimension": "Организационна интеграция",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_ciwebn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ciwebn2/default/table?lang=en",
+      "method_note": "Показателят не е публикуван за всяка година в набора."
+    },
+    {
+      "code": "social_media_pct",
+      "label": "Предприятия, използващи социални медии",
+      "dimension": "Организационна интеграция",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_cismtn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_cismtn2/default/table?lang=en",
+      "method_note": "Показателят не е публикуван за всяка година в набора."
+    },
+    {
+      "code": "paid_cloud_pct",
+      "label": "Предприятия, използващи платени облачни услуги",
+      "dimension": "Технологична осигуреност",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_cicce_usen2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_cicce_usen2/default/table?lang=en",
+      "method_note": "Платени облачни услуги, използвани през интернет; няма наблюдение за 2022 г. в този набор."
+    },
+    {
+      "code": "erp_pct",
+      "label": "Предприятия, използващи ERP",
+      "dimension": "Организационна интеграция",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_eb_iipn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_iipn2/default/table?lang=en",
+      "method_note": "Софтуер за споделяне на информация между различни функционални области."
+    },
+    {
+      "code": "crm_pct",
+      "label": "Предприятия, използващи CRM",
+      "dimension": "Организационна интеграция",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_eb_iipn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_iipn2/default/table?lang=en",
+      "method_note": "Кодът/формулировката се променя след 2021 г.; стойностите се показват с кода на използваната версия."
+    },
+    {
+      "code": "bi_pct",
+      "label": "Предприятия, използващи BI софтуер",
+      "dimension": "Организационна интеграция",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_eb_iipn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_iipn2/default/table?lang=en",
+      "method_note": "Business Intelligence софтуер; публикуван за 2023 и 2025 г."
+    },
+    {
+      "code": "iot_pct",
+      "label": "Предприятия, използващи свързани устройства/системи (IoT)",
+      "dimension": "Технологична осигуреност",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_eb_iotn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_iotn2/default/table?lang=en",
+      "method_note": "Кодът/формулировката се променя между 2020 и 2021 г.; няма по-късни години в този набор."
+    },
+    {
+      "code": "ai_pct",
+      "label": "Предприятия, използващи поне една AI технология",
+      "dimension": "Стратегическо използване на технологии",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_eb_ain2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ain2/default/table?lang=en",
+      "method_note": "Приближение за стратегическо използване; не измерва качеството на управленските решения."
+    },
+    {
+      "code": "data_analytics_pct",
+      "label": "Предприятия, извършващи анализ на данни",
+      "dimension": "Стратегическо използване на технологии",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_eb_dan2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_dan2/default/table?lang=en",
+      "method_note": "Анализ от собствени служители или външен доставчик според годишната формулировка."
+    },
+    {
+      "code": "security_3plus_pct",
+      "label": "Предприятия с поне 3 мерки за ИКТ сигурност",
+      "dimension": "Организационна интеграция",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_cisce_ran2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_cisce_ran2/default/table?lang=en",
+      "method_note": "Модулът е наличен през 2022 и 2024 г."
+    },
+    {
+      "code": "ecommerce_pct",
+      "label": "Предприятия с електронни продажби",
+      "dimension": "Организационна интеграция",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_ec_eseln2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ec_eseln2/default/table?lang=en",
+      "method_note": "Данните за електронните продажби обичайно се отнасят за календарната година преди годината на изследването."
+    },
+    {
+      "code": "ict_training_pct",
+      "label": "Предприятия, осигурили ИКТ обучение",
+      "dimension": "Дигитални компетентности",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_ske_ittn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ske_ittn2/default/table?lang=en",
+      "method_note": "Обучение за развитие на ИКТ умения; модулът е двугодишен за периода."
+    },
+    {
+      "code": "employs_ict_specialists_pct",
+      "label": "Предприятия, наемащи ИКТ специалисти",
+      "dimension": "Дигитални компетентности",
+      "unit": "% от предприятията",
+      "coverage": "Предприятия с 10+ заети; NACE C–J, L–N и група S95.1 (финансовият сектор K е изключен); стойностите по секции са публикувани според надеждността.",
+      "dataset": "isoc_ske_itspen2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ske_itspen2/default/table?lang=en",
+      "method_note": "Предприятия с 10 и повече заети; модулът е двугодишен за периода."
+    },
+    {
+      "code": "ict_specialists_pct_employment",
+      "label": "ИКТ специалисти като дял от заетостта",
+      "dimension": "Дигитални компетентности",
+      "unit": "% от заетите лица",
+      "coverage": "A*21, но малките секторни оценки често не се публикуват поради надеждност",
+      "dataset": "isoc_sks_itspn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_sks_itspn2/default/table?lang=en",
+      "method_note": "Годишни данни от Наблюдението на работната сила; официалните флагове са запазени."
+    },
+    {
+      "code": "ict_specialists_ths",
+      "label": "Заети ИКТ специалисти",
+      "dimension": "Дигитални компетентности",
+      "unit": "хил. лица",
+      "coverage": "A*21, но малките секторни оценки често не се публикуват поради надеждност",
+      "dataset": "isoc_sks_itspn2",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_sks_itspn2/default/table?lang=en",
+      "method_note": "Годишни данни от Наблюдението на работната сила; официалните флагове са запазени."
+    }
+  ]
+}

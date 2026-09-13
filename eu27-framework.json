@@ -1,0 +1,432 @@
+{
+  "title": "EU-27 digital competitiveness framework",
+  "countries_and_benchmarks": [
+    {
+      "code": "AT",
+      "name_bg": "Австрия",
+      "name_en": "Austria",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "BE",
+      "name_bg": "Белгия",
+      "name_en": "Belgium",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "BG",
+      "name_bg": "България",
+      "name_en": "Bulgaria",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "HR",
+      "name_bg": "Хърватия",
+      "name_en": "Croatia",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "CY",
+      "name_bg": "Кипър",
+      "name_en": "Cyprus",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "CZ",
+      "name_bg": "Чехия",
+      "name_en": "Czechia",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "DK",
+      "name_bg": "Дания",
+      "name_en": "Denmark",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "EE",
+      "name_bg": "Естония",
+      "name_en": "Estonia",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "FI",
+      "name_bg": "Финландия",
+      "name_en": "Finland",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "FR",
+      "name_bg": "Франция",
+      "name_en": "France",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "DE",
+      "name_bg": "Германия",
+      "name_en": "Germany",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "EL",
+      "name_bg": "Гърция",
+      "name_en": "Greece",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "HU",
+      "name_bg": "Унгария",
+      "name_en": "Hungary",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "IE",
+      "name_bg": "Ирландия",
+      "name_en": "Ireland",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "IT",
+      "name_bg": "Италия",
+      "name_en": "Italy",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "LV",
+      "name_bg": "Латвия",
+      "name_en": "Latvia",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "LT",
+      "name_bg": "Литва",
+      "name_en": "Lithuania",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "LU",
+      "name_bg": "Люксембург",
+      "name_en": "Luxembourg",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "MT",
+      "name_bg": "Малта",
+      "name_en": "Malta",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "NL",
+      "name_bg": "Нидерландия",
+      "name_en": "Netherlands",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "PL",
+      "name_bg": "Полша",
+      "name_en": "Poland",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "PT",
+      "name_bg": "Португалия",
+      "name_en": "Portugal",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "RO",
+      "name_bg": "Румъния",
+      "name_en": "Romania",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "SK",
+      "name_bg": "Словакия",
+      "name_en": "Slovakia",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "SI",
+      "name_bg": "Словения",
+      "name_en": "Slovenia",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "ES",
+      "name_bg": "Испания",
+      "name_en": "Spain",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "SE",
+      "name_bg": "Швеция",
+      "name_en": "Sweden",
+      "type": "EU Member State",
+      "benchmark_logic": "Включва се в EU27_MEAN и EU27_MEDIAN"
+    },
+    {
+      "code": "EU27_2020",
+      "name_bg": "ЕС‑27 — официален агрегат",
+      "name_en": "European Union – 27 countries",
+      "type": "Official Eurostat aggregate",
+      "benchmark_logic": "Основен benchmark; не е проста средна"
+    },
+    {
+      "code": "EU27_MEAN",
+      "name_bg": "ЕС‑27 — непретеглена средна",
+      "name_en": "EU‑27 arithmetic mean",
+      "type": "Derived benchmark",
+      "benchmark_logic": "Средна на наличните 27 национални стойности"
+    },
+    {
+      "code": "EU27_MEDIAN",
+      "name_bg": "ЕС‑27 — медиана",
+      "name_en": "EU‑27 median",
+      "type": "Derived benchmark",
+      "benchmark_logic": "Медиана на наличните 27 национални стойности"
+    }
+  ],
+  "indicators": [
+    {
+      "code": "gva_current_meur",
+      "label": "БДС, текущи цени",
+      "dataset": "nama_10_a64",
+      "sector_detail": "до A*64 → A*21",
+      "period": "2010–2025 според наличност",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64/default/table?lang=en",
+      "method_note": "Официални национални и EU агрегати."
+    },
+    {
+      "code": "employment_ths",
+      "label": "Заети лица",
+      "dataset": "nama_10_a64_e",
+      "sector_detail": "до A*64 → A*21",
+      "period": "2010–2025",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table?lang=en",
+      "method_note": "Национални сметки."
+    },
+    {
+      "code": "hours_ths",
+      "label": "Отработени часове",
+      "dataset": "nama_10_a64_e",
+      "sector_detail": "до A*64 → A*21",
+      "period": "2010–2025",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_e/default/table?lang=en",
+      "method_note": "За производителност."
+    },
+    {
+      "code": "gfcf_total_meur",
+      "label": "Общо инвестиции",
+      "dataset": "nama_10_a64_p5",
+      "sector_detail": "до A*64 → A*21",
+      "period": "2010–2025",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a64_p5/default/table?lang=en",
+      "method_note": "Наличността варира."
+    },
+    {
+      "code": "dii_basic_pct",
+      "label": "DII поне базово",
+      "dataset": "isoc_e_diin2",
+      "sector_detail": "C–J, L–N, S95.1; 10+",
+      "period": "2015+ по версии",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_e_diin2/default/table?lang=en",
+      "method_note": "Версиите на DII се изменят."
+    },
+    {
+      "code": "internet_employees_pct",
+      "label": "Интернет при заетите",
+      "dataset": "isoc_ci_cm_pn2",
+      "sector_detail": "по NACE; 10+",
+      "period": "2009–2025",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_cm_pn2/default/table?lang=en",
+      "method_note": "Дълга серия."
+    },
+    {
+      "code": "website_pct",
+      "label": "Уебсайт",
+      "dataset": "isoc_ciwebn2",
+      "sector_detail": "по NACE; 10+",
+      "period": "модулни години",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ciwebn2/default/table?lang=en",
+      "method_note": "Не всяка година е публикувана."
+    },
+    {
+      "code": "social_media_pct",
+      "label": "Социални медии",
+      "dataset": "isoc_cismtn2",
+      "sector_detail": "по NACE; 10+",
+      "period": "2014+ модулно",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_cismtn2/default/table?lang=en",
+      "method_note": "Прекъсната серия."
+    },
+    {
+      "code": "paid_cloud_pct",
+      "label": "Платен cloud",
+      "dataset": "isoc_cicce_usen2",
+      "sector_detail": "по NACE; 10+",
+      "period": "2014+ модулно",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_cicce_usen2/default/table?lang=en",
+      "method_note": "Модулна периодичност."
+    },
+    {
+      "code": "erp_crm_bi",
+      "label": "ERP / CRM / BI",
+      "dataset": "isoc_eb_iipn2",
+      "sector_detail": "по NACE; 10+",
+      "period": "според индикатора",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_iipn2/default/table?lang=en",
+      "method_note": "Кодове/формулировки се изменят."
+    },
+    {
+      "code": "iot_pct",
+      "label": "IoT",
+      "dataset": "isoc_eb_iotn2",
+      "sector_detail": "по NACE; 10+",
+      "period": "2020–2021 в този набор",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_iotn2/default/table?lang=en",
+      "method_note": "Няма исторически backcast."
+    },
+    {
+      "code": "ai_pct",
+      "label": "AI",
+      "dataset": "isoc_eb_ain2",
+      "sector_detail": "по NACE; 10+",
+      "period": "2021+",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ain2/default/table?lang=en",
+      "method_note": "Без backcast."
+    },
+    {
+      "code": "data_analytics_pct",
+      "label": "Анализ на данни",
+      "dataset": "isoc_eb_dan2",
+      "sector_detail": "по NACE; 10+",
+      "period": "2023+ текуща деф.",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_dan2/default/table?lang=en",
+      "method_note": "По-старият big-data proxy не е идентичен."
+    },
+    {
+      "code": "security_3plus_pct",
+      "label": "≥3 мерки за ИКТ сигурност",
+      "dataset": "isoc_cisce_ran2",
+      "sector_detail": "по NACE; 10+",
+      "period": "2022, 2024",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_cisce_ran2/default/table?lang=en",
+      "method_note": "Модулни години."
+    },
+    {
+      "code": "ecommerce_pct",
+      "label": "Е-продажби",
+      "dataset": "isoc_ec_eseln2",
+      "sector_detail": "по NACE; 10+",
+      "period": "дълга серия",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ec_eseln2/default/table?lang=en",
+      "method_note": "Често се отнася за предходната календарна година."
+    },
+    {
+      "code": "ict_training_pct",
+      "label": "ИКТ обучение",
+      "dataset": "isoc_ske_ittn2",
+      "sector_detail": "по NACE; 10+",
+      "period": "модулни години",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ske_ittn2/default/table?lang=en",
+      "method_note": "Без интерполация."
+    },
+    {
+      "code": "employs_ict_specialists_pct",
+      "label": "Наема ИКТ специалисти",
+      "dataset": "isoc_ske_itspen2",
+      "sector_detail": "по NACE; 10+",
+      "period": "модулни години",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ske_itspen2/default/table?lang=en",
+      "method_note": "Без интерполация."
+    },
+    {
+      "code": "ict_specialists_pct_employment",
+      "label": "ИКТ специалисти като % от заетостта",
+      "dataset": "isoc_sks_itspn2",
+      "sector_detail": "A*21 при надеждни оценки",
+      "period": "2015+",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_sks_itspn2/default/table?lang=en",
+      "method_note": "LFS methodological break през 2021."
+    }
+  ],
+  "benchmarks": [
+    {
+      "code": "EU27_2020",
+      "definition": "Официален Eurostat агрегат",
+      "calculation": "Взема се директно от geo=EU27_2020",
+      "use": "Основен benchmark България ↔ ЕС",
+      "limitation": "Не е проста средна на държавите."
+    },
+    {
+      "code": "EU27_MEAN",
+      "definition": "Непретеглена средна на 27-те държави",
+      "calculation": "#NAME?",
+      "use": "Позиция спрямо „средната държава“",
+      "limitation": "Тежи еднакво малки и големи държави."
+    },
+    {
+      "code": "EU27_MEDIAN",
+      "definition": "Медиана на 27-те държави",
+      "calculation": "#NAME?",
+      "use": "Устойчив benchmark при outliers",
+      "limitation": "Изисква достатъчно национални наблюдения."
+    }
+  ],
+  "status": [
+    {
+      "element": "Географии",
+      "status": "ГОТОВО",
+      "ready": "27 държави + EU27_2020 + mean + median",
+      "not_filled": "—",
+      "reason": "—"
+    },
+    {
+      "element": "Показатели/източници",
+      "status": "ГОТОВО",
+      "ready": "Официални dataset кодове, периоди и ограничения",
+      "not_filled": "—",
+      "reason": "—"
+    },
+    {
+      "element": "Секторна рамка",
+      "status": "ГОТОВО КАТО СПЕЦИФИКАЦИЯ",
+      "ready": "A*21 за национални сметки; бизнес NACE покритие за ICT survey",
+      "not_filled": "Числов панел за 26 държави",
+      "reason": "Изисква директен bulk/API импорт."
+    },
+    {
+      "element": "Числови стойности за останалите държави",
+      "status": "НЕПОПЪЛНЕНО",
+      "ready": "Не са използвани вторични/предполагаеми числа",
+      "not_filled": "EU27 country-sector-year observations",
+      "reason": "Официалните bulk/API файлове не се материализират надеждно локално в тази сесия."
+    }
+  ]
+}
