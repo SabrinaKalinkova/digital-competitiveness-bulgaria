@@ -16,7 +16,7 @@
 
 <meta
   name="description"
-  content="Интерактивен секторен анализ на българската икономика по A*21 / NACE Rev. 2 с 29 показателя за периода 2020–2025 г. по проект № 6/2024 на УНСС."
+  content="Интерактивен секторен анализ на българската икономика по A*21 / NACE Rev. 2 с 29 показателя, динамика, сравнения, статистически зависимости и историческа рамка по проект № 6/2024 на УНСС."
 >
 
 <style>
@@ -48,18 +48,15 @@
   --max-width:1260px;
 }
 
-
 * {
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
 
-
 html {
   scroll-behavior:smooth;
 }
-
 
 body {
   font-family:Arial,Helvetica,sans-serif;
@@ -68,18 +65,15 @@ body {
   line-height:1.6;
 }
 
-
 a {
   color:inherit;
   text-decoration:none;
 }
 
-
 button,
 select {
   font:inherit;
 }
-
 
 .container {
   width:min(92%,var(--max-width));
@@ -95,24 +89,18 @@ header {
   position:sticky;
   top:0;
   z-index:1000;
-
   background:rgba(255,255,255,.97);
   border-bottom:1px solid var(--border);
-
   backdrop-filter:blur(12px);
 }
 
-
 .navbar {
   min-height:82px;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
-
   gap:24px;
 }
-
 
 .brand {
   display:flex;
@@ -121,7 +109,6 @@ header {
   flex-shrink:0;
 }
 
-
 .logo-mark {
   display:flex;
   align-items:flex-end;
@@ -129,106 +116,78 @@ header {
   height:42px;
 }
 
-
 .logo-mark span {
   display:block;
   width:9px;
   border-radius:3px 3px 0 0;
 }
 
-
 .logo-mark span:nth-child(1) {
   height:15px;
   background:#7fd9e6;
 }
-
 
 .logo-mark span:nth-child(2) {
   height:23px;
   background:#46bfd3;
 }
 
-
 .logo-mark span:nth-child(3) {
   height:31px;
   background:#2499c2;
 }
-
 
 .logo-mark span:nth-child(4) {
   height:41px;
   background:#1557a0;
 }
 
-
 .brand-text strong {
   display:block;
-
   color:var(--navy);
-
   font-size:16px;
   line-height:1.02;
-
   text-transform:uppercase;
 }
 
-
 .brand-text small {
   display:block;
-
   margin-top:5px;
-
   color:var(--muted);
-
   font-size:10px;
-
   white-space:nowrap;
 }
 
 
 /* =========================================================
-   DESKTOP NAV
+   NAVIGATION
 ========================================================= */
 
 .desktop-nav {
   display:flex;
   align-items:center;
-
   gap:18px;
-
   color:#34475a;
-
   font-size:12px;
   font-weight:700;
 }
 
-
 .desktop-nav > a,
 .nav-dropdown > button {
   min-height:82px;
-
   display:flex;
   align-items:center;
-
   padding:3px 0 0;
-
   border:none;
   border-bottom:3px solid transparent;
-
   background:transparent;
-
   color:inherit;
-
   font-size:inherit;
   font-weight:inherit;
-
   white-space:nowrap;
-
   cursor:pointer;
-
   transition:.2s ease;
 }
-
 
 .desktop-nav > a:hover,
 .desktop-nav > a.active,
@@ -239,84 +198,55 @@ header {
   border-bottom-color:var(--turquoise);
 }
 
-
-/* =========================================================
-   DROPDOWN
-========================================================= */
-
 .nav-dropdown {
   position:relative;
 }
 
-
 .nav-dropdown > button {
   gap:6px;
 }
-
 
 .dropdown-arrow {
   font-size:9px;
   transition:transform .2s ease;
 }
 
-
 .nav-dropdown:hover .dropdown-arrow,
 .nav-dropdown:focus-within .dropdown-arrow {
   transform:rotate(180deg);
 }
 
-
 .dropdown-menu {
   position:absolute;
-
   top:72px;
   left:50%;
-
   z-index:1100;
-
   min-width:210px;
-
   padding:8px;
-
   border:1px solid var(--border);
   border-radius:12px;
-
   background:white;
-
   box-shadow:0 16px 35px rgba(16,43,76,.12);
-
   opacity:0;
   visibility:hidden;
-
   transform:translate(-50%,8px);
-
   transition:.2s ease;
 }
-
 
 .nav-dropdown:hover .dropdown-menu,
 .nav-dropdown:focus-within .dropdown-menu {
   opacity:1;
   visibility:visible;
-
   transform:translate(-50%,0);
 }
 
-
 .dropdown-menu a {
   display:block;
-
   padding:11px 12px;
-
   border-radius:8px;
-
   color:#40556a;
-
   font-size:12px;
-
-  transition:.2s ease;
 }
-
 
 .dropdown-menu a:hover,
 .dropdown-menu a.active {
@@ -324,13 +254,10 @@ header {
   color:var(--blue);
 }
 
-
 .language {
   color:var(--blue);
-
   font-size:12px;
   font-weight:700;
-
   white-space:nowrap;
 }
 
@@ -341,69 +268,45 @@ header {
 
 .mobile-toggle {
   display:none;
-
   width:42px;
   height:42px;
-
   border:1px solid var(--border);
   border-radius:8px;
-
   background:white;
-
   color:var(--navy);
-
   cursor:pointer;
-
   font-size:20px;
 }
 
-
 .mobile-menu {
   display:none;
-
   padding:12px 4%;
-
   border-top:1px solid var(--border);
-
   background:white;
 }
 
-
 .mobile-menu a {
   display:block;
-
   padding:12px 0;
-
   border-bottom:1px solid #edf2f5;
-
   color:var(--navy);
-
   font-weight:700;
 }
 
-
 .mobile-group-label {
   padding:17px 0 6px;
-
   color:#96a5b1;
-
   font-size:9px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1px;
 }
 
-
 .mobile-sub {
   padding-left:14px !important;
-
   color:#536b7c !important;
-
   font-weight:600 !important;
 }
-
 
 .mobile-sub.active {
   color:var(--blue) !important;
@@ -417,11 +320,8 @@ header {
 
 .page-hero {
   position:relative;
-
   overflow:hidden;
-
   color:white;
-
   background:
     radial-gradient(
       circle at 82% 34%,
@@ -436,13 +336,10 @@ header {
     );
 }
 
-
 .page-hero::before {
   content:"";
-
   position:absolute;
   inset:0;
-
   background-image:
     linear-gradient(
       rgba(82,215,226,.05) 1px,
@@ -453,149 +350,85 @@ header {
       rgba(82,215,226,.05) 1px,
       transparent 1px
     );
-
   background-size:62px 62px;
 }
 
-
 .page-hero-inner {
   min-height:440px;
-
   position:relative;
   z-index:1;
-
   display:grid;
-
-  grid-template-columns:
-    1.08fr .92fr;
-
+  grid-template-columns:1.08fr .92fr;
   gap:70px;
-
   align-items:center;
-
   padding:72px 0;
 }
 
-
 .eyebrow {
   margin-bottom:17px;
-
   color:#8ce7ed;
-
   font-size:11px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1.9px;
 }
 
-
 h1 {
   margin-bottom:21px;
-
-  font-size:
-    clamp(
-      44px,
-      5vw,
-      65px
-    );
-
+  font-size:clamp(44px,5vw,65px);
   line-height:1;
-
   letter-spacing:-2px;
 }
 
-
 .hero-description {
   max-width:740px;
-
   color:#d3e5ee;
-
   font-size:17px;
-
   line-height:1.68;
 }
 
-
-/* =========================================================
-   HERO BOX
-========================================================= */
-
 .hero-box {
   padding:29px;
-
-  border:
-    1px solid
-    rgba(255,255,255,.15);
-
+  border:1px solid rgba(255,255,255,.15);
   border-radius:20px;
-
-  background:
-    rgba(255,255,255,.045);
+  background:rgba(255,255,255,.045);
 }
-
 
 .hero-box-label {
   margin-bottom:18px;
-
   color:#8ce7ed;
-
   font-size:9px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1.5px;
 }
 
-
 .hero-stats {
   display:grid;
-
-  grid-template-columns:
-    repeat(2,1fr);
-
+  grid-template-columns:repeat(2,1fr);
   gap:10px;
 }
 
-
 .hero-stat {
   min-height:108px;
-
   padding:17px;
-
-  border:
-    1px solid
-    rgba(255,255,255,.09);
-
+  border:1px solid rgba(255,255,255,.09);
   border-radius:11px;
-
-  background:
-    rgba(255,255,255,.035);
+  background:rgba(255,255,255,.035);
 }
-
 
 .hero-stat strong {
   display:block;
-
   margin-bottom:7px;
-
   color:white;
-
   font-size:27px;
-
   line-height:1;
 }
 
-
 .hero-stat span {
   display:block;
-
   color:#bbd5dd;
-
   font-size:9px;
-
   line-height:1.45;
 }
 
@@ -608,225 +441,142 @@ h1 {
   padding:82px 0;
 }
 
-
 .section-alt {
   background:var(--background);
 }
 
-
 .section-label {
   margin-bottom:10px;
-
   color:var(--cyan);
-
   font-size:10px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1.8px;
 }
 
-
 .section-title {
   margin-bottom:17px;
-
   color:var(--navy);
-
-  font-size:
-    clamp(
-      29px,
-      3.2vw,
-      41px
-    );
-
+  font-size:clamp(29px,3.2vw,41px);
   line-height:1.12;
-
   letter-spacing:-.9px;
 }
 
-
 .section-description {
-  max-width:900px;
-
+  max-width:920px;
   color:var(--muted);
-
   font-size:15px;
-
   line-height:1.72;
 }
 
-
-/* =========================================================
-   ANALYTICAL FRAME
-========================================================= */
-
 .frame-grid {
   display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
+  grid-template-columns:repeat(3,1fr);
   gap:15px;
-
   margin-top:38px;
 }
 
-
 .frame-card {
   min-height:220px;
-
   padding:27px;
-
   border:1px solid var(--border);
   border-radius:15px;
-
   background:white;
 }
 
-
 .frame-number {
   margin-bottom:26px;
-
   color:#9acbd5;
-
   font-size:10px;
   font-weight:800;
 }
 
-
 .frame-card h3 {
   margin-bottom:9px;
-
   color:var(--navy);
-
   font-size:18px;
 }
 
-
 .frame-card p {
   color:var(--muted);
-
   font-size:11px;
-
   line-height:1.6;
 }
 
-
-/* =========================================================
-   INFORMATION BOX
-========================================================= */
-
 .coverage-box {
   margin-top:25px;
-
   display:grid;
-
-  grid-template-columns:
-    55px 1fr;
-
+  grid-template-columns:55px 1fr;
   gap:20px;
-
   padding:25px;
-
   border:1px solid #cde2e8;
   border-radius:16px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f8fcfd,
-      #eef8fa
-    );
+  background:linear-gradient(
+    135deg,
+    #f8fcfd,
+    #eef8fa
+  );
 }
-
 
 .coverage-icon {
   width:50px;
   height:50px;
-
   display:grid;
-
   place-items:center;
-
   border-radius:12px;
-
   background:var(--navy);
-
   color:white;
-
   font-weight:800;
+  font-size:11px;
 }
-
 
 .coverage-box h4 {
   margin-bottom:7px;
-
   color:var(--navy);
-
   font-size:18px;
 }
 
-
 .coverage-box p {
   color:#566f7f;
-
   font-size:12px;
-
   line-height:1.65;
 }
 
 
 /* =========================================================
-   SHELLS
+   EXPLORER SHELLS
 ========================================================= */
 
 .explorer-shell,
 .year-compare-shell,
 .dependency-shell {
   margin-top:38px;
-
   overflow:hidden;
-
   border:1px solid var(--border);
   border-radius:22px;
-
   background:white;
-
   box-shadow:var(--shadow);
 }
-
 
 .explorer-toolbar,
 .year-compare-toolbar,
 .dependency-toolbar {
   padding:27px;
-
   border-bottom:1px solid var(--border);
-
   background:#f8fbfc;
 }
 
-
 .explorer-toolbar {
   display:grid;
-
-  grid-template-columns:
-    1.35fr 1.25fr .6fr;
-
+  grid-template-columns:1.35fr 1.25fr .6fr;
   gap:14px;
 }
 
-
 .year-compare-toolbar {
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:15px;
 }
-
 
 .explorer-main,
 .year-compare-main,
@@ -834,166 +584,242 @@ h1 {
   padding:28px;
 }
 
-
-/* =========================================================
-   CONTROLS
-========================================================= */
-
 .control label {
   display:block;
-
   margin-bottom:7px;
-
   color:#718495;
-
   font-size:10px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1px;
 }
 
-
 .control select {
   width:100%;
-
   min-height:45px;
-
   padding:0 12px;
-
   border:1px solid #cfdfe7;
   border-radius:9px;
-
   background:white;
-
   color:var(--navy);
-
   font-size:13px;
-
   outline:none;
 }
 
-
 .control select:focus {
   border-color:var(--cyan);
-
-  box-shadow:
-    0 0 0 3px
-    rgba(40,169,199,.10);
+  box-shadow:0 0 0 3px rgba(40,169,199,.10);
 }
 
 
 /* =========================================================
-   SELECTION TITLE
+   INDICATOR PASSPORT
+========================================================= */
+
+.indicator-passport {
+  border-bottom:1px solid var(--border);
+  background:white;
+}
+
+.passport-toggle {
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:18px 27px;
+  border:0;
+  background:white;
+  cursor:pointer;
+  text-align:left;
+}
+
+.passport-toggle-left {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.passport-icon {
+  width:34px;
+  height:34px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border-radius:9px;
+  background:#edf8fa;
+  color:var(--blue);
+  font-size:14px;
+  font-weight:800;
+}
+
+.passport-toggle strong {
+  display:block;
+  color:var(--navy);
+  font-size:12px;
+}
+
+.passport-toggle small {
+  display:block;
+  margin-top:2px;
+  color:var(--muted);
+  font-size:9px;
+}
+
+.passport-arrow {
+  color:var(--blue);
+  font-size:12px;
+  transition:.2s ease;
+}
+
+.indicator-passport.open .passport-arrow {
+  transform:rotate(180deg);
+}
+
+.passport-body {
+  display:none;
+  padding:0 27px 25px;
+}
+
+.indicator-passport.open .passport-body {
+  display:block;
+}
+
+.passport-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-bottom:14px;
+}
+
+.passport-item {
+  padding:14px;
+  border:1px solid var(--border);
+  border-radius:11px;
+  background:#fbfdfe;
+}
+
+.passport-item span {
+  display:block;
+  margin-bottom:5px;
+  color:#8a9aa6;
+  font-size:8px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
+
+.passport-item strong {
+  display:block;
+  color:var(--navy);
+  font-size:11px;
+  line-height:1.45;
+}
+
+.passport-note {
+  padding:16px;
+  border-radius:11px;
+  background:#f5f9fb;
+}
+
+.passport-note strong {
+  display:block;
+  margin-bottom:5px;
+  color:var(--navy);
+  font-size:10px;
+}
+
+.passport-note p {
+  color:#5e7384;
+  font-size:10px;
+  line-height:1.6;
+}
+
+.source-button {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-top:12px;
+  padding:9px 13px;
+  border:1px solid #c9dde5;
+  border-radius:8px;
+  background:white;
+  color:var(--blue);
+  font-size:10px;
+  font-weight:800;
+}
+
+
+/* =========================================================
+   SELECTION / KPI
 ========================================================= */
 
 .selection-title {
   margin-bottom:23px;
 }
 
-
 .selection-section {
   margin-bottom:6px;
-
   color:var(--cyan);
-
   font-size:11px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1px;
 }
-
 
 .selection-title h3 {
   color:var(--navy);
-
   font-size:25px;
-
   line-height:1.25;
 }
 
-
 .selection-title p {
   margin-top:5px;
-
   color:var(--muted);
-
   font-size:12px;
 }
 
-
-/* =========================================================
-   KPI
-========================================================= */
-
 .kpi-grid {
   display:grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
+  grid-template-columns:repeat(4,1fr);
   gap:13px;
-
   margin-bottom:28px;
 }
 
-
 .kpi {
   padding:20px;
-
   border:1px solid var(--border);
   border-radius:14px;
-
   background:white;
 }
 
-
 .kpi span {
   display:block;
-
   margin-bottom:7px;
-
   color:#889aa8;
-
   font-size:9px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1px;
 }
 
-
 .kpi strong {
   display:block;
-
   color:var(--navy);
-
   font-size:23px;
-
   line-height:1.15;
 }
 
-
 .kpi small {
   display:block;
-
   margin-top:6px;
-
   color:var(--muted);
-
   font-size:10px;
-
   line-height:1.4;
 }
 
-
 .kpi .missing {
   color:#7a8b98;
-
   font-size:17px;
 }
 
@@ -1004,86 +830,56 @@ h1 {
 
 .visual-grid {
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:18px;
 }
 
-
 .chart-card {
   min-width:0;
-
   padding:20px;
-
   border:1px solid var(--border);
   border-radius:15px;
-
   background:white;
 }
-
 
 .chart-head {
   margin-bottom:13px;
 }
 
-
 .chart-head strong {
   display:block;
-
   color:var(--navy);
-
   font-size:15px;
 }
 
-
 .chart-head span {
   display:block;
-
   margin-top:3px;
-
   color:var(--muted);
-
   font-size:10px;
 }
 
-
 .svg-wrap {
   width:100%;
-
   min-height:280px;
-
   overflow:hidden;
 }
 
-
 .svg-wrap svg {
   display:block;
-
   width:100%;
-
   height:280px;
 }
 
-
 .empty-chart {
   min-height:255px;
-
   display:grid;
-
   place-items:center;
-
   padding:20px;
-
   border-radius:10px;
-
   background:#fafcfd;
-
   color:#8494a1;
-
   font-size:12px;
-
   text-align:center;
 }
 
@@ -1094,82 +890,55 @@ h1 {
 
 .comparison-list {
   display:grid;
-
   gap:10px;
-
   max-height:420px;
-
   overflow:auto;
-
   padding-right:5px;
 }
 
-
 .comparison-row {
   display:grid;
-
-  grid-template-columns:
-    28px 155px 1fr 88px;
-
+  grid-template-columns:28px 155px 1fr 88px;
   gap:10px;
-
   align-items:center;
 }
 
-
 .comparison-code {
   color:#9aabb7;
-
   font-size:10px;
   font-weight:800;
 }
 
-
 .comparison-name {
   overflow:hidden;
-
   color:var(--navy);
-
   font-size:11px;
   font-weight:700;
-
   white-space:nowrap;
-
   text-overflow:ellipsis;
 }
 
-
 .comparison-track {
   height:8px;
-
   overflow:hidden;
-
   border-radius:10px;
-
   background:#e8eff3;
 }
 
-
 .comparison-bar {
   height:100%;
-
   border-radius:10px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--blue),
-      var(--turquoise)
-    );
+  background:linear-gradient(
+    90deg,
+    var(--blue),
+    var(--turquoise)
+  );
 }
-
 
 .comparison-value {
   color:var(--blue);
-
   font-size:11px;
   font-weight:800;
-
   text-align:right;
 }
 
@@ -1180,107 +949,72 @@ h1 {
 
 .metric-panel {
   margin-top:20px;
-
   padding-top:25px;
-
   border-top:1px solid var(--border);
 }
 
-
 .metric-panel-head {
   display:flex;
-
   justify-content:space-between;
   align-items:end;
-
   gap:15px;
-
   margin-bottom:17px;
 }
 
-
 .metric-panel-head h4 {
   color:var(--navy);
-
   font-size:18px;
 }
 
-
 .metric-panel-head span {
   color:var(--muted);
-
   font-size:10px;
 }
-
 
 .metric-groups {
   display:grid;
-
   gap:18px;
 }
 
-
 .metric-group h5 {
   margin-bottom:10px;
-
   color:var(--cyan);
-
   font-size:10px;
-
   text-transform:uppercase;
-
   letter-spacing:1.2px;
 }
 
-
 .metric-cards {
   display:grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
+  grid-template-columns:repeat(4,1fr);
   gap:10px;
 }
 
-
 .metric-card {
   min-width:0;
-
   padding:14px;
-
   border:1px solid var(--border);
   border-radius:11px;
-
   background:#fbfdfe;
 }
 
-
 .metric-card .metric-name {
   min-height:28px;
-
   color:#596f80;
-
   font-size:10px;
-
   line-height:1.35;
 }
 
-
 .metric-card .metric-value {
   margin-top:8px;
-
   color:var(--navy);
-
   font-size:17px;
   font-weight:800;
-
   word-break:break-word;
 }
 
-
 .metric-card .metric-value.na {
   color:#9aa8b2;
-
   font-size:13px;
   font-weight:700;
 }
@@ -1294,692 +1028,591 @@ h1 {
   margin-bottom:24px;
 }
 
-
 .compare-heading span {
   display:block;
-
   margin-bottom:5px;
-
   color:var(--cyan);
-
   font-size:10px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1px;
 }
-
 
 .compare-heading h3 {
   color:var(--navy);
-
   font-size:24px;
-
   line-height:1.3;
 }
 
-
 .compare-heading p {
   margin-top:6px;
-
   color:var(--muted);
-
   font-size:11px;
 }
 
-
 .compare-kpis {
   display:grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
+  grid-template-columns:repeat(4,1fr);
   gap:12px;
-
   margin-bottom:25px;
 }
 
-
 .compare-kpi {
   padding:19px;
-
   border:1px solid var(--border);
   border-radius:13px;
-
   background:#fbfdfe;
 }
 
-
 .compare-kpi-label {
   margin-bottom:8px;
-
   color:#8597a5;
-
   font-size:9px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1px;
 }
 
-
 .compare-kpi strong {
   display:block;
-
   color:var(--navy);
-
   font-size:21px;
-
   line-height:1.2;
 }
-
 
 .compare-kpi strong.positive {
   color:var(--positive);
 }
 
-
 .compare-kpi strong.negative {
   color:var(--negative);
 }
 
-
 .compare-kpi strong.na {
   color:#8797a3;
-
   font-size:15px;
 }
 
-
 .compare-kpi small {
   display:block;
-
   margin-top:6px;
-
   color:var(--muted);
-
   font-size:9px;
-
-  line-height:1.4;
 }
-
-
-/* =========================================================
-   YEAR BARS
-========================================================= */
 
 .year-bars {
   padding:22px;
-
   margin-bottom:27px;
-
   border:1px solid var(--border);
   border-radius:15px;
-
   background:white;
 }
-
 
 .year-bars-title {
   margin-bottom:18px;
 }
 
-
 .year-bars-title strong {
   display:block;
-
   color:var(--navy);
-
   font-size:15px;
 }
 
-
 .year-bars-title span {
   color:var(--muted);
-
   font-size:10px;
 }
 
-
 .year-bar-row {
   display:grid;
-
-  grid-template-columns:
-    62px 1fr 150px;
-
+  grid-template-columns:62px 1fr 150px;
   gap:13px;
-
   align-items:center;
-
   margin-top:13px;
 }
 
-
 .year-bar-year {
   color:var(--navy);
-
   font-size:12px;
   font-weight:800;
 }
 
-
 .year-bar-track {
   height:12px;
-
   overflow:hidden;
-
   border-radius:20px;
-
   background:#e8eff3;
 }
 
-
 .year-bar-fill {
   height:100%;
-
-  min-width:0;
-
   border-radius:20px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--blue),
-      var(--turquoise)
-    );
+  background:linear-gradient(
+    90deg,
+    var(--blue),
+    var(--turquoise)
+  );
 }
-
 
 .year-bar-value {
   color:var(--blue);
-
   font-size:11px;
   font-weight:800;
-
   text-align:right;
 }
 
 
 /* =========================================================
-   TABLE
+   TABLES
 ========================================================= */
 
 .compare-table-wrap {
   overflow-x:auto;
-
   border:1px solid var(--border);
   border-radius:15px;
 }
 
-
 .compare-table {
   width:100%;
-
   min-width:900px;
-
   border-collapse:collapse;
 }
-
 
 .compare-table thead {
   background:#f4f8fa;
 }
 
-
 .compare-table th {
   padding:13px 14px;
-
   border-bottom:1px solid var(--border);
-
   color:#617789;
-
   font-size:9px;
   font-weight:800;
-
   text-align:right;
-
   text-transform:uppercase;
-
   letter-spacing:.7px;
 }
-
 
 .compare-table th:first-child {
   text-align:left;
 }
 
-
 .compare-table td {
   padding:13px 14px;
-
   border-bottom:1px solid #edf2f5;
-
   color:#536b7c;
-
   font-size:10px;
-
   text-align:right;
-
-  vertical-align:middle;
 }
 
-
 .compare-table td:first-child {
-  max-width:320px;
-
   color:var(--navy);
-
   font-weight:700;
-
   text-align:left;
 }
 
-
-.compare-table tr:last-child td {
-  border-bottom:none;
-}
-
-
-.compare-table tr:hover td {
-  background:#fbfdfe;
-}
-
-
 .delta-positive {
   color:var(--positive) !important;
-
   font-weight:800;
 }
-
 
 .delta-negative {
   color:var(--negative) !important;
-
   font-weight:800;
 }
 
-
 .delta-neutral {
   color:#617789 !important;
-
   font-weight:700;
 }
 
-
 .na-cell {
   color:#a0adb7 !important;
-
   font-style:italic;
 }
 
 
 /* =========================================================
-   DEPENDENCY CONTROLS
+   DEPENDENCY ANALYSIS
 ========================================================= */
 
 .dependency-toolbar {
   display:grid;
-
   gap:17px;
 }
 
-
 .dependency-main-controls {
   display:grid;
-
-  grid-template-columns:
-    .75fr 1.25fr 1.25fr;
-
+  grid-template-columns:.75fr 1.25fr 1.25fr;
   gap:14px;
 }
-
 
 .dependency-mode-controls {
   display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
+  grid-template-columns:repeat(3,1fr);
   gap:14px;
 }
 
-
 .dependency-mode-controls.two {
-  grid-template-columns:
-    repeat(2,1fr);
+  grid-template-columns:repeat(2,1fr);
 }
 
-
-.dependency-control-group.hidden {
-  display:none;
+.hidden {
+  display:none !important;
 }
-
-
-/* =========================================================
-   DEPENDENCY RESULTS
-========================================================= */
 
 .dependency-intro {
   margin-bottom:25px;
 }
 
-
 .dependency-intro span {
   display:block;
-
   margin-bottom:6px;
-
   color:var(--cyan);
-
   font-size:10px;
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1px;
 }
 
-
 .dependency-intro h3 {
   color:var(--navy);
-
   font-size:24px;
-
-  line-height:1.3;
 }
-
 
 .dependency-intro p {
   margin-top:7px;
-
   color:var(--muted);
-
   font-size:11px;
-
-  line-height:1.6;
 }
-
 
 .stat-grid {
   display:grid;
-
-  grid-template-columns:
-    repeat(5,1fr);
-
+  grid-template-columns:repeat(5,1fr);
   gap:11px;
-
   margin-bottom:22px;
 }
 
-
 .stat-card {
   min-height:118px;
-
   padding:17px;
-
   border:1px solid var(--border);
   border-radius:13px;
-
   background:#fbfdfe;
 }
 
-
 .stat-card span {
   display:block;
-
   margin-bottom:8px;
-
   color:#8496a5;
-
   font-size:9px;
   font-weight:800;
-
   text-transform:uppercase;
-
-  letter-spacing:.9px;
 }
-
 
 .stat-card strong {
   display:block;
-
   color:var(--navy);
-
   font-size:23px;
-
-  line-height:1.15;
 }
-
 
 .stat-card small {
   display:block;
-
   margin-top:6px;
-
   color:var(--muted);
-
   font-size:9px;
-
-  line-height:1.4;
 }
-
 
 .stat-card strong.positive {
   color:var(--positive);
 }
 
-
 .stat-card strong.negative {
   color:var(--negative);
 }
 
-
-/* =========================================================
-   REGRESSION SUMMARY
-========================================================= */
-
 .regression-summary {
   display:grid;
-
-  grid-template-columns:
-    .9fr 1.1fr;
-
+  grid-template-columns:.9fr 1.1fr;
   gap:15px;
-
   margin-bottom:20px;
 }
-
 
 .equation-box,
 .interpretation-box {
   padding:21px;
-
   border:1px solid var(--border);
   border-radius:14px;
-
   background:white;
 }
-
 
 .equation-box span,
 .interpretation-box span {
   display:block;
-
   margin-bottom:8px;
-
   color:var(--cyan);
-
   font-size:9px;
   font-weight:800;
-
   text-transform:uppercase;
-
-  letter-spacing:1px;
 }
-
 
 .equation-box strong {
-  display:block;
-
   color:var(--navy);
-
   font-size:17px;
-
-  line-height:1.55;
-
-  word-break:break-word;
 }
-
 
 .interpretation-box p {
   color:#536b7c;
-
   font-size:11px;
-
   line-height:1.65;
 }
 
-
-/* =========================================================
-   DEPENDENCY VISUAL
-========================================================= */
-
 .dependency-visual-grid {
   display:grid;
-
-  grid-template-columns:
-    1.25fr .75fr;
-
+  grid-template-columns:1.25fr .75fr;
   gap:18px;
-
-  margin-top:20px;
 }
-
 
 .scatter-card,
 .observation-card {
   padding:20px;
-
   border:1px solid var(--border);
   border-radius:15px;
-
   background:white;
 }
 
-
 .scatter-card h4,
 .observation-card h4 {
-  margin-bottom:4px;
-
   color:var(--navy);
-
   font-size:16px;
 }
-
 
 .scatter-card > p,
 .observation-card > p {
   margin-bottom:15px;
-
   color:var(--muted);
-
   font-size:10px;
 }
 
+.observation-scroll {
+  max-height:330px;
+  overflow:auto;
+}
 
 .observation-table {
   width:100%;
-
   border-collapse:collapse;
 }
 
-
-.observation-table th {
-  padding:9px 7px;
-
-  border-bottom:1px solid var(--border);
-
-  color:#8294a2;
-
-  font-size:8px;
-  font-weight:800;
-
-  text-align:right;
-
-  text-transform:uppercase;
-}
-
-
-.observation-table th:first-child {
-  text-align:left;
-}
-
-
+.observation-table th,
 .observation-table td {
   padding:9px 7px;
-
   border-bottom:1px solid #edf2f5;
-
-  color:#536b7c;
-
   font-size:9px;
-
   text-align:right;
 }
 
-
+.observation-table th:first-child,
 .observation-table td:first-child {
-  color:var(--navy);
-
-  font-weight:800;
-
   text-align:left;
 }
 
+.causality-note {
+  margin-top:20px;
+  padding:20px 22px;
+  border-left:4px solid var(--turquoise);
+  border-radius:0 12px 12px 0;
+  background:#f3f9fa;
+}
 
-.observation-scroll {
-  max-height:330px;
+.causality-note strong {
+  display:block;
+  margin-bottom:6px;
+  color:var(--navy);
+  font-size:12px;
+}
 
-  overflow:auto;
+.causality-note p {
+  color:#566f7f;
+  font-size:10px;
 }
 
 
 /* =========================================================
-   CAUSAL NOTE
+   HISTORICAL AVAILABILITY
 ========================================================= */
 
-.causality-note {
-  margin-top:20px;
-
-  padding:20px 22px;
-
-  border-left:4px solid var(--turquoise);
-
-  border-radius:0 12px 12px 0;
-
-  background:#f3f9fa;
+.history-shell {
+  margin-top:38px;
+  padding:28px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  background:white;
+  box-shadow:var(--shadow);
 }
 
+.history-summary {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:25px;
+}
 
-.causality-note strong {
+.history-summary-card {
+  padding:18px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fbfdfe;
+}
+
+.history-summary-card span {
   display:block;
+  color:#8799a7;
+  font-size:8px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
 
-  margin-bottom:6px;
-
+.history-summary-card strong {
+  display:block;
+  margin-top:6px;
   color:var(--navy);
+  font-size:18px;
+}
 
+.history-table-wrap {
+  overflow-x:auto;
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+
+.history-table {
+  width:100%;
+  min-width:1050px;
+  border-collapse:collapse;
+}
+
+.history-table th {
+  padding:11px 9px;
+  border-bottom:1px solid var(--border);
+  background:#f4f8fa;
+  color:#637789;
+  font-size:8px;
+  font-weight:800;
+  text-align:center;
+}
+
+.history-table th:first-child {
+  min-width:225px;
+  position:sticky;
+  left:0;
+  z-index:2;
+  background:#f4f8fa;
+  text-align:left;
+}
+
+.history-table td {
+  padding:10px 9px;
+  border-bottom:1px solid #edf2f5;
+  font-size:9px;
+  text-align:center;
+  background:white;
+}
+
+.history-table td:first-child {
+  position:sticky;
+  left:0;
+  z-index:1;
+  background:white;
+  color:var(--navy);
+  font-weight:700;
+  text-align:left;
+}
+
+.history-status {
+  display:inline-flex;
+  min-width:32px;
+  justify-content:center;
+  padding:4px 6px;
+  border-radius:6px;
+  font-size:8px;
+  font-weight:800;
+}
+
+.status-yes {
+  background:#e9f7f4;
+  color:#177b70;
+}
+
+.status-limited {
+  background:#fff4db;
+  color:#987020;
+}
+
+.status-version {
+  background:#eaf0fb;
+  color:#345ea8;
+}
+
+.status-none {
+  color:#a4b0b8;
+}
+
+.legend-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:15px;
+  font-size:9px;
+  color:#647889;
+}
+
+.legend-item {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.source-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:11px;
+  margin-top:28px;
+}
+
+.history-source-card {
+  padding:18px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fbfdfe;
+}
+
+.history-source-card .source-group {
+  color:var(--cyan);
+  font-size:8px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+.history-source-card h4 {
+  margin:5px 0;
+  color:var(--navy);
   font-size:12px;
 }
 
+.history-source-card p {
+  color:#617789;
+  font-size:9px;
+  line-height:1.55;
+}
 
-.causality-note p {
-  color:#566f7f;
-
-  font-size:10px;
-
-  line-height:1.6;
+.history-source-card a {
+  display:inline-block;
+  margin-top:8px;
+  color:var(--blue);
+  font-size:9px;
+  font-weight:800;
 }
 
 
@@ -1989,234 +1622,155 @@ h1 {
 
 .interpretation-grid {
   display:grid;
-
-  grid-template-columns:
-    .9fr 1.1fr;
-
+  grid-template-columns:.9fr 1.1fr;
   gap:25px;
-
   margin-top:38px;
 }
 
-
 .interpretation-main {
   padding:31px;
-
   border:1px solid #cce3e7;
   border-radius:17px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #f4fbfc,
-      #ffffff
-    );
+  background:linear-gradient(
+    145deg,
+    #f4fbfc,
+    #ffffff
+  );
 }
-
 
 .interpretation-main h3 {
   margin-bottom:12px;
-
   color:var(--navy);
-
   font-size:22px;
 }
 
-
 .interpretation-main p {
   color:#536c7d;
-
   font-size:12px;
-
   line-height:1.7;
 }
 
-
 .rule-list {
   display:grid;
-
   gap:10px;
 }
 
-
 .rule {
   padding:18px 20px;
-
   border:1px solid var(--border);
   border-radius:12px;
-
   background:white;
 }
 
-
 .rule strong {
   display:block;
-
   margin-bottom:5px;
-
   color:var(--navy);
-
   font-size:12px;
 }
 
-
 .rule p {
   color:var(--muted);
-
   font-size:10px;
-
-  line-height:1.55;
 }
 
 
 /* =========================================================
-   CTA
+   CTA / FOOTER
 ========================================================= */
 
 .final-cta {
   padding:51px 0;
-
   color:white;
-
-  background:
-    linear-gradient(
-      110deg,
-      #0b2845,
-      #145879
-    );
+  background:linear-gradient(
+    110deg,
+    #0b2845,
+    #145879
+  );
 }
-
 
 .final-cta-inner {
   display:flex;
-
   justify-content:space-between;
   align-items:center;
-
   gap:30px;
 }
 
-
 .final-cta h2 {
   margin-bottom:7px;
-
   font-size:29px;
 }
 
-
 .final-cta p {
   max-width:720px;
-
   color:#c7dce7;
 }
 
-
 .btn {
   min-height:48px;
-
   display:inline-flex;
-
   align-items:center;
   justify-content:center;
-
   padding:0 23px;
-
   border-radius:9px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #79d5dd,
-      #55bedb
-    );
-
+  background:linear-gradient(
+    90deg,
+    #79d5dd,
+    #55bedb
+  );
   color:#082b46;
-
   font-size:14px;
   font-weight:700;
 }
 
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
 footer {
   padding:33px 0 20px;
-
   border-top:1px solid var(--border);
-
   background:#f8fafc;
 }
 
-
 .footer-grid {
   display:grid;
-
-  grid-template-columns:
-    1.25fr 1fr;
-
+  grid-template-columns:1.25fr 1fr;
   gap:35px;
-
   align-items:center;
 }
 
-
 .footer-project strong {
   display:block;
-
   margin-bottom:7px;
-
   color:var(--navy);
 }
 
-
 .footer-project p {
   color:var(--muted);
-
   font-size:12px;
 }
-
 
 .footer-links {
   display:flex;
-
   justify-content:flex-end;
   flex-wrap:wrap;
-
   gap:17px;
-
   color:#53677a;
-
   font-size:12px;
 }
 
-
 .copyright {
   margin-top:25px;
-
   padding-top:18px;
-
   border-top:1px solid var(--border);
-
   text-align:center;
-
   color:#8795a2;
-
   font-size:11px;
 }
 
-
 .load-error {
   padding:18px;
-
   border:1px solid #efd5d5;
   border-radius:12px;
-
   background:#fff7f7;
-
   color:#8c4c4c;
-
   font-size:13px;
 }
 
@@ -2239,24 +1793,21 @@ footer {
     grid-template-columns:1fr;
   }
 
-  .hero-box {
-    max-width:650px;
+  .passport-grid {
+    grid-template-columns:repeat(2,1fr);
   }
 
   .metric-cards {
-    grid-template-columns:
-      repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
   }
 
   .kpi-grid,
   .compare-kpis {
-    grid-template-columns:
-      repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
   }
 
   .stat-grid {
-    grid-template-columns:
-      repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
   }
 
 }
@@ -2268,23 +1819,21 @@ footer {
   .visual-grid,
   .interpretation-grid,
   .dependency-visual-grid,
-  .regression-summary {
+  .regression-summary,
+  .source-grid {
     grid-template-columns:1fr;
   }
 
   .explorer-toolbar {
-    grid-template-columns:
-      1fr 1fr;
+    grid-template-columns:1fr 1fr;
   }
 
-  .explorer-toolbar
-  .control:last-child {
+  .explorer-toolbar .control:last-child {
     grid-column:1/-1;
   }
 
   .metric-cards {
-    grid-template-columns:
-      repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
   }
 
   .dependency-main-controls,
@@ -2293,15 +1842,8 @@ footer {
     grid-template-columns:1fr;
   }
 
-  .year-bar-row {
-    grid-template-columns:
-      50px 1fr;
-  }
-
-  .year-bar-value {
-    grid-column:2;
-
-    text-align:left;
+  .history-summary {
+    grid-template-columns:1fr;
   }
 
   .footer-grid {
@@ -2322,16 +1864,13 @@ footer {
     display:none;
   }
 
-  .page-hero-inner {
-    padding:57px 0;
-  }
-
   h1 {
     font-size:43px;
   }
 
   .hero-stats,
   .explorer-toolbar,
+  .passport-grid,
   .metric-cards,
   .kpi-grid,
   .compare-kpis,
@@ -2340,20 +1879,8 @@ footer {
     grid-template-columns:1fr;
   }
 
-  .explorer-toolbar
-  .control:last-child {
+  .explorer-toolbar .control:last-child {
     grid-column:auto;
-  }
-
-  .comparison-row {
-    grid-template-columns:
-      24px 92px 1fr 88px;
-
-    gap:7px;
-  }
-
-  .comparison-name {
-    font-size:10px;
   }
 
   .coverage-box {
@@ -2362,7 +1889,6 @@ footer {
 
   .final-cta-inner {
     flex-direction:column;
-
     align-items:flex-start;
   }
 
@@ -2389,10 +1915,7 @@ footer {
       class="brand"
     >
 
-      <div
-        class="logo-mark"
-        aria-hidden="true"
-      >
+      <div class="logo-mark">
         <span></span>
         <span></span>
         <span></span>
@@ -2437,13 +1960,8 @@ footer {
       <div class="nav-dropdown active">
 
         <button type="button">
-
           Анализи
-
-          <span class="dropdown-arrow">
-            ▼
-          </span>
-
+          <span class="dropdown-arrow">▼</span>
         </button>
 
         <div class="dropdown-menu">
@@ -2512,11 +2030,9 @@ footer {
       Данни и индекси
     </a>
 
-
     <div class="mobile-group-label">
       Анализи
     </div>
-
 
     <a
       class="mobile-sub"
@@ -2525,14 +2041,12 @@ footer {
       Регионален анализ
     </a>
 
-
     <a
       class="mobile-sub active"
       href="sectors.html"
     >
       Секторен анализ
     </a>
-
 
     <a href="results.html">
       Резултати
@@ -2576,12 +2090,11 @@ footer {
         трудовите и цифровите характеристики
         на 21 икономически дейности
         в България по A*21 / NACE Rev. 2.
-        Данните позволяват
-        наблюдение на секторната динамика,
-        сравнение между години
-        и изследване на статистически зависимости
-        между показателите
-        за периода 2020–2025 г.
+        Числовият панел обхваща периода
+        2020–2025 г.,
+        а историческата информационна рамка
+        проследява наличността
+        на официални серии за 2010–2019 г.
 
       </p>
 
@@ -2591,62 +2104,37 @@ footer {
     <aside class="hero-box">
 
       <div class="hero-box-label">
-        Обхват на секторния масив
+        Обхват на секторната база
       </div>
 
       <div class="hero-stats">
 
         <div class="hero-stat">
-
-          <strong>
-            21
-          </strong>
-
+          <strong>21</strong>
           <span>
-            икономически сектора
-            A–U
+            икономически сектора A–U
           </span>
-
         </div>
 
-
         <div class="hero-stat">
-
-          <strong>
-            29
-          </strong>
-
+          <strong>29</strong>
           <span>
             секторни показателя
           </span>
-
         </div>
 
-
         <div class="hero-stat">
-
-          <strong>
-            2020–2025
-          </strong>
-
+          <strong>2020–2025</strong>
           <span>
-            времеви обхват
+            числов секторен панел
           </span>
-
         </div>
 
-
         <div class="hero-stat">
-
-          <strong>
-            3
-          </strong>
-
+          <strong>2010–2019</strong>
           <span>
-            режима за анализ
-            на зависимости
+            историческа наличност
           </span>
-
         </div>
 
       </div>
@@ -2659,7 +2147,7 @@ footer {
 
 
 <!-- =========================================================
-     ANALYTICAL FRAME
+     FRAME
 ========================================================= -->
 
 <section class="standard-section">
@@ -2676,16 +2164,15 @@ footer {
 
     <p class="section-description">
 
-      Секторният разрез допълва
-      специфичните емпирични изследвания
-      на проекта с официални показатели
-      за структурата и цифровата трансформация
-      на българската икономика.
-      Той позволява анализ на нива,
-      динамика и статистически зависимости,
-      без да конструира
-      единен индекс за класиране
-      на секторите.
+      Секторният разрез съчетава
+      икономически показатели,
+      цифрова интензивност
+      и човешки капитал.
+      Анализът позволява
+      проследяване на динамика,
+      сравнение между години,
+      сравнение между сектори
+      и проверка на статистически зависимости.
 
     </p>
 
@@ -2703,15 +2190,10 @@ footer {
         </h3>
 
         <p>
-
-          Добавена стойност,
-          заетост,
+          БДС, заетост,
           отработени часове,
           производителност
-          и инвестиционни характеристики
-          очертават икономическата структура
-          на отделните дейности.
-
+          и инвестиции.
         </p>
 
       </article>
@@ -2724,20 +2206,18 @@ footer {
         </div>
 
         <h3>
-          Използване на цифрови технологии
+          Използване на технологии
         </h3>
 
         <p>
-
-          Показателите обхващат
-          интернет свързаност,
-          облачни услуги,
-          ERP, CRM,
-          бизнес интелигентност,
+          Интернет,
+          cloud,
+          ERP,
+          CRM,
+          BI,
           IoT,
-          изкуствен интелект
+          AI
           и анализ на данни.
-
         </p>
 
       </article>
@@ -2754,14 +2234,9 @@ footer {
         </h3>
 
         <p>
-
-          Анализира се
-          присъствието на ИКТ специалисти,
+          ИКТ специалисти,
           тяхното участие в заетостта
-          и инвестициите
-          на предприятията
-          в ИКТ обучение.
-
+          и обучение на персонала.
         </p>
 
       </article>
@@ -2778,19 +2253,18 @@ footer {
       <div>
 
         <h4>
-          Секторен профил, а не секторна класация
+          Секторен профил, а не единна класация
         </h4>
 
         <p>
 
-          Показателите имат различни мерни единици,
-          различна статистическа наличност
-          и различен секторен обхват.
-          Затова тази страница
-          не конструира общ композитен индекс
-          за 21-те икономически дейности.
-          Сравненията и зависимостите
-          се изчисляват върху конкретно избрани показатели.
+          Различното секторно покритие,
+          честота и дефиниции
+          на показателите
+          не дават надеждна основа
+          за механично конструиране
+          на един композитен индекс
+          за всички 21 сектора.
 
         </p>
 
@@ -2804,7 +2278,7 @@ footer {
 
 
 <!-- =========================================================
-     SECTOR EXPLORER
+     EXPLORER
 ========================================================= -->
 
 <section
@@ -2819,24 +2293,22 @@ footer {
     </div>
 
     <h2 class="section-title">
-      Интерактивен профил на 21 икономически дейности
+      Интерактивен секторен профил
     </h2>
 
     <p class="section-description">
 
       Избери икономическа дейност,
       показател и година.
-      Модулът показва текущата стойност,
-      абсолютната и относителната промяна,
-      динамиката за периода,
-      сравнението с останалите сектори
-      и пълния наличен профил
-      за избраната година.
+      Под селекторите можеш да разгънеш
+      методологичния паспорт
+      на избрания показател.
 
     </p>
 
 
     <div class="explorer-shell">
+
 
       <div class="explorer-toolbar">
 
@@ -2846,8 +2318,7 @@ footer {
             Икономическа дейност
           </label>
 
-          <select id="sectorSelect">
-          </select>
+          <select id="sectorSelect"></select>
 
         </div>
 
@@ -2858,8 +2329,7 @@ footer {
             Показател
           </label>
 
-          <select id="indicatorSelect">
-          </select>
+          <select id="indicatorSelect"></select>
 
         </div>
 
@@ -2870,8 +2340,60 @@ footer {
             Година
           </label>
 
-          <select id="yearSelect">
-          </select>
+          <select id="yearSelect"></select>
+
+        </div>
+
+      </div>
+
+
+      <!-- PASSPORT -->
+
+      <div
+        class="indicator-passport"
+        id="indicatorPassport"
+      >
+
+        <button
+          class="passport-toggle"
+          id="passportToggle"
+          type="button"
+        >
+
+          <div class="passport-toggle-left">
+
+            <div class="passport-icon">
+              i
+            </div>
+
+            <div>
+
+              <strong>
+                Паспорт на показателя
+              </strong>
+
+              <small id="passportShortLabel">
+                Методология, покритие и официален източник
+              </small>
+
+            </div>
+
+          </div>
+
+          <span class="passport-arrow">
+            ▼
+          </span>
+
+        </button>
+
+
+        <div class="passport-body">
+
+          <div id="passportContent">
+
+            Зареждане на методологията…
+
+          </div>
 
         </div>
 
@@ -2882,43 +2404,9 @@ footer {
 
         <div id="explorerContent">
 
-          <div
-            style="
-              color:#708494;
-              font-size:13px;
-            "
-          >
-            Зареждане на данните…
-          </div>
+          Зареждане на данните…
 
         </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="coverage-box">
-
-      <div class="coverage-icon">
-        NA
-      </div>
-
-      <div>
-
-        <h4>
-          Липсваща стойност ≠ нула
-        </h4>
-
-        <p>
-
-          Липсващите,
-          непубликуваните
-          и стойностите извън статистическия обхват
-          се показват като „Няма данни“
-          и никога не се заменят с 0.
-
-        </p>
 
       </div>
 
@@ -2950,12 +2438,11 @@ footer {
 
     <p class="section-description">
 
-      Избери две години,
-      за да сравниш избрания сектор
-      и избрания показател.
-      Таблицата под сравнението
-      представя измененията
-      за всички налични показатели.
+      Сравни стойността
+      на избрания показател
+      между две години
+      и проследи
+      абсолютната и относителната промяна.
 
     </p>
 
@@ -2970,8 +2457,7 @@ footer {
             Базова година
           </label>
 
-          <select id="baseYearSelect">
-          </select>
+          <select id="baseYearSelect"></select>
 
         </div>
 
@@ -2982,8 +2468,7 @@ footer {
             Сравнителна година
           </label>
 
-          <select id="compareYearSelect">
-          </select>
+          <select id="compareYearSelect"></select>
 
         </div>
 
@@ -2999,44 +2484,13 @@ footer {
 
     </div>
 
-
-    <div class="coverage-box">
-
-      <div class="coverage-icon">
-        %
-      </div>
-
-      <div>
-
-        <h4>
-          Абсолютно и относително изменение
-        </h4>
-
-        <p>
-
-          За стойностните показатели
-          се показват абсолютна
-          и процентна промяна.
-          Когато самият показател
-          е процент,
-          абсолютната разлика
-          се представя в процентни пункта,
-          а относителното изменение –
-          спрямо стойността през базовата година.
-
-        </p>
-
-      </div>
-
-    </div>
-
   </div>
 
 </section>
 
 
 <!-- =========================================================
-     DEPENDENCY ANALYSIS
+     DEPENDENCY
 ========================================================= -->
 
 <section
@@ -3056,21 +2510,17 @@ footer {
 
     <p class="section-description">
 
-      Избери зависима променлива Y,
-      независима променлива X
-      и режим на анализ.
-      Всяко наблюдение представлява
-      икономически сектор.
-      Модулът изчислява
-      корелацията на Pearson,
-      проста линейна регресия,
-      R² и статистическата значимост
-      на установената връзка.
+      Проверява се линейната статистическа връзка
+      между независима променлива X
+      и зависима променлива Y,
+      като отделните икономически сектори
+      са наблюденията в анализа.
 
     </p>
 
 
     <div class="dependency-shell">
+
 
       <div class="dependency-toolbar">
 
@@ -3128,112 +2578,95 @@ footer {
         </div>
 
 
-        <!-- LEVELS -->
-
         <div
-          class="dependency-control-group"
           id="levelsControls"
+          class="dependency-mode-controls"
         >
 
-          <div class="dependency-mode-controls">
+          <div class="control">
 
-            <div class="control">
+            <label for="dependencyYear">
+              Година
+            </label>
 
-              <label for="dependencyYear">
-                Година
-              </label>
-
-              <select id="dependencyYear">
-              </select>
-
-            </div>
+            <select id="dependencyYear">
+            </select>
 
           </div>
 
         </div>
 
 
-        <!-- CHANGES -->
-
         <div
-          class="dependency-control-group hidden"
           id="changesControls"
+          class="dependency-mode-controls two hidden"
         >
 
-          <div class="dependency-mode-controls two">
+          <div class="control">
 
-            <div class="control">
+            <label for="changeBaseYear">
+              Базова година
+            </label>
 
-              <label for="changeBaseYear">
-                Базова година
-              </label>
+            <select id="changeBaseYear">
+            </select>
 
-              <select id="changeBaseYear">
-              </select>
-
-            </div>
+          </div>
 
 
-            <div class="control">
+          <div class="control">
 
-              <label for="changeCompareYear">
-                Сравнителна година
-              </label>
+            <label for="changeCompareYear">
+              Сравнителна година
+            </label>
 
-              <select id="changeCompareYear">
-              </select>
-
-            </div>
+            <select id="changeCompareYear">
+            </select>
 
           </div>
 
         </div>
 
-
-        <!-- LAG -->
 
         <div
-          class="dependency-control-group hidden"
           id="lagControls"
+          class="dependency-mode-controls two hidden"
         >
 
-          <div class="dependency-mode-controls two">
+          <div class="control">
 
-            <div class="control">
+            <label for="lagXYear">
+              Година на X
+            </label>
 
-              <label for="lagXYear">
-                Година на X
-              </label>
+            <select id="lagXYear">
+            </select>
 
-              <select id="lagXYear">
-              </select>
-
-            </div>
+          </div>
 
 
-            <div class="control">
+          <div class="control">
 
-              <label for="lagLength">
-                Лаг
-              </label>
+            <label for="lagLength">
+              Лаг
+            </label>
 
-              <select id="lagLength">
+            <select id="lagLength">
 
-                <option value="1">
-                  +1 година
-                </option>
+              <option value="1">
+                +1 година
+              </option>
 
-                <option value="2">
-                  +2 години
-                </option>
+              <option value="2">
+                +2 години
+              </option>
 
-              </select>
-
-            </div>
+            </select>
 
           </div>
 
         </div>
+
 
       </div>
 
@@ -3251,24 +2684,99 @@ footer {
     <div class="causality-note">
 
       <strong>
-        Важно за интерпретацията
+        Корелация ≠ причинност
       </strong>
 
       <p>
 
-        Корелацията и простата линейна регресия
-        показват статистическа асоциация
-        между избраните показатели.
-        Установената връзка
-        не доказва автоматично
+        Установената статистическа зависимост
+        показва асоциация
+        между показателите.
+        Тя не доказва автоматично
         причинно-следствено влияние.
-        Резултатите следва да се интерпретират
-        с оглед на размера на извадката,
-        секторната хетерогенност
-        и възможното влияние
-        на други фактори.
 
       </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HISTORICAL AVAILABILITY
+========================================================= -->
+
+<section
+  class="standard-section"
+  id="historicalAvailability"
+>
+
+  <div class="container">
+
+    <div class="section-label">
+      Информационна инфраструктура
+    </div>
+
+    <h2 class="section-title">
+      Историческа наличност на официалните серии
+    </h2>
+
+    <p class="section-description">
+
+      Матрицата показва
+      за кои показатели
+      съществува официална
+      или методологично проследима серия
+      през периода 2010–2019 г.
+      Тя показва наличност на източник,
+      а не включени числови стойности
+      в текущия панел.
+
+    </p>
+
+
+    <div class="history-shell">
+
+      <div id="historyContent">
+
+        Зареждане на историческата рамка…
+
+      </div>
+
+    </div>
+
+
+    <div class="coverage-box">
+
+      <div class="coverage-icon">
+        !
+      </div>
+
+      <div>
+
+        <h4>
+          Историческа наличност ≠ непрекъсната съпоставима серия
+        </h4>
+
+        <p>
+
+          Част от цифровите показатели
+          се появяват по-късно,
+          наблюдават се модулно
+          или променят дефиницията си.
+          Например ранната версия на DII
+          не е идентична
+          с последващите версии.
+          Поради това не се извършва
+          механичен backcast
+          и липсващите години
+          не се запълват с proxy стойности.
+
+        </p>
+
+      </div>
 
     </div>
 
@@ -3281,7 +2789,7 @@ footer {
      INTERPRETATION
 ========================================================= -->
 
-<section class="standard-section">
+<section class="standard-section section-alt">
 
   <div class="container">
 
@@ -3293,42 +2801,27 @@ footer {
       Как трябва да се четат секторните данни?
     </h2>
 
-    <p class="section-description">
-
-      Секторните показатели
-      позволяват едновременно
-      да се проследяват нива,
-      динамика и взаимовръзки.
-      Трите перспективи
-      не са взаимозаменяеми
-      и отговарят на различни аналитични въпроси.
-
-    </p>
-
 
     <div class="interpretation-grid">
 
       <div class="interpretation-main">
 
         <h3>
-          От описание към проверка на зависимости
+          Ниво, динамика, зависимост и наличност
         </h3>
 
         <p>
 
-          Сравнението по години
-          показва как даден сектор се променя.
-          Секторното сравнение
-          показва неговата позиция
-          спрямо останалите дейности.
+          Секторният профил показва
+          състоянието в конкретна година.
+          Сравнението между години
+          показва динамиката.
           Анализът на зависимости
-          проверява дали различията
-          в един показател
-          са статистически свързани
-          с различията в друг.
-          Така страницата преминава
-          от описателен профил
-          към по-системен количествен анализ.
+          проверява статистическите взаимовръзки,
+          а историческата матрица
+          показва докъде назад
+          може методологично да бъде проследен
+          всеки показател.
 
         </p>
 
@@ -3340,12 +2833,12 @@ footer {
         <div class="rule">
 
           <strong>
-            r показва посоката и силата
+            NA не означава нула
           </strong>
 
           <p>
-            Стойности близо до +1 показват силна положителна,
-            а стойности близо до −1 – силна отрицателна връзка.
+            Липсата на публикувана стойност
+            не означава отсъствие на явлението.
           </p>
 
         </div>
@@ -3354,13 +2847,13 @@ footer {
         <div class="rule">
 
           <strong>
-            R² показва обяснената вариация
+            Пр.п. и % са различни
           </strong>
 
           <p>
-            R² показва каква част от вариацията на Y
-            е статистически свързана с X
-            в простия линеен модел.
+            При процентни показатели
+            абсолютната разлика
+            се измерва в процентни пункта.
           </p>
 
         </div>
@@ -3369,14 +2862,14 @@ footer {
         <div class="rule">
 
           <strong>
-            p-value оценява статистическата значимост
+            Съпоставимостта е условие
           </strong>
 
           <p>
-            Малка p-стойност е индикация,
-            че наблюдаваната линейна зависимост
-            трудно би се обяснила само със случайност,
-            при предпоставките на теста.
+            Историческите серии
+            се използват само когато
+            дефиницията и секторното покритие
+            позволяват сравнение.
           </p>
 
         </div>
@@ -3385,14 +2878,13 @@ footer {
         <div class="rule">
 
           <strong>
-            Асоциацията не е причинност
+            Асоциацията не доказва причинност
           </strong>
 
           <p>
-            Дори значимата корелация
-            не доказва, че X причинява Y.
-            Необходими са допълнителни
-            моделни и причинни проверки.
+            Корелационните и регресионните резултати
+            трябва да се интерпретират
+            като статистически зависимости.
           </p>
 
         </div>
@@ -3421,17 +2913,14 @@ footer {
       </h2>
 
       <p>
-
         Основните емпирични
         и системни изводи
         от проекта
         са обобщени
         в страницата „Резултати“.
-
       </p>
 
     </div>
-
 
     <a
       class="btn"
@@ -3465,13 +2954,10 @@ footer {
         </strong>
 
         <p>
-
           Научноизследователски проект № 6/2024
           <br>
-
           „Дигитална конкурентоспособност
           на социално-икономическата система на България“
-
         </p>
 
       </div>
@@ -3479,37 +2965,14 @@ footer {
 
       <div class="footer-links">
 
-        <a href="index.html">
-          Начало
-        </a>
-
-        <a href="about.html">
-          За проекта
-        </a>
-
-        <a href="methodology.html">
-          Методология
-        </a>
-
-        <a href="data-indices.html">
-          Данни и индекси
-        </a>
-
-        <a href="regions.html">
-          Регионален анализ
-        </a>
-
-        <a href="sectors.html">
-          Секторен анализ
-        </a>
-
-        <a href="results.html">
-          Резултати
-        </a>
-
-        <a href="publications.html">
-          Публикации
-        </a>
+        <a href="index.html">Начало</a>
+        <a href="about.html">За проекта</a>
+        <a href="methodology.html">Методология</a>
+        <a href="data-indices.html">Данни и индекси</a>
+        <a href="regions.html">Регионален анализ</a>
+        <a href="sectors.html">Секторен анализ</a>
+        <a href="results.html">Резултати</a>
+        <a href="publications.html">Публикации</a>
 
       </div>
 
@@ -3534,7 +2997,7 @@ footer {
 
 
 /* =========================================================
-   MOBILE MENU
+   ELEMENTS
 ========================================================= */
 
 const mobileToggle =
@@ -3542,50 +3005,6 @@ const mobileToggle =
 
 const mobileMenu =
   document.getElementById("mobileMenu");
-
-
-if(
-  mobileToggle &&
-  mobileMenu
-){
-
-  mobileToggle.addEventListener(
-    "click",
-    function(){
-
-      mobileMenu.style.display =
-        mobileMenu.style.display === "block"
-        ? "none"
-        : "block";
-
-    }
-  );
-
-
-  mobileMenu
-    .querySelectorAll("a")
-    .forEach(
-      function(link){
-
-        link.addEventListener(
-          "click",
-          function(){
-
-            mobileMenu.style.display =
-              "none";
-
-          }
-        );
-
-      }
-    );
-
-}
-
-
-/* =========================================================
-   ELEMENTS
-========================================================= */
 
 const sectorSelect =
   document.getElementById("sectorSelect");
@@ -3599,7 +3018,6 @@ const yearSelect =
 const explorerContent =
   document.getElementById("explorerContent");
 
-
 const baseYearSelect =
   document.getElementById("baseYearSelect");
 
@@ -3609,6 +3027,20 @@ const compareYearSelect =
 const yearCompareContent =
   document.getElementById("yearCompareContent");
 
+const indicatorPassport =
+  document.getElementById("indicatorPassport");
+
+const passportToggle =
+  document.getElementById("passportToggle");
+
+const passportContent =
+  document.getElementById("passportContent");
+
+const passportShortLabel =
+  document.getElementById("passportShortLabel");
+
+const historyContent =
+  document.getElementById("historyContent");
 
 const dependencyMode =
   document.getElementById("dependencyMode");
@@ -3648,10 +3080,52 @@ const dependencyContent =
 
 
 let dataset = null;
+let metadata = null;
+let historical = null;
 
 
 /* =========================================================
-   BASIC HELPERS
+   MOBILE
+========================================================= */
+
+if(
+  mobileToggle &&
+  mobileMenu
+){
+
+  mobileToggle.addEventListener(
+    "click",
+    function(){
+
+      mobileMenu.style.display =
+        mobileMenu.style.display === "block"
+        ? "none"
+        : "block";
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   PASSPORT TOGGLE
+========================================================= */
+
+passportToggle.addEventListener(
+  "click",
+  function(){
+
+    indicatorPassport
+      .classList
+      .toggle("open");
+
+  }
+);
+
+
+/* =========================================================
+   HELPERS
 ========================================================= */
 
 function safeNumber(v){
@@ -3683,26 +3157,13 @@ function displayUnit(unit){
 
   const map = {
 
-    "млн. евро":
-      "млн. евро",
-
-    "хил. лица":
-      "хил. лица",
-
-    "хил. часа":
-      "хил. часа",
-
-    "евро на час":
-      "евро/час",
-
-    "%":
-      "%",
-
-    "% от предприятията":
-      "% от предприятията",
-
-    "% от заетите лица":
-      "% от заетите лица"
+    "млн. евро":"млн. евро",
+    "хил. лица":"хил. лица",
+    "хил. часа":"хил. часа",
+    "евро на час":"евро/час",
+    "%":"%",
+    "% от предприятията":"% от предприятията",
+    "% от заетите лица":"% от заетите лица"
 
   };
 
@@ -3721,26 +3182,13 @@ function compactUnit(unit){
 
   const map = {
 
-    "млн. евро":
-      "млн. евро",
-
-    "хил. лица":
-      "хил. лица",
-
-    "хил. часа":
-      "хил. часа",
-
-    "евро на час":
-      "€/час",
-
-    "%":
-      "%",
-
-    "% от предприятията":
-      "%",
-
-    "% от заетите лица":
-      "%"
+    "млн. евро":"млн. евро",
+    "хил. лица":"хил. лица",
+    "хил. часа":"хил. часа",
+    "евро на час":"€/час",
+    "%":"%",
+    "% от предприятията":"%",
+    "% от заетите лица":"%"
 
   };
 
@@ -3752,11 +3200,6 @@ function compactUnit(unit){
 
 function deltaUnit(unit){
 
-  if(!unit){
-    return "";
-  }
-
-
   if(
     isPercentageUnit(unit)
   ){
@@ -3766,22 +3209,15 @@ function deltaUnit(unit){
 
   const map = {
 
-    "млн. евро":
-      "млн. евро",
-
-    "хил. лица":
-      "хил. лица",
-
-    "хил. часа":
-      "хил. часа",
-
-    "евро на час":
-      "евро/час"
+    "млн. евро":"млн. евро",
+    "хил. лица":"хил. лица",
+    "хил. часа":"хил. часа",
+    "евро на час":"евро/час"
 
   };
 
 
-  return map[unit] || unit;
+  return map[unit] || unit || "";
 
 }
 
@@ -3819,6 +3255,68 @@ function fmtNumber(
 }
 
 
+function fmt(
+  value,
+  unit
+){
+
+  if(
+    !safeNumber(value)
+  ){
+    return "Няма данни";
+  }
+
+
+  const u =
+    displayUnit(unit);
+
+
+  return (
+    fmtNumber(
+      value,
+      unit
+    ) +
+    (
+      u
+      ? " " + u
+      : ""
+    )
+  );
+
+}
+
+
+function fmtCompact(
+  value,
+  unit
+){
+
+  if(
+    !safeNumber(value)
+  ){
+    return "Няма данни";
+  }
+
+
+  const u =
+    compactUnit(unit);
+
+
+  return (
+    fmtNumber(
+      value,
+      unit
+    ) +
+    (
+      u
+      ? " " + u
+      : ""
+    )
+  );
+
+}
+
+
 function fmtStat(
   value,
   digits = 3
@@ -3842,70 +3340,6 @@ function fmtStat(
 }
 
 
-function fmt(
-  value,
-  unit
-){
-
-  if(
-    !safeNumber(value)
-  ){
-    return "Няма публикувана стойност";
-  }
-
-
-  const number =
-    fmtNumber(
-      value,
-      unit
-    );
-
-
-  const u =
-    displayUnit(unit);
-
-
-  return (
-    u
-    ? `${number} ${u}`
-    : number
-  );
-
-}
-
-
-function fmtCompact(
-  value,
-  unit
-){
-
-  if(
-    !safeNumber(value)
-  ){
-    return "Няма данни";
-  }
-
-
-  const number =
-    fmtNumber(
-      value,
-      unit
-    );
-
-
-  const u =
-    compactUnit(unit);
-
-
-  return (
-    u
-    ? `${number} ${u}`
-    : number
-  );
-
-}
-
-
 function fmtPercent(value){
 
   if(
@@ -3916,7 +3350,11 @@ function fmtPercent(value){
 
 
   return (
-    `${value >= 0 ? "+" : ""}` +
+    (
+      value >= 0
+      ? "+"
+      : ""
+    ) +
     new Intl.NumberFormat(
       "bg-BG",
       {
@@ -3925,37 +3363,6 @@ function fmtPercent(value){
       }
     ).format(value) +
     "%"
-  );
-
-}
-
-
-function signedAbsoluteChange(
-  base,
-  compare,
-  unit
-){
-
-  if(
-    !safeNumber(base) ||
-    !safeNumber(compare)
-  ){
-    return "Няма данни";
-  }
-
-
-  const diff =
-    compare - base;
-
-
-  const u =
-    deltaUnit(unit);
-
-
-  return (
-    `${diff >= 0 ? "+" : ""}` +
-    `${fmtNumber(diff,unit)}` +
-    `${u ? " " + u : ""}`
   );
 
 }
@@ -3990,30 +3397,39 @@ function relativeChange(
 }
 
 
-function changeClass(
+function signedAbsoluteChange(
   base,
-  compare
+  compare,
+  unit
 ){
 
   if(
     !safeNumber(base) ||
     !safeNumber(compare)
   ){
-    return "na";
+    return "Няма данни";
   }
 
 
-  if(compare > base){
-    return "positive";
-  }
+  const diff =
+    compare -
+    base;
 
 
-  if(compare < base){
-    return "negative";
-  }
+  return (
+    (
+      diff >= 0
+      ? "+"
+      : ""
+    ) +
+    fmtNumber(
+      diff,
+      unit
+    ) +
+    " " +
+    deltaUnit(unit)
+  );
 
-
-  return "";
 }
 
 
@@ -4024,13 +3440,8 @@ function changeClass(
 function getIndicatorByCode(code){
 
   return dataset.indicators.find(
-    function(indicator){
-
-      return (
-        indicator.code === code
-      );
-
-    }
+    item =>
+      item.code === code
   );
 
 }
@@ -4051,14 +3462,9 @@ function getRecord(
 ){
 
   return dataset.records.find(
-    function(record){
-
-      return (
-        record.section === section &&
-        record.year === Number(year)
-      );
-
-    }
+    record =>
+      record.section === section &&
+      record.year === Number(year)
   );
 
 }
@@ -4077,134 +3483,447 @@ function getValue(
     );
 
 
-  if(!record){
-    return null;
-  }
-
-
-  return record.values[code];
+  return record
+    ? record.values[code]
+    : null;
 
 }
 
 
-function availableSeries(
-  section,
-  code
-){
+/* =========================================================
+   PASSPORT
+========================================================= */
 
-  return dataset.period.map(
-    function(year){
+function renderPassport(){
 
-      return {
+  if(
+    !metadata ||
+    !indicatorSelect.value
+  ){
 
-        year:year,
+    passportContent.innerHTML = `
+      <div class="load-error">
+        Методологичният паспорт
+        не е наличен.
+      </div>
+    `;
 
+    return;
+
+  }
+
+
+  const item =
+    metadata.indicators.find(
+      x =>
+        x.code ===
+        indicatorSelect.value
+    );
+
+
+  if(!item){
+
+    passportContent.innerHTML = `
+      <div class="load-error">
+        Няма методологична информация
+        за избрания показател.
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  passportShortLabel.textContent =
+    item.label;
+
+
+  passportContent.innerHTML = `
+
+    <div class="passport-grid">
+
+      <div class="passport-item">
+
+        <span>
+          Измерение
+        </span>
+
+        <strong>
+          ${item.dimension || "—"}
+        </strong>
+
+      </div>
+
+
+      <div class="passport-item">
+
+        <span>
+          Мерна единица
+        </span>
+
+        <strong>
+          ${item.unit || "—"}
+        </strong>
+
+      </div>
+
+
+      <div class="passport-item">
+
+        <span>
+          Eurostat набор
+        </span>
+
+        <strong>
+          ${item.dataset || "—"}
+        </strong>
+
+      </div>
+
+
+      <div class="passport-item">
+
+        <span>
+          Покритие
+        </span>
+
+        <strong>
+          ${item.coverage || "—"}
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="passport-note">
+
+      <strong>
+        Методологична бележка
+      </strong>
+
+      <p>
+        ${item.method_note || "Няма допълнителна бележка."}
+      </p>
+
+      ${
+        item.url
+        ? `
+          <a
+            class="source-button"
+            href="${item.url}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Официален източник ↗
+          </a>
+        `
+        : ""
+      }
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   MAIN EXPLORER
+========================================================= */
+
+function renderExplorer(){
+
+  const section =
+    sectorSelect.value;
+
+
+  const year =
+    Number(
+      yearSelect.value
+    );
+
+
+  const indicator =
+    getIndicator();
+
+
+  const sector =
+    dataset.sectors.find(
+      s =>
+        s.code === section
+    );
+
+
+  const current =
+    getValue(
+      section,
+      year,
+      indicator.code
+    );
+
+
+  const series =
+    dataset.period.map(
+      y => ({
+        year:y,
         value:
           getValue(
             section,
-            year,
-            code
+            y,
+            indicator.code
           )
-
-      };
-
-    }
-  );
-
-}
-
-
-/* =========================================================
-   FULL PERIOD CHANGE
-========================================================= */
-
-function fullPeriodChange(
-  series,
-  unit
-){
-
-  const valid =
-    series.filter(
-      function(item){
-
-        return safeNumber(
-          item.value
-        );
-
-      }
+      })
     );
 
 
+  const valid =
+    series.filter(
+      x =>
+        safeNumber(x.value)
+    );
+
+
+  let absoluteText =
+    "Недостатъчни данни";
+
+
+  let relativeText =
+    "Недостатъчни данни";
+
+
+  let periodText =
+    "—";
+
+
   if(
-    valid.length < 2
+    valid.length >= 2
   ){
 
-    return {
+    const first =
+      valid[0];
 
-      absolute:
-        "Недостатъчни данни",
 
-      relative:
-        "Недостатъчни данни",
+    const last =
+      valid[
+        valid.length - 1
+      ];
 
-      note:
-        "Не са налични поне две сравними наблюдения.",
 
-      className:
-        "na"
+    absoluteText =
+      signedAbsoluteChange(
+        first.value,
+        last.value,
+        indicator.unit
+      );
 
-    };
+
+    const rel =
+      relativeChange(
+        first.value,
+        last.value
+      );
+
+
+    relativeText =
+      rel === "not-applicable"
+      ? "Неприложимо"
+      : fmtPercent(rel);
+
+
+    periodText =
+      `${first.year} → ${last.year}`;
 
   }
 
 
-  const first =
-    valid[0];
+  explorerContent.innerHTML = `
+
+    <div class="selection-title">
+
+      <div class="selection-section">
+        ${section} · ${year}
+      </div>
+
+      <h3>
+        ${sector.name}
+      </h3>
+
+      <p>
+        ${indicator.label}
+      </p>
+
+    </div>
 
 
-  const last =
-    valid[
-      valid.length - 1
-    ];
+    <div class="kpi-grid">
+
+      <div class="kpi">
+
+        <span>
+          Стойност
+        </span>
+
+        <strong>
+          ${fmt(current,indicator.unit)}
+        </strong>
+
+        <small>
+          ${year}
+        </small>
+
+      </div>
 
 
-  const rel =
-    relativeChange(
-      first.value,
-      last.value
-    );
+      <div class="kpi">
+
+        <span>
+          Абсолютна промяна
+        </span>
+
+        <strong>
+          ${absoluteText}
+        </strong>
+
+        <small>
+          ${periodText}
+        </small>
+
+      </div>
 
 
-  return {
+      <div class="kpi">
 
-    absolute:
-      signedAbsoluteChange(
-        first.value,
-        last.value,
-        unit
-      ),
+        <span>
+          Относителна промяна
+        </span>
 
-    relative:
-      rel === "not-applicable"
-      ? "Неприложимо"
-      : fmtPercent(rel),
+        <strong>
+          ${relativeText}
+        </strong>
 
-    note:
-      `${first.year} → ${last.year}`,
+        <small>
+          ${periodText}
+        </small>
 
-    className:
-      changeClass(
-        first.value,
-        last.value
-      )
+      </div>
 
-  };
+
+      <div class="kpi">
+
+        <span>
+          Налични години
+        </span>
+
+        <strong>
+          ${valid.length}/${dataset.period.length}
+        </strong>
+
+        <small>
+          ${
+            valid.length
+            ? valid
+                .map(x => x.year)
+                .join(", ")
+            : "Няма данни"
+          }
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="visual-grid">
+
+      <div class="chart-card">
+
+        <div class="chart-head">
+
+          <strong>
+            Динамика във времето
+          </strong>
+
+          <span>
+            ${indicator.label}
+          </span>
+
+        </div>
+
+        ${trendSvg(series,indicator)}
+
+      </div>
+
+
+      <div class="chart-card">
+
+        <div class="chart-head">
+
+          <strong>
+            Сравнение между секторите · ${year}
+          </strong>
+
+          <span>
+            Само наличните стойности
+          </span>
+
+        </div>
+
+        ${
+          comparisonHtml(
+            indicator.code,
+            year,
+            indicator
+          )
+        }
+
+      </div>
+
+    </div>
+
+
+    <div class="metric-panel">
+
+      <div class="metric-panel-head">
+
+        <h4>
+          Пълен секторен профил · ${year}
+        </h4>
+
+        <span>
+          29 показателя
+        </span>
+
+      </div>
+
+      <div class="metric-groups">
+
+        ${
+          metricsHtml(
+            getRecord(
+              section,
+              year
+            )
+          )
+        }
+
+      </div>
+
+    </div>
+
+  `;
+
+
+  renderPassport();
+
+  renderYearComparison();
 
 }
 
 
 /* =========================================================
-   TREND SVG
+   TREND
 ========================================================= */
 
 function trendSvg(
@@ -4214,13 +3933,8 @@ function trendSvg(
 
   const valid =
     series.filter(
-      function(item){
-
-        return safeNumber(
-          item.value
-        );
-
-      }
+      x =>
+        safeNumber(x.value)
     );
 
 
@@ -4229,15 +3943,10 @@ function trendSvg(
   ){
 
     return `
-
       <div class="empty-chart">
-
-        Няма достатъчно
-        публикувани стойности
+        Недостатъчно данни
         за времева линия.
-
       </div>
-
     `;
 
   }
@@ -4246,170 +3955,136 @@ function trendSvg(
   const W = 560;
   const H = 280;
 
-  const left = 50;
-  const right = 18;
-  const top = 20;
-  const bottom = 42;
+  const L = 52;
+  const R = 20;
+  const T = 22;
+  const B = 42;
 
 
-  const years =
-    dataset.period;
-
-
-  const minYear =
-    Math.min(...years);
-
-
-  const maxYear =
-    Math.max(...years);
-
-
-  const vals =
+  const values =
     valid.map(
-      item => item.value
+      x => x.value
     );
 
 
   let min =
-    Math.min(...vals);
+    Math.min(...values);
 
 
   let max =
-    Math.max(...vals);
+    Math.max(...values);
 
 
   if(min === max){
+
     min -= 1;
     max += 1;
+
   }
 
 
   const pad =
-    (max - min) * .12;
+    (
+      max -
+      min
+    ) *
+    .1;
 
 
   min -= pad;
   max += pad;
 
 
-  const x =
-    function(year){
-
-      const span =
-        maxYear - minYear || 1;
-
-
-      return (
-        left +
-        (
-          (year - minYear) /
-          span
-        ) *
-        (
-          W -
-          left -
-          right
-        )
-      );
-
-    };
+  const firstYear =
+    Math.min(
+      ...dataset.period
+    );
 
 
-  const y =
-    function(value){
-
-      return (
-        top +
-        (
-          max -
-          value
-        ) /
-        (
-          max -
-          min
-        ) *
-        (
-          H -
-          top -
-          bottom
-        )
-      );
-
-    };
+  const lastYear =
+    Math.max(
+      ...dataset.period
+    );
 
 
-  const points =
+  function x(year){
+
+    return (
+      L +
+      (
+        year -
+        firstYear
+      ) /
+      (
+        lastYear -
+        firstYear
+      ) *
+      (
+        W -
+        L -
+        R
+      )
+    );
+
+  }
+
+
+  function y(value){
+
+    return (
+      T +
+      (
+        max -
+        value
+      ) /
+      (
+        max -
+        min
+      ) *
+      (
+        H -
+        T -
+        B
+      )
+    );
+
+  }
+
+
+  const polyline =
     valid
       .map(
-        item =>
-          `${x(item.year)},${y(item.value)}`
+        p =>
+          `${x(p.year)},${y(p.value)}`
       )
       .join(" ");
 
 
-  const grid =
-    [0,1,2,3]
+  const dots =
+    valid
       .map(
-        function(i){
+        p => `
 
-          const yy =
-            top +
-            i *
-            (
-              H -
-              top -
-              bottom
-            ) /
-            3;
+          <circle
+            cx="${x(p.year)}"
+            cy="${y(p.value)}"
+            r="5"
+            fill="#2457c5"
+            stroke="white"
+            stroke-width="2"
+          >
+            <title>
+              ${p.year}: ${fmt(p.value,indicator.unit)}
+            </title>
+          </circle>
 
-
-          const value =
-            max -
-            i *
-            (
-              max -
-              min
-            ) /
-            3;
-
-
-          return `
-
-            <line
-              x1="${left}"
-              y1="${yy}"
-              x2="${W-right}"
-              y2="${yy}"
-              stroke="#e6eef2"
-              stroke-width="1"
-            />
-
-            <text
-              x="${left-8}"
-              y="${yy+4}"
-              text-anchor="end"
-              font-size="9"
-              fill="#8798a5"
-            >
-              ${
-                new Intl.NumberFormat(
-                  "bg-BG",
-                  {
-                    maximumFractionDigits:1
-                  }
-                ).format(value)
-              }
-            </text>
-
-          `;
-
-        }
+        `
       )
       .join("");
 
 
-  const yearLabels =
-    years
+  const labels =
+    dataset.period
       .map(
         year => `
 
@@ -4418,7 +4093,7 @@ function trendSvg(
             y="${H-13}"
             text-anchor="middle"
             font-size="9"
-            fill="#8495a3"
+            fill="#8295a3"
           >
             ${year}
           </text>
@@ -4428,60 +4103,22 @@ function trendSvg(
       .join("");
 
 
-  const dots =
-    valid
-      .map(
-        function(item){
-
-          return `
-
-            <circle
-              cx="${x(item.year)}"
-              cy="${y(item.value)}"
-              r="4.5"
-              fill="#2457c5"
-              stroke="#ffffff"
-              stroke-width="2"
-            >
-
-              <title>
-                ${item.year}: ${fmt(item.value,indicator.unit)}
-              </title>
-
-            </circle>
-
-          `;
-
-        }
-      )
-      .join("");
-
-
   return `
 
     <div class="svg-wrap">
 
-      <svg
-        viewBox="0 0 ${W} ${H}"
-        role="img"
-        aria-label="Динамика на показателя"
-      >
-
-        ${grid}
+      <svg viewBox="0 0 ${W} ${H}">
 
         <line
-          x1="${left}"
-          y1="${H-bottom}"
-          x2="${W-right}"
-          y2="${H-bottom}"
-          stroke="#bdcbd4"
-          stroke-width="1"
+          x1="${L}"
+          y1="${H-B}"
+          x2="${W-R}"
+          y2="${H-B}"
+          stroke="#d5e0e6"
         />
 
-        ${yearLabels}
-
         <polyline
-          points="${points}"
+          points="${polyline}"
           fill="none"
           stroke="#28a9c7"
           stroke-width="3"
@@ -4490,6 +4127,7 @@ function trendSvg(
         />
 
         ${dots}
+        ${labels}
 
       </svg>
 
@@ -4513,49 +4151,35 @@ function comparisonHtml(
   const values =
     dataset.sectors
       .map(
-        function(sector){
-
-          return {
-
-            code:
+        sector => ({
+          code:sector.code,
+          name:sector.name,
+          value:
+            getValue(
               sector.code,
-
-            name:
-              sector.name,
-
-            value:
-              getValue(
-                sector.code,
-                year,
-                code
-              )
-
-          };
-
-        }
+              year,
+              code
+            )
+        })
       )
       .filter(
-        item =>
-          safeNumber(item.value)
+        x =>
+          safeNumber(x.value)
       )
       .sort(
         (a,b) =>
-          b.value - a.value
+          b.value -
+          a.value
       );
 
 
   if(!values.length){
 
     return `
-
       <div class="empty-chart">
-
-        Няма публикувани
-        секторни стойности
+        Няма налични стойности
         за избраната година.
-
       </div>
-
     `;
 
   }
@@ -4564,7 +4188,7 @@ function comparisonHtml(
   const max =
     Math.max(
       ...values.map(
-        item => item.value
+        x => x.value
       )
     );
 
@@ -4574,63 +4198,46 @@ function comparisonHtml(
     <div class="comparison-list">
 
       ${
-        values
-          .map(
-            function(item){
+        values.map(
+          item => `
 
-              const width =
-                max === 0
-                ? 0
-                : (
-                    item.value /
-                    max
-                  ) *
-                  100;
+            <div class="comparison-row">
 
+              <div class="comparison-code">
+                ${item.code}
+              </div>
 
-              return `
+              <div
+                class="comparison-name"
+                title="${item.name}"
+              >
+                ${item.name}
+              </div>
+
+              <div class="comparison-track">
 
                 <div
-                  class="comparison-row"
-                  title="${item.code} - ${item.name}"
+                  class="comparison-bar"
+                  style="
+                    width:${
+                      max === 0
+                      ? 0
+                      : item.value / max * 100
+                    }%
+                  "
                 >
-
-                  <div class="comparison-code">
-                    ${item.code}
-                  </div>
-
-                  <div class="comparison-name">
-                    ${item.name}
-                  </div>
-
-                  <div class="comparison-track">
-
-                    <div
-                      class="comparison-bar"
-                      style="width:${width}%"
-                    >
-                    </div>
-
-                  </div>
-
-                  <div class="comparison-value">
-
-                    ${
-                      fmtCompact(
-                        item.value,
-                        indicator.unit
-                      )
-                    }
-
-                  </div>
-
                 </div>
 
-              `;
+              </div>
 
-            }
-          )
-          .join("")
+              <div class="comparison-value">
+                ${fmtCompact(item.value,indicator.unit)}
+              </div>
+
+            </div>
+
+          `
+        ).join("")
       }
 
     </div>
@@ -4641,122 +4248,106 @@ function comparisonHtml(
 
 
 /* =========================================================
-   ALL METRICS
+   METRIC PROFILE
 ========================================================= */
 
 function metricsHtml(record){
 
   if(!record){
-    return "";
+
+    return `
+      <div class="empty-chart">
+        Няма секторен профил
+        за избраната година.
+      </div>
+    `;
+
   }
 
 
   const groups = {};
 
 
-  dataset.indicators
-    .forEach(
-      function(indicator){
+  dataset.indicators.forEach(
+    indicator => {
 
-        const group =
-          indicator.dimension ||
-          "Други показатели";
-
-
-        if(!groups[group]){
-          groups[group] = [];
-        }
+      const group =
+        indicator.dimension ||
+        "Други показатели";
 
 
-        groups[group].push({
-
-          indicator:
-            indicator,
-
-          value:
-            record.values[
-              indicator.code
-            ]
-
-        });
-
+      if(!groups[group]){
+        groups[group] = [];
       }
-    );
+
+
+      groups[group].push({
+        indicator,
+        value:
+          record.values[
+            indicator.code
+          ]
+      });
+
+    }
+  );
 
 
   return Object.keys(groups)
     .map(
-      function(group){
+      group => `
 
-        return `
+        <div class="metric-group">
 
-          <div class="metric-group">
+          <h5>
+            ${group}
+          </h5>
 
-            <h5>
-              ${group}
-            </h5>
+          <div class="metric-cards">
 
-            <div class="metric-cards">
+            ${
+              groups[group]
+                .map(
+                  item => `
 
-              ${
-                groups[group]
-                  .map(
-                    function(item){
+                    <div class="metric-card">
 
-                      const missing =
-                        !safeNumber(
-                          item.value
-                        );
+                      <div class="metric-name">
+                        ${item.indicator.label}
+                      </div>
 
+                      <div
+                        class="
+                          metric-value
+                          ${
+                            safeNumber(item.value)
+                            ? ""
+                            : "na"
+                          }
+                        "
+                      >
+                        ${
+                          safeNumber(item.value)
+                          ? fmt(
+                              item.value,
+                              item.indicator.unit
+                            )
+                          : "Няма данни"
+                        }
+                      </div>
 
-                      return `
+                    </div>
 
-                        <div
-                          class="metric-card"
-                          title="${
-                            item.indicator.note ||
-                            item.indicator.label
-                          }"
-                        >
-
-                          <div class="metric-name">
-                            ${item.indicator.label}
-                          </div>
-
-                          <div
-                            class="
-                              metric-value
-                              ${missing ? "na" : ""}
-                            "
-                          >
-
-                            ${
-                              missing
-                              ? "Няма данни"
-                              : fmt(
-                                  item.value,
-                                  item.indicator.unit
-                                )
-                            }
-
-                          </div>
-
-                        </div>
-
-                      `;
-
-                    }
-                  )
-                  .join("")
-              }
-
-            </div>
+                  `
+                )
+                .join("")
+            }
 
           </div>
 
-        `;
+        </div>
 
-      }
+      `
     )
     .join("");
 
@@ -4764,454 +4355,159 @@ function metricsHtml(record){
 
 
 /* =========================================================
-   MAIN EXPLORER
+   YEAR COMPARISON
 ========================================================= */
 
-function renderExplorer(){
-
-  if(!dataset){
-    return;
-  }
-
+function renderYearComparison(){
 
   const section =
     sectorSelect.value;
-
-
-  const year =
-    Number(
-      yearSelect.value
-    );
 
 
   const indicator =
     getIndicator();
 
 
-  const sector =
-    dataset.sectors.find(
-      item =>
-        item.code === section
+  const baseYear =
+    Number(
+      baseYearSelect.value
     );
 
 
-  const record =
-    getRecord(
-      section,
-      year
+  const compareYear =
+    Number(
+      compareYearSelect.value
     );
 
 
-  const current =
-    record
-    ? record.values[
-        indicator.code
-      ]
-    : null;
-
-
-  const series =
-    availableSeries(
+  const base =
+    getValue(
       section,
+      baseYear,
       indicator.code
     );
 
 
-  const change =
-    fullPeriodChange(
-      series,
+  const compare =
+    getValue(
+      section,
+      compareYear,
+      indicator.code
+    );
+
+
+  const absolute =
+    signedAbsoluteChange(
+      base,
+      compare,
       indicator.unit
     );
 
 
-  const availableYears =
-    dataset.period.filter(
-      y =>
-        safeNumber(
-          getValue(
-            section,
-            y,
-            indicator.code
-          )
-        )
+  const relative =
+    relativeChange(
+      base,
+      compare
     );
 
 
-  const coverageText =
-    record &&
-    record.coverage
-    ? record.coverage
-    : "Няма информация за обхвата на прякото ИКТ изследване.";
+  yearCompareContent.innerHTML = `
 
+    <div class="compare-heading">
 
-  explorerContent.innerHTML = `
-
-    <div class="selection-title">
-
-      <div class="selection-section">
-        ${section} · ${year}
-      </div>
+      <span>
+        ${baseYear} → ${compareYear}
+      </span>
 
       <h3>
-        ${sector.name}
+        ${indicator.label}
       </h3>
 
       <p>
-        ${coverageText}
+        ${
+          dataset.sectors.find(
+            s =>
+              s.code ===
+              section
+          ).name
+        }
       </p>
 
     </div>
 
 
-    <div class="kpi-grid">
+    <div class="compare-kpis">
 
-      <div class="kpi">
+      <div class="compare-kpi">
 
-        <span>
-          Избран показател
-        </span>
-
-        <strong
-          class="${
-            safeNumber(current)
-            ? ""
-            : "missing"
-          }"
-        >
-          ${
-            safeNumber(current)
-            ? fmt(
-                current,
-                indicator.unit
-              )
-            : "Няма данни"
-          }
-        </strong>
-
-        <small>
-          ${indicator.label}
-        </small>
-
-      </div>
-
-
-      <div class="kpi">
-
-        <span>
-          Абсолютна промяна
-        </span>
-
-        <strong
-          class="${
-            change.className === "na"
-            ? "missing"
-            : ""
-          }"
-        >
-          ${change.absolute}
-        </strong>
-
-        <small>
-          ${change.note}
-        </small>
-
-      </div>
-
-
-      <div class="kpi">
-
-        <span>
-          Относителна промяна
-        </span>
-
-        <strong
-          class="${
-            change.className === "na"
-            ? "missing"
-            : ""
-          }"
-        >
-          ${change.relative}
-        </strong>
-
-        <small>
-          ${change.note}
-        </small>
-
-      </div>
-
-
-      <div class="kpi">
-
-        <span>
-          Налични години
-        </span>
-
-        <strong>
-          ${availableYears.length}
-          /
-          ${dataset.period.length}
-        </strong>
-
-        <small>
-          ${
-            availableYears.length
-            ? availableYears.join(", ")
-            : "Няма публикувани стойности"
-          }
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="visual-grid">
-
-      <div class="chart-card">
-
-        <div class="chart-head">
-
-          <strong>
-            Динамика
-            ${dataset.period[0]}
-            –
-            ${
-              dataset.period[
-                dataset.period.length - 1
-              ]
-            }
-          </strong>
-
-          <span>
-            ${indicator.label}
-            ·
-            ${displayUnit(indicator.unit)}
-          </span>
-
-        </div>
-
-        ${
-          trendSvg(
-            series,
-            indicator
-          )
-        }
-
-      </div>
-
-
-      <div class="chart-card">
-
-        <div class="chart-head">
-
-          <strong>
-            Сравнение между секторите · ${year}
-          </strong>
-
-          <span>
-            Показват се секторите
-            с налична стойност
-          </span>
-
-        </div>
-
-        ${
-          comparisonHtml(
-            indicator.code,
-            year,
-            indicator
-          )
-        }
-
-      </div>
-
-    </div>
-
-
-    <div class="metric-panel">
-
-      <div class="metric-panel-head">
-
-        <h4>
-          Пълен профил на сектора · ${year}
-        </h4>
-
-        <span>
-          NA = няма публикувана стойност
-        </span>
-
-      </div>
-
-
-      <div class="metric-groups">
-
-        ${
-          metricsHtml(record)
-        }
-
-      </div>
-
-    </div>
-
-  `;
-
-
-  renderYearComparison();
-
-}
-
-
-/* =========================================================
-   YEAR BARS
-========================================================= */
-
-function yearBarsHtml(
-  baseYear,
-  compareYear,
-  baseValue,
-  compareValue,
-  indicator
-){
-
-  if(
-    !safeNumber(baseValue) &&
-    !safeNumber(compareValue)
-  ){
-
-    return `
-
-      <div class="empty-chart">
-
-        Няма публикувани стойности
-        за избраните години.
-
-      </div>
-
-    `;
-
-  }
-
-
-  const numericValues =
-    [
-      baseValue,
-      compareValue
-    ]
-    .filter(
-      safeNumber
-    );
-
-
-  const max =
-    numericValues.length
-    ? Math.max(
-        ...numericValues
-      )
-    : 0;
-
-
-  function width(v){
-
-    if(
-      !safeNumber(v) ||
-      max === 0
-    ){
-      return 0;
-    }
-
-
-    return (
-      v /
-      max
-    ) * 100;
-
-  }
-
-
-  return `
-
-    <div class="year-bars">
-
-      <div class="year-bars-title">
-
-        <strong>
-          Визуално сравнение
-        </strong>
-
-        <span>
-          ${indicator.label}
-          ·
-          ${displayUnit(indicator.unit)}
-        </span>
-
-      </div>
-
-
-      <div class="year-bar-row">
-
-        <div class="year-bar-year">
+        <div class="compare-kpi-label">
           ${baseYear}
         </div>
 
-        <div class="year-bar-track">
-
-          <div
-            class="year-bar-fill"
-            style="width:${width(baseValue)}%;"
-          >
-          </div>
-
-        </div>
-
-        <div class="year-bar-value">
-
-          ${
-            safeNumber(baseValue)
-            ? fmt(
-                baseValue,
-                indicator.unit
-              )
-            : "Няма данни"
-          }
-
-        </div>
+        <strong>
+          ${fmt(base,indicator.unit)}
+        </strong>
 
       </div>
 
 
-      <div class="year-bar-row">
+      <div class="compare-kpi">
 
-        <div class="year-bar-year">
+        <div class="compare-kpi-label">
           ${compareYear}
         </div>
 
-        <div class="year-bar-track">
+        <strong>
+          ${fmt(compare,indicator.unit)}
+        </strong>
 
-          <div
-            class="year-bar-fill"
-            style="width:${width(compareValue)}%;"
-          >
-          </div>
+      </div>
 
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          Абсолютна промяна
         </div>
 
-        <div class="year-bar-value">
+        <strong>
+          ${absolute}
+        </strong>
 
+      </div>
+
+
+      <div class="compare-kpi">
+
+        <div class="compare-kpi-label">
+          Относителна промяна
+        </div>
+
+        <strong>
           ${
-            safeNumber(compareValue)
-            ? fmt(
-                compareValue,
-                indicator.unit
+            relative === null
+            ? "Няма данни"
+            : (
+                relative ===
+                "not-applicable"
+                ? "Неприложимо"
+                : fmtPercent(relative)
               )
-            : "Няма данни"
           }
-
-        </div>
+        </strong>
 
       </div>
 
     </div>
+
+
+    ${
+      allIndicatorsComparisonTable(
+        section,
+        baseYear,
+        compareYear
+      )
+    }
 
   `;
 
@@ -5219,7 +4515,7 @@ function yearBarsHtml(
 
 
 /* =========================================================
-   YEAR COMPARISON TABLE
+   ALL INDICATORS COMPARISON
 ========================================================= */
 
 function allIndicatorsComparisonTable(
@@ -5227,136 +4523,6 @@ function allIndicatorsComparisonTable(
   baseYear,
   compareYear
 ){
-
-  const rows =
-    dataset.indicators
-      .map(
-        function(indicator){
-
-          const base =
-            getValue(
-              section,
-              baseYear,
-              indicator.code
-            );
-
-
-          const compare =
-            getValue(
-              section,
-              compareYear,
-              indicator.code
-            );
-
-
-          const absolute =
-            (
-              safeNumber(base) &&
-              safeNumber(compare)
-            )
-            ? signedAbsoluteChange(
-                base,
-                compare,
-                indicator.unit
-              )
-            : "Няма данни";
-
-
-          const relative =
-            relativeChange(
-              base,
-              compare
-            );
-
-
-          let relativeText;
-
-
-          if(relative === null){
-
-            relativeText =
-              "Няма данни";
-
-          }
-          else if(
-            relative === "not-applicable"
-          ){
-
-            relativeText =
-              "Неприложимо";
-
-          }
-          else{
-
-            relativeText =
-              fmtPercent(relative);
-
-          }
-
-
-          const className =
-            (
-              !safeNumber(base) ||
-              !safeNumber(compare)
-            )
-            ? "na-cell"
-            : (
-                compare > base
-                ? "delta-positive"
-                : (
-                    compare < base
-                    ? "delta-negative"
-                    : "delta-neutral"
-                  )
-              );
-
-
-          return `
-
-            <tr>
-
-              <td>
-                ${indicator.label}
-              </td>
-
-              <td>
-                ${
-                  safeNumber(base)
-                  ? fmt(
-                      base,
-                      indicator.unit
-                    )
-                  : `<span class="na-cell">Няма данни</span>`
-                }
-              </td>
-
-              <td>
-                ${
-                  safeNumber(compare)
-                  ? fmt(
-                      compare,
-                      indicator.unit
-                    )
-                  : `<span class="na-cell">Няма данни</span>`
-                }
-              </td>
-
-              <td class="${className}">
-                ${absolute}
-              </td>
-
-              <td class="${className}">
-                ${relativeText}
-              </td>
-
-            </tr>
-
-          `;
-
-        }
-      )
-      .join("");
-
 
   return `
 
@@ -5392,9 +4558,82 @@ function allIndicatorsComparisonTable(
 
         </thead>
 
-
         <tbody>
-          ${rows}
+
+          ${
+            dataset.indicators.map(
+              indicator => {
+
+                const a =
+                  getValue(
+                    section,
+                    baseYear,
+                    indicator.code
+                  );
+
+
+                const b =
+                  getValue(
+                    section,
+                    compareYear,
+                    indicator.code
+                  );
+
+
+                const rel =
+                  relativeChange(
+                    a,
+                    b
+                  );
+
+
+                return `
+
+                  <tr>
+
+                    <td>
+                      ${indicator.label}
+                    </td>
+
+                    <td>
+                      ${fmt(a,indicator.unit)}
+                    </td>
+
+                    <td>
+                      ${fmt(b,indicator.unit)}
+                    </td>
+
+                    <td>
+                      ${
+                        signedAbsoluteChange(
+                          a,
+                          b,
+                          indicator.unit
+                        )
+                      }
+                    </td>
+
+                    <td>
+                      ${
+                        rel === null
+                        ? "Няма данни"
+                        : (
+                            rel ===
+                            "not-applicable"
+                            ? "Неприложимо"
+                            : fmtPercent(rel)
+                          )
+                      }
+                    </td>
+
+                  </tr>
+
+                `;
+
+              }
+            ).join("")
+          }
+
         </tbody>
 
       </table>
@@ -5407,285 +4646,15 @@ function allIndicatorsComparisonTable(
 
 
 /* =========================================================
-   RENDER YEAR COMPARISON
-========================================================= */
-
-function renderYearComparison(){
-
-  if(!dataset){
-    return;
-  }
-
-
-  const section =
-    sectorSelect.value;
-
-
-  const indicator =
-    getIndicator();
-
-
-  const baseYear =
-    Number(
-      baseYearSelect.value
-    );
-
-
-  const compareYear =
-    Number(
-      compareYearSelect.value
-    );
-
-
-  const sector =
-    dataset.sectors.find(
-      item =>
-        item.code === section
-    );
-
-
-  const baseValue =
-    getValue(
-      section,
-      baseYear,
-      indicator.code
-    );
-
-
-  const compareValue =
-    getValue(
-      section,
-      compareYear,
-      indicator.code
-    );
-
-
-  const absolute =
-    (
-      safeNumber(baseValue) &&
-      safeNumber(compareValue)
-    )
-    ? signedAbsoluteChange(
-        baseValue,
-        compareValue,
-        indicator.unit
-      )
-    : "Няма данни";
-
-
-  const relative =
-    relativeChange(
-      baseValue,
-      compareValue
-    );
-
-
-  let relativeText;
-
-
-  if(relative === null){
-
-    relativeText =
-      "Няма данни";
-
-  }
-  else if(
-    relative === "not-applicable"
-  ){
-
-    relativeText =
-      "Неприложимо";
-
-  }
-  else{
-
-    relativeText =
-      fmtPercent(relative);
-
-  }
-
-
-  const className =
-    changeClass(
-      baseValue,
-      compareValue
-    );
-
-
-  yearCompareContent.innerHTML = `
-
-    <div class="compare-heading">
-
-      <span>
-        ${section} · ${baseYear} → ${compareYear}
-      </span>
-
-      <h3>
-        ${sector.name}
-      </h3>
-
-      <p>
-        ${indicator.label}
-      </p>
-
-    </div>
-
-
-    <div class="compare-kpis">
-
-      <div class="compare-kpi">
-
-        <div class="compare-kpi-label">
-          ${baseYear}
-        </div>
-
-        <strong
-          class="${
-            safeNumber(baseValue)
-            ? ""
-            : "na"
-          }"
-        >
-          ${
-            safeNumber(baseValue)
-            ? fmt(
-                baseValue,
-                indicator.unit
-              )
-            : "Няма данни"
-          }
-        </strong>
-
-        <small>
-          Базова стойност
-        </small>
-
-      </div>
-
-
-      <div class="compare-kpi">
-
-        <div class="compare-kpi-label">
-          ${compareYear}
-        </div>
-
-        <strong
-          class="${
-            safeNumber(compareValue)
-            ? ""
-            : "na"
-          }"
-        >
-          ${
-            safeNumber(compareValue)
-            ? fmt(
-                compareValue,
-                indicator.unit
-              )
-            : "Няма данни"
-          }
-        </strong>
-
-        <small>
-          Сравнителна стойност
-        </small>
-
-      </div>
-
-
-      <div class="compare-kpi">
-
-        <div class="compare-kpi-label">
-          Абсолютна промяна
-        </div>
-
-        <strong class="${className}">
-          ${absolute}
-        </strong>
-
-        <small>
-          ${
-            isPercentageUnit(
-              indicator.unit
-            )
-            ? "разлика в процентни пункта"
-            : "разлика в мерната единица"
-          }
-        </small>
-
-      </div>
-
-
-      <div class="compare-kpi">
-
-        <div class="compare-kpi-label">
-          Относителна промяна
-        </div>
-
-        <strong class="${className}">
-          ${relativeText}
-        </strong>
-
-        <small>
-          спрямо базовата година
-        </small>
-
-      </div>
-
-    </div>
-
-
-    ${
-      yearBarsHtml(
-        baseYear,
-        compareYear,
-        baseValue,
-        compareValue,
-        indicator
-      )
-    }
-
-
-    <div class="metric-panel-head">
-
-      <h4>
-        Сравнение на всички 29 показателя
-      </h4>
-
-      <span>
-        ${baseYear} → ${compareYear}
-      </span>
-
-    </div>
-
-
-    ${
-      allIndicatorsComparisonTable(
-        section,
-        baseYear,
-        compareYear
-      )
-    }
-
-  `;
-
-}
-
-
-/* =========================================================
    STATISTICS
 ========================================================= */
 
 function mean(arr){
 
-  if(!arr.length){
-    return NaN;
-  }
-
-
   return (
     arr.reduce(
-      (sum,v) => sum + v,
+      (a,b) =>
+        a + b,
       0
     ) /
     arr.length
@@ -5701,9 +4670,7 @@ function regressionStats(points){
 
 
   if(n < 3){
-
     return null;
-
   }
 
 
@@ -5732,48 +4699,47 @@ function regressionStats(points){
   let sxy = 0;
 
 
-  for(
-    let i = 0;
-    i < n;
-    i++
-  ){
+  points.forEach(
+    p => {
 
-    const dx =
-      xs[i] - mx;
+      const dx =
+        p.x -
+        mx;
 
 
-    const dy =
-      ys[i] - my;
+      const dy =
+        p.y -
+        my;
 
 
-    sxx +=
-      dx * dx;
+      sxx +=
+        dx * dx;
 
 
-    syy +=
-      dy * dy;
+      syy +=
+        dy * dy;
 
 
-    sxy +=
-      dx * dy;
+      sxy +=
+        dx * dy;
 
-  }
+    }
+  );
 
 
   if(
     sxx === 0 ||
     syy === 0
   ){
-
     return null;
-
   }
 
 
   const r =
     sxy /
     Math.sqrt(
-      sxx * syy
+      sxx *
+      syy
     );
 
 
@@ -5784,461 +4750,21 @@ function regressionStats(points){
 
   const intercept =
     my -
-    slope * mx;
+    slope *
+    mx;
 
 
   const r2 =
     r * r;
 
 
-  let t;
-
-
-  if(
-    Math.abs(r) >= 1
-  ){
-
-    t =
-      Infinity;
-
-  }
-  else{
-
-    t =
-      r *
-      Math.sqrt(
-        (
-          n - 2
-        ) /
-        (
-          1 -
-          r * r
-        )
-      );
-
-  }
-
-
-  const p =
-    twoTailedTPValue(
-      Math.abs(t),
-      n - 2
-    );
-
-
   return {
-
     n,
     r,
     r2,
     slope,
-    intercept,
-    t,
-    p
-
+    intercept
   };
-
-}
-
-
-/* =========================================================
-   STUDENT T P-VALUE
-========================================================= */
-
-function logGamma(z){
-
-  const coefficients = [
-    676.5203681218851,
-    -1259.1392167224028,
-    771.32342877765313,
-    -176.61502916214059,
-    12.507343278686905,
-    -0.13857109526572012,
-    9.984369578019571e-6,
-    1.5056327351493116e-7
-  ];
-
-
-  if(z < 0.5){
-
-    return (
-      Math.log(Math.PI) -
-      Math.log(
-        Math.sin(
-          Math.PI * z
-        )
-      ) -
-      logGamma(
-        1 - z
-      )
-    );
-
-  }
-
-
-  z -= 1;
-
-
-  let x =
-    0.99999999999980993;
-
-
-  for(
-    let i = 0;
-    i < coefficients.length;
-    i++
-  ){
-
-    x +=
-      coefficients[i] /
-      (
-        z +
-        i +
-        1
-      );
-
-  }
-
-
-  const t =
-    z +
-    coefficients.length -
-    0.5;
-
-
-  return (
-    0.5 *
-    Math.log(
-      2 * Math.PI
-    ) +
-    (
-      z +
-      0.5
-    ) *
-    Math.log(t) -
-    t +
-    Math.log(x)
-  );
-
-}
-
-
-function betaContinuedFraction(
-  a,
-  b,
-  x
-){
-
-  const MAX_ITER = 200;
-  const EPS = 3e-10;
-  const FPMIN = 1e-30;
-
-
-  let qab =
-    a + b;
-
-
-  let qap =
-    a + 1;
-
-
-  let qam =
-    a - 1;
-
-
-  let c = 1;
-
-
-  let d =
-    1 -
-    qab *
-    x /
-    qap;
-
-
-  if(
-    Math.abs(d) <
-    FPMIN
-  ){
-    d = FPMIN;
-  }
-
-
-  d =
-    1 / d;
-
-
-  let h = d;
-
-
-  for(
-    let m = 1;
-    m <= MAX_ITER;
-    m++
-  ){
-
-    const m2 =
-      2 * m;
-
-
-    let aa =
-      m *
-      (
-        b -
-        m
-      ) *
-      x /
-      (
-        (
-          qam +
-          m2
-        ) *
-        (
-          a +
-          m2
-        )
-      );
-
-
-    d =
-      1 +
-      aa * d;
-
-
-    if(
-      Math.abs(d) <
-      FPMIN
-    ){
-      d = FPMIN;
-    }
-
-
-    c =
-      1 +
-      aa / c;
-
-
-    if(
-      Math.abs(c) <
-      FPMIN
-    ){
-      c = FPMIN;
-    }
-
-
-    d =
-      1 / d;
-
-
-    h *=
-      d * c;
-
-
-    aa =
-      -(
-        a +
-        m
-      ) *
-      (
-        qab +
-        m
-      ) *
-      x /
-      (
-        (
-          a +
-          m2
-        ) *
-        (
-          qap +
-          m2
-        )
-      );
-
-
-    d =
-      1 +
-      aa * d;
-
-
-    if(
-      Math.abs(d) <
-      FPMIN
-    ){
-      d = FPMIN;
-    }
-
-
-    c =
-      1 +
-      aa / c;
-
-
-    if(
-      Math.abs(c) <
-      FPMIN
-    ){
-      c = FPMIN;
-    }
-
-
-    d =
-      1 / d;
-
-
-    const del =
-      d * c;
-
-
-    h *=
-      del;
-
-
-    if(
-      Math.abs(
-        del - 1
-      ) <
-      EPS
-    ){
-      break;
-    }
-
-  }
-
-
-  return h;
-
-}
-
-
-function regularizedIncompleteBeta(
-  x,
-  a,
-  b
-){
-
-  if(x <= 0){
-    return 0;
-  }
-
-
-  if(x >= 1){
-    return 1;
-  }
-
-
-  const bt =
-    Math.exp(
-      logGamma(
-        a + b
-      ) -
-      logGamma(a) -
-      logGamma(b) +
-      a *
-      Math.log(x) +
-      b *
-      Math.log(
-        1 - x
-      )
-    );
-
-
-  if(
-    x <
-    (
-      a + 1
-    ) /
-    (
-      a +
-      b +
-      2
-    )
-  ){
-
-    return (
-      bt *
-      betaContinuedFraction(
-        a,
-        b,
-        x
-      ) /
-      a
-    );
-
-  }
-
-
-  return (
-    1 -
-    bt *
-    betaContinuedFraction(
-      b,
-      a,
-      1 - x
-    ) /
-    b
-  );
-
-}
-
-
-function twoTailedTPValue(
-  t,
-  df
-){
-
-  if(
-    !Number.isFinite(t)
-  ){
-    return 0;
-  }
-
-
-  if(
-    df <= 0
-  ){
-    return NaN;
-  }
-
-
-  const x =
-    df /
-    (
-      df +
-      t * t
-    );
-
-
-  return regularizedIncompleteBeta(
-    x,
-    df / 2,
-    0.5
-  );
-
-}
-
-
-function formatPValue(p){
-
-  if(
-    !safeNumber(p)
-  ){
-    return "—";
-  }
-
-
-  if(p < 0.001){
-    return "< 0,001";
-  }
-
-
-  return new Intl.NumberFormat(
-    "bg-BG",
-    {
-      minimumFractionDigits:3,
-      maximumFractionDigits:3
-    }
-  ).format(p);
 
 }
 
@@ -6247,852 +4773,7 @@ function formatPValue(p){
    DEPENDENCY OBSERVATIONS
 ========================================================= */
 
-function buildLevelObservations(
-  xCode,
-  yCode,
-  year
-){
-
-  return dataset.sectors
-    .map(
-      function(sector){
-
-        const x =
-          getValue(
-            sector.code,
-            year,
-            xCode
-          );
-
-
-        const y =
-          getValue(
-            sector.code,
-            year,
-            yCode
-          );
-
-
-        if(
-          !safeNumber(x) ||
-          !safeNumber(y)
-        ){
-          return null;
-        }
-
-
-        return {
-
-          code:
-            sector.code,
-
-          name:
-            sector.name,
-
-          x,
-          y
-
-        };
-
-      }
-    )
-    .filter(Boolean);
-
-}
-
-
-function buildChangeObservations(
-  xCode,
-  yCode,
-  baseYear,
-  compareYear
-){
-
-  return dataset.sectors
-    .map(
-      function(sector){
-
-        const xBase =
-          getValue(
-            sector.code,
-            baseYear,
-            xCode
-          );
-
-
-        const xCompare =
-          getValue(
-            sector.code,
-            compareYear,
-            xCode
-          );
-
-
-        const yBase =
-          getValue(
-            sector.code,
-            baseYear,
-            yCode
-          );
-
-
-        const yCompare =
-          getValue(
-            sector.code,
-            compareYear,
-            yCode
-          );
-
-
-        if(
-          !safeNumber(xBase) ||
-          !safeNumber(xCompare) ||
-          !safeNumber(yBase) ||
-          !safeNumber(yCompare) ||
-          xBase === 0 ||
-          yBase === 0
-        ){
-          return null;
-        }
-
-
-        const xChange =
-          (
-            (
-              xCompare -
-              xBase
-            ) /
-            xBase
-          ) *
-          100;
-
-
-        const yChange =
-          (
-            (
-              yCompare -
-              yBase
-            ) /
-            yBase
-          ) *
-          100;
-
-
-        return {
-
-          code:
-            sector.code,
-
-          name:
-            sector.name,
-
-          x:
-            xChange,
-
-          y:
-            yChange
-
-        };
-
-      }
-    )
-    .filter(Boolean);
-
-}
-
-
-function buildLagObservations(
-  xCode,
-  yCode,
-  xYear,
-  lag
-){
-
-  const yYear =
-    xYear +
-    lag;
-
-
-  if(
-    !dataset.period.includes(
-      yYear
-    )
-  ){
-    return [];
-  }
-
-
-  return dataset.sectors
-    .map(
-      function(sector){
-
-        const x =
-          getValue(
-            sector.code,
-            xYear,
-            xCode
-          );
-
-
-        const y =
-          getValue(
-            sector.code,
-            yYear,
-            yCode
-          );
-
-
-        if(
-          !safeNumber(x) ||
-          !safeNumber(y)
-        ){
-          return null;
-        }
-
-
-        return {
-
-          code:
-            sector.code,
-
-          name:
-            sector.name,
-
-          x,
-          y
-
-        };
-
-      }
-    )
-    .filter(Boolean);
-
-}
-
-
-/* =========================================================
-   CORRELATION INTERPRETATION
-========================================================= */
-
-function correlationStrength(r){
-
-  const a =
-    Math.abs(r);
-
-
-  if(a < .20){
-    return "много слаба";
-  }
-
-
-  if(a < .40){
-    return "слаба";
-  }
-
-
-  if(a < .60){
-    return "умерена";
-  }
-
-
-  if(a < .80){
-    return "силна";
-  }
-
-
-  return "много силна";
-
-}
-
-
-function relationshipInterpretation(
-  stats
-){
-
-  if(!stats){
-    return "";
-  }
-
-
-  const direction =
-    stats.r > 0
-    ? "положителна"
-    : (
-        stats.r < 0
-        ? "отрицателна"
-        : "нулева"
-      );
-
-
-  const strength =
-    correlationStrength(
-      stats.r
-    );
-
-
-  let significance;
-
-
-  if(stats.p < .01){
-
-    significance =
-      "статистически значима при p < 0,01";
-
-  }
-  else if(
-    stats.p < .05
-  ){
-
-    significance =
-      "статистически значима при p < 0,05";
-
-  }
-  else{
-
-    significance =
-      "не достига стандартния праг p < 0,05";
-
-  }
-
-
-  return (
-    `Наблюдава се ${strength} ${direction} линейна зависимост ` +
-    `(r = ${fmtStat(stats.r)}, R² = ${fmtStat(stats.r2)}), която ${significance}.`
-  );
-
-}
-
-
-/* =========================================================
-   SCATTER SVG
-========================================================= */
-
-function scatterSvg(
-  points,
-  stats,
-  xLabel,
-  yLabel
-){
-
-  if(
-    points.length < 3 ||
-    !stats
-  ){
-
-    return `
-
-      <div class="empty-chart">
-
-        Няма достатъчно
-        съвместни наблюдения
-        за построяване
-        на scatter plot.
-
-      </div>
-
-    `;
-
-  }
-
-
-  const W = 650;
-  const H = 360;
-
-  const left = 66;
-  const right = 25;
-  const top = 22;
-  const bottom = 62;
-
-
-  const xs =
-    points.map(
-      p => p.x
-    );
-
-
-  const ys =
-    points.map(
-      p => p.y
-    );
-
-
-  let xmin =
-    Math.min(...xs);
-
-
-  let xmax =
-    Math.max(...xs);
-
-
-  let ymin =
-    Math.min(...ys);
-
-
-  let ymax =
-    Math.max(...ys);
-
-
-  if(xmin === xmax){
-    xmin -= 1;
-    xmax += 1;
-  }
-
-
-  if(ymin === ymax){
-    ymin -= 1;
-    ymax += 1;
-  }
-
-
-  const xpad =
-    (
-      xmax -
-      xmin
-    ) *
-    .10;
-
-
-  const ypad =
-    (
-      ymax -
-      ymin
-    ) *
-    .10;
-
-
-  xmin -= xpad;
-  xmax += xpad;
-
-  ymin -= ypad;
-  ymax += ypad;
-
-
-  const xScale =
-    function(v){
-
-      return (
-        left +
-        (
-          v -
-          xmin
-        ) /
-        (
-          xmax -
-          xmin
-        ) *
-        (
-          W -
-          left -
-          right
-        )
-      );
-
-    };
-
-
-  const yScale =
-    function(v){
-
-      return (
-        top +
-        (
-          ymax -
-          v
-        ) /
-        (
-          ymax -
-          ymin
-        ) *
-        (
-          H -
-          top -
-          bottom
-        )
-      );
-
-    };
-
-
-  const grid =
-    [0,1,2,3,4]
-      .map(
-        function(i){
-
-          const gx =
-            left +
-            i *
-            (
-              W -
-              left -
-              right
-            ) /
-            4;
-
-
-          const gy =
-            top +
-            i *
-            (
-              H -
-              top -
-              bottom
-            ) /
-            4;
-
-
-          const xv =
-            xmin +
-            i *
-            (
-              xmax -
-              xmin
-            ) /
-            4;
-
-
-          const yv =
-            ymax -
-            i *
-            (
-              ymax -
-              ymin
-            ) /
-            4;
-
-
-          return `
-
-            <line
-              x1="${gx}"
-              y1="${top}"
-              x2="${gx}"
-              y2="${H-bottom}"
-              stroke="#edf2f5"
-              stroke-width="1"
-            />
-
-            <line
-              x1="${left}"
-              y1="${gy}"
-              x2="${W-right}"
-              y2="${gy}"
-              stroke="#edf2f5"
-              stroke-width="1"
-            />
-
-            <text
-              x="${gx}"
-              y="${H-bottom+20}"
-              text-anchor="middle"
-              font-size="8"
-              fill="#8798a5"
-            >
-              ${fmtStat(xv,1)}
-            </text>
-
-            <text
-              x="${left-9}"
-              y="${gy+3}"
-              text-anchor="end"
-              font-size="8"
-              fill="#8798a5"
-            >
-              ${fmtStat(yv,1)}
-            </text>
-
-          `;
-
-        }
-      )
-      .join("");
-
-
-  const lineX1 =
-    xmin;
-
-
-  const lineX2 =
-    xmax;
-
-
-  const lineY1 =
-    stats.intercept +
-    stats.slope *
-    lineX1;
-
-
-  const lineY2 =
-    stats.intercept +
-    stats.slope *
-    lineX2;
-
-
-  const dots =
-    points
-      .map(
-        function(p){
-
-          const px =
-            xScale(p.x);
-
-
-          const py =
-            yScale(p.y);
-
-
-          return `
-
-            <circle
-              cx="${px}"
-              cy="${py}"
-              r="5"
-              fill="#2457c5"
-              stroke="#ffffff"
-              stroke-width="2"
-            >
-
-              <title>
-                ${p.code} - ${p.name}
-                X: ${fmtStat(p.x,2)}
-                Y: ${fmtStat(p.y,2)}
-              </title>
-
-            </circle>
-
-            <text
-              x="${px+7}"
-              y="${py-7}"
-              font-size="8"
-              font-weight="700"
-              fill="#536b7c"
-            >
-              ${p.code}
-            </text>
-
-          `;
-
-        }
-      )
-      .join("");
-
-
-  return `
-
-    <div class="svg-wrap">
-
-      <svg
-        viewBox="0 0 ${W} ${H}"
-        role="img"
-        aria-label="Диаграма на зависимост между X и Y"
-      >
-
-        ${grid}
-
-
-        <line
-          x1="${left}"
-          y1="${H-bottom}"
-          x2="${W-right}"
-          y2="${H-bottom}"
-          stroke="#b8c8d1"
-          stroke-width="1"
-        />
-
-
-        <line
-          x1="${left}"
-          y1="${top}"
-          x2="${left}"
-          y2="${H-bottom}"
-          stroke="#b8c8d1"
-          stroke-width="1"
-        />
-
-
-        <line
-          x1="${xScale(lineX1)}"
-          y1="${yScale(lineY1)}"
-          x2="${xScale(lineX2)}"
-          y2="${yScale(lineY2)}"
-          stroke="#01a99e"
-          stroke-width="2.5"
-          stroke-dasharray="6 5"
-        />
-
-
-        ${dots}
-
-
-        <text
-          x="${(left + W - right)/2}"
-          y="${H-10}"
-          text-anchor="middle"
-          font-size="9"
-          fill="#536b7c"
-        >
-          ${xLabel}
-        </text>
-
-
-        <text
-          x="15"
-          y="${H/2}"
-          text-anchor="middle"
-          font-size="9"
-          fill="#536b7c"
-          transform="rotate(-90 15 ${H/2})"
-        >
-          ${yLabel}
-        </text>
-
-      </svg>
-
-    </div>
-
-  `;
-
-}
-
-
-/* =========================================================
-   OBSERVATION TABLE
-========================================================= */
-
-function observationsTable(
-  points,
-  xLabel,
-  yLabel
-){
-
-  const sorted =
-    points
-      .slice()
-      .sort(
-        (a,b) =>
-          a.code.localeCompare(
-            b.code
-          )
-      );
-
-
-  return `
-
-    <div class="observation-scroll">
-
-      <table class="observation-table">
-
-        <thead>
-
-          <tr>
-
-            <th>
-              Сектор
-            </th>
-
-            <th title="${xLabel}">
-              X
-            </th>
-
-            <th title="${yLabel}">
-              Y
-            </th>
-
-          </tr>
-
-        </thead>
-
-        <tbody>
-
-          ${
-            sorted
-              .map(
-                p => `
-
-                  <tr>
-
-                    <td title="${p.name}">
-                      ${p.code}
-                    </td>
-
-                    <td>
-                      ${fmtStat(p.x,2)}
-                    </td>
-
-                    <td>
-                      ${fmtStat(p.y,2)}
-                    </td>
-
-                  </tr>
-
-                `
-              )
-              .join("")
-          }
-
-        </tbody>
-
-      </table>
-
-    </div>
-
-  `;
-
-}
-
-
-/* =========================================================
-   DEPENDENCY MODE CONTROLS
-========================================================= */
-
-function updateDependencyControls(){
-
-  const mode =
-    dependencyMode.value;
-
-
-  levelsControls
-    .classList
-    .toggle(
-      "hidden",
-      mode !== "levels"
-    );
-
-
-  changesControls
-    .classList
-    .toggle(
-      "hidden",
-      mode !== "changes"
-    );
-
-
-  lagControls
-    .classList
-    .toggle(
-      "hidden",
-      mode !== "lag"
-    );
-
-}
-
-
-/* =========================================================
-   RENDER DEPENDENCY
-========================================================= */
-
-function renderDependency(){
-
-  if(!dataset){
-    return;
-  }
-
-
-  updateDependencyControls();
-
-
-  const mode =
-    dependencyMode.value;
-
+function dependencyPoints(){
 
   const xCode =
     xIndicatorSelect.value;
@@ -7102,71 +4783,16 @@ function renderDependency(){
     yIndicatorSelect.value;
 
 
-  const xIndicator =
-    getIndicatorByCode(
-      xCode
-    );
-
-
-  const yIndicator =
-    getIndicatorByCode(
-      yCode
-    );
-
-
-  if(
-    !xIndicator ||
-    !yIndicator
-  ){
-    return;
-  }
+  const mode =
+    dependencyMode.value;
 
 
   if(
     xCode ===
     yCode
   ){
-
-    dependencyContent.innerHTML = `
-
-      <div class="coverage-box">
-
-        <div class="coverage-icon">
-          !
-        </div>
-
-        <div>
-
-          <h4>
-            Избери две различни променливи
-          </h4>
-
-          <p>
-            X и Y в момента са един и същ показател.
-            Това би дало тривиална корелация r = 1
-            и няма аналитична стойност.
-          </p>
-
-        </div>
-
-      </div>
-
-    `;
-
-    return;
-
+    return [];
   }
-
-
-  let points = [];
-
-  let contextLabel = "";
-
-  let xDisplayLabel =
-    xIndicator.label;
-
-  let yDisplayLabel =
-    yIndicator.label;
 
 
   if(
@@ -7179,16 +4805,41 @@ function renderDependency(){
       );
 
 
-    points =
-      buildLevelObservations(
-        xCode,
-        yCode,
-        year
-      );
+    return dataset.sectors
+      .map(
+        sector => {
+
+          const x =
+            getValue(
+              sector.code,
+              year,
+              xCode
+            );
 
 
-    contextLabel =
-      `Нива · ${year}`;
+          const y =
+            getValue(
+              sector.code,
+              year,
+              yCode
+            );
+
+
+          return (
+            safeNumber(x) &&
+            safeNumber(y)
+          )
+          ? {
+              code:sector.code,
+              name:sector.name,
+              x,
+              y
+            }
+          : null;
+
+        }
+      )
+      .filter(Boolean);
 
   }
 
@@ -7197,74 +4848,93 @@ function renderDependency(){
     mode === "changes"
   ){
 
-    const baseYear =
+    const a =
       Number(
         changeBaseYear.value
       );
 
 
-    const compareYear =
+    const b =
       Number(
         changeCompareYear.value
       );
 
 
-    if(
-      baseYear ===
-      compareYear
-    ){
+    return dataset.sectors
+      .map(
+        sector => {
 
-      dependencyContent.innerHTML = `
-
-        <div class="coverage-box">
-
-          <div class="coverage-icon">
-            !
-          </div>
-
-          <div>
-
-            <h4>
-              Избери две различни години
-            </h4>
-
-            <p>
-              При еднаква базова и сравнителна година
-              изменението е нула
-              и анализът на зависимост
-              няма аналитичен смисъл.
-            </p>
-
-          </div>
-
-        </div>
-
-      `;
-
-      return;
-
-    }
+          const xa =
+            getValue(
+              sector.code,
+              a,
+              xCode
+            );
 
 
-    points =
-      buildChangeObservations(
-        xCode,
-        yCode,
-        baseYear,
-        compareYear
-      );
+          const xb =
+            getValue(
+              sector.code,
+              b,
+              xCode
+            );
 
 
-    contextLabel =
-      `Относителни изменения · ${baseYear} → ${compareYear}`;
+          const ya =
+            getValue(
+              sector.code,
+              a,
+              yCode
+            );
 
 
-    xDisplayLabel =
-      `Δ% ${xIndicator.label}`;
+          const yb =
+            getValue(
+              sector.code,
+              b,
+              yCode
+            );
 
 
-    yDisplayLabel =
-      `Δ% ${yIndicator.label}`;
+          if(
+            !safeNumber(xa) ||
+            !safeNumber(xb) ||
+            !safeNumber(ya) ||
+            !safeNumber(yb) ||
+            xa === 0 ||
+            ya === 0
+          ){
+            return null;
+          }
+
+
+          return {
+
+            code:sector.code,
+
+            name:sector.name,
+
+            x:
+              (
+                xb -
+                xa
+              ) /
+              xa *
+              100,
+
+            y:
+              (
+                yb -
+                ya
+              ) /
+              ya *
+              100
+
+          };
+
+        }
+      )
+      .filter(Boolean);
 
   }
 
@@ -7295,84 +4965,96 @@ function renderDependency(){
         yYear
       )
     ){
-
-      dependencyContent.innerHTML = `
-
-        <div class="coverage-box">
-
-          <div class="coverage-icon">
-            !
-          </div>
-
-          <div>
-
-            <h4>
-              Няма година t + ${lag}
-            </h4>
-
-            <p>
-              При X = ${xYear}
-              и лаг +${lag}
-              зависимата променлива
-              би трябвало да бъде измерена през ${yYear},
-              но тази година не е включена
-              в периода на набора от данни.
-            </p>
-
-          </div>
-
-        </div>
-
-      `;
-
-      return;
-
+      return [];
     }
 
 
-    points =
-      buildLagObservations(
-        xCode,
-        yCode,
-        xYear,
-        lag
-      );
+    return dataset.sectors
+      .map(
+        sector => {
+
+          const x =
+            getValue(
+              sector.code,
+              xYear,
+              xCode
+            );
 
 
-    contextLabel =
-      `Лагова зависимост · X(${xYear}) → Y(${yYear})`;
+          const y =
+            getValue(
+              sector.code,
+              yYear,
+              yCode
+            );
 
 
-    xDisplayLabel =
-      `${xIndicator.label} · ${xYear}`;
+          return (
+            safeNumber(x) &&
+            safeNumber(y)
+          )
+          ? {
+              code:sector.code,
+              name:sector.name,
+              x,
+              y
+            }
+          : null;
 
-
-    yDisplayLabel =
-      `${yIndicator.label} · ${yYear}`;
+        }
+      )
+      .filter(Boolean);
 
   }
 
 
+  return [];
+
+}
+
+
+/* =========================================================
+   DEPENDENCY RENDER
+========================================================= */
+
+function renderDependency(){
+
+  const mode =
+    dependencyMode.value;
+
+
+  levelsControls.classList.toggle(
+    "hidden",
+    mode !== "levels"
+  );
+
+
+  changesControls.classList.toggle(
+    "hidden",
+    mode !== "changes"
+  );
+
+
+  lagControls.classList.toggle(
+    "hidden",
+    mode !== "lag"
+  );
+
+
+  const points =
+    dependencyPoints();
+
+
+  const stats =
+    regressionStats(points);
+
+
   if(
-    points.length < 5
+    points.length < 5 ||
+    !stats
   ){
 
     dependencyContent.innerHTML = `
-
-      <div class="dependency-intro">
-
-        <span>
-          ${contextLabel}
-        </span>
-
-        <h3>
-          ${xIndicator.label}
-          →
-          ${yIndicator.label}
-        </h3>
-
-      </div>
-
 
       <div class="coverage-box">
 
@@ -7383,18 +5065,18 @@ function renderDependency(){
         <div>
 
           <h4>
-            Недостатъчен брой съвместни наблюдения
+            Недостатъчно съвместни наблюдения
           </h4>
 
           <p>
 
             Налични са
             ${points.length}
-            сектора с валидни стойности
-            едновременно за X и Y.
-            За този публичен аналитичен модул
-            резултат се показва
-            при минимум 5 съвместни наблюдения.
+            валидни секторни двойки.
+            Резултат се показва
+            при минимум пет наблюдения
+            и наличие на вариация
+            в двете променливи.
 
           </p>
 
@@ -7409,68 +5091,16 @@ function renderDependency(){
   }
 
 
-  const stats =
-    regressionStats(
-      points
+  const xIndicator =
+    getIndicatorByCode(
+      xIndicatorSelect.value
     );
 
 
-  if(!stats){
-
-    dependencyContent.innerHTML = `
-
-      <div class="coverage-box">
-
-        <div class="coverage-icon">
-          !
-        </div>
-
-        <div>
-
-          <h4>
-            Регресионният модел не може да бъде оценен
-          </h4>
-
-          <p>
-            Една от променливите няма достатъчна вариация
-            в наличните секторни наблюдения.
-          </p>
-
-        </div>
-
-      </div>
-
-    `;
-
-    return;
-
-  }
-
-
-  const rClass =
-    stats.r > 0
-    ? "positive"
-    : (
-        stats.r < 0
-        ? "negative"
-        : ""
-      );
-
-
-  const slopeClass =
-    stats.slope > 0
-    ? "positive"
-    : (
-        stats.slope < 0
-        ? "negative"
-        : ""
-      );
-
-
-  const significance =
-    stats.p < .05
-    ? "статистически значима"
-    : "статистически незначима при α = 0,05";
+  const yIndicator =
+    getIndicatorByCode(
+      yIndicatorSelect.value
+    );
 
 
   dependencyContent.innerHTML = `
@@ -7478,7 +5108,7 @@ function renderDependency(){
     <div class="dependency-intro">
 
       <span>
-        ${contextLabel}
+        Статистически модел
       </span>
 
       <h3>
@@ -7488,9 +5118,8 @@ function renderDependency(){
       </h3>
 
       <p>
-        Наблюденията са икономическите сектори,
-        за които има едновременно
-        валидна стойност на X и Y.
+        Всяко наблюдение представлява
+        един икономически сектор.
       </p>
 
     </div>
@@ -7508,10 +5137,6 @@ function renderDependency(){
           n = ${stats.n}
         </strong>
 
-        <small>
-          валидни секторни двойки
-        </small>
-
       </div>
 
 
@@ -7521,13 +5146,9 @@ function renderDependency(){
           Pearson r
         </span>
 
-        <strong class="${rClass}">
+        <strong>
           ${fmtStat(stats.r)}
         </strong>
-
-        <small>
-          сила и посока на линейната връзка
-        </small>
 
       </div>
 
@@ -7544,16 +5165,11 @@ function renderDependency(){
 
         <small>
           ${
-            new Intl.NumberFormat(
-              "bg-BG",
-              {
-                minimumFractionDigits:1,
-                maximumFractionDigits:1
-              }
-            ).format(
-              stats.r2 * 100
+            fmtStat(
+              stats.r2 * 100,
+              1
             )
-          }% от вариацията на Y
+          }% обяснена вариация
         </small>
 
       </div>
@@ -7565,13 +5181,9 @@ function renderDependency(){
           Коефициент b
         </span>
 
-        <strong class="${slopeClass}">
+        <strong>
           ${fmtStat(stats.slope)}
         </strong>
-
-        <small>
-          промяна в Y при +1 единица X
-        </small>
 
       </div>
 
@@ -7579,16 +5191,16 @@ function renderDependency(){
       <div class="stat-card">
 
         <span>
-          p-value
+          Посока
         </span>
 
         <strong>
-          ${formatPValue(stats.p)}
+          ${
+            stats.r > 0
+            ? "Положителна"
+            : "Отрицателна"
+          }
         </strong>
-
-        <small>
-          ${significance}
-        </small>
 
       </div>
 
@@ -7600,7 +5212,7 @@ function renderDependency(){
       <div class="equation-box">
 
         <span>
-          Линеен модел
+          Регресионно уравнение
         </span>
 
         <strong>
@@ -7623,15 +5235,19 @@ function renderDependency(){
       <div class="interpretation-box">
 
         <span>
-          Автоматична интерпретация
+          Интерпретация
         </span>
 
         <p>
-          ${
-            relationshipInterpretation(
-              stats
-            )
-          }
+
+          Корелационният коефициент
+          показва посоката и силата
+          на линейната асоциация.
+          R² показва дела
+          на вариацията на Y,
+          статистически свързан
+          с X в простия линеен модел.
+
         </p>
 
       </div>
@@ -7644,19 +5260,17 @@ function renderDependency(){
       <div class="scatter-card">
 
         <h4>
-          Scatter plot и регресионна линия
+          Scatter plot
         </h4>
 
         <p>
-          Всеки маркер представлява един икономически сектор.
+          Всеки маркер е икономически сектор.
         </p>
 
         ${
           scatterSvg(
             points,
-            stats,
-            xDisplayLabel,
-            yDisplayLabel
+            stats
           )
         }
 
@@ -7666,20 +5280,58 @@ function renderDependency(){
       <div class="observation-card">
 
         <h4>
-          Наблюдения по сектори
+          Секторни наблюдения
         </h4>
 
         <p>
-          Реалните стойности, използвани в модела.
+          Стойностите, използвани в анализа.
         </p>
 
-        ${
-          observationsTable(
-            points,
-            xDisplayLabel,
-            yDisplayLabel
-          )
-        }
+        <div class="observation-scroll">
+
+          <table class="observation-table">
+
+            <thead>
+
+              <tr>
+                <th>Сектор</th>
+                <th>X</th>
+                <th>Y</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              ${
+                points.map(
+                  p => `
+
+                    <tr>
+
+                      <td title="${p.name}">
+                        ${p.code}
+                      </td>
+
+                      <td>
+                        ${fmtStat(p.x,2)}
+                      </td>
+
+                      <td>
+                        ${fmtStat(p.y,2)}
+                      </td>
+
+                    </tr>
+
+                  `
+                ).join("")
+              }
+
+            </tbody>
+
+          </table>
+
+        </div>
 
       </div>
 
@@ -7691,55 +5343,567 @@ function renderDependency(){
 
 
 /* =========================================================
-   POPULATE SELECT
+   SCATTER
 ========================================================= */
 
-function appendIndicatorOptions(
+function scatterSvg(
+  points,
+  stats
+){
+
+  const W = 650;
+  const H = 340;
+
+  const L = 55;
+  const R = 25;
+  const T = 25;
+  const B = 45;
+
+
+  let xmin =
+    Math.min(
+      ...points.map(p => p.x)
+    );
+
+
+  let xmax =
+    Math.max(
+      ...points.map(p => p.x)
+    );
+
+
+  let ymin =
+    Math.min(
+      ...points.map(p => p.y)
+    );
+
+
+  let ymax =
+    Math.max(
+      ...points.map(p => p.y)
+    );
+
+
+  const xp =
+    (
+      xmax -
+      xmin
+    ) *
+    .1 ||
+    1;
+
+
+  const yp =
+    (
+      ymax -
+      ymin
+    ) *
+    .1 ||
+    1;
+
+
+  xmin -= xp;
+  xmax += xp;
+
+  ymin -= yp;
+  ymax += yp;
+
+
+  const xs =
+    v =>
+      L +
+      (
+        v -
+        xmin
+      ) /
+      (
+        xmax -
+        xmin
+      ) *
+      (
+        W -
+        L -
+        R
+      );
+
+
+  const ys =
+    v =>
+      T +
+      (
+        ymax -
+        v
+      ) /
+      (
+        ymax -
+        ymin
+      ) *
+      (
+        H -
+        T -
+        B
+      );
+
+
+  const y1 =
+    stats.intercept +
+    stats.slope *
+    xmin;
+
+
+  const y2 =
+    stats.intercept +
+    stats.slope *
+    xmax;
+
+
+  return `
+
+    <div class="svg-wrap">
+
+      <svg viewBox="0 0 ${W} ${H}">
+
+        <line
+          x1="${L}"
+          y1="${H-B}"
+          x2="${W-R}"
+          y2="${H-B}"
+          stroke="#ccd9e1"
+        />
+
+        <line
+          x1="${L}"
+          y1="${T}"
+          x2="${L}"
+          y2="${H-B}"
+          stroke="#ccd9e1"
+        />
+
+
+        <line
+          x1="${xs(xmin)}"
+          y1="${ys(y1)}"
+          x2="${xs(xmax)}"
+          y2="${ys(y2)}"
+          stroke="#01a99e"
+          stroke-width="2.5"
+          stroke-dasharray="6 5"
+        />
+
+
+        ${
+          points.map(
+            p => `
+
+              <circle
+                cx="${xs(p.x)}"
+                cy="${ys(p.y)}"
+                r="5"
+                fill="#2457c5"
+                stroke="white"
+                stroke-width="2"
+              >
+                <title>
+                  ${p.code} - ${p.name}
+                  X: ${fmtStat(p.x,2)}
+                  Y: ${fmtStat(p.y,2)}
+                </title>
+              </circle>
+
+              <text
+                x="${xs(p.x)+7}"
+                y="${ys(p.y)-7}"
+                font-size="8"
+                fill="#536b7c"
+              >
+                ${p.code}
+              </text>
+
+            `
+          ).join("")
+        }
+
+      </svg>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   HISTORICAL AVAILABILITY
+========================================================= */
+
+function historyStatusClass(value){
+
+  if(value === "Да"){
+    return "status-yes";
+  }
+
+  if(value === "Да*"){
+    return "status-limited";
+  }
+
+  if(value === "V1*"){
+    return "status-version";
+  }
+
+  return "status-none";
+
+}
+
+
+function renderHistory(){
+
+  if(
+    !historical ||
+    !historical.years ||
+    !historical.years.length
+  ){
+
+    historyContent.innerHTML = `
+
+      <div class="load-error">
+        Историческата рамка
+        не може да бъде заредена.
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  const years =
+    historical.years
+      .map(
+        x => x.year
+      );
+
+
+  const indicatorNames =
+    Object.keys(
+      historical.years[0]
+        .availability
+    );
+
+
+  let yesCount = 0;
+
+
+  historical.years.forEach(
+    year => {
+
+      Object.values(
+        year.availability
+      ).forEach(
+        value => {
+
+          if(
+            value === "Да" ||
+            value === "Да*" ||
+            value === "V1*"
+          ){
+            yesCount++;
+          }
+
+        }
+      );
+
+    }
+  );
+
+
+  const total =
+    years.length *
+    indicatorNames.length;
+
+
+  const matrixRows =
+    indicatorNames.map(
+      indicator => `
+
+        <tr>
+
+          <td>
+            ${indicator}
+          </td>
+
+          ${
+            historical.years
+              .map(
+                year => {
+
+                  const value =
+                    year.availability[
+                      indicator
+                    ];
+
+
+                  return `
+
+                    <td>
+
+                      <span
+                        class="
+                          history-status
+                          ${historyStatusClass(value)}
+                        "
+                        title="${value}"
+                      >
+                        ${value}
+                      </span>
+
+                    </td>
+
+                  `;
+
+                }
+              )
+              .join("")
+          }
+
+        </tr>
+
+      `
+    )
+    .join("");
+
+
+  const sourceCards =
+    historical.sources
+      .map(
+        source => `
+
+          <div class="history-source-card">
+
+            <div class="source-group">
+              ${source.indicator_group}
+            </div>
+
+            <h4>
+              ${source.source}
+            </h4>
+
+            <p>
+              <strong>Период:</strong>
+              ${source.period_before_2020}
+            </p>
+
+            <p>
+              ${source.method_note}
+            </p>
+
+            ${
+              source.url
+              ? `
+                <a
+                  href="${source.url}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Официален източник ↗
+                </a>
+              `
+              : ""
+            }
+
+          </div>
+
+        `
+      )
+      .join("");
+
+
+  historyContent.innerHTML = `
+
+    <div class="history-summary">
+
+      <div class="history-summary-card">
+
+        <span>
+          Исторически период
+        </span>
+
+        <strong>
+          ${Math.min(...years)}–${Math.max(...years)}
+        </strong>
+
+      </div>
+
+
+      <div class="history-summary-card">
+
+        <span>
+          Групи показатели
+        </span>
+
+        <strong>
+          ${indicatorNames.length}
+        </strong>
+
+      </div>
+
+
+      <div class="history-summary-card">
+
+        <span>
+          Потвърдена наличност
+        </span>
+
+        <strong>
+          ${yesCount}/${total}
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="history-table-wrap">
+
+      <table class="history-table">
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Показател
+            </th>
+
+            ${
+              years.map(
+                year => `
+                  <th>
+                    ${year}
+                  </th>
+                `
+              ).join("")
+            }
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+          ${matrixRows}
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+    <div class="legend-row">
+
+      <div class="legend-item">
+        <span class="history-status status-yes">
+          Да
+        </span>
+        официална серия/модул
+      </div>
+
+      <div class="legend-item">
+        <span class="history-status status-limited">
+          Да*
+        </span>
+        наличност с ограничения
+      </div>
+
+      <div class="legend-item">
+        <span class="history-status status-version">
+          V1*
+        </span>
+        ранна версия на показателя
+      </div>
+
+      <div class="legend-item">
+        <span class="history-status status-none">
+          —
+        </span>
+        няма съпоставима серия
+      </div>
+
+    </div>
+
+
+    <div class="metric-panel-head"
+         style="margin-top:32px;">
+
+      <h4>
+        Официални източници
+      </h4>
+
+      <span>
+        2010–2019
+      </span>
+
+    </div>
+
+
+    <div class="source-grid">
+      ${sourceCards}
+    </div>
+
+  `;
+
+}
+
+
+/* =========================================================
+   POPULATE CONTROLS
+========================================================= */
+
+function addIndicatorOptions(
   select
 ){
 
   const groups = {};
 
 
-  dataset.indicators
-    .forEach(
-      function(indicator){
+  dataset.indicators.forEach(
+    indicator => {
 
-        const groupName =
-          indicator.dimension ||
-          "Други показатели";
-
-
-        if(!groups[groupName]){
-          groups[groupName] = [];
-        }
+      const group =
+        indicator.dimension ||
+        "Други показатели";
 
 
-        groups[groupName].push(
-          indicator
-        );
-
+      if(!groups[group]){
+        groups[group] = [];
       }
-    );
+
+
+      groups[group].push(
+        indicator
+      );
+
+    }
+  );
 
 
   Object.keys(groups)
     .forEach(
-      function(groupName){
+      groupName => {
 
-        const group =
+        const optgroup =
           document.createElement(
             "optgroup"
           );
 
 
-        group.label =
+        optgroup.label =
           groupName;
 
 
         groups[groupName]
           .forEach(
-            function(indicator){
+            indicator => {
 
               const option =
                 document.createElement(
@@ -7752,11 +5916,10 @@ function appendIndicatorOptions(
 
 
               option.textContent =
-                `${indicator.label} ` +
-                `[${displayUnit(indicator.unit)}]`;
+                `${indicator.label} [${displayUnit(indicator.unit)}]`;
 
 
-              group.appendChild(
+              optgroup.appendChild(
                 option
               );
 
@@ -7765,7 +5928,7 @@ function appendIndicatorOptions(
 
 
         select.appendChild(
-          group
+          optgroup
         );
 
       }
@@ -7774,11 +5937,7 @@ function appendIndicatorOptions(
 }
 
 
-/* =========================================================
-   POPULATE YEAR SELECT
-========================================================= */
-
-function appendYears(
+function addYears(
   select,
   reverse = false
 ){
@@ -7793,7 +5952,7 @@ function appendYears(
 
 
   years.forEach(
-    function(year){
+    year => {
 
       const option =
         document.createElement(
@@ -7819,100 +5978,78 @@ function appendYears(
 }
 
 
-/* =========================================================
-   POPULATE ALL CONTROLS
-========================================================= */
-
 function populateControls(){
 
+  dataset.sectors.forEach(
+    sector => {
 
-  /* Sectors */
-
-  dataset.sectors
-    .forEach(
-      function(sector){
-
-        const option =
-          document.createElement(
-            "option"
-          );
-
-
-        option.value =
-          sector.code;
-
-
-        option.textContent =
-          `${sector.code} - ${sector.name}`;
-
-
-        sectorSelect.appendChild(
-          option
+      const option =
+        document.createElement(
+          "option"
         );
 
-      }
-    );
+
+      option.value =
+        sector.code;
 
 
-  /* Indicators */
+      option.textContent =
+        `${sector.code} - ${sector.name}`;
 
-  appendIndicatorOptions(
+
+      sectorSelect.appendChild(
+        option
+      );
+
+    }
+  );
+
+
+  addIndicatorOptions(
     indicatorSelect
   );
 
-
-  appendIndicatorOptions(
+  addIndicatorOptions(
     xIndicatorSelect
   );
 
-
-  appendIndicatorOptions(
+  addIndicatorOptions(
     yIndicatorSelect
   );
 
 
-  /* Years */
-
-  appendYears(
+  addYears(
     yearSelect,
     true
   );
 
-
-  appendYears(
+  addYears(
     baseYearSelect
   );
 
-
-  appendYears(
+  addYears(
     compareYearSelect
   );
 
-
-  appendYears(
+  addYears(
     dependencyYear,
     true
   );
 
-
-  appendYears(
+  addYears(
     changeBaseYear
   );
 
-
-  appendYears(
+  addYears(
     changeCompareYear
   );
 
-
-  appendYears(
+  addYears(
     lagXYear
   );
 
 
-  /* =======================================================
-     DEFAULT SECTOR VIEW
-  ======================================================= */
+  /* Defaults */
 
   sectorSelect.value =
     "A";
@@ -7920,8 +6057,8 @@ function populateControls(){
 
   indicatorSelect.value =
     dataset.indicators.some(
-      x =>
-        x.code ===
+      i =>
+        i.code ===
         "gva_current_meur"
     )
     ? "gva_current_meur"
@@ -7937,10 +6074,6 @@ function populateControls(){
         ]
       );
 
-
-  /* =======================================================
-     DEFAULT YEAR COMPARISON
-  ======================================================= */
 
   baseYearSelect.value =
     dataset.period.includes(2020)
@@ -7960,14 +6093,10 @@ function populateControls(){
       );
 
 
-  /* =======================================================
-     DEFAULT DEPENDENCY
-  ======================================================= */
-
   xIndicatorSelect.value =
     dataset.indicators.some(
-      x =>
-        x.code ===
+      i =>
+        i.code ===
         "dii_basic_pct"
     )
     ? "dii_basic_pct"
@@ -7976,16 +6105,12 @@ function populateControls(){
 
   yIndicatorSelect.value =
     dataset.indicators.some(
-      x =>
-        x.code ===
+      i =>
+        i.code ===
         "labour_productivity_eur_hour"
     )
     ? "labour_productivity_eur_hour"
-    : (
-        dataset.indicators[1]
-        ? dataset.indicators[1].code
-        : dataset.indicators[0].code
-      );
+    : dataset.indicators[1].code;
 
 
   dependencyYear.value =
@@ -8024,13 +6149,7 @@ function populateControls(){
       );
 
 
-  lagLength.value =
-    "2";
-
-
-  /* =======================================================
-     EVENTS
-  ======================================================= */
+  /* Events */
 
   sectorSelect.addEventListener(
     "change",
@@ -8062,152 +6181,119 @@ function populateControls(){
   );
 
 
-  dependencyMode.addEventListener(
-    "change",
-    renderDependency
-  );
+  [
+    dependencyMode,
+    xIndicatorSelect,
+    yIndicatorSelect,
+    dependencyYear,
+    changeBaseYear,
+    changeCompareYear,
+    lagXYear,
+    lagLength
+  ].forEach(
+    element => {
 
+      element.addEventListener(
+        "change",
+        renderDependency
+      );
 
-  xIndicatorSelect.addEventListener(
-    "change",
-    renderDependency
-  );
-
-
-  yIndicatorSelect.addEventListener(
-    "change",
-    renderDependency
-  );
-
-
-  dependencyYear.addEventListener(
-    "change",
-    renderDependency
-  );
-
-
-  changeBaseYear.addEventListener(
-    "change",
-    renderDependency
-  );
-
-
-  changeCompareYear.addEventListener(
-    "change",
-    renderDependency
-  );
-
-
-  lagXYear.addEventListener(
-    "change",
-    renderDependency
-  );
-
-
-  lagLength.addEventListener(
-    "change",
-    renderDependency
+    }
   );
 
 
   renderExplorer();
-
   renderDependency();
+  renderHistory();
 
 }
 
 
 /* =========================================================
-   LOAD DATA
+   LOAD JSON
 ========================================================= */
 
-fetch(
-  "a21-sector-data.json"
-)
+function fetchJson(path){
 
-  .then(
-    function(response){
+  return fetch(path)
+    .then(
+      response => {
 
-      if(!response.ok){
+        if(!response.ok){
 
-        throw new Error(
-          "Файлът с данни не е намерен."
-        );
+          throw new Error(
+            `${path} не е намерен`
+          );
+
+        }
+
+
+        return response.json();
 
       }
+    );
+
+}
 
 
-      return response.json();
+Promise.all([
 
-    }
+  fetchJson(
+    "a21-sector-data.json"
+  ),
+
+  fetchJson(
+    "a21-metadata.json"
+  ).catch(
+    () => null
+  ),
+
+  fetchJson(
+    "historical-availability.json"
+  ).catch(
+    () => null
   )
 
-  .then(
-    function(data){
+])
 
-      dataset = data;
+.then(
+  function(results){
 
-      populateControls();
+    dataset =
+      results[0];
 
-    }
-  )
+    metadata =
+      results[1];
 
-  .catch(
-    function(error){
-
-      explorerContent.innerHTML = `
-
-        <div class="load-error">
-
-          Интерактивните данни
-          не могат да бъдат заредени.
-
-          Увери се, че
-
-          <strong>
-            a21-sector-data.json
-          </strong>
-
-          е качен
-          в същата папка като
-
-          <strong>
-            sectors.html
-          </strong>.
-
-        </div>
-
-      `;
+    historical =
+      results[2];
 
 
-      yearCompareContent.innerHTML = `
+    populateControls();
 
-        <div class="load-error">
+  }
+)
 
-          Сравнението между години
-          не може да бъде заредено.
+.catch(
+  function(error){
 
-        </div>
+    explorerContent.innerHTML = `
 
-      `;
+      <div class="load-error">
 
+        Основният файл
+        <strong>a21-sector-data.json</strong>
+        не може да бъде зареден.
 
-      dependencyContent.innerHTML = `
+      </div>
 
-        <div class="load-error">
-
-          Анализът на зависимости
-          не може да бъде зареден.
-
-        </div>
-
-      `;
+    `;
 
 
-      console.error(error);
+    console.error(error);
 
-    }
-  );
+  }
+);
 
 
 })();
