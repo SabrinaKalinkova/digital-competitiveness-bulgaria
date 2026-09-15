@@ -1,0 +1,3292 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Екип | Дигитална конкурентоспособност на България
+  </title>
+
+  <meta
+    name="description"
+    content="Екип на научноизследователски проект № 6/2024 „Дигитална конкурентоспособност на социално-икономическата система на България“."
+  >
+
+
+  <style>
+
+    :root {
+
+      --navy: #102b4c;
+      --navy-dark: #081f38;
+
+      --blue: #2457c5;
+      --cyan: #28a9c7;
+      --turquoise: #01c9bc;
+
+      --text: #213247;
+      --muted: #64768a;
+
+      --white: #ffffff;
+      --background: #f5f8fb;
+      --background-soft: #eef5f9;
+
+      --border: #dce7ef;
+
+      --shadow:
+        0 14px 40px
+        rgba(16, 43, 76, 0.08);
+
+      --max-width: 1260px;
+
+    }
+
+
+    * {
+
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--text);
+
+      background: var(--white);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+
+      color: inherit;
+      text-decoration: none;
+
+    }
+
+
+    button {
+
+      font: inherit;
+
+    }
+
+
+    .container {
+
+      width: min(
+        92%,
+        var(--max-width)
+      );
+
+      margin-inline: auto;
+
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+
+    header {
+
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
+
+      background:
+        rgba(255, 255, 255, 0.97);
+
+      border-bottom:
+        1px solid var(--border);
+
+      backdrop-filter:
+        blur(12px);
+
+    }
+
+
+    .navbar {
+
+      min-height: 82px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
+
+    }
+
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .logo-mark {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      gap: 4px;
+
+      height: 42px;
+
+    }
+
+
+    .logo-mark span {
+
+      display: block;
+
+      width: 9px;
+
+      border-radius:
+        3px 3px 0 0;
+
+    }
+
+
+    .logo-mark span:nth-child(1) {
+
+      height: 15px;
+
+      background: #7fd9e6;
+
+    }
+
+
+    .logo-mark span:nth-child(2) {
+
+      height: 23px;
+
+      background: #46bfd3;
+
+    }
+
+
+    .logo-mark span:nth-child(3) {
+
+      height: 31px;
+
+      background: #2499c2;
+
+    }
+
+
+    .logo-mark span:nth-child(4) {
+
+      height: 41px;
+
+      background: #1557a0;
+
+    }
+
+
+    .brand-text strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 16px;
+
+      line-height: 1.02;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .brand-text small {
+
+      display: block;
+
+      margin-top: 5px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      white-space: nowrap;
+
+    }
+
+
+    .desktop-nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 20px;
+
+      color: #34475a;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+    }
+
+
+    .desktop-nav > a {
+
+      padding:
+        31px 0 25px;
+
+      border-bottom:
+        3px solid transparent;
+
+      transition:
+        0.2s ease;
+
+    }
+
+
+    .desktop-nav > a:hover,
+    .desktop-nav > a.active {
+
+      color: var(--blue);
+
+      border-bottom-color:
+        var(--turquoise);
+
+    }
+
+
+    /* =========================================================
+       DROPDOWN
+    ========================================================= */
+
+
+    .nav-dropdown {
+
+      position: relative;
+
+    }
+
+
+    .nav-dropdown > button {
+
+      min-height: 82px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+      border: 0;
+
+      border-bottom:
+        3px solid transparent;
+
+      background: transparent;
+
+      color: #34475a;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+    }
+
+
+    .nav-dropdown > button:hover,
+    .nav-dropdown:focus-within > button {
+
+      color: var(--blue);
+
+      border-bottom-color:
+        var(--turquoise);
+
+    }
+
+
+    .dropdown-arrow {
+
+      font-size: 9px;
+
+      transition:
+        transform 0.2s ease;
+
+    }
+
+
+    .nav-dropdown:hover
+    .dropdown-arrow,
+    .nav-dropdown:focus-within
+    .dropdown-arrow {
+
+      transform:
+        rotate(180deg);
+
+    }
+
+
+    .dropdown-menu {
+
+      position: absolute;
+
+      top: calc(100% - 1px);
+      left: 50%;
+
+      width: 245px;
+
+      padding: 9px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: white;
+
+      box-shadow:
+        0 18px 50px
+        rgba(16, 43, 76, 0.13);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      pointer-events: none;
+
+      transform:
+        translateX(-50%)
+        translateY(8px);
+
+      transition:
+        0.18s ease;
+
+    }
+
+
+    .nav-dropdown:hover
+    .dropdown-menu,
+    .nav-dropdown:focus-within
+    .dropdown-menu {
+
+      opacity: 1;
+
+      visibility: visible;
+
+      pointer-events: auto;
+
+      transform:
+        translateX(-50%)
+        translateY(0);
+
+    }
+
+
+    .dropdown-menu a {
+
+      display: block;
+
+      padding:
+        11px 13px;
+
+      border-radius: 9px;
+
+      color: #435568;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+    }
+
+
+    .dropdown-menu a:hover {
+
+      color: var(--blue);
+
+      background:
+        #f2f7fb;
+
+    }
+
+
+    .language {
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      white-space: nowrap;
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+
+    .mobile-toggle {
+
+      display: none;
+
+      width: 42px;
+      height: 42px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 8px;
+
+      background: white;
+
+      color: var(--navy);
+
+      cursor: pointer;
+
+      font-size: 20px;
+
+    }
+
+
+    .mobile-menu {
+
+      display: none;
+
+      padding:
+        12px 4% 18px;
+
+      border-top:
+        1px solid var(--border);
+
+      background: white;
+
+    }
+
+
+    .mobile-menu a {
+
+      display: block;
+
+      padding:
+        11px 0;
+
+      border-bottom:
+        1px solid #edf2f5;
+
+      color: var(--navy);
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+    }
+
+
+    .mobile-menu a.active {
+
+      color: var(--blue);
+
+    }
+
+
+    .mobile-group-label {
+
+      padding:
+        15px 0 5px;
+
+      color: var(--cyan);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1.2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .mobile-menu .mobile-sub {
+
+      padding-left: 17px;
+
+      color: #51677a;
+
+      font-size: 13px;
+
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+
+    .page-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      color: white;
+
+      background:
+
+        radial-gradient(
+          circle at 83% 32%,
+          rgba(1, 201, 188, 0.18),
+          transparent 26%
+        ),
+
+        linear-gradient(
+          116deg,
+          #081f38 0%,
+          #102f51 60%,
+          #145b7d 100%
+        );
+
+    }
+
+
+    .page-hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background-image:
+
+        linear-gradient(
+          rgba(82, 215, 226, 0.045) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(82, 215, 226, 0.045) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        62px 62px;
+
+    }
+
+
+    .page-hero-inner {
+
+      position: relative;
+
+      z-index: 1;
+
+      min-height: 430px;
+
+      display: grid;
+
+      grid-template-columns:
+        1.15fr 0.85fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+      padding:
+        76px 0;
+
+    }
+
+
+    .hero-eyebrow {
+
+      margin-bottom: 18px;
+
+      color: #86e3e8;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1.9px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .page-hero h1 {
+
+      margin-bottom: 22px;
+
+      font-size:
+        clamp(
+          45px,
+          5vw,
+          66px
+        );
+
+      line-height: 1.02;
+
+      letter-spacing:
+        -2px;
+
+    }
+
+
+    .hero-description {
+
+      max-width: 760px;
+
+      color: #d4e6ee;
+
+      font-size: 17px;
+
+      line-height: 1.72;
+
+    }
+
+
+    .hero-card {
+
+      padding: 29px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+      border-radius: 20px;
+
+      background:
+        rgba(255, 255, 255, 0.045);
+
+    }
+
+
+    .hero-card-label {
+
+      margin-bottom: 17px;
+
+      color: #82e1e6;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .hero-card strong {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 34px;
+
+      line-height: 1;
+
+    }
+
+
+    .hero-card p {
+
+      color: #c7dce6;
+
+      font-size: 12px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================================================
+       GENERAL
+    ========================================================= */
+
+
+    .standard-section {
+
+      padding:
+        84px 0;
+
+    }
+
+
+    .section-alt {
+
+      background:
+        var(--background);
+
+    }
+
+
+    .section-label {
+
+      margin-bottom: 10px;
+
+      color: var(--cyan);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1.8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .section-title {
+
+      max-width: 900px;
+
+      color: var(--navy);
+
+      font-size:
+        clamp(
+          29px,
+          3.2vw,
+          43px
+        );
+
+      line-height: 1.13;
+
+      letter-spacing:
+        -1px;
+
+    }
+
+
+    .section-description {
+
+      max-width: 900px;
+
+      margin-top: 17px;
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.75;
+
+    }
+
+
+    /* =========================================================
+       PLACEHOLDER PHOTO
+    ========================================================= */
+
+
+    .photo-placeholder {
+
+      position: relative;
+
+      overflow: hidden;
+
+      display: grid;
+
+      place-items: center;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          #e9f3f7,
+          #f8fbfc
+        );
+
+      border:
+        1px solid #d5e5ec;
+
+      color: #7894a3;
+
+      text-align: center;
+
+    }
+
+
+    .photo-placeholder::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 82px;
+      height: 82px;
+
+      top: 21%;
+
+      border-radius: 50%;
+
+      background:
+        #cddfe7;
+
+    }
+
+
+    .photo-placeholder::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 145px;
+      height: 85px;
+
+      bottom: 7%;
+
+      border-radius:
+        75px 75px 18px 18px;
+
+      background:
+        #cddfe7;
+
+    }
+
+
+    .photo-placeholder span {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin-top: auto;
+
+      margin-bottom: 14px;
+
+      padding:
+        4px 8px;
+
+      border-radius: 6px;
+
+      background:
+        rgba(255, 255, 255, 0.9);
+
+      color: #6a8694;
+
+      font-size: 8px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================================
+       PROJECT LEADER
+    ========================================================= */
+
+
+    .leader-card {
+
+      display: grid;
+
+      grid-template-columns:
+        330px 1fr;
+
+      overflow: hidden;
+
+      margin-top: 40px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 21px;
+
+      background: white;
+
+      box-shadow:
+        var(--shadow);
+
+    }
+
+
+    .leader-photo {
+
+      min-height: 455px;
+
+      border: 0;
+
+      border-right:
+        1px solid var(--border);
+
+      border-radius: 0;
+
+    }
+
+
+    .leader-content {
+
+      padding: 42px;
+
+    }
+
+
+    .role-label {
+
+      display: inline-flex;
+
+      margin-bottom: 17px;
+
+      padding:
+        6px 10px;
+
+      border-radius: 20px;
+
+      background:
+        #e9f8f6;
+
+      color:
+        #157b72;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        0.7px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .leader-content h2 {
+
+      margin-bottom: 7px;
+
+      color: var(--navy);
+
+      font-size:
+        clamp(
+          27px,
+          3vw,
+          37px
+        );
+
+      line-height: 1.2;
+
+    }
+
+
+    .academic-position {
+
+      margin-bottom: 22px;
+
+      color: var(--blue);
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+    }
+
+
+    .profile-description {
+
+      max-width: 760px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.75;
+
+    }
+
+
+    .profile-meta {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 11px;
+
+      margin-top: 28px;
+
+    }
+
+
+    .meta-item {
+
+      padding: 17px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 11px;
+
+      background:
+        #f8fbfc;
+
+    }
+
+
+    .meta-item span {
+
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: #91a2ae;
+
+      font-size: 8px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        0.8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .meta-item strong {
+
+      color: var(--navy);
+
+      font-size: 11px;
+
+      line-height: 1.5;
+
+    }
+
+
+    .profile-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-top: 24px;
+
+    }
+
+
+    .profile-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      min-height: 34px;
+
+      padding:
+        0 12px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 8px;
+
+      background: white;
+
+      color: var(--blue);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+    }
+
+
+    /* =========================================================
+       TEAM MEMBERS
+    ========================================================= */
+
+
+    .team-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+
+      margin-top: 40px;
+
+    }
+
+
+    .member-card {
+
+      overflow: hidden;
+
+      display: flex;
+
+      flex-direction: column;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 17px;
+
+      background: white;
+
+      transition:
+        0.22s ease;
+
+    }
+
+
+    .member-card:hover {
+
+      transform:
+        translateY(-4px);
+
+      border-color:
+        #b9dce5;
+
+      box-shadow:
+        var(--shadow);
+
+    }
+
+
+    .member-photo {
+
+      width: 100%;
+
+      height: 285px;
+
+      border: 0;
+
+      border-bottom:
+        1px solid var(--border);
+
+      border-radius: 0;
+
+    }
+
+
+    .member-content {
+
+      display: flex;
+
+      flex-direction: column;
+
+      flex-grow: 1;
+
+      padding: 25px;
+
+    }
+
+
+    .member-number {
+
+      margin-bottom: 16px;
+
+      color: #8bc7d2;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1px;
+
+    }
+
+
+    .member-content h3 {
+
+      margin-bottom: 6px;
+
+      color: var(--navy);
+
+      font-size: 20px;
+
+      line-height: 1.25;
+
+    }
+
+
+    .member-position {
+
+      min-height: 37px;
+
+      margin-bottom: 17px;
+
+      color: var(--blue);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      line-height: 1.5;
+
+    }
+
+
+    .member-content p {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.68;
+
+    }
+
+
+    .member-details {
+
+      display: grid;
+
+      gap: 8px;
+
+      margin-top: 21px;
+
+    }
+
+
+    .member-detail {
+
+      padding-top: 9px;
+
+      border-top:
+        1px solid #edf2f5;
+
+    }
+
+
+    .member-detail span {
+
+      display: block;
+
+      margin-bottom: 3px;
+
+      color: #95a6b1;
+
+      font-size: 7px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        0.7px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .member-detail strong {
+
+      color: #455e70;
+
+      font-size: 9px;
+
+      line-height: 1.5;
+
+    }
+
+
+    .member-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 6px;
+
+      margin-top: auto;
+
+      padding-top: 20px;
+
+    }
+
+
+    .member-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      min-height: 31px;
+
+      padding:
+        0 10px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 7px;
+
+      color: var(--blue);
+
+      font-size: 8px;
+
+      font-weight: 800;
+
+    }
+
+
+    /* =========================================================
+       TEAM LOGIC
+    ========================================================= */
+
+
+    .team-logic {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 14px;
+
+      margin-top: 39px;
+
+    }
+
+
+    .logic-card {
+
+      min-height: 225px;
+
+      padding: 25px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: white;
+
+    }
+
+
+    .logic-code {
+
+      margin-bottom: 20px;
+
+      color: var(--cyan);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+    }
+
+
+    .logic-card h3 {
+
+      margin-bottom: 9px;
+
+      color: var(--navy);
+
+      font-size: 17px;
+
+    }
+
+
+    .logic-card p {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.68;
+
+    }
+
+
+    /* =========================================================
+       NOTE
+    ========================================================= */
+
+
+    .team-note {
+
+      display: grid;
+
+      grid-template-columns:
+        48px 1fr;
+
+      gap: 16px;
+
+      margin-top: 35px;
+
+      padding: 21px;
+
+      border:
+        1px solid #cde2e8;
+
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f5fbfc,
+          #ffffff
+        );
+
+    }
+
+
+    .team-note-icon {
+
+      width: 43px;
+      height: 43px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 10px;
+
+      background: var(--navy);
+
+      color: white;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+    }
+
+
+    .team-note strong {
+
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: var(--navy);
+
+      font-size: 13px;
+
+    }
+
+
+    .team-note p {
+
+      color: #596f80;
+
+      font-size: 10px;
+
+      line-height: 1.65;
+
+    }
+
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+
+    .final-cta {
+
+      padding:
+        58px 0;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          110deg,
+          #0b2845,
+          #145879
+        );
+
+    }
+
+
+    .final-cta-inner {
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 35px;
+
+    }
+
+
+    .final-cta h2 {
+
+      margin-bottom: 8px;
+
+      font-size:
+        clamp(
+          27px,
+          3vw,
+          38px
+        );
+
+    }
+
+
+    .final-cta p {
+
+      max-width: 730px;
+
+      color: #c7dce7;
+
+      font-size: 13px;
+
+    }
+
+
+    .btn {
+
+      min-height: 48px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        0 22px;
+
+      border-radius: 9px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #79d5dd,
+          #55bedb
+        );
+
+      color: #082b46;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      flex-shrink: 0;
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+
+    footer {
+
+      padding:
+        42px 0 24px;
+
+      background:
+        #0b253f;
+
+      color: white;
+
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.1fr 1fr;
+
+      gap: 55px;
+
+    }
+
+
+    .footer-project strong {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 14px;
+
+    }
+
+
+    .footer-project p {
+
+      max-width: 520px;
+
+      color: #b7cdd8;
+
+      font-size: 11px;
+
+      line-height: 1.65;
+
+    }
+
+
+    .footer-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+      gap:
+        9px 18px;
+
+    }
+
+
+    .footer-links a {
+
+      color: #c3d7df;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+    }
+
+
+    .footer-links a:hover {
+
+      color: #7ce0e5;
+
+    }
+
+
+    .copyright {
+
+      margin-top: 30px;
+
+      padding-top: 18px;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      color: #829eac;
+
+      font-size: 10px;
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+
+    @media(max-width: 1200px) {
+
+      .desktop-nav,
+      .language {
+
+        display: none;
+
+      }
+
+
+      .mobile-toggle {
+
+        display: block;
+
+      }
+
+
+      .team-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    @media(max-width: 950px) {
+
+      .page-hero-inner,
+      .leader-card {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .leader-photo {
+
+        min-height: 360px;
+
+        border-right: 0;
+
+        border-bottom:
+          1px solid var(--border);
+
+      }
+
+
+      .team-logic {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .footer-links {
+
+        justify-content: flex-start;
+
+      }
+
+    }
+
+
+    @media(max-width: 700px) {
+
+      .brand-text small,
+      .language {
+
+        display: none;
+
+      }
+
+
+      .page-hero h1 {
+
+        font-size: 42px;
+
+      }
+
+
+      .team-grid,
+      .profile-meta {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .standard-section {
+
+        padding:
+          64px 0;
+
+      }
+
+
+      .leader-content {
+
+        padding: 29px;
+
+      }
+
+
+      .member-photo {
+
+        height: 320px;
+
+      }
+
+
+      .final-cta-inner {
+
+        display: block;
+
+      }
+
+
+      .final-cta .btn {
+
+        margin-top: 22px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+
+<header>
+
+  <div class="container navbar">
+
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="Начална страница"
+    >
+
+      <div
+        class="logo-mark"
+        aria-hidden="true"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+      <div class="brand-text">
+
+        <strong>
+          Дигитална<br>
+          конкурентоспособност
+        </strong>
+
+        <small>
+          на социално-икономическата система на България
+        </small>
+
+      </div>
+
+    </a>
+
+
+    <nav
+      class="desktop-nav"
+      aria-label="Основна навигация"
+    >
+
+      <a href="index.html">
+        Начало
+      </a>
+
+      <a href="about.html">
+        За проекта
+      </a>
+
+      <a href="methodology.html">
+        Методология
+      </a>
+
+
+      <div class="nav-dropdown">
+
+        <button
+          type="button"
+          aria-haspopup="true"
+        >
+
+          Данни и анализи
+
+          <span class="dropdown-arrow">
+            ▼
+          </span>
+
+        </button>
+
+
+        <div class="dropdown-menu">
+
+          <a href="data-indices.html">
+            Данни и измерители
+          </a>
+
+          <a href="national.html">
+            Национален анализ
+          </a>
+
+          <a href="regions.html">
+            Регионален анализ
+          </a>
+
+          <a href="sectors.html">
+            Секторен анализ
+          </a>
+
+          <a href="organizations.html">
+            Организационен анализ
+          </a>
+
+          <a href="benchmark.html">
+            European Benchmark
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <a href="results.html">
+        Резултати
+      </a>
+
+      <a href="publications.html">
+        Публикации
+      </a>
+
+      <a
+        href="team.html"
+        class="active"
+      >
+        Екип
+      </a>
+
+    </nav>
+
+
+    <div class="language">
+      BG | EN
+    </div>
+
+
+    <button
+      class="mobile-toggle"
+      id="mobileToggle"
+      type="button"
+      aria-label="Отвори меню"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+  </div>
+
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <a href="index.html">
+      Начало
+    </a>
+
+    <a href="about.html">
+      За проекта
+    </a>
+
+    <a href="methodology.html">
+      Методология
+    </a>
+
+
+    <div class="mobile-group-label">
+      Данни и анализи
+    </div>
+
+
+    <a
+      class="mobile-sub"
+      href="data-indices.html"
+    >
+      Данни и измерители
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="national.html"
+    >
+      Национален анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="regions.html"
+    >
+      Регионален анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="sectors.html"
+    >
+      Секторен анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="organizations.html"
+    >
+      Организационен анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="benchmark.html"
+    >
+      European Benchmark
+    </a>
+
+
+    <a href="results.html">
+      Резултати
+    </a>
+
+    <a href="publications.html">
+      Публикации
+    </a>
+
+    <a
+      href="team.html"
+      class="active"
+    >
+      Екип
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+
+<section class="page-hero">
+
+  <div class="container page-hero-inner">
+
+
+    <div>
+
+      <div class="hero-eyebrow">
+        Научноизследователски проект № 6/2024
+      </div>
+
+
+      <h1>
+        Екип
+      </h1>
+
+
+      <p class="hero-description">
+        Проектът обединява изследователи
+        с експертиза в областта
+        на стратегическото планиране,
+        икономическия анализ,
+        дигиталната трансформация,
+        управлението,
+        човешкия капитал
+        и приложните социално-икономически изследвания.
+      </p>
+
+    </div>
+
+
+    <aside class="hero-card">
+
+      <div class="hero-card-label">
+        Проектен екип
+      </div>
+
+      <strong>
+        6
+      </strong>
+
+      <p>
+        Ръководител на проекта
+        и петима членове
+        на изследователския екип.
+      </p>
+
+    </aside>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECT LEADER
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Ръководство
+    </div>
+
+
+    <h2 class="section-title">
+      Ръководител на проекта
+    </h2>
+
+
+    <p class="section-description">
+      Ръководителят координира
+      научната концепция,
+      изследователския дизайн,
+      изпълнението на основните дейности
+      и интеграцията на резултатите
+      в общата рамка на проекта.
+    </p>
+
+
+    <article class="leader-card">
+
+
+      <!--
+        Когато имаш снимка, замени целия div:
+        <div class="photo-placeholder leader-photo">...</div>
+
+        с:
+
+        <img
+          src="images/team/project-leader.jpg"
+          alt="Име на ръководителя"
+          class="leader-photo"
+          style="width:100%; object-fit:cover;"
+        >
+      -->
+
+
+      <div class="photo-placeholder leader-photo">
+
+        <span>
+          Снимка
+        </span>
+
+      </div>
+
+
+      <div class="leader-content">
+
+        <div class="role-label">
+          Ръководител на проекта
+        </div>
+
+
+        <h2>
+          Име Фамилия
+        </h2>
+
+
+        <div class="academic-position">
+          Академична длъжност, научна степен
+        </div>
+
+
+        <p class="profile-description">
+          Тук ще бъде добавена кратка академична биография
+          на ръководителя на проекта.
+          Подходящият обем е около 80 до 120 думи
+          с акцент върху научната експертиза,
+          изследователския опит
+          и ролята в проекта.
+        </p>
+
+
+        <div class="profile-meta">
+
+
+          <div class="meta-item">
+
+            <span>
+              Институция
+            </span>
+
+            <strong>
+              Университет / звено
+            </strong>
+
+          </div>
+
+
+          <div class="meta-item">
+
+            <span>
+              Роля в проекта
+            </span>
+
+            <strong>
+              Научно ръководство и координация
+            </strong>
+
+          </div>
+
+
+          <div class="meta-item">
+
+            <span>
+              Научни интереси
+            </span>
+
+            <strong>
+              Област 1, област 2, област 3
+            </strong>
+
+          </div>
+
+
+          <div class="meta-item">
+
+            <span>
+              Изследователски принос
+            </span>
+
+            <strong>
+              Основни задачи и направления в проекта
+            </strong>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="profile-links">
+
+          <a
+            class="profile-link"
+            href="#"
+          >
+            Email
+          </a>
+
+          <a
+            class="profile-link"
+            href="#"
+          >
+            ORCID
+          </a>
+
+          <a
+            class="profile-link"
+            href="#"
+          >
+            Научен профил
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TEAM MEMBERS
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Изследователски екип
+    </div>
+
+
+    <h2 class="section-title">
+      Членове на проекта
+    </h2>
+
+
+    <p class="section-description">
+      Всеки профил може да съдържа
+      кратка академична информация,
+      основни научни интереси,
+      конкретна роля в проекта
+      и връзки към професионални профили.
+    </p>
+
+
+    <div class="team-grid">
+
+
+      <!-- =====================================================
+           MEMBER 1
+      ====================================================== -->
+
+
+      <article class="member-card">
+
+
+        <div class="photo-placeholder member-photo">
+
+          <span>
+            Снимка
+          </span>
+
+        </div>
+
+
+        <div class="member-content">
+
+          <div class="member-number">
+            ЧЛЕН 01
+          </div>
+
+
+          <h3>
+            Име Фамилия
+          </h3>
+
+
+          <div class="member-position">
+            Академична длъжност, научна степен
+          </div>
+
+
+          <p>
+            Тук ще бъде добавена кратка информация
+            за академичния и изследователския профил
+            на члена на екипа.
+          </p>
+
+
+          <div class="member-details">
+
+
+            <div class="member-detail">
+
+              <span>
+                Институция
+              </span>
+
+              <strong>
+                Университет / звено
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Роля в проекта
+              </span>
+
+              <strong>
+                Ще бъде добавена
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Научни интереси
+              </span>
+
+              <strong>
+                Област 1, област 2
+              </strong>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="member-links">
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              Email
+            </a>
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              ORCID
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           MEMBER 2
+      ====================================================== -->
+
+
+      <article class="member-card">
+
+
+        <div class="photo-placeholder member-photo">
+
+          <span>
+            Снимка
+          </span>
+
+        </div>
+
+
+        <div class="member-content">
+
+          <div class="member-number">
+            ЧЛЕН 02
+          </div>
+
+
+          <h3>
+            Име Фамилия
+          </h3>
+
+
+          <div class="member-position">
+            Академична длъжност, научна степен
+          </div>
+
+
+          <p>
+            Тук ще бъде добавена кратка информация
+            за академичния и изследователския профил
+            на члена на екипа.
+          </p>
+
+
+          <div class="member-details">
+
+
+            <div class="member-detail">
+
+              <span>
+                Институция
+              </span>
+
+              <strong>
+                Университет / звено
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Роля в проекта
+              </span>
+
+              <strong>
+                Ще бъде добавена
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Научни интереси
+              </span>
+
+              <strong>
+                Област 1, област 2
+              </strong>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="member-links">
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              Email
+            </a>
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              ORCID
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           MEMBER 3
+      ====================================================== -->
+
+
+      <article class="member-card">
+
+
+        <div class="photo-placeholder member-photo">
+
+          <span>
+            Снимка
+          </span>
+
+        </div>
+
+
+        <div class="member-content">
+
+          <div class="member-number">
+            ЧЛЕН 03
+          </div>
+
+
+          <h3>
+            Име Фамилия
+          </h3>
+
+
+          <div class="member-position">
+            Академична длъжност, научна степен
+          </div>
+
+
+          <p>
+            Тук ще бъде добавена кратка информация
+            за академичния и изследователския профил
+            на члена на екипа.
+          </p>
+
+
+          <div class="member-details">
+
+
+            <div class="member-detail">
+
+              <span>
+                Институция
+              </span>
+
+              <strong>
+                Университет / звено
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Роля в проекта
+              </span>
+
+              <strong>
+                Ще бъде добавена
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Научни интереси
+              </span>
+
+              <strong>
+                Област 1, област 2
+              </strong>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="member-links">
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              Email
+            </a>
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              ORCID
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           MEMBER 4
+      ====================================================== -->
+
+
+      <article class="member-card">
+
+
+        <div class="photo-placeholder member-photo">
+
+          <span>
+            Снимка
+          </span>
+
+        </div>
+
+
+        <div class="member-content">
+
+          <div class="member-number">
+            ЧЛЕН 04
+          </div>
+
+
+          <h3>
+            Име Фамилия
+          </h3>
+
+
+          <div class="member-position">
+            Академична длъжност, научна степен
+          </div>
+
+
+          <p>
+            Тук ще бъде добавена кратка информация
+            за академичния и изследователския профил
+            на члена на екипа.
+          </p>
+
+
+          <div class="member-details">
+
+
+            <div class="member-detail">
+
+              <span>
+                Институция
+              </span>
+
+              <strong>
+                Университет / звено
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Роля в проекта
+              </span>
+
+              <strong>
+                Ще бъде добавена
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Научни интереси
+              </span>
+
+              <strong>
+                Област 1, област 2
+              </strong>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="member-links">
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              Email
+            </a>
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              ORCID
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =====================================================
+           MEMBER 5
+      ====================================================== -->
+
+
+      <article class="member-card">
+
+
+        <div class="photo-placeholder member-photo">
+
+          <span>
+            Снимка
+          </span>
+
+        </div>
+
+
+        <div class="member-content">
+
+          <div class="member-number">
+            ЧЛЕН 05
+          </div>
+
+
+          <h3>
+            Име Фамилия
+          </h3>
+
+
+          <div class="member-position">
+            Академична длъжност, научна степен
+          </div>
+
+
+          <p>
+            Тук ще бъде добавена кратка информация
+            за академичния и изследователския профил
+            на члена на екипа.
+          </p>
+
+
+          <div class="member-details">
+
+
+            <div class="member-detail">
+
+              <span>
+                Институция
+              </span>
+
+              <strong>
+                Университет / звено
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Роля в проекта
+              </span>
+
+              <strong>
+                Ще бъде добавена
+              </strong>
+
+            </div>
+
+
+            <div class="member-detail">
+
+              <span>
+                Научни интереси
+              </span>
+
+              <strong>
+                Област 1, област 2
+              </strong>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="member-links">
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              Email
+            </a>
+
+            <a
+              class="member-link"
+              href="#"
+            >
+              ORCID
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <div class="team-note">
+
+      <div class="team-note-icon">
+        i
+      </div>
+
+
+      <div>
+
+        <strong>
+          Профилите ще бъдат допълнени
+        </strong>
+
+        <p>
+          Информацията за членовете на екипа,
+          техните научни интереси,
+          задачи в проекта
+          и професионални профили
+          ще бъде добавена след окончателното структуриране
+          на индивидуалните представяния.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TEAM LOGIC
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Изследователска работа
+    </div>
+
+
+    <h2 class="section-title">
+      Интердисциплинарна експертиза
+      в обща аналитична рамка
+    </h2>
+
+
+    <p class="section-description">
+      Екипът работи върху различни аспекти
+      на дигиталната трансформация,
+      като индивидуалната експертиза
+      се интегрира в общата концепция
+      за дигитална конкурентоспособност.
+    </p>
+
+
+    <div class="team-logic">
+
+
+      <article class="logic-card">
+
+        <div class="logic-code">
+          01
+        </div>
+
+        <h3>
+          Специализирана експертиза
+        </h3>
+
+        <p>
+          Всеки член участва
+          със знания и изследователски опит
+          в конкретна област,
+          свързана с тематиката на проекта.
+        </p>
+
+      </article>
+
+
+      <article class="logic-card">
+
+        <div class="logic-code">
+          02
+        </div>
+
+        <h3>
+          Координиран анализ
+        </h3>
+
+        <p>
+          Отделните изследвания
+          се разработват
+          в съответствие
+          с общата концептуална
+          и методологическа рамка.
+        </p>
+
+      </article>
+
+
+      <article class="logic-card">
+
+        <div class="logic-code">
+          03
+        </div>
+
+        <h3>
+          Интегриране на резултатите
+        </h3>
+
+        <p>
+          Националните,
+          регионалните,
+          секторните
+          и организационните резултати
+          се синтезират
+          в общ системен анализ.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+
+<section class="final-cta">
+
+  <div class="container final-cta-inner">
+
+
+    <div>
+
+      <h2>
+        Научни резултати на екипа
+      </h2>
+
+      <p>
+        Разгледай публикациите,
+        чрез които членовете на проекта
+        представят отделни аспекти
+        на изследването
+        и неговите резултати.
+      </p>
+
+    </div>
+
+
+    <a
+      class="btn"
+      href="publications.html"
+    >
+      Към публикациите
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+
+<footer>
+
+  <div class="container">
+
+
+    <div class="footer-grid">
+
+
+      <div class="footer-project">
+
+        <strong>
+          Университет за национално и световно стопанство
+        </strong>
+
+        <p>
+          Научноизследователски проект № 6/2024
+          <br>
+          „Дигитална конкурентоспособност
+          на социално-икономическата система на България“
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Начало
+        </a>
+
+        <a href="about.html">
+          За проекта
+        </a>
+
+        <a href="methodology.html">
+          Методология
+        </a>
+
+        <a href="data-indices.html">
+          Данни и измерители
+        </a>
+
+        <a href="national.html">
+          Национален анализ
+        </a>
+
+        <a href="regions.html">
+          Регионален анализ
+        </a>
+
+        <a href="sectors.html">
+          Секторен анализ
+        </a>
+
+        <a href="organizations.html">
+          Организационен анализ
+        </a>
+
+        <a href="benchmark.html">
+          European Benchmark
+        </a>
+
+        <a href="results.html">
+          Резултати
+        </a>
+
+        <a href="publications.html">
+          Публикации
+        </a>
+
+        <a href="team.html">
+          Екип
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Дигитална конкурентоспособност
+      на социално-икономическата система на България
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+<script>
+
+(function(){
+
+  const mobileToggle =
+    document.getElementById(
+      "mobileToggle"
+    );
+
+
+  const mobileMenu =
+    document.getElementById(
+      "mobileMenu"
+    );
+
+
+  mobileToggle.addEventListener(
+    "click",
+    function(){
+
+      const isOpen =
+        mobileMenu.style.display ===
+        "block";
+
+
+      mobileMenu.style.display =
+        isOpen
+        ? "none"
+        : "block";
+
+
+      mobileToggle.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+
+    }
+  );
+
+
+  mobileMenu
+    .querySelectorAll("a")
+    .forEach(
+      function(link){
+
+        link.addEventListener(
+          "click",
+          function(){
+
+            mobileMenu.style.display =
+              "none";
+
+
+            mobileToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+        );
+
+      }
+    );
+
+
+  window.addEventListener(
+    "resize",
+    function(){
+
+      if(
+        window.innerWidth > 1200
+      ){
+
+        mobileMenu.style.display =
+          "none";
+
+
+        mobileToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+    }
+  );
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
