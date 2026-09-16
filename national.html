@@ -1,0 +1,4536 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Национален анализ | Дигитална конкурентоспособност на България
+  </title>
+
+  <meta
+    name="description"
+    content="Национален анализ на дигитализацията и дигиталната конкурентоспособност на България по научноизследователски проект № 6/2024."
+  >
+
+
+  <style>
+
+    :root {
+
+      --navy: #102b4c;
+      --navy-dark: #081f38;
+      --blue: #2457c5;
+      --cyan: #28a9c7;
+      --turquoise: #01c9bc;
+
+      --text: #213247;
+      --muted: #64768a;
+
+      --white: #ffffff;
+      --background: #f5f8fb;
+      --background-soft: #eef5f9;
+      --border: #dce7ef;
+
+      --positive: #167f77;
+      --negative: #a85151;
+
+      --shadow:
+        0 14px 40px
+        rgba(16, 43, 76, 0.08);
+
+      --max-width: 1260px;
+
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--text);
+      background: var(--white);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button,
+    select {
+      font: inherit;
+    }
+
+
+    .container {
+
+      width: min(
+        92%,
+        var(--max-width)
+      );
+
+      margin-inline: auto;
+
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+
+    header {
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background:
+        rgba(255, 255, 255, 0.97);
+
+      border-bottom:
+        1px solid var(--border);
+
+      backdrop-filter:
+        blur(12px);
+
+    }
+
+
+    .navbar {
+
+      min-height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
+
+    }
+
+
+    .brand {
+
+      display: flex;
+      align-items: center;
+
+      gap: 13px;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .logo-mark {
+
+      display: flex;
+      align-items: flex-end;
+
+      gap: 4px;
+      height: 42px;
+
+    }
+
+
+    .logo-mark span {
+
+      display: block;
+
+      width: 9px;
+
+      border-radius:
+        3px 3px 0 0;
+
+    }
+
+
+    .logo-mark span:nth-child(1) {
+      height: 15px;
+      background: #7fd9e6;
+    }
+
+
+    .logo-mark span:nth-child(2) {
+      height: 23px;
+      background: #46bfd3;
+    }
+
+
+    .logo-mark span:nth-child(3) {
+      height: 31px;
+      background: #2499c2;
+    }
+
+
+    .logo-mark span:nth-child(4) {
+      height: 41px;
+      background: #1557a0;
+    }
+
+
+    .brand-text strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 16px;
+      line-height: 1.02;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .brand-text small {
+
+      display: block;
+
+      margin-top: 5px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      white-space: nowrap;
+
+    }
+
+
+    .desktop-nav {
+
+      display: flex;
+      align-items: center;
+
+      gap: 20px;
+
+      color: #34475a;
+
+      font-size: 13px;
+      font-weight: 700;
+
+    }
+
+
+    .desktop-nav > a {
+
+      padding:
+        31px 0 25px;
+
+      border-bottom:
+        3px solid transparent;
+
+      transition:
+        0.2s ease;
+
+    }
+
+
+    .desktop-nav > a:hover,
+    .desktop-nav > a.active {
+
+      color: var(--blue);
+
+      border-bottom-color:
+        var(--turquoise);
+
+    }
+
+
+    /* =========================================================
+       DROPDOWN
+    ========================================================= */
+
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+
+    .nav-dropdown > button {
+
+      min-height: 82px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 6px;
+
+      border: 0;
+
+      border-bottom:
+        3px solid transparent;
+
+      background: transparent;
+
+      color: #34475a;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+    }
+
+
+    .nav-dropdown.active > button,
+    .nav-dropdown > button:hover,
+    .nav-dropdown:focus-within > button {
+
+      color: var(--blue);
+
+      border-bottom-color:
+        var(--turquoise);
+
+    }
+
+
+    .dropdown-arrow {
+
+      font-size: 9px;
+
+      transition:
+        transform 0.2s ease;
+
+    }
+
+
+    .nav-dropdown:hover .dropdown-arrow,
+    .nav-dropdown:focus-within .dropdown-arrow {
+
+      transform:
+        rotate(180deg);
+
+    }
+
+
+    .dropdown-menu {
+
+      position: absolute;
+
+      top: calc(100% - 1px);
+      left: 50%;
+
+      width: 245px;
+
+      padding: 9px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: white;
+
+      box-shadow:
+        0 18px 50px
+        rgba(16, 43, 76, 0.13);
+
+      opacity: 0;
+      visibility: hidden;
+
+      pointer-events: none;
+
+      transform:
+        translateX(-50%)
+        translateY(8px);
+
+      transition:
+        0.18s ease;
+
+    }
+
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+
+      opacity: 1;
+      visibility: visible;
+
+      pointer-events: auto;
+
+      transform:
+        translateX(-50%)
+        translateY(0);
+
+    }
+
+
+    .dropdown-menu a {
+
+      display: block;
+
+      padding:
+        11px 13px;
+
+      border-radius: 9px;
+
+      color: #435568;
+
+      font-size: 12px;
+      font-weight: 700;
+
+    }
+
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a.active {
+
+      color: var(--blue);
+
+      background:
+        #f2f7fb;
+
+    }
+
+
+    .language {
+
+      color: var(--blue);
+
+      font-size: 12px;
+      font-weight: 700;
+
+      white-space: nowrap;
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+
+    .mobile-toggle {
+
+      display: none;
+
+      width: 42px;
+      height: 42px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 8px;
+
+      background: white;
+      color: var(--navy);
+
+      font-size: 20px;
+
+      cursor: pointer;
+
+    }
+
+
+    .mobile-menu {
+
+      display: none;
+
+      padding:
+        12px 4% 18px;
+
+      border-top:
+        1px solid var(--border);
+
+      background: white;
+
+    }
+
+
+    .mobile-menu a {
+
+      display: block;
+
+      padding:
+        11px 0;
+
+      border-bottom:
+        1px solid #edf2f5;
+
+      color: var(--navy);
+
+      font-size: 14px;
+      font-weight: 700;
+
+    }
+
+
+    .mobile-menu a.active {
+      color: var(--blue);
+    }
+
+
+    .mobile-group-label {
+
+      padding:
+        15px 0 5px;
+
+      color: var(--cyan);
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing:
+        1.2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .mobile-menu .mobile-sub {
+
+      padding-left: 17px;
+
+      color: #51677a;
+
+      font-size: 13px;
+
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+
+    .page-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      color: white;
+
+      background:
+
+        radial-gradient(
+          circle at 83% 30%,
+          rgba(1, 201, 188, 0.18),
+          transparent 26%
+        ),
+
+        linear-gradient(
+          116deg,
+          #081f38 0%,
+          #102f51 60%,
+          #145b7d 100%
+        );
+
+    }
+
+
+    .page-hero::before {
+
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background-image:
+
+        linear-gradient(
+          rgba(82, 215, 226, 0.045) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(82, 215, 226, 0.045) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        62px 62px;
+
+    }
+
+
+    .page-hero-inner {
+
+      position: relative;
+      z-index: 1;
+
+      min-height: 480px;
+
+      display: grid;
+
+      grid-template-columns:
+        1.05fr 0.95fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+      padding:
+        76px 0;
+
+    }
+
+
+    .hero-eyebrow {
+
+      margin-bottom: 18px;
+
+      color: #86e3e8;
+
+      font-size: 11px;
+      font-weight: 800;
+
+      letter-spacing:
+        1.9px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .page-hero h1 {
+
+      margin-bottom: 22px;
+
+      font-size:
+        clamp(
+          44px,
+          5vw,
+          65px
+        );
+
+      line-height: 1.03;
+
+      letter-spacing:
+        -2px;
+
+    }
+
+
+    .hero-description {
+
+      max-width: 760px;
+
+      color: #d4e6ee;
+
+      font-size: 17px;
+
+      line-height: 1.72;
+
+    }
+
+
+    .hero-card {
+
+      padding: 29px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+      border-radius: 20px;
+
+      background:
+        rgba(255, 255, 255, 0.045);
+
+    }
+
+
+    .hero-card-label {
+
+      margin-bottom: 19px;
+
+      color: #82e1e6;
+
+      font-size: 9px;
+      font-weight: 800;
+
+      letter-spacing:
+        1.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .hero-stats {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 9px;
+
+    }
+
+
+    .hero-stat {
+
+      padding: 17px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 10px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+    }
+
+
+    .hero-stat strong {
+
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: white;
+
+      font-size: 24px;
+
+      line-height: 1;
+
+    }
+
+
+    .hero-stat span {
+
+      color: #bed7df;
+
+      font-size: 9px;
+
+      line-height: 1.45;
+
+    }
+
+
+    /* =========================================================
+       GENERAL
+    ========================================================= */
+
+
+    .standard-section {
+
+      padding:
+        84px 0;
+
+    }
+
+
+    .section-alt {
+
+      background:
+        var(--background);
+
+    }
+
+
+    .section-label {
+
+      margin-bottom: 10px;
+
+      color: var(--cyan);
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing:
+        1.8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .section-title {
+
+      max-width: 900px;
+
+      color: var(--navy);
+
+      font-size:
+        clamp(
+          29px,
+          3.2vw,
+          43px
+        );
+
+      line-height: 1.13;
+
+      letter-spacing:
+        -1px;
+
+    }
+
+
+    .section-description {
+
+      max-width: 930px;
+
+      margin-top: 17px;
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.75;
+
+    }
+
+
+    /* =========================================================
+       ANALYTICAL FRAME
+    ========================================================= */
+
+
+    .frame-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 14px;
+
+      margin-top: 40px;
+
+    }
+
+
+    .frame-card {
+
+      min-height: 245px;
+
+      padding: 25px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: white;
+
+    }
+
+
+    .frame-code {
+
+      margin-bottom: 21px;
+
+      color: var(--cyan);
+
+      font-size: 9px;
+      font-weight: 800;
+
+      letter-spacing:
+        1px;
+
+    }
+
+
+    .frame-card h3 {
+
+      margin-bottom: 9px;
+
+      color: var(--navy);
+
+      font-size: 17px;
+
+    }
+
+
+    .frame-card p {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.68;
+
+    }
+
+
+    /* =========================================================
+       DASHBOARD CONTROLS
+    ========================================================= */
+
+
+    .dashboard-controls {
+
+      display: flex;
+
+      align-items: flex-end;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      margin-top: 40px;
+
+      padding: 22px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: white;
+
+    }
+
+
+    .control-group label {
+
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: #8a9da9;
+
+      font-size: 8px;
+      font-weight: 800;
+
+      letter-spacing:
+        1px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .control-group select {
+
+      min-width: 185px;
+      min-height: 44px;
+
+      padding:
+        0 12px;
+
+      border:
+        1px solid #ccdce5;
+
+      border-radius: 9px;
+
+      background: white;
+      color: var(--navy);
+
+      font-size: 12px;
+
+      outline: none;
+
+    }
+
+
+    .control-note {
+
+      max-width: 650px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* =========================================================
+       KPI GRID
+    ========================================================= */
+
+
+    .kpi-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 13px;
+
+      margin-top: 17px;
+
+    }
+
+
+    .kpi-card {
+
+      min-height: 170px;
+
+      padding: 22px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: white;
+
+    }
+
+
+    .kpi-label {
+
+      min-height: 38px;
+
+      color: #6b7e8d;
+
+      font-size: 9px;
+      font-weight: 700;
+
+      line-height: 1.5;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        0.5px;
+
+    }
+
+
+    .kpi-value {
+
+      margin-top: 14px;
+
+      color: var(--navy);
+
+      font-size: 31px;
+      font-weight: 800;
+
+      line-height: 1;
+
+    }
+
+
+    .kpi-unit {
+
+      margin-top: 5px;
+
+      color: #91a2ad;
+
+      font-size: 8px;
+
+    }
+
+
+    .kpi-change {
+
+      margin-top: 14px;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+    }
+
+
+    .positive {
+      color: var(--positive);
+    }
+
+
+    .negative {
+      color: var(--negative);
+    }
+
+
+    .neutral {
+      color: var(--muted);
+    }
+
+
+    /* =========================================================
+       TREND
+    ========================================================= */
+
+
+    .trend-layout {
+
+      display: grid;
+
+      grid-template-columns:
+        0.72fr 1.28fr;
+
+      gap: 18px;
+
+      margin-top: 40px;
+
+    }
+
+
+    .trend-controls {
+
+      padding: 28px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 16px;
+
+      background: white;
+
+    }
+
+
+    .trend-controls h3 {
+
+      margin-bottom: 17px;
+
+      color: var(--navy);
+
+      font-size: 20px;
+
+    }
+
+
+    .trend-controls p {
+
+      margin-bottom: 23px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.65;
+
+    }
+
+
+    .trend-controls select {
+
+      width: 100%;
+      min-height: 45px;
+
+      padding:
+        0 12px;
+
+      border:
+        1px solid #ccdce5;
+
+      border-radius: 9px;
+
+      background: white;
+
+      color: var(--navy);
+
+      font-size: 11px;
+
+    }
+
+
+    .trend-summary {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 9px;
+
+      margin-top: 20px;
+
+    }
+
+
+    .trend-summary-item {
+
+      padding: 14px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 10px;
+
+      background:
+        #f8fbfc;
+
+    }
+
+
+    .trend-summary-item span {
+
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: #8da0ac;
+
+      font-size: 7px;
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .trend-summary-item strong {
+
+      color: var(--navy);
+
+      font-size: 13px;
+
+    }
+
+
+    .chart-card {
+
+      min-height: 390px;
+
+      padding: 28px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 16px;
+
+      background: white;
+
+    }
+
+
+    .chart-title {
+
+      margin-bottom: 4px;
+
+      color: var(--navy);
+
+      font-size: 18px;
+
+      font-weight: 800;
+
+    }
+
+
+    .chart-subtitle {
+
+      margin-bottom: 20px;
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+    }
+
+
+    #trendChart {
+
+      width: 100%;
+      height: 300px;
+
+      display: block;
+
+    }
+
+
+    /* =========================================================
+       DRI
+    ========================================================= */
+
+
+    .dri-layout {
+
+      display: grid;
+
+      grid-template-columns:
+        0.72fr 1.28fr;
+
+      gap: 18px;
+
+      margin-top: 40px;
+
+    }
+
+
+    .dri-main {
+
+      padding: 31px;
+
+      border-radius: 18px;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          145deg,
+          #102d4d,
+          #155c7e
+        );
+
+    }
+
+
+    .dri-main span {
+
+      display: block;
+
+      margin-bottom: 12px;
+
+      color: #81e1e6;
+
+      font-size: 9px;
+      font-weight: 800;
+
+      letter-spacing:
+        1.2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .dri-main strong {
+
+      display: block;
+
+      margin-bottom: 10px;
+
+      font-size: 50px;
+
+      line-height: 1;
+
+    }
+
+
+    .dri-main h3 {
+
+      margin-bottom: 13px;
+
+      font-size: 22px;
+
+    }
+
+
+    .dri-main p {
+
+      color: #c9dfe8;
+
+      font-size: 10px;
+
+      line-height: 1.68;
+
+    }
+
+
+    .dimension-bars {
+
+      display: grid;
+
+      gap: 12px;
+
+      padding: 27px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 17px;
+
+      background: white;
+
+    }
+
+
+    .dimension-row {
+
+      display: grid;
+
+      grid-template-columns:
+        185px 1fr 60px;
+
+      gap: 15px;
+
+      align-items: center;
+
+    }
+
+
+    .dimension-label {
+
+      color: var(--navy);
+
+      font-size: 10px;
+      font-weight: 700;
+
+    }
+
+
+    .bar-track {
+
+      height: 9px;
+
+      overflow: hidden;
+
+      border-radius: 8px;
+
+      background:
+        #eaf1f5;
+
+    }
+
+
+    .bar-fill {
+
+      height: 100%;
+
+      border-radius: 8px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--turquoise)
+        );
+
+    }
+
+
+    .dimension-value {
+
+      color: var(--navy);
+
+      font-size: 10px;
+      font-weight: 800;
+
+      text-align: right;
+
+    }
+
+
+    /* =========================================================
+       ECONOMIC CONTEXT
+    ========================================================= */
+
+
+    .context-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 14px;
+
+      margin-top: 40px;
+
+    }
+
+
+    .context-card {
+
+      min-height: 210px;
+
+      padding: 24px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: white;
+
+    }
+
+
+    .context-code {
+
+      margin-bottom: 18px;
+
+      color: var(--cyan);
+
+      font-size: 9px;
+      font-weight: 800;
+
+    }
+
+
+    .context-card h3 {
+
+      min-height: 42px;
+
+      margin-bottom: 10px;
+
+      color: var(--navy);
+
+      font-size: 15px;
+
+      line-height: 1.4;
+
+    }
+
+
+    .context-value {
+
+      margin-bottom: 9px;
+
+      color: var(--navy);
+
+      font-size: 27px;
+
+      font-weight: 800;
+
+    }
+
+
+    .context-card p {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      line-height: 1.62;
+
+    }
+
+
+    /* =========================================================
+       CHANGE TABLE
+    ========================================================= */
+
+
+    .table-wrap {
+
+      overflow-x: auto;
+
+      margin-top: 40px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: white;
+
+    }
+
+
+    table {
+
+      width: 100%;
+
+      border-collapse: collapse;
+
+      min-width: 880px;
+
+    }
+
+
+    th,
+    td {
+
+      padding:
+        14px 15px;
+
+      border-bottom:
+        1px solid var(--border);
+
+      text-align: right;
+
+      font-size: 10px;
+
+    }
+
+
+    th {
+
+      background:
+        #f3f7fa;
+
+      color: #69808f;
+
+      font-size: 8px;
+
+      text-transform: uppercase;
+
+      letter-spacing:
+        0.7px;
+
+    }
+
+
+    th:first-child,
+    td:first-child {
+
+      text-align: left;
+
+    }
+
+
+    td:first-child {
+
+      color: var(--navy);
+
+      font-weight: 700;
+
+    }
+
+
+    tbody tr:last-child td {
+
+      border-bottom: 0;
+
+    }
+
+
+    /* =========================================================
+       INTERPRETATION
+    ========================================================= */
+
+
+    .interpretation-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 14px;
+
+      margin-top: 40px;
+
+    }
+
+
+    .interpretation-card {
+
+      min-height: 245px;
+
+      padding: 26px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 16px;
+
+      background: white;
+
+    }
+
+
+    .interpretation-code {
+
+      margin-bottom: 20px;
+
+      color: var(--cyan);
+
+      font-size: 9px;
+      font-weight: 800;
+
+    }
+
+
+    .interpretation-card h3 {
+
+      margin-bottom: 10px;
+
+      color: var(--navy);
+
+      font-size: 17px;
+
+    }
+
+
+    .interpretation-card p {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================================================
+       METHODOLOGY NOTE
+    ========================================================= */
+
+
+    .method-note {
+
+      display: grid;
+
+      grid-template-columns:
+        55px 1fr;
+
+      gap: 18px;
+
+      margin-top: 38px;
+
+      padding: 24px;
+
+      border:
+        1px solid #cde2e8;
+
+      border-radius: 15px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f5fbfc,
+          #ffffff
+        );
+
+    }
+
+
+    .method-icon {
+
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 11px;
+
+      background: var(--navy);
+
+      color: white;
+
+      font-size: 9px;
+      font-weight: 800;
+
+    }
+
+
+    .method-note strong {
+
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--navy);
+
+      font-size: 13px;
+
+    }
+
+
+    .method-note p {
+
+      color: #586f80;
+
+      font-size: 10px;
+
+      line-height: 1.68;
+
+    }
+
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+
+    .final-cta {
+
+      padding:
+        58px 0;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          110deg,
+          #0b2845,
+          #145879
+        );
+
+    }
+
+
+    .final-cta-inner {
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 35px;
+
+    }
+
+
+    .final-cta h2 {
+
+      margin-bottom: 8px;
+
+      font-size:
+        clamp(
+          27px,
+          3vw,
+          38px
+        );
+
+    }
+
+
+    .final-cta p {
+
+      max-width: 740px;
+
+      color: #c7dce7;
+
+      font-size: 13px;
+
+    }
+
+
+    .btn {
+
+      min-height: 48px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        0 22px;
+
+      border-radius: 9px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #79d5dd,
+          #55bedb
+        );
+
+      color: #082b46;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      flex-shrink: 0;
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+
+    footer {
+
+      padding:
+        42px 0 24px;
+
+      background:
+        #0b253f;
+
+      color: white;
+
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.1fr 1fr;
+
+      gap: 55px;
+
+    }
+
+
+    .footer-project strong {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 14px;
+
+    }
+
+
+    .footer-project p {
+
+      max-width: 520px;
+
+      color: #b7cdd8;
+
+      font-size: 11px;
+
+      line-height: 1.65;
+
+    }
+
+
+    .footer-links {
+
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+      gap:
+        9px 18px;
+
+    }
+
+
+    .footer-links a {
+
+      color: #c3d7df;
+
+      font-size: 11px;
+      font-weight: 700;
+
+    }
+
+
+    .footer-links a:hover {
+
+      color: #7ce0e5;
+
+    }
+
+
+    .copyright {
+
+      margin-top: 30px;
+
+      padding-top: 18px;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      color: #829eac;
+
+      font-size: 10px;
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+
+    @media(max-width: 1200px) {
+
+      .desktop-nav,
+      .language {
+
+        display: none;
+
+      }
+
+
+      .mobile-toggle {
+
+        display: block;
+
+      }
+
+
+      .frame-grid,
+      .kpi-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    @media(max-width: 950px) {
+
+      .page-hero-inner,
+      .trend-layout,
+      .dri-layout {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .context-grid,
+      .interpretation-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .footer-links {
+
+        justify-content: flex-start;
+
+      }
+
+    }
+
+
+    @media(max-width: 700px) {
+
+      .brand-text small,
+      .language {
+
+        display: none;
+
+      }
+
+
+      .page-hero h1 {
+
+        font-size: 41px;
+
+      }
+
+
+      .hero-stats,
+      .frame-grid,
+      .kpi-grid,
+      .context-grid,
+      .interpretation-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .dashboard-controls {
+
+        display: block;
+
+      }
+
+
+      .control-note {
+
+        margin-top: 17px;
+
+      }
+
+
+      .control-group select {
+
+        width: 100%;
+
+      }
+
+
+      .dimension-row {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 6px;
+
+      }
+
+
+      .dimension-value {
+
+        text-align: left;
+
+      }
+
+
+      .standard-section {
+
+        padding:
+          64px 0;
+
+      }
+
+
+      .final-cta-inner {
+
+        display: block;
+
+      }
+
+
+      .final-cta .btn {
+
+        margin-top: 22px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+
+<header>
+
+  <div class="container navbar">
+
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="Начална страница"
+    >
+
+      <div
+        class="logo-mark"
+        aria-hidden="true"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
+
+      <div class="brand-text">
+
+        <strong>
+          Дигитална<br>
+          конкурентоспособност
+        </strong>
+
+        <small>
+          на социално-икономическата система на България
+        </small>
+
+      </div>
+
+    </a>
+
+
+    <nav
+      class="desktop-nav"
+      aria-label="Основна навигация"
+    >
+
+      <a href="index.html">
+        Начало
+      </a>
+
+      <a href="about.html">
+        За проекта
+      </a>
+
+      <a href="methodology.html">
+        Методология
+      </a>
+
+
+      <div class="nav-dropdown active">
+
+        <button
+          type="button"
+          aria-haspopup="true"
+        >
+
+          Данни и анализи
+
+          <span class="dropdown-arrow">
+            ▼
+          </span>
+
+        </button>
+
+
+        <div class="dropdown-menu">
+
+          <a href="data-indices.html">
+            Данни и измерители
+          </a>
+
+          <a
+            href="national.html"
+            class="active"
+          >
+            Национален анализ
+          </a>
+
+          <a href="regions.html">
+            Регионален анализ
+          </a>
+
+          <a href="sectors.html">
+            Секторен анализ
+          </a>
+
+          <a href="organizations.html">
+            Организационен анализ
+          </a>
+
+          <a href="benchmark.html">
+            European Benchmark
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <a href="results.html">
+        Резултати
+      </a>
+
+      <a href="publications.html">
+        Публикации
+      </a>
+
+      <a href="team.html">
+        Екип
+      </a>
+
+    </nav>
+
+
+    <div class="language">
+      BG | EN
+    </div>
+
+
+    <button
+      class="mobile-toggle"
+      id="mobileToggle"
+      type="button"
+      aria-label="Отвори меню"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+  </div>
+
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <a href="index.html">
+      Начало
+    </a>
+
+    <a href="about.html">
+      За проекта
+    </a>
+
+    <a href="methodology.html">
+      Методология
+    </a>
+
+
+    <div class="mobile-group-label">
+      Данни и анализи
+    </div>
+
+
+    <a
+      class="mobile-sub"
+      href="data-indices.html"
+    >
+      Данни и измерители
+    </a>
+
+    <a
+      class="mobile-sub active"
+      href="national.html"
+    >
+      Национален анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="regions.html"
+    >
+      Регионален анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="sectors.html"
+    >
+      Секторен анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="organizations.html"
+    >
+      Организационен анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="benchmark.html"
+    >
+      European Benchmark
+    </a>
+
+
+    <a href="results.html">
+      Резултати
+    </a>
+
+    <a href="publications.html">
+      Публикации
+    </a>
+
+    <a href="team.html">
+      Екип
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+
+<section class="page-hero">
+
+  <div class="container page-hero-inner">
+
+
+    <div>
+
+      <div class="hero-eyebrow">
+        Аналитично равнище 01
+      </div>
+
+
+      <h1>
+        Национален анализ
+      </h1>
+
+
+      <p class="hero-description">
+        Националният анализ проследява
+        развитието на дигитализацията
+        и дигиталната конкурентоспособност
+        на България като цялостна икономическа система.
+        Фокусът е върху човешкия капитал,
+        дигитализацията на бизнеса,
+        използването на напреднали технологии
+        и връзката им с икономическия капацитет
+        и резултатите.
+      </p>
+
+    </div>
+
+
+    <aside class="hero-card">
+
+      <div class="hero-card-label">
+        Национален панел
+      </div>
+
+
+      <div class="hero-stats">
+
+
+        <div class="hero-stat">
+
+          <strong>
+            3
+          </strong>
+
+          <span>
+            хармонизирани наблюдавани години
+          </span>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+          <strong>
+            13
+          </strong>
+
+          <span>
+            основни сурови показателя
+          </span>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+          <strong>
+            4
+          </strong>
+
+          <span>
+            компонента на DRI
+          </span>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+          <strong>
+            BG
+          </strong>
+
+          <span>
+            България като национална икономика
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ANALYTICAL FRAME
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Аналитична рамка
+    </div>
+
+
+    <h2 class="section-title">
+      Какво наблюдаваме на национално равнище?
+    </h2>
+
+
+    <p class="section-description">
+      Националният профил съчетава
+      показатели за човешкия капитал,
+      дигиталното приемане от бизнеса,
+      използването на напреднали технологии
+      и интеграцията в цифровия пазар.
+      Икономическите и иновационните показатели
+      се използват като контекст
+      за интерпретация на дигиталната трансформация.
+    </p>
+
+
+    <div class="frame-grid">
+
+
+      <article class="frame-card">
+
+        <div class="frame-code">
+          N01
+        </div>
+
+        <h3>
+          Дигитален човешки капитал
+        </h3>
+
+        <p>
+          Базови дигитални умения,
+          ИКТ специалисти
+          и образователен капацитет,
+          които определят способността
+          за използване на цифровите технологии.
+        </p>
+
+      </article>
+
+
+      <article class="frame-card">
+
+        <div class="frame-code">
+          N02
+        </div>
+
+        <h3>
+          Дигитализация на бизнеса
+        </h3>
+
+        <p>
+          Базова цифрова интензивност
+          и степен на включване
+          на цифровите технологии
+          в дейността на предприятията.
+        </p>
+
+      </article>
+
+
+      <article class="frame-card">
+
+        <div class="frame-code">
+          N03
+        </div>
+
+        <h3>
+          Напреднали технологии
+        </h3>
+
+        <p>
+          Cloud,
+          data analytics
+          и изкуствен интелект
+          като индикатори
+          за по-дълбока технологична трансформация.
+        </p>
+
+      </article>
+
+
+      <article class="frame-card">
+
+        <div class="frame-code">
+          N04
+        </div>
+
+        <h3>
+          Дигитална пазарна интеграция
+        </h3>
+
+        <p>
+          Участие на предприятията
+          в онлайн продажби
+          като проявление
+          на използването на цифрови канали
+          в пазарната реализация.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     DIGITAL DASHBOARD
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Национален дигитален профил
+    </div>
+
+
+    <h2 class="section-title">
+      България по основни цифрови показатели
+    </h2>
+
+
+    <p class="section-description">
+      Избери година,
+      за да видиш националните стойности
+      на основните показатели.
+      Промяната в картите се изчислява
+      спрямо предходното налично наблюдение.
+    </p>
+
+
+    <div class="dashboard-controls">
+
+
+      <div class="control-group">
+
+        <label for="yearSelect">
+          Година
+        </label>
+
+        <select id="yearSelect">
+
+          <option value="2021">
+            2021
+          </option>
+
+          <option value="2023">
+            2023
+          </option>
+
+          <option
+            value="2025"
+            selected
+          >
+            2025
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="control-note">
+        Показателите са представени
+        в оригиналните им единици.
+        Стойностите в този раздел
+        не са нормализирани
+        и не представляват класация.
+      </div>
+
+
+    </div>
+
+
+    <div
+      class="kpi-grid"
+      id="kpiGrid"
+    >
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TREND
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Динамика
+    </div>
+
+
+    <h2 class="section-title">
+      Как се променят националните показатели?
+    </h2>
+
+
+    <div class="trend-layout">
+
+
+      <div class="trend-controls">
+
+        <h3>
+          Избери показател
+        </h3>
+
+        <p>
+          Графиката показва
+          наличните наблюдения
+          за България
+          през 2021, 2023 и 2025 г.
+        </p>
+
+
+        <select id="indicatorSelect">
+        </select>
+
+
+        <div class="trend-summary">
+
+
+          <div class="trend-summary-item">
+
+            <span>
+              2021
+            </span>
+
+            <strong id="trendStart">
+              Няма данни
+            </strong>
+
+          </div>
+
+
+          <div class="trend-summary-item">
+
+            <span>
+              2025
+            </span>
+
+            <strong id="trendEnd">
+              Няма данни
+            </strong>
+
+          </div>
+
+
+          <div class="trend-summary-item">
+
+            <span>
+              Абсолютна промяна
+            </span>
+
+            <strong id="trendAbs">
+              Няма данни
+            </strong>
+
+          </div>
+
+
+          <div class="trend-summary-item">
+
+            <span>
+              Относителна промяна
+            </span>
+
+            <strong id="trendPct">
+              Няма данни
+            </strong>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <div class="chart-card">
+
+        <div
+          class="chart-title"
+          id="chartTitle"
+        >
+        </div>
+
+        <div
+          class="chart-subtitle"
+          id="chartSubtitle"
+        >
+        </div>
+
+        <svg
+          id="trendChart"
+          viewBox="0 0 700 300"
+          preserveAspectRatio="none"
+          aria-label="Динамика на избрания показател"
+        >
+        </svg>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     DRI
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Синтетичен национален профил
+    </div>
+
+
+    <h2 class="section-title">
+      Digital Readiness Index
+      и неговите компоненти
+    </h2>
+
+
+    <p class="section-description">
+      DRI е проектен нормализиран измерител,
+      използван за аналитичен синтез
+      на четири измерения.
+      Стойността не е официален индекс
+      и не следва да се интерпретира
+      като абсолютна оценка
+      на националната конкурентоспособност.
+    </p>
+
+
+    <div class="dashboard-controls">
+
+
+      <div class="control-group">
+
+        <label for="driYearSelect">
+          Година
+        </label>
+
+        <select id="driYearSelect">
+
+          <option value="2021">
+            2021
+          </option>
+
+          <option value="2023">
+            2023
+          </option>
+
+          <option
+            value="2025"
+            selected
+          >
+            2025
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="control-note">
+        Компонентите са нормализирани
+        върху общия панел
+        от държави и години.
+        Затова са подходящи
+        за аналитично сравнение,
+        но не са проценти.
+      </div>
+
+
+    </div>
+
+
+    <div class="dri-layout">
+
+
+      <div class="dri-main">
+
+        <span>
+          DRI
+        </span>
+
+        <strong id="driValue">
+          0.000
+        </strong>
+
+        <h3>
+          Digital Readiness Index
+        </h3>
+
+        <p>
+          Композитният показател обобщава
+          дигиталния човешки капитал,
+          приемането на цифрови технологии от бизнеса,
+          използването на напреднали технологии
+          и дигиталната пазарна интеграция.
+        </p>
+
+      </div>
+
+
+      <div
+        class="dimension-bars"
+        id="dimensionBars"
+      >
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ECONOMIC CONTEXT
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Икономически и иновационен контекст
+    </div>
+
+
+    <h2 class="section-title">
+      Дигитализацията в контекста
+      на икономическия капацитет
+    </h2>
+
+
+    <p class="section-description">
+      Дигиталните показатели
+      се разглеждат заедно
+      с показатели за производителност,
+      иновации,
+      инвестиции,
+      научноизследователска дейност
+      и образование.
+      Този блок не предполага
+      автоматична причинно-следствена връзка.
+    </p>
+
+
+    <div
+      class="context-grid"
+      id="contextGrid"
+    >
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CHANGE TABLE
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Промяна във времето
+    </div>
+
+
+    <h2 class="section-title">
+      Национална динамика
+      от 2021 до 2025 г.
+    </h2>
+
+
+    <p class="section-description">
+      Таблицата сравнява
+      началното и последното
+      налично наблюдение
+      в използвания национален панел.
+      За процентните показатели
+      абсолютната разлика е представена
+      в процентни пункта.
+    </p>
+
+
+    <div class="table-wrap">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Показател
+            </th>
+
+            <th>
+              2021
+            </th>
+
+            <th>
+              2023
+            </th>
+
+            <th>
+              2025
+            </th>
+
+            <th>
+              Промяна 2021 към 2025
+            </th>
+
+            <th>
+              Относителна промяна
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody id="changeTableBody">
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTERPRETATION
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Аналитична интерпретация
+    </div>
+
+
+    <h2 class="section-title">
+      Какво показва националната динамика?
+    </h2>
+
+
+    <div class="interpretation-grid">
+
+
+      <article class="interpretation-card">
+
+        <div class="interpretation-code">
+          I01
+        </div>
+
+        <h3>
+          Подобрение в човешкия капитал
+        </h3>
+
+        <p>
+          Между 2021 и 2025 г.
+          се наблюдава увеличение
+          както при дела на хората
+          с базови дигитални умения,
+          така и при дела
+          на ИКТ специалистите.
+          Това показва подобрение
+          на част от човешките предпоставки
+          за дигитална трансформация.
+        </p>
+
+      </article>
+
+
+      <article class="interpretation-card">
+
+        <div class="interpretation-code">
+          I02
+        </div>
+
+        <h3>
+          Напредналите технологии се развиват неравномерно
+        </h3>
+
+        <p>
+          Cloud,
+          data analytics
+          и AI показват различна динамика.
+          Особено ясно е ускорението
+          при използването
+          на изкуствен интелект
+          в последното наблюдение.
+          Това предполага,
+          че отделните технологии
+          не следват една и съща траектория.
+        </p>
+
+      </article>
+
+
+      <article class="interpretation-card">
+
+        <div class="interpretation-code">
+          I03
+        </div>
+
+        <h3>
+          Дигитализацията не се движи линейно
+        </h3>
+
+        <p>
+          Basic digital intensity
+          показва спад през 2023 г.
+          и последващо възстановяване през 2025 г.
+          Това е аргумент
+          националната дигитализация
+          да се разглежда чрез динамика
+          и компоненти,
+          а не чрез една единична стойност.
+        </p>
+
+      </article>
+
+
+    </div>
+
+
+    <div class="method-note">
+
+      <div class="method-icon">
+        !
+      </div>
+
+      <div>
+
+        <strong>
+          Ограничение на националния анализ
+        </strong>
+
+        <p>
+          Хармонизираният панел съдържа
+          три наблюдавани години:
+          2021, 2023 и 2025.
+          Това е достатъчно
+          за описателен анализ на динамиката,
+          но не е достатъчна времева серия
+          за надеждна национална причинна регресия.
+          Статистическите зависимости
+          на сайта трябва да се оценяват
+          върху подходящи панели
+          с достатъчен брой наблюдения.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EUROPEAN LINK
+========================================================= -->
+
+
+<section class="final-cta">
+
+  <div class="container final-cta-inner">
+
+
+    <div>
+
+      <h2>
+        Как изглежда България
+        спрямо европейската среда?
+      </h2>
+
+      <p>
+        Националната страница показва
+        развитието на България.
+        European Benchmark добавя
+        сравнението с ЕС-27
+        и отделните държави членки
+        по хармонизирани показатели.
+      </p>
+
+    </div>
+
+
+    <a
+      class="btn"
+      href="benchmark.html"
+    >
+      Към European Benchmark
+    </a>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+
+<footer>
+
+  <div class="container">
+
+
+    <div class="footer-grid">
+
+
+      <div class="footer-project">
+
+        <strong>
+          Университет за национално и световно стопанство
+        </strong>
+
+        <p>
+          Научноизследователски проект № 6/2024
+          <br>
+          „Дигитална конкурентоспособност
+          на социално-икономическата система на България“
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Начало
+        </a>
+
+        <a href="about.html">
+          За проекта
+        </a>
+
+        <a href="methodology.html">
+          Методология
+        </a>
+
+        <a href="data-indices.html">
+          Данни и измерители
+        </a>
+
+        <a href="national.html">
+          Национален анализ
+        </a>
+
+        <a href="regions.html">
+          Регионален анализ
+        </a>
+
+        <a href="sectors.html">
+          Секторен анализ
+        </a>
+
+        <a href="organizations.html">
+          Организационен анализ
+        </a>
+
+        <a href="benchmark.html">
+          European Benchmark
+        </a>
+
+        <a href="results.html">
+          Резултати
+        </a>
+
+        <a href="publications.html">
+          Публикации
+        </a>
+
+        <a href="team.html">
+          Екип
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Дигитална конкурентоспособност
+      на социално-икономическата система на България
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+<script>
+
+(function(){
+
+  "use strict";
+
+
+  /* =========================================================
+     MOBILE MENU
+  ========================================================= */
+
+
+  const mobileToggle =
+    document.getElementById(
+      "mobileToggle"
+    );
+
+
+  const mobileMenu =
+    document.getElementById(
+      "mobileMenu"
+    );
+
+
+  mobileToggle.addEventListener(
+    "click",
+    function(){
+
+      const isOpen =
+        mobileMenu.style.display ===
+        "block";
+
+
+      mobileMenu.style.display =
+        isOpen
+        ? "none"
+        : "block";
+
+
+      mobileToggle.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+
+    }
+  );
+
+
+  window.addEventListener(
+    "resize",
+    function(){
+
+      if(
+        window.innerWidth > 1200
+      ){
+
+        mobileMenu.style.display =
+          "none";
+
+        mobileToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+    }
+  );
+
+
+  /* =========================================================
+     NATIONAL DATA
+  ========================================================= */
+
+
+  const nationalData = {
+
+    2021: {
+
+      basicSkills: 31.18,
+      ictSpecialists: 3.50,
+      dii: 39.40,
+      cloud: 13.00,
+      analytics: 15.00,
+      ai: 3.29,
+      eSales: 7.00,
+
+      productivity: 115.10,
+      innovators: 36.20,
+      innovativeSales: 6.60,
+      gfcf: 16.60,
+      rd: 0.81,
+      tertiary: 26.90,
+
+      dhc: 0.1154851054,
+      bda: 0.1729754185,
+      atu: 0.0156621566,
+      dmi: 0.0000000000,
+      dri: 0.0760306701
+
+    },
+
+
+    2023: {
+
+      basicSkills: 35.52,
+      ictSpecialists: 4.30,
+      dii: 27.93,
+      cloud: 17.50,
+      analytics: 21.86,
+      ai: 3.60,
+      eSales: 12.60,
+
+      productivity: 115.10,
+      innovators: 26.10,
+      innovativeSales: 4.60,
+      gfcf: 17.90,
+      rd: 0.79,
+      tertiary: 29.10,
+
+      dhc: 0.2158567810,
+      bda: 0.0000000000,
+      atu: 0.0993752454,
+      dmi: 0.2074074074,
+      dri: 0.1306598585
+
+    },
+
+
+    2025: {
+
+      basicSkills: 38.26,
+      ictSpecialists: 4.80,
+      dii: 39.35,
+      cloud: 17.80,
+      analytics: 23.80,
+      ai: 8.55,
+      eSales: 13.60,
+
+      productivity: 116.70,
+      innovators: 31.00,
+      innovativeSales: 4.90,
+      gfcf: 20.10,
+      rd: 0.84,
+      tertiary: 27.80,
+
+      dhc: 0.2788351412,
+      bda: 0.1722213844,
+      atu: 0.1580234788,
+      dmi: 0.2444444444,
+      dri: 0.2133811122
+
+    }
+
+  };
+
+
+  const years =
+    [
+      2021,
+      2023,
+      2025
+    ];
+
+
+  const indicators = [
+
+    {
+      key: "basicSkills",
+      label: "Базови дигитални умения",
+      unit: "%",
+      percentage: true
+    },
+
+    {
+      key: "ictSpecialists",
+      label: "ИКТ специалисти",
+      unit: "% от заетите",
+      percentage: true
+    },
+
+    {
+      key: "dii",
+      label: "Базова дигитална интензивност",
+      unit: "%",
+      percentage: true
+    },
+
+    {
+      key: "cloud",
+      label: "Използване на cloud",
+      unit: "%",
+      percentage: true
+    },
+
+    {
+      key: "analytics",
+      label: "Data analytics",
+      unit: "%",
+      percentage: true
+    },
+
+    {
+      key: "ai",
+      label: "Използване на AI",
+      unit: "%",
+      percentage: true
+    },
+
+    {
+      key: "eSales",
+      label: "МСП с онлайн продажби",
+      unit: "%",
+      percentage: true
+    }
+
+  ];
+
+
+  const contextIndicators = [
+
+    {
+      key: "productivity",
+      code: "E01",
+      label: "Реална производителност на труда",
+      unit: "индекс"
+    },
+
+    {
+      key: "innovators",
+      code: "E02",
+      label: "Продуктови или процесни иноватори",
+      unit: "%"
+    },
+
+    {
+      key: "innovativeSales",
+      code: "E03",
+      label: "Продажби на иновативни продукти",
+      unit: "%"
+    },
+
+    {
+      key: "gfcf",
+      code: "E04",
+      label: "Бруто образуване на основен капитал",
+      unit: "% от БВП"
+    },
+
+    {
+      key: "rd",
+      code: "E05",
+      label: "Разходи за R&D",
+      unit: "% от БВП"
+    },
+
+    {
+      key: "tertiary",
+      code: "E06",
+      label: "Висше образование, възраст 25 до 64",
+      unit: "%"
+    }
+
+  ];
+
+
+  /* =========================================================
+     HELPERS
+  ========================================================= */
+
+
+  function numberBG(
+    value,
+    digits = 2
+  ){
+
+    if(
+      value === null ||
+      value === undefined ||
+      Number.isNaN(value)
+    ){
+
+      return "Няма данни";
+
+    }
+
+
+    return Number(value)
+      .toLocaleString(
+        "bg-BG",
+        {
+          minimumFractionDigits: digits,
+          maximumFractionDigits: digits
+        }
+      );
+
+  }
+
+
+  function previousYear(
+    year
+  ){
+
+    const index =
+      years.indexOf(
+        Number(year)
+      );
+
+
+    if(index <= 0){
+
+      return null;
+
+    }
+
+
+    return years[
+      index - 1
+    ];
+
+  }
+
+
+  function relativeChange(
+    start,
+    end
+  ){
+
+    if(
+      start === 0 ||
+      start === null ||
+      end === null
+    ){
+
+      return null;
+
+    }
+
+
+    return (
+      (end - start) /
+      start *
+      100
+    );
+
+  }
+
+
+  function signed(
+    value,
+    digits = 2
+  ){
+
+    if(value === null){
+
+      return "Неприложимо";
+
+    }
+
+
+    const prefix =
+      value > 0
+      ? "+"
+      : "";
+
+
+    return (
+      prefix +
+      numberBG(
+        value,
+        digits
+      )
+    );
+
+  }
+
+
+  function changeClass(
+    value
+  ){
+
+    if(value > 0){
+      return "positive";
+    }
+
+    if(value < 0){
+      return "negative";
+    }
+
+    return "neutral";
+
+  }
+
+
+  /* =========================================================
+     KPI
+  ========================================================= */
+
+
+  const yearSelect =
+    document.getElementById(
+      "yearSelect"
+    );
+
+
+  function renderKpis(){
+
+    const year =
+      Number(
+        yearSelect.value
+      );
+
+
+    const current =
+      nationalData[year];
+
+
+    const previous =
+      previousYear(year);
+
+
+    const previousData =
+      previous
+      ? nationalData[previous]
+      : null;
+
+
+    const grid =
+      document.getElementById(
+        "kpiGrid"
+      );
+
+
+    grid.innerHTML =
+      indicators
+        .map(
+          function(indicator){
+
+            const value =
+              current[
+                indicator.key
+              ];
+
+
+            let changeHtml =
+              '<div class="kpi-change neutral">Начално наблюдение</div>';
+
+
+            if(previousData){
+
+              const change =
+                value -
+                previousData[
+                  indicator.key
+                ];
+
+
+              changeHtml =
+                `
+                <div
+                  class="kpi-change ${changeClass(change)}"
+                >
+                  ${signed(change)} пр.п.
+                  спрямо ${previous}
+                </div>
+                `;
+
+            }
+
+
+            return `
+
+              <article class="kpi-card">
+
+                <div class="kpi-label">
+                  ${indicator.label}
+                </div>
+
+                <div class="kpi-value">
+                  ${numberBG(value)}
+                </div>
+
+                <div class="kpi-unit">
+                  ${indicator.unit}
+                </div>
+
+                ${changeHtml}
+
+              </article>
+
+            `;
+
+          }
+        )
+        .join("");
+
+  }
+
+
+  /* =========================================================
+     CONTEXT
+  ========================================================= */
+
+
+  function renderContext(){
+
+    const year =
+      Number(
+        yearSelect.value
+      );
+
+
+    const data =
+      nationalData[year];
+
+
+    document.getElementById(
+      "contextGrid"
+    ).innerHTML =
+      contextIndicators
+        .map(
+          function(item){
+
+            return `
+
+              <article class="context-card">
+
+                <div class="context-code">
+                  ${item.code}
+                </div>
+
+                <h3>
+                  ${item.label}
+                </h3>
+
+                <div class="context-value">
+                  ${numberBG(data[item.key])}
+                </div>
+
+                <p>
+                  ${item.unit}
+                  <br>
+                  Стойност за ${year} г.
+                </p>
+
+              </article>
+
+            `;
+
+          }
+        )
+        .join("");
+
+  }
+
+
+  /* =========================================================
+     TREND SELECT
+  ========================================================= */
+
+
+  const indicatorSelect =
+    document.getElementById(
+      "indicatorSelect"
+    );
+
+
+  indicators.forEach(
+    function(indicator){
+
+      const option =
+        document.createElement(
+          "option"
+        );
+
+
+      option.value =
+        indicator.key;
+
+
+      option.textContent =
+        indicator.label;
+
+
+      indicatorSelect.appendChild(
+        option
+      );
+
+    }
+  );
+
+
+  indicatorSelect.value =
+    "ai";
+
+
+  /* =========================================================
+     TREND CHART
+  ========================================================= */
+
+
+  function renderTrend(){
+
+    const key =
+      indicatorSelect.value;
+
+
+    const indicator =
+      indicators.find(
+        function(item){
+
+          return item.key === key;
+
+        }
+      );
+
+
+    const values =
+      years.map(
+        function(year){
+
+          return nationalData[year][key];
+
+        }
+      );
+
+
+    const start =
+      values[0];
+
+
+    const end =
+      values[
+        values.length - 1
+      ];
+
+
+    const absolute =
+      end - start;
+
+
+    const relative =
+      relativeChange(
+        start,
+        end
+      );
+
+
+    document.getElementById(
+      "trendStart"
+    ).textContent =
+      numberBG(start) +
+      " " +
+      indicator.unit;
+
+
+    document.getElementById(
+      "trendEnd"
+    ).textContent =
+      numberBG(end) +
+      " " +
+      indicator.unit;
+
+
+    document.getElementById(
+      "trendAbs"
+    ).textContent =
+      signed(absolute) +
+      (
+        indicator.percentage
+        ? " пр.п."
+        : ""
+      );
+
+
+    document.getElementById(
+      "trendPct"
+    ).textContent =
+      relative === null
+      ? "Неприложимо"
+      : (
+          signed(relative) +
+          "%"
+        );
+
+
+    document.getElementById(
+      "chartTitle"
+    ).textContent =
+      indicator.label;
+
+
+    document.getElementById(
+      "chartSubtitle"
+    ).textContent =
+      "България, налични наблюдения за 2021, 2023 и 2025 г.";
+
+
+    const svg =
+      document.getElementById(
+        "trendChart"
+      );
+
+
+    const width = 700;
+    const height = 300;
+
+    const margin = {
+      top: 30,
+      right: 35,
+      bottom: 45,
+      left: 55
+    };
+
+
+    const innerWidth =
+      width -
+      margin.left -
+      margin.right;
+
+
+    const innerHeight =
+      height -
+      margin.top -
+      margin.bottom;
+
+
+    const minValue =
+      Math.min(
+        ...values
+      );
+
+
+    const maxValue =
+      Math.max(
+        ...values
+      );
+
+
+    const spread =
+      maxValue -
+      minValue;
+
+
+    const padding =
+      spread === 0
+      ? Math.max(
+          maxValue * 0.15,
+          1
+        )
+      : spread * 0.22;
+
+
+    const yMin =
+      Math.max(
+        0,
+        minValue -
+        padding
+      );
+
+
+    const yMax =
+      maxValue +
+      padding;
+
+
+    function xScale(index){
+
+      return (
+        margin.left +
+        (
+          innerWidth /
+          (years.length - 1)
+        ) *
+        index
+      );
+
+    }
+
+
+    function yScale(value){
+
+      return (
+        margin.top +
+        innerHeight -
+        (
+          (value - yMin) /
+          (yMax - yMin)
+        ) *
+        innerHeight
+      );
+
+    }
+
+
+    const points =
+      values
+        .map(
+          function(value, index){
+
+            return (
+              xScale(index) +
+              "," +
+              yScale(value)
+            );
+
+          }
+        )
+        .join(" ");
+
+
+    let html = "";
+
+
+    for(
+      let i = 0;
+      i <= 4;
+      i++
+    ){
+
+      const y =
+        margin.top +
+        (
+          innerHeight /
+          4
+        ) *
+        i;
+
+
+      const value =
+        yMax -
+        (
+          (yMax - yMin) /
+          4
+        ) *
+        i;
+
+
+      html += `
+
+        <line
+          x1="${margin.left}"
+          y1="${y}"
+          x2="${width - margin.right}"
+          y2="${y}"
+          stroke="#e5edf2"
+          stroke-width="1"
+        ></line>
+
+        <text
+          x="${margin.left - 10}"
+          y="${y + 4}"
+          text-anchor="end"
+          font-size="10"
+          fill="#7d909e"
+        >
+          ${numberBG(value, 1)}
+        </text>
+
+      `;
+
+    }
+
+
+    html += `
+
+      <polyline
+        points="${points}"
+        fill="none"
+        stroke="#2457c5"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></polyline>
+
+    `;
+
+
+    years.forEach(
+      function(year, index){
+
+        const x =
+          xScale(index);
+
+
+        const y =
+          yScale(
+            values[index]
+          );
+
+
+        html += `
+
+          <circle
+            cx="${x}"
+            cy="${y}"
+            r="6"
+            fill="#01c9bc"
+            stroke="#ffffff"
+            stroke-width="3"
+          ></circle>
+
+          <text
+            x="${x}"
+            y="${y - 15}"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="700"
+            fill="#102b4c"
+          >
+            ${numberBG(values[index])}
+          </text>
+
+          <text
+            x="${x}"
+            y="${height - 15}"
+            text-anchor="middle"
+            font-size="11"
+            fill="#687e8d"
+          >
+            ${year}
+          </text>
+
+        `;
+
+      }
+    );
+
+
+    svg.innerHTML =
+      html;
+
+  }
+
+
+  /* =========================================================
+     DRI
+  ========================================================= */
+
+
+  const driYearSelect =
+    document.getElementById(
+      "driYearSelect"
+    );
+
+
+  const driDimensions = [
+
+    {
+      key: "dhc",
+      label: "DHC: дигитален човешки капитал"
+    },
+
+    {
+      key: "bda",
+      label: "BDA: дигитално приемане от бизнеса"
+    },
+
+    {
+      key: "atu",
+      label: "ATU: използване на напреднали технологии"
+    },
+
+    {
+      key: "dmi",
+      label: "DMI: дигитална пазарна интеграция"
+    }
+
+  ];
+
+
+  function renderDri(){
+
+    const year =
+      Number(
+        driYearSelect.value
+      );
+
+
+    const data =
+      nationalData[year];
+
+
+    document.getElementById(
+      "driValue"
+    ).textContent =
+      numberBG(
+        data.dri,
+        3
+      );
+
+
+    document.getElementById(
+      "dimensionBars"
+    ).innerHTML =
+      driDimensions
+        .map(
+          function(item){
+
+            const value =
+              data[
+                item.key
+              ];
+
+
+            const width =
+              Math.max(
+                0,
+                Math.min(
+                  100,
+                  value * 100
+                )
+              );
+
+
+            return `
+
+              <div class="dimension-row">
+
+                <div class="dimension-label">
+                  ${item.label}
+                </div>
+
+                <div class="bar-track">
+
+                  <div
+                    class="bar-fill"
+                    style="width:${width}%"
+                  ></div>
+
+                </div>
+
+                <div class="dimension-value">
+                  ${numberBG(value, 3)}
+                </div>
+
+              </div>
+
+            `;
+
+          }
+        )
+        .join("");
+
+  }
+
+
+  /* =========================================================
+     CHANGE TABLE
+  ========================================================= */
+
+
+  function renderChangeTable(){
+
+    const body =
+      document.getElementById(
+        "changeTableBody"
+      );
+
+
+    const allIndicators =
+      [
+        ...indicators,
+
+        ...contextIndicators.map(
+          function(item){
+
+            return {
+              key: item.key,
+              label: item.label,
+              unit: item.unit,
+              percentage:
+                item.unit.includes("%")
+            };
+
+          }
+        )
+      ];
+
+
+    body.innerHTML =
+      allIndicators
+        .map(
+          function(indicator){
+
+            const v2021 =
+              nationalData[2021][
+                indicator.key
+              ];
+
+
+            const v2023 =
+              nationalData[2023][
+                indicator.key
+              ];
+
+
+            const v2025 =
+              nationalData[2025][
+                indicator.key
+              ];
+
+
+            const absolute =
+              v2025 -
+              v2021;
+
+
+            const relative =
+              relativeChange(
+                v2021,
+                v2025
+              );
+
+
+            const absoluteLabel =
+              indicator.percentage
+              ? (
+                  signed(absolute) +
+                  " пр.п."
+                )
+              : signed(absolute);
+
+
+            const relativeLabel =
+              relative === null
+              ? "Неприложимо"
+              : (
+                  signed(relative) +
+                  "%"
+                );
+
+
+            return `
+
+              <tr>
+
+                <td>
+                  ${indicator.label}
+                </td>
+
+                <td>
+                  ${numberBG(v2021)}
+                </td>
+
+                <td>
+                  ${numberBG(v2023)}
+                </td>
+
+                <td>
+                  ${numberBG(v2025)}
+                </td>
+
+                <td
+                  class="${changeClass(absolute)}"
+                >
+                  ${absoluteLabel}
+                </td>
+
+                <td
+                  class="${
+                    relative === null
+                    ? "neutral"
+                    : changeClass(relative)
+                  }"
+                >
+                  ${relativeLabel}
+                </td>
+
+              </tr>
+
+            `;
+
+          }
+        )
+        .join("");
+
+  }
+
+
+  /* =========================================================
+     EVENTS
+  ========================================================= */
+
+
+  yearSelect.addEventListener(
+    "change",
+    function(){
+
+      renderKpis();
+      renderContext();
+
+    }
+  );
+
+
+  indicatorSelect.addEventListener(
+    "change",
+    renderTrend
+  );
+
+
+  driYearSelect.addEventListener(
+    "change",
+    renderDri
+  );
+
+
+  /* =========================================================
+     INITIAL RENDER
+  ========================================================= */
+
+
+  renderKpis();
+  renderContext();
+  renderTrend();
+  renderDri();
+  renderChangeTable();
+
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
