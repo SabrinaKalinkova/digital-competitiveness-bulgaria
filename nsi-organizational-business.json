@@ -1,0 +1,159 @@
+{
+  "title": "NSI organizational business benchmark for Bulgaria",
+  "source": "National Statistical Institute of Bulgaria",
+  "scope": {
+    "statistical_unit": "enterprise",
+    "population": "non-financial enterprises with 10 or more employed persons",
+    "size_groups": {
+      "total": "Общо",
+      "small_10_49": "10-49 заети лица",
+      "medium_50_249": "50-249 заети лица",
+      "large_250_plus": "250 и повече заети лица"
+    },
+    "coverage_note": "НСИ обхваща предприятия с 10 и повече заети лица в определени нефинансови икономически дейности. Микропредприятията под 10 заети лица не са включени.",
+    "comparability_note": "Показателите са с различна последна налична година. Липсващите години не следва да се интерполират автоматично."
+  },
+  "indicators": [
+    {
+      "code": "internet_access_pct",
+      "label": "Предприятия с достъп до интернет",
+      "dimension": "Дигитални ресурси",
+      "year": 2025,
+      "unit": "%",
+      "values": {
+        "total": 96.3,
+        "small_10_49": 95.7,
+        "medium_50_249": 99.4,
+        "large_250_plus": 100.0
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/312/907"
+    },
+    {
+      "code": "website_pct",
+      "label": "Предприятия, които имат уебсайт",
+      "dimension": "Дигитално присъствие",
+      "year": 2025,
+      "unit": "%",
+      "values": {
+        "total": 49.7,
+        "small_10_49": 45.1,
+        "medium_50_249": 69.6,
+        "large_250_plus": 85.7
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/312/901"
+    },
+    {
+      "code": "social_media_pct",
+      "label": "Предприятия, които използват социални медии",
+      "dimension": "Дигитално присъствие",
+      "year": 2025,
+      "unit": "%",
+      "values": {
+        "total": 41.5,
+        "small_10_49": 38.7,
+        "medium_50_249": 52.5,
+        "large_250_plus": 69.8
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/312/900"
+    },
+    {
+      "code": "cloud_pct",
+      "label": "Предприятия, които използват платени компютърни услуги в облак",
+      "dimension": "Напреднали технологии",
+      "year": 2025,
+      "unit": "%",
+      "values": {
+        "total": 17.8,
+        "small_10_49": 14.7,
+        "medium_50_249": 30.1,
+        "large_250_plus": 49.1
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/312/899"
+    },
+    {
+      "code": "data_analytics_pct",
+      "label": "Предприятия, които извършват анализ на данни",
+      "dimension": "Напреднали технологии",
+      "year": 2025,
+      "unit": "%",
+      "values": {
+        "total": 27.9,
+        "small_10_49": 23.8,
+        "medium_50_249": 39.3,
+        "large_250_plus": 63.4
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/312/898"
+    },
+    {
+      "code": "ai_pct",
+      "label": "Предприятия, които използват технологии с изкуствен интелект",
+      "dimension": "Напреднали технологии",
+      "year": 2025,
+      "unit": "%",
+      "values": {
+        "total": 8.5,
+        "small_10_49": 7.2,
+        "medium_50_249": 13.3,
+        "large_250_plus": 26.2
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/312/895"
+    },
+    {
+      "code": "online_sales_pct",
+      "label": "Предприятия, които продават стоки и услуги по интернет",
+      "dimension": "Дигитална пазарна интеграция",
+      "year": 2025,
+      "reference_note": "Данните се отнасят за календарната година преди изследването.",
+      "unit": "%",
+      "values": {
+        "total": 16.2,
+        "small_10_49": 15.3,
+        "medium_50_249": 19.0,
+        "large_250_plus": 29.0
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/311/894"
+    },
+    {
+      "code": "erp_pct",
+      "label": "Предприятия, които използват ERP",
+      "dimension": "Интеграция на бизнес процесите",
+      "year": 2025,
+      "unit": "%",
+      "values": {
+        "total": 26.6,
+        "small_10_49": 22.5,
+        "medium_50_249": 41.9,
+        "large_250_plus": 73.7
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/310/893"
+    },
+    {
+      "code": "crm_pct",
+      "label": "Предприятия, които използват CRM",
+      "dimension": "Интеграция на бизнес процесите",
+      "year": 2025,
+      "unit": "%",
+      "values": {
+        "total": 11.9,
+        "small_10_49": 10.4,
+        "medium_50_249": 16.7,
+        "large_250_plus": 33.1
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/310/892"
+    },
+    {
+      "code": "ict_training_pct",
+      "label": "Предприятия, които предоставят обучение в областта на ИКТ",
+      "dimension": "Организационни способности",
+      "year": 2024,
+      "unit": "%",
+      "values": {
+        "total": 9.1,
+        "small_10_49": 6.7,
+        "medium_50_249": 17.2,
+        "large_250_plus": 42.8
+      },
+      "source_url": "https://www.nsi.bg/statistical-data/312/902"
+    }
+  ]
+}
