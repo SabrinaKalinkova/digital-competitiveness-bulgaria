@@ -19,7 +19,6 @@
     content="Екип на научноизследователски проект № 6/2024 „Дигитална конкурентоспособност на социално-икономическата система на България“."
   >
 
-
   <style>
 
     :root {
@@ -92,6 +91,13 @@
     button {
 
       font: inherit;
+
+    }
+
+
+    img {
+
+      display: block;
 
     }
 
@@ -825,110 +831,6 @@
 
 
     /* =========================================================
-       PLACEHOLDER PHOTO
-    ========================================================= */
-
-
-    .photo-placeholder {
-
-      position: relative;
-
-      overflow: hidden;
-
-      display: grid;
-
-      place-items: center;
-
-      background:
-
-        linear-gradient(
-          145deg,
-          #e9f3f7,
-          #f8fbfc
-        );
-
-      border:
-        1px solid #d5e5ec;
-
-      color: #7894a3;
-
-      text-align: center;
-
-    }
-
-
-    .photo-placeholder::before {
-
-      content: "";
-
-      position: absolute;
-
-      width: 82px;
-      height: 82px;
-
-      top: 21%;
-
-      border-radius: 50%;
-
-      background:
-        #cddfe7;
-
-    }
-
-
-    .photo-placeholder::after {
-
-      content: "";
-
-      position: absolute;
-
-      width: 145px;
-      height: 85px;
-
-      bottom: 7%;
-
-      border-radius:
-        75px 75px 18px 18px;
-
-      background:
-        #cddfe7;
-
-    }
-
-
-    .photo-placeholder span {
-
-      position: relative;
-
-      z-index: 2;
-
-      margin-top: auto;
-
-      margin-bottom: 14px;
-
-      padding:
-        4px 8px;
-
-      border-radius: 6px;
-
-      background:
-        rgba(255, 255, 255, 0.9);
-
-      color: #6a8694;
-
-      font-size: 8px;
-
-      font-weight: 800;
-
-      letter-spacing:
-        1px;
-
-      text-transform: uppercase;
-
-    }
-
-
-    /* =========================================================
        PROJECT LEADER
     ========================================================= */
 
@@ -938,7 +840,7 @@
       display: grid;
 
       grid-template-columns:
-        330px 1fr;
+        340px 1fr;
 
       overflow: hidden;
 
@@ -957,16 +859,61 @@
     }
 
 
-    .leader-photo {
+    .leader-photo-wrap {
 
-      min-height: 455px;
+      position: relative;
 
-      border: 0;
+      min-height: 510px;
+
+      overflow: hidden;
+
+      background:
+        #edf4f7;
 
       border-right:
         1px solid var(--border);
 
-      border-radius: 0;
+    }
+
+
+    .leader-photo {
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position:
+        center top;
+
+    }
+
+
+    .leader-photo-label {
+
+      position: absolute;
+
+      left: 18px;
+      bottom: 18px;
+
+      padding:
+        6px 9px;
+
+      border-radius: 7px;
+
+      background:
+        rgba(8, 31, 56, 0.86);
+
+      color: white;
+
+      font-size: 8px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1px;
+
+      text-transform: uppercase;
 
     }
 
@@ -1148,6 +1095,120 @@
 
       font-weight: 800;
 
+      transition:
+        0.2s ease;
+
+    }
+
+
+    .profile-link:hover {
+
+      border-color:
+        var(--cyan);
+
+      background:
+        #f5fbfc;
+
+    }
+
+
+    /* =========================================================
+       PLACEHOLDER PHOTO
+    ========================================================= */
+
+
+    .photo-placeholder {
+
+      position: relative;
+
+      overflow: hidden;
+
+      display: grid;
+
+      place-items: center;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          #e9f3f7,
+          #f8fbfc
+        );
+
+      color: #7894a3;
+
+      text-align: center;
+
+    }
+
+
+    .photo-placeholder::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 82px;
+      height: 82px;
+
+      top: 21%;
+
+      border-radius: 50%;
+
+      background:
+        #cddfe7;
+
+    }
+
+
+    .photo-placeholder::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 145px;
+      height: 85px;
+
+      bottom: 8%;
+
+      border-radius:
+        75px 75px 18px 18px;
+
+      background:
+        #cddfe7;
+
+    }
+
+
+    .photo-placeholder span {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin-top: auto;
+      margin-bottom: 14px;
+
+      padding:
+        4px 8px;
+
+      border-radius: 6px;
+
+      background:
+        rgba(255, 255, 255, 0.9);
+
+      color: #6a8694;
+
+      font-size: 8px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1px;
+
+      text-transform: uppercase;
+
     }
 
 
@@ -1208,15 +1269,10 @@
     .member-photo {
 
       width: 100%;
-
       height: 285px;
-
-      border: 0;
 
       border-bottom:
         1px solid var(--border);
-
-      border-radius: 0;
 
     }
 
@@ -1454,7 +1510,7 @@
 
 
     /* =========================================================
-       NOTE
+       TEAM NOTE
     ========================================================= */
 
 
@@ -1477,6 +1533,7 @@
       border-radius: 14px;
 
       background:
+
         linear-gradient(
           135deg,
           #f5fbfc,
@@ -1497,7 +1554,8 @@
 
       border-radius: 10px;
 
-      background: var(--navy);
+      background:
+        var(--navy);
 
       color: white;
 
@@ -1545,6 +1603,7 @@
       color: white;
 
       background:
+
         linear-gradient(
           110deg,
           #0b2845,
@@ -1606,6 +1665,7 @@
       border-radius: 9px;
 
       background:
+
         linear-gradient(
           90deg,
           #79d5dd,
@@ -1768,9 +1828,11 @@
       }
 
 
-      .leader-photo {
+      .leader-photo-wrap {
 
-        min-height: 360px;
+        height: 520px;
+
+        min-height: 0;
 
         border-right: 0;
 
@@ -1843,6 +1905,13 @@
       }
 
 
+      .leader-photo-wrap {
+
+        height: 440px;
+
+      }
+
+
       .member-photo {
 
         height: 320px;
@@ -1893,10 +1962,12 @@
         class="logo-mark"
         aria-hidden="true"
       >
+
         <span></span>
         <span></span>
         <span></span>
         <span></span>
+
       </div>
 
 
@@ -2148,9 +2219,11 @@
         Проектен екип
       </div>
 
+
       <strong>
         6
       </strong>
+
 
       <p>
         Ръководител на проекта
@@ -2198,31 +2271,23 @@
     <article class="leader-card">
 
 
-      <!--
-        Когато имаш снимка, замени целия div:
-        <div class="photo-placeholder leader-photo">...</div>
-
-        с:
+      <div class="leader-photo-wrap">
 
         <img
-          src="images/team/project-leader.jpg"
-          alt="Име на ръководителя"
+          src="images/team/sabrina-kalinkova.png"
+          alt="Гл. ас. д-р Сабрина Калинкова"
           class="leader-photo"
-          style="width:100%; object-fit:cover;"
         >
-      -->
 
-
-      <div class="photo-placeholder leader-photo">
-
-        <span>
-          Снимка
-        </span>
+        <div class="leader-photo-label">
+          Ръководител на проекта
+        </div>
 
       </div>
 
 
       <div class="leader-content">
+
 
         <div class="role-label">
           Ръководител на проекта
@@ -2230,22 +2295,30 @@
 
 
         <h2>
-          Име Фамилия
+          Гл. ас. д-р Сабрина Калинкова
         </h2>
 
 
         <div class="academic-position">
-          Академична длъжност, научна степен
+          Университет за национално и световно стопанство
         </div>
 
 
         <p class="profile-description">
-          Тук ще бъде добавена кратка академична биография
-          на ръководителя на проекта.
-          Подходящият обем е около 80 до 120 думи
-          с акцент върху научната експертиза,
-          изследователския опит
-          и ролята в проекта.
+          Гл. ас. д-р Сабрина Калинкова е преподавател
+          в катедра „Маркетинг и стратегическо планиране“
+          на Университета за национално и световно стопанство.
+          Научните ѝ интереси са в областта
+          на стратегическото планиране,
+          дигиталната трансформация,
+          конкурентоспособността,
+          устойчивото развитие
+          и икономическата политика.
+          В рамките на проекта координира
+          научната концепция,
+          методологическата рамка,
+          интеграцията на различните аналитични равнища
+          и обобщаването на резултатите.
         </p>
 
 
@@ -2259,7 +2332,20 @@
             </span>
 
             <strong>
-              Университет / звено
+              Университет за национално и световно стопанство
+            </strong>
+
+          </div>
+
+
+          <div class="meta-item">
+
+            <span>
+              Академично звено
+            </span>
+
+            <strong>
+              Катедра „Маркетинг и стратегическо планиране“
             </strong>
 
           </div>
@@ -2272,7 +2358,20 @@
             </span>
 
             <strong>
-              Научно ръководство и координация
+              Ръководител на научноизследователски проект № 6/2024
+            </strong>
+
+          </div>
+
+
+          <div class="meta-item">
+
+            <span>
+              Научна степен
+            </span>
+
+            <strong>
+              Доктор по икономика
             </strong>
 
           </div>
@@ -2285,7 +2384,11 @@
             </span>
 
             <strong>
-              Област 1, област 2, област 3
+              Стратегическо планиране,
+              дигитална трансформация,
+              конкурентоспособност,
+              устойчиво развитие,
+              икономическа политика
             </strong>
 
           </div>
@@ -2294,11 +2397,14 @@
           <div class="meta-item">
 
             <span>
-              Изследователски принос
+              Основен принос в проекта
             </span>
 
             <strong>
-              Основни задачи и направления в проекта
+              Концептуална рамка,
+              методология,
+              национален и секторен анализ,
+              интеграция и синтез на резултатите
             </strong>
 
           </div>
@@ -2309,6 +2415,12 @@
 
         <div class="profile-links">
 
+
+          <!--
+          Замени # с:
+          mailto:твоят-email
+          -->
+
           <a
             class="profile-link"
             href="#"
@@ -2316,19 +2428,35 @@
             Email
           </a>
 
-          <a
-            class="profile-link"
-            href="#"
-          >
-            ORCID
-          </a>
+
+          <!--
+          Постави директния ORCID адрес
+          -->
 
           <a
             class="profile-link"
             href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            ORCID
+          </a>
+
+
+          <!--
+          Тук може да бъде профилът в УНСС,
+          Google Scholar или друг официален профил
+          -->
+
+          <a
+            class="profile-link"
+            href="#"
+            target="_blank"
+            rel="noopener"
           >
             Научен профил
           </a>
+
 
         </div>
 
@@ -2363,11 +2491,13 @@
 
 
     <p class="section-description">
-      Всеки профил може да съдържа
-      кратка академична информация,
-      основни научни интереси,
-      конкретна роля в проекта
-      и връзки към професионални профили.
+      Индивидуалните профили представят
+      академичната експертиза,
+      научните интереси
+      и ролята на всеки изследовател
+      при изпълнението на проекта.
+      Информацията ще бъде допълвана
+      последователно за всеки член на екипа.
     </p>
 
 
@@ -2393,6 +2523,7 @@
 
         <div class="member-content">
 
+
           <div class="member-number">
             ЧЛЕН 01
           </div>
@@ -2409,9 +2540,9 @@
 
 
           <p>
-            Тук ще бъде добавена кратка информация
-            за академичния и изследователския профил
-            на члена на екипа.
+            Тук ще бъде добавена кратка академична информация
+            за члена на изследователския екип
+            и неговия принос към проекта.
           </p>
 
 
@@ -2425,7 +2556,7 @@
               </span>
 
               <strong>
-                Университет / звено
+                Университет / академично звено
               </strong>
 
             </div>
@@ -2451,7 +2582,7 @@
               </span>
 
               <strong>
-                Област 1, област 2
+                Област 1, област 2, област 3
               </strong>
 
             </div>
@@ -2477,6 +2608,7 @@
             </a>
 
           </div>
+
 
         </div>
 
@@ -2502,6 +2634,7 @@
 
         <div class="member-content">
 
+
           <div class="member-number">
             ЧЛЕН 02
           </div>
@@ -2518,9 +2651,9 @@
 
 
           <p>
-            Тук ще бъде добавена кратка информация
-            за академичния и изследователския профил
-            на члена на екипа.
+            Тук ще бъде добавена кратка академична информация
+            за члена на изследователския екип
+            и неговия принос към проекта.
           </p>
 
 
@@ -2534,7 +2667,7 @@
               </span>
 
               <strong>
-                Университет / звено
+                Университет / академично звено
               </strong>
 
             </div>
@@ -2560,7 +2693,7 @@
               </span>
 
               <strong>
-                Област 1, област 2
+                Област 1, област 2, област 3
               </strong>
 
             </div>
@@ -2586,6 +2719,7 @@
             </a>
 
           </div>
+
 
         </div>
 
@@ -2611,6 +2745,7 @@
 
         <div class="member-content">
 
+
           <div class="member-number">
             ЧЛЕН 03
           </div>
@@ -2627,9 +2762,9 @@
 
 
           <p>
-            Тук ще бъде добавена кратка информация
-            за академичния и изследователския профил
-            на члена на екипа.
+            Тук ще бъде добавена кратка академична информация
+            за члена на изследователския екип
+            и неговия принос към проекта.
           </p>
 
 
@@ -2643,7 +2778,7 @@
               </span>
 
               <strong>
-                Университет / звено
+                Университет / академично звено
               </strong>
 
             </div>
@@ -2669,7 +2804,7 @@
               </span>
 
               <strong>
-                Област 1, област 2
+                Област 1, област 2, област 3
               </strong>
 
             </div>
@@ -2695,6 +2830,7 @@
             </a>
 
           </div>
+
 
         </div>
 
@@ -2720,6 +2856,7 @@
 
         <div class="member-content">
 
+
           <div class="member-number">
             ЧЛЕН 04
           </div>
@@ -2736,9 +2873,9 @@
 
 
           <p>
-            Тук ще бъде добавена кратка информация
-            за академичния и изследователския профил
-            на члена на екипа.
+            Тук ще бъде добавена кратка академична информация
+            за члена на изследователския екип
+            и неговия принос към проекта.
           </p>
 
 
@@ -2752,7 +2889,7 @@
               </span>
 
               <strong>
-                Университет / звено
+                Университет / академично звено
               </strong>
 
             </div>
@@ -2778,7 +2915,7 @@
               </span>
 
               <strong>
-                Област 1, област 2
+                Област 1, област 2, област 3
               </strong>
 
             </div>
@@ -2804,6 +2941,7 @@
             </a>
 
           </div>
+
 
         </div>
 
@@ -2829,6 +2967,7 @@
 
         <div class="member-content">
 
+
           <div class="member-number">
             ЧЛЕН 05
           </div>
@@ -2845,9 +2984,9 @@
 
 
           <p>
-            Тук ще бъде добавена кратка информация
-            за академичния и изследователския профил
-            на члена на екипа.
+            Тук ще бъде добавена кратка академична информация
+            за члена на изследователския екип
+            и неговия принос към проекта.
           </p>
 
 
@@ -2861,7 +3000,7 @@
               </span>
 
               <strong>
-                Университет / звено
+                Университет / академично звено
               </strong>
 
             </div>
@@ -2887,7 +3026,7 @@
               </span>
 
               <strong>
-                Област 1, област 2
+                Област 1, област 2, област 3
               </strong>
 
             </div>
@@ -2914,6 +3053,7 @@
 
           </div>
 
+
         </div>
 
       </article>
@@ -2924,6 +3064,7 @@
 
     <div class="team-note">
 
+
       <div class="team-note-icon">
         i
       </div>
@@ -2932,19 +3073,22 @@
       <div>
 
         <strong>
-          Профилите ще бъдат допълнени
+          Профилите на членовете ще бъдат допълнени
         </strong>
 
         <p>
-          Информацията за членовете на екипа,
-          техните научни интереси,
-          задачи в проекта
-          и професионални профили
-          ще бъде добавена след окончателното структуриране
+          Информацията за академичните позиции,
+          научните интереси,
+          задачите в проекта,
+          професионалните профили
+          и снимките на членовете
+          ще бъде добавена
+          при окончателното структуриране
           на индивидуалните представяния.
         </p>
 
       </div>
+
 
     </div>
 
@@ -2970,16 +3114,18 @@
 
 
     <h2 class="section-title">
-      Интердисциплинарна експертиза
+      Специализирана експертиза
       в обща аналитична рамка
     </h2>
 
 
     <p class="section-description">
-      Екипът работи върху различни аспекти
+      Членовете на екипа работят
+      по различни аспекти
       на дигиталната трансформация,
       като индивидуалната експертиза
-      се интегрира в общата концепция
+      се интегрира
+      в общата концепция
       за дигитална конкурентоспособност.
     </p>
 
@@ -2993,15 +3139,19 @@
           01
         </div>
 
+
         <h3>
           Специализирана експертиза
         </h3>
 
+
         <p>
           Всеки член участва
-          със знания и изследователски опит
+          със знания
+          и изследователски опит
           в конкретна област,
-          свързана с тематиката на проекта.
+          свързана
+          с тематиката на проекта.
         </p>
 
       </article>
@@ -3013,9 +3163,11 @@
           02
         </div>
 
+
         <h3>
           Координиран анализ
         </h3>
+
 
         <p>
           Отделните изследвания
@@ -3034,9 +3186,11 @@
           03
         </div>
 
+
         <h3>
           Интегриране на резултатите
         </h3>
+
 
         <p>
           Националните,
@@ -3073,10 +3227,12 @@
         Научни резултати на екипа
       </h2>
 
+
       <p>
         Разгледай публикациите,
-        чрез които членовете на проекта
-        представят отделни аспекти
+        чрез които членовете
+        на проекта представят
+        отделни аспекти
         на изследването
         и неговите резултати.
       </p>
@@ -3090,6 +3246,7 @@
     >
       Към публикациите
     </a>
+
 
   </div>
 
