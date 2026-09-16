@@ -1,0 +1,1850 @@
+{
+  "title": "EU-27 national digital readiness benchmark",
+  "source": "Project EU27 Digital Readiness panel based on official Eurostat indicators",
+  "period": [
+    2021,
+    2023,
+    2025
+  ],
+  "benchmark_scope": "Indicator-level national benchmark; not a composite digital competitiveness ranking.",
+  "countries": [
+    {
+      "code": "EU27_2020",
+      "name": "European Union",
+      "type": "aggregate"
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "type": "member"
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "type": "member"
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "type": "member"
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "type": "member"
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus",
+      "type": "member"
+    },
+    {
+      "code": "CZ",
+      "name": "Czechia",
+      "type": "member"
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "type": "member"
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "type": "member"
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "type": "member"
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "type": "member"
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "type": "member"
+    },
+    {
+      "code": "EL",
+      "name": "Greece",
+      "type": "member"
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "type": "member"
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "type": "member"
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "type": "member"
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "type": "member"
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "type": "member"
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "type": "member"
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "type": "member"
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "type": "member"
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "type": "member"
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "type": "member"
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "type": "member"
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "type": "member"
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "type": "member"
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "type": "member"
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "type": "member"
+    }
+  ],
+  "indicators": [
+    {
+      "code": "basic_digital_skills_pct",
+      "label": "Лица с поне базови дигитални умения",
+      "unit": "%",
+      "dimension": "Дигитален човешки капитал",
+      "direction": "higher"
+    },
+    {
+      "code": "ict_specialists_pct",
+      "label": "ИКТ специалисти като дял от заетостта",
+      "unit": "%",
+      "dimension": "Дигитален човешки капитал",
+      "direction": "higher"
+    },
+    {
+      "code": "basic_digital_intensity_pct",
+      "label": "МСП с поне базово равнище на цифров интензитет",
+      "unit": "%",
+      "dimension": "Дигитализация на бизнеса",
+      "direction": "higher"
+    },
+    {
+      "code": "cloud_pct",
+      "label": "Предприятия, използващи cloud услуги",
+      "unit": "%",
+      "dimension": "Напреднали технологии",
+      "direction": "higher"
+    },
+    {
+      "code": "data_analytics_pct",
+      "label": "Предприятия, извършващи анализ на данни",
+      "unit": "%",
+      "dimension": "Напреднали технологии",
+      "direction": "higher"
+    },
+    {
+      "code": "ai_pct",
+      "label": "Предприятия, използващи AI",
+      "unit": "%",
+      "dimension": "Напреднали технологии",
+      "direction": "higher"
+    },
+    {
+      "code": "smes_selling_online_pct",
+      "label": "МСП с онлайн продажби",
+      "unit": "%",
+      "dimension": "Дигитална пазарна интеграция",
+      "direction": "higher"
+    },
+    {
+      "code": "real_labour_productivity_hour",
+      "label": "Реална производителност на труда",
+      "unit": "index",
+      "dimension": "Икономически контекст",
+      "direction": "higher"
+    },
+    {
+      "code": "product_process_innovators_pct",
+      "label": "Продуктови или процесни иноватори",
+      "unit": "%",
+      "dimension": "Иновационен контекст",
+      "direction": "higher"
+    },
+    {
+      "code": "innovative_product_sales_pct",
+      "label": "Продажби на иновативни продукти",
+      "unit": "%",
+      "dimension": "Иновационен контекст",
+      "direction": "higher"
+    },
+    {
+      "code": "gfcf_pct_gdp",
+      "label": "Бруто образуване на основен капитал",
+      "unit": "% от БВП",
+      "dimension": "Икономически контекст",
+      "direction": "higher"
+    },
+    {
+      "code": "rd_pct_gdp",
+      "label": "Разходи за R&D",
+      "unit": "% от БВП",
+      "dimension": "Иновационен контекст",
+      "direction": "higher"
+    },
+    {
+      "code": "tertiary_25_64_pct",
+      "label": "Население с висше образование, 25 до 64 г.",
+      "unit": "%",
+      "dimension": "Човешки капитал",
+      "direction": "higher"
+    }
+  ],
+  "methodology": {
+    "eu_aggregate": "EU27_2020 / EU_27 is the official EU aggregate supplied in the project panel, not a simple mean of member states.",
+    "missing_values": "null means missing or unavailable and is never replaced by zero.",
+    "comparability": "Comparisons are made by the same indicator and year. Methodological breaks remain visible.",
+    "dii": "The national panel uses comparable DII waves selected in the project dataset; DII versions should not be mechanically mixed outside this benchmark.",
+    "ranking": "Country positions are indicator-specific and include only EU member states with a valid value. The EU aggregate is not ranked."
+  },
+  "records": [
+    {
+      "geo": "AT",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 63.33,
+        "ict_specialists_pct": 4.5,
+        "basic_digital_intensity_pct": 73.8,
+        "cloud_pct": 43,
+        "data_analytics_pct": 29,
+        "ai_pct": 10.79,
+        "smes_selling_online_pct": 22,
+        "real_labour_productivity_hour": 103,
+        "product_process_innovators_pct": 64.6,
+        "innovative_product_sales_pct": 10.5,
+        "gfcf_pct_gdp": 26.4,
+        "rd_pct_gdp": 3.22,
+        "tertiary_25_64_pct": 42.2
+      }
+    },
+    {
+      "geo": "BE",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 54.23,
+        "ict_specialists_pct": 5.6,
+        "basic_digital_intensity_pct": 84.9,
+        "cloud_pct": 47,
+        "data_analytics_pct": 47,
+        "ai_pct": 10.32,
+        "smes_selling_online_pct": 31,
+        "real_labour_productivity_hour": 102.2,
+        "product_process_innovators_pct": 67.7,
+        "innovative_product_sales_pct": 19.1,
+        "gfcf_pct_gdp": 24.1,
+        "rd_pct_gdp": 3.19,
+        "tertiary_25_64_pct": 53.5
+      }
+    },
+    {
+      "geo": "BG",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 31.18,
+        "ict_specialists_pct": 3.5,
+        "basic_digital_intensity_pct": 39.4,
+        "cloud_pct": 13,
+        "data_analytics_pct": 15,
+        "ai_pct": 3.29,
+        "smes_selling_online_pct": 7,
+        "real_labour_productivity_hour": 115.1,
+        "product_process_innovators_pct": 36.2,
+        "innovative_product_sales_pct": 6.6,
+        "gfcf_pct_gdp": 16.6,
+        "rd_pct_gdp": 0.81,
+        "tertiary_25_64_pct": 26.9
+      }
+    },
+    {
+      "geo": "CY",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 50.21,
+        "ict_specialists_pct": 3.9,
+        "basic_digital_intensity_pct": 74.9,
+        "cloud_pct": 40,
+        "data_analytics_pct": 25,
+        "ai_pct": 2.59,
+        "smes_selling_online_pct": 12,
+        "real_labour_productivity_hour": 103.8,
+        "product_process_innovators_pct": 60.3,
+        "innovative_product_sales_pct": 11.1,
+        "gfcf_pct_gdp": 20.1,
+        "rd_pct_gdp": 0.89,
+        "tertiary_25_64_pct": 45
+      }
+    },
+    {
+      "geo": "CZ",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 59.69,
+        "ict_specialists_pct": 4.5,
+        "basic_digital_intensity_pct": 71.5,
+        "cloud_pct": 44,
+        "data_analytics_pct": 31,
+        "ai_pct": 4.46,
+        "smes_selling_online_pct": 29,
+        "real_labour_productivity_hour": 107.3,
+        "product_process_innovators_pct": 55,
+        "innovative_product_sales_pct": 13.5,
+        "gfcf_pct_gdp": 26.1,
+        "rd_pct_gdp": 2,
+        "tertiary_25_64_pct": 33.3
+      }
+    },
+    {
+      "geo": "DE",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 48.92,
+        "ict_specialists_pct": 4.9,
+        "basic_digital_intensity_pct": 74.4,
+        "cloud_pct": 42,
+        "data_analytics_pct": 32,
+        "ai_pct": 10.56,
+        "smes_selling_online_pct": 19,
+        "real_labour_productivity_hour": 104.2,
+        "product_process_innovators_pct": 68.8,
+        "innovative_product_sales_pct": 12.4,
+        "gfcf_pct_gdp": 22.6,
+        "rd_pct_gdp": 3.13,
+        "tertiary_25_64_pct": 36.5
+      }
+    },
+    {
+      "geo": "DK",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 68.65,
+        "ict_specialists_pct": 5.6,
+        "basic_digital_intensity_pct": 92.7,
+        "cloud_pct": 65,
+        "data_analytics_pct": 53,
+        "ai_pct": 23.89,
+        "smes_selling_online_pct": 32,
+        "real_labour_productivity_hour": 111.4,
+        "product_process_innovators_pct": 51.8,
+        "innovative_product_sales_pct": 9.1,
+        "gfcf_pct_gdp": 23.1,
+        "rd_pct_gdp": 2.76,
+        "tertiary_25_64_pct": 49.1
+      }
+    },
+    {
+      "geo": "EE",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 56.37,
+        "ict_specialists_pct": 6.2,
+        "basic_digital_intensity_pct": 72.4,
+        "cloud_pct": 46,
+        "data_analytics_pct": 36,
+        "ai_pct": 2.77,
+        "smes_selling_online_pct": 17,
+        "real_labour_productivity_hour": 116.3,
+        "product_process_innovators_pct": 55.7,
+        "innovative_product_sales_pct": 9.6,
+        "gfcf_pct_gdp": 27.6,
+        "rd_pct_gdp": 1.75,
+        "tertiary_25_64_pct": 21.5
+      }
+    },
+    {
+      "geo": "EL",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 52.48,
+        "ict_specialists_pct": 2.8,
+        "basic_digital_intensity_pct": 56.5,
+        "cloud_pct": 22,
+        "data_analytics_pct": 19,
+        "ai_pct": 2.61,
+        "smes_selling_online_pct": 13,
+        "real_labour_productivity_hour": 100.9,
+        "product_process_innovators_pct": 72.6,
+        "innovative_product_sales_pct": 13.9,
+        "gfcf_pct_gdp": 13.2,
+        "rd_pct_gdp": 1.46,
+        "tertiary_25_64_pct": 21.4
+      }
+    },
+    {
+      "geo": "ES",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 64.16,
+        "ict_specialists_pct": 4.1,
+        "basic_digital_intensity_pct": 76,
+        "cloud_pct": 31,
+        "data_analytics_pct": 34,
+        "ai_pct": 7.67,
+        "smes_selling_online_pct": 25,
+        "real_labour_productivity_hour": 98.4,
+        "product_process_innovators_pct": 43.4,
+        "innovative_product_sales_pct": 11.8,
+        "gfcf_pct_gdp": 20.3,
+        "rd_pct_gdp": 1.43,
+        "tertiary_25_64_pct": 43.9
+      }
+    },
+    {
+      "geo": "EU27_2020",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 53.92,
+        "ict_specialists_pct": 4.5,
+        "basic_digital_intensity_pct": 55,
+        "cloud_pct": 42,
+        "data_analytics_pct": 33,
+        "ai_pct": 7.65,
+        "smes_selling_online_pct": 18,
+        "real_labour_productivity_hour": 105.3,
+        "product_process_innovators_pct": 52.5,
+        "innovative_product_sales_pct": 11.4,
+        "gfcf_pct_gdp": 22.1,
+        "rd_pct_gdp": 2.27,
+        "tertiary_25_64_pct": 38.8
+      }
+    },
+    {
+      "geo": "FI",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 79.18,
+        "ict_specialists_pct": 7.4,
+        "basic_digital_intensity_pct": 94.2,
+        "cloud_pct": 75,
+        "data_analytics_pct": 44,
+        "ai_pct": 15.79,
+        "smes_selling_online_pct": 27,
+        "real_labour_productivity_hour": 105.5,
+        "product_process_innovators_pct": 61.9,
+        "innovative_product_sales_pct": 12.1,
+        "gfcf_pct_gdp": 24.6,
+        "rd_pct_gdp": 2.99,
+        "tertiary_25_64_pct": 44.2
+      }
+    },
+    {
+      "geo": "FR",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 61.96,
+        "ict_specialists_pct": 4.5,
+        "basic_digital_intensity_pct": 70.2,
+        "cloud_pct": 41,
+        "data_analytics_pct": 31,
+        "ai_pct": 6.67,
+        "smes_selling_online_pct": 18,
+        "real_labour_productivity_hour": 102.3,
+        "product_process_innovators_pct": 49.4,
+        "innovative_product_sales_pct": 11.3,
+        "gfcf_pct_gdp": 24.4,
+        "rd_pct_gdp": 2.22,
+        "tertiary_25_64_pct": 41.7
+      }
+    },
+    {
+      "geo": "HR",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 63.37,
+        "ict_specialists_pct": 3.6,
+        "basic_digital_intensity_pct": 58.1,
+        "cloud_pct": 39,
+        "data_analytics_pct": 28,
+        "ai_pct": 8.74,
+        "smes_selling_online_pct": 23,
+        "real_labour_productivity_hour": 107.5,
+        "product_process_innovators_pct": 51.8,
+        "innovative_product_sales_pct": 11.3,
+        "gfcf_pct_gdp": 22.5,
+        "rd_pct_gdp": 1.24,
+        "tertiary_25_64_pct": 34.7
+      }
+    },
+    {
+      "geo": "HU",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 49.09,
+        "ict_specialists_pct": 3.9,
+        "basic_digital_intensity_pct": 60.8,
+        "cloud_pct": 21,
+        "data_analytics_pct": 23,
+        "ai_pct": 2.98,
+        "smes_selling_online_pct": 13,
+        "real_labour_productivity_hour": 114.4,
+        "product_process_innovators_pct": 37.5,
+        "innovative_product_sales_pct": 9.5,
+        "gfcf_pct_gdp": 27.3,
+        "rd_pct_gdp": 1.64,
+        "tertiary_25_64_pct": 17.8
+      }
+    },
+    {
+      "geo": "IE",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 70.49,
+        "ict_specialists_pct": 6.3,
+        "basic_digital_intensity_pct": 79.9,
+        "cloud_pct": 59,
+        "data_analytics_pct": 43,
+        "ai_pct": 7.88,
+        "smes_selling_online_pct": 32,
+        "real_labour_productivity_hour": 128.5,
+        "product_process_innovators_pct": 57.7,
+        "innovative_product_sales_pct": 10.1,
+        "gfcf_pct_gdp": 21.5,
+        "rd_pct_gdp": 1.11,
+        "tertiary_25_64_pct": 35.1
+      }
+    },
+    {
+      "geo": "IT",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 45.6,
+        "ict_specialists_pct": 4.6,
+        "basic_digital_intensity_pct": 79.8,
+        "cloud_pct": 52,
+        "data_analytics_pct": 27,
+        "ai_pct": 6.17,
+        "smes_selling_online_pct": 13,
+        "real_labour_productivity_hour": 103.2,
+        "product_process_innovators_pct": 63.2,
+        "innovative_product_sales_pct": 11.9,
+        "gfcf_pct_gdp": 19.3,
+        "rd_pct_gdp": 1.48,
+        "tertiary_25_64_pct": 25.2
+      }
+    },
+    {
+      "geo": "LT",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 48.84,
+        "ict_specialists_pct": 3.8,
+        "basic_digital_intensity_pct": 74.3,
+        "cloud_pct": 42,
+        "data_analytics_pct": 39,
+        "ai_pct": 4.45,
+        "smes_selling_online_pct": 24,
+        "real_labour_productivity_hour": 124.9,
+        "product_process_innovators_pct": 53.3,
+        "innovative_product_sales_pct": 10.6,
+        "gfcf_pct_gdp": 21.2,
+        "rd_pct_gdp": 1.11,
+        "tertiary_25_64_pct": 45.3
+      }
+    },
+    {
+      "geo": "LU",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 63.79,
+        "ict_specialists_pct": 6.7,
+        "basic_digital_intensity_pct": 77.3,
+        "cloud_pct": 30,
+        "data_analytics_pct": 26,
+        "ai_pct": 13,
+        "smes_selling_online_pct": 12,
+        "real_labour_productivity_hour": 100.9,
+        "product_process_innovators_pct": 59.3,
+        "innovative_product_sales_pct": 10.2,
+        "gfcf_pct_gdp": 16.8,
+        "rd_pct_gdp": 1.03,
+        "tertiary_25_64_pct": 28.3
+      }
+    },
+    {
+      "geo": "LV",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 50.8,
+        "ict_specialists_pct": 3.8,
+        "basic_digital_intensity_pct": 59.5,
+        "cloud_pct": 22,
+        "data_analytics_pct": 22,
+        "ai_pct": 3.72,
+        "smes_selling_online_pct": 14,
+        "real_labour_productivity_hour": 122,
+        "product_process_innovators_pct": 46.1,
+        "innovative_product_sales_pct": 6.5,
+        "gfcf_pct_gdp": 22.5,
+        "rd_pct_gdp": 0.71,
+        "tertiary_25_64_pct": 19.1
+      }
+    },
+    {
+      "geo": "MT",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 61.23,
+        "ict_specialists_pct": 4.9,
+        "basic_digital_intensity_pct": 83.9,
+        "cloud_pct": 42,
+        "data_analytics_pct": 45,
+        "ai_pct": 10.16,
+        "smes_selling_online_pct": 15,
+        "real_labour_productivity_hour": 101.4,
+        "product_process_innovators_pct": 45.6,
+        "innovative_product_sales_pct": 7.1,
+        "gfcf_pct_gdp": 21.9,
+        "rd_pct_gdp": 0.65,
+        "tertiary_25_64_pct": 32.8
+      }
+    },
+    {
+      "geo": "NL",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 78.94,
+        "ict_specialists_pct": 6.7,
+        "basic_digital_intensity_pct": 89.1,
+        "cloud_pct": 65,
+        "data_analytics_pct": 49,
+        "ai_pct": 13.1,
+        "smes_selling_online_pct": 16,
+        "real_labour_productivity_hour": 100.5,
+        "product_process_innovators_pct": 54.9,
+        "innovative_product_sales_pct": 7.9,
+        "gfcf_pct_gdp": 21.3,
+        "rd_pct_gdp": 2.27,
+        "tertiary_25_64_pct": 40.4
+      }
+    },
+    {
+      "geo": "PL",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 42.93,
+        "ict_specialists_pct": 3.5,
+        "basic_digital_intensity_pct": 60.2,
+        "cloud_pct": 29,
+        "data_analytics_pct": 20,
+        "ai_pct": 2.86,
+        "smes_selling_online_pct": 14,
+        "real_labour_productivity_hour": 121.2,
+        "product_process_innovators_pct": 35.7,
+        "innovative_product_sales_pct": 8.2,
+        "gfcf_pct_gdp": 16.7,
+        "rd_pct_gdp": 1.44,
+        "tertiary_25_64_pct": 28.7
+      }
+    },
+    {
+      "geo": "PT",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 55.31,
+        "ict_specialists_pct": 4.7,
+        "basic_digital_intensity_pct": 64.7,
+        "cloud_pct": 34,
+        "data_analytics_pct": 35,
+        "ai_pct": 7.2,
+        "smes_selling_online_pct": 16,
+        "real_labour_productivity_hour": 102.3,
+        "product_process_innovators_pct": 51.1,
+        "innovative_product_sales_pct": 11,
+        "gfcf_pct_gdp": 19.6,
+        "rd_pct_gdp": 1.69,
+        "tertiary_25_64_pct": 45.7
+      }
+    },
+    {
+      "geo": "RO",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 27.82,
+        "ict_specialists_pct": 2.6,
+        "basic_digital_intensity_pct": 45.5,
+        "cloud_pct": 14,
+        "data_analytics_pct": 16,
+        "ai_pct": 1.38,
+        "smes_selling_online_pct": 12,
+        "real_labour_productivity_hour": 122.9,
+        "product_process_innovators_pct": 10.6,
+        "innovative_product_sales_pct": 4.2,
+        "gfcf_pct_gdp": 24.4,
+        "rd_pct_gdp": 0.48,
+        "tertiary_25_64_pct": 16.6
+      }
+    },
+    {
+      "geo": "SE",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 66.6,
+        "ict_specialists_pct": 8,
+        "basic_digital_intensity_pct": 86.9,
+        "cloud_pct": 75,
+        "data_analytics_pct": 42,
+        "ai_pct": 9.92,
+        "smes_selling_online_pct": 34,
+        "real_labour_productivity_hour": 110.1,
+        "product_process_innovators_pct": 64.6,
+        "innovative_product_sales_pct": 11.5,
+        "gfcf_pct_gdp": 25.7,
+        "rd_pct_gdp": 3.35,
+        "tertiary_25_64_pct": 48.2
+      }
+    },
+    {
+      "geo": "SI",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 49.67,
+        "ict_specialists_pct": 4.8,
+        "basic_digital_intensity_pct": 66.6,
+        "cloud_pct": 49,
+        "data_analytics_pct": 37,
+        "ai_pct": 11.73,
+        "smes_selling_online_pct": 17,
+        "real_labour_productivity_hour": 111.2,
+        "product_process_innovators_pct": 49.5,
+        "innovative_product_sales_pct": 10.7,
+        "gfcf_pct_gdp": 20.3,
+        "rd_pct_gdp": 2.13,
+        "tertiary_25_64_pct": 34.4
+      }
+    },
+    {
+      "geo": "SK",
+      "year": 2021,
+      "values": {
+        "basic_digital_skills_pct": 55.18,
+        "ict_specialists_pct": 4.2,
+        "basic_digital_intensity_pct": 58.4,
+        "cloud_pct": 29,
+        "data_analytics_pct": 24,
+        "ai_pct": 5.19,
+        "smes_selling_online_pct": 17,
+        "real_labour_productivity_hour": 111,
+        "product_process_innovators_pct": 44.9,
+        "innovative_product_sales_pct": 14.8,
+        "gfcf_pct_gdp": 19.8,
+        "rd_pct_gdp": 0.95,
+        "tertiary_25_64_pct": 24.5
+      }
+    },
+    {
+      "geo": "AT",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 64.68,
+        "ict_specialists_pct": 5.3,
+        "basic_digital_intensity_pct": 51.62,
+        "cloud_pct": 38.8,
+        "data_analytics_pct": 23.94,
+        "ai_pct": 10.8,
+        "smes_selling_online_pct": 23.3,
+        "real_labour_productivity_hour": 103.4,
+        "product_process_innovators_pct": 62.7,
+        "innovative_product_sales_pct": 12.5,
+        "gfcf_pct_gdp": 25.2,
+        "rd_pct_gdp": 3.22,
+        "tertiary_25_64_pct": 43.9
+      }
+    },
+    {
+      "geo": "BE",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 59.39,
+        "ict_specialists_pct": 5.4,
+        "basic_digital_intensity_pct": 56.96,
+        "cloud_pct": 48.9,
+        "data_analytics_pct": 44.47,
+        "ai_pct": 13.8,
+        "smes_selling_online_pct": 29.7,
+        "real_labour_productivity_hour": 102.2,
+        "product_process_innovators_pct": 70.3,
+        "innovative_product_sales_pct": 13.5,
+        "gfcf_pct_gdp": 23.5,
+        "rd_pct_gdp": 3.24,
+        "tertiary_25_64_pct": 54.2
+      }
+    },
+    {
+      "geo": "BG",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 35.52,
+        "ict_specialists_pct": 4.3,
+        "basic_digital_intensity_pct": 27.93,
+        "cloud_pct": 17.5,
+        "data_analytics_pct": 21.86,
+        "ai_pct": 3.6,
+        "smes_selling_online_pct": 12.6,
+        "real_labour_productivity_hour": 115.1,
+        "product_process_innovators_pct": 26.1,
+        "innovative_product_sales_pct": 4.6,
+        "gfcf_pct_gdp": 17.9,
+        "rd_pct_gdp": 0.79,
+        "tertiary_25_64_pct": 29.1
+      }
+    },
+    {
+      "geo": "CY",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 49.46,
+        "ict_specialists_pct": 5.4,
+        "basic_digital_intensity_pct": 76.91,
+        "cloud_pct": 37.7,
+        "data_analytics_pct": 33.5,
+        "ai_pct": 4.7,
+        "smes_selling_online_pct": 17.8,
+        "real_labour_productivity_hour": 105.8,
+        "product_process_innovators_pct": 39.7,
+        "innovative_product_sales_pct": 5.6,
+        "gfcf_pct_gdp": 19.8,
+        "rd_pct_gdp": 0.66,
+        "tertiary_25_64_pct": 46.8
+      }
+    },
+    {
+      "geo": "CZ",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 69.11,
+        "ict_specialists_pct": 4.3,
+        "basic_digital_intensity_pct": 61.27,
+        "cloud_pct": 44.1,
+        "data_analytics_pct": 19.49,
+        "ai_pct": 5.9,
+        "smes_selling_online_pct": 29.7,
+        "real_labour_productivity_hour": 106.5,
+        "product_process_innovators_pct": 44.2,
+        "innovative_product_sales_pct": 13.2,
+        "gfcf_pct_gdp": 26.9,
+        "rd_pct_gdp": 1.82,
+        "tertiary_25_64_pct": 36.5
+      }
+    },
+    {
+      "geo": "DE",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 52.22,
+        "ict_specialists_pct": 4.9,
+        "basic_digital_intensity_pct": 75.95,
+        "cloud_pct": 38.2,
+        "data_analytics_pct": 37.08,
+        "ai_pct": 11.6,
+        "smes_selling_online_pct": 20.2,
+        "real_labour_productivity_hour": 103.7,
+        "product_process_innovators_pct": 63.4,
+        "innovative_product_sales_pct": 11.9,
+        "gfcf_pct_gdp": 22.1,
+        "rd_pct_gdp": 3.13,
+        "tertiary_25_64_pct": 39.1
+      }
+    },
+    {
+      "geo": "DK",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 69.62,
+        "ict_specialists_pct": 5.9,
+        "basic_digital_intensity_pct": 80.52,
+        "cloud_pct": 69.5,
+        "data_analytics_pct": 49.49,
+        "ai_pct": 15.2,
+        "smes_selling_online_pct": 30.5,
+        "real_labour_productivity_hour": 114.3,
+        "product_process_innovators_pct": 56.7,
+        "innovative_product_sales_pct": 9.6,
+        "gfcf_pct_gdp": 22.2,
+        "rd_pct_gdp": 3.07,
+        "tertiary_25_64_pct": 51.2
+      }
+    },
+    {
+      "geo": "EE",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 62.61,
+        "ict_specialists_pct": 6.7,
+        "basic_digital_intensity_pct": 51.6,
+        "cloud_pct": 47.3,
+        "data_analytics_pct": 25.57,
+        "ai_pct": 5.2,
+        "smes_selling_online_pct": 21.5,
+        "real_labour_productivity_hour": 113.5,
+        "product_process_innovators_pct": 53.2,
+        "innovative_product_sales_pct": 10.2,
+        "gfcf_pct_gdp": 24.5,
+        "rd_pct_gdp": 1.83,
+        "tertiary_25_64_pct": 26.4
+      }
+    },
+    {
+      "geo": "EL",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 52.4,
+        "ict_specialists_pct": 2.4,
+        "basic_digital_intensity_pct": 43.82,
+        "cloud_pct": 23.6,
+        "data_analytics_pct": 25,
+        "ai_pct": 4,
+        "smes_selling_online_pct": 19.4,
+        "real_labour_productivity_hour": 105.1,
+        "product_process_innovators_pct": 65.5,
+        "innovative_product_sales_pct": 12.4,
+        "gfcf_pct_gdp": 14.3,
+        "rd_pct_gdp": 1.5,
+        "tertiary_25_64_pct": 25.7
+      }
+    },
+    {
+      "geo": "ES",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 66.18,
+        "ict_specialists_pct": 4.4,
+        "basic_digital_intensity_pct": 54.45,
+        "cloud_pct": 29.8,
+        "data_analytics_pct": 30.17,
+        "ai_pct": 9.2,
+        "smes_selling_online_pct": 25.9,
+        "real_labour_productivity_hour": 100.1,
+        "product_process_innovators_pct": 35.1,
+        "innovative_product_sales_pct": 11.3,
+        "gfcf_pct_gdp": 19.4,
+        "rd_pct_gdp": 1.49,
+        "tertiary_25_64_pct": 46.3
+      }
+    },
+    {
+      "geo": "EU27_2020",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 55.56,
+        "ict_specialists_pct": 4.8,
+        "basic_digital_intensity_pct": 59,
+        "cloud_pct": 39,
+        "data_analytics_pct": 33.25,
+        "ai_pct": 8,
+        "smes_selling_online_pct": 22.2,
+        "real_labour_productivity_hour": 105.6,
+        "product_process_innovators_pct": 51.4,
+        "innovative_product_sales_pct": 10.5,
+        "gfcf_pct_gdp": 22.1,
+        "rd_pct_gdp": 2.26,
+        "tertiary_25_64_pct": 42.8
+      }
+    },
+    {
+      "geo": "FI",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 81.99,
+        "ict_specialists_pct": 7.6,
+        "basic_digital_intensity_pct": 86.04,
+        "cloud_pct": 78.3,
+        "data_analytics_pct": 18.96,
+        "ai_pct": 15.1,
+        "smes_selling_online_pct": 23,
+        "real_labour_productivity_hour": 105.7,
+        "product_process_innovators_pct": 53.7,
+        "innovative_product_sales_pct": 12.7,
+        "gfcf_pct_gdp": 23.7,
+        "rd_pct_gdp": 3.09,
+        "tertiary_25_64_pct": 47.5
+      }
+    },
+    {
+      "geo": "FR",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 59.67,
+        "ict_specialists_pct": 4.7,
+        "basic_digital_intensity_pct": 52,
+        "cloud_pct": 35.1,
+        "data_analytics_pct": 33.9,
+        "ai_pct": 5.9,
+        "smes_selling_online_pct": 15.1,
+        "real_labour_productivity_hour": 101.5,
+        "product_process_innovators_pct": 57.4,
+        "innovative_product_sales_pct": 12.4,
+        "gfcf_pct_gdp": 23.9,
+        "rd_pct_gdp": 2.18,
+        "tertiary_25_64_pct": 44.9
+      }
+    },
+    {
+      "geo": "HR",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 58.95,
+        "ict_specialists_pct": 4.3,
+        "basic_digital_intensity_pct": 66.92,
+        "cloud_pct": 34.2,
+        "data_analytics_pct": 51.68,
+        "ai_pct": 7.9,
+        "smes_selling_online_pct": 29.4,
+        "real_labour_productivity_hour": 113.6,
+        "product_process_innovators_pct": 40.6,
+        "innovative_product_sales_pct": 11.4,
+        "gfcf_pct_gdp": 23.2,
+        "rd_pct_gdp": 1.37,
+        "tertiary_25_64_pct": 38
+      }
+    },
+    {
+      "geo": "HU",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 58.89,
+        "ict_specialists_pct": 4.2,
+        "basic_digital_intensity_pct": 50.92,
+        "cloud_pct": 21.8,
+        "data_analytics_pct": 53.21,
+        "ai_pct": 3.7,
+        "smes_selling_online_pct": 15,
+        "real_labour_productivity_hour": 115.8,
+        "product_process_innovators_pct": 54.2,
+        "innovative_product_sales_pct": 9.1,
+        "gfcf_pct_gdp": 25.3,
+        "rd_pct_gdp": 1.38,
+        "tertiary_25_64_pct": 21.8
+      }
+    },
+    {
+      "geo": "IE",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 72.91,
+        "ict_specialists_pct": 6.2,
+        "basic_digital_intensity_pct": 56.88,
+        "cloud_pct": 57.4,
+        "data_analytics_pct": 37.09,
+        "ai_pct": 8,
+        "smes_selling_online_pct": 29.1,
+        "real_labour_productivity_hour": 140.8,
+        "product_process_innovators_pct": 51.4,
+        "innovative_product_sales_pct": 8.2,
+        "gfcf_pct_gdp": 16.6,
+        "rd_pct_gdp": 1.54,
+        "tertiary_25_64_pct": 38.4
+      }
+    },
+    {
+      "geo": "IT",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 45.75,
+        "ict_specialists_pct": 4.1,
+        "basic_digital_intensity_pct": 75.28,
+        "cloud_pct": 51.3,
+        "data_analytics_pct": 26.61,
+        "ai_pct": 5.1,
+        "smes_selling_online_pct": 16.2,
+        "real_labour_productivity_hour": 102.9,
+        "product_process_innovators_pct": 63.1,
+        "innovative_product_sales_pct": 11.5,
+        "gfcf_pct_gdp": 21.2,
+        "rd_pct_gdp": 1.37,
+        "tertiary_25_64_pct": 29.8
+      }
+    },
+    {
+      "geo": "LT",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 52.91,
+        "ict_specialists_pct": 4.9,
+        "basic_digital_intensity_pct": 54.21,
+        "cloud_pct": 38,
+        "data_analytics_pct": 40.53,
+        "ai_pct": 4.9,
+        "smes_selling_online_pct": 31.3,
+        "real_labour_productivity_hour": 125.4,
+        "product_process_innovators_pct": 50.6,
+        "innovative_product_sales_pct": 10.1,
+        "gfcf_pct_gdp": 23.4,
+        "rd_pct_gdp": 1.04,
+        "tertiary_25_64_pct": 49.4
+      }
+    },
+    {
+      "geo": "LU",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 60.14,
+        "ict_specialists_pct": 8,
+        "basic_digital_intensity_pct": 67.87,
+        "cloud_pct": 28.9,
+        "data_analytics_pct": 31.41,
+        "ai_pct": 14.4,
+        "smes_selling_online_pct": 13.6,
+        "real_labour_productivity_hour": 97.1,
+        "product_process_innovators_pct": 51.3,
+        "innovative_product_sales_pct": 6.6,
+        "gfcf_pct_gdp": 16.4,
+        "rd_pct_gdp": 1.06,
+        "tertiary_25_64_pct": 31.2
+      }
+    },
+    {
+      "geo": "LV",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 45.34,
+        "ict_specialists_pct": 4.4,
+        "basic_digital_intensity_pct": 43.88,
+        "cloud_pct": 24.5,
+        "data_analytics_pct": 36.87,
+        "ai_pct": 4.5,
+        "smes_selling_online_pct": 17.4,
+        "real_labour_productivity_hour": 124.2,
+        "product_process_innovators_pct": 33.1,
+        "innovative_product_sales_pct": 4.5,
+        "gfcf_pct_gdp": 22.7,
+        "rd_pct_gdp": 0.82,
+        "tertiary_25_64_pct": 23.6
+      }
+    },
+    {
+      "geo": "MT",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 62.78,
+        "ict_specialists_pct": 4.7,
+        "basic_digital_intensity_pct": 59.01,
+        "cloud_pct": 66.7,
+        "data_analytics_pct": 45.59,
+        "ai_pct": 13.2,
+        "smes_selling_online_pct": 18.7,
+        "real_labour_productivity_hour": 100.9,
+        "product_process_innovators_pct": 50.4,
+        "innovative_product_sales_pct": 7.9,
+        "gfcf_pct_gdp": 21.5,
+        "rd_pct_gdp": 0.58,
+        "tertiary_25_64_pct": 35
+      }
+    },
+    {
+      "geo": "NL",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 82.7,
+        "ict_specialists_pct": 6.9,
+        "basic_digital_intensity_pct": 59.03,
+        "cloud_pct": 50.8,
+        "data_analytics_pct": 50.77,
+        "ai_pct": 14.1,
+        "smes_selling_online_pct": 19.4,
+        "real_labour_productivity_hour": 99.1,
+        "product_process_innovators_pct": 58.3,
+        "innovative_product_sales_pct": 6.4,
+        "gfcf_pct_gdp": 21.4,
+        "rd_pct_gdp": 2.3,
+        "tertiary_25_64_pct": 42.3
+      }
+    },
+    {
+      "geo": "PL",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 44.3,
+        "ict_specialists_pct": 4.3,
+        "basic_digital_intensity_pct": 49.21,
+        "cloud_pct": 26.4,
+        "data_analytics_pct": 19.31,
+        "ai_pct": 3.7,
+        "smes_selling_online_pct": 17.9,
+        "real_labour_productivity_hour": 127.5,
+        "product_process_innovators_pct": 36.5,
+        "innovative_product_sales_pct": 7.6,
+        "gfcf_pct_gdp": 17.6,
+        "rd_pct_gdp": 1.56,
+        "tertiary_25_64_pct": 32.4
+      }
+    },
+    {
+      "geo": "PT",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 55.97,
+        "ict_specialists_pct": 4.5,
+        "basic_digital_intensity_pct": 62.4,
+        "cloud_pct": 33.9,
+        "data_analytics_pct": 38.56,
+        "ai_pct": 7.9,
+        "smes_selling_online_pct": 19.2,
+        "real_labour_productivity_hour": 105.4,
+        "product_process_innovators_pct": 58.9,
+        "innovative_product_sales_pct": 12.6,
+        "gfcf_pct_gdp": 20.4,
+        "rd_pct_gdp": 1.68,
+        "tertiary_25_64_pct": 48.1
+      }
+    },
+    {
+      "geo": "RO",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 27.73,
+        "ict_specialists_pct": 2.6,
+        "basic_digital_intensity_pct": 29.36,
+        "cloud_pct": 18.4,
+        "data_analytics_pct": 21.87,
+        "ai_pct": 1.5,
+        "smes_selling_online_pct": 12.9,
+        "real_labour_productivity_hour": 125.8,
+        "product_process_innovators_pct": 14.8,
+        "innovative_product_sales_pct": 3.1,
+        "gfcf_pct_gdp": 26.7,
+        "rd_pct_gdp": 0.52,
+        "tertiary_25_64_pct": 19.5
+      }
+    },
+    {
+      "geo": "SE",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 66.44,
+        "ict_specialists_pct": 8.7,
+        "basic_digital_intensity_pct": 83.24,
+        "cloud_pct": 71.6,
+        "data_analytics_pct": 34.96,
+        "ai_pct": 10.4,
+        "smes_selling_online_pct": 31.5,
+        "real_labour_productivity_hour": 111.2,
+        "product_process_innovators_pct": 60.3,
+        "innovative_product_sales_pct": 11.8,
+        "gfcf_pct_gdp": 24.6,
+        "rd_pct_gdp": 3.64,
+        "tertiary_25_64_pct": 50.7
+      }
+    },
+    {
+      "geo": "SI",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 46.7,
+        "ict_specialists_pct": 3.8,
+        "basic_digital_intensity_pct": 61.47,
+        "cloud_pct": 45.8,
+        "data_analytics_pct": 29.88,
+        "ai_pct": 11.4,
+        "smes_selling_online_pct": 19.1,
+        "real_labour_productivity_hour": 112.5,
+        "product_process_innovators_pct": 47.1,
+        "innovative_product_sales_pct": 10.6,
+        "gfcf_pct_gdp": 21.9,
+        "rd_pct_gdp": 2.39,
+        "tertiary_25_64_pct": 38.9
+      }
+    },
+    {
+      "geo": "SK",
+      "year": 2023,
+      "values": {
+        "basic_digital_skills_pct": 51.31,
+        "ict_specialists_pct": 4.2,
+        "basic_digital_intensity_pct": 60.92,
+        "cloud_pct": 27.5,
+        "data_analytics_pct": 19.06,
+        "ai_pct": 7,
+        "smes_selling_online_pct": 16.6,
+        "real_labour_productivity_hour": 112.1,
+        "product_process_innovators_pct": 41.3,
+        "innovative_product_sales_pct": 14.2,
+        "gfcf_pct_gdp": 21.8,
+        "rd_pct_gdp": 1.04,
+        "tertiary_25_64_pct": 27.9
+      }
+    },
+    {
+      "geo": "AT",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 69.77,
+        "ict_specialists_pct": 5.4,
+        "basic_digital_intensity_pct": 73.76,
+        "cloud_pct": 53.1,
+        "data_analytics_pct": 24.5,
+        "ai_pct": 29.95,
+        "smes_selling_online_pct": 22.5,
+        "real_labour_productivity_hour": 104.2,
+        "product_process_innovators_pct": 63,
+        "innovative_product_sales_pct": 11.4,
+        "gfcf_pct_gdp": 24.1,
+        "rd_pct_gdp": 3.26,
+        "tertiary_25_64_pct": 44.8
+      }
+    },
+    {
+      "geo": "BE",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 61.22,
+        "ict_specialists_pct": 5.9,
+        "basic_digital_intensity_pct": 84.9,
+        "cloud_pct": 62.1,
+        "data_analytics_pct": 46.2,
+        "ai_pct": 34.54,
+        "smes_selling_online_pct": 28.7,
+        "real_labour_productivity_hour": 103.5,
+        "product_process_innovators_pct": 69.5,
+        "innovative_product_sales_pct": 14.2,
+        "gfcf_pct_gdp": 23.1,
+        "rd_pct_gdp": 3.31,
+        "tertiary_25_64_pct": 56.1
+      }
+    },
+    {
+      "geo": "BG",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 38.26,
+        "ict_specialists_pct": 4.8,
+        "basic_digital_intensity_pct": 39.35,
+        "cloud_pct": 17.8,
+        "data_analytics_pct": 23.8,
+        "ai_pct": 8.55,
+        "smes_selling_online_pct": 13.6,
+        "real_labour_productivity_hour": 116.7,
+        "product_process_innovators_pct": 31,
+        "innovative_product_sales_pct": 4.9,
+        "gfcf_pct_gdp": 20.1,
+        "rd_pct_gdp": 0.84,
+        "tertiary_25_64_pct": 27.8
+      }
+    },
+    {
+      "geo": "CY",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 55.75,
+        "ict_specialists_pct": 4.9,
+        "basic_digital_intensity_pct": 74.85,
+        "cloud_pct": 50.6,
+        "data_analytics_pct": 31.2,
+        "ai_pct": 9.27,
+        "smes_selling_online_pct": 19.1,
+        "real_labour_productivity_hour": 107.2,
+        "product_process_innovators_pct": 41.5,
+        "innovative_product_sales_pct": 6.1,
+        "gfcf_pct_gdp": 19.8,
+        "rd_pct_gdp": 0.69,
+        "tertiary_25_64_pct": 47.2
+      }
+    },
+    {
+      "geo": "CZ",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 70.45,
+        "ict_specialists_pct": 4.7,
+        "basic_digital_intensity_pct": 71.51,
+        "cloud_pct": 55.4,
+        "data_analytics_pct": 20.1,
+        "ai_pct": 17.6,
+        "smes_selling_online_pct": 28.4,
+        "real_labour_productivity_hour": 107.8,
+        "product_process_innovators_pct": 45,
+        "innovative_product_sales_pct": 12.8,
+        "gfcf_pct_gdp": 25.2,
+        "rd_pct_gdp": 1.89,
+        "tertiary_25_64_pct": 38
+      }
+    },
+    {
+      "geo": "DE",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 59.55,
+        "ict_specialists_pct": 5.5,
+        "basic_digital_intensity_pct": 74.35,
+        "cloud_pct": 52.2,
+        "data_analytics_pct": 41.2,
+        "ai_pct": 25.97,
+        "smes_selling_online_pct": 21,
+        "real_labour_productivity_hour": 104.9,
+        "product_process_innovators_pct": 62.1,
+        "innovative_product_sales_pct": 11.5,
+        "gfcf_pct_gdp": 20.3,
+        "rd_pct_gdp": 3.18,
+        "tertiary_25_64_pct": 40.4
+      }
+    },
+    {
+      "geo": "DK",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 81.45,
+        "ict_specialists_pct": 5.7,
+        "basic_digital_intensity_pct": 92.68,
+        "cloud_pct": 71.2,
+        "data_analytics_pct": 49.5,
+        "ai_pct": 42.03,
+        "smes_selling_online_pct": 30.3,
+        "real_labour_productivity_hour": 116.5,
+        "product_process_innovators_pct": 55.2,
+        "innovative_product_sales_pct": 9.4,
+        "gfcf_pct_gdp": 21.6,
+        "rd_pct_gdp": 3.11,
+        "tertiary_25_64_pct": 54.9
+      }
+    },
+    {
+      "geo": "EE",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 62.52,
+        "ict_specialists_pct": 6.8,
+        "basic_digital_intensity_pct": 72.77,
+        "cloud_pct": 59.5,
+        "data_analytics_pct": 27.1,
+        "ai_pct": 23.4,
+        "smes_selling_online_pct": 23.1,
+        "real_labour_productivity_hour": 115.1,
+        "product_process_innovators_pct": 54,
+        "innovative_product_sales_pct": 10.5,
+        "gfcf_pct_gdp": 23.9,
+        "rd_pct_gdp": 1.88,
+        "tertiary_25_64_pct": 29.1
+      }
+    },
+    {
+      "geo": "EL",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 50.96,
+        "ict_specialists_pct": 2.5,
+        "basic_digital_intensity_pct": 56.48,
+        "cloud_pct": 24.3,
+        "data_analytics_pct": 26.4,
+        "ai_pct": 8.93,
+        "smes_selling_online_pct": 19.8,
+        "real_labour_productivity_hour": 106,
+        "product_process_innovators_pct": 64,
+        "innovative_product_sales_pct": 13.2,
+        "gfcf_pct_gdp": 16.2,
+        "rd_pct_gdp": 1.54,
+        "tertiary_25_64_pct": 27.3
+      }
+    },
+    {
+      "geo": "ES",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 66.5,
+        "ict_specialists_pct": 4.8,
+        "basic_digital_intensity_pct": 75.96,
+        "cloud_pct": 44.9,
+        "data_analytics_pct": 31.8,
+        "ai_pct": 20.27,
+        "smes_selling_online_pct": 26.7,
+        "real_labour_productivity_hour": 101.4,
+        "product_process_innovators_pct": 36.8,
+        "innovative_product_sales_pct": 11,
+        "gfcf_pct_gdp": 19.1,
+        "rd_pct_gdp": 1.52,
+        "tertiary_25_64_pct": 49.8
+      }
+    },
+    {
+      "geo": "EU27_2020",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 60.4,
+        "ict_specialists_pct": 5,
+        "basic_digital_intensity_pct": 71.34,
+        "cloud_pct": 52.7,
+        "data_analytics_pct": 34.1,
+        "ai_pct": 19.95,
+        "smes_selling_online_pct": 23.1,
+        "real_labour_productivity_hour": 107.1,
+        "product_process_innovators_pct": 52.1,
+        "innovative_product_sales_pct": 10.8,
+        "gfcf_pct_gdp": 21.5,
+        "rd_pct_gdp": 2.31,
+        "tertiary_25_64_pct": 46.5
+      }
+    },
+    {
+      "geo": "FI",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 80.98,
+        "ict_specialists_pct": 7.8,
+        "basic_digital_intensity_pct": 94.24,
+        "cloud_pct": 79.2,
+        "data_analytics_pct": 19.2,
+        "ai_pct": 37.82,
+        "smes_selling_online_pct": 24.7,
+        "real_labour_productivity_hour": 106.8,
+        "product_process_innovators_pct": 54.8,
+        "innovative_product_sales_pct": 12.9,
+        "gfcf_pct_gdp": 22.4,
+        "rd_pct_gdp": 3.15,
+        "tertiary_25_64_pct": 52.3
+      }
+    },
+    {
+      "geo": "FR",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 65.74,
+        "ict_specialists_pct": 4.9,
+        "basic_digital_intensity_pct": 70.23,
+        "cloud_pct": 49.7,
+        "data_analytics_pct": 35,
+        "ai_pct": 18.16,
+        "smes_selling_online_pct": 16.7,
+        "real_labour_productivity_hour": 102.4,
+        "product_process_innovators_pct": 56.9,
+        "innovative_product_sales_pct": 12.1,
+        "gfcf_pct_gdp": 22.5,
+        "rd_pct_gdp": 2.21,
+        "tertiary_25_64_pct": 46.1
+      }
+    },
+    {
+      "geo": "HR",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 63.38,
+        "ict_specialists_pct": 4.9,
+        "basic_digital_intensity_pct": 58.13,
+        "cloud_pct": 48.1,
+        "data_analytics_pct": 52.9,
+        "ai_pct": 15.19,
+        "smes_selling_online_pct": 28.7,
+        "real_labour_productivity_hour": 115,
+        "product_process_innovators_pct": 42.4,
+        "innovative_product_sales_pct": 10.6,
+        "gfcf_pct_gdp": 24.5,
+        "rd_pct_gdp": 1.42,
+        "tertiary_25_64_pct": 39.5
+      }
+    },
+    {
+      "geo": "HU",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 57.32,
+        "ict_specialists_pct": 4.6,
+        "basic_digital_intensity_pct": 60.8,
+        "cloud_pct": 31.2,
+        "data_analytics_pct": 54.08,
+        "ai_pct": 10.37,
+        "smes_selling_online_pct": 15.6,
+        "real_labour_productivity_hour": 117.2,
+        "product_process_innovators_pct": 52.5,
+        "innovative_product_sales_pct": 9.3,
+        "gfcf_pct_gdp": 23,
+        "rd_pct_gdp": 1.41,
+        "tertiary_25_64_pct": 23.5
+      }
+    },
+    {
+      "geo": "IE",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 82.82,
+        "ict_specialists_pct": 6.2,
+        "basic_digital_intensity_pct": 79.92,
+        "cloud_pct": 64.3,
+        "data_analytics_pct": 39.5,
+        "ai_pct": 19.64,
+        "smes_selling_online_pct": 28.9,
+        "real_labour_productivity_hour": 143.5,
+        "product_process_innovators_pct": 53.1,
+        "innovative_product_sales_pct": 8,
+        "gfcf_pct_gdp": 18.1,
+        "rd_pct_gdp": 1.59,
+        "tertiary_25_64_pct": 41.2
+      }
+    },
+    {
+      "geo": "IT",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 54.27,
+        "ict_specialists_pct": 3.8,
+        "basic_digital_intensity_pct": 79.81,
+        "cloud_pct": 75.6,
+        "data_analytics_pct": 28.3,
+        "ai_pct": 16.4,
+        "smes_selling_online_pct": 18,
+        "real_labour_productivity_hour": 103.8,
+        "product_process_innovators_pct": 62.5,
+        "innovative_product_sales_pct": 11.9,
+        "gfcf_pct_gdp": 20.4,
+        "rd_pct_gdp": 1.4,
+        "tertiary_25_64_pct": 32.8
+      }
+    },
+    {
+      "geo": "LT",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 53.8,
+        "ict_specialists_pct": 5.7,
+        "basic_digital_intensity_pct": 74.34,
+        "cloud_pct": 51.8,
+        "data_analytics_pct": 38.9,
+        "ai_pct": 21.3,
+        "smes_selling_online_pct": 33.9,
+        "real_labour_productivity_hour": 127.3,
+        "product_process_innovators_pct": 51.2,
+        "innovative_product_sales_pct": 10.5,
+        "gfcf_pct_gdp": 22.1,
+        "rd_pct_gdp": 1.09,
+        "tertiary_25_64_pct": 51.5
+      }
+    },
+    {
+      "geo": "LU",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 62.4,
+        "ict_specialists_pct": 8.7,
+        "basic_digital_intensity_pct": 77.32,
+        "cloud_pct": 41.2,
+        "data_analytics_pct": 33.1,
+        "ai_pct": 33.61,
+        "smes_selling_online_pct": 14.8,
+        "real_labour_productivity_hour": 98.2,
+        "product_process_innovators_pct": 52,
+        "innovative_product_sales_pct": 6.9,
+        "gfcf_pct_gdp": 15.8,
+        "rd_pct_gdp": 1.09,
+        "tertiary_25_64_pct": 33.9
+      }
+    },
+    {
+      "geo": "LV",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 48.43,
+        "ict_specialists_pct": 4.5,
+        "basic_digital_intensity_pct": 59.52,
+        "cloud_pct": 34.1,
+        "data_analytics_pct": 37.4,
+        "ai_pct": 12.21,
+        "smes_selling_online_pct": 19.7,
+        "real_labour_productivity_hour": 126.1,
+        "product_process_innovators_pct": 35,
+        "innovative_product_sales_pct": 4.8,
+        "gfcf_pct_gdp": 21.9,
+        "rd_pct_gdp": 0.86,
+        "tertiary_25_64_pct": 26.4
+      }
+    },
+    {
+      "geo": "MT",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 66.8,
+        "ict_specialists_pct": 4.8,
+        "basic_digital_intensity_pct": 83.93,
+        "cloud_pct": 74.9,
+        "data_analytics_pct": 45.9,
+        "ai_pct": 21.51,
+        "smes_selling_online_pct": 19.7,
+        "real_labour_productivity_hour": 102.5,
+        "product_process_innovators_pct": 51.8,
+        "innovative_product_sales_pct": 7.4,
+        "gfcf_pct_gdp": 20.6,
+        "rd_pct_gdp": 0.61,
+        "tertiary_25_64_pct": 37.8
+      }
+    },
+    {
+      "geo": "NL",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 83.61,
+        "ict_specialists_pct": 7.2,
+        "basic_digital_intensity_pct": 89.1,
+        "cloud_pct": 68.9,
+        "data_analytics_pct": 51.5,
+        "ai_pct": 33.21,
+        "smes_selling_online_pct": 20.9,
+        "real_labour_productivity_hour": 100.1,
+        "product_process_innovators_pct": 57.5,
+        "innovative_product_sales_pct": 6.9,
+        "gfcf_pct_gdp": 20.5,
+        "rd_pct_gdp": 2.34,
+        "tertiary_25_64_pct": 45
+      }
+    },
+    {
+      "geo": "PL",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 50.42,
+        "ict_specialists_pct": 4.5,
+        "basic_digital_intensity_pct": 60.23,
+        "cloud_pct": 38.8,
+        "data_analytics_pct": 21,
+        "ai_pct": 8.36,
+        "smes_selling_online_pct": 19,
+        "real_labour_productivity_hour": 130.4,
+        "product_process_innovators_pct": 37,
+        "innovative_product_sales_pct": 8.1,
+        "gfcf_pct_gdp": 17.1,
+        "rd_pct_gdp": 1.62,
+        "tertiary_25_64_pct": 34.7
+      }
+    },
+    {
+      "geo": "PT",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 59.15,
+        "ict_specialists_pct": 5.4,
+        "basic_digital_intensity_pct": 64.67,
+        "cloud_pct": 46.3,
+        "data_analytics_pct": 39.1,
+        "ai_pct": 11.54,
+        "smes_selling_online_pct": 18.1,
+        "real_labour_productivity_hour": 106.9,
+        "product_process_innovators_pct": 57.2,
+        "innovative_product_sales_pct": 12.2,
+        "gfcf_pct_gdp": 20.1,
+        "rd_pct_gdp": 1.71,
+        "tertiary_25_64_pct": 50.2
+      }
+    },
+    {
+      "geo": "RO",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 31.84,
+        "ict_specialists_pct": 2.7,
+        "basic_digital_intensity_pct": 45.53,
+        "cloud_pct": 24.9,
+        "data_analytics_pct": 22.9,
+        "ai_pct": 5.21,
+        "smes_selling_online_pct": 12.6,
+        "real_labour_productivity_hour": 128,
+        "product_process_innovators_pct": 15.5,
+        "innovative_product_sales_pct": 3.5,
+        "gfcf_pct_gdp": 25.9,
+        "rd_pct_gdp": 0.55,
+        "tertiary_25_64_pct": 21
+      }
+    },
+    {
+      "geo": "SE",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 69.99,
+        "ict_specialists_pct": 8.9,
+        "basic_digital_intensity_pct": 86.93,
+        "cloud_pct": 73.4,
+        "data_analytics_pct": 36.2,
+        "ai_pct": 35.04,
+        "smes_selling_online_pct": 30.3,
+        "real_labour_productivity_hour": 112.9,
+        "product_process_innovators_pct": 59.5,
+        "innovative_product_sales_pct": 12.1,
+        "gfcf_pct_gdp": 23.8,
+        "rd_pct_gdp": 3.71,
+        "tertiary_25_64_pct": 52.1
+      }
+    },
+    {
+      "geo": "SI",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 46.5,
+        "ict_specialists_pct": 4.5,
+        "basic_digital_intensity_pct": 66.58,
+        "cloud_pct": 56.8,
+        "data_analytics_pct": 30.5,
+        "ai_pct": 21.61,
+        "smes_selling_online_pct": 19,
+        "real_labour_productivity_hour": 114.3,
+        "product_process_innovators_pct": 48,
+        "innovative_product_sales_pct": 10.2,
+        "gfcf_pct_gdp": 20.9,
+        "rd_pct_gdp": 2.44,
+        "tertiary_25_64_pct": 41.2
+      }
+    },
+    {
+      "geo": "SK",
+      "year": 2025,
+      "values": {
+        "basic_digital_skills_pct": 53.56,
+        "ict_specialists_pct": 4.4,
+        "basic_digital_intensity_pct": 58.39,
+        "cloud_pct": 39.5,
+        "data_analytics_pct": 19.8,
+        "ai_pct": 18,
+        "smes_selling_online_pct": 18.1,
+        "real_labour_productivity_hour": 114.1,
+        "product_process_innovators_pct": 42,
+        "innovative_product_sales_pct": 13.9,
+        "gfcf_pct_gdp": 21,
+        "rd_pct_gdp": 1.08,
+        "tertiary_25_64_pct": 29.8
+      }
+    }
+  ]
+}
