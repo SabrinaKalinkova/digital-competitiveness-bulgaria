@@ -1,0 +1,6634 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    European Benchmark | Дигитална конкурентоспособност на България
+  </title>
+
+  <meta
+    name="description"
+    content="Европейско сравнително измерение на дигиталната конкурентоспособност на България на национално и секторно равнище."
+  >
+
+
+  <style>
+
+    :root {
+
+      --navy: #102b4c;
+      --navy-dark: #081f38;
+
+      --blue: #2457c5;
+      --cyan: #28a9c7;
+      --turquoise: #01c9bc;
+
+      --text: #213247;
+      --muted: #64768a;
+
+      --white: #ffffff;
+      --background: #f5f8fb;
+      --soft: #eef5f9;
+
+      --border: #dce7ef;
+
+      --positive: #167f77;
+      --negative: #a15151;
+
+      --shadow:
+        0 14px 40px
+        rgba(16, 43, 76, 0.08);
+
+      --max-width: 1260px;
+
+    }
+
+
+    * {
+
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--text);
+
+      background: var(--white);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+
+      color: inherit;
+      text-decoration: none;
+
+    }
+
+
+    button,
+    select {
+
+      font: inherit;
+
+    }
+
+
+    .container {
+
+      width: min(
+        92%,
+        var(--max-width)
+      );
+
+      margin-inline: auto;
+
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+
+    header {
+
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
+
+      background:
+        rgba(255, 255, 255, 0.97);
+
+      border-bottom:
+        1px solid var(--border);
+
+      backdrop-filter:
+        blur(12px);
+
+    }
+
+
+    .navbar {
+
+      min-height: 82px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
+
+    }
+
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      flex-shrink: 0;
+
+    }
+
+
+    .logo-mark {
+
+      display: flex;
+
+      align-items: flex-end;
+
+      gap: 4px;
+
+      height: 42px;
+
+    }
+
+
+    .logo-mark span {
+
+      display: block;
+
+      width: 9px;
+
+      border-radius:
+        3px 3px 0 0;
+
+    }
+
+
+    .logo-mark span:nth-child(1) {
+
+      height: 15px;
+      background: #7fd9e6;
+
+    }
+
+
+    .logo-mark span:nth-child(2) {
+
+      height: 23px;
+      background: #46bfd3;
+
+    }
+
+
+    .logo-mark span:nth-child(3) {
+
+      height: 31px;
+      background: #2499c2;
+
+    }
+
+
+    .logo-mark span:nth-child(4) {
+
+      height: 41px;
+      background: #1557a0;
+
+    }
+
+
+    .brand-text strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 16px;
+
+      line-height: 1.02;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .brand-text small {
+
+      display: block;
+
+      margin-top: 5px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      white-space: nowrap;
+
+    }
+
+
+    .desktop-nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 20px;
+
+      color: #34475a;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+    }
+
+
+    .desktop-nav > a {
+
+      padding:
+        31px 0 25px;
+
+      border-bottom:
+        3px solid transparent;
+
+      transition:
+        0.2s ease;
+
+    }
+
+
+    .desktop-nav > a:hover,
+    .desktop-nav > a.active {
+
+      color: var(--blue);
+
+      border-bottom-color:
+        var(--turquoise);
+
+    }
+
+
+    /* =========================================================
+       DROPDOWN
+    ========================================================= */
+
+
+    .nav-dropdown {
+
+      position: relative;
+
+    }
+
+
+    .nav-dropdown > button {
+
+      min-height: 82px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+      border: 0;
+
+      border-bottom:
+        3px solid transparent;
+
+      background: transparent;
+
+      color: #34475a;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+    }
+
+
+    .nav-dropdown.active > button,
+    .nav-dropdown > button:hover,
+    .nav-dropdown:focus-within > button {
+
+      color: var(--blue);
+
+      border-bottom-color:
+        var(--turquoise);
+
+    }
+
+
+    .dropdown-arrow {
+
+      font-size: 9px;
+
+      transition:
+        transform 0.2s ease;
+
+    }
+
+
+    .nav-dropdown:hover .dropdown-arrow,
+    .nav-dropdown:focus-within .dropdown-arrow {
+
+      transform:
+        rotate(180deg);
+
+    }
+
+
+    .dropdown-menu {
+
+      position: absolute;
+
+      top: calc(100% - 1px);
+      left: 50%;
+
+      width: 245px;
+
+      padding: 9px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: white;
+
+      box-shadow:
+        0 18px 50px
+        rgba(16, 43, 76, 0.13);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      pointer-events: none;
+
+      transform:
+        translateX(-50%)
+        translateY(8px);
+
+      transition:
+        0.18s ease;
+
+    }
+
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+
+      opacity: 1;
+
+      visibility: visible;
+
+      pointer-events: auto;
+
+      transform:
+        translateX(-50%)
+        translateY(0);
+
+    }
+
+
+    .dropdown-menu a {
+
+      display: block;
+
+      padding:
+        11px 13px;
+
+      border-radius: 9px;
+
+      color: #435568;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+    }
+
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a.active {
+
+      color: var(--blue);
+
+      background:
+        #f2f7fb;
+
+    }
+
+
+    .language {
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      white-space: nowrap;
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+
+    .mobile-toggle {
+
+      display: none;
+
+      width: 42px;
+      height: 42px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 8px;
+
+      background: white;
+
+      color: var(--navy);
+
+      cursor: pointer;
+
+      font-size: 20px;
+
+    }
+
+
+    .mobile-menu {
+
+      display: none;
+
+      padding:
+        12px 4% 18px;
+
+      border-top:
+        1px solid var(--border);
+
+      background: white;
+
+    }
+
+
+    .mobile-menu a {
+
+      display: block;
+
+      padding:
+        11px 0;
+
+      border-bottom:
+        1px solid #edf2f5;
+
+      color: var(--navy);
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+    }
+
+
+    .mobile-menu a.active {
+
+      color: var(--blue);
+
+    }
+
+
+    .mobile-group-label {
+
+      padding:
+        15px 0 5px;
+
+      color: var(--cyan);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1.2px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .mobile-menu .mobile-sub {
+
+      padding-left: 17px;
+
+      color: #51677a;
+
+      font-size: 13px;
+
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+
+    .page-hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      color: white;
+
+      background:
+
+        radial-gradient(
+          circle at 83% 31%,
+          rgba(1, 201, 188, 0.18),
+          transparent 27%
+        ),
+
+        linear-gradient(
+          116deg,
+          #081f38 0%,
+          #102f51 60%,
+          #145b7d 100%
+        );
+
+    }
+
+
+    .page-hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background-image:
+
+        linear-gradient(
+          rgba(82, 215, 226, 0.045) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(82, 215, 226, 0.045) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        62px 62px;
+
+    }
+
+
+    .page-hero-inner {
+
+      position: relative;
+
+      z-index: 1;
+
+      min-height: 485px;
+
+      display: grid;
+
+      grid-template-columns:
+        1.08fr 0.92fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+      padding:
+        76px 0;
+
+    }
+
+
+    .hero-eyebrow {
+
+      margin-bottom: 18px;
+
+      color: #86e3e8;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1.9px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .page-hero h1 {
+
+      margin-bottom: 22px;
+
+      font-size:
+        clamp(
+          44px,
+          5vw,
+          65px
+        );
+
+      line-height: 1.03;
+
+      letter-spacing:
+        -2px;
+
+    }
+
+
+    .hero-description {
+
+      max-width: 760px;
+
+      color: #d4e6ee;
+
+      font-size: 17px;
+
+      line-height: 1.72;
+
+    }
+
+
+    .hero-card {
+
+      padding: 29px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+      border-radius: 20px;
+
+      background:
+        rgba(255, 255, 255, 0.045);
+
+    }
+
+
+    .hero-card-label {
+
+      margin-bottom: 18px;
+
+      color: #82e1e6;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .hero-stats {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 9px;
+
+    }
+
+
+    .hero-stat {
+
+      min-height: 106px;
+
+      padding: 17px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 10px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+    }
+
+
+    .hero-stat strong {
+
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: white;
+
+      font-size: 25px;
+
+      line-height: 1;
+
+    }
+
+
+    .hero-stat span {
+
+      color: #bed7df;
+
+      font-size: 9px;
+
+      line-height: 1.45;
+
+    }
+
+
+    /* =========================================================
+       GENERAL
+    ========================================================= */
+
+
+    .standard-section {
+
+      padding:
+        84px 0;
+
+    }
+
+
+    .section-alt {
+
+      background:
+        var(--background);
+
+    }
+
+
+    .section-label {
+
+      margin-bottom: 10px;
+
+      color: var(--cyan);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        1.8px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .section-title {
+
+      max-width: 940px;
+
+      color: var(--navy);
+
+      font-size:
+        clamp(
+          29px,
+          3.2vw,
+          43px
+        );
+
+      line-height: 1.13;
+
+      letter-spacing:
+        -1px;
+
+    }
+
+
+    .section-description {
+
+      max-width: 950px;
+
+      margin-top: 17px;
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.75;
+
+    }
+
+
+    /* =========================================================
+       PRINCIPLE
+    ========================================================= */
+
+
+    .principle-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 14px;
+
+      margin-top: 40px;
+
+    }
+
+
+    .principle-card {
+
+      min-height: 225px;
+
+      padding: 25px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: white;
+
+    }
+
+
+    .principle-code {
+
+      margin-bottom: 21px;
+
+      color: #93c9d4;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+    }
+
+
+    .principle-card h3 {
+
+      margin-bottom: 9px;
+
+      color: var(--navy);
+
+      font-size: 17px;
+
+    }
+
+
+    .principle-card p {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.68;
+
+    }
+
+
+    /* =========================================================
+       LEVEL TABS
+    ========================================================= */
+
+
+    .level-tabs {
+
+      display: flex;
+
+      gap: 8px;
+
+      margin-top: 40px;
+
+      padding: 6px;
+
+      width: fit-content;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+
+      background: white;
+
+    }
+
+
+    .level-tab {
+
+      min-height: 44px;
+
+      padding:
+        0 21px;
+
+      border: 0;
+
+      border-radius: 8px;
+
+      background: transparent;
+
+      color: #617887;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+    }
+
+
+    .level-tab.active {
+
+      background: var(--navy);
+
+      color: white;
+
+    }
+
+
+    .level-panel {
+
+      display: none;
+
+    }
+
+
+    .level-panel.active {
+
+      display: block;
+
+    }
+
+
+    /* =========================================================
+       SHELL
+    ========================================================= */
+
+
+    .shell {
+
+      overflow: hidden;
+
+      margin-top: 30px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 21px;
+
+      background: white;
+
+      box-shadow:
+        var(--shadow);
+
+    }
+
+
+    .toolbar {
+
+      display: grid;
+
+      gap: 14px;
+
+      padding: 27px;
+
+      border-bottom:
+        1px solid var(--border);
+
+      background:
+        #f8fbfc;
+
+    }
+
+
+    .toolbar.national {
+
+      grid-template-columns:
+        0.8fr 1.4fr 0.65fr 1fr;
+
+    }
+
+
+    .toolbar.sectoral {
+
+      grid-template-columns:
+        1.15fr 1.25fr 0.65fr 1fr;
+
+    }
+
+
+    .control label {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #718495;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        0.9px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .control select {
+
+      width: 100%;
+
+      min-height: 45px;
+
+      padding:
+        0 12px;
+
+      border:
+        1px solid #cfdfe7;
+
+      border-radius: 9px;
+
+      background: white;
+
+      color: var(--navy);
+
+      font-size: 11px;
+
+      outline: none;
+
+    }
+
+
+    .control select:focus {
+
+      border-color:
+        var(--cyan);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(40, 169, 199, 0.1);
+
+    }
+
+
+    .shell-main {
+
+      padding: 28px;
+
+    }
+
+
+    /* =========================================================
+       PASSPORT
+    ========================================================= */
+
+
+    .passport {
+
+      border-bottom:
+        1px solid var(--border);
+
+    }
+
+
+    .passport-toggle {
+
+      width: 100%;
+
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      padding:
+        17px 27px;
+
+      border: 0;
+
+      background: white;
+
+      cursor: pointer;
+
+      text-align: left;
+
+    }
+
+
+    .passport-left {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+    }
+
+
+    .passport-icon {
+
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 9px;
+
+      background:
+        #edf8fa;
+
+      color: var(--blue);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+    }
+
+
+    .passport-toggle strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 12px;
+
+    }
+
+
+    .passport-toggle small {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+    }
+
+
+    .passport-body {
+
+      display: none;
+
+      padding:
+        0 27px 25px;
+
+    }
+
+
+    .passport.open
+    .passport-body {
+
+      display: block;
+
+    }
+
+
+    .passport-arrow {
+
+      color: var(--blue);
+
+      transition:
+        0.2s ease;
+
+    }
+
+
+    .passport.open
+    .passport-arrow {
+
+      transform:
+        rotate(180deg);
+
+    }
+
+
+    .passport-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 10px;
+
+    }
+
+
+    .passport-item {
+
+      padding: 14px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 11px;
+
+      background:
+        #fbfdfe;
+
+    }
+
+
+    .passport-item span {
+
+      display: block;
+
+      color: #8a9aa6;
+
+      font-size: 7px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .passport-item strong {
+
+      display: block;
+
+      margin-top: 5px;
+
+      color: var(--navy);
+
+      font-size: 10px;
+
+    }
+
+
+    .passport-note {
+
+      margin-top: 12px;
+
+      padding: 15px;
+
+      border-radius: 11px;
+
+      background:
+        #f5f9fb;
+
+      color: #5e7384;
+
+      font-size: 10px;
+
+      line-height: 1.65;
+
+    }
+
+
+    /* =========================================================
+       BANNER
+    ========================================================= */
+
+
+    .benchmark-banner {
+
+      margin-bottom: 22px;
+
+      padding: 19px 20px;
+
+      border:
+        1px solid #c8e1e7;
+
+      border-radius: 14px;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #f4fbfc,
+          #ffffff
+        );
+
+    }
+
+
+    .benchmark-banner strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 15px;
+
+    }
+
+
+    .benchmark-banner p {
+
+      margin-top: 5px;
+
+      color: #5d7383;
+
+      font-size: 10px;
+
+      line-height: 1.6;
+
+    }
+
+
+    .benchmark-status {
+
+      display: inline-flex;
+
+      margin-top: 8px;
+
+      padding:
+        5px 8px;
+
+      border-radius: 99px;
+
+      background:
+        #e9f7f4;
+
+      color:
+        #177b70;
+
+      font-size: 8px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* =========================================================
+       KPI
+    ========================================================= */
+
+
+    .benchmark-kpis {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 12px;
+
+      margin-bottom: 26px;
+
+    }
+
+
+    .benchmark-kpi {
+
+      padding: 19px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 13px;
+
+      background:
+        #fbfdfe;
+
+    }
+
+
+    .benchmark-kpi span {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #8597a5;
+
+      font-size: 8px;
+
+      font-weight: 800;
+
+      letter-spacing:
+        0.7px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .benchmark-kpi strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 20px;
+
+      line-height: 1.15;
+
+    }
+
+
+    .benchmark-kpi small {
+
+      display: block;
+
+      margin-top: 6px;
+
+      color: var(--muted);
+
+      font-size: 8px;
+
+      line-height: 1.45;
+
+    }
+
+
+    .positive {
+
+      color: var(--positive) !important;
+
+    }
+
+
+    .negative {
+
+      color: var(--negative) !important;
+
+    }
+
+
+    /* =========================================================
+       VISUAL GRID
+    ========================================================= */
+
+
+    .visual-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+
+    }
+
+
+    .card {
+
+      min-width: 0;
+
+      padding: 20px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: white;
+
+    }
+
+
+    .card-head {
+
+      margin-bottom: 14px;
+
+    }
+
+
+    .card-head strong {
+
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 15px;
+
+    }
+
+
+    .card-head span {
+
+      color: var(--muted);
+
+      font-size: 9px;
+
+      line-height: 1.5;
+
+    }
+
+
+    .svg-wrap {
+
+      width: 100%;
+
+      min-height: 290px;
+
+      overflow: hidden;
+
+    }
+
+
+    .svg-wrap svg {
+
+      width: 100%;
+      height: 290px;
+
+      display: block;
+
+    }
+
+
+    /* =========================================================
+       COUNTRY BARS
+    ========================================================= */
+
+
+    .country-bars {
+
+      display: grid;
+
+      gap: 15px;
+
+      margin-top: 15px;
+
+    }
+
+
+    .country-bar-row {
+
+      display: grid;
+
+      grid-template-columns:
+        125px 1fr 110px;
+
+      gap: 12px;
+
+      align-items: center;
+
+    }
+
+
+    .country-bar-label {
+
+      overflow: hidden;
+
+      color: var(--navy);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      white-space: nowrap;
+
+      text-overflow: ellipsis;
+
+    }
+
+
+    .track {
+
+      height: 9px;
+
+      overflow: hidden;
+
+      border-radius: 10px;
+
+      background:
+        #e8eff3;
+
+    }
+
+
+    .bar {
+
+      height: 100%;
+
+      border-radius: 10px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--turquoise)
+        );
+
+    }
+
+
+    .country-value {
+
+      color: var(--blue);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+      text-align: right;
+
+    }
+
+
+    /* =========================================================
+       RANKING
+    ========================================================= */
+
+
+    .ranking-list {
+
+      display: grid;
+
+      gap: 8px;
+
+      max-height: 480px;
+
+      overflow: auto;
+
+      padding-right: 5px;
+
+    }
+
+
+    .ranking-row {
+
+      display: grid;
+
+      grid-template-columns:
+        28px 135px 1fr 105px;
+
+      gap: 9px;
+
+      align-items: center;
+
+      min-height: 32px;
+
+    }
+
+
+    .ranking-row.bg-row {
+
+      padding:
+        7px 8px;
+
+      border:
+        1px solid #bce5e1;
+
+      border-radius: 9px;
+
+      background:
+        #f3fbfa;
+
+    }
+
+
+    .rank-no {
+
+      color: #9aabb7;
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+    }
+
+
+    .rank-name {
+
+      overflow: hidden;
+
+      color: var(--navy);
+
+      font-size: 9px;
+
+      font-weight: 700;
+
+      white-space: nowrap;
+
+      text-overflow: ellipsis;
+
+    }
+
+
+    /* =========================================================
+       TABLE
+    ========================================================= */
+
+
+    .table-wrap {
+
+      overflow-x: auto;
+
+      margin-top: 24px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 14px;
+
+    }
+
+
+    .country-table {
+
+      width: 100%;
+
+      min-width: 780px;
+
+      border-collapse: collapse;
+
+    }
+
+
+    .country-table th,
+    .country-table td {
+
+      padding:
+        11px 12px;
+
+      border-bottom:
+        1px solid #edf2f5;
+
+      font-size: 9px;
+
+      text-align: right;
+
+    }
+
+
+    .country-table th {
+
+      background:
+        #f4f8fa;
+
+      color: #617789;
+
+      font-size: 8px;
+
+      letter-spacing:
+        0.5px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .country-table th:first-child,
+    .country-table td:first-child {
+
+      text-align: left;
+
+    }
+
+
+    .country-table td:first-child {
+
+      color: var(--navy);
+
+      font-weight: 700;
+
+    }
+
+
+    .country-table tr.bg-row {
+
+      background:
+        #f3fbfa;
+
+    }
+
+
+    /* =========================================================
+       INTERPRETATION
+    ========================================================= */
+
+
+    .benchmark-interpret {
+
+      margin-top: 18px;
+
+      padding: 18px;
+
+      border-left:
+        4px solid var(--turquoise);
+
+      border-radius:
+        0 12px 12px 0;
+
+      background:
+        #f3f9fa;
+
+      color: #566f7f;
+
+      font-size: 10px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .empty {
+
+      min-height: 220px;
+
+      display: grid;
+
+      place-items: center;
+
+      padding: 24px;
+
+      border:
+        1px dashed #bfd3dd;
+
+      border-radius: 12px;
+
+      background:
+        #fbfdfe;
+
+      color: #687d8c;
+
+      font-size: 11px;
+
+      line-height: 1.7;
+
+      text-align: center;
+
+    }
+
+
+    .load-error {
+
+      padding: 20px;
+
+      border:
+        1px solid #efd5d5;
+
+      border-radius: 12px;
+
+      background:
+        #fff7f7;
+
+      color: #8c4c4c;
+
+      font-size: 11px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================================================
+       COVERAGE
+    ========================================================= */
+
+
+    .coverage-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 14px;
+
+      margin-top: 39px;
+
+    }
+
+
+    .coverage-card {
+
+      min-height: 220px;
+
+      padding: 25px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: white;
+
+    }
+
+
+    .coverage-code {
+
+      margin-bottom: 18px;
+
+      color: var(--cyan);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+    }
+
+
+    .coverage-card h3 {
+
+      margin-bottom: 9px;
+
+      color: var(--navy);
+
+      font-size: 16px;
+
+    }
+
+
+    .coverage-card p {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.68;
+
+    }
+
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+
+    .final-cta {
+
+      padding:
+        58px 0;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          110deg,
+          #0b2845,
+          #145879
+        );
+
+    }
+
+
+    .final-cta-inner {
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 35px;
+
+    }
+
+
+    .final-cta h2 {
+
+      margin-bottom: 8px;
+
+      font-size:
+        clamp(
+          27px,
+          3vw,
+          38px
+        );
+
+    }
+
+
+    .final-cta p {
+
+      max-width: 740px;
+
+      color: #c7dce7;
+
+      font-size: 13px;
+
+    }
+
+
+    .btn {
+
+      min-height: 48px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        0 22px;
+
+      border-radius: 9px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #79d5dd,
+          #55bedb
+        );
+
+      color: #082b46;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      flex-shrink: 0;
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+
+    footer {
+
+      padding:
+        42px 0 24px;
+
+      background:
+        #0b253f;
+
+      color: white;
+
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.1fr 1fr;
+
+      gap: 55px;
+
+    }
+
+
+    .footer-project strong {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 14px;
+
+    }
+
+
+    .footer-project p {
+
+      max-width: 520px;
+
+      color: #b7cdd8;
+
+      font-size: 11px;
+
+      line-height: 1.65;
+
+    }
+
+
+    .footer-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+      gap:
+        9px 18px;
+
+    }
+
+
+    .footer-links a {
+
+      color: #c3d7df;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+    }
+
+
+    .footer-links a:hover {
+
+      color: #7ce0e5;
+
+    }
+
+
+    .copyright {
+
+      margin-top: 30px;
+
+      padding-top: 18px;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      color: #829eac;
+
+      font-size: 10px;
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+
+    @media(max-width: 1200px) {
+
+      .desktop-nav,
+      .language {
+
+        display: none;
+
+      }
+
+
+      .mobile-toggle {
+
+        display: block;
+
+      }
+
+
+      .principle-grid,
+      .benchmark-kpis,
+      .passport-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    @media(max-width: 950px) {
+
+      .page-hero-inner,
+      .visual-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .toolbar.national,
+      .toolbar.sectoral {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+
+      .coverage-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .footer-links {
+
+        justify-content: flex-start;
+
+      }
+
+    }
+
+
+    @media(max-width: 700px) {
+
+      .brand-text small,
+      .language {
+
+        display: none;
+
+      }
+
+
+      .page-hero h1 {
+
+        font-size: 41px;
+
+      }
+
+
+      .hero-stats,
+      .principle-grid,
+      .benchmark-kpis,
+      .passport-grid,
+      .coverage-grid,
+      .toolbar.national,
+      .toolbar.sectoral {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .level-tabs {
+
+        width: 100%;
+
+        flex-direction: column;
+
+      }
+
+
+      .level-tab {
+
+        width: 100%;
+
+      }
+
+
+      .ranking-row {
+
+        grid-template-columns:
+          25px 90px 1fr 80px;
+
+      }
+
+
+      .country-bar-row {
+
+        grid-template-columns:
+          95px 1fr;
+
+      }
+
+
+      .country-value {
+
+        grid-column: 2;
+
+        text-align: left;
+
+      }
+
+
+      .standard-section {
+
+        padding:
+          64px 0;
+
+      }
+
+
+      .final-cta-inner {
+
+        display: block;
+
+      }
+
+
+      .final-cta .btn {
+
+        margin-top: 22px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+
+<header>
+
+  <div class="container navbar">
+
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="Начална страница"
+    >
+
+      <div
+        class="logo-mark"
+        aria-hidden="true"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
+
+      <div class="brand-text">
+
+        <strong>
+          Дигитална<br>
+          конкурентоспособност
+        </strong>
+
+        <small>
+          на социално-икономическата система на България
+        </small>
+
+      </div>
+
+    </a>
+
+
+    <nav
+      class="desktop-nav"
+      aria-label="Основна навигация"
+    >
+
+      <a href="index.html">
+        Начало
+      </a>
+
+      <a href="about.html">
+        За проекта
+      </a>
+
+      <a href="methodology.html">
+        Методология
+      </a>
+
+
+      <div class="nav-dropdown active">
+
+        <button
+          type="button"
+          aria-haspopup="true"
+        >
+
+          Данни и анализи
+
+          <span class="dropdown-arrow">
+            ▼
+          </span>
+
+        </button>
+
+
+        <div class="dropdown-menu">
+
+          <a href="data-indices.html">
+            Данни и измерители
+          </a>
+
+          <a href="national.html">
+            Национален анализ
+          </a>
+
+          <a href="regions.html">
+            Регионален анализ
+          </a>
+
+          <a href="sectors.html">
+            Секторен анализ
+          </a>
+
+          <a href="organizations.html">
+            Организационен анализ
+          </a>
+
+          <a
+            href="benchmark.html"
+            class="active"
+          >
+            European Benchmark
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <a href="results.html">
+        Резултати
+      </a>
+
+      <a href="publications.html">
+        Публикации
+      </a>
+
+      <a href="team.html">
+        Екип
+      </a>
+
+    </nav>
+
+
+    <div class="language">
+      BG | EN
+    </div>
+
+
+    <button
+      class="mobile-toggle"
+      id="mobileToggle"
+      type="button"
+      aria-label="Отвори меню"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+  </div>
+
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <a href="index.html">
+      Начало
+    </a>
+
+    <a href="about.html">
+      За проекта
+    </a>
+
+    <a href="methodology.html">
+      Методология
+    </a>
+
+
+    <div class="mobile-group-label">
+      Данни и анализи
+    </div>
+
+
+    <a
+      class="mobile-sub"
+      href="data-indices.html"
+    >
+      Данни и измерители
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="national.html"
+    >
+      Национален анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="regions.html"
+    >
+      Регионален анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="sectors.html"
+    >
+      Секторен анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="organizations.html"
+    >
+      Организационен анализ
+    </a>
+
+    <a
+      class="mobile-sub active"
+      href="benchmark.html"
+    >
+      European Benchmark
+    </a>
+
+
+    <a href="results.html">
+      Резултати
+    </a>
+
+    <a href="publications.html">
+      Публикации
+    </a>
+
+    <a href="team.html">
+      Екип
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+
+<section class="page-hero">
+
+  <div class="container page-hero-inner">
+
+
+    <div>
+
+      <div class="hero-eyebrow">
+        Европейско сравнително измерение
+      </div>
+
+
+      <h1>
+        European Benchmark
+      </h1>
+
+
+      <p class="hero-description">
+        Европейското сравнително измерение
+        поставя България
+        в контекста на ЕС-27
+        и останалите държави членки.
+        Сравненията се извършват
+        по конкретен показател,
+        година
+        и аналитично равнище,
+        без да се конструира
+        обща европейска класация
+        по дигитална конкурентоспособност.
+      </p>
+
+    </div>
+
+
+    <aside class="hero-card">
+
+      <div class="hero-card-label">
+        Сравнителен обхват
+      </div>
+
+
+      <div class="hero-stats">
+
+
+        <div class="hero-stat">
+
+          <strong>
+            27
+          </strong>
+
+          <span>
+            държави членки
+            на Европейския съюз
+          </span>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+          <strong>
+            EU27
+          </strong>
+
+          <span>
+            официален агрегат
+            за сравнителен ориентир
+          </span>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+          <strong>
+            13
+          </strong>
+
+          <span>
+            показателя
+            в националния benchmark
+          </span>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+          <strong>
+            18
+          </strong>
+
+          <span>
+            показателя
+            в секторния benchmark
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRINCIPLES
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Принципи на сравнението
+    </div>
+
+
+    <h2 class="section-title">
+      Как се интерпретира European Benchmark?
+    </h2>
+
+
+    <p class="section-description">
+      Европейското сравнение
+      допълва националното
+      и секторното равнище.
+      То не представлява
+      самостоятелно пето равнище
+      на аналитичната архитектура.
+    </p>
+
+
+    <div class="principle-grid">
+
+
+      <article class="principle-card">
+
+        <div class="principle-code">
+          EU01
+        </div>
+
+        <h3>
+          Един и същ показател
+        </h3>
+
+        <p>
+          Сравняват се стойности
+          с еднаква статистическа дефиниция,
+          единица
+          и референтна година.
+        </p>
+
+      </article>
+
+
+      <article class="principle-card">
+
+        <div class="principle-code">
+          EU02
+        </div>
+
+        <h3>
+          Официален агрегат ЕС-27
+        </h3>
+
+        <p>
+          ЕС-27 се използва
+          като официален агрегат.
+          Той не се изчислява
+          като проста средна стойност
+          на националните наблюдения.
+        </p>
+
+      </article>
+
+
+      <article class="principle-card">
+
+        <div class="principle-code">
+          EU03
+        </div>
+
+        <h3>
+          Позицията е индикаторна
+        </h3>
+
+        <p>
+          Подреждането на държавите
+          се отнася единствено
+          до избрания показател
+          и година.
+          То не е общ рейтинг
+          на дигиталната конкурентоспособност.
+        </p>
+
+      </article>
+
+
+      <article class="principle-card">
+
+        <div class="principle-code">
+          EU04
+        </div>
+
+        <h3>
+          Липсата остава липса
+        </h3>
+
+        <p>
+          Когато няма
+          хармонизирано европейско наблюдение,
+          системата показва
+          липса на данни,
+          без proxy
+          или автоматична интерполация.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     BENCHMARK AREA
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Сравнителен анализ
+    </div>
+
+
+    <h2 class="section-title">
+      Национално и секторно сравнение
+    </h2>
+
+
+    <p class="section-description">
+      Избери аналитичното равнище.
+      Националният benchmark
+      сравнява България
+      по общонационални показатели,
+      а секторният benchmark
+      използва съпоставими наблюдения
+      по икономически дейности A*21.
+    </p>
+
+
+    <div class="level-tabs">
+
+      <button
+        class="level-tab active"
+        type="button"
+        data-level="nationalPanel"
+      >
+        Национален benchmark
+      </button>
+
+      <button
+        class="level-tab"
+        type="button"
+        data-level="sectorPanel"
+      >
+        Секторен benchmark
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         NATIONAL BENCHMARK
+    ====================================================== -->
+
+
+    <div
+      class="level-panel active"
+      id="nationalPanel"
+    >
+
+
+      <div class="shell">
+
+
+        <div class="toolbar national">
+
+
+          <div class="control">
+
+            <label for="nationalMode">
+              Режим
+            </label>
+
+            <select id="nationalMode">
+
+              <option value="average">
+                България и ЕС-27
+              </option>
+
+              <option value="ranking">
+                Подреждане на държавите
+              </option>
+
+              <option value="country">
+                Сравнение с държава
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="control">
+
+            <label for="nationalIndicator">
+              Показател
+            </label>
+
+            <select id="nationalIndicator">
+            </select>
+
+          </div>
+
+
+          <div class="control">
+
+            <label for="nationalYear">
+              Година
+            </label>
+
+            <select id="nationalYear">
+            </select>
+
+          </div>
+
+
+          <div class="control">
+
+            <label for="nationalCountry">
+              Допълнителна държава
+            </label>
+
+            <select id="nationalCountry">
+            </select>
+
+          </div>
+
+
+        </div>
+
+
+        <div
+          class="passport"
+          id="nationalPassport"
+        >
+
+          <button
+            class="passport-toggle"
+            id="nationalPassportToggle"
+            type="button"
+          >
+
+            <div class="passport-left">
+
+              <div class="passport-icon">
+                i
+              </div>
+
+              <div>
+
+                <strong>
+                  Паспорт на националния показател
+                </strong>
+
+                <small id="nationalPassportShort">
+                  Методологичен контекст
+                </small>
+
+              </div>
+
+            </div>
+
+            <span class="passport-arrow">
+              ▼
+            </span>
+
+          </button>
+
+
+          <div
+            class="passport-body"
+            id="nationalPassportContent"
+          >
+          </div>
+
+        </div>
+
+
+        <div
+          class="shell-main"
+          id="nationalContent"
+        >
+
+          Зареждане...
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         SECTOR BENCHMARK
+    ====================================================== -->
+
+
+    <div
+      class="level-panel"
+      id="sectorPanel"
+    >
+
+
+      <div class="shell">
+
+
+        <div class="toolbar sectoral">
+
+
+          <div class="control">
+
+            <label for="sectorSelect">
+              Икономическа дейност
+            </label>
+
+            <select id="sectorSelect">
+            </select>
+
+          </div>
+
+
+          <div class="control">
+
+            <label for="sectorIndicator">
+              Показател
+            </label>
+
+            <select id="sectorIndicator">
+            </select>
+
+          </div>
+
+
+          <div class="control">
+
+            <label for="sectorYear">
+              Година
+            </label>
+
+            <select id="sectorYear">
+            </select>
+
+          </div>
+
+
+          <div class="control">
+
+            <label for="sectorCountry">
+              Допълнителна държава
+            </label>
+
+            <select id="sectorCountry">
+            </select>
+
+          </div>
+
+
+        </div>
+
+
+        <div
+          class="passport"
+          id="sectorPassport"
+        >
+
+          <button
+            class="passport-toggle"
+            id="sectorPassportToggle"
+            type="button"
+          >
+
+            <div class="passport-left">
+
+              <div class="passport-icon">
+                i
+              </div>
+
+              <div>
+
+                <strong>
+                  Паспорт на секторния benchmark
+                </strong>
+
+                <small id="sectorPassportShort">
+                  Покритие и съпоставимост
+                </small>
+
+              </div>
+
+            </div>
+
+            <span class="passport-arrow">
+              ▼
+            </span>
+
+          </button>
+
+
+          <div
+            class="passport-body"
+            id="sectorPassportContent"
+          >
+          </div>
+
+        </div>
+
+
+        <div
+          class="shell-main"
+          id="sectorContent"
+        >
+
+          Зареждане...
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     COVERAGE
+========================================================= -->
+
+
+<section class="standard-section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Съпоставимост и покритие
+    </div>
+
+
+    <h2 class="section-title">
+      Какво трябва да се има предвид?
+    </h2>
+
+
+    <div class="coverage-grid">
+
+
+      <article class="coverage-card">
+
+        <div class="coverage-code">
+          C01
+        </div>
+
+        <h3>
+          Националният и секторният benchmark са различни
+        </h3>
+
+        <p>
+          Националният режим
+          сравнява държавите
+          като цели икономики.
+          Секторният режим
+          изисква една и съща
+          икономическа дейност,
+          показател
+          и година.
+        </p>
+
+      </article>
+
+
+      <article class="coverage-card">
+
+        <div class="coverage-code">
+          C02
+        </div>
+
+        <h3>
+          Enterprise ICT има ограничено секторно покритие
+        </h3>
+
+        <p>
+          Директните показатели
+          за използване на ИКТ
+          от предприятията
+          са налични основно
+          за секторите C до J
+          и L до N,
+          когато Eurostat
+          публикува съпоставими наблюдения.
+        </p>
+
+      </article>
+
+
+      <article class="coverage-card">
+
+        <div class="coverage-code">
+          C03
+        </div>
+
+        <h3>
+          Методологичните версии остават видими
+        </h3>
+
+        <p>
+          Показатели като DII
+          могат да използват
+          различни версии
+          в отделни години.
+          Сравнението следва
+          официалната структура
+          на източника
+          и не предполага
+          автоматична непрекъснатост.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+
+<section class="final-cta">
+
+  <div class="container final-cta-inner">
+
+
+    <div>
+
+      <h2>
+        Следващо равнище:
+        организационният анализ
+      </h2>
+
+      <p>
+        След националната,
+        регионалната,
+        секторната
+        и европейската перспектива
+        организационният анализ
+        изследва как ресурсите,
+        способностите
+        и използването на технологии
+        се трансформират
+        в резултати вътре в организациите.
+      </p>
+
+    </div>
+
+
+    <a
+      class="btn"
+      href="organizations.html"
+    >
+      Към организационния анализ
+    </a>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+
+<footer>
+
+  <div class="container">
+
+
+    <div class="footer-grid">
+
+
+      <div class="footer-project">
+
+        <strong>
+          Университет за национално и световно стопанство
+        </strong>
+
+        <p>
+          Научноизследователски проект № 6/2024
+          <br>
+          „Дигитална конкурентоспособност
+          на социално-икономическата система на България“
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Начало
+        </a>
+
+        <a href="about.html">
+          За проекта
+        </a>
+
+        <a href="methodology.html">
+          Методология
+        </a>
+
+        <a href="data-indices.html">
+          Данни и измерители
+        </a>
+
+        <a href="national.html">
+          Национален анализ
+        </a>
+
+        <a href="regions.html">
+          Регионален анализ
+        </a>
+
+        <a href="sectors.html">
+          Секторен анализ
+        </a>
+
+        <a href="organizations.html">
+          Организационен анализ
+        </a>
+
+        <a href="benchmark.html">
+          European Benchmark
+        </a>
+
+        <a href="results.html">
+          Резултати
+        </a>
+
+        <a href="publications.html">
+          Публикации
+        </a>
+
+        <a href="team.html">
+          Екип
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Дигитална конкурентоспособност
+      на социално-икономическата система на България
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+<script>
+
+(function(){
+
+  "use strict";
+
+
+  const $ =
+    id =>
+      document.getElementById(id);
+
+
+  let nationalData = null;
+  let sectorData = null;
+
+
+  /* =========================================================
+     COUNTRY NAMES
+  ========================================================= */
+
+
+  const countryNames = {
+
+    EU27_2020: "ЕС-27",
+
+    AT: "Австрия",
+    BE: "Белгия",
+    BG: "България",
+    HR: "Хърватия",
+    CY: "Кипър",
+    CZ: "Чехия",
+    DK: "Дания",
+    EE: "Естония",
+    FI: "Финландия",
+    FR: "Франция",
+    DE: "Германия",
+    EL: "Гърция",
+    HU: "Унгария",
+    IE: "Ирландия",
+    IT: "Италия",
+    LV: "Латвия",
+    LT: "Литва",
+    LU: "Люксембург",
+    MT: "Малта",
+    NL: "Нидерландия",
+    PL: "Полша",
+    PT: "Португалия",
+    RO: "Румъния",
+    SK: "Словакия",
+    SI: "Словения",
+    ES: "Испания",
+    SE: "Швеция"
+
+  };
+
+
+  function countryName(
+    code,
+    fallback = ""
+  ){
+
+    return (
+      countryNames[code] ||
+      fallback ||
+      code
+    );
+
+  }
+
+
+  /* =========================================================
+     MOBILE
+  ========================================================= */
+
+
+  const mobileToggle =
+    $("mobileToggle");
+
+
+  const mobileMenu =
+    $("mobileMenu");
+
+
+  mobileToggle.addEventListener(
+    "click",
+    function(){
+
+      const open =
+        mobileMenu.style.display ===
+        "block";
+
+
+      mobileMenu.style.display =
+        open
+        ? "none"
+        : "block";
+
+
+      mobileToggle.setAttribute(
+        "aria-expanded",
+        String(!open)
+      );
+
+    }
+  );
+
+
+  window.addEventListener(
+    "resize",
+    function(){
+
+      if(
+        window.innerWidth > 1200
+      ){
+
+        mobileMenu.style.display =
+          "none";
+
+
+        mobileToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+    }
+  );
+
+
+  /* =========================================================
+     LEVEL TABS
+  ========================================================= */
+
+
+  document
+    .querySelectorAll(
+      ".level-tab"
+    )
+    .forEach(
+      function(button){
+
+        button.addEventListener(
+          "click",
+          function(){
+
+            document
+              .querySelectorAll(
+                ".level-tab"
+              )
+              .forEach(
+                item =>
+                  item.classList.remove(
+                    "active"
+                  )
+              );
+
+
+            document
+              .querySelectorAll(
+                ".level-panel"
+              )
+              .forEach(
+                item =>
+                  item.classList.remove(
+                    "active"
+                  )
+              );
+
+
+            button.classList.add(
+              "active"
+            );
+
+
+            $(
+              button.dataset.level
+            ).classList.add(
+              "active"
+            );
+
+          }
+        );
+
+      }
+    );
+
+
+  /* =========================================================
+     PASSPORTS
+  ========================================================= */
+
+
+  function passportToggle(
+    passportId,
+    buttonId
+  ){
+
+    $(
+      buttonId
+    ).addEventListener(
+      "click",
+      function(){
+
+        $(
+          passportId
+        ).classList.toggle(
+          "open"
+        );
+
+      }
+    );
+
+  }
+
+
+  passportToggle(
+    "nationalPassport",
+    "nationalPassportToggle"
+  );
+
+
+  passportToggle(
+    "sectorPassport",
+    "sectorPassportToggle"
+  );
+
+
+  /* =========================================================
+     HELPERS
+  ========================================================= */
+
+
+  function safe(
+    value
+  ){
+
+    return (
+      typeof value === "number" &&
+      Number.isFinite(value)
+    );
+
+  }
+
+
+  function isPct(
+    unit
+  ){
+
+    return (
+      typeof unit === "string" &&
+      unit.includes("%")
+    );
+
+  }
+
+
+  function decimals(
+    unit
+  ){
+
+    if(
+      unit === "index"
+    ){
+
+      return 1;
+
+    }
+
+
+    return 2;
+
+  }
+
+
+  function numberBG(
+    value,
+    digits = 2
+  ){
+
+    if(!safe(value)){
+
+      return "Няма данни";
+
+    }
+
+
+    return new Intl.NumberFormat(
+      "bg-BG",
+      {
+        minimumFractionDigits:
+          digits,
+
+        maximumFractionDigits:
+          digits
+      }
+    ).format(value);
+
+  }
+
+
+  function formatValue(
+    value,
+    unit
+  ){
+
+    if(!safe(value)){
+
+      return "Няма данни";
+
+    }
+
+
+    const formatted =
+      numberBG(
+        value,
+        decimals(unit)
+      );
+
+
+    if(
+      !unit ||
+      unit === "index"
+    ){
+
+      return formatted;
+
+    }
+
+
+    return (
+      formatted +
+      " " +
+      unit
+    );
+
+  }
+
+
+  function absoluteGap(
+    bg,
+    comparison,
+    unit
+  ){
+
+    if(
+      !safe(bg) ||
+      !safe(comparison)
+    ){
+
+      return "Няма данни";
+
+    }
+
+
+    const gap =
+      bg -
+      comparison;
+
+
+    const sign =
+      gap > 0
+      ? "+"
+      : "";
+
+
+    if(isPct(unit)){
+
+      return (
+        sign +
+        numberBG(gap) +
+        " пр.п."
+      );
+
+    }
+
+
+    return (
+      sign +
+      numberBG(
+        gap,
+        decimals(unit)
+      ) +
+      (
+        unit &&
+        unit !== "index"
+        ? " " + unit
+        : ""
+      )
+    );
+
+  }
+
+
+  function relativeGap(
+    bg,
+    comparison
+  ){
+
+    if(
+      !safe(bg) ||
+      !safe(comparison)
+    ){
+
+      return null;
+
+    }
+
+
+    if(comparison === 0){
+
+      return "na";
+
+    }
+
+
+    return (
+      (
+        bg -
+        comparison
+      ) /
+      comparison *
+      100
+    );
+
+  }
+
+
+  function pct(
+    value
+  ){
+
+    if(!safe(value)){
+
+      return "Няма данни";
+
+    }
+
+
+    return (
+      (
+        value > 0
+        ? "+"
+        : ""
+      ) +
+      numberBG(value) +
+      "%"
+    );
+
+  }
+
+
+  function colorClass(
+    bg,
+    comparison,
+    direction = "higher"
+  ){
+
+    if(
+      !safe(bg) ||
+      !safe(comparison)
+    ){
+
+      return "";
+
+    }
+
+
+    if(bg === comparison){
+
+      return "";
+
+    }
+
+
+    if(direction === "lower"){
+
+      return (
+        bg < comparison
+        ? "positive"
+        : "negative"
+      );
+
+    }
+
+
+    return (
+      bg > comparison
+      ? "positive"
+      : "negative"
+    );
+
+  }
+
+
+  function addYears(
+    select,
+    years
+  ){
+
+    select.innerHTML = "";
+
+
+    [...years]
+      .sort(
+        (a, b) =>
+          b - a
+      )
+      .forEach(
+        function(year){
+
+          const option =
+            document.createElement(
+              "option"
+            );
+
+
+          option.value =
+            year;
+
+
+          option.textContent =
+            year;
+
+
+          select.appendChild(
+            option
+          );
+
+        }
+      );
+
+  }
+
+
+  function addIndicators(
+    select,
+    indicators
+  ){
+
+    select.innerHTML = "";
+
+
+    const groups =
+      {};
+
+
+    indicators.forEach(
+      function(ind){
+
+        const dimension =
+          ind.dimension ||
+          "Други";
+
+
+        if(!groups[dimension]){
+
+          groups[dimension] = [];
+
+        }
+
+
+        groups[dimension].push(
+          ind
+        );
+
+      }
+    );
+
+
+    Object.entries(
+      groups
+    ).forEach(
+      function(
+        [dimension, items]
+      ){
+
+        const group =
+          document.createElement(
+            "optgroup"
+          );
+
+
+        group.label =
+          dimension;
+
+
+        items.forEach(
+          function(ind){
+
+            const option =
+              document.createElement(
+                "option"
+              );
+
+
+            option.value =
+              ind.code;
+
+
+            option.textContent =
+              ind.label;
+
+
+            group.appendChild(
+              option
+            );
+
+          }
+        );
+
+
+        select.appendChild(
+          group
+        );
+
+      }
+    );
+
+  }
+
+
+  function addCountries(
+    select,
+    countries
+  ){
+
+    select.innerHTML = "";
+
+
+    countries
+      .filter(
+        country =>
+          country.type === "member" &&
+          country.code !== "BG"
+      )
+      .slice()
+      .sort(
+        (
+          a,
+          b
+        ) =>
+          countryName(
+            a.code,
+            a.name
+          ).localeCompare(
+            countryName(
+              b.code,
+              b.name
+            ),
+            "bg"
+          )
+      )
+      .forEach(
+        function(country){
+
+          const option =
+            document.createElement(
+              "option"
+            );
+
+
+          option.value =
+            country.code;
+
+
+          option.textContent =
+            countryName(
+              country.code,
+              country.name
+            );
+
+
+          select.appendChild(
+            option
+          );
+
+        }
+      );
+
+  }
+
+
+  /* =========================================================
+     LINE CHART
+  ========================================================= */
+
+
+  function lineChart(
+    seriesA,
+    seriesB,
+    period,
+    unit,
+    labelA,
+    labelB
+  ){
+
+    const all =
+      [
+        ...seriesA,
+        ...seriesB
+      ].filter(
+        item =>
+          safe(item.value)
+      );
+
+
+    if(all.length < 2){
+
+      return `
+
+        <div class="empty">
+          Няма достатъчно
+          съпоставими наблюдения
+          за времева линия.
+        </div>
+
+      `;
+
+    }
+
+
+    const W = 650;
+    const H = 290;
+
+    const L = 58;
+    const R = 20;
+    const T = 25;
+    const B = 42;
+
+
+    let min =
+      Math.min(
+        ...all.map(
+          item =>
+            item.value
+        )
+      );
+
+
+    let max =
+      Math.max(
+        ...all.map(
+          item =>
+            item.value
+        )
+      );
+
+
+    if(min === max){
+
+      min -= 1;
+      max += 1;
+
+    }
+
+
+    const padding =
+      (
+        max -
+        min
+      ) *
+      0.12;
+
+
+    min -= padding;
+    max += padding;
+
+
+    const minYear =
+      Math.min(
+        ...period
+      );
+
+
+    const maxYear =
+      Math.max(
+        ...period
+      );
+
+
+    const X =
+      year =>
+        L +
+        (
+          year -
+          minYear
+        ) /
+        (
+          maxYear -
+          minYear ||
+          1
+        ) *
+        (
+          W -
+          L -
+          R
+        );
+
+
+    const Y =
+      value =>
+        T +
+        (
+          max -
+          value
+        ) /
+        (
+          max -
+          min
+        ) *
+        (
+          H -
+          T -
+          B
+        );
+
+
+    const grid =
+      [0, 1, 2, 3]
+        .map(
+          function(index){
+
+            const y =
+              T +
+              index *
+              (
+                H -
+                T -
+                B
+              ) /
+              3;
+
+
+            const value =
+              max -
+              index *
+              (
+                max -
+                min
+              ) /
+              3;
+
+
+            return `
+
+              <line
+                x1="${L}"
+                y1="${y}"
+                x2="${W - R}"
+                y2="${y}"
+                stroke="#edf2f5"
+              ></line>
+
+              <text
+                x="${L - 7}"
+                y="${y + 3}"
+                text-anchor="end"
+                font-size="8"
+                fill="#8798a5"
+              >
+                ${numberBG(value, 1)}
+              </text>
+
+            `;
+
+          }
+        )
+        .join("");
+
+
+    function oneSeries(
+      series,
+      color,
+      dash = ""
+    ){
+
+      const valid =
+        series.filter(
+          item =>
+            safe(item.value)
+        );
+
+
+      if(valid.length < 2){
+
+        return "";
+
+      }
+
+
+      const points =
+        valid
+          .map(
+            item =>
+              (
+                X(item.year) +
+                "," +
+                Y(item.value)
+              )
+          )
+          .join(" ");
+
+
+      return `
+
+        <polyline
+          points="${points}"
+          fill="none"
+          stroke="${color}"
+          stroke-width="3"
+          ${
+            dash
+            ? 'stroke-dasharray="' + dash + '"'
+            : ""
+          }
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></polyline>
+
+        ${
+          valid
+            .map(
+              item => `
+
+                <circle
+                  cx="${X(item.year)}"
+                  cy="${Y(item.value)}"
+                  r="4"
+                  fill="${color}"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                >
+
+                  <title>
+                    ${item.year}: ${formatValue(item.value, unit)}
+                  </title>
+
+                </circle>
+
+              `
+            )
+            .join("")
+        }
+
+      `;
+
+    }
+
+
+    const yearLabels =
+      period
+        .map(
+          year => `
+
+            <text
+              x="${X(year)}"
+              y="${H - 12}"
+              text-anchor="middle"
+              font-size="8"
+              fill="#8295a3"
+            >
+              ${year}
+            </text>
+
+          `
+        )
+        .join("");
+
+
+    return `
+
+      <div class="svg-wrap">
+
+        <svg
+          viewBox="0 0 ${W} ${H}"
+          aria-label="Сравнителна времева линия"
+        >
+
+          ${grid}
+
+          ${
+            oneSeries(
+              seriesA,
+              "#2457c5"
+            )
+          }
+
+          ${
+            oneSeries(
+              seriesB,
+              "#01a99e",
+              "6 5"
+            )
+          }
+
+          ${yearLabels}
+
+        </svg>
+
+      </div>
+
+      <div
+        style="
+          margin-top:6px;
+          color:#65798a;
+          font-size:9px;
+        "
+      >
+        Синя линия: ${labelA}
+        &nbsp; | &nbsp;
+        Тюркоазена прекъсната линия: ${labelB}
+      </div>
+
+    `;
+
+  }
+
+
+  /* =========================================================
+     BARS
+  ========================================================= */
+
+
+  function countryBars(
+    items,
+    unit
+  ){
+
+    const valid =
+      items.filter(
+        item =>
+          safe(item.value)
+      );
+
+
+    if(!valid.length){
+
+      return `
+
+        <div class="empty">
+          Няма съпоставими стойности.
+        </div>
+
+      `;
+
+    }
+
+
+    const max =
+      Math.max(
+        ...valid.map(
+          item =>
+            Math.abs(item.value)
+        ),
+        0
+      );
+
+
+    return `
+
+      <div class="country-bars">
+
+        ${
+          items
+            .map(
+              item => `
+
+                <div class="country-bar-row">
+
+                  <div
+                    class="country-bar-label"
+                    title="${item.name}"
+                  >
+                    ${item.name}
+                  </div>
+
+                  <div class="track">
+
+                    <div
+                      class="bar"
+                      style="
+                        width:
+                        ${
+                          safe(item.value) &&
+                          max
+                          ? (
+                              Math.abs(item.value) /
+                              max *
+                              100
+                            )
+                          : 0
+                        }%
+                      "
+                    ></div>
+
+                  </div>
+
+                  <div class="country-value">
+                    ${formatValue(item.value, unit)}
+                  </div>
+
+                </div>
+
+              `
+            )
+            .join("")
+        }
+
+      </div>
+
+    `;
+
+  }
+
+
+  /* =========================================================
+     RANKING
+  ========================================================= */
+
+
+  function rankingHtml(
+    ranking,
+    unit
+  ){
+
+    if(!ranking.length){
+
+      return `
+
+        <div class="empty">
+          Няма достатъчно
+          национални наблюдения
+          за подреждане.
+        </div>
+
+      `;
+
+    }
+
+
+    const max =
+      Math.max(
+        ...ranking.map(
+          item =>
+            Math.abs(item.value)
+        ),
+        0
+      );
+
+
+    return `
+
+      <div class="ranking-list">
+
+        ${
+          ranking
+            .map(
+              function(item, index){
+
+                return `
+
+                  <div
+                    class="
+                      ranking-row
+                      ${
+                        item.code === "BG"
+                        ? "bg-row"
+                        : ""
+                      }
+                    "
+                  >
+
+                    <div class="rank-no">
+                      ${index + 1}
+                    </div>
+
+                    <div
+                      class="rank-name"
+                      title="${item.name}"
+                    >
+                      ${item.name}
+                    </div>
+
+                    <div class="track">
+
+                      <div
+                        class="bar"
+                        style="
+                          width:
+                          ${
+                            max
+                            ? (
+                                Math.abs(item.value) /
+                                max *
+                                100
+                              )
+                            : 0
+                          }%
+                        "
+                      ></div>
+
+                    </div>
+
+                    <div class="country-value">
+                      ${formatValue(item.value, unit)}
+                    </div>
+
+                  </div>
+
+                `;
+
+              }
+            )
+            .join("")
+        }
+
+      </div>
+
+    `;
+
+  }
+
+
+  /* =========================================================
+     COUNTRY TABLE
+  ========================================================= */
+
+
+  function countryTable(
+    ranking,
+    unit
+  ){
+
+    return `
+
+      <div class="table-wrap">
+
+        <table class="country-table">
+
+          <thead>
+
+            <tr>
+
+              <th>
+                Държава
+              </th>
+
+              <th>
+                Код
+              </th>
+
+              <th>
+                Стойност
+              </th>
+
+              <th>
+                Позиция
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            ${
+              ranking
+                .map(
+                  function(item, index){
+
+                    return `
+
+                      <tr
+                        class="${
+                          item.code === "BG"
+                          ? "bg-row"
+                          : ""
+                        }"
+                      >
+
+                        <td>
+                          ${item.name}
+                        </td>
+
+                        <td>
+                          ${item.code}
+                        </td>
+
+                        <td>
+                          ${formatValue(item.value, unit)}
+                        </td>
+
+                        <td>
+                          ${index + 1}
+                        </td>
+
+                      </tr>
+
+                    `;
+
+                  }
+                )
+                .join("")
+            }
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    `;
+
+  }
+
+
+  /* =========================================================
+     NATIONAL ACCESS
+  ========================================================= */
+
+
+  function nationalIndicator(
+    code
+  ){
+
+    return nationalData.indicators.find(
+      item =>
+        item.code === code
+    );
+
+  }
+
+
+  function nationalRecord(
+    geo,
+    year
+  ){
+
+    return nationalData.records.find(
+      item =>
+        item.geo === geo &&
+        Number(item.year) ===
+        Number(year)
+    );
+
+  }
+
+
+  function nationalValue(
+    geo,
+    year,
+    code
+  ){
+
+    const value =
+      nationalRecord(
+        geo,
+        year
+      )?.values?.[code];
+
+
+    return (
+      safe(value)
+      ? value
+      : null
+    );
+
+  }
+
+
+  function nationalSeries(
+    geo,
+    code
+  ){
+
+    return nationalData.period.map(
+      year => ({
+
+        year:
+          year,
+
+        value:
+          nationalValue(
+            geo,
+            year,
+            code
+          )
+
+      })
+    );
+
+  }
+
+
+  function nationalRanking(
+    year,
+    code
+  ){
+
+    const ind =
+      nationalIndicator(code);
+
+
+    const direction =
+      ind?.direction ||
+      "higher";
+
+
+    const ranking =
+      nationalData.countries
+        .filter(
+          country =>
+            country.type === "member"
+        )
+        .map(
+          country => ({
+
+            code:
+              country.code,
+
+            name:
+              countryName(
+                country.code,
+                country.name
+              ),
+
+            value:
+              nationalValue(
+                country.code,
+                year,
+                code
+              )
+
+          })
+        )
+        .filter(
+          item =>
+            safe(item.value)
+        );
+
+
+    ranking.sort(
+      function(a, b){
+
+        return (
+          direction === "lower"
+          ? a.value - b.value
+          : b.value - a.value
+        );
+
+      }
+    );
+
+
+    return ranking;
+
+  }
+
+
+  /* =========================================================
+     NATIONAL PASSPORT
+  ========================================================= */
+
+
+  function renderNationalPassport(){
+
+    const code =
+      $("nationalIndicator").value;
+
+
+    const ind =
+      nationalIndicator(code);
+
+
+    if(!ind){
+
+      return;
+
+    }
+
+
+    $("nationalPassportShort").textContent =
+      ind.label;
+
+
+    $("nationalPassportContent").innerHTML = `
+
+      <div class="passport-grid">
+
+        <div class="passport-item">
+
+          <span>
+            Измерение
+          </span>
+
+          <strong>
+            ${ind.dimension || "Не е посочено"}
+          </strong>
+
+        </div>
+
+
+        <div class="passport-item">
+
+          <span>
+            Мерна единица
+          </span>
+
+          <strong>
+            ${ind.unit || "Не е посочена"}
+          </strong>
+
+        </div>
+
+
+        <div class="passport-item">
+
+          <span>
+            Период
+          </span>
+
+          <strong>
+            ${
+              nationalData.period.join(
+                ", "
+              )
+            }
+          </strong>
+
+        </div>
+
+
+        <div class="passport-item">
+
+          <span>
+            Географски обхват
+          </span>
+
+          <strong>
+            ЕС-27 и 27 държави членки
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="passport-note">
+
+        Националното сравнение
+        е по един и същ показател
+        и година.
+
+        Официалният агрегат ЕС-27
+        е отделен референтен показател
+        и не участва
+        в подреждането на държавите.
+
+      </div>
+
+    `;
+
+  }
+
+
+  /* =========================================================
+     NATIONAL RENDER
+  ========================================================= */
+
+
+  function renderNational(){
+
+    if(!nationalData){
+
+      $("nationalContent").innerHTML = `
+
+        <div class="load-error">
+
+          Националният benchmark
+          не може да бъде зареден.
+
+          Качи
+          <strong>eu27-national-benchmark-data.json</strong>
+          в същата папка
+          като benchmark.html.
+
+        </div>
+
+      `;
+
+      return;
+
+    }
+
+
+    const mode =
+      $("nationalMode").value;
+
+
+    const code =
+      $("nationalIndicator").value;
+
+
+    const year =
+      Number(
+        $("nationalYear").value
+      );
+
+
+    const selectedCountry =
+      $("nationalCountry").value;
+
+
+    const ind =
+      nationalIndicator(code);
+
+
+    const bg =
+      nationalValue(
+        "BG",
+        year,
+        code
+      );
+
+
+    const eu =
+      nationalValue(
+        "EU27_2020",
+        year,
+        code
+      );
+
+
+    const ranking =
+      nationalRanking(
+        year,
+        code
+      );
+
+
+    const bgPosition =
+      ranking.findIndex(
+        item =>
+          item.code === "BG"
+      );
+
+
+    const gap =
+      absoluteGap(
+        bg,
+        eu,
+        ind.unit
+      );
+
+
+    const relative =
+      relativeGap(
+        bg,
+        eu
+      );
+
+
+    const position =
+      bgPosition >= 0
+      ? (
+          (
+            bgPosition + 1
+          ) +
+          " / " +
+          ranking.length
+        )
+      : "Няма данни";
+
+
+    const color =
+      colorClass(
+        bg,
+        eu,
+        ind.direction
+      );
+
+
+    const selectedName =
+      countryName(
+        selectedCountry
+      );
+
+
+    const selectedValue =
+      nationalValue(
+        selectedCountry,
+        year,
+        code
+      );
+
+
+    let visual = "";
+
+
+    if(mode === "average"){
+
+      visual = `
+
+        <div class="visual-grid">
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                България и ЕС-27 във времето
+              </strong>
+
+              <span>
+                национално равнище
+              </span>
+
+            </div>
+
+            ${
+              lineChart(
+                nationalSeries(
+                  "BG",
+                  code
+                ),
+                nationalSeries(
+                  "EU27_2020",
+                  code
+                ),
+                nationalData.period,
+                ind.unit,
+                "България",
+                "ЕС-27"
+              )
+            }
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                Стойности през ${year} г.
+              </strong>
+
+              <span>
+                директно сравнение
+              </span>
+
+            </div>
+
+            ${
+              countryBars(
+                [
+                  {
+                    name:
+                      "България",
+
+                    value:
+                      bg
+                  },
+
+                  {
+                    name:
+                      "ЕС-27",
+
+                    value:
+                      eu
+                  }
+                ],
+                ind.unit
+              )
+            }
+
+          </div>
+
+
+        </div>
+
+      `;
+
+    }
+
+
+    if(mode === "ranking"){
+
+      visual = `
+
+        <div class="visual-grid">
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                Подреждане по показателя
+              </strong>
+
+              <span>
+                само държави членки с налична стойност
+              </span>
+
+            </div>
+
+            ${
+              rankingHtml(
+                ranking,
+                ind.unit
+              )
+            }
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                България и ЕС-27
+              </strong>
+
+              <span>
+                контекст на позицията
+              </span>
+
+            </div>
+
+            ${
+              countryBars(
+                [
+                  {
+                    name:
+                      "България",
+
+                    value:
+                      bg
+                  },
+
+                  {
+                    name:
+                      "ЕС-27",
+
+                    value:
+                      eu
+                  }
+                ],
+                ind.unit
+              )
+            }
+
+            <div class="benchmark-interpret">
+
+              Позицията
+              <strong>
+                ${position}
+              </strong>
+              се отнася само
+              до показателя
+              „${ind.label}“
+              през ${year} г.
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        ${
+          countryTable(
+            ranking,
+            ind.unit
+          )
+        }
+
+      `;
+
+    }
+
+
+    if(mode === "country"){
+
+      visual = `
+
+        <div class="visual-grid">
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                България, ${selectedName} и ЕС-27
+              </strong>
+
+              <span>
+                ${year} г.
+              </span>
+
+            </div>
+
+            ${
+              countryBars(
+                [
+                  {
+                    name:
+                      "България",
+
+                    value:
+                      bg
+                  },
+
+                  {
+                    name:
+                      selectedName,
+
+                    value:
+                      selectedValue
+                  },
+
+                  {
+                    name:
+                      "ЕС-27",
+
+                    value:
+                      eu
+                  }
+                ],
+                ind.unit
+              )
+            }
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                Двустранна динамика
+              </strong>
+
+              <span>
+                България и ${selectedName}
+              </span>
+
+            </div>
+
+            ${
+              lineChart(
+                nationalSeries(
+                  "BG",
+                  code
+                ),
+                nationalSeries(
+                  selectedCountry,
+                  code
+                ),
+                nationalData.period,
+                ind.unit,
+                "България",
+                selectedName
+              )
+            }
+
+          </div>
+
+
+        </div>
+
+      `;
+
+    }
+
+
+    $("nationalContent").innerHTML = `
+
+      <div class="benchmark-banner">
+
+        <strong>
+          Национален benchmark · ${year}
+        </strong>
+
+        <p>
+          ${ind.label}.
+          Сравнението е индикаторно
+          и не представлява
+          общ рейтинг
+          на дигиталната конкурентоспособност.
+        </p>
+
+        <span class="benchmark-status">
+          EU-27 national panel
+        </span>
+
+      </div>
+
+
+      <div class="benchmark-kpis">
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            България
+          </span>
+
+          <strong>
+            ${formatValue(bg, ind.unit)}
+          </strong>
+
+          <small>
+            BG · ${year}
+          </small>
+
+        </div>
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            ЕС-27
+          </span>
+
+          <strong>
+            ${formatValue(eu, ind.unit)}
+          </strong>
+
+          <small>
+            официален агрегат
+          </small>
+
+        </div>
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            Gap BG спрямо EU
+          </span>
+
+          <strong class="${color}">
+            ${gap}
+          </strong>
+
+          <small>
+            абсолютна разлика
+          </small>
+
+        </div>
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            Относителен gap
+          </span>
+
+          <strong class="${color}">
+            ${
+              relative === "na"
+              ? "Неприложимо"
+              : relative === null
+                ? "Няма данни"
+                : pct(relative)
+            }
+          </strong>
+
+          <small>
+            спрямо ЕС-27
+          </small>
+
+        </div>
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            Позиция
+          </span>
+
+          <strong>
+            ${position}
+          </strong>
+
+          <small>
+            държави с налични данни
+          </small>
+
+        </div>
+
+
+      </div>
+
+
+      ${visual}
+
+
+      <div class="benchmark-interpret">
+
+        ${
+          safe(bg) &&
+          safe(eu)
+          ? (
+              "За " +
+              year +
+              " г. България има стойност " +
+              "<strong>" +
+              formatValue(
+                bg,
+                ind.unit
+              ) +
+              "</strong>, а официалният агрегат ЕС-27 е " +
+              "<strong>" +
+              formatValue(
+                eu,
+                ind.unit
+              ) +
+              "</strong>. " +
+              "Абсолютната разлика е <strong>" +
+              gap +
+              "</strong>."
+            )
+          : (
+              "За избраната комбинация " +
+              "липсва една от необходимите " +
+              "съпоставими стойности."
+            )
+        }
+
+      </div>
+
+    `;
+
+
+    renderNationalPassport();
+
+  }
+
+
+  /* =========================================================
+     SECTOR ACCESS
+  ========================================================= */
+
+
+  function sectorIndicator(
+    code
+  ){
+
+    return sectorData?.indicators?.find(
+      item =>
+        item.code === code
+    );
+
+  }
+
+
+  function sectorInfo(
+    code
+  ){
+
+    return sectorData?.sectors?.find(
+      item =>
+        item.code === code
+    );
+
+  }
+
+
+  function sectorRecord(
+    geo,
+    section,
+    year
+  ){
+
+    return sectorData?.records?.find(
+      item =>
+        item.geo === geo &&
+        item.section === section &&
+        Number(item.year) ===
+        Number(year)
+    );
+
+  }
+
+
+  function sectorValue(
+    geo,
+    section,
+    year,
+    code
+  ){
+
+    const value =
+      sectorRecord(
+        geo,
+        section,
+        year
+      )?.values?.[code];
+
+
+    return (
+      safe(value)
+      ? value
+      : null
+    );
+
+  }
+
+
+  function sectorSeries(
+    geo,
+    section,
+    code
+  ){
+
+    return sectorData.period.map(
+      year => ({
+
+        year:
+          year,
+
+        value:
+          sectorValue(
+            geo,
+            section,
+            year,
+            code
+          )
+
+      })
+    );
+
+  }
+
+
+  function sectorRanking(
+    section,
+    year,
+    code
+  ){
+
+    const ind =
+      sectorIndicator(code);
+
+
+    const direction =
+      ind?.direction ||
+      "higher";
+
+
+    const ranking =
+      sectorData.countries
+        .filter(
+          country =>
+            country.type === "member"
+        )
+        .map(
+          country => ({
+
+            code:
+              country.code,
+
+            name:
+              countryName(
+                country.code,
+                country.name
+              ),
+
+            value:
+              sectorValue(
+                country.code,
+                section,
+                year,
+                code
+              )
+
+          })
+        )
+        .filter(
+          item =>
+            safe(item.value)
+        );
+
+
+    ranking.sort(
+      function(a, b){
+
+        return (
+          direction === "lower"
+          ? a.value - b.value
+          : b.value - a.value
+        );
+
+      }
+    );
+
+
+    return ranking;
+
+  }
+
+
+  /* =========================================================
+     SECTOR PASSPORT
+  ========================================================= */
+
+
+  function renderSectorPassport(){
+
+    if(!sectorData){
+
+      return;
+
+    }
+
+
+    const section =
+      $("sectorSelect").value;
+
+
+    const code =
+      $("sectorIndicator").value;
+
+
+    const ind =
+      sectorIndicator(code);
+
+
+    const enterpriseSections =
+      sectorData.enterprise_survey_sections ||
+      [];
+
+
+    const directEnterprise =
+      enterpriseSections.includes(
+        section
+      );
+
+
+    $("sectorPassportShort").textContent =
+      ind.label;
+
+
+    $("sectorPassportContent").innerHTML = `
+
+      <div class="passport-grid">
+
+
+        <div class="passport-item">
+
+          <span>
+            Измерение
+          </span>
+
+          <strong>
+            ${ind.dimension || "Не е посочено"}
+          </strong>
+
+        </div>
+
+
+        <div class="passport-item">
+
+          <span>
+            Мерна единица
+          </span>
+
+          <strong>
+            ${ind.unit || "Не е посочена"}
+          </strong>
+
+        </div>
+
+
+        <div class="passport-item">
+
+          <span>
+            Икономическа дейност
+          </span>
+
+          <strong>
+            ${section} · ${sectorInfo(section)?.name || ""}
+          </strong>
+
+        </div>
+
+
+        <div class="passport-item">
+
+          <span>
+            Enterprise ICT обхват
+          </span>
+
+          <strong>
+            ${
+              directEnterprise
+              ? "Директно секторно покритие"
+              : "Зависи от показателя"
+            }
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="passport-note">
+
+        ${
+          directEnterprise
+          ? (
+              "Избраният сектор е сред директните " +
+              "NACE секции в enterprise ICT benchmark."
+            )
+          : (
+              "За този сектор голяма част от enterprise ICT " +
+              "показателите може да нямат директна хармонизирана стойност. " +
+              "Производителността и ИКТ специалистите имат по-широко секторно покритие."
+            )
+        }
+
+      </div>
+
+    `;
+
+  }
+
+
+  /* =========================================================
+     SECTOR RENDER
+  ========================================================= */
+
+
+  function renderSector(){
+
+    if(!sectorData){
+
+      $("sectorContent").innerHTML = `
+
+        <div class="load-error">
+
+          Секторният European Benchmark
+          не може да бъде зареден.
+
+          Качи
+          <strong>a21-eu-benchmark-data.json</strong>
+          в същата папка
+          като benchmark.html.
+
+        </div>
+
+      `;
+
+      return;
+
+    }
+
+
+    const section =
+      $("sectorSelect").value;
+
+
+    const code =
+      $("sectorIndicator").value;
+
+
+    const year =
+      Number(
+        $("sectorYear").value
+      );
+
+
+    const selectedCountry =
+      $("sectorCountry").value;
+
+
+    const ind =
+      sectorIndicator(code);
+
+
+    const sec =
+      sectorInfo(section);
+
+
+    const bg =
+      sectorValue(
+        "BG",
+        section,
+        year,
+        code
+      );
+
+
+    const eu =
+      sectorValue(
+        "EU27_2020",
+        section,
+        year,
+        code
+      );
+
+
+    const selectedValue =
+      sectorValue(
+        selectedCountry,
+        section,
+        year,
+        code
+      );
+
+
+    const ranking =
+      sectorRanking(
+        section,
+        year,
+        code
+      );
+
+
+    const bgPosition =
+      ranking.findIndex(
+        item =>
+          item.code === "BG"
+      );
+
+
+    const position =
+      bgPosition >= 0
+      ? (
+          (
+            bgPosition + 1
+          ) +
+          " / " +
+          ranking.length
+        )
+      : "Няма данни";
+
+
+    const gap =
+      absoluteGap(
+        bg,
+        eu,
+        ind.unit
+      );
+
+
+    const relative =
+      relativeGap(
+        bg,
+        eu
+      );
+
+
+    const color =
+      colorClass(
+        bg,
+        eu,
+        ind.direction
+      );
+
+
+    const selectedName =
+      countryName(
+        selectedCountry
+      );
+
+
+    const hasAny =
+      (
+        safe(bg) ||
+        safe(eu) ||
+        ranking.length
+      );
+
+
+    let mainVisual = "";
+
+
+    if(!hasAny){
+
+      mainVisual = `
+
+        <div class="empty">
+
+          Няма хармонизирано
+          европейско секторно сравнение
+          за избраната комбинация.
+
+          Това означава,
+          че за този сектор,
+          показател
+          и година
+          липсват съпоставими наблюдения
+          в benchmark файла.
+
+        </div>
+
+      `;
+
+    }
+    else{
+
+      mainVisual = `
+
+        <div class="visual-grid">
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                България и ЕС-27 във времето
+              </strong>
+
+              <span>
+                сектор ${section} · ${sec?.name || ""}
+              </span>
+
+            </div>
+
+            ${
+              lineChart(
+                sectorSeries(
+                  "BG",
+                  section,
+                  code
+                ),
+                sectorSeries(
+                  "EU27_2020",
+                  section,
+                  code
+                ),
+                sectorData.period,
+                ind.unit,
+                "България",
+                "ЕС-27"
+              )
+            }
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                Подреждане на държавите
+              </strong>
+
+              <span>
+                ${year} г. · само налични наблюдения
+              </span>
+
+            </div>
+
+            ${
+              rankingHtml(
+                ranking,
+                ind.unit
+              )
+            }
+
+          </div>
+
+
+        </div>
+
+
+        <div class="visual-grid"
+          style="
+            margin-top:18px;
+          "
+        >
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                България, ${selectedName} и ЕС-27
+              </strong>
+
+              <span>
+                ${year} г.
+              </span>
+
+            </div>
+
+            ${
+              countryBars(
+                [
+                  {
+                    name:
+                      "България",
+
+                    value:
+                      bg
+                  },
+
+                  {
+                    name:
+                      selectedName,
+
+                    value:
+                      selectedValue
+                  },
+
+                  {
+                    name:
+                      "ЕС-27",
+
+                    value:
+                      eu
+                  }
+                ],
+                ind.unit
+              )
+            }
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="card-head">
+
+              <strong>
+                България и ${selectedName} във времето
+              </strong>
+
+              <span>
+                същият сектор и показател
+              </span>
+
+            </div>
+
+            ${
+              lineChart(
+                sectorSeries(
+                  "BG",
+                  section,
+                  code
+                ),
+                sectorSeries(
+                  selectedCountry,
+                  section,
+                  code
+                ),
+                sectorData.period,
+                ind.unit,
+                "България",
+                selectedName
+              )
+            }
+
+          </div>
+
+
+        </div>
+
+      `;
+
+    }
+
+
+    $("sectorContent").innerHTML = `
+
+      <div class="benchmark-banner">
+
+        <strong>
+          ${section} · ${sec?.name || ""}
+        </strong>
+
+        <p>
+          ${ind.label} · ${year} г.
+          Сравнението е по един
+          хармонизиран секторен показател.
+        </p>
+
+        <span class="benchmark-status">
+          ${sectorData.source || "Eurostat"}
+        </span>
+
+      </div>
+
+
+      <div class="benchmark-kpis">
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            България
+          </span>
+
+          <strong>
+            ${formatValue(bg, ind.unit)}
+          </strong>
+
+          <small>
+            BG · сектор ${section}
+          </small>
+
+        </div>
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            ЕС-27
+          </span>
+
+          <strong>
+            ${formatValue(eu, ind.unit)}
+          </strong>
+
+          <small>
+            официален агрегат
+          </small>
+
+        </div>
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            Gap BG спрямо EU
+          </span>
+
+          <strong class="${color}">
+            ${gap}
+          </strong>
+
+          <small>
+            абсолютна разлика
+          </small>
+
+        </div>
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            Относителен gap
+          </span>
+
+          <strong class="${color}">
+            ${
+              relative === "na"
+              ? "Неприложимо"
+              : relative === null
+                ? "Няма данни"
+                : pct(relative)
+            }
+          </strong>
+
+          <small>
+            спрямо ЕС-27
+          </small>
+
+        </div>
+
+
+        <div class="benchmark-kpi">
+
+          <span>
+            Позиция
+          </span>
+
+          <strong>
+            ${position}
+          </strong>
+
+          <small>
+            държави с налични данни
+          </small>
+
+        </div>
+
+
+      </div>
+
+
+      ${mainVisual}
+
+
+      <div class="benchmark-interpret">
+
+        Позицията
+        <strong>
+          ${position}
+        </strong>
+        се отнася единствено
+        до показателя
+        „${ind.label}“,
+        сектор ${section}
+        и ${year} г.
+
+        Тя не представлява
+        общ рейтинг
+        на сектора
+        или на националната
+        дигитална конкурентоспособност.
+
+      </div>
+
+    `;
+
+
+    renderSectorPassport();
+
+  }
+
+
+  /* =========================================================
+     LOAD JSON
+  ========================================================= */
+
+
+  async function fetchJson(
+    path
+  ){
+
+    try{
+
+      const response =
+        await fetch(path);
+
+
+      if(!response.ok){
+
+        return null;
+
+      }
+
+
+      return await response.json();
+
+    }
+    catch(error){
+
+      console.warn(
+        "Неуспешно зареждане:",
+        path,
+        error
+      );
+
+
+      return null;
+
+    }
+
+  }
+
+
+  /* =========================================================
+     POPULATE NATIONAL
+  ========================================================= */
+
+
+  function populateNational(){
+
+    if(!nationalData){
+
+      renderNational();
+
+      return;
+
+    }
+
+
+    addIndicators(
+      $("nationalIndicator"),
+      nationalData.indicators
+    );
+
+
+    addYears(
+      $("nationalYear"),
+      nationalData.period
+    );
+
+
+    addCountries(
+      $("nationalCountry"),
+      nationalData.countries
+    );
+
+
+    $("nationalIndicator").value =
+      nationalData.indicators.some(
+        ind =>
+          ind.code === "ai_pct"
+      )
+      ? "ai_pct"
+      : nationalData.indicators[0].code;
+
+
+    $("nationalYear").value =
+      String(
+        nationalData.period.includes(2025)
+        ? 2025
+        : nationalData.period[
+            nationalData.period.length - 1
+          ]
+      );
+
+
+    $("nationalCountry").value =
+      nationalData.countries.some(
+        country =>
+          country.code === "RO"
+      )
+      ? "RO"
+      : $("nationalCountry").options[0]?.value;
+
+
+    [
+      $("nationalMode"),
+      $("nationalIndicator"),
+      $("nationalYear"),
+      $("nationalCountry")
+    ]
+      .forEach(
+        element =>
+          element.addEventListener(
+            "change",
+            renderNational
+          )
+      );
+
+
+    renderNational();
+
+  }
+
+
+  /* =========================================================
+     POPULATE SECTOR
+  ========================================================= */
+
+
+  function populateSector(){
+
+    if(!sectorData){
+
+      renderSector();
+
+      return;
+
+    }
+
+
+    $("sectorSelect").innerHTML =
+      "";
+
+
+    sectorData.sectors.forEach(
+      function(sec){
+
+        const option =
+          document.createElement(
+            "option"
+          );
+
+
+        option.value =
+          sec.code;
+
+
+        option.textContent =
+          sec.code +
+          " · " +
+          sec.name;
+
+
+        $("sectorSelect")
+          .appendChild(
+            option
+          );
+
+      }
+    );
+
+
+    addIndicators(
+      $("sectorIndicator"),
+      sectorData.indicators
+    );
+
+
+    addYears(
+      $("sectorYear"),
+      sectorData.period
+    );
+
+
+    addCountries(
+      $("sectorCountry"),
+      sectorData.countries
+    );
+
+
+    $("sectorSelect").value =
+      sectorData.sectors.some(
+        sec =>
+          sec.code === "J"
+      )
+      ? "J"
+      : sectorData.sectors[0].code;
+
+
+    $("sectorIndicator").value =
+      sectorData.indicators.some(
+        ind =>
+          ind.code === "ai_pct"
+      )
+      ? "ai_pct"
+      : sectorData.indicators[0].code;
+
+
+    $("sectorYear").value =
+      String(
+        sectorData.period.includes(2025)
+        ? 2025
+        : sectorData.period[
+            sectorData.period.length - 1
+          ]
+      );
+
+
+    $("sectorCountry").value =
+      sectorData.countries.some(
+        country =>
+          country.code === "RO"
+      )
+      ? "RO"
+      : $("sectorCountry").options[0]?.value;
+
+
+    [
+      $("sectorSelect"),
+      $("sectorIndicator"),
+      $("sectorYear"),
+      $("sectorCountry")
+    ]
+      .forEach(
+        element =>
+          element.addEventListener(
+            "change",
+            renderSector
+          )
+      );
+
+
+    renderSector();
+
+  }
+
+
+  /* =========================================================
+     START
+  ========================================================= */
+
+
+  Promise.all([
+
+    fetchJson(
+      "eu27-national-benchmark-data.json"
+    ),
+
+    fetchJson(
+      "a21-eu-benchmark-data.json"
+    )
+
+  ])
+    .then(
+      function(
+        [
+          national,
+          sector
+        ]
+      ){
+
+        nationalData =
+          national;
+
+
+        sectorData =
+          sector;
+
+
+        populateNational();
+        populateSector();
+
+      }
+    );
+
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
