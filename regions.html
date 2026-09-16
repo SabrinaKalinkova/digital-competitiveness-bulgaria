@@ -3,2044 +3,2421 @@
 
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<title>
-  Регионален анализ | Дигитална конкурентоспособност на България
-</title>
+  <title>
+    Регионален анализ | Дигитална конкурентоспособност на България
+  </title>
 
-<meta
-  name="description"
-  content="Регионален анализ по научноизследователски проект № 6/2024 „Дигитална конкурентоспособност на социално-икономическата система на България“."
->
+  <meta
+    name="description"
+    content="Регионален анализ на дигиталната готовност и дигитализацията в България по научноизследователски проект № 6/2024."
+  >
 
-<style>
 
-:root {
+  <style>
 
-  --navy:#102b4c;
-  --navy-dark:#081f38;
-  --navy-mid:#173d63;
+    :root {
 
-  --blue:#2457c5;
-  --cyan:#28a9c7;
-  --turquoise:#01c9bc;
+      --navy: #102b4c;
+      --navy-dark: #081f38;
 
-  --text:#213247;
-  --muted:#64768a;
+      --blue: #2457c5;
+      --cyan: #28a9c7;
+      --turquoise: #01c9bc;
 
-  --white:#ffffff;
-  --background:#f5f8fb;
-  --background-soft:#eef5f9;
+      --text: #213247;
+      --muted: #64768a;
 
-  --border:#dce7ef;
+      --white: #ffffff;
+      --background: #f5f8fb;
+      --soft: #eef5f9;
 
-  --shadow:
-    0 14px 40px rgba(16,43,76,.08);
+      --border: #dce7ef;
 
-  --radius:18px;
+      --positive: #167f77;
+      --attention: #a66a32;
 
-  --max-width:1260px;
+      --shadow:
+        0 14px 40px
+        rgba(16, 43, 76, 0.08);
 
-}
+      --max-width: 1260px;
 
+    }
 
-* {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
 
+    * {
 
-html {
-  scroll-behavior:smooth;
-}
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
 
+    }
 
-body {
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+    html {
 
-  color:var(--text);
+      scroll-behavior: smooth;
 
-  background:var(--white);
+    }
 
-  line-height:1.6;
 
-}
+    body {
 
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-a {
-  color:inherit;
-  text-decoration:none;
-}
+      color: var(--text);
 
+      background: var(--white);
 
-button {
-  font:inherit;
-}
+      line-height: 1.6;
 
+    }
 
-.container {
 
-  width:min(
-    92%,
-    var(--max-width)
-  );
+    a {
 
-  margin-inline:auto;
+      color: inherit;
+      text-decoration: none;
 
-}
+    }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+    button,
+    select {
 
+      font: inherit;
 
-header {
+    }
 
-  position:sticky;
-  top:0;
 
-  z-index:1000;
+    .container {
 
-  background:
-    rgba(255,255,255,.97);
+      width: min(
+        92%,
+        var(--max-width)
+      );
 
-  border-bottom:
-    1px solid var(--border);
+      margin-inline: auto;
 
-  backdrop-filter:
-    blur(12px);
+    }
 
-}
 
+    /* =========================================================
+       HEADER
+    ========================================================= */
 
-.navbar {
 
-  min-height:82px;
+    header {
 
-  display:flex;
+      position: sticky;
+      top: 0;
 
-  align-items:center;
+      z-index: 1000;
 
-  justify-content:
-    space-between;
+      background:
+        rgba(255, 255, 255, 0.97);
 
-  gap:24px;
+      border-bottom:
+        1px solid var(--border);
 
-}
+      backdrop-filter:
+        blur(12px);
 
+    }
 
-.brand {
 
-  display:flex;
+    .navbar {
 
-  align-items:center;
+      min-height: 82px;
 
-  gap:13px;
+      display: flex;
 
-  flex-shrink:0;
+      align-items: center;
+      justify-content: space-between;
 
-}
+      gap: 24px;
 
+    }
 
-.logo-mark {
 
-  display:flex;
+    .brand {
 
-  align-items:flex-end;
+      display: flex;
 
-  gap:4px;
+      align-items: center;
 
-  height:42px;
+      gap: 13px;
 
-}
+      flex-shrink: 0;
 
+    }
 
-.logo-mark span {
 
-  display:block;
+    .logo-mark {
 
-  width:9px;
+      display: flex;
 
-  border-radius:
-    3px 3px 0 0;
+      align-items: flex-end;
 
-}
+      gap: 4px;
 
+      height: 42px;
 
-.logo-mark span:nth-child(1) {
-  height:15px;
-  background:#7fd9e6;
-}
+    }
 
 
-.logo-mark span:nth-child(2) {
-  height:23px;
-  background:#46bfd3;
-}
+    .logo-mark span {
 
+      display: block;
 
-.logo-mark span:nth-child(3) {
-  height:31px;
-  background:#2499c2;
-}
+      width: 9px;
 
+      border-radius:
+        3px 3px 0 0;
 
-.logo-mark span:nth-child(4) {
-  height:41px;
-  background:#1557a0;
-}
+    }
 
 
-.brand-text strong {
+    .logo-mark span:nth-child(1) {
 
-  display:block;
+      height: 15px;
+      background: #7fd9e6;
 
-  color:var(--navy);
+    }
 
-  font-size:16px;
 
-  line-height:1.02;
+    .logo-mark span:nth-child(2) {
 
-  text-transform:uppercase;
+      height: 23px;
+      background: #46bfd3;
 
-}
+    }
 
 
-.brand-text small {
+    .logo-mark span:nth-child(3) {
 
-  display:block;
+      height: 31px;
+      background: #2499c2;
 
-  margin-top:5px;
+    }
 
-  color:var(--muted);
 
-  font-size:10px;
+    .logo-mark span:nth-child(4) {
 
-  white-space:nowrap;
+      height: 41px;
+      background: #1557a0;
 
-}
+    }
 
 
-/* =========================================================
-   DESKTOP NAVIGATION
-========================================================= */
+    .brand-text strong {
 
+      display: block;
 
-.desktop-nav {
+      color: var(--navy);
 
-  display:flex;
+      font-size: 16px;
 
-  align-items:center;
+      line-height: 1.02;
 
-  gap:18px;
+      text-transform: uppercase;
 
-  color:#34475a;
+    }
 
-  font-size:12px;
 
-  font-weight:700;
+    .brand-text small {
 
-}
+      display: block;
 
+      margin-top: 5px;
 
-.desktop-nav > a,
-.nav-dropdown > button {
+      color: var(--muted);
 
-  min-height:82px;
+      font-size: 10px;
 
-  display:flex;
+      white-space: nowrap;
 
-  align-items:center;
+    }
 
-  padding:
-    3px 0 0;
 
-  border:none;
+    .desktop-nav {
 
-  border-bottom:
-    3px solid transparent;
+      display: flex;
 
-  background:transparent;
+      align-items: center;
 
-  color:inherit;
+      gap: 20px;
 
-  font-size:inherit;
+      color: #34475a;
 
-  font-weight:inherit;
+      font-size: 13px;
 
-  white-space:nowrap;
+      font-weight: 700;
 
-  cursor:pointer;
+    }
 
-  transition:.2s ease;
 
-}
+    .desktop-nav > a {
 
+      padding:
+        31px 0 25px;
 
-.desktop-nav > a:hover,
-.desktop-nav > a.active,
-.nav-dropdown:hover > button,
-.nav-dropdown:focus-within > button,
-.nav-dropdown.active > button {
+      border-bottom:
+        3px solid transparent;
 
-  color:var(--blue);
+      transition:
+        0.2s ease;
 
-  border-bottom-color:
-    var(--turquoise);
+    }
 
-}
 
+    .desktop-nav > a:hover,
+    .desktop-nav > a.active {
 
-/* =========================================================
-   DROPDOWN
-========================================================= */
+      color: var(--blue);
 
+      border-bottom-color:
+        var(--turquoise);
 
-.nav-dropdown {
+    }
 
-  position:relative;
 
-}
+    /* =========================================================
+       DROPDOWN
+    ========================================================= */
 
 
-.nav-dropdown > button {
+    .nav-dropdown {
 
-  gap:6px;
+      position: relative;
 
-}
+    }
 
 
-.dropdown-arrow {
+    .nav-dropdown > button {
 
-  font-size:9px;
+      min-height: 82px;
 
-  transition:
-    transform .2s ease;
+      display: flex;
 
-}
+      align-items: center;
 
+      gap: 6px;
 
-.nav-dropdown:hover
-.dropdown-arrow,
-.nav-dropdown:focus-within
-.dropdown-arrow {
+      border: 0;
 
-  transform:
-    rotate(180deg);
+      border-bottom:
+        3px solid transparent;
 
-}
+      background: transparent;
 
+      color: #34475a;
 
-.dropdown-menu {
+      font-size: 13px;
 
-  position:absolute;
+      font-weight: 700;
 
-  top:72px;
-  left:50%;
+      cursor: pointer;
 
-  z-index:1100;
+    }
 
-  min-width:210px;
 
-  padding:8px;
+    .nav-dropdown.active > button,
+    .nav-dropdown > button:hover,
+    .nav-dropdown:focus-within > button {
 
-  border:
-    1px solid var(--border);
+      color: var(--blue);
 
-  border-radius:12px;
+      border-bottom-color:
+        var(--turquoise);
 
-  background:white;
+    }
 
-  box-shadow:
-    0 16px 35px
-    rgba(16,43,76,.12);
 
-  opacity:0;
+    .dropdown-arrow {
 
-  visibility:hidden;
+      font-size: 9px;
 
-  transform:
-    translate(-50%,8px);
+      transition:
+        transform 0.2s ease;
 
-  transition:.2s ease;
+    }
 
-}
 
+    .nav-dropdown:hover
+    .dropdown-arrow,
+    .nav-dropdown:focus-within
+    .dropdown-arrow {
 
-.nav-dropdown:hover
-.dropdown-menu,
-.nav-dropdown:focus-within
-.dropdown-menu {
+      transform:
+        rotate(180deg);
 
-  opacity:1;
+    }
 
-  visibility:visible;
 
-  transform:
-    translate(-50%,0);
+    .dropdown-menu {
 
-}
+      position: absolute;
 
+      top: calc(100% - 1px);
+      left: 50%;
 
-.dropdown-menu a {
+      width: 245px;
 
-  display:block;
+      padding: 9px;
 
-  padding:
-    11px 12px;
+      border:
+        1px solid var(--border);
 
-  border-radius:8px;
+      border-radius: 14px;
 
-  color:#40556a;
+      background: white;
 
-  font-size:12px;
+      box-shadow:
+        0 18px 50px
+        rgba(16, 43, 76, 0.13);
 
-  transition:.2s ease;
+      opacity: 0;
 
-}
+      visibility: hidden;
 
+      pointer-events: none;
 
-.dropdown-menu a:hover,
-.dropdown-menu a.active {
+      transform:
+        translateX(-50%)
+        translateY(8px);
 
-  background:#f2f7fa;
+      transition:
+        0.18s ease;
 
-  color:var(--blue);
+    }
 
-}
 
+    .nav-dropdown:hover
+    .dropdown-menu,
+    .nav-dropdown:focus-within
+    .dropdown-menu {
 
-.language {
+      opacity: 1;
 
-  color:var(--blue);
+      visibility: visible;
 
-  font-size:12px;
+      pointer-events: auto;
 
-  font-weight:700;
+      transform:
+        translateX(-50%)
+        translateY(0);
 
-  white-space:nowrap;
+    }
 
-}
 
+    .dropdown-menu a {
 
-/* =========================================================
-   MOBILE
-========================================================= */
+      display: block;
 
+      padding:
+        11px 13px;
 
-.mobile-toggle {
+      border-radius: 9px;
 
-  display:none;
+      color: #435568;
 
-  width:42px;
-  height:42px;
+      font-size: 12px;
 
-  border:
-    1px solid var(--border);
+      font-weight: 700;
 
-  border-radius:8px;
+    }
 
-  background:white;
 
-  color:var(--navy);
+    .dropdown-menu a:hover,
+    .dropdown-menu a.active {
 
-  cursor:pointer;
+      color: var(--blue);
 
-  font-size:20px;
+      background:
+        #f2f7fb;
 
-}
+    }
 
 
-.mobile-menu {
+    .language {
 
-  display:none;
+      color: var(--blue);
 
-  padding:
-    12px 4%;
+      font-size: 12px;
 
-  border-top:
-    1px solid var(--border);
+      font-weight: 700;
 
-  background:white;
+      white-space: nowrap;
 
-}
+    }
 
 
-.mobile-menu a {
+    /* =========================================================
+       MOBILE
+    ========================================================= */
 
-  display:block;
 
-  padding:
-    12px 0;
+    .mobile-toggle {
 
-  border-bottom:
-    1px solid #edf2f5;
+      display: none;
 
-  color:var(--navy);
+      width: 42px;
+      height: 42px;
 
-  font-weight:700;
+      border:
+        1px solid var(--border);
 
-}
+      border-radius: 8px;
 
+      background: white;
 
-.mobile-group-label {
+      color: var(--navy);
 
-  padding:
-    17px 0 6px;
+      cursor: pointer;
 
-  color:#96a5b1;
+      font-size: 20px;
 
-  font-size:9px;
+    }
 
-  font-weight:800;
 
-  text-transform:uppercase;
+    .mobile-menu {
 
-  letter-spacing:1px;
+      display: none;
 
-}
+      padding:
+        12px 4% 18px;
 
+      border-top:
+        1px solid var(--border);
 
-.mobile-sub {
+      background: white;
 
-  padding-left:
-    14px !important;
+    }
 
-  color:
-    #536b7c !important;
 
-  font-weight:
-    600 !important;
+    .mobile-menu a {
 
-}
+      display: block;
 
+      padding:
+        11px 0;
 
-.mobile-sub.active {
+      border-bottom:
+        1px solid #edf2f5;
 
-  color:
-    var(--blue) !important;
+      color: var(--navy);
 
-  font-weight:
-    800 !important;
+      font-size: 14px;
 
-}
+      font-weight: 700;
 
+    }
 
-/* =========================================================
-   HERO
-========================================================= */
 
+    .mobile-menu a.active {
 
-.page-hero {
+      color: var(--blue);
 
-  position:relative;
+    }
 
-  overflow:hidden;
 
-  color:white;
+    .mobile-group-label {
 
-  background:
+      padding:
+        15px 0 5px;
 
-    radial-gradient(
-      circle at 82% 37%,
-      rgba(1,201,188,.18),
-      transparent 27%
-    ),
+      color: var(--cyan);
 
-    linear-gradient(
-      115deg,
-      #081f38 0%,
-      #102f51 61%,
-      #145b7d 100%
-    );
+      font-size: 10px;
 
-}
+      font-weight: 800;
 
+      letter-spacing:
+        1.2px;
 
-.page-hero::before {
+      text-transform: uppercase;
 
-  content:"";
+    }
 
-  position:absolute;
 
-  inset:0;
+    .mobile-menu .mobile-sub {
 
-  background-image:
+      padding-left: 17px;
 
-    linear-gradient(
-      rgba(82,215,226,.05) 1px,
-      transparent 1px
-    ),
+      color: #51677a;
 
-    linear-gradient(
-      90deg,
-      rgba(82,215,226,.05) 1px,
-      transparent 1px
-    );
+      font-size: 13px;
 
-  background-size:
-    62px 62px;
+    }
 
-}
 
+    /* =========================================================
+       HERO
+    ========================================================= */
 
-.page-hero-inner {
 
-  position:relative;
+    .page-hero {
 
-  z-index:1;
+      position: relative;
 
-  min-height:455px;
+      overflow: hidden;
 
-  display:grid;
+      color: white;
 
-  grid-template-columns:
-    1.08fr .92fr;
+      background:
 
-  gap:70px;
+        radial-gradient(
+          circle at 83% 30%,
+          rgba(1, 201, 188, 0.18),
+          transparent 26%
+        ),
 
-  align-items:center;
+        linear-gradient(
+          116deg,
+          #081f38 0%,
+          #102f51 60%,
+          #145b7d 100%
+        );
 
-  padding:
-    72px 0;
+    }
 
-}
 
+    .page-hero::before {
 
-.eyebrow {
+      content: "";
 
-  margin-bottom:17px;
+      position: absolute;
 
-  color:#8ce7ed;
+      inset: 0;
 
-  font-size:11px;
+      background-image:
 
-  font-weight:800;
+        linear-gradient(
+          rgba(82, 215, 226, 0.045) 1px,
+          transparent 1px
+        ),
 
-  text-transform:uppercase;
+        linear-gradient(
+          90deg,
+          rgba(82, 215, 226, 0.045) 1px,
+          transparent 1px
+        );
 
-  letter-spacing:1.9px;
+      background-size:
+        62px 62px;
 
-}
+    }
 
 
-h1 {
+    .page-hero-inner {
 
-  margin-bottom:22px;
+      position: relative;
 
-  font-size:
-    clamp(
-      43px,
-      5vw,
-      64px
-    );
+      z-index: 1;
 
-  line-height:1;
+      min-height: 470px;
 
-  letter-spacing:-2px;
+      display: grid;
 
-}
+      grid-template-columns:
+        1.08fr 0.92fr;
 
+      gap: 70px;
 
-.hero-description {
+      align-items: center;
 
-  max-width:750px;
+      padding:
+        76px 0;
 
-  color:#d3e5ee;
+    }
 
-  font-size:17px;
 
-  line-height:1.7;
+    .hero-eyebrow {
 
-}
+      margin-bottom: 18px;
 
+      color: #86e3e8;
 
-/* =========================================================
-   HERO PROFILE
-========================================================= */
+      font-size: 11px;
 
+      font-weight: 800;
 
-.hero-profile {
+      letter-spacing:
+        1.9px;
 
-  padding:29px;
+      text-transform: uppercase;
 
-  border:
-    1px solid
-    rgba(255,255,255,.15);
+    }
 
-  border-radius:20px;
 
-  background:
-    rgba(255,255,255,.045);
+    .page-hero h1 {
 
-}
+      margin-bottom: 22px;
 
+      font-size:
+        clamp(
+          44px,
+          5vw,
+          65px
+        );
 
-.hero-profile-label {
+      line-height: 1.03;
 
-  margin-bottom:18px;
+      letter-spacing:
+        -2px;
 
-  color:#8ce7ed;
+    }
 
-  font-size:9px;
 
-  font-weight:800;
+    .hero-description {
 
-  text-transform:uppercase;
+      max-width: 760px;
 
-  letter-spacing:1.4px;
+      color: #d4e6ee;
 
-}
+      font-size: 17px;
 
+      line-height: 1.72;
 
-.hero-profile-grid {
+    }
 
-  display:grid;
 
-  grid-template-columns:
-    repeat(2,1fr);
+    .hero-card {
 
-  gap:10px;
+      padding: 29px;
 
-}
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
 
+      border-radius: 20px;
 
-.hero-stat {
+      background:
+        rgba(255, 255, 255, 0.045);
 
-  min-height:108px;
+    }
 
-  padding:17px;
 
-  border:
-    1px solid
-    rgba(255,255,255,.09);
+    .hero-card-label {
 
-  border-radius:11px;
+      margin-bottom: 19px;
 
-  background:
-    rgba(255,255,255,.035);
+      color: #82e1e6;
 
-}
+      font-size: 9px;
 
+      font-weight: 800;
 
-.hero-stat strong {
+      letter-spacing:
+        1.5px;
 
-  display:block;
+      text-transform: uppercase;
 
-  margin-bottom:7px;
+    }
 
-  color:white;
 
-  font-size:27px;
+    .hero-stats {
 
-  line-height:1;
+      display: grid;
 
-}
+      grid-template-columns:
+        repeat(2, 1fr);
 
+      gap: 9px;
 
-.hero-stat span {
+    }
 
-  display:block;
 
-  color:#bbd5dd;
+    .hero-stat {
 
-  font-size:9px;
+      padding: 17px;
 
-  line-height:1.45;
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
 
-}
+      border-radius: 10px;
 
+      background:
+        rgba(255, 255, 255, 0.025);
 
-/* =========================================================
-   GENERAL
-========================================================= */
+    }
 
 
-.standard-section {
+    .hero-stat strong {
 
-  padding:
-    84px 0;
+      display: block;
 
-}
+      margin-bottom: 5px;
 
+      color: white;
 
-.section-alt {
+      font-size: 25px;
 
-  background:
-    var(--background);
+      line-height: 1;
 
-}
+    }
 
 
-.section-label {
+    .hero-stat span {
 
-  margin-bottom:10px;
+      color: #bed7df;
 
-  color:var(--cyan);
+      font-size: 9px;
 
-  font-size:10px;
+      line-height: 1.45;
 
-  font-weight:800;
+    }
 
-  text-transform:uppercase;
 
-  letter-spacing:1.8px;
+    /* =========================================================
+       GENERAL
+    ========================================================= */
 
-}
 
+    .standard-section {
 
-.section-title {
+      padding:
+        84px 0;
 
-  margin-bottom:16px;
+    }
 
-  color:var(--navy);
 
-  font-size:
-    clamp(
-      30px,
-      3.3vw,
-      43px
-    );
+    .section-alt {
 
-  line-height:1.13;
+      background:
+        var(--background);
 
-  letter-spacing:-1px;
+    }
 
-}
 
+    .section-label {
 
-.section-description {
+      margin-bottom: 10px;
 
-  max-width:900px;
+      color: var(--cyan);
 
-  color:var(--muted);
+      font-size: 10px;
 
-  font-size:15px;
+      font-weight: 800;
 
-  line-height:1.75;
+      letter-spacing:
+        1.8px;
 
-}
+      text-transform: uppercase;
 
+    }
 
-.section-link {
 
-  display:inline-flex;
+    .section-title {
 
-  align-items:center;
+      max-width: 920px;
 
-  gap:7px;
+      color: var(--navy);
 
-  margin-top:25px;
+      font-size:
+        clamp(
+          29px,
+          3.2vw,
+          43px
+        );
 
-  color:var(--blue);
+      line-height: 1.13;
 
-  font-size:12px;
+      letter-spacing:
+        -1px;
 
-  font-weight:800;
+    }
 
-}
 
+    .section-description {
 
-/* =========================================================
-   REGIONAL LOGIC
-========================================================= */
+      max-width: 940px;
 
+      margin-top: 17px;
 
-.logic-grid {
+      color: var(--muted);
 
-  display:grid;
+      font-size: 15px;
 
-  grid-template-columns:
-    repeat(2,1fr);
+      line-height: 1.75;
 
-  gap:18px;
+    }
 
-  margin-top:39px;
 
-}
+    /* =========================================================
+       PRINCIPLE
+    ========================================================= */
 
 
-.logic-card {
+    .principle-box {
 
-  padding:30px;
+      display: grid;
 
-  border:
-    1px solid var(--border);
+      grid-template-columns:
+        0.82fr 1.18fr;
 
-  border-radius:17px;
+      overflow: hidden;
 
-  background:white;
+      margin-top: 40px;
 
-}
+      border:
+        1px solid var(--border);
 
+      border-radius: 19px;
 
-.logic-code {
+      background: white;
 
-  margin-bottom:21px;
+    }
 
-  color:var(--cyan);
 
-  font-size:9px;
+    .principle-left {
 
-  font-weight:800;
+      padding: 36px;
 
-  text-transform:uppercase;
+      color: white;
 
-  letter-spacing:1px;
+      background:
 
-}
+        linear-gradient(
+          145deg,
+          #102d4d,
+          #155c7e
+        );
 
+    }
 
-.logic-card h3 {
 
-  margin-bottom:10px;
+    .principle-left span {
 
-  color:var(--navy);
+      display: block;
 
-  font-size:21px;
+      margin-bottom: 14px;
 
-}
+      color: #82e1e6;
 
+      font-size: 9px;
 
-.logic-card p {
+      font-weight: 800;
 
-  color:var(--muted);
+      letter-spacing:
+        1.2px;
 
-  font-size:12px;
+      text-transform: uppercase;
 
-  line-height:1.68;
+    }
 
-}
 
+    .principle-left h3 {
 
-.logic-tags {
+      margin-bottom: 12px;
 
-  display:flex;
+      font-size: 25px;
 
-  flex-wrap:wrap;
+      line-height: 1.3;
 
-  gap:6px;
+    }
 
-  margin-top:20px;
 
-}
+    .principle-left p {
 
+      color: #c9dfe8;
 
-.logic-tags span {
+      font-size: 11px;
 
-  padding:
-    5px 8px;
+      line-height: 1.7;
 
-  border:
-    1px solid #dce8ec;
+    }
 
-  border-radius:20px;
 
-  color:#607788;
+    .principle-right {
 
-  font-size:8px;
+      display: grid;
 
-  font-weight:700;
+      grid-template-columns:
+        repeat(2, 1fr);
 
-}
+    }
 
 
-/* =========================================================
-   IMPORTANT NOTE
-========================================================= */
+    .principle-item {
 
+      padding: 29px;
 
-.note-box {
+      border-left:
+        1px solid var(--border);
 
-  display:grid;
+      border-bottom:
+        1px solid var(--border);
 
-  grid-template-columns:
-    52px 1fr;
+    }
 
-  gap:19px;
 
-  align-items:start;
+    .principle-item:nth-child(3),
+    .principle-item:nth-child(4) {
 
-  margin-top:25px;
+      border-bottom: 0;
 
-  padding:26px;
+    }
 
-  border:
-    1px solid #cce3e7;
 
-  border-radius:15px;
+    .principle-item strong {
 
-  background:
-    linear-gradient(
-      135deg,
-      #f5fbfc,
-      #ffffff
-    );
+      display: block;
 
-}
+      margin-bottom: 7px;
 
+      color: var(--navy);
 
-.note-icon {
+      font-size: 14px;
 
-  width:48px;
-  height:48px;
+    }
 
-  display:grid;
 
-  place-items:center;
+    .principle-item p {
 
-  border-radius:12px;
+      color: var(--muted);
 
-  background:var(--navy);
+      font-size: 9px;
 
-  color:white;
+      line-height: 1.62;
 
-  font-size:14px;
+    }
 
-  font-weight:800;
 
-}
+    /* =========================================================
+       TABS
+    ========================================================= */
 
 
-.note-box h3 {
+    .analysis-tabs {
 
-  margin-bottom:7px;
+      display: flex;
 
-  color:var(--navy);
+      gap: 8px;
 
-  font-size:17px;
+      margin-top: 39px;
 
-}
+      padding: 6px;
 
+      width: fit-content;
 
-.note-box p {
+      border:
+        1px solid var(--border);
 
-  color:#566f80;
+      border-radius: 12px;
 
-  font-size:12px;
+      background: white;
 
-  line-height:1.65;
+    }
 
-}
 
+    .tab-button {
 
-/* =========================================================
-   EDUCATION RDRI
-========================================================= */
+      min-height: 42px;
 
+      padding:
+        0 18px;
 
-.education-layout {
+      border: 0;
 
-  display:grid;
+      border-radius: 8px;
 
-  grid-template-columns:
-    .75fr 1.25fr;
+      background: transparent;
 
-  gap:55px;
+      color: #627786;
 
-  align-items:start;
+      font-size: 11px;
 
-  margin-top:40px;
+      font-weight: 800;
 
-}
+      cursor: pointer;
 
+    }
 
-.index-profile {
 
-  padding:30px;
+    .tab-button.active {
 
-  border-radius:18px;
+      background:
+        var(--navy);
 
-  color:white;
+      color: white;
 
-  background:
-    linear-gradient(
-      145deg,
-      #143453,
-      #1d647f
-    );
+    }
 
-}
 
+    .tab-panel {
 
-.index-profile-label {
+      display: none;
 
-  margin-bottom:13px;
+    }
 
-  color:#86e5e9;
 
-  font-size:9px;
+    .tab-panel.active {
 
-  font-weight:800;
+      display: block;
 
-  text-transform:uppercase;
+    }
 
-  letter-spacing:1px;
 
-}
+    /* =========================================================
+       EDUCATION KPI
+    ========================================================= */
 
 
-.index-profile h3 {
+    .summary-grid {
 
-  margin-bottom:12px;
+      display: grid;
 
-  font-size:29px;
+      grid-template-columns:
+        repeat(4, 1fr);
 
-}
+      gap: 13px;
 
+      margin-top: 30px;
 
-.index-profile p {
+    }
 
-  color:#d0e3ea;
 
-  font-size:12px;
+    .summary-card {
 
-  line-height:1.65;
+      min-height: 165px;
 
-}
+      padding: 22px;
 
+      border:
+        1px solid var(--border);
 
-.formula {
+      border-radius: 14px;
 
-  margin-top:24px;
+      background: white;
 
-  padding:
-    15px 17px;
+    }
 
-  border:
-    1px solid
-    rgba(255,255,255,.1);
 
-  border-radius:10px;
+    .summary-card span {
 
-  background:
-    rgba(255,255,255,.06);
+      display: block;
 
-  color:#e1eff2;
+      min-height: 32px;
 
-  font-size:12px;
+      color: #7e919f;
 
-  font-weight:700;
+      font-size: 8px;
 
-}
+      font-weight: 800;
 
+      line-height: 1.45;
 
-.component-grid {
+      text-transform: uppercase;
 
-  display:grid;
+      letter-spacing:
+        0.6px;
 
-  grid-template-columns:
-    repeat(2,1fr);
+    }
 
-  gap:8px;
 
-  margin-top:20px;
+    .summary-card strong {
 
-}
+      display: block;
 
+      margin-top: 13px;
 
-.component {
+      color: var(--navy);
 
-  padding:13px;
+      font-size: 28px;
 
-  border:
-    1px solid
-    rgba(255,255,255,.1);
+      line-height: 1;
 
-  border-radius:9px;
+    }
 
-  background:
-    rgba(255,255,255,.035);
 
-}
+    .summary-card p {
 
+      margin-top: 9px;
 
-.component strong {
+      color: var(--muted);
 
-  display:block;
+      font-size: 8px;
 
-  margin-bottom:4px;
+      line-height: 1.5;
 
-  color:#83e0e5;
+    }
 
-  font-size:10px;
 
-}
+    /* =========================================================
+       EDUCATION PROFILE
+    ========================================================= */
 
 
-.component span {
+    .profile-layout {
 
-  color:#c5dce3;
+      display: grid;
 
-  font-size:9px;
+      grid-template-columns:
+        0.74fr 1.26fr;
 
-  line-height:1.4;
+      gap: 18px;
 
-}
+      margin-top: 25px;
 
+    }
 
-.region-ranking {
 
-  display:grid;
+    .profile-control {
 
-  gap:11px;
+      padding: 27px;
 
-}
+      border:
+        1px solid var(--border);
 
+      border-radius: 16px;
 
-.region-row {
+      background: white;
 
-  padding:17px 19px;
+    }
 
-  border:
-    1px solid var(--border);
 
-  border-radius:12px;
+    .profile-control h3 {
 
-  background:white;
+      margin-bottom: 10px;
 
-}
+      color: var(--navy);
 
+      font-size: 20px;
 
-.region-row-top {
+    }
 
-  display:flex;
 
-  justify-content:
-    space-between;
+    .profile-control p {
 
-  align-items:center;
+      margin-bottom: 22px;
 
-  gap:15px;
+      color: var(--muted);
 
-  margin-bottom:9px;
+      font-size: 10px;
 
-}
+      line-height: 1.65;
 
+    }
 
-.region-name {
 
-  color:var(--navy);
+    .profile-control label {
 
-  font-size:12px;
+      display: block;
 
-  font-weight:700;
+      margin-bottom: 6px;
 
-}
+      color: #8799a5;
 
+      font-size: 8px;
 
-.region-value {
+      font-weight: 800;
 
-  color:var(--blue);
+      text-transform: uppercase;
 
-  font-size:13px;
+      letter-spacing:
+        0.8px;
 
-  font-weight:800;
+    }
 
-}
 
+    .profile-control select {
 
-.region-bar {
+      width: 100%;
 
-  height:7px;
+      min-height: 45px;
 
-  overflow:hidden;
+      padding:
+        0 12px;
 
-  border-radius:20px;
+      border:
+        1px solid #ccdce5;
 
-  background:#eaf0f4;
+      border-radius: 9px;
 
-}
+      background: white;
 
+      color: var(--navy);
 
-.region-bar-fill {
+      font-size: 11px;
 
-  height:100%;
+      outline: none;
 
-  width:var(--bar);
+    }
 
-  border-radius:20px;
 
-  background:
-    linear-gradient(
-      90deg,
-      var(--blue),
-      var(--turquoise)
-    );
+    .selected-rdri {
 
-}
+      margin-top: 23px;
 
+      padding: 20px;
 
-/* =========================================================
-   EDUCATION INTERPRETATION
-========================================================= */
+      border-radius: 13px;
 
+      background:
 
-.insight-grid {
+        linear-gradient(
+          145deg,
+          #102d4d,
+          #155c7e
+        );
 
-  display:grid;
+      color: white;
 
-  grid-template-columns:
-    repeat(3,1fr);
+    }
 
-  gap:14px;
 
-  margin-top:30px;
+    .selected-rdri span {
 
-}
+      display: block;
 
+      margin-bottom: 6px;
 
-.insight-card {
+      color: #9de4e8;
 
-  padding:23px;
+      font-size: 8px;
 
-  border:
-    1px solid var(--border);
+      font-weight: 800;
 
-  border-radius:14px;
+      text-transform: uppercase;
 
-  background:white;
+    }
 
-}
 
+    .selected-rdri strong {
 
-.insight-number {
+      display: block;
 
-  margin-bottom:14px;
+      font-size: 38px;
 
-  color:var(--blue);
+      line-height: 1;
 
-  font-size:24px;
+    }
 
-  font-weight:800;
 
-}
+    .selected-rdri p {
 
+      margin:
+        9px 0 0;
 
-.insight-card h3 {
+      color: #c9dfe8;
 
-  margin-bottom:7px;
+      font-size: 9px;
 
-  color:var(--navy);
+    }
 
-  font-size:14px;
 
-}
+    .component-panel {
 
+      padding: 27px;
 
-.insight-card p {
+      border:
+        1px solid var(--border);
 
-  color:var(--muted);
+      border-radius: 16px;
 
-  font-size:10px;
+      background: white;
 
-  line-height:1.55;
+    }
 
-}
 
+    .component-panel h3 {
 
-/* =========================================================
-   HEALTHCARE
-========================================================= */
+      margin-bottom: 5px;
 
+      color: var(--navy);
 
-.health-layout {
+      font-size: 19px;
 
-  display:grid;
+    }
 
-  grid-template-columns:
-    .9fr 1.1fr;
 
-  gap:45px;
+    .component-panel > p {
 
-  align-items:start;
+      margin-bottom: 24px;
 
-  margin-top:38px;
+      color: var(--muted);
 
-}
+      font-size: 9px;
 
+    }
 
-.health-summary {
 
-  padding:30px;
+    .component-list {
 
-  border:
-    1px solid var(--border);
+      display: grid;
 
-  border-radius:18px;
+      gap: 16px;
 
-  background:white;
+    }
 
-}
 
+    .component-row {
 
-.health-summary-number {
+      display: grid;
 
-  margin-bottom:8px;
+      grid-template-columns:
+        170px 1fr 62px;
 
-  color:var(--navy);
+      gap: 14px;
 
-  font-size:48px;
+      align-items: center;
 
-  font-weight:800;
+    }
 
-  line-height:1;
 
-}
+    .component-label strong {
 
+      display: block;
 
-.health-summary h3 {
+      color: var(--navy);
 
-  margin-bottom:11px;
+      font-size: 10px;
 
-  color:var(--navy);
+    }
 
-  font-size:20px;
 
-}
+    .component-label span {
 
+      display: block;
 
-.health-summary p {
+      margin-top: 2px;
 
-  color:var(--muted);
+      color: #91a2ad;
 
-  font-size:12px;
+      font-size: 7px;
 
-  line-height:1.65;
+    }
 
-}
 
+    .bar-track {
 
-.health-points {
+      height: 9px;
 
-  display:grid;
+      overflow: hidden;
 
-  gap:9px;
+      border-radius: 8px;
 
-  margin-top:22px;
+      background:
+        #e9f1f4;
 
-}
+    }
 
 
-.health-point {
+    .bar-fill {
 
-  padding:13px 15px;
+      height: 100%;
 
-  border:
-    1px solid #e0e9ed;
+      border-radius: 8px;
 
-  border-radius:9px;
+      background:
 
-  background:#fafcfd;
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--turquoise)
+        );
 
-  color:#526b7d;
+    }
 
-  font-size:10px;
 
-  line-height:1.5;
+    .bar-fill.obstacles {
 
-}
+      background:
 
+        linear-gradient(
+          90deg,
+          #8aa7b8,
+          #c3d4dc
+        );
 
-.distribution {
+    }
 
-  display:grid;
 
-  gap:9px;
+    .component-value {
 
-}
+      color: var(--navy);
 
+      font-size: 10px;
 
-.distribution-row {
+      font-weight: 800;
 
-  display:grid;
+      text-align: right;
 
-  grid-template-columns:
-    1fr 70px;
+    }
 
-  gap:15px;
 
-  align-items:center;
+    /* =========================================================
+       REGIONAL TABLE
+    ========================================================= */
 
-  padding:14px 16px;
 
-  border:
-    1px solid var(--border);
+    .table-wrap {
 
-  border-radius:11px;
+      overflow-x: auto;
 
-  background:white;
+      margin-top: 28px;
 
-}
+      border:
+        1px solid var(--border);
 
+      border-radius: 15px;
 
-.distribution-main {
+      background: white;
 
-  display:grid;
+    }
 
-  gap:7px;
 
-}
+    table {
 
+      width: 100%;
 
-.distribution-name {
+      min-width: 820px;
 
-  color:var(--navy);
+      border-collapse: collapse;
 
-  font-size:11px;
+    }
 
-  font-weight:700;
 
-}
+    th,
+    td {
 
+      padding:
+        14px 15px;
 
-.distribution-track {
+      border-bottom:
+        1px solid var(--border);
 
-  height:6px;
+      text-align: right;
 
-  overflow:hidden;
+      font-size: 10px;
 
-  border-radius:20px;
+    }
 
-  background:#eaf0f4;
 
-}
+    th {
 
+      background:
+        #f3f7fa;
 
-.distribution-fill {
+      color: #69808f;
 
-  height:100%;
+      font-size: 8px;
 
-  width:var(--bar);
+      text-transform: uppercase;
 
-  border-radius:20px;
+      letter-spacing:
+        0.6px;
 
-  background:
-    linear-gradient(
-      90deg,
-      #28a9c7,
-      #01c9bc
-    );
+    }
 
-}
 
+    th:first-child,
+    td:first-child {
 
-.distribution-value {
+      text-align: left;
 
-  color:var(--blue);
+    }
 
-  font-size:12px;
 
-  font-weight:800;
+    td:first-child {
 
-  text-align:right;
+      color: var(--navy);
 
-}
+      font-weight: 700;
 
+    }
 
-/* =========================================================
-   COMPARISON
-========================================================= */
 
+    tbody tr:last-child td {
 
-.comparison-grid {
+      border-bottom: 0;
 
-  display:grid;
+    }
 
-  grid-template-columns:
-    repeat(2,1fr);
 
-  gap:18px;
+    .rdri-cell {
 
-  margin-top:38px;
+      color: var(--blue);
 
-}
+      font-weight: 800;
 
+    }
 
-.comparison-card {
 
-  overflow:hidden;
+    /* =========================================================
+       STATISTICS
+    ========================================================= */
 
-  border:
-    1px solid var(--border);
 
-  border-radius:17px;
+    .statistics-grid {
 
-  background:white;
+      display: grid;
 
-}
+      grid-template-columns:
+        repeat(3, 1fr);
 
+      gap: 14px;
 
-.comparison-head {
+      margin-top: 29px;
 
-  padding:
-    22px 26px;
+    }
 
-  color:white;
 
-  background:
-    linear-gradient(
-      120deg,
-      #153656,
-      #1b5d7b
-    );
+    .statistics-card {
 
-}
+      min-height: 230px;
 
+      padding: 25px;
 
-.comparison-head span {
+      border:
+        1px solid var(--border);
 
-  display:block;
+      border-radius: 15px;
 
-  margin-bottom:6px;
+      background: white;
 
-  color:#83e1e6;
+    }
 
-  font-size:8px;
 
-  font-weight:800;
+    .statistics-code {
 
-  text-transform:uppercase;
+      margin-bottom: 18px;
 
-  letter-spacing:1px;
+      color: var(--cyan);
 
-}
+      font-size: 9px;
 
+      font-weight: 800;
 
-.comparison-head h3 {
+    }
 
-  font-size:20px;
 
-}
+    .statistics-card h3 {
 
+      margin-bottom: 9px;
 
-.comparison-body {
+      color: var(--navy);
 
-  padding:26px;
+      font-size: 17px;
 
-}
+    }
 
 
-.comparison-item {
+    .statistics-card p {
 
-  padding:
-    13px 0;
+      color: var(--muted);
 
-  border-bottom:
-    1px solid #e8eef2;
+      font-size: 10px;
 
-}
+      line-height: 1.68;
 
+    }
 
-.comparison-item:last-child {
 
-  border-bottom:none;
+    .statistics-value {
 
-}
+      margin:
+        15px 0 8px;
 
+      color: var(--navy);
 
-.comparison-item strong {
+      font-size: 28px;
 
-  display:block;
+      font-weight: 800;
 
-  margin-bottom:4px;
+    }
 
-  color:var(--navy);
 
-  font-size:11px;
+    /* =========================================================
+       HEALTHCARE
+    ========================================================= */
 
-}
 
+    .health-overview {
 
-.comparison-item p {
+      display: grid;
 
-  color:var(--muted);
+      grid-template-columns:
+        repeat(4, 1fr);
 
-  font-size:10px;
+      gap: 13px;
 
-  line-height:1.55;
+      margin-top: 30px;
 
-}
+    }
 
 
-/* =========================================================
-   SYNTHESIS
-========================================================= */
+    .health-stat {
 
+      min-height: 180px;
 
-.synthesis-box {
+      padding: 23px;
 
-  display:grid;
+      border:
+        1px solid var(--border);
 
-  grid-template-columns:
-    .72fr 1.28fr;
+      border-radius: 14px;
 
-  overflow:hidden;
+      background: white;
 
-  border:
-    1px solid var(--border);
+    }
 
-  border-radius:20px;
 
-  background:white;
+    .health-stat span {
 
-}
+      display: block;
 
+      min-height: 34px;
 
-.synthesis-title {
+      color: #7e919f;
 
-  padding:38px;
+      font-size: 8px;
 
-  color:white;
+      font-weight: 800;
 
-  background:
-    linear-gradient(
-      145deg,
-      #102d4d,
-      #155c7e
-    );
+      line-height: 1.45;
 
-}
+      text-transform: uppercase;
 
+    }
 
-.synthesis-title span {
 
-  display:block;
+    .health-stat strong {
 
-  margin-bottom:14px;
+      display: block;
 
-  color:#80e2e7;
+      margin-top: 14px;
 
-  font-size:9px;
+      color: var(--navy);
 
-  font-weight:800;
+      font-size: 29px;
 
-  text-transform:uppercase;
+      line-height: 1;
 
-  letter-spacing:1.3px;
+    }
 
-}
 
+    .health-stat p {
 
-.synthesis-title h3 {
+      margin-top: 9px;
 
-  font-size:25px;
+      color: var(--muted);
 
-  line-height:1.3;
+      font-size: 8px;
 
-}
+      line-height: 1.55;
 
+    }
 
-.synthesis-copy {
 
-  padding:38px;
+    .health-findings {
 
-}
+      display: grid;
 
+      grid-template-columns:
+        0.82fr 1.18fr;
 
-.synthesis-copy p {
+      gap: 18px;
 
-  color:#566e7f;
+      margin-top: 26px;
 
-  font-size:14px;
+    }
 
-  line-height:1.75;
 
-}
+    .health-main {
 
+      padding: 30px;
 
-/* =========================================================
-   NEXT ANALYSES
-========================================================= */
+      border-radius: 17px;
 
+      color: white;
 
-.next-grid {
+      background:
 
-  display:grid;
+        linear-gradient(
+          145deg,
+          #102d4d,
+          #155c7e
+        );
 
-  grid-template-columns:
-    repeat(3,1fr);
+    }
 
-  gap:14px;
 
-  margin-top:38px;
+    .health-main span {
 
-}
+      display: block;
 
+      margin-bottom: 13px;
 
-.next-card {
+      color: #82e1e6;
 
-  min-height:185px;
+      font-size: 9px;
 
-  display:flex;
+      font-weight: 800;
 
-  flex-direction:column;
+      letter-spacing:
+        1px;
 
-  padding:27px;
+      text-transform: uppercase;
 
-  border:
-    1px solid var(--border);
+    }
 
-  border-radius:15px;
 
-  background:white;
+    .health-main h3 {
 
-  transition:.2s ease;
+      margin-bottom: 13px;
 
-}
+      font-size: 23px;
 
+      line-height: 1.35;
 
-.next-card:hover {
+    }
 
-  transform:
-    translateY(-3px);
 
-  box-shadow:
-    var(--shadow);
+    .health-main p {
 
-}
+      color: #c9dfe8;
 
+      font-size: 10px;
 
-.next-card > span {
+      line-height: 1.7;
 
-  margin-bottom:17px;
+    }
 
-  color:var(--cyan);
 
-  font-size:9px;
+    .pair-list {
 
-  font-weight:800;
+      display: grid;
 
-  text-transform:uppercase;
+      gap: 9px;
 
-  letter-spacing:1px;
+      padding: 25px;
 
-}
+      border:
+        1px solid var(--border);
 
+      border-radius: 17px;
 
-.next-card h3 {
+      background: white;
 
-  margin-bottom:8px;
+    }
 
-  color:var(--navy);
 
-  font-size:18px;
+    .pair-list-title {
 
-}
+      margin-bottom: 7px;
 
+      color: var(--navy);
 
-.next-card p {
+      font-size: 16px;
 
-  color:var(--muted);
+      font-weight: 800;
 
-  font-size:10px;
+    }
 
-  line-height:1.55;
 
-}
+    .pair-list-note {
 
+      margin-bottom: 10px;
 
-.next-link {
+      color: var(--muted);
 
-  margin-top:auto;
+      font-size: 9px;
 
-  padding-top:18px;
+      line-height: 1.55;
 
-  color:var(--blue);
+    }
 
-  font-size:10px;
 
-  font-weight:800;
+    .pair-item {
 
-}
+      display: grid;
 
+      grid-template-columns:
+        1fr 78px;
 
-/* =========================================================
-   FOOTER
-========================================================= */
+      gap: 15px;
 
+      align-items: center;
 
-footer {
+      padding: 13px 14px;
 
-  padding:
-    33px 0 20px;
+      border:
+        1px solid #e4edf1;
 
-  border-top:
-    1px solid var(--border);
+      border-radius: 10px;
 
-  background:#f8fafc;
+      background:
+        #f8fbfc;
 
-}
+    }
 
 
-.footer-grid {
+    .pair-item strong {
 
-  display:grid;
+      color: #425d70;
 
-  grid-template-columns:
-    1.25fr 1fr;
+      font-size: 9px;
 
-  gap:35px;
+      line-height: 1.5;
 
-  align-items:center;
+    }
 
-}
 
+    .pair-p {
 
-.footer-project strong {
+      padding:
+        5px 7px;
 
-  display:block;
+      border-radius: 7px;
 
-  margin-bottom:7px;
+      background:
+        #e9f7f5;
 
-  color:var(--navy);
+      color:
+        var(--positive);
 
-}
+      font-size: 9px;
 
+      font-weight: 800;
 
-.footer-project p {
+      text-align: center;
 
-  color:var(--muted);
+    }
 
-  font-size:12px;
 
-}
+    /* =========================================================
+       CONTEXT BOX
+    ========================================================= */
 
 
-.footer-links {
+    .context-note {
 
-  display:flex;
+      display: grid;
 
-  justify-content:flex-end;
+      grid-template-columns:
+        55px 1fr;
 
-  flex-wrap:wrap;
+      gap: 18px;
 
-  gap:17px;
+      margin-top: 30px;
 
-  color:#53677a;
+      padding: 24px;
 
-  font-size:12px;
+      border:
+        1px solid #cde2e8;
 
-}
+      border-radius: 15px;
 
+      background:
 
-.copyright {
+        linear-gradient(
+          135deg,
+          #f5fbfc,
+          #ffffff
+        );
 
-  margin-top:25px;
+    }
 
-  padding-top:18px;
 
-  border-top:
-    1px solid var(--border);
+    .context-icon {
 
-  text-align:center;
+      width: 48px;
+      height: 48px;
 
-  color:#8795a2;
+      display: grid;
 
-  font-size:11px;
+      place-items: center;
 
-}
+      border-radius: 11px;
 
+      background: var(--navy);
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+      color: white;
 
+      font-size: 9px;
 
-@media (max-width:1200px) {
+      font-weight: 800;
 
-  .desktop-nav {
-    display:none;
-  }
+    }
 
-  .mobile-toggle {
-    display:block;
-  }
 
-  .page-hero-inner {
-    grid-template-columns:1fr;
-  }
+    .context-note strong {
 
-  .hero-profile {
-    max-width:700px;
-  }
+      display: block;
 
-}
+      margin-bottom: 6px;
 
+      color: var(--navy);
 
-@media (max-width:900px) {
+      font-size: 13px;
 
-  .logic-grid,
-  .education-layout,
-  .health-layout,
-  .comparison-grid,
-  .synthesis-box {
-    grid-template-columns:1fr;
-  }
+    }
 
-  .insight-grid,
-  .next-grid {
-    grid-template-columns:1fr;
-  }
 
-  .footer-grid {
-    grid-template-columns:1fr;
-  }
+    .context-note p {
 
-  .footer-links {
-    justify-content:flex-start;
-  }
+      color: #586f80;
 
-}
+      font-size: 10px;
 
+      line-height: 1.68;
 
-@media (max-width:650px) {
+    }
 
-  .brand-text small {
-    display:none;
-  }
 
-  .language {
-    display:none;
-  }
+    /* =========================================================
+       SYNTHESIS
+    ========================================================= */
 
-  .page-hero-inner {
-    padding:
-      57px 0;
-  }
 
-  h1 {
-    font-size:42px;
-  }
+    .synthesis-grid {
 
-  .hero-profile-grid,
-  .component-grid {
-    grid-template-columns:1fr;
-  }
+      display: grid;
 
-  .note-box {
-    grid-template-columns:1fr;
-  }
+      grid-template-columns:
+        repeat(3, 1fr);
 
-  .distribution-row {
-    grid-template-columns:1fr 50px;
-  }
+      gap: 14px;
 
-}
+      margin-top: 39px;
 
-</style>
+    }
+
+
+    .synthesis-card {
+
+      min-height: 235px;
+
+      padding: 25px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background: white;
+
+    }
+
+
+    .synthesis-code {
+
+      margin-bottom: 19px;
+
+      color: var(--cyan);
+
+      font-size: 9px;
+
+      font-weight: 800;
+
+    }
+
+
+    .synthesis-card h3 {
+
+      margin-bottom: 9px;
+
+      color: var(--navy);
+
+      font-size: 17px;
+
+    }
+
+
+    .synthesis-card p {
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      line-height: 1.68;
+
+    }
+
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+
+    .final-cta {
+
+      padding:
+        58px 0;
+
+      color: white;
+
+      background:
+
+        linear-gradient(
+          110deg,
+          #0b2845,
+          #145879
+        );
+
+    }
+
+
+    .final-cta-inner {
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 35px;
+
+    }
+
+
+    .final-cta h2 {
+
+      margin-bottom: 8px;
+
+      font-size:
+        clamp(
+          27px,
+          3vw,
+          38px
+        );
+
+    }
+
+
+    .final-cta p {
+
+      max-width: 740px;
+
+      color: #c7dce7;
+
+      font-size: 13px;
+
+    }
+
+
+    .btn {
+
+      min-height: 48px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        0 22px;
+
+      border-radius: 9px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #79d5dd,
+          #55bedb
+        );
+
+      color: #082b46;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      flex-shrink: 0;
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+
+    footer {
+
+      padding:
+        42px 0 24px;
+
+      background:
+        #0b253f;
+
+      color: white;
+
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.1fr 1fr;
+
+      gap: 55px;
+
+    }
+
+
+    .footer-project strong {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 14px;
+
+    }
+
+
+    .footer-project p {
+
+      max-width: 520px;
+
+      color: #b7cdd8;
+
+      font-size: 11px;
+
+      line-height: 1.65;
+
+    }
+
+
+    .footer-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+      gap:
+        9px 18px;
+
+    }
+
+
+    .footer-links a {
+
+      color: #c3d7df;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+    }
+
+
+    .footer-links a:hover {
+
+      color: #7ce0e5;
+
+    }
+
+
+    .copyright {
+
+      margin-top: 30px;
+
+      padding-top: 18px;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      color: #829eac;
+
+      font-size: 10px;
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+
+    @media(max-width: 1200px) {
+
+      .desktop-nav,
+      .language {
+
+        display: none;
+
+      }
+
+
+      .mobile-toggle {
+
+        display: block;
+
+      }
+
+
+      .summary-grid,
+      .health-overview {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+    }
+
+
+    @media(max-width: 950px) {
+
+      .page-hero-inner,
+      .principle-box,
+      .profile-layout,
+      .health-findings {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .principle-right {
+
+        border-top:
+          1px solid var(--border);
+
+      }
+
+
+      .statistics-grid,
+      .synthesis-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .footer-links {
+
+        justify-content: flex-start;
+
+      }
+
+    }
+
+
+    @media(max-width: 700px) {
+
+      .brand-text small,
+      .language {
+
+        display: none;
+
+      }
+
+
+      .page-hero h1 {
+
+        font-size: 41px;
+
+      }
+
+
+      .hero-stats,
+      .summary-grid,
+      .health-overview,
+      .statistics-grid,
+      .synthesis-grid,
+      .principle-right {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .analysis-tabs {
+
+        width: 100%;
+
+        flex-direction: column;
+
+      }
+
+
+      .tab-button {
+
+        width: 100%;
+
+      }
+
+
+      .component-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+
+      }
+
+
+      .component-value {
+
+        text-align: left;
+
+      }
+
+
+      .principle-item {
+
+        border-left: 0;
+
+        border-bottom:
+          1px solid var(--border);
+
+      }
+
+
+      .standard-section {
+
+        padding:
+          64px 0;
+
+      }
+
+
+      .final-cta-inner {
+
+        display: block;
+
+      }
+
+
+      .final-cta .btn {
+
+        margin-top: 22px;
+
+      }
+
+    }
+
+  </style>
 
 </head>
 
@@ -2061,16 +2438,19 @@ footer {
     <a
       href="index.html"
       class="brand"
+      aria-label="Начална страница"
     >
 
       <div
         class="logo-mark"
         aria-hidden="true"
       >
+
         <span></span>
         <span></span>
         <span></span>
         <span></span>
+
       </div>
 
 
@@ -2090,7 +2470,10 @@ footer {
     </a>
 
 
-    <nav class="desktop-nav">
+    <nav
+      class="desktop-nav"
+      aria-label="Основна навигация"
+    >
 
       <a href="index.html">
         Начало
@@ -2104,16 +2487,15 @@ footer {
         Методология
       </a>
 
-      <a href="data-indices.html">
-        Данни и индекси
-      </a>
-
 
       <div class="nav-dropdown active">
 
-        <button type="button">
+        <button
+          type="button"
+          aria-haspopup="true"
+        >
 
-          Анализи
+          Данни и анализи
 
           <span class="dropdown-arrow">
             ▼
@@ -2124,6 +2506,14 @@ footer {
 
         <div class="dropdown-menu">
 
+          <a href="data-indices.html">
+            Данни и измерители
+          </a>
+
+          <a href="national.html">
+            Национален анализ
+          </a>
+
           <a
             href="regions.html"
             class="active"
@@ -2133,6 +2523,14 @@ footer {
 
           <a href="sectors.html">
             Секторен анализ
+          </a>
+
+          <a href="organizations.html">
+            Организационен анализ
+          </a>
+
+          <a href="benchmark.html">
+            European Benchmark
           </a>
 
         </div>
@@ -2148,18 +2546,24 @@ footer {
         Публикации
       </a>
 
+      <a href="team.html">
+        Екип
+      </a>
+
     </nav>
 
 
     <div class="language">
-      BG &nbsp;|&nbsp; EN
+      BG | EN
     </div>
 
 
     <button
       class="mobile-toggle"
       id="mobileToggle"
+      type="button"
       aria-label="Отвори меню"
+      aria-expanded="false"
     >
       ☰
     </button>
@@ -2184,15 +2588,25 @@ footer {
       Методология
     </a>
 
-    <a href="data-indices.html">
-      Данни и индекси
-    </a>
-
 
     <div class="mobile-group-label">
-      Анализи
+      Данни и анализи
     </div>
 
+
+    <a
+      class="mobile-sub"
+      href="data-indices.html"
+    >
+      Данни и измерители
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="national.html"
+    >
+      Национален анализ
+    </a>
 
     <a
       class="mobile-sub active"
@@ -2201,12 +2615,25 @@ footer {
       Регионален анализ
     </a>
 
-
     <a
       class="mobile-sub"
       href="sectors.html"
     >
       Секторен анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="organizations.html"
+    >
+      Организационен анализ
+    </a>
+
+    <a
+      class="mobile-sub"
+      href="benchmark.html"
+    >
+      European Benchmark
     </a>
 
 
@@ -2216,6 +2643,10 @@ footer {
 
     <a href="publications.html">
       Публикации
+    </a>
+
+    <a href="team.html">
+      Екип
     </a>
 
   </div>
@@ -2238,8 +2669,8 @@ footer {
 
     <div>
 
-      <div class="eyebrow">
-        Анализи · Териториално измерение
+      <div class="hero-eyebrow">
+        Аналитично равнище 02
       </div>
 
 
@@ -2249,30 +2680,28 @@ footer {
 
 
       <p class="hero-description">
-
-        Регионалното измерение на проекта
-        проследява как териториалният контекст
-        е свързан с дигиталната готовност
-        в отделни части
-        на социално-икономическата система.
-        Анализите са секторно специфични
-        и не формират един универсален
-        регионален рейтинг на България.
-
+        Регионалният разрез изследва
+        териториалните различия
+        в дигиталната трансформация
+        на България.
+        Анализът е контекстуален:
+        различните изследователски направления
+        използват собствени данни,
+        показатели
+        и статистически инструменти.
       </p>
 
     </div>
 
 
-    <aside class="hero-profile">
+    <aside class="hero-card">
 
-
-      <div class="hero-profile-label">
-        Обхват на регионалния анализ
+      <div class="hero-card-label">
+        Регионален обхват
       </div>
 
 
-      <div class="hero-profile-grid">
+      <div class="hero-stats">
 
 
         <div class="hero-stat">
@@ -2283,20 +2712,7 @@ footer {
 
           <span>
             района за планиране
-          </span>
-
-        </div>
-
-
-        <div class="hero-stat">
-
-          <strong>
-            2
-          </strong>
-
-          <span>
-            изследователски направления
-            с регионален разрез
+            в образователния анализ
           </span>
 
         </div>
@@ -2309,7 +2725,8 @@ footer {
           </strong>
 
           <span>
-            образователни институции
+            наблюдения
+            в образованието
           </span>
 
         </div>
@@ -2329,6 +2746,19 @@ footer {
         </div>
 
 
+        <div class="hero-stat">
+
+          <strong>
+            2
+          </strong>
+
+          <span>
+            емпирични регионални перспективи
+          </span>
+
+        </div>
+
+
       </div>
 
     </aside>
@@ -2339,7 +2769,7 @@ footer {
 
 
 <!-- =========================================================
-     HOW TO READ
+     PRINCIPLE
 ========================================================= -->
 
 
@@ -2349,934 +2779,774 @@ footer {
 
 
     <div class="section-label">
-      Структура на анализа
+      Аналитичен принцип
     </div>
 
 
     <h2 class="section-title">
-      Регионалните различия се разглеждат в секторен контекст
+      Няма един универсален
+      регионален индекс
     </h2>
 
 
     <p class="section-description">
-
-      Проектът не приема,
-      че една териториална стойност
-      може да характеризира изчерпателно
-      дигиталната конкурентоспособност
-      на даден район.
-      Регионалният анализ се извършва
-      спрямо конкретната система,
-      наличните данни
-      и съответния измервателен модел.
-
-    </p>
-
-
-    <div class="logic-grid">
-
-
-      <article class="logic-card">
-
-        <div class="logic-code">
-          EDU · ОБРАЗОВАНИЕ
-        </div>
-
-        <h3>
-          Регионална дигитална готовност
-        </h3>
-
-        <p>
-
-          В образователното направление
-          шестте района за планиране
-          се сравняват чрез
-          Regional Digital Readiness Index (RDRI),
-          който обединява
-          инфраструктура,
-          ангажираност,
-          компетентности
-          и ограничения.
-
-        </p>
-
-
-        <div class="logic-tags">
-
-          <span>6 района</span>
-          <span>RDRI</span>
-          <span>4 компонента</span>
-          <span>регионално сравнение</span>
-
-        </div>
-
-      </article>
-
-
-      <article class="logic-card">
-
-        <div class="logic-code">
-          HLT · ЗДРАВЕОПАЗВАНЕ
-        </div>
-
-        <h3>
-          Териториален профил
-          на дигитализацията
-        </h3>
-
-        <p>
-
-          При здравеопазването
-          регионалният разрез се използва
-          за изследване на разпределението
-          и различията
-          между териториалните групи.
-          Столицата е отделена
-          като самостоятелна група
-          в емпиричния масив.
-
-        </p>
-
-
-        <div class="logic-tags">
-
-          <span>286 респонденти</span>
-          <span>7 териториални групи</span>
-          <span>DRI-H</span>
-          <span>сравнителен профил</span>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-
-    <div class="note-box">
-
-      <div class="note-icon">
-        i
-      </div>
-
-      <div>
-
-        <h3>
-          Важно за интерпретацията
-        </h3>
-
-        <p>
-
-          RDRI е индекс,
-          разработен за регионалната
-          дигитална готовност
-          на образователната система.
-          Стойностите му не представляват
-          общ индекс
-          за дигиталната конкурентоспособност
-          на съответния район
-          и не трябва да се пренасят
-          механично към здравеопазването,
-          бизнеса или други системи.
-
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     EDUCATION
-========================================================= -->
-
-
-<section class="standard-section section-alt">
-
-  <div class="container">
-
-
-    <div class="section-label">
-      Образование
-    </div>
-
-
-    <h2 class="section-title">
-      Regional Digital Readiness Index
-    </h2>
-
-
-    <p class="section-description">
-
-      Резултатите показват
-      различна степен
-      на дигитална готовност
-      между шестте района за планиране.
-      Индексът обобщава
-      четири взаимосвързани измерения
-      на цифровата трансформация
-      в образователната система.
-
-    </p>
-
-
-    <div class="education-layout">
-
-
-      <div class="index-profile">
-
-        <div class="index-profile-label">
-          RDRI · Education
-        </div>
-
-
-        <h3>
-          Регионален индекс
-          за дигитална готовност
-        </h3>
-
-
-        <p>
-
-          По-високата стойност
-          показва по-благоприятна комбинация
-          от цифрова инфраструктура,
-          ангажираност
-          и компетентности,
-          при отчитане
-          на ограниченията
-          пред дигитализацията.
-
-        </p>
-
-
-        <div class="component-grid">
-
-
-          <div class="component">
-
-            <strong>
-              DII
-            </strong>
-
-            <span>
-              Digital Infrastructure Index
-            </span>
-
-          </div>
-
-
-          <div class="component">
-
-            <strong>
-              DEI
-            </strong>
-
-            <span>
-              Digital Engagement Index
-            </span>
-
-          </div>
-
-
-          <div class="component">
-
-            <strong>
-              DCI
-            </strong>
-
-            <span>
-              Digital Competence Index
-            </span>
-
-          </div>
-
-
-          <div class="component">
-
-            <strong>
-              DOI
-            </strong>
-
-            <span>
-              Digital Obstacles Index
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-        <div class="formula">
-          RDRI = (DII + DEI + DCI − DOI) / 3
-        </div>
-
-      </div>
-
-
-      <div class="region-ranking">
-
-
-        <div class="region-row">
-
-          <div class="region-row-top">
-
-            <span class="region-name">
-              Югозападен район
-            </span>
-
-            <span class="region-value">
-              0.8791
-            </span>
-
-          </div>
-
-          <div class="region-bar">
-            <div
-              class="region-bar-fill"
-              style="--bar:87.91%;"
-            ></div>
-          </div>
-
-        </div>
-
-
-        <div class="region-row">
-
-          <div class="region-row-top">
-
-            <span class="region-name">
-              Южен централен район
-            </span>
-
-            <span class="region-value">
-              0.8631
-            </span>
-
-          </div>
-
-          <div class="region-bar">
-            <div
-              class="region-bar-fill"
-              style="--bar:86.31%;"
-            ></div>
-          </div>
-
-        </div>
-
-
-        <div class="region-row">
-
-          <div class="region-row-top">
-
-            <span class="region-name">
-              Северен централен район
-            </span>
-
-            <span class="region-value">
-              0.8594
-            </span>
-
-          </div>
-
-          <div class="region-bar">
-            <div
-              class="region-bar-fill"
-              style="--bar:85.94%;"
-            ></div>
-          </div>
-
-        </div>
-
-
-        <div class="region-row">
-
-          <div class="region-row-top">
-
-            <span class="region-name">
-              Северозападен район
-            </span>
-
-            <span class="region-value">
-              0.8519
-            </span>
-
-          </div>
-
-          <div class="region-bar">
-            <div
-              class="region-bar-fill"
-              style="--bar:85.19%;"
-            ></div>
-          </div>
-
-        </div>
-
-
-        <div class="region-row">
-
-          <div class="region-row-top">
-
-            <span class="region-name">
-              Североизточен район
-            </span>
-
-            <span class="region-value">
-              0.8441
-            </span>
-
-          </div>
-
-          <div class="region-bar">
-            <div
-              class="region-bar-fill"
-              style="--bar:84.41%;"
-            ></div>
-          </div>
-
-        </div>
-
-
-        <div class="region-row">
-
-          <div class="region-row-top">
-
-            <span class="region-name">
-              Югоизточен район
-            </span>
-
-            <span class="region-value">
-              0.7921
-            </span>
-
-          </div>
-
-          <div class="region-bar">
-            <div
-              class="region-bar-fill"
-              style="--bar:79.21%;"
-            ></div>
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-    <div class="insight-grid">
-
-
-      <div class="insight-card">
-
-        <div class="insight-number">
-          0.8791
-        </div>
-
-        <h3>
-          Най-висока стойност
-        </h3>
-
-        <p>
-
-          Югозападният район
-          показва най-висока
-          обща стойност на RDRI
-          в образователното изследване.
-
-        </p>
-
-      </div>
-
-
-      <div class="insight-card">
-
-        <div class="insight-number">
-          0.7921
-        </div>
-
-        <h3>
-          Най-ниска стойност
-        </h3>
-
-        <p>
-
-          Югоизточният район
-          е с най-ниска
-          стойност на индекса
-          сред шестте района.
-
-        </p>
-
-      </div>
-
-
-      <div class="insight-card">
-
-        <div class="insight-number">
-          p = 0.033
-        </div>
-
-        <h3>
-          Регионални различия
-        </h3>
-
-        <p>
-
-          Анализът установява
-          статистически значими различия
-          между районите
-          в образователната система.
-
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     HEALTHCARE
-========================================================= -->
-
-
-<section class="standard-section">
-
-  <div class="container">
-
-
-    <div class="section-label">
-      Здравеопазване
-    </div>
-
-
-    <h2 class="section-title">
-      Регионален профил на здравното изследване
-    </h2>
-
-
-    <p class="section-description">
-
-      В здравеопазването
-      териториалният анализ
-      има различна функция.
-      Той не създава аналог
-      на образователния RDRI,
-      а проследява разпределението
-      на респондентите
-      и възможните регионални различия
-      в дигитализацията
-      и организационната готовност.
-
-    </p>
-
-
-    <div class="health-layout">
-
-
-      <div class="health-summary">
-
-        <div class="health-summary-number">
-          286
-        </div>
-
-        <h3>
-          Респонденти
-          в здравното изследване
-        </h3>
-
-        <p>
-
-          Емпиричната база
-          включва представители
-          от всички райони за планиране,
-          като София-град
-          е разграничена
-          като самостоятелна
-          териториална група.
-
-        </p>
-
-
-        <div class="health-points">
-
-          <div class="health-point">
-            Шест района за планиране + отделна група София-град
-          </div>
-
-          <div class="health-point">
-            Регионалният профил е част от секторното изследване на здравеопазването
-          </div>
-
-          <div class="health-point">
-            Не се конструира универсален регионален индекс, съпоставим с RDRI
-          </div>
-
-          <div class="health-point">
-            Общите регионални различия са по-слабо изразени спрямо образователното направление
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="distribution">
-
-
-        <div class="distribution-row">
-
-          <div class="distribution-main">
-
-            <div class="distribution-name">
-              София-град
-            </div>
-
-            <div class="distribution-track">
-              <div
-                class="distribution-fill"
-                style="--bar:100%;"
-              ></div>
-            </div>
-
-          </div>
-
-          <div class="distribution-value">
-            154
-          </div>
-
-        </div>
-
-
-        <div class="distribution-row">
-
-          <div class="distribution-main">
-
-            <div class="distribution-name">
-              Североизточен район
-            </div>
-
-            <div class="distribution-track">
-              <div
-                class="distribution-fill"
-                style="--bar:24.03%;"
-              ></div>
-            </div>
-
-          </div>
-
-          <div class="distribution-value">
-            37
-          </div>
-
-        </div>
-
-
-        <div class="distribution-row">
-
-          <div class="distribution-main">
-
-            <div class="distribution-name">
-              Южен централен район
-            </div>
-
-            <div class="distribution-track">
-              <div
-                class="distribution-fill"
-                style="--bar:15.58%;"
-              ></div>
-            </div>
-
-          </div>
-
-          <div class="distribution-value">
-            24
-          </div>
-
-        </div>
-
-
-        <div class="distribution-row">
-
-          <div class="distribution-main">
-
-            <div class="distribution-name">
-              Северозападен район
-            </div>
-
-            <div class="distribution-track">
-              <div
-                class="distribution-fill"
-                style="--bar:12.99%;"
-              ></div>
-            </div>
-
-          </div>
-
-          <div class="distribution-value">
-            20
-          </div>
-
-        </div>
-
-
-        <div class="distribution-row">
-
-          <div class="distribution-main">
-
-            <div class="distribution-name">
-              Югоизточен район
-            </div>
-
-            <div class="distribution-track">
-              <div
-                class="distribution-fill"
-                style="--bar:12.34%;"
-              ></div>
-            </div>
-
-          </div>
-
-          <div class="distribution-value">
-            19
-          </div>
-
-        </div>
-
-
-        <div class="distribution-row">
-
-          <div class="distribution-main">
-
-            <div class="distribution-name">
-              Югозападен район
-              без София-град
-            </div>
-
-            <div class="distribution-track">
-              <div
-                class="distribution-fill"
-                style="--bar:11.69%;"
-              ></div>
-            </div>
-
-          </div>
-
-          <div class="distribution-value">
-            18
-          </div>
-
-        </div>
-
-
-        <div class="distribution-row">
-
-          <div class="distribution-main">
-
-            <div class="distribution-name">
-              Северен централен район
-            </div>
-
-            <div class="distribution-track">
-              <div
-                class="distribution-fill"
-                style="--bar:9.09%;"
-              ></div>
-            </div>
-
-          </div>
-
-          <div class="distribution-value">
-            14
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     COMPARATIVE READING
-========================================================= -->
-
-
-<section class="standard-section section-alt">
-
-  <div class="container">
-
-
-    <div class="section-label">
-      Сравнителен прочит
-    </div>
-
-
-    <h2 class="section-title">
-      Един регионален контекст, различни секторни проявления
-    </h2>
-
-
-    <p class="section-description">
-
-      Сравнението между образованието
-      и здравеопазването показва
-      защо териториалното измерение
-      трябва да бъде интерпретирано
+      Регионалното равнище
+      не се интерпретира
+      като обща класация
+      на шестте района.
+      Териториалните различия
+      се оценяват
       в рамките на конкретната система,
-      вместо чрез универсална
-      регионална класация.
-
+      за която са налични
+      подходящи емпирични данни.
     </p>
 
 
-    <div class="comparison-grid">
+    <div class="principle-box">
 
 
-      <article class="comparison-card">
+      <div class="principle-left">
 
-        <div class="comparison-head">
+        <span>
+          Regional perspective
+        </span>
 
-          <span>
+        <h3>
+          Територията е контекст,
+          а не самостоятелно обяснение
+        </h3>
+
+        <p>
+          Регионалното местоположение
+          може да бъде свързано
+          с различия в дигитализацията,
+          но наблюдаваните резултати
+          зависят и от инфраструктура,
+          човешки капитал,
+          организационни способности
+          и други социално-икономически условия.
+        </p>
+
+      </div>
+
+
+      <div class="principle-right">
+
+
+        <div class="principle-item">
+
+          <strong>
             Образование
-          </span>
+          </strong>
 
-          <h3>
-            По-ясно изразена
-            регионална диференциация
-          </h3>
+          <p>
+            Шест района за планиране,
+            RDRI
+            и четири компонента
+            на дигиталната готовност.
+          </p>
+
+        </div>
+
+
+        <div class="principle-item">
+
+          <strong>
+            Здравеопазване
+          </strong>
+
+          <p>
+            Шест района за планиране
+            плюс отделен профил
+            за София-град
+            за целите на изследването.
+          </p>
 
         </div>
 
 
-        <div class="comparison-body">
+        <div class="principle-item">
 
+          <strong>
+            Различни инструменти
+          </strong>
 
-          <div class="comparison-item">
-
-            <strong>
-              Единен регионален измерител
-            </strong>
-
-            <p>
-              RDRI позволява систематизирано сравнение между шестте района.
-            </p>
-
-          </div>
-
-
-          <div class="comparison-item">
-
-            <strong>
-              Статистически различия
-            </strong>
-
-            <p>
-              Установена е статистически значима териториална диференциация.
-            </p>
-
-          </div>
-
-
-          <div class="comparison-item">
-
-            <strong>
-              Интерпретация
-            </strong>
-
-            <p>
-              Инфраструктурата, компетентностите, ангажираността и ограниченията формират различни регионални профили.
-            </p>
-
-          </div>
-
+          <p>
+            RDRI,
+            непараметрични тестове
+            и секторно специфични
+            измерители.
+          </p>
 
         </div>
 
-      </article>
+
+        <div class="principle-item">
+
+          <strong>
+            Контекстуална интерпретация
+          </strong>
+
+          <p>
+            Резултатите между направленията
+            не се сравняват
+            чрез механично общо класиране.
+          </p>
+
+        </div>
 
 
-      <article class="comparison-card">
+      </div>
 
-        <div class="comparison-head">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     REGIONAL ANALYSIS
+========================================================= -->
+
+
+<section class="standard-section section-alt">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Емпирични разрези
+    </div>
+
+
+    <h2 class="section-title">
+      Избери изследователско направление
+    </h2>
+
+
+    <p class="section-description">
+      Образованието
+      и здравеопазването
+      се представят отделно,
+      защото използват
+      различни единици на наблюдение,
+      различни измерители
+      и различна статистическа логика.
+    </p>
+
+
+    <div class="analysis-tabs">
+
+      <button
+        class="tab-button active"
+        type="button"
+        data-tab="education"
+      >
+        Образование
+      </button>
+
+      <button
+        class="tab-button"
+        type="button"
+        data-tab="health"
+      >
+        Здравеопазване
+      </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         EDUCATION
+    ====================================================== -->
+
+
+    <div
+      class="tab-panel active"
+      id="education"
+    >
+
+
+      <div class="summary-grid">
+
+
+        <article class="summary-card">
 
           <span>
-            Здравеопазване
+            Емпирична база
           </span>
 
+          <strong>
+            4 206
+          </strong>
+
+          <p>
+            Наблюдения,
+            агрегирани
+            в шест района за планиране.
+          </p>
+
+        </article>
+
+
+        <article class="summary-card">
+
+          <span>
+            Най-висока публикувана RDRI стойност
+          </span>
+
+          <strong>
+            0,8791
+          </strong>
+
+          <p>
+            Югозападен район.
+          </p>
+
+        </article>
+
+
+        <article class="summary-card">
+
+          <span>
+            Най-ниска публикувана RDRI стойност
+          </span>
+
+          <strong>
+            0,7921
+          </strong>
+
+          <p>
+            Югоизточен район.
+          </p>
+
+        </article>
+
+
+        <article class="summary-card">
+
+          <span>
+            Kruskal-Wallis
+          </span>
+
+          <strong>
+            p = 0,033
+          </strong>
+
+          <p>
+            Тест за различия
+            в нивото на дигитализация
+            между районите.
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+      <div class="profile-layout">
+
+
+        <div class="profile-control">
+
           <h3>
-            По-слабо изразена
-            обща териториална диференциация
+            Регионален профил
           </h3>
 
+          <p>
+            Избери район,
+            за да видиш
+            публикуваните стойности
+            на четирите компонента
+            и RDRI.
+          </p>
+
+
+          <label for="regionSelect">
+            Район за планиране
+          </label>
+
+
+          <select id="regionSelect">
+
+            <option value="SWR">
+              Югозападен
+            </option>
+
+            <option value="SCR">
+              Южен централен
+            </option>
+
+            <option value="SER">
+              Югоизточен
+            </option>
+
+            <option value="NWR">
+              Северозападен
+            </option>
+
+            <option value="NCR">
+              Северен централен
+            </option>
+
+            <option value="NER">
+              Североизточен
+            </option>
+
+          </select>
+
+
+          <div class="selected-rdri">
+
+            <span>
+              Публикувана RDRI стойност
+            </span>
+
+            <strong id="selectedRdri">
+              0,8791
+            </strong>
+
+            <p id="selectedRegionName">
+              Югозападен район
+            </p>
+
+          </div>
+
         </div>
 
 
-        <div class="comparison-body">
+        <div class="component-panel">
+
+          <h3>
+            Компоненти на регионалния профил
+          </h3>
+
+          <p>
+            При DOI по-ниската стойност
+            означава по-ниска интензивност
+            на наблюдаваните препятствия.
+          </p>
 
 
-          <div class="comparison-item">
-
-            <strong>
-              Секторен профил
-            </strong>
-
-            <p>
-              Територията е един от факторите в анализа, но не определя самостоятелно дигиталната готовност.
-            </p>
-
+          <div
+            class="component-list"
+            id="componentList"
+          >
           </div>
-
-
-          <div class="comparison-item">
-
-            <strong>
-              Регионални различия
-            </strong>
-
-            <p>
-              Общата картина не показва толкова ясно разграничение между всички райони, макар отделни териториални групи да се открояват по конкретни показатели.
-            </p>
-
-          </div>
-
-
-          <div class="comparison-item">
-
-            <strong>
-              Интерпретация
-            </strong>
-
-            <p>
-              Организационните характеристики, човешкият капитал и технологичната среда имат съществено значение наред с териториалното местоположение.
-            </p>
-
-          </div>
-
 
         </div>
 
-      </article>
+
+      </div>
+
+
+      <div class="table-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>
+                Район
+              </th>
+
+              <th>
+                DII
+              </th>
+
+              <th>
+                DEI
+              </th>
+
+              <th>
+                DCI
+              </th>
+
+              <th>
+                DOI
+              </th>
+
+              <th>
+                RDRI
+              </th>
+
+              <th>
+                Наблюдения
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody id="educationTable">
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <div class="statistics-grid">
+
+
+        <article class="statistics-card">
+
+          <div class="statistics-code">
+            EDU 01
+          </div>
+
+          <h3>
+            Инфраструктурният профил не следва RDRI механично
+          </h3>
+
+          <div class="statistics-value">
+            DII
+          </div>
+
+          <p>
+            Североизточният район
+            има най-високата
+            публикувана стойност
+            на DII,
+            докато най-високата
+            обща RDRI стойност
+            е в Югозападния район.
+          </p>
+
+        </article>
+
+
+        <article class="statistics-card">
+
+          <div class="statistics-code">
+            EDU 02
+          </div>
+
+          <h3>
+            Наблюдават се статистически различия
+          </h3>
+
+          <div class="statistics-value">
+            p = 0,033
+          </div>
+
+          <p>
+            Kruskal-Wallis тестът
+            за нивото на дигитализация
+            показва наличие
+            на различия
+            между поне част
+            от районите.
+          </p>
+
+        </article>
+
+
+        <article class="statistics-card">
+
+          <div class="statistics-code">
+            EDU 03
+          </div>
+
+          <h3>
+            Различията са компонентно обусловени
+          </h3>
+
+          <div class="statistics-value">
+            4
+          </div>
+
+          <p>
+            Инфраструктура,
+            дигитална ангажираност,
+            компетентности
+            и препятствия
+            формират различни
+            регионални профили.
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+      <div class="context-note">
+
+        <div class="context-icon">
+          i
+        </div>
+
+        <div>
+
+          <strong>
+            RDRI е индекс за образователното изследване
+          </strong>
+
+          <p>
+            Стойностите не трябва
+            да се интерпретират
+            като общ индекс
+            на дигиталната конкурентоспособност
+            на съответния район.
+            Те характеризират
+            дигиталната готовност
+            в рамките на изследваната
+            образователна система.
+          </p>
+
+        </div>
+
+      </div>
 
 
     </div>
+
+
+    <!-- =====================================================
+         HEALTHCARE
+    ====================================================== -->
+
+
+    <div
+      class="tab-panel"
+      id="health"
+    >
+
+
+      <div class="health-overview">
+
+
+        <article class="health-stat">
+
+          <span>
+            Емпирична база
+          </span>
+
+          <strong>
+            286
+          </strong>
+
+          <p>
+            Респонденти,
+            работещи
+            в здравния сектор.
+          </p>
+
+        </article>
+
+
+        <article class="health-stat">
+
+          <span>
+            Териториални групи
+          </span>
+
+          <strong>
+            7
+          </strong>
+
+          <p>
+            Шестте района
+            плюс отделена група
+            София-град.
+          </p>
+
+        </article>
+
+
+        <article class="health-stat">
+
+          <span>
+            Kruskal-Wallis
+          </span>
+
+          <strong>
+            p = 0,122
+          </strong>
+
+          <p>
+            Общият тест
+            не установява
+            статистически значима
+            регионална разлика.
+          </p>
+
+        </article>
+
+
+        <article class="health-stat">
+
+          <span>
+            Северозападен район
+          </span>
+
+          <strong>
+            75%
+          </strong>
+
+          <p>
+            Отговорите за общо ниво
+            на дигитализация
+            са „средно“
+            или „ниско“.
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+      <div class="health-findings">
+
+
+        <div class="health-main">
+
+          <span>
+            Основен резултат
+          </span>
+
+          <h3>
+            Географското местоположение
+            не обяснява самостоятелно
+            различията в дигитализацията
+          </h3>
+
+          <p>
+            Общият тест
+            не показва статистически значима
+            разлика между седемте
+            териториални групи.
+            Двойковите сравнения
+            обаче идентифицират
+            конкретни различия,
+            концентрирани около
+            Северозападния район.
+            Това насочва анализа
+            към комбинация
+            от географски,
+            технологични,
+            човешки
+            и организационни фактори.
+          </p>
+
+        </div>
+
+
+        <div class="pair-list">
+
+          <div class="pair-list-title">
+            Статистически значими двойкови различия
+          </div>
+
+          <div class="pair-list-note">
+            Mann-Whitney U,
+            p &lt; 0,05
+          </div>
+
+
+          <div class="pair-item">
+
+            <strong>
+              София-град
+              и Северозападен район
+            </strong>
+
+            <div class="pair-p">
+              p = 0,005
+            </div>
+
+          </div>
+
+
+          <div class="pair-item">
+
+            <strong>
+              Северозападен
+              и Южен централен район
+            </strong>
+
+            <div class="pair-p">
+              p = 0,022
+            </div>
+
+          </div>
+
+
+          <div class="pair-item">
+
+            <strong>
+              Северозападен
+              и Северен централен район
+            </strong>
+
+            <div class="pair-p">
+              p = 0,035
+            </div>
+
+          </div>
+
+
+          <div class="pair-item">
+
+            <strong>
+              Северозападен
+              и Североизточен район
+            </strong>
+
+            <div class="pair-p">
+              p = 0,003
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="context-note">
+
+        <div class="context-icon">
+          i
+        </div>
+
+        <div>
+
+          <strong>
+            Защо София-град е отделена?
+          </strong>
+
+          <p>
+            В здравното изследване
+            София-град е отделена
+            от останалата част
+            на Югозападния район
+            поради концентрацията
+            на здравни заведения
+            и високоспециализирана
+            медицинска дейност.
+            Това е изследователско решение
+            за конкретния анализ,
+            а не промяна
+            на официалното териториално деление.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
 
   </div>
 
@@ -3293,52 +3563,101 @@ footer {
   <div class="container">
 
 
-    <div class="synthesis-box">
+    <div class="section-label">
+      Регионален синтез
+    </div>
 
 
-      <div class="synthesis-title">
+    <h2 class="section-title">
+      Какво добавя териториалният разрез?
+    </h2>
 
-        <span>
-          Регионален извод
-        </span>
+
+    <p class="section-description">
+      Сравнението между образованието
+      и здравеопазването показва,
+      че регионалните различия
+      не се проявяват еднакво
+      във всички системи.
+      Затова териториалният анализ
+      трябва да се използва
+      като контекстуален инструмент,
+      а не като универсална класация.
+    </p>
+
+
+    <div class="synthesis-grid">
+
+
+      <article class="synthesis-card">
+
+        <div class="synthesis-code">
+          R01
+        </div>
 
         <h3>
-          Територията има значение,
-          но нейният ефект
-          е секторно обусловен.
+          Регионалният ефект зависи от системата
         </h3>
 
-      </div>
-
-
-      <div class="synthesis-copy">
-
         <p>
-
-          Регионалният анализ показва,
-          че пространствените различия
-          не могат да бъдат сведени
-          до една универсална оценка
-          за дигиталната конкурентоспособност.
-          В образованието
-          териториалната диференциация
-          е по-ясно изразена
-          и може да бъде представена
-          чрез RDRI.
-          В здравеопазването
-          регионалният фактор взаимодейства
-          по-силно с организационните,
-          технологичните
-          и човешките характеристики.
-          Това подкрепя многостепенната логика
-          на проекта:
-          регионалният контекст има значение,
-          но трябва да бъде анализиран
-          в рамките на конкретната система.
-
+          Образованието показва
+          статистически установими
+          териториални различия,
+          докато при здравеопазването
+          общата регионална разлика
+          не достига
+          стандартния праг
+          за статистическа значимост.
         </p>
 
-      </div>
+      </article>
+
+
+      <article class="synthesis-card">
+
+        <div class="synthesis-code">
+          R02
+        </div>
+
+        <h3>
+          Един показател не описва целия регионален профил
+        </h3>
+
+        <p>
+          Инфраструктурата,
+          човешкият капитал,
+          използването на технологии
+          и препятствията
+          могат да формират
+          различни конфигурации
+          в един и същ район.
+        </p>
+
+      </article>
+
+
+      <article class="synthesis-card">
+
+        <div class="synthesis-code">
+          R03
+        </div>
+
+        <h3>
+          Територията трябва да се свързва с други фактори
+        </h3>
+
+        <p>
+          Географското местоположение
+          е само една част
+          от обяснението.
+          Необходими са данни
+          за инфраструктура,
+          компетентности,
+          организационен капацитет
+          и социално-икономическа среда.
+        </p>
+
+      </article>
 
 
     </div>
@@ -3349,120 +3668,43 @@ footer {
 
 
 <!-- =========================================================
-     NEXT
+     FINAL CTA
 ========================================================= -->
 
 
-<section class="standard-section section-alt">
+<section class="final-cta">
 
-  <div class="container">
-
-
-    <div class="section-label">
-      Продължи анализа
-    </div>
+  <div class="container final-cta-inner">
 
 
-    <h2 class="section-title">
-      Други аналитични перспективи
-    </h2>
+    <div>
 
+      <h2>
+        От територията към икономическата структура
+      </h2>
 
-    <p class="section-description">
-
-      Регионалният анализ е един
-      от аналитичните разрези на проекта.
-      Секторният анализ
-      и обобщените резултати
-      допълват териториалната перспектива.
-
-    </p>
-
-
-    <div class="next-grid">
-
-
-      <a
-        class="next-card"
-        href="sectors.html"
-      >
-
-        <span>
-          Анализи
-        </span>
-
-        <h3>
-          Секторен анализ
-        </h3>
-
-        <p>
-          21 икономически дейности,
-          29 показателя
-          и времеви обхват
-          2020–2025.
-        </p>
-
-        <div class="next-link">
-          Към секторния анализ →
-        </div>
-
-      </a>
-
-
-      <a
-        class="next-card"
-        href="data-indices.html"
-      >
-
-        <span>
-          Измерване
-        </span>
-
-        <h3>
-          Данни и индекси
-        </h3>
-
-        <p>
-          Емпирични бази,
-          секторни измерители,
-          RDRI, DRI-H
-          и официални показатели.
-        </p>
-
-        <div class="next-link">
-          Към данните →
-        </div>
-
-      </a>
-
-
-      <a
-        class="next-card"
-        href="results.html"
-      >
-
-        <span>
-          Синтез
-        </span>
-
-        <h3>
-          Основни резултати
-        </h3>
-
-        <p>
-          Резултати по направления,
-          общи фактори
-          и стратегически изводи.
-        </p>
-
-        <div class="next-link">
-          Към резултатите →
-        </div>
-
-      </a>
-
+      <p>
+        Секторният анализ
+        преминава от регионалните различия
+        към 21 икономически дейности
+        и проследява
+        структурните,
+        трудовите,
+        инвестиционните
+        и цифровите характеристики
+        на българската икономика.
+      </p>
 
     </div>
+
+
+    <a
+      class="btn"
+      href="sectors.html"
+    >
+      Към секторния анализ
+    </a>
+
 
   </div>
 
@@ -3492,13 +3734,10 @@ footer {
         </strong>
 
         <p>
-
           Научноизследователски проект № 6/2024
           <br>
-
           „Дигитална конкурентоспособност
           на социално-икономическата система на България“
-
         </p>
 
       </div>
@@ -3519,15 +3758,27 @@ footer {
         </a>
 
         <a href="data-indices.html">
-          Данни и индекси
+          Данни и измерители
+        </a>
+
+        <a href="national.html">
+          Национален анализ
         </a>
 
         <a href="regions.html">
           Регионален анализ
         </a>
 
-        <a href="areas.html">
+        <a href="sectors.html">
           Секторен анализ
+        </a>
+
+        <a href="organizations.html">
+          Организационен анализ
+        </a>
+
+        <a href="benchmark.html">
+          European Benchmark
         </a>
 
         <a href="results.html">
@@ -3538,6 +3789,10 @@ footer {
           Публикации
         </a>
 
+        <a href="team.html">
+          Екип
+        </a>
+
       </div>
 
 
@@ -3545,10 +3800,8 @@ footer {
 
 
     <div class="copyright">
-
-      © 2026 · Дигитална конкурентоспособност
+      © 2026 Дигитална конкурентоспособност
       на социално-икономическата система на България
-
     </div>
 
 
@@ -3560,6 +3813,13 @@ footer {
 <script>
 
 (function(){
+
+  "use strict";
+
+
+  /* =========================================================
+     MOBILE MENU
+  ========================================================= */
 
 
   const mobileToggle =
@@ -3574,43 +3834,564 @@ footer {
     );
 
 
-  if(
-    mobileToggle &&
-    mobileMenu
-  ){
+  mobileToggle.addEventListener(
+    "click",
+    function(){
 
-    mobileToggle.addEventListener(
-      "click",
-      function(){
+      const isOpen =
+        mobileMenu.style.display ===
+        "block";
+
+
+      mobileMenu.style.display =
+        isOpen
+        ? "none"
+        : "block";
+
+
+      mobileToggle.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+
+    }
+  );
+
+
+  window.addEventListener(
+    "resize",
+    function(){
+
+      if(
+        window.innerWidth > 1200
+      ){
 
         mobileMenu.style.display =
-          mobileMenu.style.display === "block"
-          ? "none"
-          : "block";
+          "none";
+
+
+        mobileToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
 
       }
+
+    }
+  );
+
+
+  /* =========================================================
+     TABS
+  ========================================================= */
+
+
+  const tabButtons =
+    document.querySelectorAll(
+      ".tab-button"
     );
 
 
-    mobileMenu
-      .querySelectorAll("a")
-      .forEach(
-        function(link){
+  const tabPanels =
+    document.querySelectorAll(
+      ".tab-panel"
+    );
 
-          link.addEventListener(
-            "click",
-            function(){
 
-              mobileMenu.style.display =
-                "none";
+  tabButtons.forEach(
+    function(button){
+
+      button.addEventListener(
+        "click",
+        function(){
+
+          const target =
+            button.dataset.tab;
+
+
+          tabButtons.forEach(
+            function(item){
+
+              item.classList.remove(
+                "active"
+              );
 
             }
           );
 
+
+          tabPanels.forEach(
+            function(panel){
+
+              panel.classList.remove(
+                "active"
+              );
+
+            }
+          );
+
+
+          button.classList.add(
+            "active"
+          );
+
+
+          document
+            .getElementById(target)
+            .classList.add(
+              "active"
+            );
+
+        }
+      );
+
+    }
+  );
+
+
+  /* =========================================================
+     EDUCATION REGIONAL DATA
+
+     RDRI values reproduce the values published
+     in the project study table.
+     They are not recalculated in this page.
+  ========================================================= */
+
+
+  const educationRegions = {
+
+    SWR: {
+
+      name:
+        "Югозападен",
+
+      observations:
+        771,
+
+      dii:
+        0.9097,
+
+      dei:
+        0.9329,
+
+      dci:
+        1.1178,
+
+      doi:
+        0.3233,
+
+      rdri:
+        0.8791
+
+    },
+
+
+    SCR: {
+
+      name:
+        "Южен централен",
+
+      observations:
+        771,
+
+      dii:
+        0.9217,
+
+      dei:
+        0.9140,
+
+      dci:
+        1.0688,
+
+      doi:
+        0.3152,
+
+      rdri:
+        0.8631
+
+    },
+
+
+    SER: {
+
+      name:
+        "Югоизточен",
+
+      observations:
+        576,
+
+      dii:
+        0.9110,
+
+      dei:
+        0.8919,
+
+      dci:
+        1.0726,
+
+      doi:
+        0.3186,
+
+      /*
+        Published table value.
+        Verify against the index formula
+        before the final public data audit.
+      */
+
+      rdri:
+        0.7921
+
+    },
+
+
+    NWR: {
+
+      name:
+        "Северозападен",
+
+      observations:
+        761,
+
+      dii:
+        0.8828,
+
+      dei:
+        0.9207,
+
+      dci:
+        1.0513,
+
+      doi:
+        0.2991,
+
+      rdri:
+        0.8519
+
+    },
+
+
+    NCR: {
+
+      name:
+        "Северен централен",
+
+      observations:
+        755,
+
+      dii:
+        0.9118,
+
+      dei:
+        0.9157,
+
+      dci:
+        1.0827,
+
+      doi:
+        0.3319,
+
+      rdri:
+        0.8594
+
+    },
+
+
+    NER: {
+
+      name:
+        "Североизточен",
+
+      observations:
+        572,
+
+      dii:
+        0.9315,
+
+      dei:
+        0.8427,
+
+      dci:
+        1.0835,
+
+      doi:
+        0.3252,
+
+      rdri:
+        0.8441
+
+    }
+
+  };
+
+
+  const componentDefinitions = [
+
+    {
+      key:
+        "dii",
+
+      code:
+        "DII",
+
+      label:
+        "Дигитална инфраструктура",
+
+      obstacle:
+        false
+    },
+
+
+    {
+      key:
+        "dei",
+
+      code:
+        "DEI",
+
+      label:
+        "Дигитална ангажираност",
+
+      obstacle:
+        false
+    },
+
+
+    {
+      key:
+        "dci",
+
+      code:
+        "DCI",
+
+      label:
+        "Дигитални компетентности",
+
+      obstacle:
+        false
+    },
+
+
+    {
+      key:
+        "doi",
+
+      code:
+        "DOI",
+
+      label:
+        "Дигитални препятствия",
+
+      obstacle:
+        true
+    }
+
+  ];
+
+
+  function format4(
+    value
+  ){
+
+    return Number(value)
+      .toLocaleString(
+        "bg-BG",
+        {
+          minimumFractionDigits: 4,
+          maximumFractionDigits: 4
         }
       );
 
   }
+
+
+  /* =========================================================
+     SELECTED REGION
+  ========================================================= */
+
+
+  const regionSelect =
+    document.getElementById(
+      "regionSelect"
+    );
+
+
+  function renderSelectedRegion(){
+
+    const code =
+      regionSelect.value;
+
+
+    const region =
+      educationRegions[code];
+
+
+    document.getElementById(
+      "selectedRdri"
+    ).textContent =
+      format4(
+        region.rdri
+      );
+
+
+    document.getElementById(
+      "selectedRegionName"
+    ).textContent =
+      region.name +
+      " район";
+
+
+    document.getElementById(
+      "componentList"
+    ).innerHTML =
+      componentDefinitions
+        .map(
+          function(component){
+
+            const value =
+              region[
+                component.key
+              ];
+
+
+            /*
+              Visual scale only.
+              Maximum 1.2 is used
+              so DCI values above 1
+              remain visible.
+            */
+
+            const width =
+              Math.min(
+                100,
+                value / 1.2 * 100
+              );
+
+
+            return `
+
+              <div class="component-row">
+
+                <div class="component-label">
+
+                  <strong>
+                    ${component.code}
+                  </strong>
+
+                  <span>
+                    ${component.label}
+                  </span>
+
+                </div>
+
+
+                <div class="bar-track">
+
+                  <div
+                    class="bar-fill ${
+                      component.obstacle
+                      ? "obstacles"
+                      : ""
+                    }"
+                    style="width:${width}%"
+                  ></div>
+
+                </div>
+
+
+                <div class="component-value">
+                  ${format4(value)}
+                </div>
+
+              </div>
+
+            `;
+
+          }
+        )
+        .join("");
+
+  }
+
+
+  /* =========================================================
+     EDUCATION TABLE
+  ========================================================= */
+
+
+  function renderEducationTable(){
+
+    const order = [
+      "SWR",
+      "SCR",
+      "SER",
+      "NWR",
+      "NCR",
+      "NER"
+    ];
+
+
+    document.getElementById(
+      "educationTable"
+    ).innerHTML =
+      order
+        .map(
+          function(code){
+
+            const r =
+              educationRegions[code];
+
+
+            return `
+
+              <tr>
+
+                <td>
+                  ${r.name}
+                </td>
+
+                <td>
+                  ${format4(r.dii)}
+                </td>
+
+                <td>
+                  ${format4(r.dei)}
+                </td>
+
+                <td>
+                  ${format4(r.dci)}
+                </td>
+
+                <td>
+                  ${format4(r.doi)}
+                </td>
+
+                <td class="rdri-cell">
+                  ${format4(r.rdri)}
+                </td>
+
+                <td>
+                  ${r.observations.toLocaleString("bg-BG")}
+                </td>
+
+              </tr>
+
+            `;
+
+          }
+        )
+        .join("");
+
+  }
+
+
+  regionSelect.addEventListener(
+    "change",
+    renderSelectedRegion
+  );
+
+
+  renderSelectedRegion();
+  renderEducationTable();
 
 
 })();
