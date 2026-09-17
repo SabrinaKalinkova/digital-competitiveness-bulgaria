@@ -1028,15 +1028,16 @@
     }
 
 
-    .leader-links {
+    .leader-links,
+    .member-links {
 
       display: flex;
 
       flex-wrap: wrap;
 
-      gap: 10px;
+      gap: 8px;
 
-      margin-top: 28px;
+      margin-top: 20px;
 
     }
 
@@ -1046,11 +1047,12 @@
       display: inline-flex;
 
       align-items: center;
+      justify-content: center;
 
-      min-height: 37px;
+      min-height: 36px;
 
       padding:
-        0 14px;
+        0 13px;
 
       border:
         1px solid var(--border);
@@ -1065,6 +1067,9 @@
 
       font-weight: 800;
 
+      transition:
+        0.2s ease;
+
     }
 
 
@@ -1074,7 +1079,10 @@
         #b8d8e4;
 
       background:
-        #f7fbfc;
+        #f4fafc;
+
+      color:
+        #1748a7;
 
     }
 
@@ -1155,6 +1163,8 @@
 
       object-fit: cover;
 
+      object-position: center top;
+
     }
 
 
@@ -1217,11 +1227,13 @@
 
     .member-institution {
 
-      margin-top: 3px;
+      margin-top: 4px;
 
       color: #7a8d9b;
 
       font-size: 9px;
+
+      line-height: 1.55;
 
     }
 
@@ -1247,7 +1259,7 @@
 
       font-size: 9px;
 
-      line-height: 1.55;
+      line-height: 1.62;
 
     }
 
@@ -1935,6 +1947,7 @@
         дигиталната трансформация,
         икономическия анализ,
         човешкия капитал,
+        медиите,
         здравеопазването
         и конкурентоспособността.
       </p>
@@ -2164,7 +2177,10 @@
     <div class="team-grid">
 
 
-      <!-- MEMBER 1 -->
+      <!-- =====================================================
+           MEMBER 1
+           VIOLETA TONCHEVA-ZLATKOVA
+      ====================================================== -->
 
 
       <article class="team-card">
@@ -2214,14 +2230,22 @@
       </article>
 
 
-      <!-- MEMBER 2 -->
+      <!-- =====================================================
+           MEMBER 2
+           IVAN VALCHANOV
+      ====================================================== -->
 
 
       <article class="team-card">
 
 
-        <div class="member-photo placeholder-photo">
-          ИВ
+        <div class="member-photo">
+
+          <img
+            src="images/team/ivan-valchanov.jpg"
+            alt="Гл. ас. д-р Иван Вълчанов"
+          >
+
         </div>
 
 
@@ -2231,32 +2255,72 @@
             Член на екипа
           </div>
 
+
           <h3>
             Гл. ас. д-р Иван Вълчанов
           </h3>
+
 
           <div class="member-position">
             Главен асистент
           </div>
 
+
           <div class="member-institution">
             Университет за национално и световно стопанство
+            <br>
+            Катедра „Медии и обществени комуникации“
+            <br>
+            Катедра на ЮНЕСКО по медийна и информационна грамотност
+            и културни политики за устойчиво развитие
           </div>
 
+
           <p class="member-description">
-            Кратка биографична информация
-            и основни научни интереси
-            предстои да бъдат добавени.
+            Преподавател и изследовател
+            с научни интереси
+            в областта на дигиталните медии,
+            комуникационния мениджмънт,
+            медийната
+            и информационната грамотност.
           </p>
 
+
           <div class="member-focus">
+
             <strong>
               Участие в проекта:
             </strong>
-            дигитална грамотност,
-            човешки капитал
-            и конкурентоспособност.
+
+            изследване на пресечните точки
+            между дигиталната конкурентоспособност
+            и дигиталните умения,
+            както и връзките им
+            с медийната грамотност
+            и свободата на медиите.
+
+            Интердисциплинарният му принос
+            разширява анализа
+            към комуникационните
+            и обществените измерения
+            на дигиталната трансформация.
+
           </div>
+
+
+          <div class="member-links">
+
+            <a
+              class="profile-link"
+              href="https://orcid.org/0000-0003-1899-9003"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ORCID
+            </a>
+
+          </div>
+
 
         </div>
 
@@ -2264,7 +2328,10 @@
       </article>
 
 
-      <!-- MEMBER 3 -->
+      <!-- =====================================================
+           MEMBER 3
+           KRISTIAN ZHELEV
+      ====================================================== -->
 
 
       <article class="team-card">
@@ -2300,11 +2367,14 @@
           </p>
 
           <div class="member-focus">
+
             <strong>
               Участие в проекта:
             </strong>
+
             икономически анализ
             и дигитална трансформация.
+
           </div>
 
         </div>
@@ -2313,7 +2383,10 @@
       </article>
 
 
-      <!-- MEMBER 4 -->
+      <!-- =====================================================
+           MEMBER 4
+           HRISTO IVANOV
+      ====================================================== -->
 
 
       <article class="team-card">
@@ -2349,12 +2422,15 @@
           </p>
 
           <div class="member-focus">
+
             <strong>
               Участие в проекта:
             </strong>
+
             здравеопазване,
             дигитализация
             и организационен анализ.
+
           </div>
 
         </div>
@@ -2363,7 +2439,9 @@
       </article>
 
 
-      <!-- YOUNG RESEARCHER -->
+      <!-- =====================================================
+           YOUNG RESEARCHER
+      ====================================================== -->
 
 
       <article class="team-card young-researcher">
