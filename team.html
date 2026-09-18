@@ -1030,8 +1030,7 @@
     }
 
 
-    .leader-links,
-    .member-links {
+    .leader-links {
 
       display: flex;
 
@@ -1133,6 +1132,19 @@
       box-shadow:
         0 8px 24px
         rgba(16, 43, 76, 0.04);
+
+    }
+
+
+    .member-content {
+
+      display: flex;
+
+      flex-direction: column;
+
+      height: 100%;
+
+      min-width: 0;
 
     }
 
@@ -1306,6 +1318,24 @@
     }
 
 
+    /* Бутоните застават на едно ниво
+       в картите от един и същи ред */
+
+    .member-links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-top: auto;
+
+      padding-top: 20px;
+
+    }
+
+
     /* =========================================================
        YOUNG RESEARCHER
     ========================================================= */
@@ -1314,18 +1344,19 @@
     .team-card.young-researcher {
 
       grid-column:
-        1 / 2;
+        1 / -1;
 
-      width: 76%;
+      width: 62%;
 
-      justify-self: start;
-
-      padding: 22px;
+      justify-self: center;
 
       grid-template-columns:
-        100px 1fr;
+        105px 1fr;
 
-      gap: 19px;
+      gap: 24px;
+
+      padding:
+        23px 27px;
 
       align-items: center;
 
@@ -1334,15 +1365,22 @@
 
     .young-researcher .member-photo {
 
-      width: 100px;
-      height: 112px;
+      width: 105px;
+      height: 118px;
 
     }
 
 
     .young-researcher .member-description {
 
-      margin-top: 9px;
+      margin-top: 10px;
+
+    }
+
+
+    .young-researcher .member-focus {
+
+      margin-top: 10px;
 
     }
 
@@ -1582,7 +1620,9 @@
 
         grid-column: auto;
 
-        width: 76%;
+        width: 82%;
+
+        justify-self: center;
 
       }
 
@@ -1680,6 +1720,8 @@
 
         grid-template-columns:
           90px 1fr;
+
+        gap: 17px;
 
         padding: 20px;
 
@@ -2644,7 +2686,7 @@
 
 
       <!-- =====================================================
-           YOUNG RESEARCHER
+           PAOLINA PETROVA
       ====================================================== -->
 
 
